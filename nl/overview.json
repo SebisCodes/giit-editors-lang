@@ -1,0 +1,225 @@
+{
+  "title": "Gratis editors voor LaTeX, SVG, Markdown en meer | giit.ch",
+  "desc": "Gratis browsereditors voor LaTeX, SVG, Markdown en meer, met live voorbeeld. Geen registratie of reclame; bestanden blijven in je browser.",
+  "og_title": "giit Editors - gratis online editors met een live voorbeeld",
+  "h1": "Gratis online editors met een live voorbeeld, direct in je browser",
+  "lead": "Editors voor de bestanden waarmee je elke dag werkt: LaTeX, SVG, HTML, Markdown, gegevensformaten en meer. Links de code, rechts het resultaat, niets te installeren, en je bestanden blijven in je browser. Elke AI kan er met een link in schrijven, en je kunt ze allemaal in je eigen website plaatsen.",
+  "points": [
+    "Geen registratie, geen reclame",
+    "Je bestanden blijven in je browser",
+    "Elke AI kan erin schrijven",
+    "Sluit ze in je website in",
+    "In 14 talen"
+  ],
+  "cta1": "Bekijk de editors",
+  "cta2": "Een editor insluiten",
+  "nav": [
+    [
+      "#editors",
+      "Editors"
+    ],
+    [
+      "#common",
+      "Wat ze gemeen hebben"
+    ],
+    [
+      "#embed",
+      "Insluiten"
+    ],
+    [
+      "#faq",
+      "FAQ"
+    ]
+  ],
+  "editors_h": "De editors",
+  "editors_sub": "Elke editor is gemaakt voor zijn formaat en werkt op dezelfde manier als de andere.",
+  "live": "Online",
+  "soon": "In ontwikkeling",
+  "open": "Openen",
+  "common_h": "Wat elke editor doet",
+  "common_sub": "Ken je er één, dan ken je ze allemaal.",
+  "common": [
+    [
+      "🔒",
+      "Privacy als uitgangspunt",
+      "De editors bewaren je documenten in je browser (lokale opslag), niet op onze server. Een document gaat alleen naar een server als je zelf een eigen server instelt (webhook), of als een website het met een formulier in een editor opent - onze server geeft het dan door zonder het op te slaan."
+    ],
+    [
+      "🗂",
+      "Mijn documenten",
+      "Bewaar zoveel documenten als je wilt in de browser: openen, hernoemen, dupliceren, downloaden en verwijderen, elk met een eigen geschiedenis voor ongedaan maken."
+    ],
+    [
+      "✨",
+      "Elke AI kan met je meeschrijven",
+      "Klik op \"AI-assistent\", dan op \"Prompt kopiëren\", en plak hem in ChatGPT, Claude, Gemini of Copilot. De AI antwoordt met een link die het resultaat in je editor opent - Ongedaan maken draait het terug."
+    ],
+    [
+      "🤖",
+      "AI-agents in de browser (WebMCP)",
+      "In browsers met WebMCP kan een AI-agent het geopende document direct lezen en wijzigen; elke wijziging is een stap voor ongedaan maken."
+    ],
+    [
+      "🟢",
+      "AI-status in één oogopslag",
+      "Een stip op de AI-knop toont of er een AI verbonden is: via je website, als browseragent of via links in dit tabblad."
+    ],
+    [
+      "✏️",
+      "Bewerken in het voorbeeld",
+      "Wijzig tekst, waarden of vormen rechtstreeks in het voorbeeld, de boom, de tabel of het canvas; de code wordt bijgewerkt. Hoe je bewerkt, hangt af van het formaat."
+    ],
+    [
+      "☁️",
+      "Opslaan op je eigen server",
+      "Een webhook stuurt elke opgeslagen versie naar een adres dat je kiest, met een token - automatisch of met Ctrl+S."
+    ],
+    [
+      "🌐",
+      "In 14 talen",
+      "Elke editor heeft een pagina in het Engels, Duits, Frans, Italiaans, Spaans, Portugees, Nederlands, Pools, Turks, Russisch, Oekraïens, Chinees, Japans en Koreaans - /de/, /fr/ … Je wisselt van taal via het taalmenu; je keuze wordt onthouden. De AI-prompt blijft altijd in het Engels."
+    ],
+    [
+      "🌓",
+      "Licht, donker of automatisch",
+      "Elke editor volgt je systeem of het thema dat je kiest, en werkt op telefoons en tablets."
+    ]
+  ],
+  "embed_h": "Een editor in je eigen website gebruiken",
+  "embed_teaser": "Elke editor kan met een iframe of in een eigen venster in een andere website worden gezet, en ze spreken allemaal hetzelfde postMessage-protocol. Elke editor heeft een pagina voor ontwikkelaars met voorbeelden voor je pagina en je server:",
+  "embed_sub": "Alle editors spreken hetzelfde protocol. Vervang latex door svg, html, md, json, yaml, toml, xml, csv, typst, shls of qr - de berichten zijn dezelfde, alleen hun voorvoegsel verandert (latexeditor:, svgeditor: …).",
+  "steps": [
+    [
+      "Zet de editor in je pagina",
+      "Een iframe is genoeg. ?embed=1 toont de beperkte weergave met een knop Opslaan, ?save=0 verbergt die als je pagina een eigen knop heeft. Het adres kiest de taal: /de/ voor Duits, /fr/ voor Frans, /nl/ voor Nederlands enzovoort.",
+      "<iframe id=\"ed\" src=\"https://latex.giit.ch/de/?embed=1\"\n        allow=\"clipboard-write\" style=\"width:100%;height:80vh;border:0\"></iframe>"
+    ],
+    [
+      "Je document laden, wijzigingen en opgeslagen versies ontvangen",
+      "De editor meldt dat hij klaar is, je pagina stuurt het document, en de editor meldt echte bewerkingen en elke opslagactie. Controleer de origin van elk bericht.",
+      "const ED = 'https://latex.giit.ch', ed = document.getElementById('ed');\naddEventListener('message', e => {\n  if (e.origin !== ED || e.source !== ed.contentWindow) return;\n  const m = e.data;\n  if (m.type === 'latexeditor:ready')\n    ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText }, ED);\n  if (m.type === 'latexeditor:change') markUnsaved();\n  if (m.type === 'latexeditor:save') saveOnYourServer(m.content, m.assets);\n});"
+    ],
+    [
+      "Of open hem in een eigen venster",
+      "De volledige editor in een eigen venster praat op precies dezelfde manier met window.opener - en links van een AI bereiken hem daar.",
+      "const win = window.open('https://latex.giit.ch/de/?embed=window', 'latexeditor-17');"
+    ],
+    [
+      "Laat een AI direct aan je server leveren",
+      "Geef de editor je regels, een https-adres op je eigen site en één sleutel voor deze editorsessie. \"Prompt kopiëren\" vertelt de AI dan om het resultaat daarheen te POSTen; je pagina opent het in de editor. Houd de sleutel alleen geldig zolang de editor open is.",
+      "ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText,\n  ai: { label: 'My Admin', prompt: 'Keep the placeholders.',\n        endpoint: 'https://your-site.com/api/ai-result', key: sessionKey } }, ED);"
+    ]
+  ],
+  "msg_h": "Alle berichten",
+  "msg_cols": [
+    "Richting",
+    "Bericht",
+    "Wat het betekent"
+  ],
+  "msgs": [
+    [
+      "editor → pagina",
+      "ready",
+      "De editor kan een document ontvangen."
+    ],
+    [
+      "pagina → editor",
+      "load {name, content, assets?, context?, hook?, ai?}",
+      "Je document openen (met afbeeldingen, waar het formaat die heeft)."
+    ],
+    [
+      "editor → pagina",
+      "loaded {id, name}",
+      "Je document is geopend; onthoud de id."
+    ],
+    [
+      "editor → pagina",
+      "change {id, name, content}",
+      "Een echte bewerking (niet het laden)."
+    ],
+    [
+      "editor → pagina",
+      "save {id, name, content, assets, updated}",
+      "Opslaan / Ctrl+S, of het antwoord op get."
+    ],
+    [
+      "pagina → editor",
+      "get · save",
+      "Vraag de huidige toestand op · druk op Opslaan."
+    ],
+    [
+      "editor → pagina",
+      "closing {id, name, content}",
+      "Het eigen venster sluit met niet-opgeslagen wijzigingen."
+    ],
+    [
+      "editor → pagina",
+      "reload {id, unsaved}",
+      "F5 / Ctrl+R binnen je pagina - jij beslist."
+    ],
+    [
+      "pagina → editor",
+      "ai {label, prompt, endpoint, key} · ai {clear}",
+      "AI via je server, één sleutel per sessie."
+    ],
+    [
+      "editor → pagina",
+      "key-request {reason: \"missing\"}",
+      "De sessie heeft nog geen sleutel."
+    ]
+  ],
+  "msg_note": "De volledige beschrijving, met de webhook en elk veld, staat in de llms.txt van elke editor en in",
+  "faq_h": "Veelgestelde vragen",
+  "faq": [
+    [
+      "Zijn de editors echt gratis?",
+      "Ja. Geen registratie en geen reclame. Wij stellen geen limiet aan het aantal documenten; alleen de opslag van je browser doet dat."
+    ],
+    [
+      "Wordt mijn document ergens geüpload?",
+      "Nee. De editors draaien in je browser en bewaren je documenten daar, niet op onze server. Een document gaat alleen naar een server als je een webhook instelt, als een website die een editor insluit het op haar eigen server opslaat, of als een website het met een formulier in een editor opent - onze server geeft het dan door zonder het op te slaan. Zoals bij elke website registreert de server elk bezoek, en we tellen paginaweergaven anoniem."
+    ],
+    [
+      "Welke AI kan ik gebruiken?",
+      "Elke AI - ChatGPT, Claude, Gemini, Copilot of de AI in je programmeertool. Kopieer de prompt, zeg wat je wilt, en klik op de link waarmee de AI antwoordt."
+    ],
+    [
+      "Kan ik een editor op mijn eigen website gebruiken?",
+      "Ja. Sluit hem in met een iframe of open hem in een eigen venster en wissel documenten uit met postMessage, of laat hem opgeslagen versies met een webhook naar je server sturen."
+    ],
+    [
+      "Hoe krijg ik de editor in mijn taal?",
+      "Kies hem in het taalmenu bovenaan, of open de pagina direct: /nl/ voor Nederlands, /de/ voor Duits, /fr/ voor Frans enzovoort. De editor onthoudt het. De prompt voor de AI blijft Engels."
+    ],
+    [
+      "Wie maakt de editors?",
+      "Grünwald Innovation in Neuhausen am Rheinfall, Zwitserland."
+    ]
+  ],
+  "skip": "Naar de editors",
+  "sections_label": "Secties",
+  "theme_names": {
+    "auto": "Auto",
+    "light": "Licht",
+    "dark": "Donker",
+    "title": "Het kleurthema wijzigen",
+    "copy": "Kopiëren",
+    "copied": "Gekopieerd"
+  },
+  "by": "Een project van",
+  "theme": "Thema",
+  "editors": {
+    "latex": "Schrijf LaTeX en zie de gezette pagina's terwijl je typt. Voeg afbeeldingen toe, stel papier en marges in, exporteer naar PDF.",
+    "svg": "SVG als code en op een canvas: vormen verplaatsen, de grootte en kleur wijzigen, uitlijnraster, exporteren naar PNG, JPG, WebP of React.",
+    "html": "Schrijf HTML met een live voorbeeld, bewerk tekst direct in het voorbeeld, houd afbeeldingen bij de pagina, exporteer als één bestand of een ZIP.",
+    "md": "Markdown, het eenvoudige formaat voor notities en documentatie, met tabellen, takenlijsten, voetnoten en formules; export naar HTML of PDF.",
+    "json": "JSON en JSON Lines als code en als inklapbare boom: sleutels en waarden in de boom bewerken, controleren aan de hand van een JSON Schema, omzetten naar YAML, CSV of XML.",
+    "yaml": "YAML met dezelfde gegevensboom, commentaar en ankers blijven behouden, problemen met hun regel, omzetten naar JSON.",
+    "toml": "TOML voor pyproject.toml, Cargo.toml en app-instellingen, met dezelfde gegevensboom: commentaar blijft, strenge controle volgens TOML 1.0, omzetten naar JSON of YAML.",
+    "xml": "XML met een elementenboom, zoeken met XPath, een controle op fouten en omzetten naar JSON of YAML.",
+    "csv": "CSV als tekst en als tabel zoals in een spreadsheet, ook voor grote bestanden; export naar XLSX, JSON, Markdown- of HTML-tabellen.",
+    "shls": "SHLS, een compact gegevensformaat voor AI: sleutelblokken en records als boom, problemen met hun regel, omzetten van en naar JSON op dezelfde manier als de referentiecode.",
+    "typst": "Typst met de echte compiler in de browser: pagina's terwijl je typt, PDF met selecteerbare tekst, afbeeldingen bewaard bij het document.",
+    "qr": "QR-codes voor links, wifi, contacten en betalingen (SEPA, Zwitserse QR-factuur) met logo en ontwerp, gecontroleerd door te scannen, als SVG, PDF of EPS - statische codes zonder vervaldatum."
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "title": "Kostenlose Editoren: LaTeX, SVG, Markdown und mehr | giit.ch",
+  "desc": "Kostenlose Browser-Editoren für LaTeX, SVG, HTML, Markdown, JSON, YAML, XML, CSV, Typst und SHLS mit Live-Vorschau. Ohne Anmeldung, ohne Werbung.",
+  "og_title": "giit Editors - kostenlose Online-Editoren mit Live-Vorschau",
+  "h1": "Kostenlose Online-Editoren mit Live-Vorschau, direkt im Browser",
+  "lead": "Editoren für die Dateien, mit denen du täglich arbeitest: LaTeX, SVG, HTML, Markdown, Datenformate und mehr. Links der Code, rechts das Ergebnis, nichts zu installieren, und deine Dateien bleiben in deinem Browser. Jede KI kann mit einem Link darin schreiben, und jeder Editor lässt sich in die eigene Website einbauen.",
+  "points": [
+    "Ohne Anmeldung, ohne Werbung",
+    "Deine Dateien bleiben im Browser",
+    "Jede KI kann darin schreiben",
+    "In die eigene Website einbinden",
+    "In 14 Sprachen"
+  ],
+  "cta1": "Zu den Editoren",
+  "cta2": "Editor einbinden",
+  "nav": [
+    [
+      "#editors",
+      "Editoren"
+    ],
+    [
+      "#common",
+      "Gemeinsam"
+    ],
+    [
+      "#embed",
+      "Einbinden"
+    ],
+    [
+      "#faq",
+      "Fragen"
+    ]
+  ],
+  "editors_h": "Die Editoren",
+  "editors_sub": "Jeder Editor ist für sein Format gemacht und funktioniert gleich wie die anderen.",
+  "live": "Online",
+  "soon": "In Entwicklung",
+  "open": "Öffnen",
+  "common_h": "Was jeder Editor kann",
+  "common_sub": "Wer einen kennt, kennt alle.",
+  "common": [
+    [
+      "🔒",
+      "Privat von Grund auf",
+      "Die Editoren speichern deine Dokumente in deinem Browser (lokaler Speicher), nicht auf unserem Server. An einen Server geht ein Dokument nur, wenn du deinen eigenen einrichtest (Webhook) oder eine Website es per Formular in einem Editor öffnet - unser Server gibt es dann weiter, ohne es zu speichern."
+    ],
+    [
+      "🗂",
+      "Meine Dokumente",
+      "Beliebig viele Dokumente im Browser: öffnen, umbenennen, duplizieren, herunterladen und löschen, jedes mit eigenem Rückgängig."
+    ],
+    [
+      "✨",
+      "Jede KI schreibt mit",
+      "Klicke auf «KI-Assistent», dann auf «Prompt kopieren», und füge ihn in ChatGPT, Claude, Gemini oder Copilot ein. Die KI antwortet mit einem Link, der ihr Ergebnis in deinem Editor öffnet - Rückgängig nimmt es zurück."
+    ],
+    [
+      "🤖",
+      "KI-Agenten im Browser (WebMCP)",
+      "In Browsern mit WebMCP kann ein KI-Agent das offene Dokument direkt lesen und ändern; jede Änderung ist ein Rückgängig-Schritt."
+    ],
+    [
+      "🟢",
+      "KI-Status auf einen Blick",
+      "Ein Punkt am KI-Knopf zeigt, ob eine KI angebunden ist: über deine Website, als Browser-Agent oder per Links in diesem Tab."
+    ],
+    [
+      "✏️",
+      "In der Vorschau bearbeiten",
+      "Text, Werte oder Formen direkt in Vorschau, Baum, Tabelle oder Zeichenfläche ändern; der Code zieht mit. Wie, hängt vom Format ab."
+    ],
+    [
+      "☁️",
+      "Auf dem eigenen Server speichern",
+      "Ein Webhook schickt jede gespeicherte Fassung an eine Adresse deiner Wahl, mit Token - automatisch oder mit Ctrl+S."
+    ],
+    [
+      "🌐",
+      "In 14 Sprachen",
+      "Jeder Editor hat eine Seite auf Deutsch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Niederländisch, Polnisch, Türkisch, Russisch, Ukrainisch, Chinesisch, Japanisch und Koreanisch - /de/, /fr/ … Das Sprachmenü schaltet um, die Wahl wird gemerkt. Der Prompt für die KI bleibt immer englisch."
+    ],
+    [
+      "🌓",
+      "Hell, dunkel oder automatisch",
+      "Jeder Editor folgt deinem System oder dem gewählten Farbschema und läuft auf Handy und Tablet."
+    ]
+  ],
+  "embed_h": "Einen Editor in die eigene Website einbauen",
+  "embed_teaser": "Jeder Editor lässt sich mit einem iframe oder in einem eigenen Fenster in eine andere Website setzen, und alle sprechen dasselbe postMessage-Protokoll. Jeder Editor hat eine Seite für Entwickler mit Beispielen für deine Seite und deinen Server:",
+  "embed_sub": "Alle Editoren sprechen dasselbe Protokoll. Ersetze latex durch svg, html, md, json, yaml, toml, xml, csv, typst, shls oder qr - die Nachrichten sind gleich, nur ihr Präfix ändert sich (latexeditor:, svgeditor: …).",
+  "steps": [
+    [
+      "Den Editor in die Seite setzen",
+      "Ein iframe genügt. ?embed=1 zeigt die schlanke Ansicht mit Speichern-Knopf, ?save=0 blendet ihn aus, wenn deine Seite einen eigenen hat. Die Adresse wählt die Sprache: /de/ für Deutsch, /fr/ für Französisch und so weiter.",
+      "<iframe id=\"ed\" src=\"https://latex.giit.ch/de/?embed=1\"\n        allow=\"clipboard-write\" style=\"width:100%;height:80vh;border:0\"></iframe>"
+    ],
+    [
+      "Dokument laden, Änderungen und Speichern empfangen",
+      "Der Editor meldet sich bereit, deine Seite schickt das Dokument, und der Editor meldet echte Änderungen und jedes Speichern. Prüfe bei jeder Nachricht die Herkunft.",
+      "const ED = 'https://latex.giit.ch', ed = document.getElementById('ed');\naddEventListener('message', e => {\n  if (e.origin !== ED || e.source !== ed.contentWindow) return;\n  const m = e.data;\n  if (m.type === 'latexeditor:ready')\n    ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offerte', content: meinText }, ED);\n  if (m.type === 'latexeditor:change') alsUngespeichertMarkieren();\n  if (m.type === 'latexeditor:save') aufDeinemServerSpeichern(m.content, m.assets);\n});"
+    ],
+    [
+      "Oder im eigenen Fenster öffnen",
+      "Der volle Editor im eigenen Fenster spricht genauso mit window.opener - und Links einer KI erreichen ihn dort.",
+      "const win = window.open('https://latex.giit.ch/de/?embed=window', 'latexeditor-17');"
+    ],
+    [
+      "Die KI direkt an deinen Server liefern lassen",
+      "Gib dem Editor deine Regeln, eine https-Adresse auf deiner Website und einen Schlüssel für diese Editor-Sitzung. «Prompt kopieren» sagt der KI dann, ihr Ergebnis dorthin zu senden; deine Seite öffnet es im Editor. Halte den Schlüssel nur gültig, solange der Editor offen ist.",
+      "ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offerte', content: meinText,\n  ai: { label: 'Meine Verwaltung', prompt: 'Keep the placeholders.',\n        endpoint: 'https://deine-seite.ch/api/ki-ergebnis', key: sitzungsSchluessel } }, ED);"
+    ]
+  ],
+  "msg_h": "Alle Nachrichten",
+  "msg_cols": [
+    "Richtung",
+    "Nachricht",
+    "Bedeutung"
+  ],
+  "msgs": [
+    [
+      "Editor → Seite",
+      "ready",
+      "Der Editor kann ein Dokument aufnehmen."
+    ],
+    [
+      "Seite → Editor",
+      "load {name, content, assets?, context?, hook?, ai?}",
+      "Dein Dokument öffnen (mit Bildern, wo das Format sie hat)."
+    ],
+    [
+      "Editor → Seite",
+      "loaded {id, name}",
+      "Dein Dokument ist offen; merke dir die id."
+    ],
+    [
+      "Editor → Seite",
+      "change {id, name, content}",
+      "Eine echte Änderung (nicht das Laden)."
+    ],
+    [
+      "Editor → Seite",
+      "save {id, name, content, assets, updated}",
+      "Speichern / Ctrl+S, oder die Antwort auf get."
+    ],
+    [
+      "Seite → Editor",
+      "get · save",
+      "Den aktuellen Stand holen · Speichern drücken."
+    ],
+    [
+      "Editor → Seite",
+      "closing {id, name, content}",
+      "Das eigene Fenster geht mit ungespeicherten Änderungen zu."
+    ],
+    [
+      "Editor → Seite",
+      "reload {id, unsaved}",
+      "F5 / Ctrl+R in deiner Seite - du entscheidest."
+    ],
+    [
+      "Seite → Editor",
+      "ai {label, prompt, endpoint, key} · ai {clear}",
+      "KI über deinen Server, ein Schlüssel je Sitzung."
+    ],
+    [
+      "Editor → Seite",
+      "key-request {reason: \"missing\"}",
+      "Die Sitzung hat noch keinen Schlüssel."
+    ]
+  ],
+  "msg_note": "Die vollständige Beschreibung mit Webhook und allen Feldern steht in der llms.txt jedes Editors und in",
+  "faq_h": "Häufige Fragen",
+  "faq": [
+    [
+      "Sind die Editoren wirklich kostenlos?",
+      "Ja. Ohne Anmeldung und ohne Werbung. Wir begrenzen die Zahl der Dokumente nicht; Grenzen setzt nur der Speicher deines Browsers."
+    ],
+    [
+      "Wird mein Dokument irgendwo hochgeladen?",
+      "Nein. Die Editoren laufen in deinem Browser und speichern deine Dokumente dort, nicht auf unserem Server. An einen Server geht ein Dokument nur, wenn du einen Webhook einrichtest, wenn eine Website, die einen Editor einbindet, es auf ihrem eigenen Server speichert, oder wenn eine Website es per Formular in einem Editor öffnet - unser Server gibt es dann weiter, ohne es zu speichern. Wie bei jeder Website protokolliert der Server jeden Aufruf, und wir zählen Seitenaufrufe anonym."
+    ],
+    [
+      "Welche KI kann ich nutzen?",
+      "Jede - ChatGPT, Claude, Gemini, Copilot oder die KI in deinem Programmierwerkzeug. Prompt kopieren, sagen, was du willst, und den Link anklicken, mit dem die KI antwortet."
+    ],
+    [
+      "Kann ich einen Editor in meiner Website verwenden?",
+      "Ja. Als iframe einbinden oder im eigenen Fenster öffnen und Dokumente per postMessage austauschen, oder gespeicherte Fassungen per Webhook an deinen Server schicken lassen."
+    ],
+    [
+      "Wie bekomme ich den Editor in meiner Sprache?",
+      "Im Sprachmenü oben wählen oder die Seite direkt öffnen: /de/ für Deutsch, /fr/ für Französisch, /ja/ für Japanisch und so weiter. Der Editor merkt es sich. Der Prompt für die KI bleibt englisch."
+    ],
+    [
+      "Wer macht die Editoren?",
+      "Grünwald Innovation in Neuhausen am Rheinfall, Schweiz."
+    ]
+  ],
+  "skip": "Zu den Editoren springen",
+  "sections_label": "Abschnitte",
+  "theme_names": {
+    "auto": "Automatisch",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "title": "Farbschema wechseln",
+    "copy": "Kopieren",
+    "copied": "Kopiert"
+  },
+  "by": "Ein Projekt von",
+  "theme": "Farbschema",
+  "editors": {
+    "latex": "LaTeX schreiben und die gesetzten Seiten beim Tippen sehen. Bilder einfügen, Papier und Ränder einstellen, als PDF exportieren.",
+    "svg": "SVG als Code und auf der Zeichenfläche: Formen verschieben, skalieren, einfärben, Raster, Export als PNG, JPG, WebP oder React.",
+    "html": "HTML mit Live-Vorschau schreiben, Text direkt in der Vorschau ändern, Bilder bei der Seite behalten, als eine Datei oder ZIP exportieren.",
+    "md": "Markdown, das einfache Format für Notizen und Dokumentation, mit Tabellen, Aufgabenlisten, Fussnoten und Formeln; Export als HTML oder PDF.",
+    "json": "JSON und JSON Lines als Code und als aufklappbarer Baum: Schlüssel und Werte im Baum bearbeiten, gegen ein JSON Schema prüfen, in YAML, CSV oder XML umwandeln.",
+    "yaml": "YAML mit demselben Datenbaum, Kommentare und Anker bleiben erhalten, Probleme mit Zeile, Umwandeln in JSON.",
+    "toml": "TOML für pyproject.toml, Cargo.toml und App-Einstellungen, mit demselben Datenbaum: Kommentare bleiben, strenge Prüfung nach TOML 1.0, Umwandeln in JSON oder YAML.",
+    "xml": "XML mit Elementbaum, XPath-Suche, Fehlerprüfung und Umwandeln in JSON oder YAML.",
+    "csv": "CSV als Text und als Tabelle wie in einer Tabellenkalkulation, auch für grosse Dateien; Export als XLSX, JSON, Markdown- oder HTML-Tabelle.",
+    "shls": "SHLS, ein kompaktes Datenformat für KI: Schlüsselblöcke und Datensätze als Baum, Probleme mit Zeile, Umwandeln von und nach JSON wie der Referenzcode.",
+    "typst": "Typst mit dem echten Compiler im Browser: Seiten beim Tippen, PDF mit markierbarem Text, Bilder beim Dokument.",
+    "qr": "QR-Codes für Links, WLAN, Kontakte und Zahlungen (SEPA, QR-Rechnung) mit Logo und Design, per Scan geprüft, als SVG, PDF oder EPS - statische Codes ohne Ablaufdatum."
+  }
+}

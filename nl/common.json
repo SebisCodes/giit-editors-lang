@@ -1,0 +1,23 @@
+{
+  "footer_all": "Alle giit-editors",
+  "footer_binding": "Bindend (Duits):",
+  "footer_editors": "Editors",
+  "footer_legal": "Juridisch",
+  "footer_license": "Open source onder de {license}",
+  "footer_llms": "llms.txt voor AI-assistenten",
+  "footer_shls": "SHLS van {author}",
+  "footer_source": "Broncode",
+  "source_on_github": "Broncode op GitHub",
+  "country": "Zwitserland",
+  "imprint": "Colofon",
+  "privacy": "Privacyverklaring",
+  "terms": "Gebruiksvoorwaarden",
+  "language": "Taal",
+  "theme": {
+    "group": "Kleurthema",
+    "light": "Licht thema",
+    "dark": "Donker thema",
+    "auto_title": "Zoals je systeeminstelling",
+    "auto_label": "Automatisch thema (systeeminstelling)"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "title": "Éditeur CSV gratuit en ligne - modifier en tableau | giit.ch",
+  "description": "Éditeur CSV gratuit dans le navigateur : CSV en tableau et en texte, tri, filtres, lignes corrigées, export Excel (XLSX) ou JSON. Sans inscription.",
+  "og_title": "Éditeur CSV gratuit en ligne - modifier en tableau | giit.ch",
+  "og_description": "Éditeur CSV gratuit dans le navigateur : CSV en tableau et en texte, tri, filtres, lignes corrigées, export Excel (XLSX) ou JSON. Sans inscription.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://csv.giit.ch/fr/#app",
+        "name": "CSV Editor",
+        "url": "https://csv.giit.ch/fr/",
+        "description": "Éditeur CSV gratuit dans le navigateur : CSV en tableau et en texte, tri, filtres, lignes corrigées, export Excel (XLSX) ou JSON. Sans inscription.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Tous (navigateur web)",
+        "inLanguage": "fr",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://csv.giit.ch/img/og.png",
+        "featureList": [
+          "Le CSV brut et le tableau côte à côte",
+          "Modifier les cellules comme dans un tableur, copier et coller des plages depuis Excel ou LibreOffice",
+          "Fichiers séparés par virgule, point-virgule, tabulation ou barre verticale, avec ou sans ligne d’en-tête",
+          "UTF-8 et Windows-1252, fins de ligne conservées",
+          "Ajouter, supprimer et déplacer des lignes et des colonnes",
+          "Trier et filtrer l’affichage, ou trier les données elles-mêmes",
+          "Informations de colonne : genre, valeurs vides et différentes, somme et moyenne",
+          "Problèmes : lignes avec un nombre de champs différent, guillemets non fermés, noms d’en-tête vides ou répétés",
+          "Gros fichiers de 100 000 lignes",
+          "Export en XLSX, JSON, Markdown, HTML, TSV et CSV avec n’importe quel séparateur",
+          "Conserver de nombreux documents dans le navigateur",
+          "Enregistrer sur votre propre serveur avec un webhook, ou intégrer l’éditeur dans votre site web",
+          "N’importe quelle IA peut écrire dans l’éditeur grâce à des liens"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Mon fichier CSV est-il envoyé sur un serveur ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. L’éditeur fonctionne dans votre navigateur et y conserve vos fichiers, pas sur notre serveur. Un fichier n’est envoyé à un serveur que si vous configurez un webhook vers votre propre serveur, si un site web qui intègre l’éditeur l’enregistre sur son propre serveur, ou si un autre site web l’ouvre ici avec un formulaire (post.php) - notre serveur le transmet alors directement à votre navigateur, sans le stocker. Comme sur tout site web, le serveur enregistre chaque visite dans son journal, et nous comptons les pages vues de façon anonyme - voir la politique de confidentialité."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L’éditeur modifie-t-il mon fichier quand je change une cellule ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Seulement cette cellule. L’éditeur écrit la modification dans le texte CSV exactement là où se trouve le champ et laisse le reste tel quel : les autres guillemets, le séparateur et les fins de ligne restent. Un champ n’est mis entre guillemets que s’il en a besoin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mon CSV utilise des points-virgules - est-ce que ça marche ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. L’éditeur détecte la virgule, le point-virgule, la tabulation et la barre verticale comme séparateur ; vous pouvez aussi le choisir sous Format. Convertir passe le fichier à un autre séparateur."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment ouvrir le CSV dans Excel sans accents mal affichés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Exportez-le en XLSX, ou téléchargez le CSV avec une marque d’ordre des octets (BOM) - cochez-la sous Format ou choisissez « UTF-8 avec BOM » dans l’export. Excel lit alors correctement l’UTF-8."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gère-t-il les gros fichiers ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Le tableau n’affiche que les lignes visibles : les fichiers de 100 000 lignes restent rapides à faire défiler, filtrer et modifier."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Où mes documents sont-ils enregistrés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Uniquement dans votre navigateur. Cliquez sur le bouton dossier en haut à gauche (Mes documents) pour les ouvrir, renommer, dupliquer, télécharger ou supprimer. Effacer les données de site de votre navigateur les supprime : téléchargez ceux que vous voulez garder - ou laissez l’éditeur les envoyer à votre propre serveur (« Enregistrer sur un serveur »). Les très gros fichiers peuvent ne pas tenir dans la stockage du navigateur ; l’éditeur vous le signale le cas échéant."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Une IA peut-elle écrire dans l’éditeur CSV ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, n’importe quelle IA - ChatGPT, Claude, Gemini, Copilot ou l’IA de votre outil de développement. Cliquez sur « Assistant IA », puis sur « Copier le prompt », collez-le dans votre IA et dites-lui ce qu’elle doit faire. L’IA répond par un lien ; cliquez dessus et le tableau apparaît dans votre éditeur. « Annuler » revient sur chaque modification."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L’éditeur CSV est-il payant ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. L’éditeur est gratuit, sans publicité et sans inscription."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Modifier des fichiers CSV en ligne, en tableau et en texte</h2>\n        <p>L’éditeur CSV affiche le CSV brut et le tableau côte à côte. Modifiez une cellule du tableau et l’éditeur change exactement ce champ dans le texte - les autres guillemets, le séparateur et les fins de ligne restent tels quels. Un clic dans le tableau montre le champ dans le texte, et le curseur dans le texte montre sa cellule. Corriger des exports de boutiques, de banques et de bases de données, nettoyer des listes d’adresses ou préparer des données à importer devient ainsi rapide.</p>\n        <p>Tout fonctionne dans votre navigateur. Vos fichiers y sont conservés, pas sur notre serveur, et il n’y a ni inscription ni publicité.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Ce que l’éditeur sait faire</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Comme un tableur</h3><p>Tapez dans les cellules, déplacez-vous avec les flèches et Tab, copiez et collez des plages depuis et vers Excel, LibreOffice ou Google Sheets, ajoutez, supprimez et déplacez des lignes et des colonnes.</p></div>\n            <div class=\"tile\"><h3>Tout CSV</h3><p>Virgule, point-virgule, tabulation ou barre verticale comme séparateur, détecté automatiquement ; avec ou sans ligne d’en-tête ; UTF-8 avec ou sans BOM et Windows-1252 ; les fins de ligne Windows et Unix sont conservées.</p></div>\n            <div class=\"tile\"><h3>Trouver ce qui cloche</h3><p>Lignes avec un nombre de champs différent, guillemets jamais fermés, noms de colonnes vides ou répétés - listés avec leur ligne, à un clic.</p></div>\n            <div class=\"tile\"><h3>Trier, filtrer, examiner</h3><p>Triez et filtrez l’affichage sans toucher au fichier, ou triez les données elles-mêmes. Le panneau de colonne montre le type des valeurs, les valeurs vides et distinctes, la somme et la moyenne.</p></div>\n            <div class=\"tile\"><h3>Gros fichiers</h3><p>Le tableau n’affiche que les lignes visibles : les fichiers de 100 000 lignes restent rapides à faire défiler, filtrer et modifier.</p></div>\n            <div class=\"tile\"><h3>Export</h3><p>Classeur Excel (XLSX), JSON, tableaux Markdown et HTML, TSV, ou CSV avec un autre séparateur et un autre encodage - avec une protection contre les formules de tableur.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Comment ça marche</h2>\n        <ol class=\"steps\">\n            <li><b>Ouvrir</b> - déposez un fichier CSV dans la fenêtre, ouvrez-le avec « Ouvrir un fichier… », ou commencez avec un modèle sous « Nouveau ».</li>\n            <li><b>Modifier</b> - changez les cellules du tableau ou le texte à gauche ; l’un suit l’autre. Utilisez « Insérer » pour les lignes et les colonnes, « Format » pour le séparateur.</li>\n            <li><b>Enregistrer</b> - téléchargez le CSV tel quel, ou exportez-le en XLSX, JSON, Markdown ou HTML.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Utiliser l’éditeur sur votre propre site web</h2>\n        <p>Intégrez l’éditeur à votre propre site web avec une iframe ou dans une fenêtre à part. Votre page lui transmet le document, reçoit chaque modification et chaque enregistrement, et peut laisser une IA envoyer ses résultats à votre serveur. Sans inscription, sans clé.</p>\n        <p><a href=\"/fr/embed/\"><b>Intégrer l’éditeur à votre site web</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Questions fréquentes</h2>\n        <div class=\"questions\">\n            <details><summary>Mon fichier CSV est-il envoyé sur un serveur ?</summary><p>Non. L’éditeur fonctionne dans votre navigateur et y conserve vos fichiers, pas sur notre serveur. Un fichier n’est envoyé à un serveur que si vous configurez un webhook vers votre propre serveur, si un site web qui intègre l’éditeur l’enregistre sur son propre serveur, ou si un autre site web l’ouvre ici avec un formulaire (post.php) - notre serveur le transmet alors directement à votre navigateur, sans le stocker. Comme sur tout site web, le serveur enregistre chaque visite dans son journal, et nous comptons les pages vues de façon anonyme - voir la <a href=\"/privacy.html\">politique de confidentialité</a>.</p></details>\n            <details><summary>L’éditeur modifie-t-il mon fichier quand je change une cellule ?</summary><p>Seulement cette cellule. L’éditeur écrit la modification dans le texte CSV exactement là où se trouve le champ et laisse le reste tel quel : les autres guillemets, le séparateur et les fins de ligne restent. Un champ n’est mis entre guillemets que s’il en a besoin.</p></details>\n            <details><summary>Mon CSV utilise des points-virgules - est-ce que ça marche ?</summary><p>Oui. L’éditeur détecte la virgule, le point-virgule, la tabulation et la barre verticale comme séparateur ; vous pouvez aussi le choisir sous <b>Format</b>. <b>Convertir</b> passe le fichier à un autre séparateur.</p></details>\n            <details><summary>Comment ouvrir le CSV dans Excel sans accents mal affichés ?</summary><p>Exportez-le en XLSX, ou téléchargez le CSV avec une marque d’ordre des octets (BOM) - cochez-la sous <b>Format</b> ou choisissez « UTF-8 avec BOM » dans l’export. Excel lit alors correctement l’UTF-8.</p></details>\n            <details><summary>Gère-t-il les gros fichiers ?</summary><p>Oui. Le tableau n’affiche que les lignes visibles : les fichiers de 100 000 lignes restent rapides à faire défiler, filtrer et modifier.</p></details>\n            <details><summary>Où mes documents sont-ils enregistrés ?</summary><p>Uniquement dans votre navigateur. Cliquez sur le bouton dossier en haut à gauche (Mes documents) pour les ouvrir, renommer, dupliquer, télécharger ou supprimer. Effacer les données de site de votre navigateur les supprime : téléchargez ceux que vous voulez garder - ou laissez l’éditeur les envoyer à votre propre serveur (« Enregistrer sur un serveur »). Les très gros fichiers peuvent ne pas tenir dans la stockage du navigateur ; l’éditeur vous le signale le cas échéant.</p></details>\n            <details><summary>Une IA peut-elle écrire dans l’éditeur CSV ?</summary><p>Oui, n’importe quelle IA - ChatGPT, Claude, Gemini, Copilot ou l’IA de votre outil de développement. Cliquez sur « Assistant IA », puis sur « Copier le prompt », collez-le dans votre IA et dites-lui ce qu’elle doit faire. L’IA répond par un lien ; cliquez dessus et le tableau apparaît dans votre éditeur. « Annuler » revient sur chaque modification.</p></details>\n            <details><summary>L’éditeur CSV est-il payant ?</summary><p>Non. L’éditeur est gratuit, sans publicité et sans inscription.</p></details>\n        </div>\n    </section>",
+  "name": "Éditeur CSV",
+  "embed": {
+    "title": "Intégrer l’éditeur CSV à votre site web | giit.ch",
+    "description": "Intégrez l’éditeur CSV à votre site avec une iframe, échangez les documents par postMessage ou webhook et reliez votre IA. Gratuit, sans inscription.",
+    "og_title": "Intégrer l’éditeur CSV à votre site web",
+    "og_description": "Intégrez l’éditeur CSV à votre site avec une iframe, échangez les documents par postMessage ou webhook et reliez votre IA. Gratuit, sans inscription.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://csv.giit.ch/fr/embed/#article",
+          "headline": "Intégrer l’éditeur CSV à votre site web",
+          "description": "Intégrez l’éditeur CSV à votre site avec une iframe, échangez les documents par postMessage ou webhook et reliez votre IA. Gratuit, sans inscription.",
+          "inLanguage": "fr",
+          "url": "https://csv.giit.ch/fr/embed/",
+          "mainEntityOfPage": "https://csv.giit.ch/fr/embed/",
+          "image": "https://csv.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Éditeur CSV",
+            "url": "https://csv.giit.ch/fr/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Éditeur CSV",
+              "item": "https://csv.giit.ch/fr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Intégration",
+              "item": "https://csv.giit.ch/fr/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Intégrer l’éditeur CSV à votre site web",
+    "intro": "<p>Pour les développeurs : comment placer l’éditeur CSV dans votre propre page - dans une iframe, dans une fenêtre à part ou en lecture seule - et comment les documents, les enregistrements et les résultats d’une IA circulent entre l’éditeur et votre serveur. Aucune inscription ni clé de notre part n’est nécessaire.</p>",
+    "body": "<p>Toute page https (et localhost) peut intégrer l’éditeur avec une <code>&lt;iframe&gt;</code> et <code>?embed=1</code> - sans inscription, sans clé. Intégré, l’éditeur masque le texte de la page et affiche un bouton Enregistrer. Il y a quatre façons de faire entrer et sortir le tableau.</p>\n\n        <h2>1. Ouvrir un fichier depuis un lien, enregistrer sur votre serveur</h2>\n        <p><code>src=</code> ouvre un fichier (votre serveur doit autoriser CORS), <code>webhook=</code> fait envoyer le document à cette adresse par « Enregistrer » (Ctrl+S). Ajoutez <code>&amp;auto</code> pour enregistrer après chaque modification.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://csv.giit.ch/fr/?embed=1&amp;src=https://your-site.com/data/products.csv&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Le webhook reçoit un POST avec du JSON <code>{ editor: \"csv\", event: \"save\", id, name, content, updated }</code>. Un lien ne contient pas de jeton (il se retrouverait dans les journaux du serveur et l’historique du navigateur). Un webhook dans l’adresse convient donc à une adresse de sauvegarde qui n’en exige pas, par exemple sur localhost ou dans votre intranet. Pour un serveur public, transmettez le webhook avec un jeton dans <code>csveditor:load</code> (<code>hook: { url, token }</code>) et vérifiez ce jeton, comme le fait ce petit script PHP :</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://csv.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/data/$name.csv&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Le dossier <code>data</code>, à côté de <code>save.php</code>, doit déjà exister et PHP doit pouvoir y écrire.</p>\n\n        <h2>2. Votre page gère le document (postMessage)</h2>\n        <p>L’éditeur annonce <code>csveditor:ready</code>, votre page répond par <code>csveditor:load</code>, l’éditeur signale <code>csveditor:loaded</code>, <code>csveditor:change</code> lors de modifications effectives et <code>csveditor:save</code> quand l’utilisateur enregistre. Votre page peut envoyer <code>csveditor:get</code> (l’état actuel) ou <code>csveditor:save</code> (appuyer sur Enregistrer). L’enregistrement passe alors par votre propre connexion et votre propre session.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://csv.giit.ch/fr/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://csv.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;csveditor:ready&#x27;) {               // l’éditeur est prêt : on lui transmet le document\n    ed.contentWindow.postMessage({\n      type: &#x27;csveditor:load&#x27;,\n      name: &#x27;Products&#x27;,\n      content: await (await fetch(&#x27;/data/products.csv&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;csveditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // une vraie modification\n  if (m.type === &#x27;csveditor:save&#x27;) {                // l’utilisateur a cliqué sur &quot;Save&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Un bouton d’enregistrement sur votre propre page : la réponse arrive sous forme de csveditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;csveditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>L’assistant IA dans votre page :</b> il fonctionne aussi dans le cadre. Avec <code>allow=\"clipboard-write\"</code> sur l’iframe, « Copier le prompt » utilise directement le presse-papiers (sinon l’éditeur se rabat sur l’ancienne commande de copie, ou affiche le prompt à copier à la main). Un lien envoyé par l’IA ne peut pas atteindre un éditeur intégré dans un autre site web : l’éditeur demande donc à l’IA et à l’utilisateur de coller toute la réponse de l’IA dans l’éditeur - ou d’ouvrir l’éditeur dans sa propre fenêtre.</p>\n        <h2>3. Dans sa propre fenêtre</h2>\n        <p><code>window.open(\"https://csv.giit.ch/fr/?embed=window\", \"csveditor-17\")</code> ouvre l’éditeur complet dans sa propre fenêtre et échange les mêmes messages avec <code>window.opener</code>. Les liens d’une IA l’y atteignent. <code>csveditor:load</code> peut aussi transporter <code>context: { host, title, rules }</code> - le prompt de l’IA indique alors où se trouve le document et suit vos règles - et <code>hook: { url, token }</code>, un webhook pour ce seul document, jamais stocké. Fermer la fenêtre avec des modifications non enregistrées envoie <code>csveditor:closing</code>.</p>\n        <h2>4. L’IA via votre propre serveur</h2>\n        <p>Transmettez à l’éditeur votre propre prompt, une adresse sur votre site et une clé pour cette session de l’éditeur. La boîte de dialogue de l’IA affiche alors « Connecté à » votre site, ce que vous indiquez à l’IA, et le choix <b>modifier le document actuel</b> ou <b>en créer un nouveau</b> ; <b>Copier le prompt</b> assemble le tout. L’IA envoie son résultat avec la clé à votre serveur, et votre page l’ouvre dans l’éditeur - un nouveau document s’ouvre séparément et reste dans le navigateur de l’utilisateur. Une clé par session de l’éditeur : elle reste valable tant que l’éditeur est ouvert, et l’éditeur ne la demande avec <code>csveditor:key-request</code> que tant qu’il n’en a pas. L’éditeur n’envoie jamais la clé lui-même et ne la stocke jamais ; l’adresse doit être en https sur votre propre hôte ou sur un de ses sous-domaines.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // une clé par session de l’éditeur\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;csveditor:load&#x27;, name: &#x27;Products&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the column names. Prices in CHF.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// retenez l’id de csveditor:loaded et ignorez change/save/closing portant un autre id\n// seulement tant que l’éditeur n’a pas de clé :\nif (m.type === &#x27;csveditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;csveditor:ai&#x27;, key: k.key }, ORIGIN); }\n// tant que l’éditeur est ouvert, prévenez votre serveur chaque minute ; fermer l’éditeur ou la page annule la clé\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// votre serveur a un résultat (polling, SSE …) : target vaut &quot;current&quot; ou &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;csveditor:load&#x27;, name: &#x27;Products&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Créez des clés d’au moins 128 bits aléatoires, ne stockez que leur empreinte, liez chacune à l’utilisateur connecté, au document et à cette session de l’éditeur, créez-en une par session, ne la gardez valable que tant que votre page signale la session comme ouverte, et révoquez-la quand l’éditeur ou la page se ferme.</p>\n        <p class=\"muted\">Le protocole complet se trouve dans <a href=\"/llms.txt\">llms.txt</a> - donnez-le à une IA et elle construit la connexion pour votre système. Les autres éditeurs giit fonctionnent de la même façon, chacun avec son propre préfixe - <a href=\"https://editors.giit.ch/fr/\">editors.giit.ch</a>.</p>\n        <h2>Afficher un document en lecture seule (visionneuse)</h2>\n        <p><code>?viewer=1</code> affiche uniquement le document fini : pas de code, pas d’outils, rien ne peut être modifié et rien n’est enregistré dans le navigateur. Le document vient d’un lien (<code>#b64=</code>, <code>?src=</code>), de votre page avec <code>csveditor:load</code>, ou par POST sous forme de formulaire normal vers <code>post.php</code> : le champ <code>content</code> en texte ou <code>b64</code> en base64, éventuellement <code>name</code>, 20 Mo de texte au maximum.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://csv.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;fr&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Sans <code>viewer=1</code>, le document s’ouvre dans l’éditeur normal. Dans les deux cas, il reste uniquement en mémoire : il n’est pas enregistré sur le serveur et ne rejoint pas « Mes documents ». Ouverte directement, la visionneuse indique que le contenu provient d’un tiers.</p>",
+    "crumb": "Intégration",
+    "crumb_nav": "Fil d’Ariane",
+    "open": "Ouvrir l’éditeur"
+  }
+}

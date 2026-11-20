@@ -1,0 +1,180 @@
+{
+  "title": "Markdown 편집기 실시간 미리 보기 | giit.ch",
+  "description": "무료 Markdown 편집기: 표, 작업 목록, 각주, 수식을 실시간으로 확인하고 HTML, PDF, 텍스트로 내보내세요. 가입도 광고도 없습니다.",
+  "og_title": "Markdown 편집기 실시간 미리 보기 | giit.ch",
+  "og_description": "무료 Markdown 편집기: 표, 작업 목록, 각주, 수식을 실시간으로 확인하고 HTML, PDF, 텍스트로 내보내세요. 가입도 광고도 없습니다.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://md.giit.ch/ko/#app",
+        "name": "Markdown Editor",
+        "url": "https://md.giit.ch/ko/",
+        "description": "무료 Markdown 편집기: 표, 작업 목록, 각주, 수식을 실시간으로 확인하고 HTML, PDF, 텍스트로 내보내세요. 가입도 광고도 없습니다.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "모든 운영체제(웹 브라우저)",
+        "inLanguage": "ko",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://md.giit.ch/img/og.png",
+        "featureList": [
+          "구문 강조가 있는 Markdown",
+          "읽기 쉬운 페이지로 보는 실시간 미리 보기, 밝게 또는 어둡게",
+          "GitHub 표, 작업 목록, 취소선, 자동 링크, 각주가 있는 CommonMark",
+          "KaTeX 수식($…$와 $$…$$)",
+          "미리 보기를 클릭하면 코드로 이동",
+          "미리 보기의 텍스트를 클릭해 그 자리에서 편집",
+          "문제 목록: 없는 그림, 제목으로 가는 깨진 링크, 닫히지 않은 코드 블록, 고르지 않은 표",
+          "문서와 함께 저장되는 그림",
+          "HTML, PDF, 일반 텍스트, 그림 포함 Markdown ZIP으로 내보내기",
+          "브라우저에 여러 문서 보관",
+          "웹훅으로 내 서버에 저장하거나 편집기를 내 웹사이트에 삽입",
+          "어떤 AI든 링크를 통해 편집기에서 쓸 수 있음"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "내 문서가 업로드되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아니요. 편집기는 브라우저에서 실행되며 문서를 저희 서버가 아닌 브라우저에 보관합니다. 문서가 서버로 가는 경우는 직접 내 서버로 웹훅을 설정했거나, 편집기를 삽입한 웹사이트가 자기 서버에 저장하거나, 다른 웹사이트가 양식(post.php)으로 여기서 문서를 열 때뿐입니다. 이때 저희 서버는 저장하지 않고 곧바로 브라우저로 넘겨 줍니다. 여느 웹사이트처럼 서버는 방문할 때마다 기록을 남기며, 페이지 조회 수는 익명으로 집계합니다. 자세한 내용은 개인정보 처리방침을 참고하세요."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "편집기는 어떤 Markdown을 이해하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GitHub 확장(표, 작업 목록, 취소선, 자동 링크, 각주)이 포함된 CommonMark와 $…$ 및 $$…$$ 안의 수식. 제목에는 GitHub와 같은 앵커가 붙으므로 [아래 참고](#내-제목) 같은 링크가 작동합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "PDF나 HTML 페이지는 어떻게 만드나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "“내보내기”를 클릭하세요. PDF를 고르고 “인쇄 / PDF로 저장”을 클릭한 뒤 인쇄 대화 상자에서 “PDF로 저장”을 고르세요. 또는 HTML 페이지를 고르면 업로드한 그림과 스타일이 포함된 파일 하나로 내보낼 수 있습니다. 다른 웹사이트에 링크된 그림은 외부 링크로 남습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "그림은 어떻게 추가하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "그림을 편집기로 끌어다 놓거나 붙여 넣거나, 오른쪽 그림 탭에서 추가하세요. 그림은 문서와 함께 브라우저에 저장되며 ![description](name.png)로 사용합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "내 문서는 어디에 저장되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "브라우저에만 저장됩니다. 왼쪽 위의 폴더 버튼(내 문서)을 클릭해 열기, 이름 바꾸기, 복제, 다운로드, 삭제를 할 수 있습니다. 브라우저의 사이트 데이터를 지우면 함께 삭제되므로 보관할 문서는 다운로드하거나, 편집기가 내 서버로 보내게 하세요(“서버에 저장”)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI가 Markdown 편집기에서 쓸 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네, 어떤 AI든 됩니다 - ChatGPT, Claude, Gemini, Copilot 또는 코딩 도구의 AI. \"AI 도우미\", 이어서 \"프롬프트 복사\"를 클릭하고 AI에 붙여 넣은 뒤 무엇을 쓸지 말해 주세요. AI가 링크로 답하면 클릭하세요. 문서가 편집기에 나타납니다. \"실행 취소\"로 모든 변경을 되돌릴 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "내 웹사이트에서 편집기를 쓸 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. iframe으로 삽입하고 postMessage로 문서를 주고받거나, 저장한 모든 버전을 웹훅으로 내 서버에 보내게 하세요. 예제는 내 웹사이트에서 편집기 사용하기를 보세요."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Markdown 편집기는 유료인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아니요. 편집기는 무료이며 광고도 가입도 없습니다."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>실시간 미리 보기로 온라인에서 Markdown 쓰기</h2>\n        <p>Markdown은 몇 가지 간단한 기호만으로 서식 있는 문서가 되는 일반 텍스트입니다. <code>#</code>은 제목, <code>**</code>는 굵은 글씨, <code>-</code>는 목록 항목이 됩니다. Markdown 편집기는 코드와 완성된 문서를 나란히 보여 줍니다. 입력하는 내용은 제목, 목록, 표, 작업 목록, 각주, 수식까지 곧바로 미리 보기에 나타나고, 미리 보기의 텍스트를 클릭하면 코드의 해당 위치로 이동합니다. 미리 보기에서 바로 텍스트를 편집할 수도 있습니다. 덕분에 메모, 문서, README 파일, 글을 빠르게 쓸 수 있습니다.</p>\n        <p>모든 것이 브라우저에서 실행됩니다. 문서는 저희 서버가 아니라 브라우저에 보관되며, 가입도 광고도 없습니다.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>편집기로 할 수 있는 것</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>구문 강조 표시</h3><p>제목, 목록, 링크, 코드, 수식, HTML이 각각의 색으로 표시되고, 줄 번호, Enter로 이어지는 목록, 줄 번호가 붙은 알기 쉬운 문제 목록이 있습니다.</p></div>\n            <div class=\"tile\"><h3>GitHub Markdown</h3><p>표, 작업 목록, 취소선, 자동 링크, 각주가 있는 CommonMark. 제목에는 GitHub와 같은 앵커가 붙고, 그 앵커로 가는 링크를 검사합니다.</p></div>\n            <div class=\"tile\"><h3>수식</h3><p><code>$…$</code> 안의 본문 수식과 <code>$$…$$</code> 안의 별행 수식을 KaTeX로 미리 보기에 바로 조판합니다.</p></div>\n            <div class=\"tile\"><h3>미리 보기에서 편집</h3><p>미리 보기에서 문장, 제목, 목록 항목, 표 셀을 클릭해 그 자리에서 바꾸세요 - Markdown에도 반영되며 특수 문자는 이스케이프됩니다.</p></div>\n            <div class=\"tile\"><h3>그림</h3><p>그림을 편집기로 끌어다 놓고 <code>![description](name.png)</code>로 사용하세요. 그림은 문서와 함께 브라우저에 보관됩니다.</p></div>\n            <div class=\"tile\"><h3>내보내기</h3><p>업로드한 그림과 스타일이 포함된 HTML 파일 하나로 내보내세요. 다른 웹사이트에 링크된 그림은 외부 링크로 남습니다. 인쇄 대화 상자를 통한 PDF, 일반 텍스트 또는 그림이 포함된 Markdown ZIP으로도 내보낼 수 있습니다.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>사용 방법</h2>\n        <ol class=\"steps\">\n            <li><b>시작</b> - “새로 만들기”에서 템플릿을 고르거나 .md 파일을 열거나 Markdown을 붙여 넣으세요.</li>\n            <li><b>쓰기</b> - 코드에 입력하면 미리 보기에 반영됩니다. 표, 목록, 수식은 “삽입”을 쓰세요.</li>\n            <li><b>내보내기</b> - HTML 페이지, PDF 또는 .md 파일을 저장하세요.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>내 웹사이트에서 편집기 사용하기</h2>\n        <p>iframe이나 별도 창으로 편집기를 내 웹사이트에 넣을 수 있습니다. 내 페이지에서 문서를 전달하고, 모든 변경 내용과 저장 내용을 받으며, AI가 결과를 내 서버로 보내게 할 수도 있습니다. 가입도 키도 필요 없습니다.</p>\n        <p><a href=\"/ko/embed/\"><b>편집기를 내 웹사이트에 삽입하기</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>자주 묻는 질문</h2>\n        <div class=\"questions\">\n            <details><summary>내 문서가 업로드되나요?</summary><p>아니요. 편집기는 브라우저에서 실행되며 문서를 저희 서버가 아닌 브라우저에 보관합니다. 문서가 서버로 가는 경우는 직접 내 서버로 웹훅을 설정했거나, 편집기를 삽입한 웹사이트가 자기 서버에 저장하거나, 다른 웹사이트가 양식(post.php)으로 여기서 문서를 열 때뿐입니다. 이때 저희 서버는 저장하지 않고 곧바로 브라우저로 넘겨 줍니다. 여느 웹사이트처럼 서버는 방문할 때마다 기록을 남기며, 페이지 조회 수는 익명으로 집계합니다. 자세한 내용은 <a href=\"/privacy.html\">개인정보 처리방침</a>을 참고하세요.</p></details>\n            <details><summary>편집기는 어떤 Markdown을 이해하나요?</summary><p>GitHub 확장(표, 작업 목록, 취소선, 자동 링크, 각주)이 포함된 CommonMark와 <code>$…$</code> 및 <code>$$…$$</code> 안의 수식. 제목에는 GitHub와 같은 앵커가 붙으므로 <code>[아래 참고](#내-제목)</code> 같은 링크가 작동합니다.</p></details>\n            <details><summary>PDF나 HTML 페이지는 어떻게 만드나요?</summary><p>“내보내기”를 클릭하세요. PDF를 고르고 “인쇄 / PDF로 저장”을 클릭한 뒤 인쇄 대화 상자에서 “PDF로 저장”을 고르세요. 또는 HTML 페이지를 고르면 업로드한 그림과 스타일이 포함된 파일 하나로 내보낼 수 있습니다. 다른 웹사이트에 링크된 그림은 외부 링크로 남습니다.</p></details>\n            <details><summary>그림은 어떻게 추가하나요?</summary><p>그림을 편집기로 끌어다 놓거나 붙여 넣거나, 오른쪽 <b>그림</b> 탭에서 추가하세요. 그림은 문서와 함께 브라우저에 저장되며 <code>![description](name.png)</code>로 사용합니다.</p></details>\n            <details><summary>내 문서는 어디에 저장되나요?</summary><p>브라우저에만 저장됩니다. 왼쪽 위의 폴더 버튼(내 문서)을 클릭해 열기, 이름 바꾸기, 복제, 다운로드, 삭제를 할 수 있습니다. 브라우저의 사이트 데이터를 지우면 함께 삭제되므로 보관할 문서는 다운로드하거나, 편집기가 내 서버로 보내게 하세요(“서버에 저장”).</p></details>\n            <details><summary>AI가 Markdown 편집기에서 쓸 수 있나요?</summary><p>네, 어떤 AI든 됩니다 - ChatGPT, Claude, Gemini, Copilot 또는 코딩 도구의 AI. &quot;AI 도우미&quot;, 이어서 &quot;프롬프트 복사&quot;를 클릭하고 AI에 붙여 넣은 뒤 무엇을 쓸지 말해 주세요. AI가 링크로 답하면 클릭하세요. 문서가 편집기에 나타납니다. &quot;실행 취소&quot;로 모든 변경을 되돌릴 수 있습니다.</p></details>\n            <details><summary>내 웹사이트에서 편집기를 쓸 수 있나요?</summary><p>네. iframe으로 삽입하고 postMessage로 문서를 주고받거나, 저장한 모든 버전을 웹훅으로 내 서버에 보내게 하세요. 예제는 <a href=\"#embed\">내 웹사이트에서 편집기 사용하기</a>를 보세요.</p></details>\n            <details><summary>Markdown 편집기는 유료인가요?</summary><p>아니요. 편집기는 무료이며 광고도 가입도 없습니다.</p></details>\n        </div>\n    </section>",
+  "name": "Markdown 편집기",
+  "embed": {
+    "title": "Markdown 편집기 삽입 안내 | giit.ch",
+    "description": "iframe으로 Markdown 편집기를 내 웹사이트에 삽입하고, postMessage나 웹훅으로 문서를 주고받고, AI를 연결하세요. 무료입니다.",
+    "og_title": "Markdown 편집기를 내 웹사이트에 삽입하기",
+    "og_description": "iframe으로 Markdown 편집기를 내 웹사이트에 삽입하고, postMessage나 웹훅으로 문서를 주고받고, AI를 연결하세요. 무료입니다.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://md.giit.ch/ko/embed/#article",
+          "headline": "Markdown 편집기를 내 웹사이트에 삽입하기",
+          "description": "iframe으로 Markdown 편집기를 내 웹사이트에 삽입하고, postMessage나 웹훅으로 문서를 주고받고, AI를 연결하세요. 무료입니다.",
+          "inLanguage": "ko",
+          "url": "https://md.giit.ch/ko/embed/",
+          "mainEntityOfPage": "https://md.giit.ch/ko/embed/",
+          "image": "https://md.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Markdown 편집기",
+            "url": "https://md.giit.ch/ko/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Markdown 편집기",
+              "item": "https://md.giit.ch/ko/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "삽입",
+              "item": "https://md.giit.ch/ko/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Markdown 편집기를 내 웹사이트에 삽입하기",
+    "intro": "<p>개발자를 위한 페이지입니다. Markdown 편집기를 내 페이지에 삽입하는 방법(iframe, 별도 창, 읽기 전용 뷰어)과 문서, 저장, AI 결과가 편집기와 내 서버 사이를 오가는 방법을 설명합니다. 가입도, 저희가 발급하는 키도 필요 없습니다.</p>",
+    "body": "<p>모든 https 페이지와 localhost에서는 <code>&lt;iframe&gt;</code>과 <code>?embed=1</code>로 편집기를 삽입할 수 있습니다 - 가입도 키도 필요 없습니다. 삽입되면 편집기는 페이지 설명을 숨기고 저장 버튼을 보여 줍니다. 문서를 주고받는 방법은 네 가지입니다.</p>\n\n        <h2>1. 링크로 파일을 열고 내 서버에 저장하기</h2>\n        <p><code>src=</code>는 파일을 열고(서버가 CORS를 허용해야 합니다), <code>webhook=</code>은 “저장”(Ctrl+S) 시 문서를 그 주소로 보내게 합니다. 변경할 때마다 저장하려면 <code>&amp;auto</code>를 추가하세요.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://md.giit.ch/ko/?embed=1&amp;src=https://your-site.com/docs/notes.md&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>웹훅은 JSON <code>{ editor, event: \"save\", id, name, content, assets, updated }</code>이 담긴 POST를 받습니다. 링크에는 토큰을 넣지 않습니다. 서버 로그와 브라우저 방문 기록에 남기 때문입니다. 따라서 주소에 웹훅을 지정하는 방식은 localhost나 인트라넷처럼 토큰이 필요 없는 저장 주소에 적합합니다. 공개 서버에서는 <code>mdeditor:load</code>의 <code>hook: { url, token }</code>으로 웹훅과 토큰을 전달하고, 다음 간단한 PHP 스크립트처럼 토큰을 검증하세요:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://md.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.md&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. 내 페이지에서 문서 보관하기 (postMessage)</h2>\n        <p>편집기가 <code>mdeditor:ready</code>를 보내면 페이지는 <code>mdeditor:load</code>로 답하고, 편집기는 <code>mdeditor:loaded</code>, 실제로 편집할 때 <code>mdeditor:change</code>, 사용자가 저장할 때 <code>mdeditor:save</code>를 알립니다. 페이지는 <code>mdeditor:get</code>(현재 상태)이나 <code>mdeditor:save</code>(저장 누르기)를 보낼 수 있습니다. 그러면 저장은 내 로그인과 세션을 거칩니다.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://md.giit.ch/ko/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://md.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;mdeditor:ready&#x27;) {                // 편집기가 준비됨: 문서를 넘깁니다\n    ed.contentWindow.postMessage({\n      type: &#x27;mdeditor:load&#x27;,\n      name: &#x27;Notes&#x27;,\n      content: await (await fetch(&#x27;/docs/notes.md&#x27;)).text(),\n      assets: { &#x27;logo.png&#x27;: &#x27;data:image/png;base64,…&#x27; }   // 선택 사항: 그림\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;mdeditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // 실제 편집\n  if (m.type === &#x27;mdeditor:save&#x27;) {                 // 사용자가 &quot;Save&quot;를 클릭함\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content, assets: m.assets }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// 내 페이지의 저장 버튼: 응답은 mdeditor:save로 옵니다\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;mdeditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>내 페이지 안의 AI 도우미:</b> 프레임 안에서도 작동합니다. iframe에 <code>allow=\"clipboard-write\"</code>가 있으면 “프롬프트 복사”가 클립보드를 직접 사용합니다(없으면 편집기가 예전 복사 명령을 쓰거나 직접 복사할 수 있도록 프롬프트를 보여 줍니다). AI가 보낸 링크는 다른 웹사이트 안의 편집기에 접근할 수 없으므로, 편집기는 AI와 사용자에게 AI의 답변 전체를 편집기에 붙여 넣거나 편집기를 별도의 창으로 열라고 안내합니다.</p>\n        <h2>3. 별도의 창에서</h2>\n        <p><code>window.open(\"https://md.giit.ch/ko/?embed=window\", \"mdeditor-17\")</code>은 전체 편집기를 별도의 창으로 열고 <code>window.opener</code>와 같은 메시지를 주고받습니다. AI의 링크는 그 창에서 열립니다. <code>mdeditor:load</code>에는 <code>context: { host, title, rules }</code>도 담을 수 있으며(그러면 AI 프롬프트가 문서가 속한 사이트를 알리고 내 규칙을 따릅니다), <code>hook: { url, token, assets: false }</code>, 즉 따로 저장하지 않는 이 문서 전용 웹훅도 담을 수 있습니다. 저장하지 않은 변경이 있는 채로 창을 닫으면 <code>mdeditor:closing</code>을 보냅니다.</p>\n        <h2>4. 내 서버를 통한 AI</h2>\n        <p>편집기에 내 프롬프트, 내 사이트의 주소, 이 편집기 세션용 키를 넘기세요. 그러면 AI 대화 상자에 연결 대상인 내 사이트, AI에게 전하는 내용, <b>현재 문서 변경</b> 또는 <b>새 문서 만들기</b> 선택이 표시되고, <b>프롬프트 복사</b>가 이를 모두 합칩니다. AI는 결과를 키와 함께 내 서버로 POST하고, 페이지가 이를 편집기에서 엽니다. 새 문서는 따로 열리며 사용자의 브라우저에 남습니다. 편집기 세션당 키 하나를 사용합니다: 편집기가 열려 있는 동안 유효하며, 키가 없을 때만 편집기가 <code>mdeditor:key-request</code>로 요청합니다. 편집기는 키를 직접 전송하거나 저장하지 않습니다. 주소는 내 호스트나 그 하위 도메인의 https여야 합니다.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // 편집기 세션당 키 하나\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;mdeditor:load&#x27;, name: &#x27;Notes&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// mdeditor:loaded의 id를 기억하고 id가 다른 change/save/closing은 무시\n// 편집기에 키가 없을 때만:\nif (m.type === &#x27;mdeditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;mdeditor:ai&#x27;, key: k.key }, ORIGIN); }\n// 편집기가 열려 있는 동안 매분 서버에 알림. 편집기나 페이지를 닫으면 키가 무효가 됨\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// 서버에 결과가 있음(폴링, SSE …): target은 &quot;current&quot; 또는 &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;mdeditor:load&#x27;, name: &#x27;Notes&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - 로그인한 사용자의 이 편집기 세션 키 (페이지가 호출)\nsession_start();                                     // 사용자가 이 문서를 편집할 수 있는지 확인\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // 또는 데이터베이스에. ?alive=가 seen을 다시 설정\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - AI가 여기로 POST (CORS 헤더 없음: AI는 서버에서 호출)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // 데이터베이스: 무효가 아니고 최근 3분 안에 확인된 키\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // 페이지가 mdeditor:load로 표시\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>키는 최소 128비트의 무작위 값으로 만들고, 해시만 저장하고, 각 키를 로그인한 사용자, 문서, 이 편집기 세션에 연결하고, 세션마다 하나씩 만들고, 페이지가 세션이 열려 있다고 알리는 동안만 유효하게 하며, 편집기나 페이지가 닫히면 무효로 하세요.</p>\n        <p class=\"muted\">전체 프로토콜은 <a href=\"/llms.txt\">llms.txt</a>에 있습니다 - AI에게 주면 내 시스템에 맞는 연동을 구현해 줍니다. 다른 giit 편집기도 각자의 접두사로 똑같이 작동합니다 - <a href=\"https://editors.giit.ch/ko/\">editors.giit.ch</a>.</p>\n        <h2>문서를 읽기 전용으로 표시하기(뷰어)</h2>\n        <p><code>?viewer=1</code>은 완성된 문서만 보여 줍니다. 코드와 도구가 없고, 아무것도 변경할 수 없으며, 브라우저에 아무것도 저장되지 않습니다. 문서는 링크(<code>#b64=</code>, <code>?src=</code>), 페이지의 <code>mdeditor:load</code>, 또는 일반 양식으로 <code>post.php</code>에 보내는 POST로 전달됩니다. 필드는 텍스트용 <code>content</code> 또는 base64용 <code>b64</code>, 선택 사항 <code>name</code>이며 텍스트는 최대 20MB입니다.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://md.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;ko&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p><code>viewer=1</code>이 없으면 문서는 일반 편집기에서 열립니다. 어느 경우든 메모리에만 유지되며 서버에 저장되지 않고 “내 문서”에도 들어가지 않습니다. 직접 열면 뷰어는 내용이 제3자로부터 왔음을 표시합니다.</p>",
+    "crumb": "삽입",
+    "crumb_nav": "이동 경로",
+    "open": "편집기 열기"
+  }
+}

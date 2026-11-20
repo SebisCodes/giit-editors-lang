@@ -1,0 +1,23 @@
+{
+  "footer_all": "Tous les éditeurs giit",
+  "footer_binding": "Version qui fait foi (allemand) :",
+  "footer_editors": "Éditeurs",
+  "footer_legal": "Informations légales",
+  "footer_license": "Open source sous licence {license}",
+  "footer_llms": "llms.txt pour les assistants IA",
+  "footer_shls": "SHLS par {author}",
+  "footer_source": "Code source",
+  "source_on_github": "Code source sur GitHub",
+  "country": "Suisse",
+  "imprint": "Mentions légales",
+  "privacy": "Politique de confidentialité",
+  "terms": "Conditions d’utilisation",
+  "language": "Langue",
+  "theme": {
+    "group": "Thème de couleurs",
+    "light": "Thème clair",
+    "dark": "Thème sombre",
+    "auto_title": "Comme le réglage de votre système",
+    "auto_label": "Thème automatique (réglage du système)"
+  }
+}

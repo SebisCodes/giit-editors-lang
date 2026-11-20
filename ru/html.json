@@ -1,0 +1,179 @@
+{
+  "title": "Редактор HTML онлайн с предпросмотром | giit.ch",
+  "description": "Бесплатный редактор HTML в браузере: пишите HTML и CSS, смотрите страницу во время набора, правьте текст в предпросмотре, экспорт в HTML, ZIP или PDF.",
+  "og_title": "Редактор HTML онлайн с предпросмотром | giit.ch",
+  "og_description": "Пишите HTML и CSS и смотрите страницу прямо во время набора. Экспорт в HTML, ZIP или PDF. Бесплатно, без регистрации, работает в вашем браузере.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://html.giit.ch/#app",
+        "name": "HTML Editor",
+        "url": "https://html.giit.ch/ru/",
+        "description": "Бесплатный редактор HTML в браузере: пишите HTML и CSS, смотрите страницу во время набора, правьте текст в предпросмотре, экспорт в HTML, ZIP или PDF.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "ru",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://html.giit.ch/img/og.png",
+        "featureList": [
+          "HTML с подсветкой встроенных CSS и JavaScript",
+          "Живой предпросмотр страницы, скрипты никогда не выполняются",
+          "Щелчок в предпросмотре переносит к коду",
+          "Щелчок по тексту в предпросмотре позволяет править его на месте",
+          "Проблемы: незакрытые или неправильно вложенные теги, неизвестные элементы, изображения без alt, отсутствующие файлы, повторяющиеся id",
+          "Изображения, таблицы стилей и шрифты хранятся вместе со страницей",
+          "Экспорт в HTML, один файл HTML с файлами внутри, ZIP, PDF и простой текст",
+          "Много документов в браузере",
+          "Сохранение на ваш сервер через вебхук или встраивание редактора в ваш сайт",
+          "Любой ИИ может писать в редакторе через ссылки"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Моя страница куда-то загружается?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нет. Редактор работает в вашем браузере и хранит ваши страницы там, а не на нашем сервере. Страница попадает на сервер, только если вы сами настроите вебхук на свой собственный сервер, если сайт со встроенным редактором сохранит её на своём сервере или если другой сайт откроет её здесь через форму (post.php), - тогда наш сервер сразу передаёт её в ваш браузер, не сохраняя. Как на любом сайте, сервер записывает каждое посещение в журнал, а просмотры страниц мы считаем анонимно - см. политику конфиденциальности."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Выполняется ли JavaScript в предпросмотре?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нет. Предпросмотр показывает HTML и CSS страницы, но скрипты и атрибуты on… никогда не выполняются, а переходы по ссылкам отключены. Так редактор остаётся безопасным с любой открытой страницей. Код сохраняет свои скрипты, поэтому экспортированная страница работает как прежде."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как добавить изображения и таблицы стилей?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Перетащите или вставьте их в редактор или добавьте их во вкладке Файлы справа. Они хранятся вместе со страницей в вашем браузере и используются по имени, например <img src=\"logo.png\"> или <link rel=\"stylesheet\" href=\"style.css\">."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как получить PDF?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нажмите «Экспорт», выберите PDF и нажмите «Печать / Сохранить в PDF». В диалоге печати выберите в качестве принтера «Сохранить как PDF»."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Где сохраняются мои документы?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Только в вашем браузере. Нажмите кнопку с папкой вверху слева («Мои документы»), чтобы открывать, переименовывать, дублировать, скачивать или удалять их. Очистка данных сайта в браузере удалит их, поэтому скачайте те, которые хотите сохранить, - или пусть редактор отправляет их на ваш собственный сервер («На сервер»)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Может ли ИИ писать в редакторе HTML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, любой ИИ - ChatGPT, Claude, Gemini, Copilot или ИИ в вашем инструменте для программирования. Нажмите «ИИ-ассистент», затем «Копировать промпт», вставьте его в свой ИИ и скажите, что нужно написать. ИИ ответит ссылкой; щёлкните по ней, и страница появится в вашем редакторе. «Отменить» возвращает любое изменение."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли использовать редактор на моём сайте?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Встройте его через iframe и обменивайтесь документами через postMessage или пусть он отправляет каждую сохранённую версию на ваш сервер через вебхук. Примеры - в разделе Редактор на вашем сайте."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Сколько стоит редактор HTML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нисколько. Редактор бесплатный, без рекламы и без регистрации."
+            }
+          }
+        ],
+        "inLanguage": "ru"
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Пишите HTML онлайн с живым предпросмотром</h2>\n        <p>Редактор HTML показывает ваш код и страницу рядом. Всё, что вы набираете, сразу появляется в предпросмотре - заголовки, списки, таблицы, изображения и весь ваш CSS, - а щелчок по любому месту в предпросмотре переносит вас к его месту в коде. Текст можно править и прямо в предпросмотре. Так можно быстро собирать лендинги, рассылки, статьи и формы, ничего не устанавливая.</p>\n        <p>Всё работает в вашем браузере. Ваши страницы хранятся там, а не на нашем сервере, и нет ни регистрации, ни рекламы.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Что умеет редактор</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Код с подсветкой</h3><p>Теги, атрибуты, сущности, комментарии, а также CSS и JavaScript внутри страницы выделены разными цветами, номера строк, закрывающие теги, которые добавляются сами, и аккуратные отступы одним щелчком.</p></div>\n            <div class=\"tile\"><h3>Безопасный живой предпросмотр</h3><p>Страница такая, как её показывает браузер, во фрейме, где скрипты и атрибуты <code>on…</code> никогда не выполняются, а переходы по ссылкам отключены. Проверьте её на полной ширине, при ширине планшета или телефона.</p></div>\n            <div class=\"tile\"><h3>Правка в предпросмотре</h3><p>Щёлкните по заголовку или абзацу в предпросмотре и печатайте: изменение попадёт в код, а <code>&amp;</code>, <code>&lt;</code> и <code>&gt;</code> будут записаны как сущности.</p></div>\n            <div class=\"tile\"><h3>Проблемы с первого взгляда</h3><p>Незакрытые или неправильно вложенные теги, неизвестные элементы, изображения без <code>alt</code>, отсутствующие файлы и повторяющиеся id - каждая с номером строки.</p></div>\n            <div class=\"tile\"><h3>Изображения, таблицы стилей, шрифты</h3><p>Перетащите файлы в редактор и используйте их по имени: <code>&lt;img src=&quot;logo.png&quot;&gt;</code>, <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>. Они хранятся вместе со страницей в вашем браузере.</p></div>\n            <div class=\"tile\"><h3>Экспорт</h3><p>Файл .html, один файл HTML со всеми файлами внутри, ZIP с файлами, PDF через диалог печати или простой текст.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Как это работает</h2>\n        <ol class=\"steps\">\n            <li><b>Начните</b> - выберите шаблон в меню «Новый», откройте файл .html или ZIP или вставьте код HTML.</li>\n            <li><b>Пишите</b> - набирайте код; предпросмотр сразу обновляется. Списки, таблицы, медиа и поля форм - в меню «Вставка».</li>\n            <li><b>Экспортируйте</b> - сохраните .html, ZIP с его файлами или PDF.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Редактор на вашем сайте</h2>\n        <p>Встройте редактор в свой сайт через iframe или откройте его в отдельном окне. Ваша страница передаёт ему документ, получает обратно каждое изменение и каждое сохранение и может поручить ИИ отправлять результаты на ваш сервер. Без регистрации и без ключа.</p>\n        <p><a href=\"/ru/embed/\"><b>Встроить редактор в свой сайт</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Частые вопросы</h2>\n        <div class=\"questions\">\n            <details><summary>Моя страница куда-то загружается?</summary><p>Нет. Редактор работает в вашем браузере и хранит ваши страницы там, а не на нашем сервере. Страница попадает на сервер, только если вы сами настроите вебхук на свой собственный сервер, если сайт со встроенным редактором сохранит её на своём сервере или если другой сайт откроет её здесь через форму (post.php), - тогда наш сервер сразу передаёт её в ваш браузер, не сохраняя. Как на любом сайте, сервер записывает каждое посещение в журнал, а просмотры страниц мы считаем анонимно - см. <a href=\"/privacy.html\">политику конфиденциальности</a>.</p></details>\n            <details><summary>Выполняется ли JavaScript в предпросмотре?</summary><p>Нет. Предпросмотр показывает HTML и CSS страницы, но скрипты и атрибуты <code>on…</code> никогда не выполняются, а переходы по ссылкам отключены. Так редактор остаётся безопасным с любой открытой страницей. Код сохраняет свои скрипты, поэтому экспортированная страница работает как прежде.</p></details>\n            <details><summary>Как добавить изображения и таблицы стилей?</summary><p>Перетащите или вставьте их в редактор или добавьте их во вкладке <b>Файлы</b> справа. Они хранятся вместе со страницей в вашем браузере и используются по имени, например <code>&lt;img src=&quot;logo.png&quot;&gt;</code> или <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>.</p></details>\n            <details><summary>Как получить PDF?</summary><p>Нажмите «Экспорт», выберите PDF и нажмите «Печать / Сохранить в PDF». В диалоге печати выберите в качестве принтера «Сохранить как PDF».</p></details>\n            <details><summary>Где сохраняются мои документы?</summary><p>Только в вашем браузере. Нажмите кнопку с папкой вверху слева («Мои документы»), чтобы открывать, переименовывать, дублировать, скачивать или удалять их. Очистка данных сайта в браузере удалит их, поэтому скачайте те, которые хотите сохранить, - или пусть редактор отправляет их на ваш собственный сервер («На сервер»).</p></details>\n            <details><summary>Может ли ИИ писать в редакторе HTML?</summary><p>Да, любой ИИ - ChatGPT, Claude, Gemini, Copilot или ИИ в вашем инструменте для программирования. Нажмите «ИИ-ассистент», затем «Копировать промпт», вставьте его в свой ИИ и скажите, что нужно написать. ИИ ответит ссылкой; щёлкните по ней, и страница появится в вашем редакторе. «Отменить» возвращает любое изменение.</p></details>\n            <details><summary>Можно ли использовать редактор на моём сайте?</summary><p>Да. Встройте его через iframe и обменивайтесь документами через postMessage или пусть он отправляет каждую сохранённую версию на ваш сервер через вебхук. Примеры - в разделе <a href=\"#embed\">Редактор на вашем сайте</a>.</p></details>\n            <details><summary>Сколько стоит редактор HTML?</summary><p>Нисколько. Редактор бесплатный, без рекламы и без регистрации.</p></details>\n        </div>\n    </section>",
+  "name": "Редактор HTML",
+  "embed": {
+    "title": "Как встроить редактор HTML в свой сайт | giit.ch",
+    "description": "Руководство для разработчиков: встройте редактор HTML в свой сайт через iframe, передавайте документы через postMessage или вебхук и подключите свой ИИ.",
+    "og_title": "Как встроить редактор HTML в свой сайт",
+    "og_description": "Руководство для разработчиков: встройте редактор HTML в свой сайт через iframe, передавайте документы через postMessage или вебхук и подключите свой ИИ.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://html.giit.ch/ru/embed/#article",
+          "headline": "Как встроить редактор HTML в свой сайт",
+          "description": "Руководство для разработчиков: встройте редактор HTML в свой сайт через iframe, передавайте документы через postMessage или вебхук и подключите свой ИИ.",
+          "inLanguage": "ru",
+          "url": "https://html.giit.ch/ru/embed/",
+          "mainEntityOfPage": "https://html.giit.ch/ru/embed/",
+          "image": "https://html.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Редактор HTML",
+            "url": "https://html.giit.ch/ru/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Редактор HTML",
+              "item": "https://html.giit.ch/ru/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Встраивание",
+              "item": "https://html.giit.ch/ru/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Как встроить редактор HTML в свой сайт",
+    "intro": "<p>Для разработчиков: как разместить редактор HTML на своей странице - в iframe, в отдельном окне или в режиме только для чтения - и как документы, сохранения и результаты ИИ передаются между редактором и вашим сервером. Ни регистрация, ни ключ от нас не нужны.</p>",
+    "body": "<p>Любая страница на https (и localhost) может встроить редактор через <code>&lt;iframe&gt;</code> и <code>?embed=1</code> - без регистрации и без ключа. Во встроенном виде редактор скрывает текст страницы и показывает кнопку «Сохранить». Есть четыре способа передать документ в редактор и получить его обратно.</p>\n\n        <h2>1. Открыть файл по ссылке, сохранять на ваш сервер</h2>\n        <p><code>src=</code> открывает файл (ваш сервер должен разрешать CORS), <code>webhook=</code> заставляет «Сохранить» (Ctrl+S) отправлять документ на этот адрес. Добавьте <code>&amp;auto</code>, чтобы сохранять после каждого изменения.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://html.giit.ch/ru/?embed=1&amp;src=https://your-site.com/pages/offer.html&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Вебхук получает POST с JSON <code>{ editor, event: \"save\", id, name, content, assets, updated }</code>. Ссылка не содержит токен: он попал бы в журналы сервера и историю браузера. Поэтому вебхук в адресе подходит для сохранения на сервере, которому токен не нужен, например на localhost или в вашей интрасети. Для публичного сервера передайте вебхук с токеном в <code>htmleditor:load</code> (<code>hook: { url, token }</code>) и проверьте токен, как это делает небольшой PHP-скрипт ниже:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://html.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/pages/$name.html&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Документ хранит ваша страница (postMessage)</h2>\n        <p>Редактор сообщает <code>htmleditor:ready</code>, ваша страница отвечает <code>htmleditor:load</code>, редактор сообщает <code>htmleditor:loaded</code>, <code>htmleditor:change</code> при реальных изменениях и <code>htmleditor:save</code>, когда пользователь сохраняет. Ваша страница может отправить <code>htmleditor:get</code> (текущее состояние) или <code>htmleditor:save</code> (нажать «Сохранить»). Сохранение выполняется через авторизацию и сеанс вашего сайта.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://html.giit.ch/ru/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://html.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;htmleditor:ready&#x27;) {              // редактор готов: передаём ему документ\n    ed.contentWindow.postMessage({\n      type: &#x27;htmleditor:load&#x27;,\n      name: &#x27;Offer&#x27;,\n      content: await (await fetch(&#x27;/pages/offer.html&#x27;)).text(),\n      assets: { &#x27;logo.png&#x27;: &#x27;data:image/png;base64,…&#x27; }   // необязательные файлы\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;htmleditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // настоящая правка\n  if (m.type === &#x27;htmleditor:save&#x27;) {               // пользователь нажал «Сохранить»\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content, assets: m.assets }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Кнопка сохранения на вашей странице: ответ приходит как htmleditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;htmleditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>ИИ-ассистент внутри вашей страницы:</b> он работает и во фрейме. С <code>allow=\"clipboard-write\"</code> на iframe кнопка «Копировать промпт» напрямую использует буфер обмена (иначе редактор переходит на старую команду копирования или показывает промпт для ручного копирования). Ссылка, которую присылает ИИ, не может попасть в редактор внутри другого сайта, поэтому редактор просит ИИ и пользователя вставить весь ответ ИИ в редактор - или открыть редактор в отдельном окне.</p>\n        <h2>3. В отдельном окне</h2>\n        <p><code>window.open(\"https://html.giit.ch/ru/?embed=window\", \"htmleditor-17\")</code> открывает полный редактор в отдельном окне и обменивается теми же сообщениями с <code>window.opener</code>. Ссылки от ИИ попадают туда. <code>htmleditor:load</code> может также содержать <code>context: { host, title, rules }</code> - тогда промпт для ИИ говорит, к чему относится документ, и следует вашим правилам, - и <code>hook: { url, token, assets: false }</code>, вебхук только для этого документа, который никогда не сохраняется. При закрытии окна с несохранёнными изменениями отправляется <code>htmleditor:closing</code>.</p>\n        <h2>4. ИИ через ваш собственный сервер</h2>\n        <p>Передайте редактору свой промпт, адрес на вашем сайте и ключ для этого сеанса редактора. Тогда диалог ИИ показывает «Подключено к» вашему сайту, что вы сообщаете ИИ, и выбор <b>изменить текущий документ</b> или <b>создать новый</b>; <b>Копировать промпт</b> собирает всё вместе. ИИ отправляет свой результат с ключом на ваш сервер, а ваша страница открывает его в редакторе - новый документ открывается отдельно и остаётся в браузере пользователя. Один ключ на сеанс редактора: он действует, пока редактор открыт, и только пока ключа нет, редактор запрашивает его через <code>htmleditor:key-request</code>. Редактор никогда сам не отправляет ключ и никогда не сохраняет его; адрес должен быть https на вашем собственном хосте или его поддомене.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // один ключ на сеанс редактора\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;htmleditor:load&#x27;, name: &#x27;Offer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// запомните id из htmleditor:loaded и игнорируйте change/save/closing с другим id\n// только пока у редактора нет ключа:\nif (m.type === &#x27;htmleditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;htmleditor:ai&#x27;, key: k.key }, ORIGIN); }\n// пока редактор открыт, сообщайте серверу каждую минуту; закрытие редактора или страницы аннулирует ключ\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// у вашего сервера есть результат (polling, SSE …): target - &quot;current&quot; или &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;htmleditor:load&#x27;, name: &#x27;Offer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - ключ этого сеанса редактора для вошедшего пользователя (его вызывает ваша страница)\nsession_start();                                     // проверьте, что пользователь может редактировать этот документ\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // или в вашей базе данных; ?alive= снова обновляет seen\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - сюда отправляет ИИ (без заголовков CORS: ИИ вызывает его с сервера)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // ваша база данных: не аннулирован, seen за последние 3 минуты\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // ваша страница показывает его через htmleditor:load\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Создавайте ключи минимум из 128 случайных бит, храните только их хеш, привязывайте каждый к вошедшему пользователю, документу и этому сеансу редактора, создавайте один ключ на сеанс, считайте его действительным, только пока ваша страница сообщает, что сеанс открыт, и аннулируйте его, когда редактор или страница закрываются.</p>\n        <p class=\"muted\">Весь протокол описан в <a href=\"/llms.txt\">llms.txt</a> - дайте его ИИ, и он построит подключение для вашей системы. Другие редакторы giit работают так же, каждый со своим префиксом, - <a href=\"https://editors.giit.ch/ru/\">editors.giit.ch</a>.</p>\n        <h2>Показ документа только для чтения (просмотрщик)</h2>\n        <p><code>?viewer=1</code> показывает только готовый документ: без кода, без инструментов, ничего нельзя изменить, и в браузере ничего не сохраняется. Документ приходит по ссылке (<code>#b64=</code>, <code>?src=</code>), с вашей страницы через <code>htmleditor:load</code> или через POST обычной формой на <code>post.php</code>: поле <code>content</code> как текст или <code>b64</code> как base64, по желанию <code>name</code>, не более 20 МБ текста.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://html.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;ru&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Без <code>viewer=1</code> документ открывается в обычном редакторе. В обоих случаях он остаётся только в памяти: не сохраняется на сервере и не попадает в «Мои документы». При прямом открытии просмотрщик сообщает, что содержимое получено от третьих лиц.</p>",
+    "crumb": "Встраивание",
+    "crumb_nav": "Навигационная цепочка",
+    "open": "Открыть редактор"
+  }
+}

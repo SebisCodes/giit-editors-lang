@@ -1,0 +1,23 @@
+{
+  "footer_all": "Wszystkie edytory giit",
+  "footer_binding": "Wiążące (po niemiecku):",
+  "footer_editors": "Edytory",
+  "footer_legal": "Informacje prawne",
+  "footer_license": "Open source na licencji {license}",
+  "footer_llms": "llms.txt dla asystentów AI",
+  "footer_shls": "SHLS: {author}",
+  "footer_source": "Kod źródłowy",
+  "source_on_github": "Kod źródłowy na GitHubie",
+  "country": "Szwajcaria",
+  "imprint": "Nota prawna",
+  "privacy": "Polityka prywatności",
+  "terms": "Warunki korzystania",
+  "language": "Język",
+  "theme": {
+    "group": "Motyw kolorów",
+    "light": "Jasny motyw",
+    "dark": "Ciemny motyw",
+    "auto_title": "Tak jak w ustawieniach systemu",
+    "auto_label": "Motyw automatyczny (ustawienie systemu)"
+  }
+}

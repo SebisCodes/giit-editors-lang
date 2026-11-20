@@ -1,0 +1,225 @@
+{
+  "title": "Free Online Editors: LaTeX, SVG, Markdown and More | giit.ch",
+  "desc": "Free browser editors for LaTeX, SVG, HTML, Markdown, JSON, YAML, CSV, Typst and more, with a live preview. No sign-up, no ads, files stay in your browser.",
+  "og_title": "giit Editors - free online editors with a live preview",
+  "h1": "Free online editors with a live preview, right in your browser",
+  "lead": "Editors for the files you work with every day: LaTeX, SVG, HTML, Markdown, data formats and more. Code on the left, the result on the right, nothing to install, and your files stay in your browser. Any AI can write into them with a link, and you can put any of them into your own website.",
+  "points": [
+    "No sign-up, no ads",
+    "Your files stay in your browser",
+    "Any AI can write into them",
+    "Embed them in your website",
+    "In 14 languages"
+  ],
+  "cta1": "See the editors",
+  "cta2": "Embed an editor",
+  "nav": [
+    [
+      "#editors",
+      "Editors"
+    ],
+    [
+      "#common",
+      "What they share"
+    ],
+    [
+      "#embed",
+      "Embed"
+    ],
+    [
+      "#faq",
+      "FAQ"
+    ]
+  ],
+  "editors_h": "The editors",
+  "editors_sub": "Each editor is made for its format and works the same way as the others.",
+  "live": "Online",
+  "soon": "In development",
+  "open": "Open",
+  "common_h": "What every editor does",
+  "common_sub": "Learn one, and you know them all.",
+  "common": [
+    [
+      "🔒",
+      "Private by design",
+      "The editors keep your documents in your browser (local storage), not on our server. A document goes to a server only if you set up your own (webhook), or if a website opens it in an editor with a form - our server then passes it on without storing it."
+    ],
+    [
+      "🗂",
+      "My documents",
+      "Keep any number of documents in the browser: open, rename, duplicate, download and delete them, each with its own undo history."
+    ],
+    [
+      "✨",
+      "Any AI can write with you",
+      "Click \"AI Assistant\", then \"Copy prompt\", and paste it into ChatGPT, Claude, Gemini or Copilot. The AI answers with a link that opens its result in your editor - Undo takes it back."
+    ],
+    [
+      "🤖",
+      "AI agents in the browser (WebMCP)",
+      "In browsers with WebMCP, an AI agent can read and change the open document directly; every change is an undo step."
+    ],
+    [
+      "🟢",
+      "AI status at a glance",
+      "A dot on the AI button shows whether an AI is connected: through your website, as a browser agent, or by links in this tab."
+    ],
+    [
+      "✏️",
+      "Edit in the preview",
+      "Change text, values or shapes right in the preview, tree, table or canvas; the code follows. How you edit depends on the format."
+    ],
+    [
+      "☁️",
+      "Save to your own server",
+      "A webhook sends every saved version to an address you choose, with a token - automatically or on Ctrl+S."
+    ],
+    [
+      "🌐",
+      "In 14 languages",
+      "Every editor has a page in English, German, French, Italian, Spanish, Portuguese, Dutch, Polish, Turkish, Russian, Ukrainian, Chinese, Japanese and Korean - /de/, /fr/ … The language menu switches, the choice is remembered. The AI prompt always stays in English."
+    ],
+    [
+      "🌓",
+      "Light, dark or automatic",
+      "Every editor follows your system or the theme you choose, and works on phones and tablets."
+    ]
+  ],
+  "embed_h": "Use an editor in your own website",
+  "embed_teaser": "Every editor can be put into another website with an iframe or in a window of its own, and all of them speak the same postMessage protocol. Each editor has a page for developers with examples for your page and your server:",
+  "embed_sub": "All editors speak the same protocol. Replace latex with svg, html, md, json, yaml, toml, xml, csv, typst, shls or qr - the messages are the same, only their prefix changes (latexeditor:, svgeditor: …).",
+  "steps": [
+    [
+      "Put the editor into your page",
+      "An iframe is enough. ?embed=1 shows the reduced view with a Save button, ?save=0 hides it when your page has its own. The address chooses the language: /de/ for German, /fr/ for French and so on.",
+      "<iframe id=\"ed\" src=\"https://latex.giit.ch/de/?embed=1\"\n        allow=\"clipboard-write\" style=\"width:100%;height:80vh;border:0\"></iframe>"
+    ],
+    [
+      "Load your document, receive changes and saves",
+      "The editor says it is ready, your page sends the document, and the editor reports real edits and every Save. Check the origin of every message.",
+      "const ED = 'https://latex.giit.ch', ed = document.getElementById('ed');\naddEventListener('message', e => {\n  if (e.origin !== ED || e.source !== ed.contentWindow) return;\n  const m = e.data;\n  if (m.type === 'latexeditor:ready')\n    ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText }, ED);\n  if (m.type === 'latexeditor:change') markUnsaved();\n  if (m.type === 'latexeditor:save') saveOnYourServer(m.content, m.assets);\n});"
+    ],
+    [
+      "Or open it in a window of its own",
+      "The full editor in its own window talks to window.opener in exactly the same way - and links from an AI reach it there.",
+      "const win = window.open('https://latex.giit.ch/de/?embed=window', 'latexeditor-17');"
+    ],
+    [
+      "Let an AI deliver straight to your server",
+      "Hand the editor your rules, an https address on your own site and one key for this editor session. \"Copy prompt\" then tells the AI to POST its result there; your page opens it in the editor. Keep the key valid only while the editor is open.",
+      "ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText,\n  ai: { label: 'My Admin', prompt: 'Keep the placeholders.',\n        endpoint: 'https://your-site.com/api/ai-result', key: sessionKey } }, ED);"
+    ]
+  ],
+  "msg_h": "All messages",
+  "msg_cols": [
+    "Direction",
+    "Message",
+    "What it means"
+  ],
+  "msgs": [
+    [
+      "editor → page",
+      "ready",
+      "The editor can take a document."
+    ],
+    [
+      "page → editor",
+      "load {name, content, assets?, context?, hook?, ai?}",
+      "Open your document (with pictures, where the format has them)."
+    ],
+    [
+      "editor → page",
+      "loaded {id, name}",
+      "Your document is open; remember its id."
+    ],
+    [
+      "editor → page",
+      "change {id, name, content}",
+      "A real edit (not the load)."
+    ],
+    [
+      "editor → page",
+      "save {id, name, content, assets, updated}",
+      "Save / Ctrl+S, or the answer to get."
+    ],
+    [
+      "page → editor",
+      "get · save",
+      "Ask for the current state · press Save."
+    ],
+    [
+      "editor → page",
+      "closing {id, name, content}",
+      "The own window closes with unsaved changes."
+    ],
+    [
+      "editor → page",
+      "reload {id, unsaved}",
+      "F5 / Ctrl+R inside your page - you decide."
+    ],
+    [
+      "page → editor",
+      "ai {label, prompt, endpoint, key} · ai {clear}",
+      "AI through your server, one key per session."
+    ],
+    [
+      "editor → page",
+      "key-request {reason: \"missing\"}",
+      "The session has no key yet."
+    ]
+  ],
+  "msg_note": "The full description, including the webhook and every field, is in each editor's llms.txt and in",
+  "faq_h": "Frequently asked questions",
+  "faq": [
+    [
+      "Are the editors really free?",
+      "Yes. No sign-up and no ads. We set no limit on the number of documents; only your browser's storage does."
+    ],
+    [
+      "Is my document uploaded anywhere?",
+      "No. The editors run in your browser and keep your documents there, not on our server. A document goes to a server only if you set up a webhook, if a website that embeds an editor saves it on its own server, or if a website opens it in an editor with a form - our server then passes it on without storing it. As on any website, the server logs each visit, and we count page views anonymously."
+    ],
+    [
+      "Which AI can I use?",
+      "Any AI - ChatGPT, Claude, Gemini, Copilot or the AI in your coding tool. Copy the prompt, say what you want, and click the link the AI answers with."
+    ],
+    [
+      "Can I use an editor on my own website?",
+      "Yes. Embed it with an iframe or open it in its own window and exchange documents with postMessage, or let it send saved versions to your server with a webhook."
+    ],
+    [
+      "How do I get the editor in my language?",
+      "Choose it in the language menu at the top, or open its page directly: /de/ for German, /fr/ for French, /ja/ for Japanese and so on. The editor remembers it. The prompt for the AI stays English."
+    ],
+    [
+      "Who makes the editors?",
+      "Grünwald Innovation in Neuhausen am Rheinfall, Switzerland."
+    ]
+  ],
+  "skip": "Skip to the editors",
+  "sections_label": "Sections",
+  "theme_names": {
+    "auto": "Auto",
+    "light": "Light",
+    "dark": "Dark",
+    "title": "Change the color theme",
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "by": "A project by",
+  "theme": "Theme",
+  "editors": {
+    "latex": "Write LaTeX and see the typeset pages as you type. Add pictures, set paper and margins, export to PDF.",
+    "svg": "SVG as code and on a canvas: move, resize and recolor shapes, snap grid, export to PNG, JPG, WebP or React.",
+    "html": "Write HTML with a live preview, edit text right in the preview, keep pictures with the page, export as one file or a ZIP.",
+    "md": "Markdown, the simple format for notes and documentation, with tables, task lists, footnotes and math; export to HTML or PDF.",
+    "json": "JSON and JSON Lines as code and as a foldable tree: edit keys and values in the tree, check against a JSON Schema, convert to YAML, CSV or XML.",
+    "yaml": "YAML with the same data tree, comments and anchors kept, problems with their line, convert to JSON.",
+    "toml": "TOML for pyproject.toml, Cargo.toml and app settings, with the same data tree: comments kept, strict TOML 1.0 checks, convert to JSON or YAML.",
+    "xml": "XML with an element tree, XPath search, a check for errors and conversion to JSON or YAML.",
+    "csv": "CSV as text and as a spreadsheet-like table, also for large files; export to XLSX, JSON, Markdown or HTML tables.",
+    "shls": "SHLS, a compact data format for AI: key blocks and records as a tree, problems with their line, conversion to and from JSON the same way as the reference code.",
+    "typst": "Typst with the real compiler in the browser: pages as you type, PDF with selectable text, pictures stored with the document.",
+    "qr": "QR codes for links, WiFi, contacts and payments (SEPA, Swiss QR bill) with logo and design, checked by scanning, as SVG, PDF or EPS - static codes without an expiration date."
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "title": "XML Editörü - Canlı Ağaç, XPath, Dönüştürme | giit.ch",
+  "description": "Tarayıcıda ücretsiz XML editörü: canlı ağaç, satır numaralı hatalar, XPath sorguları ve JSON veya YAML dönüşümü. Kayıt gerekmez.",
+  "og_title": "Çevrimiçi XML Editörü - Canlı Ağaç, XPath, Ücretsiz, Gizliliğinizi Korur",
+  "og_description": "Tarayıcıda ücretsiz XML editörü: canlı ağaç, satır numaralı hatalar, XPath sorguları ve JSON veya YAML dönüşümü. Kayıt gerekmez.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://xml.giit.ch/tr/#app",
+        "name": "XML Editor",
+        "url": "https://xml.giit.ch/tr/",
+        "description": "Tarayıcıda ücretsiz XML editörü: canlı ağaç, satır numaralı hatalar, XPath sorguları ve JSON veya YAML dönüşümü. Kayıt gerekmez.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Tümü (web tarayıcısı)",
+        "inLanguage": "tr",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://xml.giit.ch/img/og.png",
+        "featureList": [
+          "Söz dizimi vurgulamalı XML kodu",
+          "Öznitelikler, metin, yorumlar, CDATA ve ad alanlarıyla canlı öğe ağacı",
+          "Koda atlamak için ağaca tıklayın",
+          "Metni, öznitelik değerlerini ve adları doğrudan ağaçta düzenleyin",
+          "Eşleşen düğümleri işaretleyen XPath sorguları",
+          "Satır ve sütunuyla iyi biçimlilik hataları",
+          "Bildirilmemiş ad alanı önekleri ve yinelenen id’ler",
+          "DTD’leri veya harici varlıkları asla yüklemez",
+          "Biçimlendirme ve küçültme",
+          "JSON ve YAML’a dönüştürme",
+          "Tarayıcıda çok sayıda belge saklayın",
+          "Bir webhook ile kendi sunucunuza kaydedin veya editörü web sitenize yerleştirin",
+          "Her yapay zekâ bağlantılar aracılığıyla editörde yazabilir"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "XML’im yükleniyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör tarayıcınızda çalışır ve belgelerinizi sunucumuzda değil, orada saklar. Bir belge yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - gizlilik politikasına bakın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Editör XML’imi kontrol ediyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Tarayıcının kendi XML ayrıştırıcısını kullanır ve yapıdaki ilk hatayı (iyi biçimlilik) satır ve sütunuyla, ayrıca bildirilmemiş ad alanı öneklerini ve iki kez kullanılan id’leri gösterir. Bir DTD’ye veya XML Schema’ya göre doğrulama yapmaz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "DTD veya harici varlıklar içeren XML’i açmak güvenli mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Editör hiçbir zaman bir DTD, şema veya harici varlık yüklemez ve bir DTD’deki varlıkları asla genişletmez; bu yüzden XXE ve varlık genişletme saldırıları çalışmaz. Bu tür varlıklara yapılan başvurular metinde yazıldığı gibi kalır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "XPath’i nasıl kullanırım?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ağacın üstüne bir XPath 1.0 ifadesi yazın, örneğin //book[price > 30]/title. Eşleşen düğümler ağaçta işaretlenir; oklar birinden diğerine gider. Belgede bildirilen önekler çalışır ve _: kök öğenin varsayılan ad alanını ifade eder."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "XML’i JSON veya YAML’a dönüştürebilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Dönüştür veya Dışa aktar altında belge JSON veya YAML olur: öznitelikler @name, metin #text, yinelenen öğeler liste olarak."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Belgelerim nereye kaydediliyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yalnızca tarayıcınıza. Belgeleri açmak, yeniden adlandırmak, çoğaltmak, indirmek veya silmek için sol üstteki klasör düğmesine (Belgelerim) tıklayın. Tarayıcınızın site verilerini temizlemek onları siler; bu yüzden saklamak istediklerinizi indirin - veya editörün onları kendi sunucunuza göndermesine izin verin (“Sunucuya kaydet”)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bir yapay zekâ XML Editöründe yazabilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. \"Yapay Zekâ Asistanı\"na, ardından \"İstemi kopyala\"ya tıklayın, istemi yapay zekânıza yapıştırın ve ne yazması gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, belge editörünüzde görünür. \"Geri al\" her değişikliği geri alır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Editörü kendi web sitemde kullanabilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Bir iframe ile yerleştirin ve belgeleri postMessage ile alıp verin ya da kaydedilen her sürümü bir webhook ile sunucunuza göndermesine izin verin. Örnekler için Editörü kendi web sitenizde kullanın bölümüne bakın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "XML Editörü ücretli mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör ücretsizdir; reklam ve kayıt yoktur."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>XML’i çevrimiçi düzenleyin, canlı bir ağaçla</h2>\n        <p>XML Editörü kodunuzu ve öğe ağacını yan yana gösterir. Yazdığınız her şey hemen ağaçta görünür - öğeler, öznitelikler, metin, yorumlar, CDATA ve ad alanları - ve herhangi bir düğüme tıklamak sizi koddaki yerine götürür. Adları, değerleri ve metni doğrudan ağaçta da düzenleyebilir, XPath sorguları çalıştırabilir ve belgeyi JSON veya YAML’a dönüştürebilirsiniz.</p>\n        <p>Her şey tarayıcınızda çalışır. Belgeleriniz sunucumuzda değil, orada saklanır; kayıt ve reklam yoktur.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Editörün yapabilecekleri</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Söz dizimi vurgulamalı kod</h3><p>Farklı renklerle gösterilen etiketler, öznitelikler, değerler, varlıklar, yorumlar ve CDATA, satır numaraları, otomatik eklenen bitiş etiketleri ve satır ve sütun bilgileriyle anlaşılır bir sorun listesi.</p></div>\n            <div class=\"tile\"><h3>Öğe ağacı</h3><p>Öğeleri katlayın ve açın; öznitelikleri, metni, yorumları, işleme talimatlarını ve ad alanlarını görün ve seçili düğümün yolunu izleyin.</p></div>\n            <div class=\"tile\"><h3>Ağaçta düzenleyin</h3><p>Öğeleri ve öznitelikleri yeniden adlandırın, değerleri ve metni değiştirin, öğe ekleyin, taşıyın ve kaldırın - özel karakterler kaçışlanarak, küçük düzenlemeler olarak koda yazılır.</p></div>\n            <div class=\"tile\"><h3>XPath ve arama</h3><p>Bir XPath 1.0 alanı eşleşen düğümleri işaretler; arama adları, değerleri ve metni bulur. Belgenin ad alanı önekleri XPath’te çalışır.</p></div>\n            <div class=\"tile\"><h3>Her dosyada güvenli</h3><p>Hiçbir DTD, şema veya harici varlık asla yüklenmez ve hiçbir varlık genişletilmez; bu yüzden XXE ve varlık bombaları çalışmaz.</p></div>\n            <div class=\"tile\"><h3>Biçimlendirme ve dönüştürme</h3><p>Belgeyi girintileyin veya küçültün ya da JSON veya YAML’a dönüştürün: öznitelikler <code>@name</code>, metin <code>#text</code>, yinelenen öğeler liste olarak.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Nasıl çalışır</h2>\n        <ol class=\"steps\">\n            <li><b>Başlayın</b> - “Yeni” altından bir şablon seçin, bir .xml dosyası açın veya XML kodu yapıştırın.</li>\n            <li><b>Düzenleyin</b> - kodu yazın veya ağaçtaki değerlere tıklayın; kodun üstündeki sorunlar neyin iyi biçimli olmadığını söyler.</li>\n            <li><b>Dışa aktarın</b> - XML’i, küçültülmüş bir kopyayı, JSON’u, YAML’ı veya düz metni kaydedin.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Editörü kendi web sitenizde kullanın</h2>\n        <p>Editörü bir iframe ile veya kendi penceresinde kendi web sitenize yerleştirin. Sayfanız belgeyi editöre verir, her değişikliği ve her kaydı geri alır ve bir yapay zekânın sonuçlarını sunucunuza göndermesini sağlayabilir. Kayıt yok, anahtar yok.</p>\n        <p><a href=\"/tr/embed/\"><b>Editörü web sitenize yerleştirin</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Sıkça sorulan sorular</h2>\n        <div class=\"questions\">\n            <details><summary>XML’im yükleniyor mu?</summary><p>Hayır. Editör tarayıcınızda çalışır ve belgelerinizi sunucumuzda değil, orada saklar. Bir belge yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - <a href=\"/privacy.html\">gizlilik politikasına</a> bakın.</p></details>\n            <details><summary>Editör XML’imi kontrol ediyor mu?</summary><p>Evet. Tarayıcının kendi XML ayrıştırıcısını kullanır ve yapıdaki ilk hatayı (iyi biçimlilik) satır ve sütunuyla, ayrıca bildirilmemiş ad alanı öneklerini ve iki kez kullanılan id’leri gösterir. Bir DTD’ye veya XML Schema’ya göre doğrulama yapmaz.</p></details>\n            <details><summary>DTD veya harici varlıklar içeren XML’i açmak güvenli mi?</summary><p>Evet. Editör hiçbir zaman bir DTD, şema veya harici varlık yüklemez ve bir DTD’deki varlıkları asla genişletmez; bu yüzden XXE ve varlık genişletme saldırıları çalışmaz. Bu tür varlıklara yapılan başvurular metinde yazıldığı gibi kalır.</p></details>\n            <details><summary>XPath’i nasıl kullanırım?</summary><p>Ağacın üstüne bir XPath 1.0 ifadesi yazın, örneğin <code>//book[price &gt; 30]/title</code>. Eşleşen düğümler ağaçta işaretlenir; oklar birinden diğerine gider. Belgede bildirilen önekler çalışır ve <code>_:</code> kök öğenin varsayılan ad alanını ifade eder.</p></details>\n            <details><summary>XML’i JSON veya YAML’a dönüştürebilir miyim?</summary><p>Evet. <b>Dönüştür</b> veya <b>Dışa aktar</b> altında belge JSON veya YAML olur: öznitelikler <code>@name</code>, metin <code>#text</code>, yinelenen öğeler liste olarak.</p></details>\n            <details><summary>Belgelerim nereye kaydediliyor?</summary><p>Yalnızca tarayıcınıza. Belgeleri açmak, yeniden adlandırmak, çoğaltmak, indirmek veya silmek için sol üstteki klasör düğmesine (Belgelerim) tıklayın. Tarayıcınızın site verilerini temizlemek onları siler; bu yüzden saklamak istediklerinizi indirin - veya editörün onları kendi sunucunuza göndermesine izin verin (“Sunucuya kaydet”).</p></details>\n            <details><summary>Bir yapay zekâ XML Editöründe yazabilir mi?</summary><p>Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. &quot;Yapay Zekâ Asistanı&quot;na, ardından &quot;İstemi kopyala&quot;ya tıklayın, istemi yapay zekânıza yapıştırın ve ne yazması gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, belge editörünüzde görünür. &quot;Geri al&quot; her değişikliği geri alır.</p></details>\n            <details><summary>Editörü kendi web sitemde kullanabilir miyim?</summary><p>Evet. Bir iframe ile yerleştirin ve belgeleri postMessage ile alıp verin ya da kaydedilen her sürümü bir webhook ile sunucunuza göndermesine izin verin. Örnekler için <a href=\"#embed\">Editörü kendi web sitenizde kullanın</a> bölümüne bakın.</p></details>\n            <details><summary>XML Editörü ücretli mi?</summary><p>Hayır. Editör ücretsizdir; reklam ve kayıt yoktur.</p></details>\n        </div>\n    </section>",
+  "name": "XML Editörü",
+  "embed": {
+    "title": "XML Editörünü Web Sitenize Yerleştirin | giit.ch",
+    "description": "XML Editörünü iframe ile sitenize yerleştirin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+    "og_title": "XML Editörünü web sitenize yerleştirin",
+    "og_description": "XML Editörünü iframe ile sitenize yerleştirin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://xml.giit.ch/tr/embed/#article",
+          "headline": "XML Editörünü web sitenize yerleştirin",
+          "description": "XML Editörünü iframe ile sitenize yerleştirin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+          "inLanguage": "tr",
+          "url": "https://xml.giit.ch/tr/embed/",
+          "mainEntityOfPage": "https://xml.giit.ch/tr/embed/",
+          "image": "https://xml.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "XML Editörü",
+            "url": "https://xml.giit.ch/tr/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "XML Editörü",
+              "item": "https://xml.giit.ch/tr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Yerleştirme",
+              "item": "https://xml.giit.ch/tr/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "XML Editörünü web sitenize yerleştirin",
+    "intro": "<p>Geliştiriciler için: XML Editörünü kendi sayfanıza nasıl koyacağınız - bir iframe içinde, kendi penceresinde veya salt okunur bir görüntüleyici olarak - ve belgelerin, kayıtların ve yapay zekâ sonuçlarının editör ile sunucunuz arasında nasıl taşındığı. Bizde kayıt olmanız veya bizden anahtar almanız gerekmez.</p>",
+    "body": "<p>Her https sayfası (ve localhost) editörü bir <code>&lt;iframe&gt;</code> ve <code>?embed=1</code> ile yerleştirebilir - kayıt yok, anahtar yok. Yerleştirildiğinde editör sayfa metnini gizler ve bir Kaydet düğmesi gösterir. Belgeyi içeri almanın ve dışarı vermenin dört yolu vardır.</p>\n\n        <h2>1. Bir bağlantıdan dosya açın, sunucunuza kaydedin</h2>\n        <p><code>src=</code> bir dosya açar (sunucunuz CORS’a izin vermelidir), <code>webhook=</code> ise “Kaydet”in (Ctrl+S) belgeyi o adrese göndermesini sağlar. Her değişiklikten sonra kaydetmek için <code>&amp;auto</code> ekleyin.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://xml.giit.ch/tr/?embed=1&amp;src=https://your-site.com/data/catalog.xml&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook, JSON içeren bir POST isteği alır: <code>{ editor: \"xml\", event: \"save\", id, name, content, updated }</code>. Bağlantıda belirteç bulunmaz; aksi hâlde sunucu günlüklerine ve tarayıcı geçmişine kaydedilirdi. Bu nedenle adreste belirtilen webhook, localhost veya intranetiniz gibi belirteç gerektirmeyen bir kayıt adresi için uygundur. Herkese açık bir sunucu için webhook’u bir belirteçle <code>xmleditor:load</code> içinde (<code>hook: { url, token }</code>) aktarın ve aşağıdaki küçük PHP betiğinin yaptığı gibi belirteci doğrulayın:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://xml.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/data/$name.xml&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Belgeyi sayfanız tutar (postMessage)</h2>\n        <p>Editör <code>xmleditor:ready</code> der, sayfanız <code>xmleditor:load</code> ile yanıt verir, editör <code>xmleditor:loaded</code>, gerçek düzenlemelerde <code>xmleditor:change</code> ve kullanıcı kaydettiğinde <code>xmleditor:save</code> bildirir. Sayfanız <code>xmleditor:get</code> (geçerli durum) veya <code>xmleditor:save</code> (Kaydet’e basma) gönderebilir. Kaydetme böylece kendi oturum açma ve oturum sisteminiz üzerinden yapılır.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://xml.giit.ch/tr/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://xml.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;xmleditor:ready&#x27;) {               // editör hazır: belgeyi ona verin\n    ed.contentWindow.postMessage({\n      type: &#x27;xmleditor:load&#x27;,\n      name: &#x27;Catalog&#x27;,\n      content: await (await fetch(&#x27;/data/catalog.xml&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;xmleditor:change&#x27;) document.title = &#x27;● not saved&#x27;;     // gerçek bir düzenleme\n  if (m.type === &#x27;xmleditor:save&#x27;) {                // kullanıcı &quot;Kaydet&quot;e tıkladı\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Kendi sayfanızda bir kaydet düğmesi: yanıt xmleditor:save olarak gelir\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;xmleditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Sayfanızın içinde Yapay Zekâ Asistanı:</b> çerçeve içinde de çalışır. iframe üzerinde <code>allow=\"clipboard-write\"</code> ile “İstemi kopyala” panoyu doğrudan kullanır (aksi hâlde editör eski kopyalama komutuna geri döner veya istemi elle kopyalamanız için gösterir). Yapay zekânın gönderdiği bir bağlantı başka bir web sitesinin içindeki editöre ulaşamaz. Bu yüzden editör, yapay zekâdan ve kullanıcıdan bunun yerine yapay zekânın yanıtının tamamını editöre yapıştırmasını ya da editörü kendi penceresinde açmasını ister.</p>\n        <h2>3. Kendi penceresinde</h2>\n        <p><code>window.open(\"https://xml.giit.ch/tr/?embed=window\", \"xmleditor-17\")</code> tam editörü kendi penceresinde açar ve aynı mesajlarla <code>window.opener</code> üzerinden iletişim kurar. Yapay zekâdan gelen bağlantılar ona orada ulaşır. <code>xmleditor:load</code> ayrıca <code>context: { host, title, rules }</code> taşıyabilir - yapay zekâ istemi bu durumda belgenin nereye ait olduğunu söyler ve kurallarınıza uyar - ve <code>hook: { url, token }</code>, yalnızca bu belge için olan ve asla saklanmayan bir webhook. Kaydedilmemiş değişikliklerle pencereyi kapatmak <code>xmleditor:closing</code> gönderir.</p>\n        <h2>4. Kendi sunucunuz üzerinden yapay zekâ</h2>\n        <p>Editöre kendi isteminizi, sitenizde bir adresi ve bu editör oturumu için bir anahtarı verin. Yapay zekâ iletişim kutusu bu durumda sitenize “Bağlı” olduğunu, yapay zekâya ne söylediğinizi ve <b>geçerli belgeyi değiştir</b> veya <b>yeni bir belge oluştur</b> seçimini gösterir; <b>İstemi kopyala</b> hepsini bir araya getirir. Yapay zekâ sonucunu anahtarla sunucunuza gönderir ve sayfanız onu editörde açar - yeni bir belge ayrı açılır ve kullanıcının tarayıcısında kalır. Editör oturumu başına bir anahtar: editör açık olduğu sürece geçerli kalır ve editör yalnızca anahtarı yokken <code>xmleditor:key-request</code> ile ister. Editör anahtarı asla kendisi göndermez ve asla saklamaz; adres kendi alan adınızda veya onun bir alt alan adında https olmalıdır.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // editör oturumu başına bir anahtar\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;xmleditor:load&#x27;, name: &#x27;Catalog&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the sku attributes. Prices in CHF.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// xmleditor:loaded içindeki id'yi hatırlayın ve başka id'li change/save/closing mesajlarını yok sayın\n// yalnızca editörün anahtarı yokken:\nif (m.type === &#x27;xmleditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;xmleditor:ai&#x27;, key: k.key }, ORIGIN); }\n// editör açıkken sunucunuza her dakika bildirin; editörü veya sayfayı kapatmak anahtarı geçersiz kılar\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// sunucunuzda bir sonuç var (polling, SSE …): target &quot;current&quot; veya &quot;new&quot; olur\ned.contentWindow.postMessage({ type: &#x27;xmleditor:load&#x27;, name: &#x27;Catalog&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Anahtarları en az 128 rastgele bitle oluşturun, yalnızca özetlerini (hash) saklayın, her birini oturum açmış kullanıcıya, belgeye ve bu editör oturumuna bağlayın, oturum başına bir tane oluşturun, yalnızca sayfanız oturumu açık bildirdiği sürece geçerli tutun ve editör veya sayfa kapandığında geçersiz kılın.</p>\n        <p class=\"muted\">Protokolün tamamı <a href=\"/llms.txt\">llms.txt</a> dosyasındadır - bir yapay zekâya verin, sisteminiz için bağlantıyı o kursun. Diğer giit editörleri de kendi önekleriyle aynı şekilde çalışır - <a href=\"https://editors.giit.ch/tr/\">editors.giit.ch</a>.</p>\n        <h2>Belgeyi salt okunur göstermek (görüntüleyici)</h2>\n        <p><code>?viewer=1</code> yalnızca bitmiş belgeyi gösterir: kod yok, araç yok, hiçbir şey değiştirilemez ve tarayıcıda hiçbir şey saklanmaz. Belge bir bağlantıdan (<code>#b64=</code>, <code>?src=</code>), sayfanızdan <code>xmleditor:load</code> ile veya normal bir form olarak POST ile <code>post.php</code> adresine gelir: metin olarak <code>content</code> ya da base64 olarak <code>b64</code> alanı, isteğe bağlı <code>name</code>, en fazla 20 MB metin.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://xml.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;tr&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p><code>viewer=1</code> olmadan belge normal editörde açılır. Her iki durumda da yalnızca bellekte kalır: sunucuda saklanmaz ve “Belgelerim” bölümüne girmez. Doğrudan açıldığında görüntüleyici içeriğin üçüncü taraftan geldiğini belirtir.</p>",
+    "crumb": "Yerleştirme",
+    "crumb_nav": "Sayfa yolu",
+    "open": "Editörü aç"
+  }
+}

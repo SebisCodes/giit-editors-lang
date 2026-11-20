@@ -1,0 +1,188 @@
+{
+  "title": "Darmowy edytor Typst z prawdziwym kompilatorem | giit.ch",
+  "description": "Darmowy edytor Typst w przeglądarce: prawdziwy kompilator, podgląd na żywo, edycja tekstu na stronie oraz eksport do PDF, PNG i SVG.",
+  "og_title": "Edytor Typst online - podgląd na żywo, za darmo i prywatnie",
+  "og_description": "Darmowy edytor Typst w przeglądarce: prawdziwy kompilator, podgląd na żywo, edycja tekstu na stronie oraz eksport do PDF, PNG i SVG.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://typst.giit.ch/pl/#app",
+        "name": "Typst Editor",
+        "url": "https://typst.giit.ch/pl/",
+        "description": "Darmowy edytor Typst w przeglądarce: prawdziwy kompilator, podgląd na żywo, edycja tekstu na stronie oraz eksport do PDF, PNG i SVG.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "pl",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://typst.giit.ch/img/og.png",
+        "featureList": [
+          "Kod Typst z podświetlaniem składni",
+          "Prawdziwy kompilator Typst (WebAssembly) w przeglądarce",
+          "Podgląd skompilowanych stron na żywo",
+          "Kliknięcie na stronie przenosi do kodu",
+          "Kliknięty tekst na stronie można edytować na miejscu",
+          "Błędy i ostrzeżenia z wierszem, kolumną i wskazówką",
+          "Ustawienia dokumentu, które zmieniają reguły #set",
+          "Obrazy, pliki danych i czcionki przechowywane razem z dokumentem",
+          "Eksport do PDF z kompilatora, PNG, JPG, WebP i SVG",
+          "Wiele dokumentów przechowywanych w przeglądarce",
+          "Zapis na własnym serwerze przez webhook lub osadzenie edytora na własnej stronie",
+          "Każda AI może pisać w edytorze za pomocą linków"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czy mój dokument jest gdzieś wysyłany?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Edytor i kompilator Typst działają w przeglądarce i tam przechowują twoje dokumenty, a nie na naszym serwerze. Dokument trafia na serwer tylko wtedy, gdy sam skonfigurujesz webhook do własnego serwera, gdy strona osadzająca edytor zapisze go na własnym serwerze albo gdy inna strona internetowa otworzy go tutaj za pomocą formularza (post.php) - nasz serwer przekazuje go wtedy od razu do twojej przeglądarki, nie zapisując go. Jak na każdej stronie internetowej, serwer zapisuje każde wejście w logach, a odsłony liczymy anonimowo - zobacz politykę prywatności."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy to prawdziwy kompilator Typst?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Edytor uruchamia Typst 0.14 skompilowany do WebAssembly (typst.ts), czyli ten sam kompilator co w wierszu poleceń Typst. Dokument ma tam taki sam układ stron, jeśli używa tych samych czcionek i nie korzysta z pakietów z Typst Universe. Jest ładowany raz (około 11 MB), a potem przechowywany przez przeglądarkę."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak uzyskać PDF?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kliknij „Eksportuj”, wybierz PDF i kliknij „Pobierz”. PDF pochodzi wprost z kompilatora Typst, z prawdziwym tekstem, który można zaznaczać i przeszukiwać."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę używać pakietów z Typst Universe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie bezpośrednio: edytor nie ładuje niczego z innych serwerów, więc #import \"@preview/…\" zgłasza problem, podając nazwę pakietu. Pliki .typ pakietu można dodać do dokumentu w karcie Obrazy i importować je po nazwie pliku."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jakie czcionki są dostępne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Czcionki dostarczane z Typst: Libertinus Serif (domyślna), New Computer Modern z jej czcionką matematyczną oraz DejaVu Sans Mono do kodu. Dodaj własne pliki .otf lub .ttf do dokumentu i używaj ich przez #set text(font: \"Name\")."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak dodać obrazy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Przeciągnij lub wklej obraz do edytora albo dodaj go w karcie Obrazy po prawej. Jest przechowywany razem z dokumentem w przeglądarce i używany przez #image(\"name.png\"). Pliki CSV, JSON, YAML i .bib działają tak samo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy AI może pisać w Edytorze Typst?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak, każda AI - ChatGPT, Claude, Gemini, Copilot lub AI w twoim narzędziu programistycznym. Kliknij „Asystent AI”, potem „Kopiuj prompt”, wklej go do swojej AI i opisz, co ma napisać. AI odpowiada linkiem; kliknij go, a dokument pojawi się w edytorze. „Cofnij” cofa każdą zmianę."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę używać edytora na własnej stronie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Osadź go w iframe i wymieniaj dokumenty przez postMessage albo pozwól mu wysyłać każdą zapisaną wersję na twój serwer przez webhook. Przykłady znajdziesz w sekcji Edytor na własnej stronie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy Edytor Typst coś kosztuje?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Edytor jest darmowy, bez reklam i bez rejestracji."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Pisz w Typst online z prawdziwym kompilatorem</h2>\n        <p>Typst to język znaczników do dokumentów takich jak listy, raporty i prace naukowe, nowsza alternatywa dla LaTeX-a. Edytor Typst pokazuje kod i skompilowane strony obok siebie. Uruchamia w przeglądarce prawdziwy kompilator Typst jako WebAssembly, a podgląd pokazuje te same strony co PDF - nagłówki, listy, tabele, wzory, rysunki, przypisy, odwołania oraz twoje własne reguły <code>#set</code> i <code>#show</code>. Kliknięcie dowolnego tekstu na stronie przenosi do jego miejsca w kodzie, a tekst można edytować bezpośrednio na stronie.</p>\n        <p>Wszystko działa w przeglądarce. Twoje dokumenty są przechowywane właśnie tam, a nie na naszym serwerze, i nie ma rejestracji ani reklam.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Co potrafi edytor</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Kod z podświetlaniem</h3><p>Znaczniki, kod, wzory, wartości tekstowe i komentarze we własnych kolorach, numery wierszy, listy kontynuowane po naciśnięciu Enter oraz błędy kompilatora z wierszem, kolumną i wskazówką.</p></div>\n            <div class=\"tile\"><h3>Prawdziwy kompilator Typst</h3><p>Typst 0.14 skompilowany do WebAssembly działa w wątku roboczym obok edytora i kompiluje chwilę po każdej zmianie - pisanie pozostaje płynne.</p></div>\n            <div class=\"tile\"><h3>Edycja na stronie</h3><p>Kliknij tekst na stronie, aby go tam zmienić; zmiana trafia do kodu. Kliknięcie wzoru lub obrazu przenosi do jego miejsca w kodzie.</p></div>\n            <div class=\"tile\"><h3>Ustawienia dokumentu</h3><p>Papier, marginesy, kolumny, czcionka, rozmiar, język, wyjustowany tekst, numerowane nagłówki i numery stron - ustawienia zmieniają reguły <code>#set</code> w twoim kodzie.</p></div>\n            <div class=\"tile\"><h3>Obrazy i pliki danych</h3><p>Dodawaj do dokumentu obrazy, pliki CSV, JSON, YAML, bibliografie, czcionki i inne pliki .typ i używaj ich przez <code>image</code>, <code>csv</code>, <code>json</code> lub <code>#import</code>.</p></div>\n            <div class=\"tile\"><h3>Eksport</h3><p>PDF z kompilatora z prawdziwym tekstem do zaznaczania, każda strona jako PNG, JPG, WebP lub SVG albo źródło .typ z plikami jako ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Jak to działa</h2>\n        <ol class=\"steps\">\n            <li><b>Start</b> - wybierz szablon w menu „Nowy”, otwórz plik .typ lub wklej kod Typst.</li>\n            <li><b>Pisanie</b> - wpisuj kod; strony po prawej nadążają za nim. Tabele, listy i wzory znajdziesz w „Wstaw”.</li>\n            <li><b>Eksport</b> - zapisz PDF, obrazy stron lub plik .typ.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Edytor na własnej stronie</h2>\n        <p>Umieść edytor na własnej stronie w ramce iframe albo we własnym oknie. Twoja strona przekazuje mu dokument, otrzymuje z powrotem każdą zmianę i każdy zapis, a wyniki AI mogą trafiać prosto na twój serwer. Bez rejestracji, bez klucza.</p>\n        <p><a href=\"/pl/embed/\"><b>Osadź edytor na swojej stronie</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Najczęstsze pytania</h2>\n        <div class=\"questions\">\n            <details><summary>Czy mój dokument jest gdzieś wysyłany?</summary><p>Nie. Edytor i kompilator Typst działają w przeglądarce i tam przechowują twoje dokumenty, a nie na naszym serwerze. Dokument trafia na serwer tylko wtedy, gdy sam skonfigurujesz webhook do własnego serwera, gdy strona osadzająca edytor zapisze go na własnym serwerze albo gdy inna strona internetowa otworzy go tutaj za pomocą formularza (post.php) - nasz serwer przekazuje go wtedy od razu do twojej przeglądarki, nie zapisując go. Jak na każdej stronie internetowej, serwer zapisuje każde wejście w logach, a odsłony liczymy anonimowo - zobacz <a href=\"/privacy.html\">politykę prywatności</a>.</p></details>\n            <details><summary>Czy to prawdziwy kompilator Typst?</summary><p>Tak. Edytor uruchamia Typst 0.14 skompilowany do WebAssembly (typst.ts), czyli ten sam kompilator co w wierszu poleceń Typst. Dokument ma tam taki sam układ stron, jeśli używa tych samych czcionek i nie korzysta z pakietów z Typst Universe. Jest ładowany raz (około 11 MB), a potem przechowywany przez przeglądarkę.</p></details>\n            <details><summary>Jak uzyskać PDF?</summary><p>Kliknij „Eksportuj”, wybierz PDF i kliknij „Pobierz”. PDF pochodzi wprost z kompilatora Typst, z prawdziwym tekstem, który można zaznaczać i przeszukiwać.</p></details>\n            <details><summary>Czy mogę używać pakietów z Typst Universe?</summary><p>Nie bezpośrednio: edytor nie ładuje niczego z innych serwerów, więc #import \"@preview/…\" zgłasza problem, podając nazwę pakietu. Pliki .typ pakietu można dodać do dokumentu w karcie Obrazy i importować je po nazwie pliku.</p></details>\n            <details><summary>Jakie czcionki są dostępne?</summary><p>Czcionki dostarczane z Typst: Libertinus Serif (domyślna), New Computer Modern z jej czcionką matematyczną oraz DejaVu Sans Mono do kodu. Dodaj własne pliki .otf lub .ttf do dokumentu i używaj ich przez #set text(font: \"Name\").</p></details>\n            <details><summary>Jak dodać obrazy?</summary><p>Przeciągnij lub wklej obraz do edytora albo dodaj go w karcie Obrazy po prawej. Jest przechowywany razem z dokumentem w przeglądarce i używany przez #image(\"name.png\"). Pliki CSV, JSON, YAML i .bib działają tak samo.</p></details>\n            <details><summary>Czy AI może pisać w Edytorze Typst?</summary><p>Tak, każda AI - ChatGPT, Claude, Gemini, Copilot lub AI w twoim narzędziu programistycznym. Kliknij „Asystent AI”, potem „Kopiuj prompt”, wklej go do swojej AI i opisz, co ma napisać. AI odpowiada linkiem; kliknij go, a dokument pojawi się w edytorze. „Cofnij” cofa każdą zmianę.</p></details>\n            <details><summary>Czy mogę używać edytora na własnej stronie?</summary><p>Tak. Osadź go w iframe i wymieniaj dokumenty przez postMessage albo pozwól mu wysyłać każdą zapisaną wersję na twój serwer przez webhook. Przykłady znajdziesz w sekcji <a href=\"#embed\">Edytor na własnej stronie</a>.</p></details>\n            <details><summary>Czy Edytor Typst coś kosztuje?</summary><p>Nie. Edytor jest darmowy, bez reklam i bez rejestracji.</p></details>\n        </div>\n    </section>",
+  "name": "Edytor Typst",
+  "embed": {
+    "title": "Jak osadzić edytor Typst na własnej stronie | giit.ch",
+    "description": "Osadź edytor Typst na stronie przez iframe. Wymieniaj dokumenty przez postMessage lub webhook i odbieraj wyniki AI na serwerze. Za darmo.",
+    "og_title": "Osadź edytor Typst na swojej stronie",
+    "og_description": "Osadź edytor Typst na stronie przez iframe. Wymieniaj dokumenty przez postMessage lub webhook i odbieraj wyniki AI na serwerze. Za darmo.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://typst.giit.ch/pl/embed/#article",
+          "headline": "Osadź edytor Typst na swojej stronie",
+          "description": "Osadź edytor Typst na stronie przez iframe. Wymieniaj dokumenty przez postMessage lub webhook i odbieraj wyniki AI na serwerze. Za darmo.",
+          "inLanguage": "pl",
+          "url": "https://typst.giit.ch/pl/embed/",
+          "mainEntityOfPage": "https://typst.giit.ch/pl/embed/",
+          "image": "https://typst.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Edytor Typst",
+            "url": "https://typst.giit.ch/pl/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Edytor Typst",
+              "item": "https://typst.giit.ch/pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Osadzanie",
+              "item": "https://typst.giit.ch/pl/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Osadź edytor Typst na swojej stronie",
+    "intro": "<p>Dla programistów: jak umieścić edytor Typst na własnej stronie - w ramce iframe, we własnym oknie albo jako podgląd tylko do odczytu - i jak dokumenty, zapisy i wyniki AI przechodzą między edytorem a twoim serwerem. Nie potrzebujesz rejestracji ani klucza od nas.</p>",
+    "body": "<p>Każda strona https (i localhost) może osadzić edytor za pomocą <code>&lt;iframe&gt;</code> i <code>?embed=1</code> - bez rejestracji, bez klucza. Po osadzeniu edytor ukrywa tekst strony i pokazuje przycisk Zapisz. Dokument można przekazywać do edytora i z niego na cztery sposoby.</p>\n\n        <h2>1. Otwieranie pliku z linku, zapis na twoim serwerze</h2>\n        <p><code>src=</code> otwiera plik (twój serwer musi zezwalać na CORS), <code>webhook=</code> sprawia, że „Zapisz” (Ctrl+S) wysyła dokument pod ten adres. Dodaj <code>&amp;auto</code>, aby zapisywać po każdej zmianie.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://typst.giit.ch/pl/?embed=1&amp;src=https://your-site.com/docs/flyer.typ&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook otrzymuje żądanie POST z JSON <code>{ editor, event: \"save\", id, name, content, assets, updated }</code>. Link nie zawiera tokenu (trafiłby on do logów serwera i historii przeglądarki), więc webhook podany w adresie nadaje się do zapisu pod adresem, który nie wymaga tokenu, na przykład na localhost lub w intranecie. W przypadku publicznego serwera przekaż webhook z tokenem w <code>typsteditor:load</code> (<code>hook: { url, token }</code>) i zweryfikuj go, tak jak robi to ten krótki skrypt PHP:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://typst.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.typ&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Dokument przechowuje twoja strona (postMessage)</h2>\n        <p>Edytor zgłasza <code>typsteditor:ready</code>, twoja strona odpowiada <code>typsteditor:load</code>, edytor zgłasza <code>typsteditor:loaded</code>, <code>typsteditor:change</code> przy rzeczywistych zmianach i <code>typsteditor:save</code>, gdy użytkownik zapisuje. Twoja strona może wysłać <code>typsteditor:get</code> (bieżący stan) lub <code>typsteditor:save</code> (naciśnięcie Zapisz). Zapis odbywa się wtedy przez twoje własne logowanie i sesję.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://typst.giit.ch/pl/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://typst.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;typsteditor:ready&#x27;) {             // edytor jest gotowy: przekaż mu dokument\n    ed.contentWindow.postMessage({\n      type: &#x27;typsteditor:load&#x27;,\n      name: &#x27;Flyer&#x27;,\n      content: await (await fetch(&#x27;/docs/flyer.typ&#x27;)).text(),\n      assets: { &#x27;logo.png&#x27;: &#x27;data:image/png;base64,…&#x27; }   // opcjonalne obrazy i pliki danych\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;typsteditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // rzeczywista zmiana\n  if (m.type === &#x27;typsteditor:save&#x27;) {              // użytkownik kliknął „Zapisz”\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content, assets: m.assets }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Przycisk zapisu na twojej stronie: odpowiedź przychodzi jako typsteditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;typsteditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Asystent AI na twojej stronie:</b> działa także w ramce. Z <code>allow=\"clipboard-write\"</code> w iframe „Kopiuj prompt” korzysta bezpośrednio ze schowka (w przeciwnym razie edytor używa starego polecenia kopiowania albo pokazuje prompt do ręcznego skopiowania). Link wysłany przez AI nie dotrze do edytora osadzonego w innej stronie, więc edytor prosi AI i użytkownika o wklejenie całej odpowiedzi AI do edytora - albo o otwarcie edytora we własnym oknie.</p>\n        <h2>3. We własnym oknie</h2>\n        <p><code>window.open(\"https://typst.giit.ch/pl/?embed=window\", \"typsteditor-17\")</code> otwiera pełny edytor we własnym oknie, który wymienia te same wiadomości z <code>window.opener</code>. Linki od AI docierają do niego tam. <code>typsteditor:load</code> może też zawierać <code>context: { host, title, rules }</code> - prompt dla AI mówi wtedy, do czego należy dokument, i stosuje twoje zasady - oraz <code>hook: { url, token, assets: false }</code>, webhook tylko dla tego dokumentu, który nigdy nie jest zapisywany. Zamknięcie okna z niezapisanymi zmianami wysyła <code>typsteditor:closing</code>. <code>typsteditor:pdf</code> prosi o PDF dokumentu strony i otrzymuje go z powrotem jako data URI, utworzony przez kompilator Typst z prawdziwym tekstem do zaznaczania.</p>\n        <h2>4. AI przez twój własny serwer</h2>\n        <p>Przekaż edytorowi własny prompt, adres w twojej witrynie i klucz dla tej sesji edytora. Okno AI pokazuje wtedy „Połączono z” twoją witryną, to, co przekazujesz AI, oraz wybór: <b>zmienić bieżący dokument</b> lub <b>utworzyć nowy</b>; <b>Kopiuj prompt</b> łączy to wszystko. AI wysyła swój wynik z kluczem na twój serwer, a twoja strona otwiera go w edytorze - nowy dokument otwiera się osobno i zostaje w przeglądarce użytkownika. Jeden klucz na sesję edytora: pozostaje ważny, dopóki edytor jest otwarty, a edytor prosi o niego przez <code>typsteditor:key-request</code> tylko wtedy, gdy go nie ma. Edytor nigdy sam nie wysyła klucza i nigdy go nie zapisuje; adres musi być adresem https na twoim własnym hoście lub jego subdomenie.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // jeden klucz na sesję edytora\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;typsteditor:load&#x27;, name: &#x27;Flyer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// zapamiętaj id z typsteditor:loaded i ignoruj change/save/closing z innym id\n// tylko gdy edytor nie ma klucza:\nif (m.type === &#x27;typsteditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;typsteditor:ai&#x27;, key: k.key }, ORIGIN); }\n// dopóki edytor jest otwarty, informuj serwer co minutę; zamknięcie edytora lub strony unieważnia klucz\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// twój serwer ma wynik (polling, SSE …): target to &quot;current&quot; lub &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;typsteditor:load&#x27;, name: &#x27;Flyer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - klucz tej sesji edytora zalogowanego użytkownika (wywołuje go twoja strona)\nsession_start();                                     // sprawdź, czy użytkownik może edytować ten dokument\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // lub w twojej bazie danych; ?alive= ponownie ustawia seen\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - tu AI wysyła wynik (bez nagłówków CORS: AI wywołują go z serwera)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // twoja baza danych: nieunieważniony, widziany w ciągu ostatnich 3 minut\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // twoja strona pokazuje go przez typsteditor:load\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Twórz klucze z co najmniej 128 losowymi bitami, przechowuj tylko ich skrót, wiąż każdy z zalogowanym użytkownikiem, dokumentem i tą sesją edytora, twórz jeden na sesję, zachowuj jego ważność tylko wtedy, gdy twoja strona zgłasza sesję jako otwartą, i unieważniaj go, gdy edytor lub strona zostaną zamknięte.</p>\n        <p class=\"muted\">Cały protokół jest opisany w <a href=\"/llms.txt\">llms.txt</a> - przekaż go AI, a zbuduje połączenie dla twojego systemu. Pozostałe edytory giit działają tak samo, każdy z własnym prefiksem - <a href=\"https://editors.giit.ch/pl/\">editors.giit.ch</a>.</p>\n        <h2>Wyświetlanie dokumentu tylko do odczytu (podgląd)</h2>\n        <p><code>?viewer=1</code> pokazuje tylko gotowy dokument: bez kodu, bez narzędzi, niczego nie można zmienić i nic nie jest zapisywane w przeglądarce. Dokument pochodzi z linku (<code>#b64=</code>, <code>?src=</code>), z twojej strony przez <code>typsteditor:load</code> albo przez POST jako zwykły formularz do <code>post.php</code>: pole <code>content</code> jako tekst lub <code>b64</code> jako base64, opcjonalnie <code>name</code>, najwyżej 20 MB tekstu.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://typst.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;pl&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Bez <code>viewer=1</code> dokument otwiera się w zwykłym edytorze. W obu przypadkach pozostaje tylko w pamięci: nie jest zapisywany na serwerze i nie trafia do „Moich dokumentów”. Otwarty bezpośrednio podgląd informuje, że treść pochodzi od osób trzecich.</p>",
+    "crumb": "Osadzanie",
+    "crumb_nav": "Ścieżka nawigacji",
+    "open": "Otwórz edytor"
+  }
+}

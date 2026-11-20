@@ -1,0 +1,225 @@
+{
+  "title": "免费在线编辑器：LaTeX、SVG 等 | giit.ch",
+  "desc": "免费的浏览器编辑器，支持 LaTeX、SVG、Markdown 等格式，带实时预览。无需注册，没有广告，文件保留在你的浏览器中。",
+  "og_title": "giit Editors：带实时预览的免费在线编辑器",
+  "h1": "带实时预览的免费在线编辑器，直接在浏览器中使用",
+  "lead": "为你每天处理的文件准备的编辑器：LaTeX、SVG、HTML、Markdown、数据格式等。左边是代码，右边是结果，无需安装任何软件，你的文件保留在浏览器中。任何 AI 都能通过链接在其中写作，你也可以把任意一个放进自己的网站。",
+  "points": [
+    "无需注册，没有广告",
+    "文件保留在你的浏览器中",
+    "任何 AI 都能在其中写作",
+    "可嵌入你的网站",
+    "支持 14 种语言"
+  ],
+  "cta1": "查看编辑器",
+  "cta2": "嵌入编辑器",
+  "nav": [
+    [
+      "#editors",
+      "编辑器"
+    ],
+    [
+      "#common",
+      "共同功能"
+    ],
+    [
+      "#embed",
+      "嵌入"
+    ],
+    [
+      "#faq",
+      "常见问题"
+    ]
+  ],
+  "editors_h": "编辑器",
+  "editors_sub": "每个编辑器都为其格式量身打造，用法与其他编辑器相同。",
+  "live": "已上线",
+  "soon": "开发中",
+  "open": "打开",
+  "common_h": "每个编辑器都能做的事",
+  "common_sub": "学会一个，就会用全部。",
+  "common": [
+    [
+      "🔒",
+      "从设计上保护隐私",
+      "编辑器把你的文档保存在浏览器中（本地存储），而不是我们的服务器上。只有当你自己设置了服务器（Webhook），或者某个网站通过表单在编辑器中打开文档时，文档才会发送到服务器；此时我们的服务器只负责转交，不会保存。"
+    ],
+    [
+      "🗂",
+      "我的文档",
+      "在浏览器中保存任意数量的文档：打开、重命名、复制、下载和删除，每个文档都有自己的撤销历史。"
+    ],
+    [
+      "✨",
+      "任何 AI 都能和你一起写",
+      "点击“AI 助手”，再点击“复制提示词”，然后粘贴到 ChatGPT、Claude、Gemini 或 Copilot 中。AI 会回复一个链接，在你的编辑器中打开其结果，“撤销”可撤回。"
+    ],
+    [
+      "🤖",
+      "浏览器中的 AI 代理（WebMCP）",
+      "在支持 WebMCP 的浏览器中，AI 代理可以直接读取和修改当前文档；每次更改都是一个撤销步骤。"
+    ],
+    [
+      "🟢",
+      "AI 状态一目了然",
+      "AI 按钮上的圆点显示是否已连接 AI：通过你的网站、作为浏览器代理，或通过此标签页中的链接。"
+    ],
+    [
+      "✏️",
+      "在预览中编辑",
+      "直接在预览、树状视图、表格或画布中修改文字、数值或形状，代码会随之更新。具体编辑方式取决于格式。"
+    ],
+    [
+      "☁️",
+      "保存到你自己的服务器",
+      "Webhook 会把每个保存的版本连同令牌 发送到你选择的地址，可自动发送，也可在按 Ctrl+S 时发送。"
+    ],
+    [
+      "🌐",
+      "支持 14 种语言",
+      "每个编辑器都有英语、德语、法语、意大利语、西班牙语、葡萄牙语、荷兰语、波兰语、土耳其语、俄语、乌克兰语、中文、日语和韩语页面：/de/、/fr/ … 语言菜单可切换，所选语言会被记住。AI 提示词始终保持英文。"
+    ],
+    [
+      "🌓",
+      "浅色、深色或自动",
+      "每个编辑器都跟随你的系统或你选择的主题，并可在手机和平板上使用。"
+    ]
+  ],
+  "embed_h": "在你自己的网站中使用编辑器",
+  "embed_teaser": "每个编辑器都可以通过 iframe 或单独的窗口放进其他网站，而且它们都使用同一套 postMessage 协议。每个编辑器都有一个面向开发者的页面，提供适用于你的页面和服务器的示例：",
+  "embed_sub": "所有编辑器都使用相同的协议。把 latex 换成 svg、html、md、json、yaml、toml、xml、csv、typst、shls 或 qr，消息完全相同，只是前缀不同（latexeditor:、svgeditor: …）。",
+  "steps": [
+    [
+      "将编辑器放进你的页面",
+      "一个 iframe 就够了。?embed=1 显示带“保存”按钮的精简视图，如果你的页面有自己的保存按钮，?save=0 可将其隐藏。地址决定语言：/de/ 为德语，/zh/ 为中文，依此类推。",
+      "<iframe id=\"ed\" src=\"https://latex.giit.ch/de/?embed=1\"\n        allow=\"clipboard-write\" style=\"width:100%;height:80vh;border:0\"></iframe>"
+    ],
+    [
+      "加载你的文档，接收更改和保存结果",
+      "编辑器告知已就绪，你的页面发送文档，编辑器报告实际编辑和每次保存。请检查每条消息的来源（origin）。",
+      "const ED = 'https://latex.giit.ch', ed = document.getElementById('ed');\naddEventListener('message', e => {\n  if (e.origin !== ED || e.source !== ed.contentWindow) return;\n  const m = e.data;\n  if (m.type === 'latexeditor:ready')\n    ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText }, ED);\n  if (m.type === 'latexeditor:change') markUnsaved();\n  if (m.type === 'latexeditor:save') saveOnYourServer(m.content, m.assets);\n});"
+    ],
+    [
+      "或在单独的窗口中打开",
+      "单独窗口中的完整编辑器以完全相同的方式与 window.opener 通信，AI 的链接也能在该窗口中打开。",
+      "const win = window.open('https://latex.giit.ch/de/?embed=window', 'latexeditor-17');"
+    ],
+    [
+      "让 AI 直接把结果交付到你的服务器",
+      "向编辑器提供你的规则、你自己网站上的一个 https 地址，以及本次编辑器会话的一个密钥。“复制提示词”随后会让 AI 把结果 POST 到那里；你的页面再在编辑器中打开它。密钥只在编辑器打开期间有效。",
+      "ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText,\n  ai: { label: 'My Admin', prompt: 'Keep the placeholders.',\n        endpoint: 'https://your-site.com/api/ai-result', key: sessionKey } }, ED);"
+    ]
+  ],
+  "msg_h": "全部消息",
+  "msg_cols": [
+    "方向",
+    "消息",
+    "含义"
+  ],
+  "msgs": [
+    [
+      "编辑器 → 页面",
+      "ready",
+      "编辑器可以接收文档了。"
+    ],
+    [
+      "页面 → 编辑器",
+      "load {name, content, assets?, context?, hook?, ai?}",
+      "打开你的文档（如果格式支持，可带图片）。"
+    ],
+    [
+      "编辑器 → 页面",
+      "loaded {id, name}",
+      "你的文档已打开；记住它的 id。"
+    ],
+    [
+      "编辑器 → 页面",
+      "change {id, name, content}",
+      "一次实际编辑（不包括加载）。"
+    ],
+    [
+      "编辑器 → 页面",
+      "save {id, name, content, assets, updated}",
+      "保存 / Ctrl+S，或对 get 的回应。"
+    ],
+    [
+      "页面 → 编辑器",
+      "get · save",
+      "请求当前状态 · 相当于点击“保存”。"
+    ],
+    [
+      "编辑器 → 页面",
+      "closing {id, name, content}",
+      "单独的窗口在有未保存更改时关闭。"
+    ],
+    [
+      "编辑器 → 页面",
+      "reload {id, unsaved}",
+      "在你的页面内按 F5 / Ctrl+R，由你决定。"
+    ],
+    [
+      "页面 → 编辑器",
+      "ai {label, prompt, endpoint, key} · ai {clear}",
+      "通过你的服务器使用 AI，每个会话一个密钥。"
+    ],
+    [
+      "编辑器 → 页面",
+      "key-request {reason: \"missing\"}",
+      "会话还没有密钥。"
+    ]
+  ],
+  "msg_note": "完整说明（包括 Webhook 和每个字段）见各编辑器的 llms.txt 以及",
+  "faq_h": "常见问题",
+  "faq": [
+    [
+      "这些编辑器真的免费吗？",
+      "是的。无需注册，没有广告。我们不限制文档数量，只受你浏览器存储空间的限制。"
+    ],
+    [
+      "我的文档会被上传到别处吗？",
+      "不会。编辑器在你的浏览器中运行，并把你的文档保存在那里，而不是我们的服务器上。只有当你设置了 Webhook、嵌入编辑器的网站把文档保存到它自己的服务器上，或者某个网站通过表单在编辑器中打开文档时，文档才会发送到服务器；此时我们的服务器只负责转交，不会保存。和所有网站一样，服务器会记录每次访问，我们也会匿名统计页面浏览量。"
+    ],
+    [
+      "可以使用哪种 AI？",
+      "任何 AI 都可以：ChatGPT、Claude、Gemini、Copilot 或你编程工具中的 AI。复制提示词，说明你的需求，然后点击 AI 回复的链接。"
+    ],
+    [
+      "可以在自己的网站上使用编辑器吗？",
+      "可以。用 iframe 嵌入它，或在单独的窗口中打开它，并通过 postMessage 交换文档；也可以让它通过 Webhook 把保存的版本发送到你的服务器。"
+    ],
+    [
+      "如何以我的语言使用编辑器？",
+      "在顶部的语言菜单中选择，或直接打开对应页面：/zh/ 为中文，/de/ 为德语，/ja/ 为日语，依此类推。编辑器会记住你的选择。给 AI 的提示词保持英文。"
+    ],
+    [
+      "编辑器由谁制作？",
+      "Grünwald Innovation，位于瑞士莱茵瀑布畔诺伊豪森（Neuhausen am Rheinfall）。"
+    ]
+  ],
+  "skip": "跳到编辑器",
+  "sections_label": "章节",
+  "theme_names": {
+    "auto": "自动",
+    "light": "浅色",
+    "dark": "深色",
+    "title": "更改配色主题",
+    "copy": "复制",
+    "copied": "已复制"
+  },
+  "by": "项目出品：",
+  "theme": "主题",
+  "editors": {
+    "latex": "编写 LaTeX，边输入边查看排版后的页面。可添加图片，设置纸张和页边距，导出为 PDF。",
+    "svg": "以代码和画布编辑 SVG：移动图形、调整大小和改色，吸附网格，导出为 PNG、JPG、WebP 或 React。",
+    "html": "编写 HTML 并实时预览，直接在预览中编辑文字，图片随页面一起保存，可导出为单个文件或 ZIP。",
+    "md": "Markdown 是用于笔记和文档的简单格式，支持表格、任务列表、脚注和公式；可导出为 HTML 或 PDF。",
+    "json": "以代码和可折叠的树编辑 JSON 和 JSON Lines：在树中编辑键和值，用 JSON Schema 检查，转换为 YAML、CSV 或 XML。",
+    "yaml": "YAML，带同样的数据树，保留注释和锚点，问题标明所在行，可转换为 JSON。",
+    "toml": "用于 pyproject.toml、Cargo.toml 和应用设置的 TOML，使用同样的数据树：保留注释，按 TOML 1.0 严格检查，可转换为 JSON 或 YAML。",
+    "xml": "XML，带元素树、XPath 搜索、错误检查，以及转换为 JSON 或 YAML。",
+    "csv": "以文本和类似电子表格的表格编辑 CSV，也适用于大文件；可导出为 XLSX、JSON、Markdown 或 HTML 表格。",
+    "shls": "SHLS，面向 AI 的紧凑数据格式：键块和记录以树显示，问题标明所在行，与 JSON 互相转换，方式与参考实现相同。",
+    "typst": "Typst，浏览器中运行真正的编译器：边输入边看页面，PDF 文字可选，图片与文档一起保存。",
+    "qr": "链接、Wi-Fi、联系人和付款（SEPA、瑞士 QR 账单）二维码，可加徽标和设计，扫描验证，导出 SVG、PDF 或 EPS，静态二维码，永不过期。"
+  }
+}

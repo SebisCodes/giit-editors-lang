@@ -1,0 +1,23 @@
+{
+  "footer_all": "Tüm giit editörleri",
+  "footer_binding": "Bağlayıcı (Almanca):",
+  "footer_editors": "Editörler",
+  "footer_legal": "Yasal",
+  "footer_license": "{license} lisansıyla açık kaynak",
+  "footer_llms": "Yapay zekâ asistanları için llms.txt",
+  "footer_shls": "SHLS: {author}",
+  "footer_source": "Kaynak kodu",
+  "source_on_github": "GitHub’daki kaynak kodu",
+  "country": "İsviçre",
+  "imprint": "Künye",
+  "privacy": "Gizlilik politikası",
+  "terms": "Kullanım koşulları",
+  "language": "Dil",
+  "theme": {
+    "group": "Renk teması",
+    "light": "Açık tema",
+    "dark": "Koyu tema",
+    "auto_title": "Sistem ayarınızla aynı",
+    "auto_label": "Otomatik tema (sistem ayarı)"
+  }
+}

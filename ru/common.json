@@ -1,0 +1,23 @@
+{
+  "footer_all": "Все редакторы giit",
+  "footer_binding": "Юридически обязывающая версия (на немецком):",
+  "footer_editors": "Редакторы",
+  "footer_legal": "Правовая информация",
+  "footer_license": "Открытый исходный код под лицензией {license}",
+  "footer_llms": "llms.txt для ИИ-ассистентов",
+  "footer_shls": "SHLS: {author}",
+  "footer_source": "Исходный код",
+  "source_on_github": "Исходный код на GitHub",
+  "country": "Швейцария",
+  "imprint": "Выходные данные",
+  "privacy": "Политика конфиденциальности",
+  "terms": "Условия использования",
+  "language": "Язык",
+  "theme": {
+    "group": "Цветовая тема",
+    "light": "Светлая тема",
+    "dark": "Тёмная тема",
+    "auto_title": "Как в настройках системы",
+    "auto_label": "Автоматическая тема (настройка системы)"
+  }
+}

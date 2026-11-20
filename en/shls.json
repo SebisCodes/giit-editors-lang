@@ -1,0 +1,178 @@
+{
+  "title": "Free SHLS Editor Online - Convert and Count Tokens | giit.ch",
+  "description": "Free SHLS editor in your browser. SHLS is a compact data format for AI: edit it, convert to and from JSON, YAML or CSV, and count the tokens. No sign-up.",
+  "og_title": "Free SHLS Editor Online - Convert and Count Tokens | giit.ch",
+  "og_description": "Free SHLS editor in your browser. SHLS is a compact data format for AI: edit it, convert to and from JSON, YAML or CSV, and count the tokens. No sign-up.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://shls.giit.ch/#app",
+        "name": "SHLS Editor",
+        "url": "https://shls.giit.ch/",
+        "description": "Free SHLS editor in your browser. SHLS is a compact data format for AI: edit it, convert to and from JSON, YAML or CSV, and count the tokens. No sign-up.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://shls.giit.ch/img/og.png",
+        "featureList": [
+          "SHLS code with highlighting of sections, key blocks, values, nesting levels and PH placeholders",
+          "Each section's key block as a tree and its records with the keys as labels",
+          "Edit values, keys and section names in place; add, duplicate, move and remove records and keys - the records follow the key block",
+          "Click in the records to jump to the code, the code cursor marks its record and key",
+          "Problems by line: records with more or fewer values than the key block, indentation, blank lines after the key block",
+          "Convert to and from JSON exactly as the reference SHLSDecoder and SHLSEncoder, YAML, CSV and JSON Lines",
+          "Token counter: SHLS against the same data as JSON",
+          "Keep many documents in the browser",
+          "Save to your own server with a webhook, or embed the editor in your website",
+          "Any AI can write in the editor through links"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SHLS (Sebis Hierarchical List Structure) is a text format for structured data by Sebastian Grünwald. Each section names its keys once in a key block; the records below list only the values, one per line, and indentation shows the nesting. Without quotes, brackets, colons or repeated keys, the same data needs fewer tokens than JSON - which makes it a good format for AI models."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data uploaded?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The editor runs in your browser and keeps your documents there, not on our server. A document goes to a server only if you set up a webhook to your own server, if a website that embeds the editor saves it on its own server, or if another website opens it here with a form (post.php) - our server then passes it straight to your browser without storing it. As on any website, the server logs each visit, and we count page views anonymously - see the privacy policy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the editor read SHLS exactly like the reference code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The editor reads and writes SHLS exactly as SHLSDecoder and SHLSEncoder of the SHLS repository do - the JSON in the Convert tab is the data the Python classes give. Where they read a document differently than it looks (a record with a value too few, a blank line with spaces), the editor lists it as a problem with its line."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I edit the records without touching the code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Click a value, a key or a section name in the middle, type, and press Enter. The buttons above the records add, duplicate, move and remove records and keys; when you add or remove a key, every record of the section gets or loses its value. Each change is one step for Undo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many tokens does SHLS save?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Convert tab counts the approximate tokens of your document as SHLS and of the same data as JSON. How much SHLS saves depends on the data: the more records share the same keys, the more it saves, because SHLS writes the keys only once. Check it with your own data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can it convert JSON, YAML or CSV to SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Open a .json, .yaml, .csv or .jsonl file and it becomes SHLS, written as SHLSEncoder writes it; the editor says what SHLS cannot keep (empty values, values with line breaks). The Convert tab and Export write JSON, YAML, CSV, JSON Lines and plain text."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can an AI write in the SHLS Editor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, any AI - ChatGPT, Claude, Gemini, Copilot or the AI in your coding tool. Click \"AI Assistant\", then \"Copy prompt\": the prompt explains SHLS, so any AI writes valid SHLS. The AI answers with a link; click it and the document appears in your editor. \"Undo\" takes every change back."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the SHLS Editor cost anything?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The editor is free, without ads and without sign-up."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Edit SHLS online - the data format that saves tokens</h2>\n        <p>SHLS is a plain-text data format, a shorter alternative to JSON and YAML for AI models, which read text as tokens (pieces of words). SHLS (Sebis Hierarchical List Structure) writes structured data without quotes, brackets, colons or repeated keys: each section names its keys once, and the records below list only the values. The SHLS Editor shows the code and, next to it, each section's key block and records. Change values, keys and records right there, see problems by line, convert to and from JSON, YAML and CSV, and see how many tokens SHLS saves against JSON.</p>\n        <p>Everything runs in your browser. Your documents are kept there, not on our server, and there is no sign-up and no advertising.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>SHLS in one minute</h2>\n        <p>A section starts with its name. Its <b>key block</b> lists the keys, indented by one space; the keys of a nested list one level deeper. After <b>exactly one blank line</b> follow the <b>records</b>: one value per line, in the order of the keys. A nested list has a line of its own (its key, or <code>PH</code> as a placeholder) with its records one level deeper. All values are text - converting them to numbers or dates is up to the program that reads them.</p>\n        <pre class=\"example\"><code>Product\n Name\n Price\n\n Smartphone A1\n 599.99\n\n Laptop B2\n 1299.99\n\nCompany\n Name\n Location\n  Country\n  City\n\n TechCorp\n PH\n  USA\n  San Francisco</code></pre>\n        <p>The same data as JSON repeats every key in every record and needs quotes, brackets and colons. SHLS was made for local and cloud AI models, where every token counts. <span lang=\"en\">SHLS by <a href=\"https://github.com/SebisCodes/SHLS-Sebis-Hierarchical-List-Structure\" target=\"_blank\" rel=\"noopener\">Sebastian Grünwald</a></span> - the format, its rules and the reference SHLSDecoder and SHLSEncoder (Python) are in the SHLS repository on GitHub.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>What the editor can do</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Code and records</h3><p>Highlighted SHLS on the left - sections, keys, values, nesting levels and <code>PH</code> placeholders. In the middle each section's key block and its records, the keys as labels. A click jumps to the code, the code cursor marks its record.</p></div>\n            <div class=\"tile\"><h3>Edit in place</h3><p>Change values, keys and section names; add, duplicate, move and remove records and keys. Records follow their key block: a new key gets \"-\" in every record. One step for Undo each.</p></div>\n            <div class=\"tile\"><h3>Read like the reference</h3><p>The editor reads SHLS exactly as SHLSDecoder does and lists what it would read differently than it looks: a record with a value too few or too many, indentation, blank lines after the key block, a key twice.</p></div>\n            <div class=\"tile\"><h3>Tokens</h3><p>The Convert tab counts the approximate tokens of your SHLS and of the same data as JSON, so you see the saving at a glance.</p></div>\n            <div class=\"tile\"><h3>Convert</h3><p>To and from JSON exactly as SHLSDecoder and SHLSEncoder, YAML, CSV (one section as a table) and JSON Lines. JSON, YAML, CSV and JSON Lines files open as SHLS.</p></div>\n            <div class=\"tile\"><h3>Many documents</h3><p>Keep any number of documents in your browser, with their own undo history, and download them all as a ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>How it works</h2>\n        <ol class=\"steps\">\n            <li><b>Start</b> - choose a template under \"New\", open a .shls file, or open a JSON, YAML or CSV file to get it as SHLS.</li>\n            <li><b>Edit</b> - in the code or in the records; both always show the same data.</li>\n            <li><b>Check and convert</b> - fix the listed problems, compare the tokens, and download SHLS, JSON, YAML, CSV or text.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Use the editor on your own website</h2>\n        <p>Put the editor into your own website with an iframe or in a window of its own. Your page hands it the document, gets every change and every save back, and can let an AI send its results to your server. No sign-up, no key.</p>\n        <p><a href=\"/embed/\"><b>Embed the editor on your website</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Frequently asked questions</h2>\n        <div class=\"questions\">\n            <details><summary>What is SHLS?</summary><p>SHLS (Sebis Hierarchical List Structure) is a text format for structured data by Sebastian Grünwald. Each section names its keys once in a key block; the records below list only the values, one per line, and indentation shows the nesting. Without quotes, brackets, colons or repeated keys, the same data needs fewer tokens than JSON - which makes it a good format for AI models.</p></details>\n            <details><summary>Is my data uploaded?</summary><p>No. The editor runs in your browser and keeps your documents there, not on our server. A document goes to a server only if you set up a webhook to your own server, if a website that embeds the editor saves it on its own server, or if another website opens it here with a form (post.php) - our server then passes it straight to your browser without storing it. As on any website, the server logs each visit, and we count page views anonymously - see the <a href=\"/privacy.html\">privacy policy</a>.</p></details>\n            <details><summary>Does the editor read SHLS exactly like the reference code?</summary><p>Yes. The editor reads and writes SHLS exactly as SHLSDecoder and SHLSEncoder of the <a href=\"https://github.com/SebisCodes/SHLS-Sebis-Hierarchical-List-Structure\" target=\"_blank\" rel=\"noopener\">SHLS repository</a> do - the JSON in the Convert tab is the data the Python classes give. Where they read a document differently than it looks (a record with a value too few, a blank line with spaces), the editor lists it as a problem with its line.</p></details>\n            <details><summary>Can I edit the records without touching the code?</summary><p>Yes. Click a value, a key or a section name in the middle, type, and press Enter. The buttons above the records add, duplicate, move and remove records and keys; when you add or remove a key, every record of the section gets or loses its value. Each change is one step for Undo.</p></details>\n            <details><summary>How many tokens does SHLS save?</summary><p>The <b>Convert</b> tab counts the approximate tokens of your document as SHLS and of the same data as JSON. How much SHLS saves depends on the data: the more records share the same keys, the more it saves, because SHLS writes the keys only once. Check it with your own data.</p></details>\n            <details><summary>Can it convert JSON, YAML or CSV to SHLS?</summary><p>Yes. Open a .json, .yaml, .csv or .jsonl file and it becomes SHLS, written as SHLSEncoder writes it; the editor says what SHLS cannot keep (empty values, values with line breaks). The Convert tab and Export write JSON, YAML, CSV, JSON Lines and plain text.</p></details>\n            <details><summary>Can an AI write in the SHLS Editor?</summary><p>Yes, any AI - ChatGPT, Claude, Gemini, Copilot or the AI in your coding tool. Click &quot;AI Assistant&quot;, then &quot;Copy prompt&quot;: the prompt explains SHLS, so any AI writes valid SHLS. The AI answers with a link; click it and the document appears in your editor. &quot;Undo&quot; takes every change back.</p></details>\n            <details><summary>Does the SHLS Editor cost anything?</summary><p>No. The editor is free, without ads and without sign-up.</p></details>\n        </div>\n    </section>",
+  "name": "SHLS Editor",
+  "embed": {
+    "title": "Embed the SHLS Editor in Your Website (iframe) | giit.ch",
+    "description": "Embed the SHLS Editor in your website with an iframe, exchange documents by postMessage or webhook, and connect your AI. Free, with no sign-up.",
+    "og_title": "Embed the SHLS Editor in your website",
+    "og_description": "Embed the SHLS Editor in your website with an iframe, exchange documents by postMessage or webhook, and connect your AI. Free, with no sign-up.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://shls.giit.ch/embed/#article",
+          "headline": "Embed the SHLS Editor in your website",
+          "description": "Embed the SHLS Editor in your website with an iframe, exchange documents by postMessage or webhook, and connect your AI. Free, with no sign-up.",
+          "inLanguage": "en",
+          "url": "https://shls.giit.ch/embed/",
+          "mainEntityOfPage": "https://shls.giit.ch/embed/",
+          "image": "https://shls.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "SHLS Editor",
+            "url": "https://shls.giit.ch/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "SHLS Editor",
+              "item": "https://shls.giit.ch/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Embedding",
+              "item": "https://shls.giit.ch/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Embed the SHLS Editor in your website",
+    "intro": "<p>For developers: how to put the SHLS Editor into your own page - in an iframe, in a window of its own or as a read-only viewer - and how documents, saves and AI results travel between the editor and your server. You need no sign-up and no key from us.</p>",
+    "body": "<p>Any https page (and localhost) can embed the editor with an <code>&lt;iframe&gt;</code> and <code>?embed=1</code> - no sign-up, no key. Embedded, the editor hides the page text and shows a Save button. There are four ways to get the document in and out.</p>\n\n        <h2>1. Open a file from a link, save to your server</h2>\n        <p><code>src=</code> opens a file (your server must allow CORS), <code>webhook=</code> makes \"Save\" (Ctrl+S) send the document to that address. Add <code>&amp;auto</code> to save after every change.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://shls.giit.ch/?embed=1&amp;src=https://your-site.com/data/products.shls&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>The webhook gets a POST with JSON <code>{ editor: \"shls\", event: \"save\", id, name, content, updated }</code>. A link carries no token (it would end up in server logs and the browser history), so a webhook in the address suits a save address that needs none, for example on localhost or in your intranet. For a public server, hand the webhook over with a token in <code>shlseditor:load</code> (<code>hook: { url, token }</code>) and check it, as this small PHP script does:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://shls.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/data/$name.shls&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Your page holds the document (postMessage)</h2>\n        <p>The editor says <code>shlseditor:ready</code>, your page answers with <code>shlseditor:load</code>, the editor reports <code>shlseditor:loaded</code>, <code>shlseditor:change</code> on real edits and <code>shlseditor:save</code> when the user saves. Your page may send <code>shlseditor:get</code> (the current state) or <code>shlseditor:save</code> (press Save). Saving then goes through your own login and session.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://shls.giit.ch/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://shls.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;shlseditor:ready&#x27;) {              // the editor is ready: hand it the document\n    ed.contentWindow.postMessage({\n      type: &#x27;shlseditor:load&#x27;,\n      name: &#x27;Products&#x27;,\n      content: await (await fetch(&#x27;/data/products.shls&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;shlseditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // a real edit\n  if (m.type === &#x27;shlseditor:save&#x27;) {               // the user clicked &quot;Save&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// A save button on your own page: the answer comes as shlseditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;shlseditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>AI Assistant inside your page:</b> it works in the frame too. With <code>allow=\"clipboard-write\"</code> on the iframe, \"Copy prompt\" uses the clipboard directly (otherwise the editor falls back to the old copy command, or shows the prompt to copy by hand). A link the AI sends cannot reach an editor inside another website, so the editor tells the AI and the user to paste the AI's whole answer into the editor instead - or open the editor in a window of its own.</p>\n        <h2>3. In a window of its own</h2>\n        <p><code>window.open(\"https://shls.giit.ch/?embed=window\", \"shlseditor-17\")</code> opens the full editor in its own window and speaks the same messages with <code>window.opener</code>. Links from an AI reach it there. <code>shlseditor:load</code> may also carry <code>context: { host, title, rules }</code> - the AI prompt then says where the document belongs and follows your rules - and <code>hook: { url, token }</code>, a webhook for this document only that is never stored. Closing the window with unsaved changes sends <code>shlseditor:closing</code>.</p>\n        <h2>4. AI through your own server</h2>\n        <p>Hand the editor your own prompt, an address on your site and a key for this editor session. The AI dialog then shows \"Connected to\" your site, what you tell the AI, and the choice <b>change the current document</b> or <b>make a new one</b>; <b>Copy prompt</b> puts it all together. The AI posts its result with the key to your server, and your page opens it in the editor - a new document opens separately and stays in the user's browser. One key per editor session: it stays valid while the editor is open, and only while it has none the editor asks for it with <code>shlseditor:key-request</code>. The editor never sends the key itself and never stores it; the address must be https on your own host or a subdomain of it.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // one key per editor session\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;shlseditor:load&#x27;, name: &#x27;Products&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep every key. Only add records.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// remember the id from shlseditor:loaded and ignore change/save/closing with another id\n// only while the editor has no key:\nif (m.type === &#x27;shlseditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;shlseditor:ai&#x27;, key: k.key }, ORIGIN); }\n// while the editor is open, tell your server every minute; closing the editor or the page voids the key\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// your server has a result (polling, SSE …): target is &quot;current&quot; or &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;shlseditor:load&#x27;, name: &#x27;Products&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Make keys with at least 128 random bits, store only their hash, bind each to the logged-in user, the document and this editor session, make one per session, keep it valid only while your page reports the session as open, and void it when the editor or the page closes.</p>\n        <p class=\"muted\">The whole protocol is in <a href=\"/llms.txt\">llms.txt</a> - give it to an AI and it builds the connection for your system. The other giit editors work the same way with their own prefix - <a href=\"https://editors.giit.ch/\">editors.giit.ch</a>.</p>\n        <h2>Show a document read-only (viewer)</h2>\n        <p><code>?viewer=1</code> shows only the finished document: no code, no tools, nothing can be changed, and nothing is stored in the browser. The document comes from a link (<code>#b64=</code>, <code>?src=</code>), from your page with <code>shlseditor:load</code>, or by POST as a normal form to <code>post.php</code>: the field <code>content</code> as text or <code>b64</code> as base64, optionally <code>name</code>, at most 20 MB of text.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://shls.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Without <code>viewer=1</code> the document opens in the normal editor. Either way it is kept in memory only: it is not stored on the server and does not join \"My documents\". Opened directly, the viewer says that the content comes from a third party.</p>",
+    "crumb": "Embedding",
+    "crumb_nav": "Breadcrumb",
+    "open": "Open the editor"
+  }
+}

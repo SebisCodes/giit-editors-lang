@@ -1,0 +1,225 @@
+{
+  "title": "Editor gratuiti per LaTeX, SVG, Markdown e altro | giit.ch",
+  "desc": "Editor gratuiti nel browser per LaTeX, SVG, Markdown e altro, con anteprima in tempo reale. Senza registrazione né pubblicità, i file restano nel browser.",
+  "og_title": "giit Editors - editor online gratuiti con anteprima in tempo reale",
+  "h1": "Editor online gratuiti con anteprima in tempo reale, direttamente nel tuo browser",
+  "lead": "Editor per i file con cui lavori ogni giorno: LaTeX, SVG, HTML, Markdown, formati di dati e altro ancora. Il codice a sinistra, il risultato a destra, niente da installare, e i tuoi file restano nel tuo browser. Qualsiasi IA può scriverci con un link, e puoi inserire ciascuno di essi nel tuo sito web.",
+  "points": [
+    "Senza registrazione, senza pubblicità",
+    "I tuoi file restano nel tuo browser",
+    "Qualsiasi IA può scriverci",
+    "Integrabili nel tuo sito web",
+    "In 14 lingue"
+  ],
+  "cta1": "Vedi gli editor",
+  "cta2": "Integra un editor",
+  "nav": [
+    [
+      "#editors",
+      "Editor"
+    ],
+    [
+      "#common",
+      "Cosa hanno in comune"
+    ],
+    [
+      "#embed",
+      "Integrazione"
+    ],
+    [
+      "#faq",
+      "Domande"
+    ]
+  ],
+  "editors_h": "Gli editor",
+  "editors_sub": "Ogni editor è fatto per il suo formato e funziona come gli altri.",
+  "live": "Online",
+  "soon": "In sviluppo",
+  "open": "Apri",
+  "common_h": "Cosa fa ogni editor",
+  "common_sub": "Imparane uno e li conosci tutti.",
+  "common": [
+    [
+      "🔒",
+      "Privati per natura",
+      "Gli editor conservano i tuoi documenti nel tuo browser (memoria locale), non sul nostro server. Un documento arriva a un server solo se ne configuri uno tuo (webhook), oppure se un sito web lo apre in un editor con un modulo - il nostro server allora lo inoltra senza salvarlo."
+    ],
+    [
+      "🗂",
+      "I miei documenti",
+      "Conserva quanti documenti vuoi nel browser: aprili, rinominali, duplicali, scaricali ed eliminali, ciascuno con la sua cronologia di annullamento."
+    ],
+    [
+      "✨",
+      "Qualsiasi IA può scrivere con te",
+      "Fai clic su «Assistente IA», poi su «Copia il prompt», e incollalo in ChatGPT, Claude, Gemini o Copilot. L'IA risponde con un link che apre il suo risultato nel tuo editor - Annulla annulla la modifica."
+    ],
+    [
+      "🤖",
+      "Agenti IA nel browser (WebMCP)",
+      "Nei browser con WebMCP, un agente IA può leggere e modificare direttamente il documento aperto; ogni modifica si annulla in un solo passaggio."
+    ],
+    [
+      "🟢",
+      "Lo stato dell'IA a colpo d'occhio",
+      "Un punto sul pulsante IA mostra se un'IA è connessa: tramite il tuo sito web, come agente del browser o con i link in questa scheda."
+    ],
+    [
+      "✏️",
+      "Modifica nell'anteprima",
+      "Modifica testo, valori o forme direttamente nell'anteprima, nell'albero, nella tabella o nell'area di disegno; il codice si aggiorna di conseguenza. Le modalità di modifica dipendono dal formato."
+    ],
+    [
+      "☁️",
+      "Salva sul tuo server",
+      "Un webhook invia ogni versione salvata a un indirizzo che scegli tu, con un token - automaticamente o con Ctrl+S."
+    ],
+    [
+      "🌐",
+      "In 14 lingue",
+      "Ogni editor ha una pagina in inglese, tedesco, francese, italiano, spagnolo, portoghese, olandese, polacco, turco, russo, ucraino, cinese, giapponese e coreano - /de/, /fr/ … Il menu delle lingue cambia lingua, la scelta viene ricordata. Il prompt per l'IA resta sempre in inglese."
+    ],
+    [
+      "🌓",
+      "Chiaro, scuro o automatico",
+      "Ogni editor segue il tuo sistema o il tema che scegli, e funziona su telefoni e tablet."
+    ]
+  ],
+  "embed_h": "Usare un editor nel tuo sito web",
+  "embed_teaser": "Ogni editor si può inserire in un altro sito web con un iframe o in una finestra a sé, e tutti usano lo stesso protocollo postMessage. Ogni editor ha una pagina per sviluppatori con esempi per la tua pagina e il tuo server:",
+  "embed_sub": "Tutti gli editor usano lo stesso protocollo. Sostituisci latex con svg, html, md, json, yaml, toml, xml, csv, typst, shls o qr - i messaggi sono gli stessi, cambia solo il loro prefisso (latexeditor:, svgeditor: …).",
+  "steps": [
+    [
+      "Inserisci l'editor nella tua pagina",
+      "Basta un iframe. ?embed=1 mostra la vista ridotta con un pulsante Salva, ?save=0 lo nasconde quando la tua pagina ha il suo. L'indirizzo sceglie la lingua: /de/ per il tedesco, /fr/ per il francese e così via.",
+      "<iframe id=\"ed\" src=\"https://latex.giit.ch/de/?embed=1\"\n        allow=\"clipboard-write\" style=\"width:100%;height:80vh;border:0\"></iframe>"
+    ],
+    [
+      "Carica il tuo documento, ricevi modifiche e salvataggi",
+      "L'editor dice di essere pronto, la tua pagina invia il documento, e l'editor segnala le modifiche effettive e ogni salvataggio. Controlla l'origine di ogni messaggio.",
+      "const ED = 'https://latex.giit.ch', ed = document.getElementById('ed');\naddEventListener('message', e => {\n  if (e.origin !== ED || e.source !== ed.contentWindow) return;\n  const m = e.data;\n  if (m.type === 'latexeditor:ready')\n    ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText }, ED);\n  if (m.type === 'latexeditor:change') markUnsaved();\n  if (m.type === 'latexeditor:save') saveOnYourServer(m.content, m.assets);\n});"
+    ],
+    [
+      "Oppure aprilo in una finestra propria",
+      "L'editor completo in una finestra propria parla con window.opener esattamente allo stesso modo - e lì lo raggiungono i link di un'IA.",
+      "const win = window.open('https://latex.giit.ch/de/?embed=window', 'latexeditor-17');"
+    ],
+    [
+      "Fai inviare i risultati dell'IA direttamente al tuo server",
+      "Passa all'editor le tue regole, un indirizzo https sul tuo sito e una chiave per questa sessione dell'editor. «Copia il prompt» dice allora all'IA di inviare lì il suo risultato con un POST; la tua pagina lo apre nell'editor. Mantieni la chiave valida solo finché l'editor è aperto.",
+      "ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText,\n  ai: { label: 'My Admin', prompt: 'Keep the placeholders.',\n        endpoint: 'https://your-site.com/api/ai-result', key: sessionKey } }, ED);"
+    ]
+  ],
+  "msg_h": "Tutti i messaggi",
+  "msg_cols": [
+    "Direzione",
+    "Messaggio",
+    "Cosa significa"
+  ],
+  "msgs": [
+    [
+      "editor → pagina",
+      "ready",
+      "L'editor può ricevere un documento."
+    ],
+    [
+      "pagina → editor",
+      "load {name, content, assets?, context?, hook?, ai?}",
+      "Apri il tuo documento (con le immagini, dove il formato le prevede)."
+    ],
+    [
+      "editor → pagina",
+      "loaded {id, name}",
+      "Il tuo documento è aperto; ricorda il suo id."
+    ],
+    [
+      "editor → pagina",
+      "change {id, name, content}",
+      "Una modifica reale (non il caricamento)."
+    ],
+    [
+      "editor → pagina",
+      "save {id, name, content, assets, updated}",
+      "Salva / Ctrl+S, o la risposta a get."
+    ],
+    [
+      "pagina → editor",
+      "get · save",
+      "Chiedi lo stato attuale · premi Salva."
+    ],
+    [
+      "editor → pagina",
+      "closing {id, name, content}",
+      "La finestra propria si chiude con modifiche non salvate."
+    ],
+    [
+      "editor → pagina",
+      "reload {id, unsaved}",
+      "F5 / Ctrl+R dentro la tua pagina - decidi tu."
+    ],
+    [
+      "pagina → editor",
+      "ai {label, prompt, endpoint, key} · ai {clear}",
+      "IA tramite il tuo server, una chiave per sessione."
+    ],
+    [
+      "editor → pagina",
+      "key-request {reason: \"missing\"}",
+      "La sessione non ha ancora una chiave."
+    ]
+  ],
+  "msg_note": "La descrizione completa, compresi il webhook e ogni campo, si trova nel llms.txt di ogni editor e in",
+  "faq_h": "Domande frequenti",
+  "faq": [
+    [
+      "Gli editor sono davvero gratuiti?",
+      "Sì. Senza registrazione e senza pubblicità. Non poniamo limiti al numero di documenti; l'unico limite è la memoria del tuo browser."
+    ],
+    [
+      "Il mio documento viene caricato da qualche parte?",
+      "No. Gli editor funzionano nel tuo browser e conservano lì i tuoi documenti, non sul nostro server. Un documento arriva a un server solo se configuri un webhook, se un sito web che integra un editor lo salva sul proprio server, oppure se un sito web lo apre in un editor con un modulo - il nostro server allora lo inoltra senza salvarlo. Come per ogni sito web, il server registra ogni visita, e contiamo le visualizzazioni di pagina in forma anonima."
+    ],
+    [
+      "Quale IA posso usare?",
+      "Qualsiasi IA - ChatGPT, Claude, Gemini, Copilot o l'IA del tuo strumento di programmazione. Copia il prompt, di' cosa vuoi e fai clic sul link con cui risponde l'IA."
+    ],
+    [
+      "Posso usare un editor sul mio sito web?",
+      "Sì. Integralo con un iframe o aprilo in una finestra propria e scambia documenti con postMessage, oppure lascia che invii le versioni salvate al tuo server con un webhook."
+    ],
+    [
+      "Come ottengo l'editor nella mia lingua?",
+      "Sceglila nel menu delle lingue in alto, oppure apri direttamente la sua pagina: /de/ per il tedesco, /fr/ per il francese, /ja/ per il giapponese e così via. L'editor ricorda la scelta. Il prompt per l'IA resta in inglese."
+    ],
+    [
+      "Chi realizza gli editor?",
+      "Grünwald Innovation a Neuhausen am Rheinfall, Svizzera."
+    ]
+  ],
+  "skip": "Vai agli editor",
+  "sections_label": "Sezioni",
+  "theme_names": {
+    "auto": "Auto",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "title": "Cambia il tema dei colori",
+    "copy": "Copia",
+    "copied": "Copiato"
+  },
+  "by": "Un progetto di",
+  "theme": "Tema",
+  "editors": {
+    "latex": "Scrivi LaTeX e vedi le pagine composte mentre scrivi. Aggiungi immagini, imposta carta e margini, esporta in PDF.",
+    "svg": "SVG come codice e su una tela: sposta, ridimensiona e ricolora le forme, griglia con aggancio, esportazione in PNG, JPG, WebP o React.",
+    "html": "Scrivi HTML con anteprima in tempo reale, modifica il testo direttamente nell'anteprima, tieni le immagini con la pagina, esporta in un unico file o in uno ZIP.",
+    "md": "Markdown, il formato semplice per appunti e documentazione, con tabelle, elenchi di compiti, note a piè di pagina e formule; esportazione in HTML o PDF.",
+    "json": "JSON e JSON Lines come codice e come albero comprimibile: modifica chiavi e valori nell'albero, verifica con un JSON Schema, converti in YAML, CSV o XML.",
+    "yaml": "YAML con lo stesso albero di dati, commenti e ancore mantenuti, problemi con la loro riga, conversione in JSON.",
+    "toml": "TOML per pyproject.toml, Cargo.toml e impostazioni delle app, con lo stesso albero di dati: commenti mantenuti, controllo rigoroso secondo TOML 1.0, conversione in JSON o YAML.",
+    "xml": "XML con un albero degli elementi, ricerca XPath, controllo degli errori e conversione in JSON o YAML.",
+    "csv": "CSV come testo e come tabella simile a un foglio di calcolo, anche per file grandi; esportazione in tabelle XLSX, JSON, Markdown o HTML.",
+    "shls": "SHLS, un formato di dati compatto per l'IA: blocchi di chiavi e record come albero, problemi con la loro riga, conversione da e verso JSON allo stesso modo del codice di riferimento.",
+    "typst": "Typst con il vero compilatore nel browser: pagine mentre scrivi, PDF con testo selezionabile, immagini salvate con il documento.",
+    "qr": "Codici QR per link, Wi-Fi, contatti e pagamenti (SEPA, QR-fattura) con logo e design, verificati con una scansione, in SVG, PDF o EPS - codici statici senza data di scadenza."
+  }
+}

@@ -1,0 +1,437 @@
+/* Simplified Chinese texts of the XML editor: the bar, the work area (code, tree,
+   node, insert, convert), its dialogs and messages, and the problems found
+   in the code. What all editors share is in common.js; how the
+   dictionaries are used is described in i18n.js. Names of documents,
+   elements and attributes stay as they are: the patterns copy them into the
+   Simplified Chinese text. */
+
+import { formatTime, formatSize } from './format.js';
+
+/* "123 bytes" -> "123 字节" (KB and MB stay as they are) */
+
+/* Month names as numbers, for dates written as "2026年10月25日" */
+
+/* When a document was last changed (files.js): "just now", "5 min ago", "Oct 25, 2026" … */
+
+export default {
+    text: {
+        /* ---------- Top bar ---------- */
+        'XML Editor - home': 'XML 编辑器首页',
+        'XML Editor': 'XML 编辑器',
+        'File': '文件',
+        'My documents (Ctrl+O)': '我的文档（Ctrl+O）',
+        'My documents': '我的文档',
+        'New document, or start this one over': '新建文档，或重新开始当前文档',
+        'New': '新建',
+        'New blank document': '新建空白文档',
+        'An XML declaration and an empty root element': 'XML 声明和一个空的根元素',
+        'Product catalog': '产品目录',
+        'Products with attributes, prices and stock': '带属性、价格和库存的产品',
+        'RSS feed': 'RSS 源',
+        'A channel with one item, RSS 2.0': '含一个条目的频道，RSS 2.0',
+        'Sitemap': '站点地图',
+        'sitemap.xml for search engines, with a default namespace': '供搜索引擎使用的 sitemap.xml，带默认命名空间',
+        'Configuration': '配置',
+        'Settings and a database connection': '设置和数据库连接',
+        'The welcome example': '欢迎示例',
+        'Shows what the editor can do': '展示编辑器的功能',
+        'Start this document over': '重新开始当前文档',
+        'Keeps the declaration and the root element, empties the rest - "Undo" brings it back': '保留声明和根元素，清空其余内容，“撤销”可恢复',
+        'Open an XML file from your computer (you can also drag it into the window)': '从电脑打开 XML 文件（也可以拖入窗口）',
+        'Open file…': '打开文件…',
+        'Undo the last change (Ctrl+Z)': '撤销上一次更改（Ctrl+Z）',
+        'Undo': '撤销',
+        'Redo the change you just undid (Ctrl+Y)': '重做刚撤销的更改（Ctrl+Y）',
+        'Redo': '重做',
+        'Output': '输出',
+        'Color theme': '配色主题',
+        'Light theme': '浅色主题',
+        'Dark theme': '深色主题',
+        'Same as your system setting': '跟随系统设置',
+        'Automatic theme (system setting)': '自动主题（系统设置）',
+        'Let any AI write in this editor': '让任意 AI 在此编辑器中写作',
+        'AI Assistant': 'AI 助手',
+        'Save to your own server and embed the editor in your website': '保存到你自己的服务器，并将编辑器嵌入你的网站',
+        'Save to server': '保存到服务器',
+        'How it works and keyboard shortcuts (?)': '使用说明和键盘快捷键（?）',
+        'Help': '帮助',
+        'Save the document as an .xml file (Ctrl+S)': '将文档保存为 .xml 文件（Ctrl+S）',
+        'Download .xml': '下载 .xml',
+        'XML, minified XML, JSON, YAML and plain text (Ctrl+E)': 'XML、压缩的 XML、JSON、YAML 和纯文本（Ctrl+E）',
+        'Export…': '导出…',
+
+        /* ---------- Views and work area ---------- */
+        'View': '视图',
+        'Edit': '编辑',
+        'Side panel': '侧边栏',
+        'Tree': '树',
+        'Node': '节点',
+        'XML code': 'XML 代码',
+        'Copy the XML code to the clipboard': '将 XML 代码复制到剪贴板',
+        'Copy code': '复制代码',
+        'Copy': '复制',
+        'Indent every element on its own line (mixed content stays as it is)': '每个元素单独一行并缩进（混合内容保持不变）',
+        'Format': '格式化',
+        'File format': '文件格式',
+        'Drag to change the width of the code area': '拖动以更改代码区宽度',
+        'Drag to change the width': '拖动以更改宽度',
+        'Element tree': '元素树',
+        'Element tree: click a node to go to its place in the code, click a value to edit it': '元素树：点击节点可跳转到代码中的对应位置，点击值可编辑',
+        'Search names, values and text': '搜索名称、值和文本',
+        'Search in the tree': '在树中搜索',
+        'XPath query, e.g. //book[price > 30]': 'XPath 查询，例如 //book[price > 30]',
+        'XPath query': 'XPath 查询',
+        'Previous match (Shift+Enter)': '上一个匹配（Shift+Enter）',
+        'Previous match': '上一个匹配',
+        'Next match (Enter)': '下一个匹配（Enter）',
+        'Next match': '下一个匹配',
+        'Fold everything below the root': '折叠根节点以下的所有内容',
+        'Fold all': '全部折叠',
+        'Unfold every element': '展开每个元素',
+        'Unfold all': '全部展开',
+        'Path of the selected node': '所选节点的路径',
+        'Click a node to see its path': '点击节点以查看其路径',
+        'Put this path into the XPath field': '将此路径放入 XPath 字段',
+        'As query': '作为查询',
+        'Copy the XPath of the selected node': '复制所选节点的 XPath',
+        'Copy path': '复制路径',
+        'Path copied': '路径已复制',
+        'Updating…': '正在更新…',
+        'Fold': '折叠',
+        'Unfold': '展开',
+        'empty': '空',
+        'Add a child element': '添加子元素',
+        'Add an attribute': '添加属性',
+        'Move up': '上移',
+        'Move down': '下移',
+        'Remove the element': '删除元素',
+        'Remove': '移除',
+        'The document is empty - type some XML on the left, or choose a template under "New".': '文档是空的，请在左侧输入 XML，或在“新建”中选择模板。',
+        'Fix the errors first': '请先修正错误',
+        'No match': '无匹配',
+        'Not a valid XPath expression': '不是有效的 XPath 表达式',
+        'Nothing found': '未找到',
+        'Open it here': '在这里打开',
+        'Drop the XML file here': '将 XML 文件拖放到这里',
+
+        /* Problems above the code */
+        'Hide': '隐藏',
+        'Show': '显示',
+
+        /* ---------- Side panel ---------- */
+        'The selected node: path, namespace, attributes and actions': '所选节点：路径、命名空间、属性和操作',
+        'Ready-made pieces: elements, comments, CDATA, characters': '现成片段：元素、注释、CDATA、字符',
+        'Insert': '插入',
+        'Format, minify, JSON and YAML': '格式化、压缩、JSON 和 YAML',
+        'Convert': '转换',
+        'Click a node in the tree (or put the cursor in the code) to see it here.': '点击树中的节点（或将光标放在代码中）即可在此查看。',
+        'depth': '深度',
+        'element': '个元素',
+        'elements': '个元素',
+        'attribute': '个属性',
+        'attributes': '个属性',
+        'Start and end tag': '开始和结束标签',
+        'Root element': '根元素',
+        'Default namespace': '默认命名空间',
+        'Namespaces': '命名空间',
+        'Attribute': '属性',
+        'Element': '元素',
+        'Text': '文本',
+        'Comment': '注释',
+        'CDATA section': 'CDATA 段',
+        'Processing instruction': '处理指令',
+        'Path': '路径',
+        'Line': '行',
+        'Namespace': '命名空间',
+        'none': '无',
+        'Content': '内容',
+        'Attributes': '属性',
+        'Remove the attribute': '删除属性',
+        'No attributes.': '没有属性。',
+        'Add attribute': '添加属性',
+        'Add child element': '添加子元素',
+        'Length': '长度',
+        'Structure': '结构',
+        'An element at the cursor, around the selected text': '在光标处插入元素，包住选中的文字',
+        'Empty element': '空元素',
+        'A self-closing element': '自闭合元素',
+        'An attribute (put the cursor inside a start tag)': '属性（将光标放在开始标签内）',
+        'Text that is not parsed as markup': '不作为标记解析的文本',
+        'XML declaration': 'XML 声明',
+        'The first line: version and encoding': '第一行：版本和编码',
+        'A namespace declaration (inside a start tag)': '命名空间声明（在开始标签内）',
+        'Schema instance': '模式实例',
+        'xmlns:xsi for xsi:schemaLocation (inside a start tag)': '用于 xsi:schemaLocation 的 xmlns:xsi（在开始标签内）',
+        'Characters': '字符',
+        'As entity references, so they stay readable in any encoding.': '作为实体引用，在任何编码下都可读。',
+        'Code': '代码',
+        'Indent with': '缩进方式',
+        '2 spaces': '2 个空格',
+        '4 spaces': '4 个空格',
+        'Tabs': '制表符',
+        'Indent every element on its own line (one undo step)': '每个元素单独一行并缩进（一步撤销）',
+        'Remove comments and the white space between elements (one undo step)': '删除注释和元素之间的空白（一步撤销）',
+        'Minify': '压缩',
+        'Other formats': '其他格式',
+        'As JSON': '转为 JSON',
+        'As YAML': '转为 YAML',
+        'The document is not well-formed - fix the errors above the code first.': '文档格式不正确，请先修正代码上方的错误。',
+        'Attributes become': '属性变为',
+        ', text next to elements': '，元素旁的文本',
+        ', repeated elements a list. Comments are left out.': '，重复的元素变为列表。注释会被省略。',
+        'Result': '结果',
+        'Download': '下载',
+
+        /* ---------- Export ---------- */
+        'Close': '关闭',
+        'File name': '文件名',
+        'XML as it is (.xml)': '原样 XML（.xml）',
+        'Minified XML (.xml)': '压缩的 XML（.xml）',
+        'Converted to JSON (.json)': '转换为 JSON（.json）',
+        'Converted to YAML (.yaml)': '转换为 YAML（.yaml）',
+        'Plain text (.txt)': '纯文本（.txt）',
+        'Download everything at once: XML, minified XML, JSON, YAML and text': '一次下载全部：XML、压缩的 XML、JSON、YAML 和文本',
+        'All formats (ZIP)': '所有格式（ZIP）',
+        'The document is not well-formed - fix the errors first': '文档格式不正确，请先修正错误',
+
+        /* ---------- My documents ---------- */
+        'Search by name': '按名称搜索',
+        'Search your documents': '搜索你的文档',
+        'Open an XML file from your computer as a new document': '从电脑打开 XML 文件作为新文档',
+        'New document': '新文档',
+        'Click a document to open it. They are stored only in this browser - nothing is uploaded. Clearing the browser\'s site data removes them, so download the ones you want to keep.':
+            '点击文档即可打开。文档只保存在此浏览器中，不会上传。清除浏览器的网站数据会删除它们，请下载需要保留的文档。',
+        'Download every document as an .xml file in one ZIP': '将每个文档作为 .xml 文件打包成一个 ZIP 下载',
+        'Download all (ZIP)': '全部下载（ZIP）',
+        'Rename': '重命名',
+        'Duplicate': '创建副本',
+        'Download as .xml': '下载为 .xml',
+        'Delete': '删除',
+        'New name': '新名称',
+        'This document is open': '此文档已打开',
+        'Click to open this document': '点击打开此文档',
+        'No documents yet.': '还没有文档。',
+        'The document is removed from this browser for good. Download it first if you want to keep a copy.':
+            '文档将从此浏览器中永久删除。如需保留副本，请先下载。',
+
+        /* ---------- AI Assistant ---------- */
+        'Any AI can write with you - ChatGPT, Claude, Gemini, Copilot.': '任何 AI 都能和你一起写作：ChatGPT、Claude、Gemini、Copilot。',
+        'Connected AI': '已连接的 AI',
+        'Connected to': '已连接到',
+        'the AI sends its result there, and it opens here.': 'AI 会把结果发送到那里，然后在这里打开。',
+        'What': '内容',
+        'tells the AI': '告诉 AI',
+        'The AI should': 'AI 应该',
+        'Change “': '修改“',
+        '”': '”',
+        'Make a new document': '新建一个文档',
+        'The AI\'s answer (or press Ctrl+V anywhere):': 'AI 的回答（或在任意位置按 Ctrl+V）：',
+        'The document travels in the link after the “#”, which no server sees. What you paste into your AI is handled by its provider.':
+            '文档放在链接中“#”之后的部分，任何服务器都看不到。你粘贴到 AI 中的内容由其提供商处理。',
+        'The prompt - copy it with Ctrl+C': '提示词，用 Ctrl+C 复制',
+        'Copy prompt': '复制提示词',
+        'The AI answers with a link: click it, or paste the whole answer below.': 'AI 会回复一个链接：点击它，或将完整回答粘贴到下方。',
+        'takes it back.': '可撤回。',
+        'The AI answers with a link:': 'AI 会回复一个链接：',
+        'paste its whole answer below': '将完整回答粘贴到下方',
+        '(a clicked link opens a separate editor).': '（点击链接会打开另一个编辑器）。',
+        '(no key yet)': '（还没有密钥）',
+        '(key valid while the editor is open)': '（编辑器打开期间密钥有效）',
+        'The link could not be read': '无法读取该链接',
+        'The document in this link is incomplete or damaged. If the AI\'s link was split over several lines (as in a terminal), copy the whole answer and paste it into the editor with Ctrl+V - the editor joins the lines.':
+            '此链接中的文档不完整或已损坏。如果 AI 的链接被拆成了多行（例如在终端中），请复制完整回答，在编辑器中按 Ctrl+V 粘贴，编辑器会把各行连起来。',
+        'Loading…': '正在加载…',
+        'Taken over by your editor': '已交给你的编辑器',
+        'The document is now in the XML Editor tab you already had open. Switch to that tab, or open it here.':
+            '文档现已在你之前打开的 XML 编辑器标签页中。请切换到那个标签页，或在这里打开。',
+        'Copying is not allowed here - it is selected below: press Ctrl+C (⌘C)': '此处不允许复制，内容已在下方选中：请按 Ctrl+C（⌘C）',
+        'Paste it into your AI and say what it should write.': '将其粘贴到你的 AI 中，并说明要写什么。',
+        'Prompt copied - paste it into your AI and say what it should write': '提示词已复制，粘贴到你的 AI 中并说明要写什么',
+        'This link is incomplete or damaged - please ask the AI to send it again': '此链接不完整或已损坏，请让 AI 重新发送',
+
+        /* ---------- Save to your server ---------- */
+        'Save to your server': '保存到你的服务器',
+        'Webhook address': 'Webhook 地址',
+        '(optional, sent as "Authorization: Bearer …"; kept until this tab is closed)': '（可选，以“Authorization: Bearer …”发送；保留到关闭此标签页为止）',
+        'Send automatically a few seconds after each change (otherwise only when you click': '每次更改几秒后自动发送（否则仅在点击',
+        'or press Ctrl+S)': '或按 Ctrl+S 时发送）',
+        'Only for “': '仅用于“',
+        '” (other documents use the general address)': '”（其他文档使用通用地址）',
+        'What your server receives': '你的服务器收到的内容',
+        'A POST request with JSON (your server must allow CORS from https://xml.giit.ch):': '一个带 JSON 的 POST 请求（你的服务器必须允许来自 https://xml.giit.ch 的 CORS）：',
+        'Embed the editor in your website': '将编辑器嵌入你的网站',
+        'Send now': '立即发送',
+        'Save setting': '保存设置',
+
+        /* ---------- Help ---------- */
+        'How it works': '使用说明',
+        'Keyboard shortcuts': '键盘快捷键',
+        'after a start tag': '在开始标签之后',
+        'Adds the matching end tag': '添加相应的结束标签',
+        'Show the cursor\'s node in the tree': '在树中显示光标所在的节点',
+        'Indent / outdent': '缩进 / 取消缩进',
+        'Undo / redo': '撤销 / 重做',
+        'Save (download .xml, or to your server) / export': '保存（下载 .xml 或保存到服务器）/ 导出',
+        'Search in the tree (outside the code)': '在树中搜索（代码区以外）',
+        'The editor never loads a DTD, a schema or an external entity, and it does not expand entities declared in a DTD: their references stay as written.':
+            '编辑器从不加载 DTD、模式或外部实体，也不展开 DTD 中声明的实体：它们的引用保持原样。',
+
+        'Problems (the first well-formedness error, undeclared namespace prefixes, ids used twice) are listed above the code with line and column - click one to go there.':
+            '问题（第一个格式错误、未声明的命名空间前缀、重复使用的 id）会连同行号和列号列在代码上方，点击即可跳转。',
+        'https://example.com/api/xml': 'https://example.com/api/xml',
+
+        /* ---------- Messages ---------- */
+        'The browser storage is full - download and delete documents under "My documents"': '浏览器存储已满，请在“我的文档”中下载并删除文档',
+        'The browser storage is full - delete or download documents under "My documents" first': '浏览器存储已满，请先在“我的文档”中删除或下载文档',
+        'The browser storage is full - delete or download some documents first': '浏览器存储已满，请先删除或下载一些文档',
+        'The browser storage is full': '浏览器存储已满',
+        'Nothing to undo': '没有可撤销的操作',
+        'Nothing to redo': '没有可重做的操作',
+        'This changed in the code - wait for the tree, then try again': '此处在代码中已更改，请等树更新后再试',
+        'Editing in the tree - Enter keeps it, Escape cancels': '在树中编辑：Enter 确认，Esc 取消',
+        'The code changed meanwhile - the edit was not used': '代码在此期间已更改，未采用此次编辑',
+        'The root element cannot be removed here - edit the code instead': '此处不能删除根元素，请改为编辑代码',
+        'Removed - "Undo" brings it back': '已删除，“撤销”可恢复',
+        'It is the first element already': '已经是第一个元素',
+        'It is the last element already': '已经是最后一个元素',
+        'The document has an XML declaration already': '文档已有 XML 声明',
+        'The code is formatted already': '代码已格式化',
+        'Code formatted - "Undo" brings the old layout back': '代码已格式化，“撤销”可恢复原格式',
+        'The code is minified already': '代码已压缩',
+        'Code minified - "Undo" brings it back': '代码已压缩，“撤销”可恢复',
+        'This document is empty already': '此文档已经是空的',
+        'Everything inside the root element is removed; the declaration and the root element stay. "Undo" brings it back as long as the page is open.':
+            '根元素内的所有内容将被删除；声明和根元素保留。只要页面未关闭，“撤销”即可恢复。',
+        'Everything is removed. "Undo" brings it back as long as the page is open.': '所有内容将被删除。只要页面未关闭，“撤销”即可恢复。',
+        'Start over': '重新开始',
+        'The file is larger than 8 MB': '文件大于 8 MB',
+        'XML pasted from the clipboard - "Undo" brings the old text back': '已从剪贴板粘贴 XML，“撤销”可恢复原文本',
+        'Downloaded': '已下载',
+        'Copied to the clipboard': '已复制到剪贴板',
+        'This browser does not allow copying this': '此浏览器不允许复制此内容',
+        'Code copied': '代码已复制',
+        '.xml downloaded': '已下载 .xml',
+        'Add': '添加',
+        'Replace': '替换',
+
+        /* ---------- Problems (xml.js) ---------- */
+        'The document is empty - an XML document needs one root element': '文档是空的，XML 文档需要一个根元素',
+        'The DTD is not loaded: the editor never reads external DTDs or entities, entity references stay as written':
+            'DTD 未加载：编辑器从不读取外部 DTD 或实体，实体引用保持原样',
+        'Entities of the DTD are not expanded: references to them stay as written': 'DTD 中的实体不会展开：对它们的引用保持原样',
+
+        /* Short words of the interface that other packs keep in English */
+        'Export': '导出',
+        'Link': '链接',
+        'Name': '名称',
+        'OK': '确定',
+    },
+
+    html: {
+
+        '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
+
+            '<b>导出</b>中还有<b>在其他编辑器中打开</b>：文档会被转换，并在那里作为新文档打开。其他格式无法保留的内容会先列出。',
+        /* Convert */
+        'Attributes become <code>@name</code>, text next to elements <code>#text</code>, repeated elements a list. Comments are left out.':
+            '属性变为 <code>@name</code>，元素旁的文本变为 <code>#text</code>，重复的元素变为列表。注释会被省略。',
+
+        /* AI Assistant */
+        'Click <b>Copy prompt</b>.': '点击<b>复制提示词</b>。',
+        'The AI answers with a link: click it, or paste the whole answer below. <b>Undo</b> takes it back.':
+            'AI 会回复一个链接：点击它，或将完整回答粘贴到下方。<b>撤销</b>可撤回。',
+        'The AI answers with a link: <b>paste its whole answer below</b> (a clicked link opens a separate editor). <b>Undo</b> takes it back.':
+            'AI 会回复一个链接：<b>将完整回答粘贴到下方</b>（点击链接会打开另一个编辑器）。<b>撤销</b>可撤回。',
+
+        /* Save to your server */
+        'The editor can send each saved version to your own server (a <b>webhook</b>), so your work is kept where you want it. Nothing is sent until you enter an address here.':
+            '编辑器可以将每个保存的版本发送到你自己的服务器（<b>Webhook</b>），让你的作品保存在你想要的地方。在此输入地址之前，不会发送任何内容。',
+        'Also possible: <code>?src=&lt;URL of an XML file&gt;</code> opens a file, <code>&amp;webhook=&lt;URL&gt;</code> saves this document there. The editor can also open in a window of its own (<code>?embed=window</code>), and your page can hand it its own AI prompt and a session key so the AI sends its result to your server (<code>xmleditor:ai</code>, <code>xmleditor:key-request</code>) - see "Use the editor on your own website" below the editor. Details are in <a href="/llms.txt">llms.txt</a>.':
+            '还可以：<code>?src=&lt;URL of an XML file&gt;</code> 打开文件，<code>&amp;webhook=&lt;URL&gt;</code> 将此文档保存到该地址。编辑器也可以在单独的窗口中打开（<code>?embed=window</code>），你的页面还可以向它提供自己的 AI 提示词和会话密钥，让 AI 把结果发送到你的服务器（<code>xmleditor:ai</code>、<code>xmleditor:key-request</code>），参见编辑器下方的“在你自己的网站上使用编辑器”。详情见 <a href="/llms.txt">llms.txt</a>。',
+
+        /* Help */
+        '<b>Write</b> XML on the left - or start with <b>New</b> and one of the templates. The tree in the middle shows the elements, attributes, text, comments and CDATA as you type.':
+            '在左侧<b>编写</b> XML，或从<b>新建</b>中选择一个模板开始。中间的树会在你输入时显示元素、属性、文本、注释和 CDATA。',
+        '<b>Click a node in the tree</b> to go to its place in the code; the cursor in the code shows its node in the tree. Fold elements with the arrow.':
+            '<b>点击树中的节点</b>可跳转到代码中的对应位置；代码中的光标会在树中显示其节点。用箭头折叠元素。',
+        '<b>Click a name, an attribute value or a text in the tree</b> to edit it right there. <b>Enter</b> or a click elsewhere writes the change into the code (special characters escaped, one step for Undo), <b>Escape</b> cancels. The buttons of a row add a child element or an attribute, move the element up or down, or remove it.':
+            '<b>点击树中的名称、属性值或文本</b>即可直接编辑。<b>Enter</b> 或点击其他地方会把更改写入代码（特殊字符会被转义，可一步撤销），<b>Escape</b> 取消。每行的按钮可添加子元素或属性、上移或下移元素，或将其删除。',
+        '<b>Search</b> marks nodes whose name, value or text contains the words; the <b>XPath</b> field marks the nodes an XPath 1.0 expression selects (<code>_:</code> is the default namespace of the root).':
+            '<b>搜索</b>会标出名称、值或文本中包含这些词的节点；<b>XPath</b> 字段会标出 XPath 1.0 表达式选中的节点（<code>_:</code> 是根节点的默认命名空间）。',
+        '<b>Node</b> on the right shows the selected node; <b>Insert</b> has ready-made pieces; <b>Convert</b> formats, minifies and turns the document into JSON or YAML.':
+            '右侧的<b>节点</b>显示所选节点；<b>插入</b>提供现成片段；<b>转换</b>可格式化、压缩文档，或将其转为 JSON 或 YAML。',
+        '<b>My documents</b> (the folder button at the top left) lists every document kept in this browser. <b>Export</b> saves XML, minified XML, JSON, YAML or plain text.':
+            '<b>我的文档</b>（左上角的文件夹按钮）列出此浏览器中保存的所有文档。<b>导出</b>可保存为 XML、压缩的 XML、JSON、YAML 或纯文本。',
+        'Comment lines in or out (<code>&lt;!-- --&gt;</code>)': '注释或取消注释行（<code>&lt;!-- --&gt;</code>）',
+    },
+
+    patterns: [
+        /* ---------- Status lines ---------- */
+        ['^The elements are nested more than (\\d+) levels deep - the editor reads at most (\\d+)$', '元素嵌套超过 $1 层 - 编辑器最多读取 $2 层'],
+        ['^(\\d+) lines · ([\\d.]+ K?B)(?: · (\\d+) (?:element|elements))?$', (m, l, kb, e) => `${l} 行 · ${kb}${e ? ` · ${e} 个元素` : ''}`],
+        ['^([\\d,]+) bytes$', '$1 字节'],
+        ['^\\d{1,3}(?:,\\d{3})+$', '$&'],
+        ['^(\\d+) (?:child|children)$', '$1 个子项'],
+        ['^(\\d+) (?:match|matches)$', '$1 个匹配'],
+        ['^(\\d+) found$', '找到 $1 个'],
+        ['^(\\d+) (?:element|elements) · (\\d+) (?:attribute|attributes) ·$', '$1 个元素 · $2 个属性 ·'],
+        ['^(?:element|elements) ·$', '个元素 ·'],
+        ['^(?:attribute|attributes) ·$', '个属性 ·'],
+        ['^(\\d+) (?:child element|child elements)$', '$1 个子元素'],
+        ['^(\\d+) (?:character|characters)$', '$1 个字符'],
+        ['^ZIP downloaded with (\\d+) files$', '已下载含 $1 个文件的 ZIP'],
+
+        /* Problems above the code */
+        ['^(\\d+) (?:error|errors)$', '$1 个错误'],
+        ['^· (\\d+) (?:note|notes)$', '· $1 条提示'],
+        ['^(\\d+) (?:note|notes)$', '$1 条提示'],
+        ['^Line (\\d+):(\\d+)$', '第 $1 行，第 $2 列'],
+        ['^Not well-formed: (.*)$', '格式不正确：$1'],
+        ['^The namespace prefix "(.+)" is not declared - add (.+)$', '命名空间前缀“$1”未声明，请添加 $2'],
+        ['^The id "(.*)" is used twice$', 'id“$1”用了两次'],
+
+        /* ---------- Tree ---------- */
+        ['^"(.*)" is not a valid XML name - names start with a letter or _ and have no spaces$', '“$1”不是有效的 XML 名称，名称须以字母或 _ 开头，且不含空格'],
+        ['^The element already has an attribute "(.+)"$', '该元素已有属性“$1”'],
+        ['^Attribute "(.+)" removed - "Undo" brings it back$', '已删除属性“$1”，“撤销”可恢复'],
+        ['^<(.+)> removed - "Undo" brings it back$', '已删除 <$1>，“撤销”可恢复'],
+
+        /* ---------- Top bar and My documents ---------- */
+        ['^"(.+)" is open\\. My documents: open, rename, duplicate or delete your documents \\(Ctrl\\+O\\)$', '“$1”已打开。我的文档：打开、重命名、复制或删除你的文档（Ctrl+O）'],
+        ['^Start "(.+)" over\\?$', '重新开始“$1”？'],
+        ['^Start "(.+)" over$', '重新开始“$1”'],
+        ['^(\\d+) (?:document|documents) · (.+) in this browser$', (m, k, s) => `${k} 个文档 · 此浏览器中 ${formatSize(s)}`],
+        ['^No document named "(.*)"\\.$', '没有名为“$1”的文档。'],
+        ['^Open now · (.+)$', (m, s) => `当前打开 · ${formatSize(s)}`],
+        ['^(just now|yesterday|\\d+ min ago|\\d+ h ago|[A-Z][a-z]{2} \\d{1,2}, \\d{4}) · (.+)$', (m, w, s) => `${formatTime(w)} · ${formatSize(s)}`],
+        ['^(.+) \\(open now\\)$', '$1（当前打开）'],
+        ['^ZIP with (\\d+) (?:document|documents) downloaded$', '已下载含 $1 个文档的 ZIP'],
+
+        /* ---------- AI Assistant ---------- */
+        ['^Part (\\d+) of (\\d+) received$', '已收到第 $1 部分，共 $2 部分'],
+        ['^Open the other (?:link|links) from the AI too \\(still missing: part (.+)\\)\\.$',
+            '请同时打开 AI 的其他链接（仍缺：第 $1 部分）。'],
+        ['^Part (\\d+) of (\\d+) received - paste the other (?:link|links) too \\(missing: (.+)\\)$', '已收到第 $1 部分，共 $2 部分，请同时粘贴其他链接（缺少：$3）'],
+        ['^The AI sends the document to (.+) with a key that only works for this session\\. What you paste into your AI is handled by its provider\\.$',
+            'AI 会用仅对本次会话有效的密钥将文档发送到 $1。你粘贴到 AI 中的内容由其提供商处理。'],
+        ['^The AI sends its result to (.+) by itself, and it opens here\\. If it answers with a link, paste its answer below\\.$',
+            'AI 会自行将结果发送到 $1，然后在这里打开。如果它回复的是链接，请将回答粘贴到下方。'],
+        ['^No key from (.+) - the prompt asks the AI for a link instead$', '没有来自 $1 的密钥，提示词改为请 AI 回复链接'],
+        ['^Prompt copied - the AI sends its result to (.+)$', '提示词已复制，AI 会将结果发送到 $1'],
+
+        /* ---------- Messages with names ---------- */
+        ['^"(.+)" is empty now - "Undo" brings it back$', '“$1”现在是空的，“撤销”可恢复'],
+        ['^"(.+)" opened$', '已打开“$1”'],
+        ['^New document "(.+)" - your other documents are under "My documents"$', '新文档“$1”，其他文档在“我的文档”中'],
+        ['^New document "(.+)" from the AI - your other documents are unchanged$', '来自 AI 的新文档“$1”，其他文档保持不变'],
+        ['^"(.+)" is not an XML file$', '“$1”不是 XML 文件'],
+        ['^Opened "(.+)" - it is now in "My documents"$', '已打开“$1”，它现在在“我的文档”中'],
+        ['^Document received - the editor found (\\d+) (?:problem|problems), see above the code$', '已收到文档，编辑器发现 $1 个问题，见代码上方'],
+        ['^"(.+)" changed by the AI - "Undo" takes it back$', '“$1”已被 AI 修改，“撤销”可撤回'],
+        ['^"(.+)" duplicated$', '已复制“$1”'],
+        ['^Delete "(.+)"\\?$', '删除“$1”？'],
+        ['^"(.+)" deleted$', '已删除“$1”'],
+        /* last: "Open <name>" on a card in My documents */
+        ['^Open (.+)$', '打开 $1'],
+    ],
+};

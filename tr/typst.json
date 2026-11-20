@@ -1,0 +1,188 @@
+{
+  "title": "Gerçek Derleyiciyle Ücretsiz Typst Editörü | giit.ch",
+  "description": "Tarayıcıda gerçek derleyiciyle ücretsiz Typst editörü: canlı önizleme, sayfa üzerinde metin düzenleme ve PDF, PNG veya SVG olarak dışa aktarma. Kayıt yok.",
+  "og_title": "Çevrimiçi Typst Editörü - Canlı Önizleme, Ücretsiz, Gizliliğinizi Korur",
+  "og_description": "Tarayıcıda gerçek derleyiciyle ücretsiz Typst editörü: canlı önizleme, sayfa üzerinde metin düzenleme ve PDF, PNG veya SVG olarak dışa aktarma. Kayıt yok.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://typst.giit.ch/tr/#app",
+        "name": "Typst Editor",
+        "url": "https://typst.giit.ch/tr/",
+        "description": "Tarayıcıda gerçek derleyiciyle ücretsiz Typst editörü: canlı önizleme, sayfa üzerinde metin düzenleme ve PDF, PNG veya SVG olarak dışa aktarma. Kayıt yok.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Tümü (web tarayıcısı)",
+        "inLanguage": "tr",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://typst.giit.ch/img/og.png",
+        "featureList": [
+          "Söz dizimi vurgulamalı Typst kodu",
+          "Tarayıcıda gerçek Typst derleyicisi (WebAssembly)",
+          "Derlenmiş sayfaların canlı önizlemesi",
+          "Koda atlamak için sayfaya tıklayın",
+          "Sayfadaki metne tıklayıp yerinde düzenleyin",
+          "Satır, sütun ve ipucuyla hatalar ve uyarılar",
+          "#set kurallarını düzenleyen belge ayarları",
+          "Belgeyle birlikte saklanan resimler, veri dosyaları ve yazı tipleri",
+          "Derleyiciden PDF, PNG, JPG, WebP ve SVG olarak dışa aktarma",
+          "Tarayıcıda çok sayıda belge saklayın",
+          "Bir webhook ile kendi sunucunuza kaydedin veya editörü web sitenize yerleştirin",
+          "Her yapay zekâ bağlantılar aracılığıyla editörde yazabilir"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Belgem yükleniyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör ve Typst derleyicisi tarayıcınızda çalışır ve belgelerinizi sunucumuzda değil, orada saklar. Bir belge yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - gizlilik politikasına bakın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bu gerçek Typst derleyicisi mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Editör WebAssembly’ye derlenmiş Typst 0.14’ü (typst.ts) çalıştırır; bu, Typst komut satırıyla aynı derleyicidir. Bir belge aynı yazı tiplerini kullanıyor ve Typst Universe’ten paket kullanmıyorsa orada da aynı sayfaları verir. Bir kez yüklenir (yaklaşık 11 MB) ve sonra tarayıcınızda saklanır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Nasıl PDF elde ederim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "“Dışa aktar”a tıklayın, PDF’yi seçin ve “İndir”e tıklayın. PDF doğrudan Typst derleyicisinden gelir; seçilebilir ve aranabilir gerçek metin içerir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Typst Universe paketlerini kullanabilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Doğrudan değil: editör başka sunuculardan hiçbir şey yüklemez, bu yüzden #import “@preview/…” paketin adını belirten bir sorun bildirir. Bir paketin .typ dosyalarını Resimler sekmesinde belgeye ekleyebilir ve dosya adlarıyla içe aktarabilirsiniz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hangi yazı tipleri var?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Typst’in getirdiği yazı tipleri: Libertinus Serif (varsayılan), New Computer Modern ve onun formül yazı tipi, kod için DejaVu Sans Mono. Kendi .otf veya .ttf dosyalarınızı bir belgeye ekleyin ve #set text(font: “Name”) ile kullanın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Nasıl resim eklerim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bir resmi editöre sürükleyin veya yapıştırın ya da sağdaki Resimler sekmesinde ekleyin. Tarayıcınızda belgeyle birlikte saklanır ve #image(“name.png”) ile kullanılır. CSV, JSON, YAML ve .bib dosyaları da aynı şekilde çalışır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bir yapay zekâ Typst Editöründe yazabilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. “Yapay Zekâ Asistanı” düğmesine, ardından “İstemi kopyala” düğmesine tıklayın, istemi yapay zekânıza yapıştırın ve ne yazması gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, belge editörünüzde görünür. “Geri al” her değişikliği geri alır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Editörü kendi web sitemde kullanabilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Bir iframe ile yerleştirin ve belgeleri postMessage ile alıp verin ya da kaydedilen her sürümü bir webhook ile sunucunuza göndermesine izin verin. Örnekler için Editörü kendi web sitenizde kullanın bölümüne bakın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Typst Editörü ücretli mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör ücretsizdir; reklam ve kayıt yoktur."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Çevrimiçi Typst yazın, gerçek derleyiciyle</h2>\n        <p>Typst, mektuplar, raporlar ve makaleler gibi belgeler için bir işaretleme dilidir; LaTeX’e daha yeni bir alternatiftir. Typst Editörü kodunuzu ve derlenmiş sayfaları yan yana gösterir. Gerçek Typst derleyicisini tarayıcınızda WebAssembly olarak çalıştırır ve önizleme PDF ile aynı sayfaları gösterir - başlıklar, listeler, tablolar, formüller, şekiller, dipnotlar, başvurular ve kendi <code>#set</code> ve <code>#show</code> kurallarınız. Sayfadaki herhangi bir metne tıklamak sizi koddaki yerine götürür ve metni doğrudan sayfa üzerinde düzenleyebilirsiniz.</p>\n        <p>Her şey tarayıcınızda çalışır. Belgeleriniz sunucumuzda değil, orada saklanır; kayıt ve reklam yoktur.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Editörün yapabilecekleri</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Söz dizimi vurgulamalı kod</h3><p>Farklı renklerle gösterilen işaretleme, kod, formüller, dizeler ve yorumlar, satır numaraları, Enter ile devam eden listeler ve satır, sütun ve ipucuyla derleyici hataları.</p></div>\n            <div class=\"tile\"><h3>Gerçek Typst derleyicisi</h3><p>WebAssembly’ye derlenmiş Typst 0.14, editörün yanında bir arka plan iş parçacığında çalışır ve her değişiklikten kısa bir süre sonra derler - yazarken akıcılık korunur.</p></div>\n            <div class=\"tile\"><h3>Sayfada düzenleyin</h3><p>Değiştirmek için sayfadaki metne tıklayın; değişiklik koda gider. Bir formüle veya resme tıklamak koddaki yerine götürür.</p></div>\n            <div class=\"tile\"><h3>Belge ayarları</h3><p>Kâğıt, kenar boşlukları, sütunlar, yazı tipi, boyut, dil, iki yana yaslı metin, numaralı başlıklar ve sayfa numaraları - ayarlar kodunuzdaki <code>#set</code> kurallarını düzenler.</p></div>\n            <div class=\"tile\"><h3>Resimler ve veri dosyaları</h3><p>Bir belgeye resimler, CSV, JSON, YAML, kaynakçalar, yazı tipleri ve diğer .typ dosyalarını ekleyin ve <code>image</code>, <code>csv</code>, <code>json</code> veya <code>#import</code> ile kullanın.</p></div>\n            <div class=\"tile\"><h3>Dışa aktarma</h3><p>Derleyiciden gerçek, seçilebilir metinli bir PDF, her sayfa PNG, JPG, WebP veya SVG olarak ya da dosyalarıyla birlikte .typ kaynağı ZIP olarak.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Nasıl çalışır</h2>\n        <ol class=\"steps\">\n            <li><b>Başlayın</b> - “Yeni” altından bir şablon seçin, bir .typ dosyası açın veya Typst kodu yapıştırın.</li>\n            <li><b>Yazın</b> - kodu yazın; sağdaki sayfalar buna göre güncellenir. Tablolar, listeler ve formüller için “Ekle”yi kullanın.</li>\n            <li><b>Dışa aktarın</b> - bir PDF, sayfa görselleri veya .typ dosyasını kaydedin.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Editörü kendi web sitenizde kullanın</h2>\n        <p>Editörü bir iframe ile veya kendi penceresinde kendi web sitenize yerleştirin. Sayfanız belgeyi editöre verir, her değişikliği ve her kaydı geri alır ve bir yapay zekânın sonuçlarını sunucunuza göndermesini sağlayabilir. Kayıt yok, anahtar yok.</p>\n        <p><a href=\"/tr/embed/\"><b>Editörü web sitenize yerleştirin</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Sıkça sorulan sorular</h2>\n        <div class=\"questions\">\n            <details><summary>Belgem yükleniyor mu?</summary><p>Hayır. Editör ve Typst derleyicisi tarayıcınızda çalışır ve belgelerinizi sunucumuzda değil, orada saklar. Bir belge yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - <a href=\"/privacy.html\">gizlilik politikasına</a> bakın.</p></details>\n            <details><summary>Bu gerçek Typst derleyicisi mi?</summary><p>Evet. Editör WebAssembly’ye derlenmiş Typst 0.14’ü (typst.ts) çalıştırır; bu, Typst komut satırıyla aynı derleyicidir. Bir belge aynı yazı tiplerini kullanıyor ve Typst Universe’ten paket kullanmıyorsa orada da aynı sayfaları verir. Bir kez yüklenir (yaklaşık 11 MB) ve sonra tarayıcınızda saklanır.</p></details>\n            <details><summary>Nasıl PDF elde ederim?</summary><p>“Dışa aktar”a tıklayın, PDF’yi seçin ve “İndir”e tıklayın. PDF doğrudan Typst derleyicisinden gelir; seçilebilir ve aranabilir gerçek metin içerir.</p></details>\n            <details><summary>Typst Universe paketlerini kullanabilir miyim?</summary><p>Doğrudan değil: editör başka sunuculardan hiçbir şey yüklemez, bu yüzden #import “@preview/…” paketin adını belirten bir sorun bildirir. Bir paketin .typ dosyalarını Resimler sekmesinde belgeye ekleyebilir ve dosya adlarıyla içe aktarabilirsiniz.</p></details>\n            <details><summary>Hangi yazı tipleri var?</summary><p>Typst’in getirdiği yazı tipleri: Libertinus Serif (varsayılan), New Computer Modern ve onun formül yazı tipi, kod için DejaVu Sans Mono. Kendi .otf veya .ttf dosyalarınızı bir belgeye ekleyin ve #set text(font: “Name”) ile kullanın.</p></details>\n            <details><summary>Nasıl resim eklerim?</summary><p>Bir resmi editöre sürükleyin veya yapıştırın ya da sağdaki Resimler sekmesinde ekleyin. Tarayıcınızda belgeyle birlikte saklanır ve #image(“name.png”) ile kullanılır. CSV, JSON, YAML ve .bib dosyaları da aynı şekilde çalışır.</p></details>\n            <details><summary>Bir yapay zekâ Typst Editöründe yazabilir mi?</summary><p>Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. “Yapay Zekâ Asistanı” düğmesine, ardından “İstemi kopyala” düğmesine tıklayın, istemi yapay zekânıza yapıştırın ve ne yazması gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, belge editörünüzde görünür. “Geri al” her değişikliği geri alır.</p></details>\n            <details><summary>Editörü kendi web sitemde kullanabilir miyim?</summary><p>Evet. Bir iframe ile yerleştirin ve belgeleri postMessage ile alıp verin ya da kaydedilen her sürümü bir webhook ile sunucunuza göndermesine izin verin. Örnekler için <a href=\"#embed\">Editörü kendi web sitenizde kullanın</a> bölümüne bakın.</p></details>\n            <details><summary>Typst Editörü ücretli mi?</summary><p>Hayır. Editör ücretsizdir; reklam ve kayıt yoktur.</p></details>\n        </div>\n    </section>",
+  "name": "Typst Editörü",
+  "embed": {
+    "title": "Typst Editörünü Web Sitenize Yerleştirin | giit.ch",
+    "description": "Typst Editörünü iframe ile sitenize ekleyin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekâ sonuçlarını sunucunuzda alın. Ücretsiz.",
+    "og_title": "Typst Editörünü web sitenize yerleştirin",
+    "og_description": "Typst Editörünü iframe ile sitenize ekleyin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekâ sonuçlarını sunucunuzda alın. Ücretsiz.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://typst.giit.ch/tr/embed/#article",
+          "headline": "Typst Editörünü web sitenize yerleştirin",
+          "description": "Typst Editörünü iframe ile sitenize ekleyin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekâ sonuçlarını sunucunuzda alın. Ücretsiz.",
+          "inLanguage": "tr",
+          "url": "https://typst.giit.ch/tr/embed/",
+          "mainEntityOfPage": "https://typst.giit.ch/tr/embed/",
+          "image": "https://typst.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Typst Editörü",
+            "url": "https://typst.giit.ch/tr/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Typst Editörü",
+              "item": "https://typst.giit.ch/tr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Yerleştirme",
+              "item": "https://typst.giit.ch/tr/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Typst Editörünü web sitenize yerleştirin",
+    "intro": "<p>Geliştiriciler için: Typst Editörünü kendi sayfanıza nasıl koyacağınız - bir iframe içinde, kendi penceresinde veya salt okunur bir görüntüleyici olarak - ve belgelerin, kayıtların ve yapay zekâ sonuçlarının editör ile sunucunuz arasında nasıl taşındığı. Bizde kayıt olmanız veya bizden anahtar almanız gerekmez.</p>",
+    "body": "<p>Her https sayfası (ve localhost) editörü bir <code>&lt;iframe&gt;</code> ve <code>?embed=1</code> ile yerleştirebilir - kayıt yok, anahtar yok. Yerleştirildiğinde editör sayfa metnini gizler ve bir Kaydet düğmesi gösterir. Belgeyi içeri almanın ve dışarı vermenin dört yolu vardır.</p>\n\n        <h2>1. Bir bağlantıdan dosya açın, sunucunuza kaydedin</h2>\n        <p><code>src=</code> bir dosya açar (sunucunuz CORS’a izin vermelidir), <code>webhook=</code> ise “Kaydet”in (Ctrl+S) belgeyi o adrese göndermesini sağlar. Her değişiklikten sonra kaydetmek için <code>&amp;auto</code> ekleyin.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://typst.giit.ch/tr/?embed=1&amp;src=https://your-site.com/docs/flyer.typ&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook, JSON içeren bir POST isteği alır: <code>{ editor, event: \"save\", id, name, content, assets, updated }</code>. Bağlantıda belirteç bulunmaz; aksi hâlde sunucu günlüklerine ve tarayıcı geçmişine kaydedilirdi. Bu nedenle adreste belirtilen webhook, localhost veya intranetiniz gibi belirteç gerektirmeyen bir kayıt adresi için uygundur. Herkese açık bir sunucu için webhook’u bir belirteçle <code>typsteditor:load</code> içinde (<code>hook: { url, token }</code>) aktarın ve aşağıdaki küçük PHP betiğinin yaptığı gibi belirteci doğrulayın:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://typst.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.typ&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Belgeyi sayfanız tutar (postMessage)</h2>\n        <p>Editör <code>typsteditor:ready</code> der, sayfanız <code>typsteditor:load</code> ile yanıt verir, editör <code>typsteditor:loaded</code>, gerçek düzenlemelerde <code>typsteditor:change</code> ve kullanıcı kaydettiğinde <code>typsteditor:save</code> bildirir. Sayfanız <code>typsteditor:get</code> (geçerli durum) veya <code>typsteditor:save</code> (Kaydet’e basma) gönderebilir. Kaydetme böylece kendi oturum açma ve oturum sisteminiz üzerinden yapılır.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://typst.giit.ch/tr/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://typst.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;typsteditor:ready&#x27;) {             // editör hazır: belgeyi ona verin\n    ed.contentWindow.postMessage({\n      type: &#x27;typsteditor:load&#x27;,\n      name: &#x27;Flyer&#x27;,\n      content: await (await fetch(&#x27;/docs/flyer.typ&#x27;)).text(),\n      assets: { &#x27;logo.png&#x27;: &#x27;data:image/png;base64,…&#x27; }   // isteğe bağlı resimler ve veri dosyaları\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;typsteditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // gerçek bir düzenleme\n  if (m.type === &#x27;typsteditor:save&#x27;) {              // kullanıcı &quot;Kaydet&quot;e tıkladı\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content, assets: m.assets }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Kendi sayfanızda bir kaydet düğmesi: yanıt typsteditor:save olarak gelir\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;typsteditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Sayfanızın içinde Yapay Zekâ Asistanı:</b> çerçeve içinde de çalışır. iframe üzerinde <code>allow=\"clipboard-write\"</code> ile “İstemi kopyala” panoyu doğrudan kullanır (aksi hâlde editör eski kopyalama komutuna geri döner veya istemi elle kopyalamanız için gösterir). Yapay zekânın gönderdiği bir bağlantı başka bir web sitesinin içindeki editöre ulaşamaz. Bu yüzden editör, yapay zekâdan ve kullanıcıdan bunun yerine yapay zekânın yanıtının tamamını editöre yapıştırmasını ya da editörü kendi penceresinde açmasını ister.</p>\n        <h2>3. Kendi penceresinde</h2>\n        <p><code>window.open(\"https://typst.giit.ch/tr/?embed=window\", \"typsteditor-17\")</code> tam editörü kendi penceresinde açar ve aynı mesajlarla <code>window.opener</code> üzerinden iletişim kurar. Yapay zekâdan gelen bağlantılar ona orada ulaşır. <code>typsteditor:load</code> ayrıca <code>context: { host, title, rules }</code> taşıyabilir - yapay zekâ istemi bu durumda belgenin nereye ait olduğunu söyler ve kurallarınıza uyar - ve <code>hook: { url, token, assets: false }</code>, yalnızca bu belge için olan ve asla saklanmayan bir webhook. Kaydedilmemiş değişikliklerle pencereyi kapatmak <code>typsteditor:closing</code> gönderir. <code>typsteditor:pdf</code> sayfanın belgesinin PDF’sini ister ve onu Typst derleyicisinin gerçek, seçilebilir metinle oluşturduğu bir veri URI’si olarak geri alır.</p>\n        <h2>4. Kendi sunucunuz üzerinden yapay zekâ</h2>\n        <p>Editöre kendi isteminizi, sitenizde bir adresi ve bu editör oturumu için bir anahtarı verin. Yapay zekâ iletişim kutusu bu durumda sitenize “Bağlı” olduğunu, yapay zekâya ne söylediğinizi ve <b>geçerli belgeyi değiştir</b> veya <b>yeni bir belge oluştur</b> seçimini gösterir; <b>İstemi kopyala</b> hepsini bir araya getirir. Yapay zekâ sonucunu anahtarla sunucunuza gönderir ve sayfanız onu editörde açar - yeni bir belge ayrı açılır ve kullanıcının tarayıcısında kalır. Editör oturumu başına bir anahtar: editör açık olduğu sürece geçerli kalır ve editör yalnızca anahtarı yokken <code>typsteditor:key-request</code> ile ister. Editör anahtarı asla kendisi göndermez ve asla saklamaz; adres kendi alan adınızda veya onun bir alt alan adında https olmalıdır.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // editör oturumu başına bir anahtar\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;typsteditor:load&#x27;, name: &#x27;Flyer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// typsteditor:loaded içindeki id'yi hatırlayın ve başka id'li change/save/closing mesajlarını yok sayın\n// yalnızca editörün anahtarı yokken:\nif (m.type === &#x27;typsteditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;typsteditor:ai&#x27;, key: k.key }, ORIGIN); }\n// editör açıkken sunucunuza her dakika bildirin; editörü veya sayfayı kapatmak anahtarı geçersiz kılar\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// sunucunuzda bir sonuç var (polling, SSE …): target &quot;current&quot; veya &quot;new&quot; olur\ned.contentWindow.postMessage({ type: &#x27;typsteditor:load&#x27;, name: &#x27;Flyer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - oturum açmış kullanıcının bu editör oturumuna ait anahtar (sayfanız çağırır)\nsession_start();                                     // kullanıcının bu belgeyi düzenleyebileceğini kontrol edin\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // veya veritabanınızda; ?alive= seen değerini yeniden ayarlar\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - yapay zekâ buraya gönderir (CORS başlıkları yok: yapay zekâlar bunu bir sunucudan çağırır)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // veritabanınız: geçersiz kılınmamış, son 3 dakikada görülmüş\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // sayfanız bunu typsteditor:load ile gösterir\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Anahtarları en az 128 rastgele bitle oluşturun, yalnızca özetlerini (hash) saklayın, her birini oturum açmış kullanıcıya, belgeye ve bu editör oturumuna bağlayın, oturum başına bir tane oluşturun, yalnızca sayfanız oturumu açık bildirdiği sürece geçerli tutun ve editör veya sayfa kapandığında geçersiz kılın.</p>\n        <p class=\"muted\">Protokolün tamamı <a href=\"/llms.txt\">llms.txt</a> dosyasındadır - bir yapay zekâya verin, sisteminiz için bağlantıyı o kursun. Diğer giit editörleri de kendi önekleriyle aynı şekilde çalışır - <a href=\"https://editors.giit.ch/tr/\">editors.giit.ch</a>.</p>\n        <h2>Belgeyi salt okunur göstermek (görüntüleyici)</h2>\n        <p><code>?viewer=1</code> yalnızca bitmiş belgeyi gösterir: kod yok, araç yok, hiçbir şey değiştirilemez ve tarayıcıda hiçbir şey saklanmaz. Belge bir bağlantıdan (<code>#b64=</code>, <code>?src=</code>), sayfanızdan <code>typsteditor:load</code> ile veya normal bir form olarak POST ile <code>post.php</code> adresine gelir: metin olarak <code>content</code> ya da base64 olarak <code>b64</code> alanı, isteğe bağlı <code>name</code>, en fazla 20 MB metin.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://typst.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;tr&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p><code>viewer=1</code> olmadan belge normal editörde açılır. Her iki durumda da yalnızca bellekte kalır: sunucuda saklanmaz ve “Belgelerim” bölümüne girmez. Doğrudan açıldığında görüntüleyici içeriğin üçüncü taraftan geldiğini belirtir.</p>",
+    "crumb": "Yerleştirme",
+    "crumb_nav": "Sayfa yolu",
+    "open": "Editörü aç"
+  }
+}

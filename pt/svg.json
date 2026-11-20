@@ -1,0 +1,187 @@
+{
+  "title": "Editor SVG online grátis - veja, edite e exporte | giit.ch",
+  "description": "Editor SVG grátis no navegador: edite o código ou mova, redimensione e mude a cor das formas na tela, exporte para SVG, PNG, JPG ou React. Sem cadastro.",
+  "og_title": "Editor SVG Online - Veja, edite e exporte SVG",
+  "og_description": "Editor SVG grátis no navegador: edite o código ou mova, redimensione e mude a cor das formas na tela, exporte para SVG, PNG, JPG ou React. Sem cadastro.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://svg.giit.ch/pt/#app",
+        "name": "SVG Editor",
+        "url": "https://svg.giit.ch/pt/",
+        "description": "Editor SVG grátis no navegador: edite o código ou mova, redimensione e mude a cor das formas na tela, exporte para SVG, PNG, JPG ou React. Sem cadastro.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Qualquer (navegador web)",
+        "inLanguage": "pt",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://svg.giit.ch/img/og.png",
+        "featureList": [
+          "Código SVG com realce de sintaxe",
+          "Mover, redimensionar, girar e espelhar formas",
+          "Definir cor de preenchimento e de contorno",
+          "Desenhar retângulos, elipses, linhas, traços à mão livre e texto",
+          "Grade ajustável com encaixe",
+          "Exportação para SVG, PNG, JPG, WebP, URI de dados, CSS e React (JSX)",
+          "Organizar e compactar código SVG",
+          "Muitos desenhos guardados no navegador: abra, renomeie, duplique, baixe e exclua",
+          "Tema de cores claro, escuro e automático",
+          "Qualquer IA pode desenhar no editor por meio de links",
+          "Salve no seu próprio servidor com um webhook, ou incorpore o editor no seu site"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Meu arquivo SVG é enviado para algum lugar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O editor roda no seu navegador e guarda seus desenhos nele, não no nosso servidor. Um desenho só vai para um servidor se você configurar um webhook para o seu próprio servidor, se um site que incorpora o editor o salvar no próprio servidor, ou se outro site o abrir aqui com um formulário (post.php) - nesse caso, nosso servidor o repassa direto para o seu navegador, sem armazená-lo. Como em qualquer site, o servidor registra cada acesso, e contamos as visualizações de página de forma anônima - veja a política de privacidade."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Onde meus desenhos ficam salvos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Só no seu navegador. O editor guarda lá quantos desenhos você quiser - clique no botão de pasta no canto superior esquerdo (Meus desenhos) para abrir, renomear, duplicar, baixar ou excluir os desenhos. Eles não ficam no nosso servidor, então limpar os dados do site no navegador os apaga - baixe os que você quer manter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como converto um SVG em PNG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Abra ou cole o seu SVG, clique em \"Exportar\", escolha PNG, escolha um tamanho (1×, 2×, 4× ou personalizado) e clique em \"Baixar\". O fundo continua transparente, a não ser que você escolha uma cor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso editar formas com o mouse?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Clique em uma forma para selecioná-la. Você pode arrastá-la, redimensioná-la pelos quadradinhos, girar, espelhar e mudar a cor dela. O código à esquerda muda junto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para que serve a grade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A grade mostra linhas-guia nas coordenadas do próprio desenho. Quando ela está ligada, as formas que você move ou desenha se encaixam exatamente nas linhas da grade. Desmarque \"Encaixar\" para manter a grade visível, mas mover as formas livremente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso usar um SVG como componente React?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Escolha \"Componente React (JSX)\" na exportação. Atributos como stroke-width viram strokeWidth, class vira className, e o componente aceita outras props."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Uma IA pode desenhar no Editor SVG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, qualquer IA - ChatGPT, Claude, Gemini, Copilot ou a IA da sua ferramenta de programação. Clique em \"Assistente de IA\", depois em \"Copiar prompt\", cole na sua IA e diga o que ela deve desenhar. A IA responde com um link; clique nele e o desenho aparece no seu editor. Ela pode alterar o desenho aberto ou criar novos ao lado dos outros. Nada para instalar, e \"Desfazer\" desfaz qualquer alteração."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso usar o editor no meu próprio site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Incorpore-o com um iframe e troque desenhos com postMessage, ou deixe-o enviar cada versão salva ao seu servidor com um webhook. Veja exemplos em Use o editor no seu próprio site."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Editor SVG custa alguma coisa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O editor é gratuito, sem anúncios e sem cadastro."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Veja, edite e exporte SVG online</h2>\n        <p>O Editor SVG mostra o seu desenho e o código dele lado a lado. O que você muda no código aparece na visualização na hora - e o que você move, redimensiona ou recolore na tela aparece no código. Assim fica rápido ajustar ícones, logos, gráficos e ilustrações sem abrir um programa de gráficos pesado.</p>\n        <p>Tudo roda no seu navegador. Seus desenhos ficam guardados nele, não no nosso servidor, e não há cadastro nem publicidade.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>O que o editor sabe fazer</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Código com realce</h3><p>Tags, atributos e valores em cores próprias, números de linha, indentação com Tab, fechamento automático de tags e uma mensagem de erro clara com o número da linha.</p></div>\n            <div class=\"tile\"><h3>Edite formas diretamente</h3><p>Clique, arraste, redimensione pelas alças, gire, espelhe, duplique, traga para a frente ou envie para trás - retângulos, círculos, caminhos, polígonos, texto e grupos.</p></div>\n            <div class=\"tile\"><h3>Cores e contornos</h3><p>Preenchimento e contorno com seletor de cores ou como valor, opacidade, espessura do contorno, linhas tracejadas, pontas da linha redondas ou quadradas.</p></div>\n            <div class=\"tile\"><h3>Grade com encaixe</h3><p>Qualquer espaçamento de grade, nas coordenadas do próprio desenho. As formas se encaixam exatamente nas linhas - ou desmarque \"Encaixar\" para movê-las livremente.</p></div>\n            <div class=\"tile\"><h3>Ferramentas de desenho</h3><p>Retângulo, elipse, círculo, linha, mão livre e texto - com as cores que você escolher para novas formas.</p></div>\n            <div class=\"tile\"><h3>Exportar</h3><p>SVG (como escrito, organizado ou compactado), PNG com fundo transparente, JPG, WebP e código para sites: URI de dados, Base64, CSS ou um componente React.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Como funciona</h2>\n        <ol class=\"steps\">\n            <li><b>Abra um SVG</b> - escolha um arquivo, arraste-o para a janela ou cole o código.</li>\n            <li><b>Edite</b> - digite no código, ou clique nas formas na tela, arraste-as e defina as cores delas à direita.</li>\n            <li><b>Exporte</b> - escolha um formato, defina o tamanho das imagens e depois baixe ou copie.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Use o editor no seu próprio site</h2>\n        <p>Coloque o editor no seu próprio site com um iframe ou em uma janela própria. Sua página entrega o documento a ele, recebe cada alteração e cada salvamento e pode deixar uma IA enviar os resultados ao seu servidor. Sem cadastro, sem chave.</p>\n        <p><a href=\"/pt/embed/\"><b>Incorpore o editor ao seu site</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Perguntas frequentes</h2>\n        <div class=\"questions\">\n            <details><summary>Meu arquivo SVG é enviado para algum lugar?</summary><p>Não. O editor roda no seu navegador e guarda seus desenhos nele, não no nosso servidor. Um desenho só vai para um servidor se você configurar um webhook para o seu próprio servidor, se um site que incorpora o editor o salvar no próprio servidor, ou se outro site o abrir aqui com um formulário (post.php) - nesse caso, nosso servidor o repassa direto para o seu navegador, sem armazená-lo. Como em qualquer site, o servidor registra cada acesso, e contamos as visualizações de página de forma anônima - veja a <a href=\"/privacy.html\">política de privacidade</a>.</p></details>\n            <details><summary>Onde meus desenhos ficam salvos?</summary><p>Só no seu navegador. O editor guarda lá quantos desenhos você quiser - clique no botão de pasta no canto superior esquerdo (Meus desenhos) para abrir, renomear, duplicar, baixar ou excluir os desenhos. Eles não ficam no nosso servidor, então limpar os dados do site no navegador os apaga - baixe os que você quer manter.</p></details>\n            <details><summary>Como converto um SVG em PNG?</summary><p>Abra ou cole o seu SVG, clique em \"Exportar\", escolha PNG, escolha um tamanho (1×, 2×, 4× ou personalizado) e clique em \"Baixar\". O fundo continua transparente, a não ser que você escolha uma cor.</p></details>\n            <details><summary>Posso editar formas com o mouse?</summary><p>Sim. Clique em uma forma para selecioná-la. Você pode arrastá-la, redimensioná-la pelos quadradinhos, girar, espelhar e mudar a cor dela. O código à esquerda muda junto.</p></details>\n            <details><summary>Para que serve a grade?</summary><p>A grade mostra linhas-guia nas coordenadas do próprio desenho. Quando ela está ligada, as formas que você move ou desenha se encaixam exatamente nas linhas da grade. Desmarque \"Encaixar\" para manter a grade visível, mas mover as formas livremente.</p></details>\n            <details><summary>Posso usar um SVG como componente React?</summary><p>Sim. Escolha \"Componente React (JSX)\" na exportação. Atributos como stroke-width viram strokeWidth, class vira className, e o componente aceita outras props.</p></details>\n            <details><summary>Uma IA pode desenhar no Editor SVG?</summary><p>Sim, qualquer IA - ChatGPT, Claude, Gemini, Copilot ou a IA da sua ferramenta de programação. Clique em &quot;Assistente de IA&quot;, depois em &quot;Copiar prompt&quot;, cole na sua IA e diga o que ela deve desenhar. A IA responde com um link; clique nele e o desenho aparece no seu editor. Ela pode alterar o desenho aberto ou criar novos ao lado dos outros. Nada para instalar, e &quot;Desfazer&quot; desfaz qualquer alteração.</p></details>\n            <details><summary>Posso usar o editor no meu próprio site?</summary><p>Sim. Incorpore-o com um iframe e troque desenhos com postMessage, ou deixe-o enviar cada versão salva ao seu servidor com um webhook. Veja exemplos em <a href=\"#embed\">Use o editor no seu próprio site</a>.</p></details>\n            <details><summary>O Editor SVG custa alguma coisa?</summary><p>Não. O editor é gratuito, sem anúncios e sem cadastro.</p></details>\n        </div>\n    </section>",
+  "name": "Editor SVG",
+  "embed": {
+    "title": "Como incorporar o editor SVG ao seu site | giit.ch",
+    "description": "Guia para desenvolvedores: incorpore o editor SVG ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+    "og_title": "Incorpore o editor SVG ao seu site",
+    "og_description": "Guia para desenvolvedores: incorpore o editor SVG ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://svg.giit.ch/pt/embed/#article",
+          "headline": "Incorpore o editor SVG ao seu site",
+          "description": "Guia para desenvolvedores: incorpore o editor SVG ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+          "inLanguage": "pt",
+          "url": "https://svg.giit.ch/pt/embed/",
+          "mainEntityOfPage": "https://svg.giit.ch/pt/embed/",
+          "image": "https://svg.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Editor SVG",
+            "url": "https://svg.giit.ch/pt/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Editor SVG",
+              "item": "https://svg.giit.ch/pt/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Incorporação",
+              "item": "https://svg.giit.ch/pt/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Incorpore o editor SVG ao seu site",
+    "intro": "<p>Para desenvolvedores: como colocar o editor SVG na sua própria página - em um iframe, em uma janela própria ou como visualizador somente para leitura - e como documentos, salvamentos e resultados de uma IA passam entre o editor e o seu servidor. Não é preciso cadastro nem chave nossa.</p>",
+    "body": "<p>Qualquer página https (e localhost) pode incorporar o editor com um <code>&lt;iframe&gt;</code> e <code>?embed=1</code> - sem cadastro, sem chave. Incorporado, o editor oculta o texto da página e mostra um botão Salvar. Há quatro jeitos de levar o desenho para dentro e para fora.</p>\n\n        <h2>1. Abrir um arquivo de um link, salvar no seu servidor</h2>\n        <p><code>src=</code> abre um arquivo (seu servidor precisa permitir CORS), <code>webhook=</code> faz \"Salvar\" (Ctrl+S) enviar o desenho para esse endereço. Acrescente <code>&amp;auto</code> para salvar após cada alteração.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://svg.giit.ch/pt/?embed=1&amp;src=https://your-site.com/docs/logo.svg&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>O webhook recebe um POST com JSON <code>{ editor, event: \"save\", id, name, content, updated }</code>. Um link não leva token (ele acabaria nos logs do servidor e no histórico do navegador), por isso um webhook no endereço serve para um destino de salvamento que não exija token, por exemplo em localhost ou na sua intranet. Para um servidor público, passe o webhook com um token em <code>svgeditor:load</code> (<code>hook: { url, token }</code>) e valide o token, como faz este pequeno script PHP:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://svg.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.svg&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. A sua página guarda o desenho (postMessage)</h2>\n        <p>O editor informa <code>svgeditor:ready</code>, a sua página responde com <code>svgeditor:load</code>, o editor informa <code>svgeditor:loaded</code>, <code>svgeditor:change</code> quando há alterações efetivas e <code>svgeditor:save</code> quando o usuário salva. A sua página pode enviar <code>svgeditor:get</code> (o estado atual) ou <code>svgeditor:save</code> (acionar Salvar). Salvar passa então pelo seu próprio login e sessão.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://svg.giit.ch/pt/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://svg.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;svgeditor:ready&#x27;) {             // o editor está pronto: entregue o desenho a ele\n    ed.contentWindow.postMessage({\n      type: &#x27;svgeditor:load&#x27;,\n      name: &#x27;Logo&#x27;,\n      content: await (await fetch(&#x27;/docs/logo.svg&#x27;)).text(),\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;svgeditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // uma edição real\n  if (m.type === &#x27;svgeditor:save&#x27;) {              // o usuário clicou em &quot;Salvar&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Um botão de salvar na sua própria página: a resposta chega como svgeditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;svgeditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Assistente de IA dentro da sua página:</b> ele também funciona no frame. Com <code>allow=\"clipboard-write\"</code> no iframe, \"Copiar prompt\" usa a área de transferência diretamente (senão o editor recorre ao antigo comando de copiar, ou mostra o prompt para copiar à mão). Um link enviado pela IA não alcança um editor dentro de outro site, então o editor pede à IA e ao usuário que colem a resposta inteira da IA no editor - ou abram o editor em uma janela própria.</p>\n        <h2>3. Em uma janela própria</h2>\n        <p><code>window.open(\"https://svg.giit.ch/pt/?embed=window\", \"svgeditor-17\")</code> abre o editor completo em uma janela própria e troca as mesmas mensagens com <code>window.opener</code>. Os links de uma IA chegam até ele ali. <code>svgeditor:load</code> também pode levar <code>context: { host, title, rules }</code> - o prompt da IA então diz a que lugar o desenho pertence e segue as suas regras - e <code>hook: { url, token }</code>, um webhook só para este desenho que nunca é guardado. Fechar a janela com alterações não salvas envia <code>svgeditor:closing</code>.</p>\n        <h2>4. IA pelo seu próprio servidor</h2>\n        <p>Entregue ao editor o seu próprio prompt, um endereço no seu site e uma chave para esta sessão do editor. A janela de IA mostra então \"Conectado a\" seguido do seu site, o que você diz à IA, e a escolha <b>alterar o desenho atual</b> ou <b>criar um novo</b>; <b>Copiar prompt</b> junta tudo. A IA envia o resultado com a chave para o seu servidor, e a sua página o abre no editor - um novo desenho abre separado e fica no navegador do usuário. Uma chave por sessão do editor: ela vale enquanto o editor estiver aberto, e o editor só a solicita enquanto estiver sem chave, com <code>svgeditor:key-request</code>. O editor nunca envia a chave por conta própria e nunca a guarda; o endereço precisa ser https no seu próprio host ou em um subdomínio dele.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // uma chave por sessão do editor\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;svgeditor:load&#x27;, name: &#x27;Flyer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// guarde o id de svgeditor:loaded e ignore change/save/closing com outro id\n// só enquanto o editor não tiver chave:\nif (m.type === &#x27;svgeditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;svgeditor:ai&#x27;, key: k.key }, ORIGIN); }\n// enquanto o editor estiver aberto, avise o seu servidor a cada minuto; fechar o editor ou a página invalida a chave\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// o seu servidor tem um resultado (polling, SSE …): target é &quot;current&quot; ou &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;svgeditor:load&#x27;, name: &#x27;Flyer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - a chave desta sessão do editor do usuário logado (a sua página a chama)\nsession_start();                                     // verifique se o usuário pode editar este desenho\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // ou no seu banco de dados; ?alive= atualiza seen\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - a IA envia para cá (sem cabeçalhos CORS: as IAs chamam a partir de um servidor)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // o seu banco de dados: não invalidada, vista nos últimos 3 minutos\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // a sua página o mostra com svgeditor:load\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Crie chaves com pelo menos 128 bits aleatórios, guarde só o hash delas, vincule cada uma ao usuário logado, ao desenho e a esta sessão do editor, crie uma por sessão, mantenha-a válida só enquanto a sua página informar que a sessão está aberta, e invalide-a quando o editor ou a página fechar.</p>\n        <p class=\"muted\">O protocolo completo está em <a href=\"/llms.txt\">llms.txt</a> - entregue-o a uma IA e ela monta a conexão para o seu sistema. Os outros editores giit funcionam do mesmo jeito, cada um com o próprio prefixo - <a href=\"https://editors.giit.ch/pt/\">editors.giit.ch</a>.</p>\n        <h2>Mostrar um documento somente para leitura (visualizador)</h2>\n        <p><code>?viewer=1</code> mostra apenas o documento pronto: sem código, sem ferramentas, nada pode ser alterado e nada é salvo no navegador. O documento vem de um link (<code>#b64=</code>, <code>?src=</code>), da sua página com <code>svgeditor:load</code> ou por POST como formulário normal para <code>post.php</code>: o campo <code>content</code> como texto ou <code>b64</code> como base64, opcionalmente <code>name</code>, no máximo 20 MB de texto.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://svg.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;pt&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Sem <code>viewer=1</code> o documento abre no editor normal. Em ambos os casos ele fica apenas na memória: não é salvo no servidor nem entra em \"Meus documentos\". Aberto diretamente, o visualizador informa que o conteúdo vem de terceiros.</p>",
+    "crumb": "Incorporação",
+    "crumb_nav": "Trilha de navegação",
+    "open": "Abrir o editor"
+  }
+}

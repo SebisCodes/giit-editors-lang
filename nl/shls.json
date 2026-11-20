@@ -1,0 +1,178 @@
+{
+  "title": "Gratis SHLS-editor - omzetten en tokens tellen | giit.ch",
+  "description": "Gratis SHLS-editor in je browser: bewerk gegevens, zet om van en naar JSON, YAML of CSV en schat het aantal tokens. Geen registratie.",
+  "og_title": "Gratis SHLS-editor - omzetten en tokens tellen | giit.ch",
+  "og_description": "Gratis SHLS-editor in je browser: bewerk gegevens, zet om van en naar JSON, YAML of CSV en schat het aantal tokens. Geen registratie.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://shls.giit.ch/nl/#app",
+        "name": "SHLS Editor",
+        "url": "https://shls.giit.ch/nl/",
+        "description": "Gratis SHLS-editor in je browser: bewerk gegevens, zet om van en naar JSON, YAML of CSV en schat het aantal tokens. Geen registratie.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Elk (webbrowser)",
+        "inLanguage": "nl",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://shls.giit.ch/img/og.png",
+        "featureList": [
+          "SHLS-code met kleuring van secties, sleutelblokken, waarden, nestingsniveaus en PH-plaatshouders",
+          "Het sleutelblok van elke sectie als boom en de records met de sleutels als labels",
+          "Waarden, sleutels en sectienamen ter plekke bewerken; records en sleutels toevoegen, dupliceren, verplaatsen en verwijderen - de records volgen het sleutelblok",
+          "Klik in de records om naar de code te springen, de cursor van de code markeert zijn record en sleutel",
+          "Problemen per regel: records met meer of minder waarden dan het sleutelblok, inspringing, lege regels na het sleutelblok",
+          "Omzetten van en naar JSON precies zoals de referentie-SHLSDecoder en -SHLSEncoder, YAML, CSV en JSON Lines",
+          "Tokenteller: SHLS tegenover dezelfde gegevens als JSON",
+          "Veel documenten in de browser bewaren",
+          "Opslaan op je eigen server met een webhook, of de editor in je website insluiten",
+          "Elke AI kan via links in de editor schrijven"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wat is SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SHLS (Sebis Hierarchical List Structure) is een tekstformaat voor gestructureerde gegevens van Sebastian Grünwald. Elke sectie noemt haar sleutels één keer in een sleutelblok; de records eronder geven alleen de waarden, één per regel, en de inspringing toont de nesting. Zonder aanhalingstekens, haakjes, dubbele punten of herhaalde sleutels hebben dezelfde gegevens minder tokens nodig dan JSON - daardoor is het een goed formaat voor AI-modellen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Worden mijn gegevens geüpload?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. De editor draait in je browser en bewaart je documenten daar, niet op onze server. Een document gaat alleen naar een server als je zelf een webhook naar je eigen server instelt, als een website die de editor insluit het op de eigen server opslaat, of als een andere website het hier met een formulier (post.php) opent - onze server geeft het dan direct door aan je browser, zonder het op te slaan. Zoals bij elke website registreert de server elk bezoek, en we tellen paginaweergaven anoniem - zie de privacyverklaring."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Leest de editor SHLS precies zoals de referentiecode?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. De editor leest en schrijft SHLS precies zoals SHLSDecoder en SHLSEncoder uit de SHLS-repository dat doen - de JSON in het tabblad Omzetten zijn de gegevens die de Python-klassen opleveren. Waar die een document anders lezen dan het eruitziet (een record met een waarde te weinig, een lege regel met spaties), toont de editor het als probleem met de regel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan ik de records bewerken zonder de code aan te raken?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Klik in het midden op een waarde, een sleutel of een sectienaam, typ en druk op Enter. De knoppen boven de records voegen records en sleutels toe, dupliceren, verplaatsen en verwijderen ze; als je een sleutel toevoegt of verwijdert, krijgt of verliest elk record van de sectie zijn waarde. Elke wijziging is één stap voor Ongedaan maken."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoeveel tokens bespaart SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Het tabblad Omzetten telt de geschatte tokens van je document als SHLS en van dezelfde gegevens als JSON. Hoeveel SHLS bespaart, hangt af van de gegevens: hoe meer records dezelfde sleutels delen, hoe groter de besparing, omdat SHLS de sleutels maar één keer schrijft. Probeer het met je eigen gegevens."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan de editor JSON, YAML of CSV omzetten naar SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Open een .json-, .yaml-, .csv- of .jsonl-bestand en het wordt SHLS, geschreven zoals SHLSEncoder het schrijft; de editor zegt wat SHLS niet kan bewaren (lege waarden, waarden met regeleinden). Het tabblad Omzetten en Exporteren schrijven JSON, YAML, CSV, JSON Lines en platte tekst."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan een AI in de SHLS-editor schrijven?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, elke AI - ChatGPT, Claude, Gemini, Copilot of de AI in je programmeertool. Klik op \"AI-assistent\", dan op \"Prompt kopiëren\": de prompt legt SHLS uit, zodat elke AI geldige SHLS schrijft. De AI antwoordt met een link; klik erop en het document verschijnt in je editor. \"Ongedaan maken\" draait elke wijziging terug."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kost de SHLS-editor iets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. De editor is gratis, zonder reclame en zonder registratie."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>SHLS online bewerken - het gegevensformaat dat tokens bespaart</h2>\n        <p>SHLS is een gegevensformaat in platte tekst, een korter alternatief voor JSON en YAML voor AI-modellen, die tekst als tokens (stukjes woorden) lezen. SHLS (Sebis Hierarchical List Structure) schrijft gestructureerde gegevens zonder aanhalingstekens, haakjes, dubbele punten of herhaalde sleutels: elke sectie noemt haar sleutels één keer, en de records eronder geven alleen de waarden. De SHLS-editor toont de code en daarnaast het sleutelblok en de records van elke sectie. Wijzig waarden, sleutels en records daar direct, zie problemen per regel, zet om van en naar JSON, YAML en CSV, en zie hoeveel tokens SHLS bespaart ten opzichte van JSON.</p>\n        <p>Alles draait in je browser. Je documenten worden daar bewaard, niet op onze server, en er is geen registratie en geen reclame.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>SHLS in één minuut</h2>\n        <p>Een sectie begint met haar naam. Haar <b>sleutelblok</b> noemt de sleutels, één spatie ingesprongen; de sleutels van een geneste lijst een niveau dieper. Na <b>precies één lege regel</b> volgen de <b>records</b>: één waarde per regel, in de volgorde van de sleutels. Een geneste lijst heeft een eigen regel (haar sleutel, of <code>PH</code> als plaatshouder) met haar records een niveau dieper. Alle waarden zijn tekst - ze omzetten naar getallen of datums is aan het programma dat ze leest.</p>\n        <pre class=\"example\"><code>Product\n Name\n Price\n\n Smartphone A1\n 599.99\n\n Laptop B2\n 1299.99\n\nCompany\n Name\n Location\n  Country\n  City\n\n TechCorp\n PH\n  USA\n  San Francisco</code></pre>\n        <p>Dezelfde gegevens als JSON herhalen elke sleutel in elk record en hebben aanhalingstekens, haakjes en dubbele punten nodig. SHLS is gemaakt voor lokale en cloud-AI-modellen, waar elk token telt. <span lang=\"en\">SHLS by <a href=\"https://github.com/SebisCodes/SHLS-Sebis-Hierarchical-List-Structure\" target=\"_blank\" rel=\"noopener\">Sebastian Grünwald</a></span> - het formaat, de regels en de referentie-SHLSDecoder en -SHLSEncoder (Python) staan in de SHLS-repository op GitHub.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Wat de editor kan</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Code en records</h3><p>Aan de linkerkant de gekleurde SHLS - secties, sleutels, waarden, nestingsniveaus en <code>PH</code>-plaatshouders. In het midden het sleutelblok en de records van elke sectie, de sleutels als labels. Een klik springt naar de code, de cursor van de code markeert zijn record.</p></div>\n            <div class=\"tile\"><h3>Ter plekke bewerken</h3><p>Wijzig waarden, sleutels en sectienamen; voeg records en sleutels toe, dupliceer, verplaats en verwijder ze. Records volgen hun sleutelblok: een nieuwe sleutel krijgt \"-\" in elk record. Telkens één stap voor Ongedaan maken.</p></div>\n            <div class=\"tile\"><h3>Lezen zoals de referentie</h3><p>De editor leest SHLS precies zoals SHLSDecoder en toont wat die anders zou lezen dan het eruitziet: een record met een waarde te weinig of te veel, inspringing, lege regels na het sleutelblok, een sleutel die twee keer voorkomt.</p></div>\n            <div class=\"tile\"><h3>Tokens</h3><p>Het tabblad Omzetten telt de geschatte tokens van je SHLS en van dezelfde gegevens als JSON, zodat je de besparing in één oogopslag ziet.</p></div>\n            <div class=\"tile\"><h3>Omzetten</h3><p>Van en naar JSON precies zoals SHLSDecoder en SHLSEncoder, YAML, CSV (één sectie als tabel) en JSON Lines. JSON-, YAML-, CSV- en JSON Lines-bestanden openen als SHLS.</p></div>\n            <div class=\"tile\"><h3>Veel documenten</h3><p>Bewaar zoveel documenten als je wilt in je browser, elk met een eigen geschiedenis voor Ongedaan maken, en download ze allemaal als ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Hoe het werkt</h2>\n        <ol class=\"steps\">\n            <li><b>Beginnen</b> - kies een sjabloon onder \"Nieuw\", open een .shls-bestand, of open een JSON-, YAML- of CSV-bestand om het als SHLS te krijgen.</li>\n            <li><b>Bewerken</b> - in de code of in de records; beide tonen altijd dezelfde gegevens.</li>\n            <li><b>Controleren en omzetten</b> - herstel de vermelde problemen, vergelijk de tokens, en download SHLS, JSON, YAML, CSV of tekst.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>De editor op je eigen website gebruiken</h2>\n        <p>Zet de editor met een iframe of in een eigen venster in je eigen website. Je pagina geeft hem het document, krijgt elke wijziging en elke opgeslagen versie terug en kan een AI zijn resultaten naar je server laten sturen. Zonder registratie, zonder sleutel.</p>\n        <p><a href=\"/nl/embed/\"><b>De editor in je website insluiten</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Veelgestelde vragen</h2>\n        <div class=\"questions\">\n            <details><summary>Wat is SHLS?</summary><p>SHLS (Sebis Hierarchical List Structure) is een tekstformaat voor gestructureerde gegevens van Sebastian Grünwald. Elke sectie noemt haar sleutels één keer in een sleutelblok; de records eronder geven alleen de waarden, één per regel, en de inspringing toont de nesting. Zonder aanhalingstekens, haakjes, dubbele punten of herhaalde sleutels hebben dezelfde gegevens minder tokens nodig dan JSON - daardoor is het een goed formaat voor AI-modellen.</p></details>\n            <details><summary>Worden mijn gegevens geüpload?</summary><p>Nee. De editor draait in je browser en bewaart je documenten daar, niet op onze server. Een document gaat alleen naar een server als je zelf een webhook naar je eigen server instelt, als een website die de editor insluit het op de eigen server opslaat, of als een andere website het hier met een formulier (post.php) opent - onze server geeft het dan direct door aan je browser, zonder het op te slaan. Zoals bij elke website registreert de server elk bezoek, en we tellen paginaweergaven anoniem - zie de <a href=\"/privacy.html\">privacyverklaring</a>.</p></details>\n            <details><summary>Leest de editor SHLS precies zoals de referentiecode?</summary><p>Ja. De editor leest en schrijft SHLS precies zoals SHLSDecoder en SHLSEncoder uit de <a href=\"https://github.com/SebisCodes/SHLS-Sebis-Hierarchical-List-Structure\" target=\"_blank\" rel=\"noopener\">SHLS-repository</a> dat doen - de JSON in het tabblad Omzetten zijn de gegevens die de Python-klassen opleveren. Waar die een document anders lezen dan het eruitziet (een record met een waarde te weinig, een lege regel met spaties), toont de editor het als probleem met de regel.</p></details>\n            <details><summary>Kan ik de records bewerken zonder de code aan te raken?</summary><p>Ja. Klik in het midden op een waarde, een sleutel of een sectienaam, typ en druk op Enter. De knoppen boven de records voegen records en sleutels toe, dupliceren, verplaatsen en verwijderen ze; als je een sleutel toevoegt of verwijdert, krijgt of verliest elk record van de sectie zijn waarde. Elke wijziging is één stap voor Ongedaan maken.</p></details>\n            <details><summary>Hoeveel tokens bespaart SHLS?</summary><p>Het tabblad <b>Omzetten</b> telt de geschatte tokens van je document als SHLS en van dezelfde gegevens als JSON. Hoeveel SHLS bespaart, hangt af van de gegevens: hoe meer records dezelfde sleutels delen, hoe groter de besparing, omdat SHLS de sleutels maar één keer schrijft. Probeer het met je eigen gegevens.</p></details>\n            <details><summary>Kan de editor JSON, YAML of CSV omzetten naar SHLS?</summary><p>Ja. Open een .json-, .yaml-, .csv- of .jsonl-bestand en het wordt SHLS, geschreven zoals SHLSEncoder het schrijft; de editor zegt wat SHLS niet kan bewaren (lege waarden, waarden met regeleinden). Het tabblad Omzetten en Exporteren schrijven JSON, YAML, CSV, JSON Lines en platte tekst.</p></details>\n            <details><summary>Kan een AI in de SHLS-editor schrijven?</summary><p>Ja, elke AI - ChatGPT, Claude, Gemini, Copilot of de AI in je programmeertool. Klik op &quot;AI-assistent&quot;, dan op &quot;Prompt kopiëren&quot;: de prompt legt SHLS uit, zodat elke AI geldige SHLS schrijft. De AI antwoordt met een link; klik erop en het document verschijnt in je editor. &quot;Ongedaan maken&quot; draait elke wijziging terug.</p></details>\n            <details><summary>Kost de SHLS-editor iets?</summary><p>Nee. De editor is gratis, zonder reclame en zonder registratie.</p></details>\n        </div>\n    </section>",
+  "name": "SHLS-editor",
+  "embed": {
+    "title": "De SHLS-editor in je eigen website insluiten | giit.ch",
+    "description": "Voor ontwikkelaars: sluit de SHLS-editor met een iframe in je website in, wissel documenten uit via postMessage of webhook en koppel je AI. Gratis.",
+    "og_title": "De SHLS-editor in je eigen website insluiten",
+    "og_description": "Voor ontwikkelaars: sluit de SHLS-editor met een iframe in je website in, wissel documenten uit via postMessage of webhook en koppel je AI. Gratis.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://shls.giit.ch/nl/embed/#article",
+          "headline": "De SHLS-editor in je eigen website insluiten",
+          "description": "Voor ontwikkelaars: sluit de SHLS-editor met een iframe in je website in, wissel documenten uit via postMessage of webhook en koppel je AI. Gratis.",
+          "inLanguage": "nl",
+          "url": "https://shls.giit.ch/nl/embed/",
+          "mainEntityOfPage": "https://shls.giit.ch/nl/embed/",
+          "image": "https://shls.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "SHLS-editor",
+            "url": "https://shls.giit.ch/nl/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "SHLS-editor",
+              "item": "https://shls.giit.ch/nl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Insluiten",
+              "item": "https://shls.giit.ch/nl/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "De SHLS-editor in je eigen website insluiten",
+    "intro": "<p>Voor ontwikkelaars: zo zet je de SHLS-editor in je eigen pagina - in een iframe, in een eigen venster of als viewer met alleen leestoegang - en zo gaan documenten, opgeslagen versies en resultaten van een AI heen en weer tussen de editor en je server. Je hebt geen registratie en geen sleutel van ons nodig.</p>",
+    "body": "<p>Elke https-pagina (en localhost) kan de editor insluiten met een <code>&lt;iframe&gt;</code> en <code>?embed=1</code> - geen registratie, geen sleutel. Ingesloten verbergt de editor de paginatekst en toont hij een knop Opslaan. Er zijn vier manieren om het document erin en eruit te krijgen.</p>\n\n        <h2>1. Een bestand openen via een link, opslaan op je server</h2>\n        <p><code>src=</code> opent een bestand (je server moet CORS toestaan), <code>webhook=</code> zorgt dat \"Opslaan\" (Ctrl+S) het document naar dat adres stuurt. Voeg <code>&amp;auto</code> toe om na elke wijziging op te slaan.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://shls.giit.ch/nl/?embed=1&amp;src=https://your-site.com/data/products.shls&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>De webhook krijgt een POST met JSON <code>{ editor: \"shls\", event: \"save\", id, name, content, updated }</code>. Een link bevat geen token (dat zou in de serverlogs en de browsergeschiedenis terechtkomen). Een webhook in het adres is daarom geschikt voor een opslagadres dat geen token nodig heeft, bijvoorbeeld op localhost of in je intranet. Geef voor een openbare server de webhook met een token door in <code>shlseditor:load</code> (<code>hook: { url, token }</code>) en controleer dat token, zoals dit kleine PHP-script doet:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://shls.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/data/$name.shls&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Je pagina beheert het document (postMessage)</h2>\n        <p>De editor zegt <code>shlseditor:ready</code>, je pagina antwoordt met <code>shlseditor:load</code>, de editor meldt <code>shlseditor:loaded</code>, <code>shlseditor:change</code> bij echte bewerkingen en <code>shlseditor:save</code> wanneer de gebruiker opslaat. Je pagina mag <code>shlseditor:get</code> (de huidige toestand) of <code>shlseditor:save</code> (op Opslaan drukken) sturen. Opslaan loopt dan via je eigen login en sessie.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://shls.giit.ch/nl/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://shls.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;shlseditor:ready&#x27;) {              // de editor is klaar: geef hem het document\n    ed.contentWindow.postMessage({\n      type: &#x27;shlseditor:load&#x27;,\n      name: &#x27;Products&#x27;,\n      content: await (await fetch(&#x27;/data/products.shls&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;shlseditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // een echte bewerking\n  if (m.type === &#x27;shlseditor:save&#x27;) {               // de gebruiker klikte op &quot;Opslaan&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Een opslaanknop op je eigen pagina: het antwoord komt als shlseditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;shlseditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>AI-assistent binnen je pagina:</b> die werkt ook in het frame. Met <code>allow=\"clipboard-write\"</code> op het iframe gebruikt \"Prompt kopiëren\" direct het klembord (anders valt de editor terug op het oude kopieercommando, of toont hij de prompt om met de hand te kopiëren). Een link die de AI stuurt, kan een editor binnen een andere website niet bereiken, dus vraagt de editor de AI en de gebruiker om in plaats daarvan het hele antwoord van de AI in de editor te plakken - of de editor in een eigen venster te openen.</p>\n        <h2>3. In een eigen venster</h2>\n        <p><code>window.open(\"https://shls.giit.ch/nl/?embed=window\", \"shlseditor-17\")</code> opent de volledige editor in een eigen venster en wisselt dezelfde berichten uit met <code>window.opener</code>. Links van een AI bereiken hem daar. <code>shlseditor:load</code> kan ook <code>context: { host, title, rules }</code> meegeven - de AI-prompt zegt dan waar het document thuishoort en volgt je regels - en <code>hook: { url, token }</code>, een webhook alleen voor dit document die nooit wordt opgeslagen. Als het venster met niet-opgeslagen wijzigingen wordt gesloten, stuurt het <code>shlseditor:closing</code>.</p>\n        <h2>4. AI via je eigen server</h2>\n        <p>Geef de editor je eigen prompt, een adres op je site en een sleutel voor deze editorsessie. Het AI-venster toont dan \"Verbonden met\" je site, wat je de AI vertelt, en de keuze <b>het huidige document wijzigen</b> of <b>een nieuw maken</b>; <b>Prompt kopiëren</b> zet alles bij elkaar. De AI post het resultaat met de sleutel naar je server, en je pagina opent het in de editor - een nieuw document opent apart en blijft in de browser van de gebruiker. Eén sleutel per editorsessie: hij blijft geldig zolang de editor open is, en alleen zolang de editor er geen heeft, vraagt hij erom met <code>shlseditor:key-request</code>. De editor verstuurt de sleutel nooit zelf en slaat hem nooit op; het adres moet https zijn op je eigen host of een subdomein ervan.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // één sleutel per editorsessie\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;shlseditor:load&#x27;, name: &#x27;Products&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep every key. Only add records.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// onthoud de id uit shlseditor:loaded en negeer change/save/closing met een andere id\n// alleen zolang de editor geen sleutel heeft:\nif (m.type === &#x27;shlseditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;shlseditor:ai&#x27;, key: k.key }, ORIGIN); }\n// zolang de editor open is, meld het elke minuut aan je server; het sluiten van de editor of de pagina maakt de sleutel ongeldig\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// je server heeft een resultaat (polling, SSE …): target is &quot;current&quot; of &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;shlseditor:load&#x27;, name: &#x27;Products&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Maak sleutels met minstens 128 willekeurige bits, sla alleen hun hash op, koppel elke sleutel aan de ingelogde gebruiker, het document en deze editorsessie, maak er één per sessie, houd hem alleen geldig zolang je pagina de sessie als open meldt, en maak hem ongeldig wanneer de editor of de pagina sluit.</p>\n        <p class=\"muted\">Het hele protocol staat in <a href=\"/llms.txt\">llms.txt</a> - geef het aan een AI en die bouwt de koppeling voor je systeem. De andere giit-editors werken op dezelfde manier met hun eigen voorvoegsel - <a href=\"https://editors.giit.ch/nl/\">editors.giit.ch</a>.</p>\n        <h2>Een document met alleen leestoegang tonen (viewer)</h2>\n        <p><code>?viewer=1</code> toont alleen het afgewerkte document: geen code, geen gereedschap, er kan niets worden gewijzigd en er wordt niets in de browser opgeslagen. Het document komt via een link (<code>#b64=</code>, <code>?src=</code>), van je pagina met <code>shlseditor:load</code> of via POST als normaal formulier naar <code>post.php</code>: het veld <code>content</code> als tekst of <code>b64</code> als base64, optioneel <code>name</code>, maximaal 20 MB tekst.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://shls.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;nl&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Zonder <code>viewer=1</code> opent het document in de normale editor. In beide gevallen blijft het alleen in het geheugen: het wordt niet op de server opgeslagen en komt niet bij \"Mijn documenten\". Direct geopend meldt de viewer dat de inhoud van derden komt.</p>",
+    "crumb": "Insluiten",
+    "crumb_nav": "Kruimelpad",
+    "open": "Editor openen"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "title": "Markdown エディター・プレビュー | giit.ch",
+  "description": "ブラウザーで使える無料の Markdown エディター。表、タスクリスト、脚注、数式をライブプレビューで確認し、HTML・PDF・テキストにエクスポート。登録不要、広告なし。",
+  "og_title": "Markdown エディター・プレビュー | giit.ch",
+  "og_description": "ブラウザーで使える無料の Markdown エディター。表、タスクリスト、脚注、数式をライブプレビューで確認し、HTML・PDF・テキストにエクスポート。登録不要、広告なし。",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://md.giit.ch/ja/#app",
+        "name": "Markdown Editor",
+        "url": "https://md.giit.ch/ja/",
+        "description": "ブラウザーで使える無料の Markdown エディター。表、タスクリスト、脚注、数式をライブプレビューで確認し、HTML・PDF・テキストにエクスポート。登録不要、広告なし。",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "ja",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://md.giit.ch/img/og.png",
+        "featureList": [
+          "シンタックスハイライト付きの Markdown",
+          "読みやすいページとしてのライブプレビュー (ライトまたはダーク)",
+          "GitHub の表、タスクリスト、取り消し線、自動リンク、脚注を含む CommonMark",
+          "KaTeX による数式 ($…$ と $$…$$)",
+          "プレビューをクリックしてコードへ移動",
+          "プレビューのテキストをクリックしてその場で編集",
+          "問題の一覧: 見つからない画像、見出しへの壊れたリンク、閉じられていないコードブロック、列数のそろわない表",
+          "ドキュメントと一緒に保存される画像",
+          "HTML、PDF、プレーンテキスト、画像付き Markdown の ZIP へのエクスポート",
+          "多数のドキュメントをブラウザー内に保管",
+          "Webhook で自分のサーバーに保存、またはエディターを自分の Web サイトに埋め込み",
+          "どの AI もリンク経由でエディターに書き込める"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ドキュメントはアップロードされますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ。エディターはブラウザー内で動作し、ドキュメントは当サイトのサーバーではなくブラウザー内に保存されます。ドキュメントがサーバーに送られるのは、自分のサーバーへの Webhook を自分で設定した場合、このエディターを埋め込んだ Web サイトが自身のサーバーに保存した場合、またはほかの Web サイトがフォーム (post.php) を使ってこのエディターで開いた場合だけです。その場合も当サイトのサーバーは保存せず、そのままブラウザーに渡します。ほかの Web サイトと同じく、サーバーはアクセスごとにログを記録し、ページビューは匿名で集計しています。詳しくはプライバシーポリシーをご覧ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "どの Markdown に対応していますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GitHub 拡張 (表、タスクリスト、取り消し線、自動リンク、脚注) 付きの CommonMark に加え、$…$ と $$…$$ の数式に対応しています。見出しには GitHub と同じアンカーが付くので、[下記参照](#私の見出し) のようなリンクも機能します。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "PDF や HTML ページはどうやって作りますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "「エクスポート」をクリックします。PDF を選んで「印刷 / PDF として保存」をクリックし、印刷ダイアログで「PDF として保存」を選びます。または、HTML ページを選ぶと、アップロードした画像とスタイルを含む 1 つのファイルになります。他の Web サイトの画像へのリンクは外部リンクのままです。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "画像はどうやって追加しますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "画像をエディターにドラッグまたは貼り付けるか、右側の 画像 タブで追加します。画像はドキュメントと一緒にブラウザー内に保存され、![description](name.png) で使われます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ドキュメントはどこに保存されますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ブラウザー内だけです。左上のフォルダーボタン (マイドキュメント) をクリックすると、開く、名前の変更、複製、ダウンロード、削除ができます。ブラウザーのサイトデータを消去すると削除されるので、残したいものはダウンロードするか、エディターから自分のサーバーに送ってください (「サーバーに保存」)。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI に Markdown エディターで書いてもらえますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい、どの AI でも使えます。ChatGPT、Claude、Gemini、Copilot、またはコーディングツールの AI です。「AI アシスタント」、続いて「プロンプトをコピー」をクリックし、AI に貼り付けて何を書くか伝えてください。AI はリンクで回答します。クリックするとドキュメントがエディターに表示されます。「元に戻す」ですべての変更を戻せます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "エディターを自分の Web サイトで使えますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。iframe で埋め込んで postMessage でドキュメントをやり取りするか、Webhook で保存した版をすべて自分のサーバーに送れます。例はエディターを自分の Web サイトで使うをご覧ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Markdown エディターは有料ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ。エディターは無料で、広告も登録もありません。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>ライブプレビューで Markdown をオンラインで書く</h2>\n        <p>Markdown は、いくつかの簡単な記号を付けるだけで書式付きのドキュメントになるプレーンテキストです。<code>#</code> で見出し、<code>**</code> で太字、<code>-</code> でリストの項目になります。Markdown エディターは、コードと完成したドキュメントを並べて表示します。入力した内容 (見出し、リスト、表、タスクリスト、脚注、数式) はすぐにプレビューに反映され、プレビューのテキストをクリックするとコード内のその位置へ移動します。プレビュー内で直接テキストを編集することもできます。メモ、ドキュメント、README ファイル、記事をすばやく書けます。</p>\n        <p>すべてブラウザー内で動作します。ドキュメントは当サイトのサーバーではなくブラウザー内に保存され、登録も広告もありません。</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>エディターでできること</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>ハイライト付きのコード</h3><p>見出し、リスト、リンク、コード、数式、HTML を色分けし、行番号、Enter で続くリスト、行番号付きのわかりやすい問題一覧を備えています。</p></div>\n            <div class=\"tile\"><h3>GitHub Markdown</h3><p>表、タスクリスト、取り消し線、自動リンク、脚注を含む CommonMark。見出しには GitHub と同じアンカーが付き、それへのリンクはチェックされます。</p></div>\n            <div class=\"tile\"><h3>数式</h3><p><code>$…$</code> の文中の数式と <code>$$…$$</code> の別行立ての数式を、KaTeX でプレビュー内に直接組版します。</p></div>\n            <div class=\"tile\"><h3>プレビューで編集</h3><p>プレビューの文、見出し、リスト項目、表のセルをクリックしてその場で変更すると、特殊文字をエスケープして Markdown に反映されます。</p></div>\n            <div class=\"tile\"><h3>画像</h3><p>画像をエディターにドラッグし、<code>![description](name.png)</code> で使えます。画像はドキュメントと一緒にブラウザー内に保存されます。</p></div>\n            <div class=\"tile\"><h3>エクスポート</h3><p>アップロードした画像とスタイルを含む 1 つの HTML ファイルにエクスポートできます。他の Web サイトの画像へのリンクは外部リンクのままです。印刷ダイアログ経由の PDF、プレーンテキスト、画像付き Markdown の ZIP にもエクスポートできます。</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>使い方</h2>\n        <ol class=\"steps\">\n            <li><b>始める</b> - 「新規」でテンプレートを選ぶか、.md ファイルを開くか、Markdown を貼り付けます。</li>\n            <li><b>書く</b> - コードを入力すると、プレビューに反映されます。表、リスト、数式は「挿入」から追加できます。</li>\n            <li><b>エクスポート</b> - HTML ページ、PDF、.md ファイルを保存します。</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>エディターを自分の Web サイトで使う</h2>\n        <p>iframe や専用ウィンドウを使って、このエディターを自分の Web サイトに組み込めます。ページからドキュメントを渡し、変更や保存をすべて受け取り、AI の結果を自分のサーバーに送らせることもできます。登録もキーも不要です。</p>\n        <p><a href=\"/ja/embed/\"><b>エディターを自分の Web サイトに埋め込む</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>よくある質問</h2>\n        <div class=\"questions\">\n            <details><summary>ドキュメントはアップロードされますか？</summary><p>いいえ。エディターはブラウザー内で動作し、ドキュメントは当サイトのサーバーではなくブラウザー内に保存されます。ドキュメントがサーバーに送られるのは、自分のサーバーへの Webhook を自分で設定した場合、このエディターを埋め込んだ Web サイトが自身のサーバーに保存した場合、またはほかの Web サイトがフォーム (post.php) を使ってこのエディターで開いた場合だけです。その場合も当サイトのサーバーは保存せず、そのままブラウザーに渡します。ほかの Web サイトと同じく、サーバーはアクセスごとにログを記録し、ページビューは匿名で集計しています。詳しくは<a href=\"/privacy.html\">プライバシーポリシー</a>をご覧ください。</p></details>\n            <details><summary>どの Markdown に対応していますか？</summary><p>GitHub 拡張 (表、タスクリスト、取り消し線、自動リンク、脚注) 付きの CommonMark に加え、<code>$…$</code> と <code>$$…$$</code> の数式に対応しています。見出しには GitHub と同じアンカーが付くので、<code>[下記参照](#私の見出し)</code> のようなリンクも機能します。</p></details>\n            <details><summary>PDF や HTML ページはどうやって作りますか？</summary><p>「エクスポート」をクリックします。PDF を選んで「印刷 / PDF として保存」をクリックし、印刷ダイアログで「PDF として保存」を選びます。または、HTML ページを選ぶと、アップロードした画像とスタイルを含む 1 つのファイルになります。他の Web サイトの画像へのリンクは外部リンクのままです。</p></details>\n            <details><summary>画像はどうやって追加しますか？</summary><p>画像をエディターにドラッグまたは貼り付けるか、右側の <b>画像</b> タブで追加します。画像はドキュメントと一緒にブラウザー内に保存され、<code>![description](name.png)</code> で使われます。</p></details>\n            <details><summary>ドキュメントはどこに保存されますか？</summary><p>ブラウザー内だけです。左上のフォルダーボタン (マイドキュメント) をクリックすると、開く、名前の変更、複製、ダウンロード、削除ができます。ブラウザーのサイトデータを消去すると削除されるので、残したいものはダウンロードするか、エディターから自分のサーバーに送ってください (「サーバーに保存」)。</p></details>\n            <details><summary>AI に Markdown エディターで書いてもらえますか？</summary><p>はい、どの AI でも使えます。ChatGPT、Claude、Gemini、Copilot、またはコーディングツールの AI です。「AI アシスタント」、続いて「プロンプトをコピー」をクリックし、AI に貼り付けて何を書くか伝えてください。AI はリンクで回答します。クリックするとドキュメントがエディターに表示されます。「元に戻す」ですべての変更を戻せます。</p></details>\n            <details><summary>エディターを自分の Web サイトで使えますか？</summary><p>はい。iframe で埋め込んで postMessage でドキュメントをやり取りするか、Webhook で保存した版をすべて自分のサーバーに送れます。例は<a href=\"#embed\">エディターを自分の Web サイトで使う</a>をご覧ください。</p></details>\n            <details><summary>Markdown エディターは有料ですか？</summary><p>いいえ。エディターは無料で、広告も登録もありません。</p></details>\n        </div>\n    </section>",
+  "name": "Markdown エディター",
+  "embed": {
+    "title": "Markdown エディターの埋め込み | giit.ch",
+    "description": "iframe で Markdown エディターを自分のサイトに埋め込み、postMessage や Webhook でドキュメントをやり取りし、AI と連携する方法。無料です。",
+    "og_title": "Markdown エディターを自分の Web サイトに埋め込む",
+    "og_description": "iframe で Markdown エディターを自分のサイトに埋め込み、postMessage や Webhook でドキュメントをやり取りし、AI と連携する方法。無料です。",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://md.giit.ch/ja/embed/#article",
+          "headline": "Markdown エディターを自分の Web サイトに埋め込む",
+          "description": "iframe で Markdown エディターを自分のサイトに埋め込み、postMessage や Webhook でドキュメントをやり取りし、AI と連携する方法。無料です。",
+          "inLanguage": "ja",
+          "url": "https://md.giit.ch/ja/embed/",
+          "mainEntityOfPage": "https://md.giit.ch/ja/embed/",
+          "image": "https://md.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Markdown エディター",
+            "url": "https://md.giit.ch/ja/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Markdown エディター",
+              "item": "https://md.giit.ch/ja/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "埋め込み",
+              "item": "https://md.giit.ch/ja/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Markdown エディターを自分の Web サイトに埋め込む",
+    "intro": "<p>開発者向けのページです。Markdown エディターを自分のページに組み込む方法 (iframe 内、専用ウィンドウ、読み取り専用のビューアー) と、ドキュメント、保存時のデータ、AI の結果をエディターと自分のサーバーの間でやり取りする方法を説明します。登録も当サイトのキーも不要です。</p>",
+    "body": "<p>https のページ (および localhost) なら、<code>&lt;iframe&gt;</code> と <code>?embed=1</code> でエディターを埋め込めます。登録もキーも不要です。埋め込まれたエディターはページの説明文を隠し、保存ボタンを表示します。ドキュメントを受け渡す方法は 4 つあります。</p>\n\n        <h2>1. リンクからファイルを開き、自分のサーバーに保存する</h2>\n        <p><code>src=</code> でファイルを開き (サーバーで CORS の許可が必要)、<code>webhook=</code> を指定すると「保存」(Ctrl+S) でドキュメントがそのアドレスに送信されます。変更のたびに保存するには <code>&amp;auto</code> を追加します。</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://md.giit.ch/ja/?embed=1&amp;src=https://your-site.com/docs/notes.md&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook は JSON <code>{ editor, event: \"save\", id, name, content, assets, updated }</code> を含む POST を受け取ります。リンクにはトークンを含めません。サーバーのログやブラウザーの履歴に残ってしまうためです。そのため、URL に指定する Webhook は、localhost やイントラネットなど、トークンを必要としない保存先に適しています。公開サーバーでは、<code>mdeditor:load</code> の <code>hook: { url, token }</code> で Webhook とトークンを渡し、次の短い PHP スクリプトのようにトークンを検証してください：</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://md.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.md&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. ページがドキュメントを保持する (postMessage)</h2>\n        <p>エディターが <code>mdeditor:ready</code> を送り、ページが <code>mdeditor:load</code> で応答すると、エディターは <code>mdeditor:loaded</code> を返し、実際に編集されると <code>mdeditor:change</code>、ユーザーが保存すると <code>mdeditor:save</code> を送ります。ページからは <code>mdeditor:get</code> (現在の状態) や <code>mdeditor:save</code> (保存ボタンを押す) を送れます。保存はあなた自身のログインとセッションを通して行われます。</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://md.giit.ch/ja/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://md.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;mdeditor:ready&#x27;) {                // エディターの準備完了: ドキュメントを渡す\n    ed.contentWindow.postMessage({\n      type: &#x27;mdeditor:load&#x27;,\n      name: &#x27;Notes&#x27;,\n      content: await (await fetch(&#x27;/docs/notes.md&#x27;)).text(),\n      assets: { &#x27;logo.png&#x27;: &#x27;data:image/png;base64,…&#x27; }   // 任意の画像\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;mdeditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // 実際の編集\n  if (m.type === &#x27;mdeditor:save&#x27;) {                 // ユーザーが「保存」をクリックした\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content, assets: m.assets }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// 自分のページの保存ボタン: 応答は mdeditor:save として届く\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;mdeditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>ページ内の AI アシスタント:</b> フレーム内でも動作します。iframe に <code>allow=\"clipboard-write\"</code> を付けると、「プロンプトをコピー」がクリップボードを直接使います (付けない場合は古いコピーコマンドを使うか、手動でコピーできるようプロンプトを表示します)。AI が送るリンクはほかの Web サイト内のエディターには届かないため、エディターは AI とユーザーに、代わりに AI の回答全体をエディターに貼り付けるか、エディターを専用のウィンドウで開くよう案内します。</p>\n        <h2>3. 専用のウィンドウで開く</h2>\n        <p><code>window.open(\"https://md.giit.ch/ja/?embed=window\", \"mdeditor-17\")</code> は完全なエディターを専用のウィンドウで開き、<code>window.opener</code> と同じメッセージをやり取りします。AI からのリンクもそこに届きます。<code>mdeditor:load</code> には <code>context: { host, title, rules }</code> (AI プロンプトがドキュメントの所属先を伝え、あなたのルールに従います) と <code>hook: { url, token, assets: false }</code> (このドキュメント専用で保存されない Webhook) も含められます。未保存の変更があるままウィンドウを閉じると <code>mdeditor:closing</code> が送られます。</p>\n        <h2>4. 自分のサーバー経由の AI</h2>\n        <p>エディターに独自のプロンプト、サイト上のアドレス、このエディターセッション用のキーを渡します。すると AI ダイアログには、あなたのサイトへの「接続先」、AI に伝える内容、そして <b>現在のドキュメントを変更</b> か <b>新しいドキュメントを作成</b> の選択肢が表示され、<b>プロンプトをコピー</b> ですべてがまとめられます。AI はキーを付けて結果をあなたのサーバーに送り、ページがそれをエディターで開きます。新しいドキュメントは別に開き、ユーザーのブラウザー内に残ります。キーはエディターセッションごとに 1 つです。エディターを開いている間は有効で、キーがないときだけエディターが <code>mdeditor:key-request</code> で要求します。エディターがキーを自分で送ったり保存したりすることはありません。アドレスはあなた自身のホストまたはそのサブドメイン上の https である必要があります。</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // エディターセッションごとにキーを 1 つ\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;mdeditor:load&#x27;, name: &#x27;Notes&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// mdeditor:loaded の id を覚えておき、別の id の change/save/closing は無視する\n// エディターにキーがないときだけ:\nif (m.type === &#x27;mdeditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;mdeditor:ai&#x27;, key: k.key }, ORIGIN); }\n// エディターを開いている間、毎分サーバーに知らせる。エディターまたはページを閉じるとキーは無効になる\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// サーバーに結果がある (ポーリング、SSE …): target は &quot;current&quot; または &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;mdeditor:load&#x27;, name: &#x27;Notes&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - ログイン中のユーザーのこのエディターセッションのキー (ページから呼び出す)\nsession_start();                                     // ユーザーがこのドキュメントを編集できるか確認する\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // またはデータベースに保存。?alive= で seen を更新する\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - AI がここに POST する (CORS ヘッダーなし: AI はサーバーから呼び出す)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // データベース: 無効になっておらず、直近 3 分以内に seen があるもの\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // ページが mdeditor:load で表示する\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>キーは 128 ビット以上のランダム値で作り、ハッシュだけを保存し、それぞれをログイン中のユーザー、ドキュメント、このエディターセッションに結び付けてください。キーはセッションごとに 1 つ作り、ページがセッションを開いていると報告している間だけ有効にし、エディターまたはページが閉じたら無効にしてください。</p>\n        <p class=\"muted\">プロトコルの全容は <a href=\"/llms.txt\">llms.txt</a> にあります。AI に渡せば、あなたのシステム用の接続を作ってくれます。ほかの giit エディターも、それぞれの接頭辞で同じように動作します - <a href=\"https://editors.giit.ch/ja/\">editors.giit.ch</a>。</p>\n        <h2>ドキュメントを読み取り専用で表示する（ビューアー）</h2>\n        <p><code>?viewer=1</code> は完成したドキュメントだけを表示します。コードもツールもなく、何も変更できず、ブラウザーにも何も保存されません。ドキュメントはリンク（<code>#b64=</code>、<code>?src=</code>）、ページからの <code>mdeditor:load</code>、または通常のフォームによる <code>post.php</code> への POST で届きます。フィールドは、テキストなら <code>content</code>、base64 なら <code>b64</code>、任意で <code>name</code>、テキストは最大 20 MB です。</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://md.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;ja&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p><code>viewer=1</code> がなければ、ドキュメントは通常のエディターで開きます。どちらの場合もメモリ内にだけ保持され、サーバーには保存されず「マイドキュメント」にも入りません。直接開いた場合、ビューアーは内容が第三者からのものであることを示します。</p>",
+    "crumb": "埋め込み",
+    "crumb_nav": "パンくずリスト",
+    "open": "エディターを開く"
+  }
+}

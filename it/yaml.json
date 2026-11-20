@@ -1,0 +1,180 @@
+{
+  "title": "Editor YAML - albero, convalida, conversione | giit.ch",
+  "description": "Editor YAML gratuito nel browser: modifica YAML come codice e come albero mantenendo i commenti, trova gli errori per riga, converti in JSON, CSV o XML.",
+  "og_title": "Editor YAML - albero, convalida, conversione | giit.ch",
+  "og_description": "Editor YAML gratuito nel browser: modifica YAML come codice e come albero mantenendo i commenti, trova gli errori per riga, converti in JSON, CSV o XML.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://yaml.giit.ch/#app",
+        "name": "YAML Editor",
+        "url": "https://yaml.giit.ch/it/",
+        "description": "Editor YAML gratuito nel browser: modifica YAML come codice e come albero mantenendo i commenti, trova gli errori per riga, converti in JSON, CSV o XML.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "it",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://yaml.giit.ch/img/og.png",
+        "featureList": [
+          "Codice YAML 1.2 con evidenziazione della sintassi",
+          "Albero comprimibile con tipi, conteggi e il percorso di ogni valore, un albero per documento",
+          "Ancore e alias contrassegnati, chiavi di unione risolte",
+          "Modifica chiavi e valori direttamente nell'albero, commenti e formattazione mantenuti",
+          "Aggiungi, duplica, sposta e rimuovi voci",
+          "Errori di sintassi, tabulazioni, chiavi duplicate e alias sconosciuti con riga e colonna",
+          "Verifica con un JSON Schema",
+          "Formattazione con rientro coerente",
+          "Conversione in JSON, CSV e XML",
+          "Molti documenti conservati nel browser",
+          "Salvataggio sul tuo server con un webhook, o integrazione dell'editor nel tuo sito web",
+          "Qualsiasi IA può scrivere nell'editor tramite link"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "I miei dati vengono caricati?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. L'editor funziona nel tuo browser e conserva lì i tuoi documenti, non sul nostro server. Un documento arriva a un server solo se configuri un webhook verso il tuo server, se un sito web che integra l'editor lo salva sul proprio server, oppure se un altro sito web lo apre qui con un modulo (post.php) - il nostro server allora lo passa direttamente al tuo browser, senza salvarlo. Come per ogni sito web, il server registra ogni visita, e contiamo le visualizzazioni di pagina in forma anonima - vedi l'informativa sulla privacy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I miei commenti restano quando modifico nell'albero?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì. Una modifica nell'albero viene scritta nel codice esattamente in quel punto; commenti, righe vuote e il resto della formattazione restano come sono. Annulla annulla ogni modifica."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Perché l'editor segnala le tabulazioni?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "YAML non consente tabulazioni per il rientro. L'editor segnala ogni punto, e il tasto Tab nel codice inserisce spazi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Supporta ancore, alias e più documenti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì. Ancore (&name) e alias (*name) sono contrassegnati nell'albero, le chiavi di unione (<<) vengono risolte per le conversioni, un alias senza la sua ancora viene segnalato, e ogni documento dopo --- ha il suo albero."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Può convertire YAML in JSON, CSV o XML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì, nella scheda Converti o in Esporta. Un elenco di mappe diventa una tabella CSV. I file JSON, CSV e XML che apri vengono convertiti in YAML."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dove vengono salvati i miei documenti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Solo nel tuo browser. Fai clic sul pulsante a forma di cartella in alto a sinistra (I miei documenti) per aprirli, rinominarli, duplicarli, scaricarli o eliminarli. Cancellando i dati del sito nel browser spariscono, quindi scarica quelli che vuoi conservare - oppure lascia che l'editor li invii al tuo server («Salva sul server»)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Un'IA può scrivere nell'Editor YAML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì, qualsiasi IA - ChatGPT, Claude, Gemini, Copilot o l'IA del tuo strumento di programmazione. Fai clic su «Assistente IA», poi su «Copia il prompt», incollalo nella tua IA e dille cosa deve cambiare. L'IA risponde con un link; fai clic su di esso e i dati appaiono nel tuo editor. «Annulla» annulla ogni modifica."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L'Editor YAML costa qualcosa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. L'editor è gratuito, senza pubblicità e senza registrazione."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Modifica YAML online, come codice e come albero</h2>\n        <p>L'Editor YAML mostra il tuo codice YAML e i dati come albero uno accanto all'altro. Comprimi mappe ed elenchi, vedi il tipo e il numero di voci di ogni valore, e cambia chiavi e valori direttamente nell'albero - la modifica va nel codice esattamente in quel punto, e i tuoi commenti e la formattazione restano. Gli errori sono elencati con riga e colonna, da un rientro sbagliato a una tabulazione o un alias senza la sua ancora, e i dati si possono verificare con un JSON Schema e convertire in JSON, CSV o XML.</p>\n        <p>Tutto funziona nel tuo browser. I tuoi documenti vengono conservati lì, non sul nostro server, e non serve registrarsi né c'è pubblicità.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Cosa sa fare l'editor</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Codice e albero</h3><p>YAML 1.2 evidenziato a sinistra, l'albero comprimibile al centro - un albero per ogni documento dopo <code>---</code>. Un clic nell'albero salta al codice, il cursore del codice evidenzia il suo valore nell'albero.</p></div>\n            <div class=\"tile\"><h3>Modifica nell'albero, mantieni i commenti</h3><p>Cambia chiavi e valori, aggiungi, duplica, sposta e rimuovi voci, cambia un tipo - ciascuna come piccola modifica del codice, così commenti e righe vuote restano dove sono.</p></div>\n            <div class=\"tile\"><h3>Errori facili da trovare</h3><p>Rientro sbagliato, tabulazioni, chiavi duplicate, alias senza la loro ancora e valori non conformi al tuo JSON Schema, ciascuno con riga e colonna.</p></div>\n            <div class=\"tile\"><h3>Ancore e alias</h3><p><code>&amp;anchor</code>, <code>*alias</code> e le chiavi di unione (<code>&lt;&lt;</code>) sono contrassegnati nell'albero e risolti per le conversioni.</p></div>\n            <div class=\"tile\"><h3>Conversione</h3><p>Formatta con un rientro coerente, o converti in JSON, CSV (un elenco di mappe è una tabella) e XML. I file JSON, CSV e XML si aprono come YAML.</p></div>\n            <div class=\"tile\"><h3>Molti documenti</h3><p>Conserva quanti documenti vuoi nel tuo browser, ciascuno con la sua cronologia di annullamento, e scaricali tutti in uno ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Come funziona</h2>\n        <ol class=\"steps\">\n            <li><b>Inizia</b> - scegli un modello in «Nuovo» (Docker Compose, un workflow GitHub, Kubernetes, OpenAPI), apri un file .yaml o incolla YAML.</li>\n            <li><b>Modifica</b> - nel codice o nell'albero; entrambi mostrano sempre gli stessi dati.</li>\n            <li><b>Verifica ed esporta</b> - correggi i problemi elencati, scegli uno schema e scarica YAML, JSON, CSV o testo.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Usare l'editor sul tuo sito web</h2>\n        <p>Inserisci l'editor nel tuo sito web con un iframe o in una finestra a sé. La tua pagina gli passa il documento, riceve ogni modifica e ogni salvataggio e può lasciare che un'IA invii i suoi risultati al tuo server. Senza registrazione, senza chiave.</p>\n        <p><a href=\"/it/embed/\"><b>Integrare l'editor nel tuo sito web</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Domande frequenti</h2>\n        <div class=\"questions\">\n            <details><summary>I miei dati vengono caricati?</summary><p>No. L'editor funziona nel tuo browser e conserva lì i tuoi documenti, non sul nostro server. Un documento arriva a un server solo se configuri un webhook verso il tuo server, se un sito web che integra l'editor lo salva sul proprio server, oppure se un altro sito web lo apre qui con un modulo (post.php) - il nostro server allora lo passa direttamente al tuo browser, senza salvarlo. Come per ogni sito web, il server registra ogni visita, e contiamo le visualizzazioni di pagina in forma anonima - vedi l'<a href=\"/privacy.html\">informativa sulla privacy</a>.</p></details>\n            <details><summary>I miei commenti restano quando modifico nell'albero?</summary><p>Sì. Una modifica nell'albero viene scritta nel codice esattamente in quel punto; commenti, righe vuote e il resto della formattazione restano come sono. Annulla annulla ogni modifica.</p></details>\n            <details><summary>Perché l'editor segnala le tabulazioni?</summary><p>YAML non consente tabulazioni per il rientro. L'editor segnala ogni punto, e il tasto Tab nel codice inserisce spazi.</p></details>\n            <details><summary>Supporta ancore, alias e più documenti?</summary><p>Sì. Ancore (<code>&amp;name</code>) e alias (<code>*name</code>) sono contrassegnati nell'albero, le chiavi di unione (<code>&lt;&lt;</code>) vengono risolte per le conversioni, un alias senza la sua ancora viene segnalato, e ogni documento dopo <code>---</code> ha il suo albero.</p></details>\n            <details><summary>Può convertire YAML in JSON, CSV o XML?</summary><p>Sì, nella scheda <b>Converti</b> o in Esporta. Un elenco di mappe diventa una tabella CSV. I file JSON, CSV e XML che apri vengono convertiti in YAML.</p></details>\n            <details><summary>Dove vengono salvati i miei documenti?</summary><p>Solo nel tuo browser. Fai clic sul pulsante a forma di cartella in alto a sinistra (I miei documenti) per aprirli, rinominarli, duplicarli, scaricarli o eliminarli. Cancellando i dati del sito nel browser spariscono, quindi scarica quelli che vuoi conservare - oppure lascia che l'editor li invii al tuo server («Salva sul server»).</p></details>\n            <details><summary>Un'IA può scrivere nell'Editor YAML?</summary><p>Sì, qualsiasi IA - ChatGPT, Claude, Gemini, Copilot o l'IA del tuo strumento di programmazione. Fai clic su «Assistente IA», poi su «Copia il prompt», incollalo nella tua IA e dille cosa deve cambiare. L'IA risponde con un link; fai clic su di esso e i dati appaiono nel tuo editor. «Annulla» annulla ogni modifica.</p></details>\n            <details><summary>L'Editor YAML costa qualcosa?</summary><p>No. L'editor è gratuito, senza pubblicità e senza registrazione.</p></details>\n        </div>\n    </section>",
+  "name": "Editor YAML",
+  "embed": {
+    "title": "Integrare l'editor YAML nel tuo sito web | giit.ch",
+    "description": "Guida per sviluppatori: integra l'editor YAML nel tuo sito con un iframe, scambia i documenti via postMessage o webhook e collega la tua IA. Gratis.",
+    "og_title": "Integrare l'editor YAML nel tuo sito web",
+    "og_description": "Guida per sviluppatori: integra l'editor YAML nel tuo sito con un iframe, scambia i documenti via postMessage o webhook e collega la tua IA. Gratis.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://yaml.giit.ch/it/embed/#article",
+          "headline": "Integrare l'editor YAML nel tuo sito web",
+          "description": "Guida per sviluppatori: integra l'editor YAML nel tuo sito con un iframe, scambia i documenti via postMessage o webhook e collega la tua IA. Gratis.",
+          "inLanguage": "it",
+          "url": "https://yaml.giit.ch/it/embed/",
+          "mainEntityOfPage": "https://yaml.giit.ch/it/embed/",
+          "image": "https://yaml.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Editor YAML",
+            "url": "https://yaml.giit.ch/it/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Editor YAML",
+              "item": "https://yaml.giit.ch/it/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Integrazione",
+              "item": "https://yaml.giit.ch/it/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Integrare l'editor YAML nel tuo sito web",
+    "intro": "<p>Per sviluppatori: come inserire l'editor YAML nella tua pagina - in un iframe, in una finestra a sé o in sola lettura - e come documenti, salvataggi e risultati di un'IA passano tra l'editor e il tuo server. Non servono né registrazione né chiavi da parte nostra.</p>",
+    "body": "<p>Qualsiasi pagina https (e localhost) può integrare l'editor con un <code>&lt;iframe&gt;</code> e <code>?embed=1</code> - senza registrazione, senza chiave. Integrato, l'editor nasconde il testo della pagina e mostra un pulsante Salva. Ci sono quattro modi per far entrare e uscire il documento.</p>\n\n        <h2>1. Aprire un file da un link, salvare sul tuo server</h2>\n        <p><code>src=</code> apre un file (il tuo server deve consentire CORS), <code>webhook=</code> fa sì che «Salva» (Ctrl+S) invii il documento a quell'indirizzo. Aggiungi <code>&amp;auto</code> per salvare dopo ogni modifica.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://yaml.giit.ch/it/?embed=1&amp;src=https://your-site.com/config/app.yaml&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Il webhook riceve un POST con JSON <code>{ editor: \"yaml\", event: \"save\", id, name, content, updated }</code>. Un link non contiene token (finirebbe nei log del server e nella cronologia del browser), quindi un webhook nell’indirizzo è adatto a un indirizzo di salvataggio che non ne richiede uno, per esempio su localhost o nella tua intranet. Per un server pubblico, passa il webhook con un token in <code>yamleditor:load</code> (<code>hook: { url, token }</code>) e verifica il token, come fa questo piccolo script PHP:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://yaml.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/config/$name.yaml&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. La tua pagina conserva il documento (postMessage)</h2>\n        <p>L'editor invia <code>yamleditor:ready</code>, la tua pagina risponde con <code>yamleditor:load</code>, l'editor segnala <code>yamleditor:loaded</code>, <code>yamleditor:change</code> a ogni modifica effettiva e <code>yamleditor:save</code> quando l'utente salva. La tua pagina può inviare <code>yamleditor:get</code> (lo stato attuale) o <code>yamleditor:save</code> (attiva Salva). Il salvataggio avviene così tramite il tuo accesso e la tua sessione.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://yaml.giit.ch/it/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://yaml.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;yamleditor:ready&#x27;) {              // l'editor è pronto: passagli il documento\n    ed.contentWindow.postMessage({\n      type: &#x27;yamleditor:load&#x27;,\n      name: &#x27;Settings&#x27;,\n      content: await (await fetch(&#x27;/config/app.yaml&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;yamleditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // una modifica reale\n  if (m.type === &#x27;yamleditor:save&#x27;) {               // l'utente ha fatto clic su &quot;Salva&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Un pulsante Salva sulla tua pagina: la risposta arriva come yamleditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;yamleditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Assistente IA nella tua pagina:</b> funziona anche nel riquadro. Con <code>allow=\"clipboard-write\"</code> sull'iframe, «Copia il prompt» usa direttamente gli appunti (altrimenti l'editor ricorre al vecchio comando di copia, o mostra il prompt da copiare a mano). Un link inviato dall'IA non può raggiungere un editor dentro un altro sito web, quindi l'editor dice all'IA e all'utente di incollare invece l'intera risposta dell'IA nell'editor - oppure di aprire l'editor in una finestra propria.</p>\n        <h2>3. In una finestra propria</h2>\n        <p><code>window.open(\"https://yaml.giit.ch/it/?embed=window\", \"yamleditor-17\")</code> apre l'editor completo in una finestra propria e usa gli stessi messaggi con <code>window.opener</code>. Lì lo raggiungono i link di un'IA. <code>yamleditor:load</code> può portare anche <code>context: { host, title, rules }</code> - il prompt per l'IA dice allora a chi appartiene il documento e segue le tue regole - e <code>hook: { url, token }</code>, un webhook solo per questo documento che non viene mai salvato. Chiudere la finestra con modifiche non salvate invia <code>yamleditor:closing</code>.</p>\n        <h2>4. IA tramite il tuo server</h2>\n        <p>Passa all'editor il tuo prompt, un indirizzo sul tuo sito e una chiave per questa sessione dell'editor. La finestra dell'IA mostra allora «Connesso a» il tuo sito, ciò che dici all'IA e la scelta <b>modificare il documento attuale</b> o <b>crearne uno nuovo</b>; <b>Copia il prompt</b> mette tutto insieme. L'IA invia il risultato con la chiave al tuo server, e la tua pagina lo apre nell'editor - un nuovo documento si apre separatamente e resta nel browser dell'utente. Una chiave per sessione dell'editor: resta valida finché l'editor è aperto, e l'editor la richiede solo se non ne ha già una con <code>yamleditor:key-request</code>. L'editor non invia mai la chiave di sua iniziativa e non la salva mai; l'indirizzo deve essere https sul tuo host o su un suo sottodominio.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // una chiave per sessione dell'editor\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;yamleditor:load&#x27;, name: &#x27;Settings&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep every key and every comment.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// ricorda l'id da yamleditor:loaded e ignora change/save/closing con un altro id\n// solo finché l'editor non ha una chiave:\nif (m.type === &#x27;yamleditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;yamleditor:ai&#x27;, key: k.key }, ORIGIN); }\n// finché l'editor è aperto, avvisa il tuo server ogni minuto; chiudere l'editor o la pagina annulla la chiave\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// il tuo server ha un risultato (polling, SSE …): target è &quot;current&quot; o &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;yamleditor:load&#x27;, name: &#x27;Settings&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Crea chiavi con almeno 128 bit casuali, salvane solo l'hash, lega ciascuna all'utente connesso, al documento e a questa sessione dell'editor, creane una per sessione, mantienila valida solo finché la tua pagina segnala la sessione come aperta, e revocala quando l'editor o la pagina si chiude.</p>\n        <p class=\"muted\">L'intero protocollo è in <a href=\"/llms.txt\">llms.txt</a> - dallo a un'IA e costruirà il collegamento per il tuo sistema. Gli altri editor giit funzionano allo stesso modo, ciascuno con il proprio prefisso - <a href=\"https://editors.giit.ch/it/\">editors.giit.ch</a>.</p>\n        <h2>Mostrare un documento in sola lettura (visualizzatore)</h2>\n        <p><code>?viewer=1</code> mostra solo il documento finito: niente codice, niente strumenti, nulla può essere modificato e nulla viene salvato nel browser. Il documento arriva da un link (<code>#b64=</code>, <code>?src=</code>), dalla tua pagina con <code>yamleditor:load</code> o via POST come normale modulo verso <code>post.php</code>: il campo <code>content</code> come testo o <code>b64</code> come base64, facoltativamente <code>name</code>, al massimo 20 MB di testo.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://yaml.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;it&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Senza <code>viewer=1</code> il documento si apre nell’editor normale. In ogni caso resta solo in memoria: non viene salvato sul server e non entra in «I miei documenti». Aperto direttamente, il visualizzatore indica che il contenuto proviene da terzi.</p>",
+    "crumb": "Integrazione",
+    "crumb_nav": "Percorso di navigazione",
+    "open": "Apri l'editor"
+  }
+}

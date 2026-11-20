@@ -1,0 +1,183 @@
+{
+  "title": "二维码生成器：徽标、SVG、PDF | giit.ch",
+  "description": "免费二维码生成器，可加徽标：链接、WiFi、联系人、SEPA 和瑞士 QR 账单。内置扫描检查。导出 SVG、PNG、PDF、EPS。无需注册。",
+  "og_title": "QR 编辑器：免费制作带徽标和设计的二维码，扫描检查",
+  "og_description": "为链接、WiFi、联系人、日程和付款（SEPA、瑞士 QR 账单）制作二维码。进行设计，检查能否扫描，导出 SVG、PNG、PDF 或 EPS。免费，无需注册，在你的浏览器中运行。",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://qr.giit.ch/zh/#app",
+        "name": "QR Editor",
+        "alternateName": "二维码生成器",
+        "url": "https://qr.giit.ch/zh/",
+        "description": "免费二维码生成器，可加徽标：链接、WiFi、联系人、SEPA 和瑞士 QR 账单。内置扫描检查。导出 SVG、PNG、PDF、EPS。无需注册。",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "任意（网页浏览器）",
+        "inLanguage": "zh",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://qr.giit.ch/img/og.png",
+        "featureList": [
+          "永不过期的静态二维码：二维码包含真实内容，没有跳转，无需账户",
+          "链接、文本、WiFi、联系人（vCard 和 MeCard）、电子邮件、短信、电话、位置、日历日程、比特币和以太坊",
+          "SEPA 付款（EPC GiroCode）和瑞士 QR 账单，检查 IBAN、QR 参考号和债权人参考号",
+          "颜色、线性和径向渐变、透明背景",
+          "七种模块形状、四种码眼外框和五种码眼中心，可单独设置颜色",
+          "从 11 个内置图标或你自己的图片中选择徽标，并对照纠错能力进行检查",
+          "说明文字和边框",
+          "编辑器中显示的二维码会以正常、小尺寸和模糊三种方式进行扫描检查。批量导出的二维码不会自动进行扫描检查。",
+          "对比度、静区和打印尺寸检查",
+          "导出为 SVG、宽度最大为 8192 像素并带 dpi 的 PNG、JPEG、WebP、PDF 和 EPS（带渐变的矢量图）",
+          "从图片、剪贴板和摄像头读取二维码",
+          "从 CSV 表格批量生成二维码，打包为 ZIP 或一个 PDF",
+          "在浏览器中保存多个二维码",
+          "任何 AI 都能通过链接在编辑器中写作；可嵌入你的网站"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "我的二维码会过期吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "不会。QR 编辑器制作的是静态二维码：链接、WiFi 密码或联系人就在二维码中，而不是通过我们服务器上的跳转链接访问。只要内容有效，二维码就能一直使用，无需账户、订阅，也没有扫描次数限制。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "真的免费吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "是的。所有内容类型、所有设计选项、SVG、PDF 和 EPS 导出、扫描检查以及从表格批量生成二维码都是免费的，无需注册，没有广告，也没有水印。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "我的数据会发送到服务器吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "不会。二维码在你的浏览器中制作、检查和导出，你扫描的图片和摄像头画面也在浏览器中读取。只有当你自己设置了指向自己服务器的 Webhook、嵌入本编辑器的网站把 QR 文档保存到它自己的服务器上，或者其他网站通过表单（post.php）在这里打开 QR 文档时，QR 文档才会发送到服务器；此时我们的服务器会直接把它转交给你的浏览器，不会保存。和所有网站一样，服务器会记录每次访问，我们也会匿名统计页面浏览量，详见隐私政策。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "加了徽标的二维码还能扫描吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "编辑器会告诉你。它会把徽标遮挡的部分与纠错能力可修复的范围进行比较，并以正常、小尺寸和模糊三种方式读回完成的二维码。如果不能可靠扫描，你会在打印之前就看到。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "打印时应该使用哪种文件格式？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "如需可缩放的二维码图形，请使用 SVG、PDF 或 EPS。上传的图片徽标以及 PDF/EPS 中的部分说明文字会以位图输出。导出 PNG 时，请根据打印尺寸选择像素宽度和 DPI。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "能制作瑞士 QR 账单或 SEPA 付款码吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "能。表单会检查 IBAN、QR-IBAN 及其 QR 参考号、债权人参考号（RF）以及已支持的字段长度限制。瑞士 QR 账单按标准要求带瑞士十字并使用纠错级别 M 绘制。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "能读取二维码吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "能。打开、拖放或粘贴图片，或通过“读取二维码”使用摄像头。内容会变成一个可以修改的新二维码。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "印刷的二维码应该多大？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "大约为扫描距离的十分之一：20 cm 距离需 2 cm，一米距离需 10 cm。“检查”标签页会计算尺寸，并在一个模块（二维码中的一个小方块）小于 0.4 mm 时发出警告。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>永不过期的免费二维码：可设计、经检查、保护隐私</h2>\n        <p>QR 编辑器可为链接、WiFi、联系人、日程、电子邮件、短信、地点和付款制作二维码。你可以用颜色、渐变、形状、徽标和说明文字设计二维码。编辑器中显示的二维码会以正常、小尺寸和模糊三种方式进行扫描检查。批量导出的二维码不会自动进行扫描检查。可导出用于印刷的 SVG、PDF 和 EPS，或宽度最高 8192 像素的 PNG。</p>\n        <p>这些二维码是静态的：内容就在二维码中，而不是依赖试用期结束后就失效的跳转链接。无需注册，没有广告，没有扫描次数限制，一切都在你的浏览器中完成：你输入或扫描的内容都保存在浏览器里，而不是我们的服务器上。</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>QR 编辑器能做什么</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>十二种内容</h3><p>链接、文本、WiFi（WPA、WEP、开放、隐藏网络）、vCard 或 MeCard 格式的联系人、电子邮件、短信、电话、位置、日历日程、比特币和以太坊、SEPA 付款（EPC GiroCode）以及瑞士 QR 账单，每种都有表单和检查。</p></div>\n            <div class=\"tile\"><h3>设计</h3><p>颜色、线性和径向渐变、透明背景、七种模块形状、四种码眼外框和五种可单独设色的码眼中心、内置图标或你自己图片做的徽标、说明文字和边框。</p></div>\n            <div class=\"tile\"><h3>经扫描检查</h3><p>编辑器中显示的二维码会以正常、小尺寸和模糊三种方式进行扫描检查。批量导出的二维码不会自动进行扫描检查。编辑器会检查对比度、静区以及徽标与纠错能力的关系，并根据扫描距离算出打印尺寸。</p></div>\n            <div class=\"tile\"><h3>导出用于印刷和网页</h3><p>如需可缩放的二维码图形，请使用 SVG、PDF 或 EPS。上传的图片徽标以及 PDF/EPS 中的部分说明文字会以位图输出。导出 PNG 时，请根据打印尺寸选择像素宽度和 DPI。PNG 宽度最大为 8192 像素，并写入 dpi 信息，另有 JPEG 和 WebP。免费，无需注册。</p></div>\n            <div class=\"tile\"><h3>批量生成二维码</h3><p>在内容中写入 <code>{{url}}</code> 这样的占位符，粘贴表格，即可下载包含 SVG 或 PNG 文件的 ZIP，或每页一个二维码的 PDF。</p></div>\n            <div class=\"tile\"><h3>读取二维码</h3><p>打开、拖放或粘贴图片，或用摄像头扫描，深色背景上的浅色二维码也能读取。内容会变成一个可以修改的二维码。</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>为什么选择静态二维码</h2>\n        <p>许多“免费”二维码生成器制作的是动态二维码：二维码里只是一个指向其服务器的短链接，再由服务器跳转到你的地址。试用期结束或达到扫描次数上限时，他们就会关闭跳转或先显示广告，所有已印刷的二维码都会失效。静态二维码直接包含地址、WiFi 密码或联系人，因此无需任何中间方就能一直使用。QR 编辑器只制作静态二维码，并会在内容是短链接时发出警告。</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>使用方法</h2>\n        <ol class=\"steps\">\n            <li><b>选择</b>：在“新建”中选择一种二维码并填写表单，或直接输入内容。</li>\n            <li><b>设计和检查</b>：修改颜色、形状、徽标和说明文字；二维码上方的标记会显示它是否仍能扫描。</li>\n            <li><b>导出</b>：下载 SVG、PDF、EPS 或 PNG，或从表格批量生成二维码。</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>在你自己的网站上使用编辑器</h2>\n        <p>用 iframe 或单独的窗口把编辑器放进你自己的网站。你的页面把文档交给编辑器，接收每次修改和保存的结果，还可以让 AI 把结果发送到你的服务器。无需注册，无需密钥。</p>\n        <p><a href=\"/zh/embed/\"><b>把编辑器嵌入你的网站</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>常见问题</h2>\n        <div class=\"questions\">\n            <details><summary>我的二维码会过期吗？</summary><p>不会。QR 编辑器制作的是静态二维码：链接、WiFi 密码或联系人就在二维码中，而不是通过我们服务器上的跳转链接访问。只要内容有效，二维码就能一直使用，无需账户、订阅，也没有扫描次数限制。</p></details>\n            <details><summary>真的免费吗？</summary><p>是的。所有内容类型、所有设计选项、SVG、PDF 和 EPS 导出、扫描检查以及从表格批量生成二维码都是免费的，无需注册，没有广告，也没有水印。</p></details>\n            <details><summary>我的数据会发送到服务器吗？</summary><p>不会。二维码在你的浏览器中制作、检查和导出，你扫描的图片和摄像头画面也在浏览器中读取。只有当你自己设置了指向自己服务器的 Webhook、嵌入本编辑器的网站把 QR 文档保存到它自己的服务器上，或者其他网站通过表单（post.php）在这里打开 QR 文档时，QR 文档才会发送到服务器；此时我们的服务器会直接把它转交给你的浏览器，不会保存。和所有网站一样，服务器会记录每次访问，我们也会匿名统计页面浏览量，详见<a href=\"/privacy.html\">隐私政策</a>。</p></details>\n            <details><summary>加了徽标的二维码还能扫描吗？</summary><p>编辑器会告诉你。它会把徽标遮挡的部分与纠错能力可修复的范围进行比较，并以正常、小尺寸和模糊三种方式读回完成的二维码。如果不能可靠扫描，你会在打印之前就看到。</p></details>\n            <details><summary>打印时应该使用哪种文件格式？</summary><p>如需可缩放的二维码图形，请使用 SVG、PDF 或 EPS。上传的图片徽标以及 PDF/EPS 中的部分说明文字会以位图输出。导出 PNG 时，请根据打印尺寸选择像素宽度和 DPI。</p></details>\n            <details><summary>能制作瑞士 QR 账单或 SEPA 付款码吗？</summary><p>能。表单会检查 IBAN、QR-IBAN 及其 QR 参考号、债权人参考号（RF）以及已支持的字段长度限制。瑞士 QR 账单按标准要求带瑞士十字并使用纠错级别 M 绘制。</p></details>\n            <details><summary>能读取二维码吗？</summary><p>能。打开、拖放或粘贴图片，或通过“读取二维码”使用摄像头。内容会变成一个可以修改的新二维码。</p></details>\n            <details><summary>印刷的二维码应该多大？</summary><p>大约为扫描距离的十分之一：20 cm 距离需 2 cm，一米距离需 10 cm。“检查”标签页会计算尺寸，并在一个模块（二维码中的一个小方块）小于 0.4 mm 时发出警告。</p></details>\n        </div>\n    </section>",
+  "name": "QR 编辑器",
+  "embed": {
+    "title": "QR 编辑器嵌入指南 | giit.ch",
+    "description": "开发者指南：用 iframe 把 QR 编辑器嵌入你的网站，通过 postMessage 或 Webhook 传递文档，并连接你的 AI。免费。",
+    "og_title": "把 QR 编辑器嵌入你的网站",
+    "og_description": "开发者指南：用 iframe 把 QR 编辑器嵌入你的网站，通过 postMessage 或 Webhook 传递文档，并连接你的 AI。免费。",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://qr.giit.ch/zh/embed/#article",
+          "headline": "把 QR 编辑器嵌入你的网站",
+          "description": "开发者指南：用 iframe 把 QR 编辑器嵌入你的网站，通过 postMessage 或 Webhook 传递文档，并连接你的 AI。免费。",
+          "inLanguage": "zh",
+          "url": "https://qr.giit.ch/zh/embed/",
+          "mainEntityOfPage": "https://qr.giit.ch/zh/embed/",
+          "image": "https://qr.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "QR 编辑器",
+            "url": "https://qr.giit.ch/zh/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "QR 编辑器",
+              "item": "https://qr.giit.ch/zh/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "嵌入",
+              "item": "https://qr.giit.ch/zh/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "把 QR 编辑器嵌入你的网站",
+    "intro": "<p>面向开发者：如何把 QR 编辑器放进你自己的页面（放在 iframe 中、在单独的窗口中打开，或作为只读查看器），以及文档、保存内容和 AI 结果如何在编辑器和你的服务器之间传递。无需注册，也不需要我们提供的密钥。</p>",
+    "body": "<p>任何 https 页面（以及 localhost）都可以用 <code>&lt;iframe&gt;</code> 和 <code>?embed=1</code> 嵌入编辑器，无需注册，无需密钥。嵌入后，编辑器会隐藏页面文字并显示“保存”按钮。如果用户要在其中扫描二维码，请在 iframe 的 <code>allow</code> 中加上 <code>camera</code>。</p>\n        <h2>1. 通过链接打开文件，保存到你的服务器</h2>\n        <p><code>src=</code> 打开一个 .qr 文件（你的服务器必须允许 CORS），<code>webhook=</code> 让“保存”（Ctrl+S）把 QR 文档发送到该地址。加上 <code>&amp;auto</code> 可在每次更改后保存。</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://qr.giit.ch/zh/?embed=1&amp;src=https://your-site.com/codes/shop.qr&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook 会收到一个带 JSON 的 POST 请求 <code>{ editor: \"qr\", event: \"save\", id, name, content, updated }</code>。链接不携带令牌，因为令牌会留在服务器日志和浏览器历史记录中。因此，在地址中指定 Webhook 适合不需要令牌的保存地址，例如 localhost 或你的内网。对于公共服务器，请通过 <code>qreditor:load</code> 中的 <code>hook: { url, token }</code> 传入 Webhook 和令牌，并像下面这个简短的 PHP 脚本一样验证令牌：</p>\n        <pre class=\"example\"><code>&lt;?php\n// save.php: one document; replace the token and storage path for your application.\nheader(&#x27;Access-Control-Allow-Origin: https://qr.giit.ch&#x27;);\nheader(&#x27;Vary: Origin&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Content-Type: application/json&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) {\n    http_response_code(204);\n    exit;\n}\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] !== &#x27;POST&#x27;) {\n    http_response_code(405);\n    header(&#x27;Allow: POST, OPTIONS&#x27;);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;POST required&#x27;]);\n    exit;\n}\n$token = &#x27;replace-with-a-random-secret&#x27;;\nif (!hash_equals(&#x27;Bearer &#x27; . $token, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;)) {\n    http_response_code(401);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid token&#x27;]);\n    exit;\n}\n$data = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\nif (!is_array($data) || ($data[&#x27;editor&#x27;] ?? &#x27;&#x27;) !== &#x27;qr&#x27;\n    || ($data[&#x27;event&#x27;] ?? &#x27;&#x27;) !== &#x27;save&#x27; || !is_string($data[&#x27;content&#x27;] ?? null)) {\n    http_response_code(400);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid QR document&#x27;]);\n    exit;\n}\n// Use a fixed path outside the public web directory, after checking access.\nif (file_put_contents(dirname(__DIR__) . &#x27;/shop.qr&#x27;, $data[&#x27;content&#x27;], LOCK_EX) === false) {\n    http_response_code(500);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Could not save&#x27;]);\n    exit;\n}\necho json_encode([&#x27;ok&#x27; =&gt; true]);</code></pre>\n        <p><code>content</code> 是 QR 文档（设计行、<code>---</code>、内容）。</p>\n        <p>Webhook 必须允许来自 <code>https://qr.giit.ch</code> 的 CORS 请求，包括 <code>OPTIONS</code> 请求和 <code>Content-Type</code> 请求头；使用令牌时还要允许 <code>Authorization</code>。请将示例令牌替换为随机密钥，并使用你的应用所需的访问权限检查和存储位置。</p>\n        <h2>2. 由你的页面保存文档（postMessage）</h2>\n        <p>编辑器发送 <code>qreditor:ready</code>，你的页面回复 <code>qreditor:load</code>，编辑器报告 <code>qreditor:loaded</code>，实际编辑时发送 <code>qreditor:change</code>，用户保存时发送 <code>qreditor:save</code>。你的页面可以发送 <code>qreditor:get</code>（获取当前状态）或 <code>qreditor:save</code>（相当于点击“保存”）。不带设计行的纯内容也是有效的文档。</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://qr.giit.ch/zh/?embed=1&quot; allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://qr.giit.ch&#x27;;\naddEventListener(&#x27;message&#x27;, e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;qreditor:ready&#x27;)\n    ed.contentWindow.postMessage({ type: &#x27;qreditor:load&#x27;, name: &#x27;Table 12&#x27;,\n      content: &#x27;color: #1d2b53\\ncaption: Table 12\\n---\\nhttps://example.com/menu?table=12&#x27; }, ORIGIN);\n  if (m.type === &#x27;qreditor:save&#x27;) saveOnYourServer(m.name, m.content);\n});\n&lt;/script&gt;</code></pre>\n        <h2>3. 在单独的窗口中打开，并通过你的服务器使用 AI</h2>\n        <p><code>window.open(\"https://qr.giit.ch/zh/?embed=window\", \"qreditor-17\")</code> 会在单独的窗口中打开完整的编辑器，消息相同。你的页面还可以向编辑器提供自己的 AI 提示词、你网站上的一个 https 地址以及本次编辑器会话的密钥（在 <code>qreditor:load</code> 中使用 <code>ai: { label, prompt, endpoint, key }</code>，或使用 <code>qreditor:ai</code>）；AI 随后会把结果发送到那里。编辑器自己从不发送这个密钥，也从不保存它。</p>\n        <h2>只读显示二维码（查看器）</h2>\n        <p><code>?viewer=1</code> 只显示完成的二维码以及“下载”和“导出”：无法修改，也不保存任何内容。文档来自链接（<code>#b64=</code>、<code>#qr=</code>、<code>?src=</code>）、来自你页面发送的 <code>qreditor:load</code>，或通过 POST 发送到 <code>post.php</code>（字段 <code>content</code> 或 <code>b64</code>，可选 <code>name</code>）。</p>\n        <p class=\"muted\">完整协议见 <a href=\"/llms.txt\">llms.txt</a>，把它交给 AI，AI 就能为你的系统建立连接。其他 giit 编辑器的用法相同，只是各有自己的前缀，见 <a href=\"https://editors.giit.ch/zh/\">editors.giit.ch</a>。</p>",
+    "crumb": "嵌入",
+    "crumb_nav": "导航路径",
+    "open": "打开编辑器"
+  }
+}

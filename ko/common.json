@@ -1,0 +1,23 @@
+{
+  "footer_all": "모든 giit 편집기",
+  "footer_binding": "구속력 있는 원문(독일어):",
+  "footer_editors": "편집기",
+  "footer_legal": "법적 고지",
+  "footer_license": "{license} 오픈 소스",
+  "footer_llms": "AI 어시스턴트용 llms.txt",
+  "footer_shls": "SHLS: {author}",
+  "footer_source": "소스 코드",
+  "source_on_github": "GitHub의 소스 코드",
+  "country": "스위스",
+  "imprint": "사업자 정보",
+  "privacy": "개인정보 처리방침",
+  "terms": "이용 약관",
+  "language": "언어",
+  "theme": {
+    "group": "색 테마",
+    "light": "밝은 테마",
+    "dark": "어두운 테마",
+    "auto_title": "시스템 설정과 같게",
+    "auto_label": "자동 테마(시스템 설정)"
+  }
+}

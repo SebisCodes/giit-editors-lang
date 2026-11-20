@@ -1,0 +1,181 @@
+{
+  "title": "Editor CSV online grátis - edite CSV como tabela | giit.ch",
+  "description": "Editor CSV grátis no navegador: edite tabelas e texto, ordene, filtre e exporte para Excel (XLSX) ou JSON. Sem cadastro.",
+  "og_title": "Editor CSV online grátis - edite CSV como tabela | giit.ch",
+  "og_description": "Edite arquivos CSV como numa planilha e veja o texto bruto ao lado. Exporte para XLSX, JSON, Markdown ou HTML. Grátis, sem cadastro, roda no seu navegador.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://csv.giit.ch/pt/#app",
+        "name": "CSV Editor",
+        "url": "https://csv.giit.ch/pt/",
+        "description": "Editor CSV grátis no navegador: edite tabelas e texto, ordene, filtre e exporte para Excel (XLSX) ou JSON. Sem cadastro.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Qualquer (navegador web)",
+        "inLanguage": "pt",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://csv.giit.ch/img/og.png",
+        "featureList": [
+          "O CSV bruto e a tabela lado a lado",
+          "Edite células como numa planilha, copie e cole intervalos do Excel ou do LibreOffice",
+          "Arquivos separados por vírgula, ponto e vírgula, tabulação e barra vertical, com ou sem linha de cabeçalho",
+          "UTF-8 e Windows-1252, finais de linha mantidos",
+          "Adicione, exclua e mova linhas e colunas",
+          "Ordene e filtre a visualização, ou ordene os próprios dados",
+          "Informações da coluna: tipo, valores vazios e diferentes, soma e média",
+          "Problemas: linhas com outro número de campos, aspas não fechadas, nomes de cabeçalho vazios e repetidos",
+          "Arquivos grandes com 100.000 linhas",
+          "Exportação para XLSX, JSON, Markdown, HTML, TSV e CSV com qualquer separador",
+          "Muitos documentos guardados no navegador",
+          "Salve no seu próprio servidor com um webhook, ou incorpore o editor no seu site",
+          "Qualquer IA pode escrever no editor por meio de links"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Meu arquivo CSV é enviado para algum lugar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O editor roda no seu navegador e guarda seus arquivos nele, não no nosso servidor. Um arquivo só vai para um servidor se você configurar um webhook para o seu próprio servidor, se um site que incorpora o editor o salvar no próprio servidor, ou se outro site o abrir aqui com um formulário (post.php) - nesse caso, nosso servidor o repassa direto para o seu navegador, sem armazená-lo. Como em qualquer site, o servidor registra cada acesso, e contamos as visualizações de página de forma anônima - veja a política de privacidade."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O editor muda o meu arquivo quando edito uma célula?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Só aquela célula. O editor grava a alteração no texto CSV exatamente onde o campo está e deixa o resto como estava: as outras aspas, o separador e os finais de linha ficam. Um campo só é colocado entre aspas quando precisa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Meu CSV usa ponto e vírgula - funciona?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O editor detecta vírgula, ponto e vírgula, tabulação e barra vertical como separador; você também pode escolhê-lo em Formato. Converter passa o arquivo para outro separador."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como abro o CSV no Excel sem acentos incorretos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Exporte como XLSX, ou baixe o CSV com marca de ordem de bytes (BOM) - marque essa opção em Formato ou escolha \"UTF-8 com BOM\" na exportação. Assim o Excel lê UTF-8 corretamente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ele suporta arquivos grandes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A tabela exibe só as linhas que você vê, então arquivos com 100.000 linhas continuam rápidos para rolar, filtrar e editar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Onde meus documentos ficam salvos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Só no seu navegador. Clique no botão de pasta no canto superior esquerdo (Meus documentos) para abrir, renomear, duplicar, baixar ou excluir os documentos. Limpar os dados do site no navegador os apaga, então baixe os que você quer manter - ou deixe o editor enviá-los ao seu próprio servidor (\"Salvar no servidor\"). Arquivos muito grandes podem não caber no armazenamento do navegador; o editor avisa quando isso acontece."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Uma IA pode escrever no Editor CSV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, qualquer IA - ChatGPT, Claude, Gemini, Copilot ou a IA da sua ferramenta de programação. Clique em \"Assistente de IA\", depois em \"Copiar prompt\", cole na sua IA e diga o que ela deve fazer. A IA responde com um link; clique nele e a tabela aparece no seu editor. \"Desfazer\" desfaz qualquer alteração."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Editor CSV custa alguma coisa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O editor é gratuito, sem anúncios e sem cadastro."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Edite arquivos CSV online, como tabela e como texto</h2>\n        <p>O Editor CSV mostra o CSV bruto e a tabela lado a lado. Edite uma célula na tabela e o editor muda exatamente aquele campo no texto - as outras aspas, o separador e os finais de linha ficam como estavam. Um clique na tabela mostra o campo no texto, e o cursor no texto mostra a célula dele. Assim fica rápido corrigir exportações de lojas, bancos e bancos de dados, limpar listas de endereços ou preparar dados para importação.</p>\n        <p>Tudo roda no seu navegador. Seus arquivos ficam guardados nele, não no nosso servidor, e não há cadastro nem publicidade.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>O que o editor sabe fazer</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Como uma planilha</h3><p>Digite nas células, mova-se com as setas e o Tab, copie e cole intervalos de e para o Excel, o LibreOffice ou o Google Sheets, adicione, exclua e mova linhas e colunas.</p></div>\n            <div class=\"tile\"><h3>Qualquer CSV</h3><p>Vírgula, ponto e vírgula, tabulação ou barra vertical como separador, detectado automaticamente; com ou sem linha de cabeçalho; UTF-8 com ou sem BOM e Windows-1252; os finais de linha do Windows e do Unix são mantidos.</p></div>\n            <div class=\"tile\"><h3>Encontre os problemas</h3><p>Linhas com outro número de campos, aspas que nunca são fechadas, nomes de coluna vazios e repetidos - listados com a linha, a um clique de distância.</p></div>\n            <div class=\"tile\"><h3>Ordene, filtre, examine os dados</h3><p>Ordene e filtre a visualização sem mexer no arquivo, ou ordene os próprios dados. O painel da coluna mostra o tipo dos valores, os vazios e os diferentes, a soma e a média.</p></div>\n            <div class=\"tile\"><h3>Arquivos grandes</h3><p>A tabela exibe só as linhas que você vê: arquivos com 100.000 linhas continuam rápidos para rolar, filtrar e editar.</p></div>\n            <div class=\"tile\"><h3>Exportar</h3><p>Pasta de trabalho do Excel (XLSX), JSON, tabelas Markdown e HTML, TSV, ou CSV com outro separador e outra codificação - com proteção contra fórmulas de planilha.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Como funciona</h2>\n        <ol class=\"steps\">\n            <li><b>Abra</b> - solte um arquivo CSV na janela, abra-o com \"Abrir arquivo…\" ou comece com um modelo em \"Novo\".</li>\n            <li><b>Edite</b> - altere células na tabela ou o texto à esquerda; um acompanha o outro. Use \"Inserir\" para linhas e colunas, \"Formato\" para o separador.</li>\n            <li><b>Salve</b> - baixe o CSV como está, ou exporte-o como XLSX, JSON, Markdown ou HTML.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Use o editor no seu próprio site</h2>\n        <p>Coloque o editor no seu próprio site com um iframe ou em uma janela própria. Sua página entrega o documento a ele, recebe cada alteração e cada salvamento e pode deixar uma IA enviar os resultados ao seu servidor. Sem cadastro, sem chave.</p>\n        <p><a href=\"/pt/embed/\"><b>Incorpore o editor ao seu site</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Perguntas frequentes</h2>\n        <div class=\"questions\">\n            <details><summary>Meu arquivo CSV é enviado para algum lugar?</summary><p>Não. O editor roda no seu navegador e guarda seus arquivos nele, não no nosso servidor. Um arquivo só vai para um servidor se você configurar um webhook para o seu próprio servidor, se um site que incorpora o editor o salvar no próprio servidor, ou se outro site o abrir aqui com um formulário (post.php) - nesse caso, nosso servidor o repassa direto para o seu navegador, sem armazená-lo. Como em qualquer site, o servidor registra cada acesso, e contamos as visualizações de página de forma anônima - veja a <a href=\"/privacy.html\">política de privacidade</a>.</p></details>\n            <details><summary>O editor muda o meu arquivo quando edito uma célula?</summary><p>Só aquela célula. O editor grava a alteração no texto CSV exatamente onde o campo está e deixa o resto como estava: as outras aspas, o separador e os finais de linha ficam. Um campo só é colocado entre aspas quando precisa.</p></details>\n            <details><summary>Meu CSV usa ponto e vírgula - funciona?</summary><p>Sim. O editor detecta vírgula, ponto e vírgula, tabulação e barra vertical como separador; você também pode escolhê-lo em <b>Formato</b>. <b>Converter</b> passa o arquivo para outro separador.</p></details>\n            <details><summary>Como abro o CSV no Excel sem acentos incorretos?</summary><p>Exporte como XLSX, ou baixe o CSV com marca de ordem de bytes (BOM) - marque essa opção em <b>Formato</b> ou escolha \"UTF-8 com BOM\" na exportação. Assim o Excel lê UTF-8 corretamente.</p></details>\n            <details><summary>Ele suporta arquivos grandes?</summary><p>Sim. A tabela exibe só as linhas que você vê, então arquivos com 100.000 linhas continuam rápidos para rolar, filtrar e editar.</p></details>\n            <details><summary>Onde meus documentos ficam salvos?</summary><p>Só no seu navegador. Clique no botão de pasta no canto superior esquerdo (Meus documentos) para abrir, renomear, duplicar, baixar ou excluir os documentos. Limpar os dados do site no navegador os apaga, então baixe os que você quer manter - ou deixe o editor enviá-los ao seu próprio servidor (\"Salvar no servidor\"). Arquivos muito grandes podem não caber no armazenamento do navegador; o editor avisa quando isso acontece.</p></details>\n            <details><summary>Uma IA pode escrever no Editor CSV?</summary><p>Sim, qualquer IA - ChatGPT, Claude, Gemini, Copilot ou a IA da sua ferramenta de programação. Clique em &quot;Assistente de IA&quot;, depois em &quot;Copiar prompt&quot;, cole na sua IA e diga o que ela deve fazer. A IA responde com um link; clique nele e a tabela aparece no seu editor. &quot;Desfazer&quot; desfaz qualquer alteração.</p></details>\n            <details><summary>O Editor CSV custa alguma coisa?</summary><p>Não. O editor é gratuito, sem anúncios e sem cadastro.</p></details>\n        </div>\n    </section>",
+  "name": "Editor CSV",
+  "embed": {
+    "title": "Como incorporar o editor CSV ao seu site | giit.ch",
+    "description": "Guia para desenvolvedores: incorpore o editor CSV ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+    "og_title": "Incorpore o editor CSV ao seu site",
+    "og_description": "Guia para desenvolvedores: incorpore o editor CSV ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://csv.giit.ch/pt/embed/#article",
+          "headline": "Incorpore o editor CSV ao seu site",
+          "description": "Guia para desenvolvedores: incorpore o editor CSV ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+          "inLanguage": "pt",
+          "url": "https://csv.giit.ch/pt/embed/",
+          "mainEntityOfPage": "https://csv.giit.ch/pt/embed/",
+          "image": "https://csv.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Editor CSV",
+            "url": "https://csv.giit.ch/pt/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Editor CSV",
+              "item": "https://csv.giit.ch/pt/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Incorporação",
+              "item": "https://csv.giit.ch/pt/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Incorpore o editor CSV ao seu site",
+    "intro": "<p>Para desenvolvedores: como colocar o editor CSV na sua própria página - em um iframe, em uma janela própria ou como visualizador somente para leitura - e como documentos, salvamentos e resultados de uma IA passam entre o editor e o seu servidor. Não é preciso cadastro nem chave nossa.</p>",
+    "body": "<p>Qualquer página https (e localhost) pode incorporar o editor com um <code>&lt;iframe&gt;</code> e <code>?embed=1</code> - sem cadastro, sem chave. Incorporado, o editor oculta o texto da página e mostra um botão Salvar. Há quatro jeitos de levar a tabela para dentro e para fora.</p>\n\n        <h2>1. Abrir um arquivo de um link, salvar no seu servidor</h2>\n        <p><code>src=</code> abre um arquivo (seu servidor precisa permitir CORS), <code>webhook=</code> faz \"Salvar\" (Ctrl+S) enviar o documento para esse endereço. Acrescente <code>&amp;auto</code> para salvar após cada alteração.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://csv.giit.ch/pt/?embed=1&amp;src=https://your-site.com/data/products.csv&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>O webhook recebe um POST com JSON <code>{ editor: \"csv\", event: \"save\", id, name, content, updated }</code>. Um link não leva token (ele acabaria nos logs do servidor e no histórico do navegador), por isso um webhook no endereço serve para um destino de salvamento que não exija token, por exemplo em localhost ou na sua intranet. Para um servidor público, passe o webhook com um token em <code>csveditor:load</code> (<code>hook: { url, token }</code>) e valide o token, como faz este pequeno script PHP:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://csv.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/data/$name.csv&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>O diretório <code>data</code>, ao lado de <code>save.php</code>, já deve existir e permitir a escrita pelo PHP.</p>\n\n        <h2>2. A sua página guarda o documento (postMessage)</h2>\n        <p>O editor informa <code>csveditor:ready</code>, a sua página responde com <code>csveditor:load</code>, o editor informa <code>csveditor:loaded</code>, <code>csveditor:change</code> quando há alterações efetivas e <code>csveditor:save</code> quando o usuário salva. A sua página pode enviar <code>csveditor:get</code> (o estado atual) ou <code>csveditor:save</code> (acionar Salvar). Salvar passa então pelo seu próprio login e sessão.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://csv.giit.ch/pt/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://csv.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;csveditor:ready&#x27;) {               // o editor está pronto: entregue o documento a ele\n    ed.contentWindow.postMessage({\n      type: &#x27;csveditor:load&#x27;,\n      name: &#x27;Products&#x27;,\n      content: await (await fetch(&#x27;/data/products.csv&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;csveditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // uma edição real\n  if (m.type === &#x27;csveditor:save&#x27;) {                // o usuário clicou em &quot;Salvar&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Um botão de salvar na sua própria página: a resposta chega como csveditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;csveditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Assistente de IA dentro da sua página:</b> ele também funciona no frame. Com <code>allow=\"clipboard-write\"</code> no iframe, \"Copiar prompt\" usa a área de transferência diretamente (senão o editor recorre ao antigo comando de copiar, ou mostra o prompt para copiar à mão). Um link enviado pela IA não alcança um editor dentro de outro site, então o editor pede à IA e ao usuário que colem a resposta inteira da IA no editor - ou abram o editor em uma janela própria.</p>\n        <h2>3. Em uma janela própria</h2>\n        <p><code>window.open(\"https://csv.giit.ch/pt/?embed=window\", \"csveditor-17\")</code> abre o editor completo em uma janela própria e troca as mesmas mensagens com <code>window.opener</code>. Os links de uma IA chegam até ele ali. <code>csveditor:load</code> também pode levar <code>context: { host, title, rules }</code> - o prompt da IA então diz a que lugar o documento pertence e segue as suas regras - e <code>hook: { url, token }</code>, um webhook só para este documento que nunca é guardado. Fechar a janela com alterações não salvas envia <code>csveditor:closing</code>.</p>\n        <h2>4. IA pelo seu próprio servidor</h2>\n        <p>Entregue ao editor o seu próprio prompt, um endereço no seu site e uma chave para esta sessão do editor. A janela de IA mostra então \"Conectado a\" seguido do seu site, o que você diz à IA, e a escolha <b>alterar o documento atual</b> ou <b>criar um novo</b>; <b>Copiar prompt</b> junta tudo. A IA envia o resultado com a chave para o seu servidor, e a sua página o abre no editor - um novo documento abre separado e fica no navegador do usuário. Uma chave por sessão do editor: ela vale enquanto o editor estiver aberto, e o editor só a solicita enquanto estiver sem chave, com <code>csveditor:key-request</code>. O editor nunca envia a chave por conta própria e nunca a guarda; o endereço precisa ser https no seu próprio host ou em um subdomínio dele.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // uma chave por sessão do editor\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;csveditor:load&#x27;, name: &#x27;Products&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the column names. Prices in CHF.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// guarde o id de csveditor:loaded e ignore change/save/closing com outro id\n// só enquanto o editor não tiver chave:\nif (m.type === &#x27;csveditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;csveditor:ai&#x27;, key: k.key }, ORIGIN); }\n// enquanto o editor estiver aberto, avise o seu servidor a cada minuto; fechar o editor ou a página invalida a chave\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// o seu servidor tem um resultado (polling, SSE …): target é &quot;current&quot; ou &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;csveditor:load&#x27;, name: &#x27;Products&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Crie chaves com pelo menos 128 bits aleatórios, guarde só o hash delas, vincule cada uma ao usuário logado, ao documento e a esta sessão do editor, crie uma por sessão, mantenha-a válida só enquanto a sua página informar que a sessão está aberta, e invalide-a quando o editor ou a página fechar.</p>\n        <p class=\"muted\">O protocolo completo está em <a href=\"/llms.txt\">llms.txt</a> - entregue-o a uma IA e ela monta a conexão para o seu sistema. Os outros editores giit funcionam do mesmo jeito, cada um com o próprio prefixo - <a href=\"https://editors.giit.ch/pt/\">editors.giit.ch</a>.</p>\n        <h2>Mostrar um documento somente para leitura (visualizador)</h2>\n        <p><code>?viewer=1</code> mostra apenas o documento pronto: sem código, sem ferramentas, nada pode ser alterado e nada é salvo no navegador. O documento vem de um link (<code>#b64=</code>, <code>?src=</code>), da sua página com <code>csveditor:load</code> ou por POST como formulário normal para <code>post.php</code>: o campo <code>content</code> como texto ou <code>b64</code> como base64, opcionalmente <code>name</code>, no máximo 20 MB de texto.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://csv.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;pt&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Sem <code>viewer=1</code> o documento abre no editor normal. Em ambos os casos ele fica apenas na memória: não é salvo no servidor nem entra em \"Meus documentos\". Aberto diretamente, o visualizador informa que o conteúdo vem de terceiros.</p>",
+    "crumb": "Incorporação",
+    "crumb_nav": "Trilha de navegação",
+    "open": "Abrir o editor"
+  }
+}

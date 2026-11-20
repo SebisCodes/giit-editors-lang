@@ -1,0 +1,189 @@
+{
+  "title": "Darmowy edytor XML - drzewo, XPath, konwersja | giit.ch",
+  "description": "Darmowy edytor XML w przeglądarce: drzewo na żywo, błędy z numerem wiersza, zapytania XPath i konwersja do JSON lub YAML. Bez rejestracji.",
+  "og_title": "Darmowy edytor XML - drzewo, XPath, konwersja",
+  "og_description": "Darmowy edytor XML w przeglądarce: drzewo na żywo, błędy z numerem wiersza, zapytania XPath i konwersja do JSON lub YAML. Bez rejestracji.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://xml.giit.ch/pl/#app",
+        "name": "XML Editor",
+        "url": "https://xml.giit.ch/pl/",
+        "description": "Darmowy edytor XML w przeglądarce: drzewo na żywo, błędy z numerem wiersza, zapytania XPath i konwersja do JSON lub YAML. Bez rejestracji.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "pl",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://xml.giit.ch/img/og.png",
+        "featureList": [
+          "Kod XML z podświetlaniem składni",
+          "Drzewo elementów na żywo z atrybutami, tekstem, komentarzami, CDATA i przestrzeniami nazw",
+          "Kliknięcie w drzewie przenosi do kodu",
+          "Edycja tekstu, wartości atrybutów i nazw bezpośrednio w drzewie",
+          "Zapytania XPath zaznaczające pasujące węzły",
+          "Błędy poprawności z wierszem i kolumną",
+          "Niezadeklarowane prefiksy przestrzeni nazw i powtórzone id",
+          "Nigdy nie ładuje DTD ani encji zewnętrznych",
+          "Formatowanie i minifikacja",
+          "Konwersja do JSON i YAML",
+          "Wiele dokumentów przechowywanych w przeglądarce",
+          "Zapis na własnym serwerze przez webhook lub osadzenie edytora na własnej stronie",
+          "Każda AI może pisać w edytorze za pomocą linków"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czy mój XML jest gdzieś wysyłany?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Edytor działa w przeglądarce i tam przechowuje twoje dokumenty, a nie na naszym serwerze. Dokument trafia na serwer tylko wtedy, gdy sam skonfigurujesz webhook do własnego serwera, gdy strona osadzająca edytor zapisze go na własnym serwerze albo gdy inna strona internetowa otworzy go tutaj za pomocą formularza (post.php) - nasz serwer przekazuje go wtedy od razu do twojej przeglądarki, nie zapisując go. Jak na każdej stronie internetowej, serwer zapisuje każde wejście w logach, a odsłony liczymy anonimowo - zobacz politykę prywatności."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy edytor sprawdza mój XML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Używa parsera XML wbudowanego w przeglądarkę i pokazuje pierwszy błąd w budowie dokumentu (poprawność składniowa XML) z wierszem i kolumną, a także niezadeklarowane prefiksy przestrzeni nazw i podwójnie użyte id. Nie waliduje względem DTD ani XML Schema."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy otwieranie XML z DTD lub encjami zewnętrznymi jest bezpieczne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Edytor nigdy nie ładuje DTD, schematu ani encji zewnętrznej i nigdy nie rozwija encji z DTD, więc ataki XXE i ataki polegające na rozwijaniu encji nie działają. Odwołania do takich encji zostają w tekście tak, jak są zapisane."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak używać XPath?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wpisz wyrażenie XPath 1.0 nad drzewem, na przykład //book[price > 30]/title. Pasujące węzły są zaznaczone w drzewie; strzałki przechodzą od jednego do następnego. Prefiksy zadeklarowane w dokumencie działają, a _: oznacza domyślną przestrzeń nazw elementu głównego."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę przekonwertować XML do JSON lub YAML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. W Konwersji lub Eksporcie dokument staje się JSON lub YAML: atrybuty jako @name, tekst jako #text, powtarzające się elementy jako listy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gdzie zapisywane są moje dokumenty?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tylko w przeglądarce. Kliknij przycisk folderu w lewym górnym rogu (Moje dokumenty), aby je otwierać, zmieniać ich nazwy, duplikować, pobierać lub usuwać. Wyczyszczenie danych witryny w przeglądarce je usuwa, więc pobierz te, które chcesz zachować - albo pozwól edytorowi wysyłać je na własny serwer („Zapis na serwerze”)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy AI może pisać w Edytorze XML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak, każda AI - ChatGPT, Claude, Gemini, Copilot lub AI w twoim narzędziu programistycznym. Kliknij „Asystent AI”, potem „Kopiuj prompt”, wklej go do swojej AI i opisz, co ma napisać. AI odpowiada linkiem; kliknij go, a dokument pojawi się w edytorze. „Cofnij” cofa każdą zmianę."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę używać edytora na własnej stronie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Osadź go w iframe i wymieniaj dokumenty przez postMessage albo pozwól mu wysyłać każdą zapisaną wersję na twój serwer przez webhook. Przykłady znajdziesz w sekcji Edytor na własnej stronie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy Edytor XML coś kosztuje?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Edytor jest darmowy, bez reklam i bez rejestracji."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Edytuj XML online z drzewem na żywo</h2>\n        <p>Edytor XML pokazuje kod i jego drzewo elementów obok siebie. Wszystko, co wpiszesz, od razu pojawia się w drzewie - elementy, atrybuty, tekst, komentarze, CDATA i przestrzenie nazw - a kliknięcie dowolnego węzła przenosi do jego miejsca w kodzie. Nazwy, wartości i tekst można też edytować bezpośrednio w drzewie, uruchamiać zapytania XPath i konwertować dokument do JSON lub YAML.</p>\n        <p>Wszystko działa w przeglądarce. Twoje dokumenty są przechowywane właśnie tam, a nie na naszym serwerze, i nie ma rejestracji ani reklam.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Co potrafi edytor</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Kod z podświetlaniem</h3><p>Znaczniki, atrybuty, wartości, encje, komentarze i CDATA we własnych kolorach, numery wierszy, znaczniki zamykające dodawane samoczynnie i przejrzysta lista problemów z wierszem i kolumną.</p></div>\n            <div class=\"tile\"><h3>Drzewo elementów</h3><p>Zwijaj i rozwijaj elementy, oglądaj atrybuty, tekst, komentarze, instrukcje przetwarzania i przestrzenie nazw i śledź ścieżkę zaznaczonego węzła.</p></div>\n            <div class=\"tile\"><h3>Edycja w drzewie</h3><p>Zmieniaj nazwy elementów i atrybutów, wartości i tekst, dodawaj, przesuwaj i usuwaj elementy - zapisywane w kodzie jako małe zmiany, ze znakami specjalnymi w postaci encji.</p></div>\n            <div class=\"tile\"><h3>XPath i wyszukiwanie</h3><p>Pole XPath 1.0 zaznacza pasujące węzły; wyszukiwanie znajduje nazwy, wartości i tekst. Prefiksy przestrzeni nazw dokumentu działają w XPath.</p></div>\n            <div class=\"tile\"><h3>Bezpieczny przy każdym pliku</h3><p>Żadne DTD, schemat ani encja zewnętrzna nie są nigdy ładowane, a żadna encja nie jest rozwijana, więc XXE i bomby encji nie działają.</p></div>\n            <div class=\"tile\"><h3>Formatowanie i konwersja</h3><p>Dodaj wcięcia lub zminifikuj dokument albo przekonwertuj go do JSON lub YAML: atrybuty jako <code>@name</code>, tekst jako <code>#text</code>, powtarzające się elementy jako listy.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Jak to działa</h2>\n        <ol class=\"steps\">\n            <li><b>Start</b> - wybierz szablon w menu „Nowy”, otwórz plik .xml lub wklej kod XML.</li>\n            <li><b>Edycja</b> - pisz w kodzie lub klikaj wartości w drzewie; problemy nad kodem mówią, co jest niepoprawne składniowo.</li>\n            <li><b>Eksport</b> - zapisz XML, zminifikowaną kopię, JSON, YAML lub zwykły tekst.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Edytor na własnej stronie</h2>\n        <p>Umieść edytor na własnej stronie w ramce iframe albo we własnym oknie. Twoja strona przekazuje mu dokument, otrzymuje z powrotem każdą zmianę i każdy zapis, a wyniki AI mogą trafiać prosto na twój serwer. Bez rejestracji, bez klucza.</p>\n        <p><a href=\"/pl/embed/\"><b>Osadź edytor na swojej stronie</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Najczęstsze pytania</h2>\n        <div class=\"questions\">\n            <details><summary>Czy mój XML jest gdzieś wysyłany?</summary><p>Nie. Edytor działa w przeglądarce i tam przechowuje twoje dokumenty, a nie na naszym serwerze. Dokument trafia na serwer tylko wtedy, gdy sam skonfigurujesz webhook do własnego serwera, gdy strona osadzająca edytor zapisze go na własnym serwerze albo gdy inna strona internetowa otworzy go tutaj za pomocą formularza (post.php) - nasz serwer przekazuje go wtedy od razu do twojej przeglądarki, nie zapisując go. Jak na każdej stronie internetowej, serwer zapisuje każde wejście w logach, a odsłony liczymy anonimowo - zobacz <a href=\"/privacy.html\">politykę prywatności</a>.</p></details>\n            <details><summary>Czy edytor sprawdza mój XML?</summary><p>Tak. Używa parsera XML wbudowanego w przeglądarkę i pokazuje pierwszy błąd w budowie dokumentu (poprawność składniowa XML) z wierszem i kolumną, a także niezadeklarowane prefiksy przestrzeni nazw i podwójnie użyte id. Nie waliduje względem DTD ani XML Schema.</p></details>\n            <details><summary>Czy otwieranie XML z DTD lub encjami zewnętrznymi jest bezpieczne?</summary><p>Tak. Edytor nigdy nie ładuje DTD, schematu ani encji zewnętrznej i nigdy nie rozwija encji z DTD, więc ataki XXE i ataki polegające na rozwijaniu encji nie działają. Odwołania do takich encji zostają w tekście tak, jak są zapisane.</p></details>\n            <details><summary>Jak używać XPath?</summary><p>Wpisz wyrażenie XPath 1.0 nad drzewem, na przykład <code>//book[price &gt; 30]/title</code>. Pasujące węzły są zaznaczone w drzewie; strzałki przechodzą od jednego do następnego. Prefiksy zadeklarowane w dokumencie działają, a <code>_:</code> oznacza domyślną przestrzeń nazw elementu głównego.</p></details>\n            <details><summary>Czy mogę przekonwertować XML do JSON lub YAML?</summary><p>Tak. W <b>Konwersji</b> lub <b>Eksporcie</b> dokument staje się JSON lub YAML: atrybuty jako <code>@name</code>, tekst jako <code>#text</code>, powtarzające się elementy jako listy.</p></details>\n            <details><summary>Gdzie zapisywane są moje dokumenty?</summary><p>Tylko w przeglądarce. Kliknij przycisk folderu w lewym górnym rogu (Moje dokumenty), aby je otwierać, zmieniać ich nazwy, duplikować, pobierać lub usuwać. Wyczyszczenie danych witryny w przeglądarce je usuwa, więc pobierz te, które chcesz zachować - albo pozwól edytorowi wysyłać je na własny serwer („Zapis na serwerze”).</p></details>\n            <details><summary>Czy AI może pisać w Edytorze XML?</summary><p>Tak, każda AI - ChatGPT, Claude, Gemini, Copilot lub AI w twoim narzędziu programistycznym. Kliknij „Asystent AI”, potem „Kopiuj prompt”, wklej go do swojej AI i opisz, co ma napisać. AI odpowiada linkiem; kliknij go, a dokument pojawi się w edytorze. „Cofnij” cofa każdą zmianę.</p></details>\n            <details><summary>Czy mogę używać edytora na własnej stronie?</summary><p>Tak. Osadź go w iframe i wymieniaj dokumenty przez postMessage albo pozwól mu wysyłać każdą zapisaną wersję na twój serwer przez webhook. Przykłady znajdziesz w sekcji <a href=\"#embed\">Edytor na własnej stronie</a>.</p></details>\n            <details><summary>Czy Edytor XML coś kosztuje?</summary><p>Nie. Edytor jest darmowy, bez reklam i bez rejestracji.</p></details>\n        </div>\n    </section>",
+  "name": "Edytor XML",
+  "embed": {
+    "title": "Jak osadzić edytor XML na własnej stronie | giit.ch",
+    "description": "Poradnik dla programistów: osadź edytor XML na swojej stronie przez iframe, wymieniaj dokumenty przez postMessage lub webhook i podłącz swoją AI. Za darmo.",
+    "og_title": "Osadź edytor XML na swojej stronie",
+    "og_description": "Poradnik dla programistów: osadź edytor XML na swojej stronie przez iframe, wymieniaj dokumenty przez postMessage lub webhook i podłącz swoją AI. Za darmo.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://xml.giit.ch/pl/embed/#article",
+          "headline": "Osadź edytor XML na swojej stronie",
+          "description": "Poradnik dla programistów: osadź edytor XML na swojej stronie przez iframe, wymieniaj dokumenty przez postMessage lub webhook i podłącz swoją AI. Za darmo.",
+          "inLanguage": "pl",
+          "url": "https://xml.giit.ch/pl/embed/",
+          "mainEntityOfPage": "https://xml.giit.ch/pl/embed/",
+          "image": "https://xml.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Edytor XML",
+            "url": "https://xml.giit.ch/pl/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Edytor XML",
+              "item": "https://xml.giit.ch/pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Osadzanie",
+              "item": "https://xml.giit.ch/pl/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Osadź edytor XML na swojej stronie",
+    "intro": "<p>Dla programistów: jak umieścić edytor XML na własnej stronie - w ramce iframe, we własnym oknie albo jako podgląd tylko do odczytu - i jak dokumenty, zapisy i wyniki AI przechodzą między edytorem a twoim serwerem. Nie potrzebujesz rejestracji ani klucza od nas.</p>",
+    "body": "<p>Każda strona https (i localhost) może osadzić edytor za pomocą <code>&lt;iframe&gt;</code> i <code>?embed=1</code> - bez rejestracji, bez klucza. Po osadzeniu edytor ukrywa tekst strony i pokazuje przycisk Zapisz. Dokument można przekazywać do edytora i z niego na cztery sposoby.</p>\n\n        <h2>1. Otwieranie pliku z linku, zapis na twoim serwerze</h2>\n        <p><code>src=</code> otwiera plik (twój serwer musi zezwalać na CORS), <code>webhook=</code> sprawia, że „Zapisz” (Ctrl+S) wysyła dokument pod ten adres. Dodaj <code>&amp;auto</code>, aby zapisywać po każdej zmianie.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://xml.giit.ch/pl/?embed=1&amp;src=https://your-site.com/data/catalog.xml&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook otrzymuje żądanie POST z JSON <code>{ editor: \"xml\", event: \"save\", id, name, content, updated }</code>. Link nie zawiera tokenu (trafiłby on do logów serwera i historii przeglądarki), więc webhook podany w adresie nadaje się do zapisu pod adresem, który nie wymaga tokenu, na przykład na localhost lub w intranecie. W przypadku publicznego serwera przekaż webhook z tokenem w <code>xmleditor:load</code> (<code>hook: { url, token }</code>) i zweryfikuj go, tak jak robi to ten krótki skrypt PHP:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://xml.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/data/$name.xml&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Dokument przechowuje twoja strona (postMessage)</h2>\n        <p>Edytor zgłasza <code>xmleditor:ready</code>, twoja strona odpowiada <code>xmleditor:load</code>, edytor zgłasza <code>xmleditor:loaded</code>, <code>xmleditor:change</code> przy rzeczywistych zmianach i <code>xmleditor:save</code>, gdy użytkownik zapisuje. Twoja strona może wysłać <code>xmleditor:get</code> (bieżący stan) lub <code>xmleditor:save</code> (naciśnięcie Zapisz). Zapis odbywa się wtedy przez twoje własne logowanie i sesję.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://xml.giit.ch/pl/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://xml.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;xmleditor:ready&#x27;) {               // edytor jest gotowy: przekaż mu dokument\n    ed.contentWindow.postMessage({\n      type: &#x27;xmleditor:load&#x27;,\n      name: &#x27;Catalog&#x27;,\n      content: await (await fetch(&#x27;/data/catalog.xml&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;xmleditor:change&#x27;) document.title = &#x27;● not saved&#x27;;     // rzeczywista zmiana\n  if (m.type === &#x27;xmleditor:save&#x27;) {                // użytkownik kliknął „Zapisz”\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Przycisk zapisu na twojej stronie: odpowiedź przychodzi jako xmleditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;xmleditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Asystent AI na twojej stronie:</b> działa także w ramce. Z <code>allow=\"clipboard-write\"</code> w iframe „Kopiuj prompt” korzysta bezpośrednio ze schowka (w przeciwnym razie edytor używa starego polecenia kopiowania albo pokazuje prompt do ręcznego skopiowania). Link wysłany przez AI nie dotrze do edytora osadzonego w innej stronie, więc edytor prosi AI i użytkownika o wklejenie całej odpowiedzi AI do edytora - albo o otwarcie edytora we własnym oknie.</p>\n        <h2>3. We własnym oknie</h2>\n        <p><code>window.open(\"https://xml.giit.ch/pl/?embed=window\", \"xmleditor-17\")</code> otwiera pełny edytor we własnym oknie, który wymienia te same wiadomości z <code>window.opener</code>. Linki od AI docierają do niego tam. <code>xmleditor:load</code> może też zawierać <code>context: { host, title, rules }</code> - prompt dla AI mówi wtedy, do czego należy dokument, i stosuje twoje zasady - oraz <code>hook: { url, token }</code>, webhook tylko dla tego dokumentu, który nigdy nie jest zapisywany. Zamknięcie okna z niezapisanymi zmianami wysyła <code>xmleditor:closing</code>.</p>\n        <h2>4. AI przez twój własny serwer</h2>\n        <p>Przekaż edytorowi własny prompt, adres w twojej witrynie i klucz dla tej sesji edytora. Okno AI pokazuje wtedy „Połączono z” twoją witryną, to, co przekazujesz AI, oraz wybór: <b>zmienić bieżący dokument</b> lub <b>utworzyć nowy</b>; <b>Kopiuj prompt</b> łączy to wszystko. AI wysyła swój wynik z kluczem na twój serwer, a twoja strona otwiera go w edytorze - nowy dokument otwiera się osobno i zostaje w przeglądarce użytkownika. Jeden klucz na sesję edytora: pozostaje ważny, dopóki edytor jest otwarty, a edytor prosi o niego przez <code>xmleditor:key-request</code> tylko wtedy, gdy go nie ma. Edytor nigdy sam nie wysyła klucza i nigdy go nie zapisuje; adres musi być adresem https na twoim własnym hoście lub jego subdomenie.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // jeden klucz na sesję edytora\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;xmleditor:load&#x27;, name: &#x27;Catalog&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the sku attributes. Prices in CHF.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// zapamiętaj id z xmleditor:loaded i ignoruj change/save/closing z innym id\n// tylko gdy edytor nie ma klucza:\nif (m.type === &#x27;xmleditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;xmleditor:ai&#x27;, key: k.key }, ORIGIN); }\n// dopóki edytor jest otwarty, informuj serwer co minutę; zamknięcie edytora lub strony unieważnia klucz\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// twój serwer ma wynik (polling, SSE …): target to &quot;current&quot; lub &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;xmleditor:load&#x27;, name: &#x27;Catalog&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Twórz klucze z co najmniej 128 losowymi bitami, przechowuj tylko ich skrót, wiąż każdy z zalogowanym użytkownikiem, dokumentem i tą sesją edytora, twórz jeden na sesję, zachowuj jego ważność tylko wtedy, gdy twoja strona zgłasza sesję jako otwartą, i unieważniaj go, gdy edytor lub strona zostaną zamknięte.</p>\n        <p class=\"muted\">Cały protokół jest opisany w <a href=\"/llms.txt\">llms.txt</a> - przekaż go AI, a zbuduje połączenie dla twojego systemu. Pozostałe edytory giit działają tak samo, każdy z własnym prefiksem - <a href=\"https://editors.giit.ch/pl/\">editors.giit.ch</a>.</p>\n        <h2>Wyświetlanie dokumentu tylko do odczytu (podgląd)</h2>\n        <p><code>?viewer=1</code> pokazuje tylko gotowy dokument: bez kodu, bez narzędzi, niczego nie można zmienić i nic nie jest zapisywane w przeglądarce. Dokument pochodzi z linku (<code>#b64=</code>, <code>?src=</code>), z twojej strony przez <code>xmleditor:load</code> albo przez POST jako zwykły formularz do <code>post.php</code>: pole <code>content</code> jako tekst lub <code>b64</code> jako base64, opcjonalnie <code>name</code>, najwyżej 20 MB tekstu.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://xml.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;pl&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Bez <code>viewer=1</code> dokument otwiera się w zwykłym edytorze. W obu przypadkach pozostaje tylko w pamięci: nie jest zapisywany na serwerze i nie trafia do „Moich dokumentów”. Otwarty bezpośrednio podgląd informuje, że treść pochodzi od osób trzecich.</p>",
+    "crumb": "Osadzanie",
+    "crumb_nav": "Ścieżka nawigacji",
+    "open": "Otwórz edytor"
+  }
+}

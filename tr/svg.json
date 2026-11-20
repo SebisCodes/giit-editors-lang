@@ -1,0 +1,187 @@
+{
+  "title": "SVG Editörü - Görüntüle, Düzenle, Dışa Aktar | giit.ch",
+  "description": "Tarayıcıda ücretsiz SVG editörü: kodu düzenleyin veya şekilleri taşıyın, boyutlandırın, renklendirin; SVG, PNG, JPG veya React olarak aktarın. Kayıt yok.",
+  "og_title": "SVG Editörü - Görüntüle, Düzenle, Dışa Aktar | giit.ch",
+  "og_description": "Tarayıcıda ücretsiz SVG editörü: kodu düzenleyin veya şekilleri taşıyın, boyutlandırın, renklendirin; SVG, PNG, JPG veya React olarak aktarın. Kayıt yok.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://svg.giit.ch/tr/#app",
+        "name": "SVG Editor",
+        "url": "https://svg.giit.ch/tr/",
+        "description": "Tarayıcıda ücretsiz SVG editörü: kodu düzenleyin veya şekilleri taşıyın, boyutlandırın, renklendirin; SVG, PNG, JPG veya React olarak aktarın. Kayıt yok.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Tümü (web tarayıcısı)",
+        "inLanguage": "tr",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://svg.giit.ch/img/og.png",
+        "featureList": [
+          "Söz dizimi vurgulamalı SVG kodu",
+          "Şekilleri taşıyın, boyutlandırın, döndürün ve çevirin",
+          "Dolgu ve kontur rengini ayarlayın",
+          "Dikdörtgen, elips, çizgi, serbest yol ve metin çizin",
+          "Ayarlanabilir, yaslamalı ızgara",
+          "SVG, PNG, JPG, WebP, veri URI’si, CSS ve React (JSX) olarak dışa aktarma",
+          "SVG kodunu düzenleyin ve küçültün",
+          "Tarayıcıda çok sayıda çizim saklayın: açın, yeniden adlandırın, çoğaltın, indirin ve silin",
+          "Açık, koyu ve otomatik renk teması",
+          "Her yapay zekâ bağlantılar aracılığıyla editörde çizebilir",
+          "Bir webhook ile kendi sunucunuza kaydedin veya editörü web sitenize yerleştirin"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "SVG dosyam yükleniyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör tarayıcınızda çalışır ve çizimlerinizi sunucumuzda değil, orada saklar. Bir çizim yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - gizlilik politikasına bakın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Çizimlerim nereye kaydediliyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yalnızca tarayıcınıza. Editör orada istediğiniz sayıda çizim tutar - açmak, yeniden adlandırmak, çoğaltmak, indirmek veya silmek için sol üstteki klasör düğmesine (Çizimlerim) tıklayın. Sunucumuzda saklanmazlar; bu yüzden tarayıcınızın site verilerini temizlemek onları siler - saklamak istediklerinizi indirin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "SVG’yi PNG’ye nasıl dönüştürürüm?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SVG’nizi açın veya yapıştırın, “Dışa aktar”a tıklayın, PNG’yi seçin, bir boyut seçin (1×, 2×, 4× veya kendi boyutunuz) ve “İndir”e tıklayın. Bir renk seçmediğiniz sürece arka plan şeffaf kalır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Şekilleri fareyle düzenleyebilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Seçmek için bir şekle tıklayın. Onu sürükleyebilir, küçük karelerle boyutlandırabilir, döndürebilir, çevirebilir ve yeniden renklendirebilirsiniz. Soldaki kod da onunla birlikte değişir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Izgara ne işe yarar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Izgara, çizimin kendi koordinatlarında kılavuz çizgileri gösterir. Açıkken, taşıdığınız veya çizdiğiniz şekiller tam olarak ızgara çizgilerine yaslanır. Izgarayı görünür tutup şekilleri serbestçe taşımak için “Yasla”nın işaretini kaldırın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bir SVG’yi React bileşeni olarak kullanabilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Dışa aktarırken “React bileşeni (JSX)” seçin. stroke-width gibi öznitelikler strokeWidth, class ise className olur ve bileşen ek özellikler (props) de kabul eder."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bir yapay zekâ SVG Editöründe çizebilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. \"Yapay Zekâ Asistanı\"na, ardından \"İstemi kopyala\"ya tıklayın, istemi yapay zekânıza yapıştırın ve ne çizmesi gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, çizim editörünüzde görünür. Açık çizimi değiştirebilir veya diğer çizimlerinizin yanına yenilerini oluşturabilir. Kurulacak bir şey yok ve \"Geri al\" her değişikliği geri alır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Editörü kendi web sitemde kullanabilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Bir iframe ile yerleştirin ve çizimleri postMessage ile alıp verin ya da kaydedilen her sürümü bir webhook ile sunucunuza göndermesine izin verin. Örnekler için Editörü kendi web sitenizde kullanın bölümüne bakın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "SVG Editörü ücretli mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör ücretsizdir; reklam ve kayıt yoktur."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>SVG’yi çevrimiçi görüntüleyin, düzenleyin ve dışa aktarın</h2>\n        <p>SVG Editörü çiziminizi ve kodunu yan yana gösterir. Kodda değiştirdiğiniz her şey hemen önizlemede görünür - tuvalde taşıdığınız, boyutlandırdığınız veya yeniden renklendirdiğiniz her şey de kodda görünür. Böylece büyük bir grafik programı açmadan simgeleri, logoları, grafikleri ve çizimleri hızla ayarlayabilirsiniz.</p>\n        <p>Her şey tarayıcınızda çalışır. Çizimleriniz sunucumuzda değil, orada saklanır; kayıt ve reklam yoktur.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Editörün yapabilecekleri</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Söz dizimi vurgulamalı kod</h3><p>Farklı renklerle gösterilen etiketler, öznitelikler ve değerler, satır numaraları, Tab ile girintileme, etiketlerin otomatik kapanması ve satır numarasıyla birlikte anlaşılır bir hata mesajı.</p></div>\n            <div class=\"tile\"><h3>Şekilleri doğrudan düzenleyin</h3><p>Tıklayın, sürükleyin, tutamaçlarla boyutlandırın, döndürün, çevirin, çoğaltın, öne getirin veya arkaya gönderin - dikdörtgenler, daireler, yollar, çokgenler, metin ve gruplar.</p></div>\n            <div class=\"tile\"><h3>Renkler ve konturlar</h3><p>Renk seçiciyle veya değer olarak dolgu ve kontur, opaklık, kontur kalınlığı, kesikli çizgiler, yuvarlak veya kare çizgi uçları.</p></div>\n            <div class=\"tile\"><h3>Yaslamalı ızgara</h3><p>Çizimin kendi koordinatlarında istediğiniz ızgara aralığı. Şekiller tam olarak çizgilere yaslanır - veya serbestçe taşımak için “Yasla”nın işaretini kaldırın.</p></div>\n            <div class=\"tile\"><h3>Çizim araçları</h3><p>Dikdörtgen, elips, daire, çizgi, serbest çizim ve metin - yeni şekiller için seçtiğiniz renklerle.</p></div>\n            <div class=\"tile\"><h3>Dışa aktarma</h3><p>SVG (yazıldığı gibi, düzenlenmiş veya küçültülmüş), şeffaf arka planlı PNG, JPG, WebP ve web siteleri için kod: veri URI’si, Base64, CSS veya bir React bileşeni.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Nasıl çalışır</h2>\n        <ol class=\"steps\">\n            <li><b>Bir SVG açın</b> - bir dosya seçin, pencereye sürükleyin veya kodu yapıştırın.</li>\n            <li><b>Düzenleyin</b> - koda yazın veya tuvaldeki şekillere tıklayın, sürükleyin ve renklerini sağda ayarlayın.</li>\n            <li><b>Dışa aktarın</b> - bir biçim seçin, görseller için boyutu ayarlayın, sonra indirin veya kopyalayın.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Editörü kendi web sitenizde kullanın</h2>\n        <p>Editörü bir iframe ile veya kendi penceresinde kendi web sitenize yerleştirin. Sayfanız belgeyi editöre verir, her değişikliği ve her kaydı geri alır ve bir yapay zekânın sonuçlarını sunucunuza göndermesini sağlayabilir. Kayıt yok, anahtar yok.</p>\n        <p><a href=\"/tr/embed/\"><b>Editörü web sitenize yerleştirin</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Sıkça sorulan sorular</h2>\n        <div class=\"questions\">\n            <details><summary>SVG dosyam yükleniyor mu?</summary><p>Hayır. Editör tarayıcınızda çalışır ve çizimlerinizi sunucumuzda değil, orada saklar. Bir çizim yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - <a href=\"/privacy.html\">gizlilik politikasına</a> bakın.</p></details>\n            <details><summary>Çizimlerim nereye kaydediliyor?</summary><p>Yalnızca tarayıcınıza. Editör orada istediğiniz sayıda çizim tutar - açmak, yeniden adlandırmak, çoğaltmak, indirmek veya silmek için sol üstteki klasör düğmesine (Çizimlerim) tıklayın. Sunucumuzda saklanmazlar; bu yüzden tarayıcınızın site verilerini temizlemek onları siler - saklamak istediklerinizi indirin.</p></details>\n            <details><summary>SVG’yi PNG’ye nasıl dönüştürürüm?</summary><p>SVG’nizi açın veya yapıştırın, “Dışa aktar”a tıklayın, PNG’yi seçin, bir boyut seçin (1×, 2×, 4× veya kendi boyutunuz) ve “İndir”e tıklayın. Bir renk seçmediğiniz sürece arka plan şeffaf kalır.</p></details>\n            <details><summary>Şekilleri fareyle düzenleyebilir miyim?</summary><p>Evet. Seçmek için bir şekle tıklayın. Onu sürükleyebilir, küçük karelerle boyutlandırabilir, döndürebilir, çevirebilir ve yeniden renklendirebilirsiniz. Soldaki kod da onunla birlikte değişir.</p></details>\n            <details><summary>Izgara ne işe yarar?</summary><p>Izgara, çizimin kendi koordinatlarında kılavuz çizgileri gösterir. Açıkken, taşıdığınız veya çizdiğiniz şekiller tam olarak ızgara çizgilerine yaslanır. Izgarayı görünür tutup şekilleri serbestçe taşımak için “Yasla”nın işaretini kaldırın.</p></details>\n            <details><summary>Bir SVG’yi React bileşeni olarak kullanabilir miyim?</summary><p>Evet. Dışa aktarırken “React bileşeni (JSX)” seçin. stroke-width gibi öznitelikler strokeWidth, class ise className olur ve bileşen ek özellikler (props) de kabul eder.</p></details>\n            <details><summary>Bir yapay zekâ SVG Editöründe çizebilir mi?</summary><p>Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. &quot;Yapay Zekâ Asistanı&quot;na, ardından &quot;İstemi kopyala&quot;ya tıklayın, istemi yapay zekânıza yapıştırın ve ne çizmesi gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, çizim editörünüzde görünür. Açık çizimi değiştirebilir veya diğer çizimlerinizin yanına yenilerini oluşturabilir. Kurulacak bir şey yok ve &quot;Geri al&quot; her değişikliği geri alır.</p></details>\n            <details><summary>Editörü kendi web sitemde kullanabilir miyim?</summary><p>Evet. Bir iframe ile yerleştirin ve çizimleri postMessage ile alıp verin ya da kaydedilen her sürümü bir webhook ile sunucunuza göndermesine izin verin. Örnekler için <a href=\"#embed\">Editörü kendi web sitenizde kullanın</a> bölümüne bakın.</p></details>\n            <details><summary>SVG Editörü ücretli mi?</summary><p>Hayır. Editör ücretsizdir; reklam ve kayıt yoktur.</p></details>\n        </div>\n    </section>",
+  "name": "SVG Editörü",
+  "embed": {
+    "title": "SVG Editörünü Web Sitenize Yerleştirin | giit.ch",
+    "description": "Geliştirici kılavuzu: SVG Editörünü iframe ile sitenize yerleştirin, belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+    "og_title": "SVG Editörünü web sitenize yerleştirin",
+    "og_description": "Geliştirici kılavuzu: SVG Editörünü iframe ile sitenize yerleştirin, belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://svg.giit.ch/tr/embed/#article",
+          "headline": "SVG Editörünü web sitenize yerleştirin",
+          "description": "Geliştirici kılavuzu: SVG Editörünü iframe ile sitenize yerleştirin, belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+          "inLanguage": "tr",
+          "url": "https://svg.giit.ch/tr/embed/",
+          "mainEntityOfPage": "https://svg.giit.ch/tr/embed/",
+          "image": "https://svg.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "SVG Editörü",
+            "url": "https://svg.giit.ch/tr/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "SVG Editörü",
+              "item": "https://svg.giit.ch/tr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Yerleştirme",
+              "item": "https://svg.giit.ch/tr/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "SVG Editörünü web sitenize yerleştirin",
+    "intro": "<p>Geliştiriciler için: SVG Editörünü kendi sayfanıza nasıl koyacağınız - bir iframe içinde, kendi penceresinde veya salt okunur bir görüntüleyici olarak - ve belgelerin, kayıtların ve yapay zekâ sonuçlarının editör ile sunucunuz arasında nasıl taşındığı. Bizde kayıt olmanız veya bizden anahtar almanız gerekmez.</p>",
+    "body": "<p>Her https sayfası (ve localhost) editörü bir <code>&lt;iframe&gt;</code> ve <code>?embed=1</code> ile yerleştirebilir - kayıt yok, anahtar yok. Yerleştirildiğinde editör sayfa metnini gizler ve bir Kaydet düğmesi gösterir. Çizimi içeri almanın ve dışarı vermenin dört yolu vardır.</p>\n\n        <h2>1. Bir bağlantıdan dosya açın, sunucunuza kaydedin</h2>\n        <p><code>src=</code> bir dosya açar (sunucunuz CORS’a izin vermelidir), <code>webhook=</code> ise “Kaydet”in (Ctrl+S) çizimi o adrese göndermesini sağlar. Her değişiklikten sonra kaydetmek için <code>&amp;auto</code> ekleyin.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://svg.giit.ch/tr/?embed=1&amp;src=https://your-site.com/docs/logo.svg&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook, JSON içeren bir POST isteği alır: <code>{ editor, event: \"save\", id, name, content, updated }</code>. Bağlantıda belirteç bulunmaz; aksi hâlde sunucu günlüklerine ve tarayıcı geçmişine kaydedilirdi. Bu nedenle adreste belirtilen webhook, localhost veya intranetiniz gibi belirteç gerektirmeyen bir kayıt adresi için uygundur. Herkese açık bir sunucu için webhook’u bir belirteçle <code>svgeditor:load</code> içinde (<code>hook: { url, token }</code>) aktarın ve aşağıdaki küçük PHP betiğinin yaptığı gibi belirteci doğrulayın:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://svg.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.svg&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Çizimi sayfanız tutar (postMessage)</h2>\n        <p>Editör <code>svgeditor:ready</code> der, sayfanız <code>svgeditor:load</code> ile yanıt verir, editör <code>svgeditor:loaded</code>, gerçek düzenlemelerde <code>svgeditor:change</code> ve kullanıcı kaydettiğinde <code>svgeditor:save</code> bildirir. Sayfanız <code>svgeditor:get</code> (geçerli durum) veya <code>svgeditor:save</code> (Kaydet’e basma) gönderebilir. Kaydetme böylece kendi oturum açma ve oturum sisteminiz üzerinden yapılır.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://svg.giit.ch/tr/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://svg.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;svgeditor:ready&#x27;) {             // editör hazır: çizimi ona verin\n    ed.contentWindow.postMessage({\n      type: &#x27;svgeditor:load&#x27;,\n      name: &#x27;Logo&#x27;,\n      content: await (await fetch(&#x27;/docs/logo.svg&#x27;)).text(),\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;svgeditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // gerçek bir düzenleme\n  if (m.type === &#x27;svgeditor:save&#x27;) {              // kullanıcı &quot;Kaydet&quot;e tıkladı\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Kendi sayfanızda bir kaydet düğmesi: yanıt svgeditor:save olarak gelir\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;svgeditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Sayfanızın içinde Yapay Zekâ Asistanı:</b> çerçeve içinde de çalışır. iframe üzerinde <code>allow=\"clipboard-write\"</code> ile “İstemi kopyala” panoyu doğrudan kullanır (aksi hâlde editör eski kopyalama komutuna geri döner veya istemi elle kopyalamanız için gösterir). Yapay zekânın gönderdiği bir bağlantı başka bir web sitesinin içindeki editöre ulaşamaz. Bu yüzden editör, yapay zekâdan ve kullanıcıdan bunun yerine yapay zekânın yanıtının tamamını editöre yapıştırmasını ya da editörü kendi penceresinde açmasını ister.</p>\n        <h2>3. Kendi penceresinde</h2>\n        <p><code>window.open(\"https://svg.giit.ch/tr/?embed=window\", \"svgeditor-17\")</code> tam editörü kendi penceresinde açar ve aynı mesajlarla <code>window.opener</code> üzerinden iletişim kurar. Yapay zekâdan gelen bağlantılar ona orada ulaşır. <code>svgeditor:load</code> ayrıca <code>context: { host, title, rules }</code> taşıyabilir - yapay zekâ istemi bu durumda çizimin nereye ait olduğunu söyler ve kurallarınıza uyar - ve <code>hook: { url, token }</code>, yalnızca bu çizim için olan ve asla saklanmayan bir webhook. Kaydedilmemiş değişikliklerle pencereyi kapatmak <code>svgeditor:closing</code> gönderir.</p>\n        <h2>4. Kendi sunucunuz üzerinden yapay zekâ</h2>\n        <p>Editöre kendi isteminizi, sitenizde bir adresi ve bu editör oturumu için bir anahtarı verin. Yapay zekâ iletişim kutusu bu durumda sitenize “Bağlı” olduğunu, yapay zekâya ne söylediğinizi ve <b>geçerli çizimi değiştir</b> veya <b>yeni bir çizim oluştur</b> seçimini gösterir; <b>İstemi kopyala</b> hepsini bir araya getirir. Yapay zekâ sonucunu anahtarla sunucunuza gönderir ve sayfanız onu editörde açar - yeni bir çizim ayrı açılır ve kullanıcının tarayıcısında kalır. Editör oturumu başına bir anahtar: editör açık olduğu sürece geçerli kalır ve editör yalnızca anahtarı yokken <code>svgeditor:key-request</code> ile ister. Editör anahtarı asla kendisi göndermez ve asla saklamaz; adres kendi alan adınızda veya onun bir alt alan adında https olmalıdır.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // editör oturumu başına bir anahtar\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;svgeditor:load&#x27;, name: &#x27;Flyer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// svgeditor:loaded içindeki id'yi hatırlayın ve başka id'li change/save/closing mesajlarını yok sayın\n// yalnızca editörün anahtarı yokken:\nif (m.type === &#x27;svgeditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;svgeditor:ai&#x27;, key: k.key }, ORIGIN); }\n// editör açıkken sunucunuza her dakika bildirin; editörü veya sayfayı kapatmak anahtarı geçersiz kılar\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// sunucunuzda bir sonuç var (polling, SSE …): target &quot;current&quot; veya &quot;new&quot; olur\ned.contentWindow.postMessage({ type: &#x27;svgeditor:load&#x27;, name: &#x27;Flyer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - oturum açmış kullanıcının bu editör oturumuna ait anahtar (sayfanız çağırır)\nsession_start();                                     // kullanıcının bu çizimi düzenleyebileceğini kontrol edin\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // veya veritabanınızda; ?alive= seen değerini yeniden ayarlar\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - yapay zekâ buraya gönderir (CORS başlıkları yok: yapay zekâlar bunu bir sunucudan çağırır)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // veritabanınız: geçersiz kılınmamış, son 3 dakikada görülmüş\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // sayfanız bunu svgeditor:load ile gösterir\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Anahtarları en az 128 rastgele bitle oluşturun, yalnızca özetlerini (hash) saklayın, her birini oturum açmış kullanıcıya, çizime ve bu editör oturumuna bağlayın, oturum başına bir tane oluşturun, yalnızca sayfanız oturumu açık bildirdiği sürece geçerli tutun ve editör veya sayfa kapandığında geçersiz kılın.</p>\n        <p class=\"muted\">Protokolün tamamı <a href=\"/llms.txt\">llms.txt</a> dosyasındadır - bir yapay zekâya verin, sisteminiz için bağlantıyı o kursun. Diğer giit editörleri de kendi önekleriyle aynı şekilde çalışır - <a href=\"https://editors.giit.ch/tr/\">editors.giit.ch</a>.</p>\n        <h2>Belgeyi salt okunur göstermek (görüntüleyici)</h2>\n        <p><code>?viewer=1</code> yalnızca bitmiş belgeyi gösterir: kod yok, araç yok, hiçbir şey değiştirilemez ve tarayıcıda hiçbir şey saklanmaz. Belge bir bağlantıdan (<code>#b64=</code>, <code>?src=</code>), sayfanızdan <code>svgeditor:load</code> ile veya normal bir form olarak POST ile <code>post.php</code> adresine gelir: metin olarak <code>content</code> ya da base64 olarak <code>b64</code> alanı, isteğe bağlı <code>name</code>, en fazla 20 MB metin.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://svg.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;tr&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p><code>viewer=1</code> olmadan belge normal editörde açılır. Her iki durumda da yalnızca bellekte kalır: sunucuda saklanmaz ve “Belgelerim” bölümüne girmez. Doğrudan açıldığında görüntüleyici içeriğin üçüncü taraftan geldiğini belirtir.</p>",
+    "crumb": "Yerleştirme",
+    "crumb_nav": "Sayfa yolu",
+    "open": "Editörü aç"
+  }
+}

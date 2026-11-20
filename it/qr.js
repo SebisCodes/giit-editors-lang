@@ -1,0 +1,715 @@
+/* Italian texts of the QR editor: the bar, the work area (code, QR code,
+   content, design, check), its dialogs and messages, and the problems the
+   editor finds in the content and the design. What all editors share is in
+   common.js; how the dictionaries are used is described in i18n.js. Names of
+   documents, design keys and values stay as they are: the patterns copy them
+   into the Italian text. Some messages are put together in app.js from
+   fragments that are translated one by one; the patterns at the end give
+   those their Italian quotes and agreement. */
+
+import { formatTime, getPlural } from './format.js';
+
+/**
+ * Translates the unit of a size text ("123 bytes").
+ * @param {string} s - the English size text.
+ * @returns {string} the text in the language.
+ */
+const formatSize = s => s.replace(/ bytes$/, ' byte').replace(/(\d)\.(\d)/, '$1,$2');
+/* "0.43" -> "0,43" */
+/**
+ * Writes the decimal separator of the language into a number.
+ * @param {string} s - the number with a decimal point.
+ * @returns {string} the text in the language.
+ */
+const formatDecimal = s => s.replace('.', ',');
+
+/* When a document was last changed (files.js): "just now", "5 min ago", "Oct 25, 2026" … */
+
+/* The content types (payload.js TYPE_NAMES) */
+const TYPES = {
+    Link: 'Link', Text: 'Testo', WiFi: 'Wi-Fi', Contact: 'Contatto', Email: 'E-mail', SMS: 'SMS', Phone: 'Telefono',
+    Location: 'Posizione', Event: 'Evento', Crypto: 'Cripto', 'SEPA payment': 'Pagamento SEPA', 'Swiss QR bill': 'QR-fattura',
+};
+const TYPE_RE = Object.keys(TYPES).join('|');
+/* What a design value may be (qrdoc.js hints); lists of values stay as they are */
+const HINTS = {
+    'auto or 1 to 40': 'auto o da 1 a 40',
+    'auto or 0 to 7': 'auto o da 0 a 7',
+    '0 to 20 modules': 'da 0 a 20 moduli',
+    '0 to 360 degrees': 'da 0 a 360 gradi',
+    '5 to 30 percent': 'dal 5 al 30 percento',
+    'a color like #1d2b53': 'un colore come #1d2b53',
+    'a color like #ffffff, or transparent': 'un colore come #ffffff, o transparent',
+};
+/**
+ * Translates the text the pattern found (hint in the English pattern).
+ * @param {string} h - the English text the pattern found.
+ * @returns {string} the text in the language.
+ */
+const translateHint = h => HINTS[h] || h.replace(/^(none, .+) or a picture as (data:.+)$/, '$1 o un\'immagine come $2');
+/* Names in Italian quotes; the clipboard and the camera with the article joined to the preposition */
+const IN = { appunti: 'negli appunti', fotocamera: 'nella fotocamera' };
+const FROM = { appunti: 'dagli appunti', fotocamera: 'dalla fotocamera' };
+
+const dict = {
+    text: {
+        /* ---------- Top bar ---------- */
+        'QR Editor - home': 'Editor QR - pagina iniziale',
+        'QR Editor': 'Editor QR',
+        'File': 'File',
+        'My documents (Ctrl+O)': 'I miei documenti (Ctrl+O)',
+        'My documents': 'I miei documenti',
+        'New QR code': 'Nuovo codice QR',
+        'New': 'Nuovo',
+        'A web address - opens the page': 'Un indirizzo web - apre la pagina',
+        'Join the network without typing the password': 'Connettiti alla rete senza digitare la password',
+        'vCard or MeCard - saves name, phone and email': 'vCard o MeCard - salva nome, telefono ed e-mail',
+        'Adds a date to the calendar': 'Aggiunge un appuntamento al calendario',
+        'Address, subject and text': 'Indirizzo, oggetto e testo',
+        'Number and message': 'Numero e messaggio',
+        'Calls a number': 'Chiama un numero',
+        'Opens a place in the map app': 'Apre un luogo nell\'app delle mappe',
+        'EPC GiroCode for banking apps in the euro area': 'EPC GiroCode per le app bancarie dell\'area euro',
+        'The QR code of a Swiss payment slip': 'Il codice QR di una polizza di versamento svizzera',
+        'Crypto payment': 'Pagamento cripto',
+        'Bitcoin, Ethereum and others': 'Bitcoin, Ethereum e altri',
+        'Any text': 'Qualsiasi testo',
+        'The welcome example': 'L\'esempio di benvenuto',
+        'A designed WiFi code with logo and caption': 'Un codice Wi-Fi decorato, con logo e didascalia',
+        'Guest WiFi': 'Wi-Fi ospiti',
+        'Open a .qr file, or read a QR code from a picture (you can also drag it into the window or paste it)':
+            'Apri un file .qr o leggi un codice QR da un\'immagine (puoi anche trascinarla nella finestra o incollarla)',
+        'Open file…': 'Apri file…',
+        'Read a QR code with the camera': 'Leggi un codice QR con la fotocamera',
+        'Read code': 'Leggi codice',
+        'Undo the last change (Ctrl+Z)': 'Annulla l\'ultima modifica (Ctrl+Z)',
+        'Undo': 'Annulla',
+        'Redo the change you just undid (Ctrl+Y)': 'Ripeti la modifica appena annullata (Ctrl+Y)',
+        'Redo': 'Ripeti',
+        'Output': 'Output',
+        'Color theme': 'Tema dei colori',
+        'Light theme': 'Tema chiaro',
+        'Dark theme': 'Tema scuro',
+        'Same as your system setting': 'Come nelle impostazioni del sistema',
+        'Automatic theme (system setting)': 'Tema automatico (impostazione di sistema)',
+        'Let any AI write in this editor': 'Lascia che qualsiasi IA scriva in questo editor',
+        'AI Assistant': 'Assistente IA',
+        'Save to your own server and embed the editor in your website': 'Salva sul tuo server e integra l\'editor nel tuo sito web',
+        'Save to server': 'Salva sul server',
+        'How it works and keyboard shortcuts (?)': 'Come funziona e scorciatoie da tastiera (?)',
+        'Help': 'Aiuto',
+        'Save the QR code as an SVG picture (Ctrl+S)': 'Salva il codice QR come immagine SVG (Ctrl+S)',
+        'Download SVG': 'Scarica SVG',
+        'SVG, PNG, PDF, EPS, many codes from a table (Ctrl+E)': 'SVG, PNG, PDF, EPS, molti codici da una tabella (Ctrl+E)',
+        'Export…': 'Esporta…',
+
+        /* ---------- Views and work area ---------- */
+        'View': 'Vista',
+        'Code': 'Codice',
+        'QR code': 'Codice QR',
+        'Edit': 'Modifica',
+        'QR document': 'Documento QR',
+        'Copy the QR document to the clipboard': 'Copia il documento QR negli appunti',
+        'Copy code': 'Copia codice',
+        'Copy': 'Copia',
+        'QR document: design lines, a line ---, then the content': 'Documento QR: righe di design, una riga ---, poi il contenuto',
+        'Drag to change the width of the code area': 'Trascina per cambiare la larghezza dell\'area del codice',
+        'Drag to change the width': 'Trascina per cambiare la larghezza',
+        'Show the details of the scan check': 'Mostra i dettagli della prova di lettura',
+        'Checking…': 'Verifica…',
+        'No code': 'Nessun codice',
+        'Scans': 'Leggibile',
+        'Scans in good conditions': 'Leggibile in buone condizioni',
+        'Does not scan': 'Illeggibile',
+        'Type the content below the line --- in the code, or choose a type under Edit.':
+            'Scrivi il contenuto sotto la riga --- nel codice, oppure scegli un tipo in Modifica.',
+        'What the code holds: link, WiFi, contact, payment …': 'Cosa contiene il codice: link, Wi-Fi, contatto, pagamento…',
+        'Content': 'Contenuto',
+        'Colors, shapes, logo, caption and frame': 'Colori, forme, logo, didascalia e cornice',
+        'Scan check, contrast, print size': 'Prova di lettura, contrasto, dimensione di stampa',
+        'Check': 'Verifica',
+        'Open it here': 'Aprilo qui',
+        'Drop a .qr file or a picture with a QR code here': 'Rilascia qui un file .qr o un\'immagine con un codice QR',
+        'Hide': 'Nascondi',
+        'Show': 'Mostra',
+        'Caption': 'Didascalia',
+        'line': 'riga',
+        'lines': 'righe',
+        'error': 'errore',
+        'errors': 'errori',
+        'note': 'nota',
+        'notes': 'note',
+        'version': 'versione',
+        'error correction': 'correzione degli errori',
+
+        /* ---------- Content tab ---------- */
+        'Kind of content': 'Tipo di contenuto',
+        'Link': 'Link',
+        'Text': 'Testo',
+        'WiFi': 'Wi-Fi',
+        'Contact': 'Contatto',
+        'Email': 'E-mail',
+        'Phone': 'Telefono',
+        'Location': 'Posizione',
+        'Event': 'Evento',
+        'Crypto': 'Cripto',
+        'SEPA payment': 'Pagamento SEPA',
+        'Swiss QR bill': 'QR-fattura',
+        'The code opens this address. A link shortener or redirect service makes the code depend on that service - the editor warns about it.':
+            'Il codice apre questo indirizzo. Un accorciatore di link o un servizio di reindirizzamento rende il codice dipendente da quel servizio - l\'editor te lo segnala.',
+        'Any text; phones show it as it is.': 'Qualsiasi testo; i telefoni lo mostrano così com\'è.',
+        'Phones join the network when the code is scanned (Android, iPhone with iOS 11 and later).': 'I telefoni si connettono alla rete quando il codice viene scansionato (Android, iPhone da iOS 11).',
+        'vCard is read by all phones; MeCard makes a smaller code with fewer fields.': 'vCard è letto da tutti i telefoni; MeCard dà un codice più piccolo con meno campi.',
+        'Opens a new email with address, subject and text.': 'Apre una nuova e-mail con indirizzo, oggetto e testo.',
+        'Opens a text message to this number.': 'Apre un SMS a questo numero.',
+        'Offers to call this number - with the country code it works everywhere.': 'Propone di chiamare questo numero - con il prefisso internazionale funziona ovunque.',
+        'Opens the place in the map app.': 'Apre il luogo nell\'app delle mappe.',
+        'Adds the event to the calendar (times are local times).': 'Aggiunge l\'evento al calendario (gli orari sono locali).',
+        'A payment request for wallet apps.': 'Una richiesta di pagamento per le app wallet.',
+        'For banking apps in the euro area (SEPA credit transfer, EPC GiroCode). Error correction M as the standard requires.':
+            'Per le app bancarie dell\'area euro (bonifico SEPA, EPC GiroCode). Correzione degli errori M, come richiede lo standard.',
+        'The QR code of a Swiss QR bill (Implementation Guidelines 2.3 / 2.4). Drawn with the Swiss cross and error correction M; print it 46 × 46 mm.':
+            'Il codice QR di una QR-fattura svizzera (Implementation Guidelines 2.3 / 2.4). Disegnato con la croce svizzera e la correzione degli errori M; stampalo a 46 × 46 mm.',
+        'Make a QR reference from a number': 'Crea un riferimento QR da un numero',
+        'Make an RF reference from a number': 'Crea un riferimento RF da un numero',
+        /* the fields of the forms */
+        'Address (URL)': 'Indirizzo (URL)',
+        'Network name (SSID)': 'Nome della rete (SSID)',
+        'Security': 'Sicurezza',
+        'WEP (old)': 'WEP (obsoleto)',
+        'None (open network)': 'Nessuna (rete aperta)',
+        'Password': 'Password',
+        'Hidden network': 'Rete nascosta',
+        'Format': 'Formato',
+        'vCard 3.0 (all phones)': 'vCard 3.0 (tutti i telefoni)',
+        'MeCard (smaller code)': 'MeCard (codice più piccolo)',
+        'First name': 'Nome',
+        'Last name': 'Cognome',
+        'Company': 'Azienda',
+        'Job title': 'Ruolo',
+        'Mobile': 'Cellulare',
+        'Phone (work)': 'Telefono (lavoro)',
+        'Website': 'Sito web',
+        'Street and number': 'Via e numero',
+        'Postal code': 'CAP',
+        'City': 'Città',
+        'Region': 'Regione',
+        'Country': 'Paese',
+        'Note': 'Nota',
+        'To': 'A',
+        'Subject': 'Oggetto',
+        'Message': 'Messaggio',
+        'Phone number': 'Numero di telefono',
+        'Latitude': 'Latitudine',
+        'Longitude': 'Longitudine',
+        'Name of the place (optional)': 'Nome del luogo (facoltativo)',
+        'Title': 'Titolo',
+        'All day': 'Tutto il giorno',
+        'Start': 'Inizio',
+        'End': 'Fine',
+        'Place': 'Luogo',
+        'Description': 'Descrizione',
+        'Currency': 'Valuta',
+        'Address': 'Indirizzo',
+        'Amount (optional)': 'Importo (facoltativo)',
+        'Recipient (optional)': 'Beneficiario (facoltativo)',
+        'Message (optional)': 'Messaggio (facoltativo)',
+        'Recipient': 'Beneficiario',
+        'BIC (optional)': 'BIC (facoltativo)',
+        'Amount in EUR (optional)': 'Importo in EUR (facoltativo)',
+        'Creditor reference RF… (or a message below)': 'Riferimento del creditore RF… (o una comunicazione sotto)',
+        'Message to the recipient': 'Comunicazione al beneficiario',
+        'Purpose code (optional, e.g. CHAR)': 'Codice causale (facoltativo, ad es. CHAR)',
+        'Note for the payer (optional)': 'Nota per il pagatore (facoltativo)',
+        'IBAN or QR-IBAN of the creditor (CH or LI)': 'IBAN o QR-IBAN del creditore (CH o LI)',
+        'Creditor name': 'Nome del creditore',
+        'Street': 'Via',
+        'Number': 'Numero',
+        'Town': 'Località',
+        'Country (2 letters)': 'Paese (2 lettere)',
+        'Amount (empty: the payer fills it in)': 'Importo (vuoto: lo inserisce il pagatore)',
+        'Reference': 'Riferimento',
+        'No reference': 'Nessun riferimento',
+        'QR reference (with a QR-IBAN)': 'Riferimento QR (con un QR-IBAN)',
+        'Creditor reference (RF…)': 'Riferimento del creditore (RF…)',
+        'Reference number': 'Numero di riferimento',
+        'Additional information (message)': 'Informazioni supplementari (comunicazione)',
+        'Billing information (optional, //S1/…)': 'Informazioni di fatturazione (facoltativo, //S1/…)',
+        'Payable by: name (optional)': 'Pagabile da: nome (facoltativo)',
+
+        /* ---------- Design tab ---------- */
+        'A Swiss QR bill is always drawn as the standard requires: black squares on white, the Swiss cross, error correction M. These settings apply to the other codes.':
+            'Una QR-fattura viene sempre disegnata come richiede lo standard: quadrati neri su bianco, la croce svizzera, correzione degli errori M. Queste impostazioni valgono per gli altri codici.',
+        'Colors': 'Colori',
+        'Dark color': 'Colore scuro',
+        'Background': 'Sfondo',
+        'Transparent background': 'Sfondo trasparente',
+        'Gradient': 'Gradiente',
+        'None': 'Senza',
+        'Linear': 'Lineare',
+        'Radial': 'Radiale',
+        'Second color': 'Secondo colore',
+        'Angle': 'Angolo',
+        'Modules': 'Moduli',
+        'Eyes': 'Occhi',
+        'Frame': 'Cornice',
+        'Center': 'Centro',
+        'Module shape': 'Forma dei moduli',
+        'Eye frame': 'Cornice degli occhi',
+        'Eye center': 'Centro degli occhi',
+        'Square': 'Quadrato',
+        'Rounded': 'Arrotondato',
+        'Dots': 'Punti',
+        'Soft squares': 'Quadrati morbidi',
+        'Diamonds': 'Rombi',
+        'Vertical bars': 'Barre verticali',
+        'Horizontal bars': 'Barre orizzontali',
+        'Circle': 'Cerchio',
+        'Leaf': 'Foglia',
+        'No logo': 'Nessun logo',
+        'Mail': 'E-mail',
+        'Map pin': 'Puntina',
+        'Calendar': 'Calendario',
+        'Person': 'Persona',
+        'Payment card': 'Carta di pagamento',
+        'Star': 'Stella',
+        'Heart': 'Cuore',
+        'Own color for the eyes': 'Colore personalizzato per gli occhi',
+        'Eye color': 'Colore degli occhi',
+        'Your own picture (PNG, JPEG, SVG, WebP) - it becomes part of the document': 'La tua immagine (PNG, JPEG, SVG, WebP) - diventa parte del documento',
+        'Picture…': 'Immagine…',
+        'Logo size': 'Dimensione del logo',
+        'Remove the modules behind the logo': 'Togli i moduli dietro il logo',
+        'Caption and frame': 'Didascalia e cornice',
+        'Position': 'Posizione',
+        'Below the code': 'Sotto il codice',
+        'Above the code': 'Sopra il codice',
+        /* the frame "Line"; "Line 3" above the code is made from the same word (pattern below) */
+        'Line': 'Linea',
+        'Filled': 'Piena',
+        'Frame and caption color': 'Colore di cornice e didascalia',
+        'Error correction and size': 'Correzione degli errori e dimensione',
+        'Error correction': 'Correzione degli errori',
+        'Quiet zone (modules)': 'Zona di rispetto (moduli)',
+        'Smallest version': 'Versione minima',
+        'Automatic': 'Automatica',
+        'Version': 'Versione',
+        'Mask': 'Maschera',
+        'Use a higher error correction when it fits in the same size': 'Usa una correzione degli errori più alta se sta nella stessa dimensione',
+        'Removes all design lines - "Undo" brings them back': 'Rimuove tutte le righe di design - «Annulla» le ripristina',
+        'Reset the design': 'Reimposta il design',
+
+        /* ---------- Check tab ---------- */
+        'Scan check': 'Prova di lettura',
+        'Scans reliably and reads back exactly the content': 'Si legge in modo affidabile e restituisce esattamente il contenuto',
+        'Scans, but only in good conditions': 'Si legge, ma solo in buone condizioni',
+        'Reads back something else than the content': 'Restituisce qualcosa di diverso dal contenuto',
+        'Normal size': 'Dimensione normale',
+        'Small (3 pixels per module)': 'Piccolo (3 pixel per modulo)',
+        'Blurred, with less contrast': 'Sfocato, con meno contrasto',
+        'The editor reads its own drawing with a QR decoder (jsQR) in your browser. Test the printed code with a phone as well.':
+            'L\'editor legge il proprio disegno con un decodificatore QR (jsQR) nel tuo browser. Prova anche il codice stampato con un telefono.',
+        'The code': 'Il codice',
+        'Data': 'Dati',
+        'Logo covers': 'Il logo copre',
+        'Contrast': 'Contrasto',
+        'Print size': 'Dimensione di stampa',
+        'Scanning distance (cm)': 'Distanza di lettura (cm)',
+        'Printed width (mm)': 'Larghezza stampata (mm)',
+        'Problems': 'Problemi',
+        'No problems.': 'Nessun problema.',
+
+        /* ---------- Export ---------- */
+        'Export': 'Esporta',
+        'Close': 'Chiudi',
+        'File name': 'Nome del file',
+        'Vector (print, any size)': 'Vettoriale (stampa, qualsiasi dimensione)',
+        'SVG picture': 'Immagine SVG',
+        'EPS (for print shops)': 'EPS (per le tipografie)',
+        'Picture': 'Immagine',
+        'The content as text': 'Il contenuto come testo',
+        'QR document (.qr)': 'Documento QR (.qr)',
+        'Many codes': 'Molti codici',
+        'Many codes from a table': 'Molti codici da una tabella',
+        'Width in pixels': 'Larghezza in pixel',
+        'Resolution (dpi)': 'Risoluzione (dpi)',
+        'Width in mm': 'Larghezza in mm',
+        'Each code as': 'Ogni codice come',
+        'SVG files in a ZIP': 'File SVG in uno ZIP',
+        'PNG files in a ZIP': 'File PNG in uno ZIP',
+        'One PDF, one code per page': 'Un PDF, un codice per pagina',
+        'File names from': 'Nomi dei file da',
+        'Table (CSV or TSV, first row = column names)': 'Tabella (CSV o TSV, prima riga = nomi delle colonne)',
+        'Open a table…': 'Apri una tabella…',
+        'Result': 'Risultato',
+        'SVG, PNG, PDF, EPS and the .qr document in one ZIP': 'SVG, PNG, PDF, EPS e il documento .qr in un unico ZIP',
+        'All formats (ZIP)': 'Tutti i formati (ZIP)',
+        'Download': 'Scarica',
+        'There is no code yet - see the problems above the code.': 'Non c\'è ancora un codice - vedi i problemi sopra il codice.',
+        '(The picture is made when you download it.)': '(L\'immagine viene creata quando la scarichi.)',
+        'pixels': 'pixel',
+        'at': 'a',
+        'One module': 'Un modulo',
+        'below 0.4 mm many phones fail': 'sotto 0,4 mm molti telefoni non riescono a leggerlo',
+        '(A vector PDF, one page as large as the code - made when you download it.)': '(Un PDF vettoriale, una pagina grande come il codice - creato quando lo scarichi.)',
+        '(A vector EPS for print shops - made when you download it.)': '(Un EPS vettoriale per le tipografie - creato quando lo scarichi.)',
+        'Downloaded': 'Scaricato',
+        'ZIP downloaded: SVG, PDF, EPS, PNG, the .qr document and the content': 'ZIP scaricato: SVG, PDF, EPS, PNG, il documento .qr e il contenuto',
+        'Picture copied - paste it into a document or a chat': 'Immagine copiata - incollala in un documento o in una chat',
+        'This browser does not let the page copy pictures - download it instead': 'Questo browser non lascia copiare immagini alla pagina - scaricala invece',
+        'Copied to the clipboard': 'Copiato negli appunti',
+        'Row number': 'Numero di riga',
+        'Column': 'Colonna',
+        'Write placeholders like {{url}} into the content (or the caption) - each row of the table fills them.':
+            'Scrivi segnaposto come {{url}} nel contenuto (o nella didascalia) - ogni riga della tabella li sostituisce con i suoi valori.',
+        'Placeholders in the document': 'Segnaposto nel documento',
+        'Not in the table': 'Non nella tabella',
+        'row': 'riga',
+        'rows': 'righe',
+        'At most': 'Al massimo',
+        'rows at once': 'righe alla volta',
+        'The table is larger than 10 MB': 'La tabella supera i 10 MB',
+        'Paste a table with a header row and at least one row': 'Incolla una tabella con una riga di intestazione e almeno una riga',
+        'No row made a code - see the content': 'Nessuna riga ha generato un codice - vedi il contenuto',
+        'Left out (content too long)': 'Escluse (contenuto troppo lungo)',
+        'code': 'codice',
+        'codes': 'codici',
+        'made': 'creati',
+        'left out': 'esclusi',
+
+        /* ---------- Read a QR code ---------- */
+        'Read a QR code': 'Leggi un codice QR',
+        'Starting the camera…': 'Avvio della fotocamera…',
+        'The camera image is read in your browser only - nothing is recorded or sent.': 'L\'immagine della fotocamera viene letta solo nel tuo browser - nulla viene registrato o inviato.',
+        'Choose a picture…': 'Scegli un\'immagine…',
+        'This browser gives no camera to the page - choose a picture instead.': 'Questo browser non consente alla pagina di accedere alla fotocamera - scegli invece un\'immagine.',
+        'Hold the QR code in front of the camera.': 'Tieni il codice QR davanti alla fotocamera.',
+        'The camera is not allowed - allow it in the browser (inside another website the page must allow it too), or choose a picture.':
+            'L’accesso alla fotocamera non è consentito - consentilo nel browser (dentro un altro sito web deve consentirlo anche la pagina), oppure scegli un\'immagine.',
+        'No camera found - choose a picture instead.': 'Nessuna fotocamera trovata - scegli invece un\'immagine.',
+
+        /* ---------- My documents ---------- */
+        'Search by name': 'Cerca per nome',
+        'Search your documents': 'Cerca nei tuoi documenti',
+        'Open a .qr file or a picture with a QR code as a new document': 'Apri un file .qr o un\'immagine con un codice QR come nuovo documento',
+        'New document': 'Nuovo documento',
+        'Click a document to open it. They are stored only in this browser - nothing is uploaded. Clearing the browser\'s site data removes them, so download the ones you want to keep.':
+            'Fai clic su un documento per aprirlo. I documenti sono salvati solo in questo browser - non viene caricato nulla. Cancellando i dati del sito nel browser spariscono, quindi scarica quelli che vuoi conservare.',
+        'Download every document as a .qr file in one ZIP': 'Scarica ogni documento come file .qr in un unico ZIP',
+        'Download all (ZIP)': 'Scarica tutto (ZIP)',
+        'Rename': 'Rinomina',
+        'Duplicate': 'Duplica',
+        'Download as .qr': 'Scarica come .qr',
+        'Delete': 'Elimina',
+        'New name': 'Nuovo nome',
+        'This document is open': 'Questo documento è aperto',
+        'Click to open this document': 'Fai clic per aprire questo documento',
+        'No documents yet.': 'Ancora nessun documento.',
+        'The document is removed from this browser for good. Download it first if you want to keep a copy.':
+            'Il documento viene rimosso definitivamente da questo browser. Scaricalo prima se vuoi conservarne una copia.',
+
+        /* ---------- AI Assistant ---------- */
+        'Any AI can work with you - ChatGPT, Claude, Gemini, Copilot.': 'Qualsiasi IA può lavorare con te - ChatGPT, Claude, Gemini, Copilot.',
+        'Connected AI': 'IA connessa',
+        'Paste it into your AI and say what the code should hold or how it should look.': 'Incollalo nella tua IA e dille cosa deve contenere il codice o che aspetto deve avere.',
+        'Connected to': 'Connesso a',
+        'the AI sends its result there, and it opens here.': 'l\'IA invia lì il suo risultato, che si apre qui.',
+        'What': 'Cosa',
+        'tells the AI': 'dice all\'IA',
+        'The AI should': 'L\'IA deve',
+        'Change “': 'Modificare «',
+        '”': '»',
+        'Make a new document': 'Creare un nuovo documento',
+        'The AI\'s answer (or press Ctrl+V anywhere):': 'La risposta dell\'IA (oppure premi Ctrl+V ovunque):',
+        'The QR document travels in the link after the “#”, which no server sees. What you paste into your AI is handled by its provider.':
+            'Il documento QR viaggia nel link dopo il «#», che nessun server vede. Ciò che incolli nella tua IA viene elaborato dal suo fornitore.',
+        'The prompt - copy it with Ctrl+C': 'Il prompt - copialo con Ctrl+C',
+        'Copy prompt': 'Copia il prompt',
+        '(no key yet)': '(ancora nessuna chiave)',
+        '(key valid while the editor is open)': '(chiave valida finché l\'editor è aperto)',
+        'The link could not be read': 'Impossibile leggere il link',
+        'The document in this link is incomplete or damaged. If the AI\'s link was split over several lines (as in a terminal), copy the whole answer and paste it into the editor with Ctrl+V - the editor joins the lines.':
+            'Il documento in questo link è incompleto o danneggiato. Se il link dell\'IA era diviso su più righe (come in un terminale), copia l\'intera risposta e incollala nell\'editor con Ctrl+V - l\'editor unisce le righe.',
+        'Loading…': 'Caricamento…',
+        'Taken over by your editor': 'Ricevuto dal tuo editor',
+        'The document is now in the QR Editor tab you already had open. Switch to that tab, or open it here.':
+            'Il documento ora si trova nella scheda dell\'Editor QR che avevi già aperto. Passa a quella scheda o aprilo qui.',
+        'Copying is not allowed here - it is selected below: press Ctrl+C (⌘C)': 'Qui non è consentito copiare - il testo è selezionato qui sotto: premi Ctrl+C (⌘C)',
+        'Prompt copied - paste it into your AI and say what it should write': 'Prompt copiato - incollalo nella tua IA e dille cosa deve fare',
+        'This link is incomplete or damaged - please ask the AI to send it again': 'Questo link è incompleto o danneggiato - chiedi all\'IA di inviarlo di nuovo',
+
+        /* ---------- Save to your server ---------- */
+        'Save to your server': 'Salva sul tuo server',
+        'Webhook address': 'Indirizzo del webhook',
+        'https://example.com/api/qr': 'https://esempio.it/api/qr',
+        '(optional, sent as "Authorization: Bearer …"; kept until this tab is closed)': '(facoltativo, inviato come «Authorization: Bearer …»; conservato finché questa scheda resta aperta)',
+        'Send automatically a few seconds after each change (otherwise only when you click': 'Invia automaticamente pochi secondi dopo ogni modifica (altrimenti solo quando fai clic su',
+        'or press Ctrl+S)': 'o premi Ctrl+S)',
+        'Only for “': 'Solo per «',
+        '” (other documents use the general address)': '» (gli altri documenti usano l\'indirizzo generale)',
+        'What your server receives': 'Cosa riceve il tuo server',
+        'A POST request with JSON (your server must allow CORS from https://qr.giit.ch):': 'Una richiesta POST con JSON (il tuo server deve consentire CORS da https://qr.giit.ch):',
+        'Embed the editor in your website': 'Integra l\'editor nel tuo sito web',
+        'Send now': 'Invia ora',
+        'Save setting': 'Salva impostazione',
+
+        /* ---------- Help ---------- */
+        'How it works': 'Come funziona',
+        'Keyboard shortcuts': 'Scorciatoie da tastiera',
+        'Undo / redo': 'Annulla / ripeti',
+        'Save (download SVG, or to your server)': 'Salva (file SVG o sul tuo server)',
+        'Paste a picture with a QR code to read it': 'Incolla un\'immagine con un codice QR per leggerlo',
+        'Wrap long lines in the code': 'Manda a capo le righe lunghe nel codice',
+
+        /* ---------- Messages ---------- */
+        'The browser storage is full - download and delete documents under "My documents"': 'La memoria del browser è piena - scarica ed elimina documenti in «I miei documenti»',
+        'The browser storage is full - delete or download documents under "My documents" first': 'La memoria del browser è piena - prima elimina o scarica documenti in «I miei documenti»',
+        'The browser storage is full - delete or download some documents first': 'La memoria del browser è piena - prima elimina o scarica alcuni documenti',
+        'The browser storage is full': 'La memoria del browser è piena',
+        'Nothing to undo': 'Niente da annullare',
+        'Nothing to redo': 'Niente da ripetere',
+        'The file is larger than 20 MB': 'Il file supera i 20 MB',
+        'The picture is larger than 5 MB': 'L\'immagine supera i 5 MB',
+        'The SVG is larger than 200 KB': 'L\'SVG supera i 200 KB',
+        'Logo added - it is part of the document': 'Logo aggiunto - fa parte del documento',
+        'QR document copied': 'Documento QR copiato',
+        'There is no code to download yet': 'Non c\'è ancora un codice da scaricare',
+        'SVG downloaded': 'SVG scaricato',
+        'Design reset - "Undo" brings it back': 'Design reimpostato - «Annulla» lo ripristina',
+        'Type a number into the reference field first': 'Scrivi prima un numero nel campo del riferimento',
+        'Reference with check digits written': 'Riferimento con cifre di controllo scritto',
+        'No QR code found in the picture': 'Nessun codice QR trovato nell\'immagine',
+        /* fragments of messages put together in app.js (the patterns at the end set the quotes) */
+        'is open. My documents: open, rename, duplicate or delete your documents (Ctrl+O)': 'è aperto. I miei documenti: apri, rinomina, duplica o elimina i tuoi documenti (Ctrl+O)',
+        'your other documents are under "My documents"': 'gli altri tuoi documenti sono in «I miei documenti»',
+        'opened': 'aperto',
+        'is neither a .qr file nor a picture': 'non è né un file .qr né un\'immagine',
+        'opened - it is now in "My documents"': 'aperto - ora si trova in «I miei documenti»',
+        'No QR code found in': 'Nessun codice QR trovato in',
+        'read': 'letto',
+        'QR code read': 'Codice QR letto',
+        'from': 'da',
+        'it is a new document': 'è un nuovo documento',
+        'the clipboard': 'appunti',
+        'the camera': 'fotocamera',
+        'from the AI - your other documents are unchanged': 'dall\'IA - gli altri tuoi documenti restano invariati',
+        'QR code received - the editor found': 'Codice QR ricevuto - l\'editor ha trovato',
+        'problem': 'problema',
+        'problems': 'problemi',
+        'changed by the AI - "Undo" takes it back': 'modificato dall\'IA - «Annulla» lo ritira',
+
+        /* ---------- Problems ---------- */
+        'The content is too long for a QR code at this error correction - shorten it or choose L':
+            'Il contenuto è troppo lungo per un codice QR con questa correzione degli errori - accorcialo o scegli L',
+        'A SEPA payment code uses error correction M, as the standard requires': 'Un codice di pagamento SEPA usa la correzione degli errori M, come richiede lo standard',
+        'The drawn code reads back something else than the content - check the content for characters the code cannot hold':
+            'Il codice disegnato restituisce qualcosa di diverso dal contenuto - cerca nel contenuto caratteri che il codice non può contenere',
+        'The drawn code does not scan - raise the contrast, make the logo smaller or choose more error correction':
+            'Il codice disegnato non si legge - aumenta il contrasto, rimpicciolisci il logo o scegli più correzione degli errori',
+        'The code scans, but not when it is small - simpler shapes, more contrast or more error correction help':
+            'Il codice si legge, ma non quando è piccolo - aiutano forme più semplici, più contrasto o più correzione degli errori',
+        'The code scans, but not when it is blurred or the light is poor - simpler shapes, more contrast or more error correction help':
+            'Il codice si legge, ma non quando è sfocato o la luce è scarsa - aiutano forme più semplici, più contrasto o più correzione degli errori',
+        'Light code on a dark background: many scanners read it, but some older ones do not - dark on light is safest':
+            'Codice chiaro su sfondo scuro: molti lettori lo leggono, ma alcuni più vecchi no - scuro su chiaro è la scelta più sicura',
+        'Transparent background: print the code only on a plain, light surface': 'Sfondo trasparente: stampa il codice solo su una superficie chiara e uniforme',
+        'Round eyes are read by phone cameras, but some scanner apps and devices only find square ones - for codes many people scan, square or rounded eyes are safer':
+            'Gli occhi rotondi vengono letti dalle fotocamere dei telefoni, ma alcune app e alcuni lettori trovano solo quelli quadrati - per codici che scansionano molte persone, occhi quadrati o arrotondati sono più sicuri',
+        'The code has no content yet': 'Il codice non ha ancora un contenuto',
+        'The address contains spaces - encode them as %20': 'L\'indirizzo contiene spazi - scrivili come %20',
+        'The address has no https:// - some scanners show it as text instead of opening it': 'L\'indirizzo non ha https:// - alcuni lettori lo mostrano come testo invece di aprirlo',
+        'The address uses http:// - the browser may warn that the page is not secure; use https:// if the site has it':
+            'L\'indirizzo usa http:// - il browser può avvisare che la pagina non è sicura; usa https:// se il sito lo offre',
+        'This is not a valid address': 'Questo non è un indirizzo valido',
+        'The network name (SSID) is missing': 'Manca il nome della rete (SSID)',
+        'The password is missing (or choose "None" for an open network)': 'Manca la password (oppure scegli «Nessuna» per una rete aperta)',
+        'A WEP key has 5, 13, 16 or 29 characters (or 10, 26, 32, 58 hex digits)': 'Una chiave WEP ha 5, 13, 16 o 29 caratteri (o 10, 26, 32, 58 cifre esadecimali)',
+        'WEP is not secure - use WPA2 or WPA3 if your router has it': 'WEP non è sicuro - usa WPA2 o WPA3 se il tuo router lo supporta',
+        'T:SAE is not in the WiFi standard and some scanners do not read it - T:WPA works for WPA2 and WPA3':
+            'T:SAE non fa parte dello standard Wi-Fi e alcuni lettori non lo leggono - T:WPA funziona per WPA2 e WPA3',
+        'A WPA password has 8 to 63 characters': 'Una password WPA ha da 8 a 63 caratteri',
+        'The contact has no name and no company': 'Il contatto non ha né nome né azienda',
+        'The email address looks wrong': 'L\'indirizzo e-mail sembra sbagliato',
+        'No address - the email app opens with an empty "To"': 'Nessun indirizzo - l\'app di posta si apre con il campo «A» vuoto',
+        'The phone number is missing': 'Manca il numero di telefono',
+        'The phone number contains other characters than digits and +': 'Il numero di telefono contiene caratteri diversi da cifre e +',
+        'Without the country code (+41 …) the number only works within the country': 'Senza il prefisso internazionale (+41 …) il numero funziona solo all\'interno del paese',
+        'Latitude and longitude are needed as numbers, for example 47.6779 and 8.6152': 'Servono latitudine e longitudine come numeri, per esempio 47.6779 e 8.6152',
+        'The latitude lies between -90 and 90, the longitude between -180 and 180': 'La latitudine è compresa tra -90 e 90, la longitudine tra -180 e 180',
+        'The event has no BEGIN:VEVENT': 'All\'evento manca BEGIN:VEVENT',
+        'The event has no END:VEVENT': 'All\'evento manca END:VEVENT',
+        'The event has no title': 'L\'evento non ha un titolo',
+        'The event has no start': 'L\'evento non ha un inizio',
+        'The event ends before it starts': 'L\'evento finisce prima di iniziare',
+        'The address is missing': 'Manca l\'indirizzo',
+        'The amount must be a number with a point, for example 0.005': 'L\'importo deve essere un numero con il punto, per esempio 0.005',
+        'An Ethereum address has 0x and 40 hex digits': 'Un indirizzo Ethereum ha 0x e 40 cifre esadecimali',
+        'This does not look like a Bitcoin address': 'Questo non sembra un indirizzo Bitcoin',
+        'The IBAN is missing': 'Manca l\'IBAN',
+        'The IBAN has the wrong form (two letters, two digits, then letters and digits)': 'L\'IBAN ha la forma sbagliata (due lettere, due cifre, poi lettere e cifre)',
+        'The check digits of the IBAN do not match - a typing error?': 'Le cifre di controllo dell\'IBAN non corrispondono - un errore di battitura?',
+        'A QR reference has 27 digits': 'Un riferimento QR ha 27 cifre',
+        'The check digit of the QR reference does not match': 'La cifra di controllo del riferimento QR non corrisponde',
+        'A creditor reference starts with RF and two check digits, 5 to 25 characters': 'Un riferimento del creditore inizia con RF e due cifre di controllo, da 5 a 25 caratteri',
+        'The check digits of the creditor reference do not match': 'Le cifre di controllo del riferimento del creditore non corrispondono',
+        'The second line is the version, 001 or 002': 'La seconda riga è la versione, 001 o 002',
+        'The third line should be 1 (UTF-8)': 'La terza riga dovrebbe essere 1 (UTF-8)',
+        'The fourth line must be SCT': 'La quarta riga deve essere SCT',
+        'Version 001 needs a BIC': 'La versione 001 richiede un BIC',
+        'The BIC has 8 or 11 letters and digits': 'Il BIC ha 8 o 11 lettere e cifre',
+        'The recipient is missing': 'Manca il beneficiario',
+        'The recipient has more than 70 characters': 'Il beneficiario ha più di 70 caratteri',
+        'The amount is between 0.01 and 999999999.99 EUR, with a point and at most two decimals':
+            'L\'importo è compreso tra 0.01 e 999999999.99 EUR, con il punto e al massimo due decimali',
+        'The purpose code has 4 letters (for example CHAR, GDDS)': 'Il codice causale ha 4 lettere (per esempio CHAR, GDDS)',
+        'Either a reference or a message, not both': 'O un riferimento o una comunicazione, non entrambi',
+        'The message has more than 140 characters': 'La comunicazione ha più di 140 caratteri',
+        'The second line is the version 0200': 'La seconda riga è la versione 0200',
+        'The third line is the coding type 1': 'La terza riga è il tipo di codifica 1',
+        'The Swiss QR bill takes only IBANs of Switzerland and Liechtenstein (CH, LI)': 'La QR-fattura accetta solo IBAN di Svizzera e Liechtenstein (CH, LI)',
+        'The creditor address must be structured (S): street, number, postal code and town in their own lines':
+            'L\'indirizzo del creditore deve essere strutturato (S): via, numero, CAP e località, ognuno su una riga propria',
+        'The creditor name is missing': 'Manca il nome del creditore',
+        'Postal code and town of the creditor are needed': 'Servono CAP e località del creditore',
+        'The country of the creditor is two letters, for example CH': 'Il paese del creditore è di due lettere, per esempio CH',
+        'The ultimate creditor (lines 12 to 18) must stay empty': 'Il creditore finale (righe da 12 a 18) deve restare vuoto',
+        'The amount is between 0.01 and 999999999.99, with a point and two decimals': 'L\'importo è compreso tra 0.01 e 999999999.99, con il punto e due decimali',
+        'The currency is CHF or EUR': 'La valuta è CHF o EUR',
+        'Postal code and town of the payer are needed': 'Servono CAP e località del pagatore',
+        'The payer\'s address must be structured (S)': 'L\'indirizzo del pagatore deve essere strutturato (S)',
+        'The reference type is QRR, SCOR or NON': 'Il tipo di riferimento è QRR, SCOR o NON',
+        'A QR-IBAN needs a QR reference (QRR)': 'Un QR-IBAN richiede un riferimento QR (QRR)',
+        'A QR reference needs a QR-IBAN (an IBAN with 30000 to 31999 after the check digits)': 'Un riferimento QR richiede un QR-IBAN (un IBAN con 30000-31999 dopo le cifre di controllo)',
+        'From 14 November 2026 a bill in EUR takes only an IBAN with a creditor reference (SCOR) or none - QR-IBAN and QR reference only in CHF':
+            'Dal 14 novembre 2026 una fattura in EUR accetta solo un IBAN con un riferimento del creditore (SCOR) o senza riferimento - QR-IBAN e riferimento QR solo in CHF',
+        'Without a reference type the reference line must be empty': 'Senza tipo di riferimento la riga del riferimento deve essere vuota',
+        'Message and billing information together have at most 140 characters': 'Comunicazione e informazioni di fatturazione insieme hanno al massimo 140 caratteri',
+        'Line 31 must be EPD (end of the payment data)': 'La riga 31 deve essere EPD (fine dei dati di pagamento)',
+        'The Swiss QR bill allows only Latin characters (no emoji, no other scripts)': 'La QR-fattura ammette solo caratteri latini (niente emoji, nessun\'altra scrittura)',
+    },
+
+    html: {
+        /* AI Assistant */
+        'Click <b>Copy prompt</b>.': 'Fai clic su <b>Copia il prompt</b>.',
+        'The AI answers with a link: click it, or paste the whole answer below. <b>Undo</b> takes it back.':
+            'L\'IA risponde con un link: fai clic su di esso, oppure incolla qui sotto l\'intera risposta. <b>Annulla</b> lo ritira.',
+        'The AI answers with a link: <b>paste its whole answer below</b> (a clicked link opens a separate editor). <b>Undo</b> takes it back.':
+            'L\'IA risponde con un link: <b>incolla qui sotto l\'intera risposta</b> (un link cliccato apre un editor separato). <b>Annulla</b> lo ritira.',
+
+        /* Save to your server */
+        'The editor can send each saved version to your own server (a <b>webhook</b>), so your work is kept where you want it. Nothing is sent until you enter an address here.':
+            'L\'editor può inviare ogni versione salvata al tuo server (un <b>webhook</b>), così il tuo lavoro resta dove vuoi tu. Non viene inviato nulla finché non inserisci qui un indirizzo.',
+        'Also possible: <code>?src=&lt;URL of a .qr file&gt;</code> opens a file, <code>&amp;webhook=&lt;URL&gt;</code> saves this document there. The editor can also open in a window of its own (<code>?embed=window</code>), and your page can hand it its own AI prompt and a session key so the AI sends its result to your server (<code>qreditor:ai</code>, <code>qreditor:key-request</code>) - see "Use the editor on your own website" below the editor. Details are in <a href="/llms.txt">llms.txt</a>.':
+            'È anche possibile: <code>?src=&lt;URL di un file .qr&gt;</code> apre un file, <code>&amp;webhook=&lt;URL&gt;</code> salva lì questo documento. L\'editor può anche aprirsi in una finestra propria (<code>?embed=window</code>), e la tua pagina può passargli un proprio prompt per l\'IA e una chiave di sessione, così l\'IA invia il risultato al tuo server (<code>qreditor:ai</code>, <code>qreditor:key-request</code>) - vedi «Usare l\'editor sul tuo sito web» sotto l\'editor. I dettagli sono in <a href="/llms.txt">llms.txt</a>.',
+
+        /* Help */
+        '<b>Choose what the code holds</b> under <b>New</b> or in the <b>Content</b> tab: a link, WiFi, a contact, an event, a payment … The form writes the content in the form phones read.':
+            '<b>Scegli cosa contiene il codice</b> in <b>Nuovo</b> o nella scheda <b>Contenuto</b>: un link, un Wi-Fi, un contatto, un evento, un pagamento… Il modulo scrive il contenuto nella forma che leggono i telefoni.',
+        '<b>Design it</b> in the <b>Design</b> tab: colors and gradient, the shape of the modules and of the three eyes, a logo, a caption and a frame.':
+            '<b>Decoralo</b> nella scheda <b>Design</b>: colori e gradiente, la forma dei moduli e dei tre occhi, un logo, una didascalia e una cornice.',
+        'The <b>code</b> on the left is the whole QR document: design lines <code>key: value</code>, a line <code>---</code>, then the content exactly as it goes into the code. You can type there too; every change is one step for Undo.':
+            'Il <b>codice</b> a sinistra è l\'intero documento QR: righe di design <code>key: value</code>, una riga <code>---</code>, poi il contenuto esattamente come entra nel codice. Puoi scrivere anche lì; ogni modifica è annullabile in un solo passaggio.',
+        '<b>Check</b>: after every change the editor reads the code back - normal, small and blurred. The badge above the code says whether it scans; the <b>Check</b> tab shows contrast, quiet zone, the logo against the error correction and the print size.':
+            '<b>Verifica</b>: dopo ogni modifica l\'editor rilegge il codice - normale, piccolo e sfocato. L\'indicatore sopra il codice dice se si legge; la scheda <b>Verifica</b> mostra contrasto, zona di rispetto, il logo rispetto alla correzione degli errori e la dimensione di stampa.',
+        'Click the <b>caption</b> under the code to change it right there.':
+            'Fai clic sulla <b>didascalia</b> sotto il codice per modificarla direttamente lì.',
+        '<b>Export</b> makes SVG, PDF and EPS (vectors for print), PNG, JPEG or WebP up to 8192 pixels wide, and <b>many codes at once</b> from a table: write <code>{{column}}</code> in the content, paste the table, download a ZIP or one PDF.':
+            '<b>Esporta</b> crea SVG, PDF ed EPS (vettoriali per la stampa), PNG, JPEG o WebP fino a 8192 pixel di larghezza, e <b>molti codici in una volta</b> da una tabella: scrivi <code>{{column}}</code> nel contenuto, incolla la tabella, scarica uno ZIP o un unico PDF.',
+        '<b>Read a code</b>: open, drop or paste a picture, or click <b>Read code</b> for the camera. The content becomes a new document.':
+            '<b>Leggi un codice</b>: apri, rilascia o incolla un\'immagine, oppure fai clic su <b>Leggi codice</b> per la fotocamera. Il contenuto diventa un nuovo documento.',
+    },
+
+    patterns: [
+        /* ---------- Problems with values ---------- */
+        ['^Unknown key "(.+)" - it is kept, but has no effect$', 'Chiave sconosciuta «$1» - resta, ma non ha effetto'],
+        ['^"(.+)" is set twice - the last line counts$', '«$1» è impostato due volte - vale l\'ultima riga'],
+        ['^"([A-Za-z][A-Za-z0-9-]*): (.*)" is not valid \\((.*)\\) - the default is used$', (m, k, v, h) => `«${k}: ${v}» non è valido (${translateHint(h)}) - si usa il valore predefinito`],
+        ['^Contrast ([\\d.]+):1 between (\\S+) and the background is too low - scanners need at least 3:1, better 4\\.5:1 or more$',
+            (m, r, c) => `Il contrasto di ${formatDecimal(r)}:1 tra ${c} e lo sfondo è troppo basso - i lettori hanno bisogno di almeno 3:1, meglio 4,5:1 o più`],
+        ['^Contrast ([\\d.]+):1 between (\\S+) and the background is low - 4\\.5:1 or more scans reliably, also in poor light$',
+            (m, r, c) => `Il contrasto di ${formatDecimal(r)}:1 tra ${c} e lo sfondo è basso - da 4,5:1 il codice si legge in modo affidabile, anche con poca luce`],
+        ['^A quiet zone of (\\d+) (?:module|modules) is too small - the standard asks for 4, with less than 2 many scanners fail$',
+            (m, k) => `Una zona di rispetto di ${k} ${getPlural(k, 'modulo', 'moduli')} è troppo piccola - lo standard ne chiede 4, con meno di 2 molti lettori non riescono a leggere`],
+        ['^The quiet zone has (\\d+) modules - the standard asks for 4 \\(a light frame of 4 modules around the code\\)$',
+            'La zona di rispetto ha $1 moduli - lo standard ne chiede 4 (un bordo chiaro di 4 moduli intorno al codice)'],
+        ['^The logo hides about (\\d+) % of the code, error correction (\\w) repairs at most (\\d+) % - make the logo smaller or choose error correction H$',
+            'Il logo copre circa il $1 % del codice, la correzione degli errori $2 ripara al massimo il $3 % - rimpicciolisci il logo o scegli la correzione degli errori H'],
+        ['^The logo hides about (\\d+) % of the code, error correction (\\w) repairs at most (\\d+) % - little room is left for dirt and damage; H is safer$',
+            'Il logo copre circa il $1 % del codice, la correzione degli errori $2 ripara al massimo il $3 % - resta poco margine per sporco e danni; H è più sicura'],
+        ['^A logo takes away part of the code: error correction Q or H keeps it readable \\(now (\\w)\\)$',
+            'Un logo toglie una parte del codice: la correzione degli errori Q o H lo mantiene leggibile (ora $1)'],
+        ['^The Swiss QR bill is drawn as its standard requires - (.+) (?:is|are) not used$',
+            (m, keys) => `La QR-fattura viene disegnata come richiede il suo standard - ${keys} ${keys.includes(',') ? 'non vengono usati' : 'non viene usato'}`],
+        ['^An IBAN of (\\w\\w) has (\\d+) characters, this one (\\d+)$', 'Un IBAN di $1 ha $2 caratteri, questo $3'],
+        ['^(.+) is a link shortener or redirect service: the code works only as long as that service keeps the link - for printed codes put the real address in the code$',
+            '$1 è un accorciatore di link o un servizio di reindirizzamento: il codice funziona solo finché quel servizio mantiene il link - per i codici stampati metti nel codice l\'indirizzo vero'],
+        ['^The SEPA code has (\\d+) bytes, at most 331 are allowed$', 'Il codice SEPA ha $1 byte, ne sono ammessi al massimo 331'],
+        ['^Line (\\d+) has more than (\\d+) characters$', 'La riga $1 ha più di $2 caratteri'],
+        ['^The Swiss QR bill has (\\d+) characters, at most 997 are allowed$', 'La QR-fattura ha $1 caratteri, ne sono ammessi al massimo 997'],
+
+        /* ---------- Problems above the code: "Line" + number ---------- */
+        ['^Linea (\\d+)$', 'Riga $1'],
+
+        /* ---------- Content tab: the size line ---------- */
+        ['^(\\d+) bytes? · version (\\d+) \\((\\d+) × (\\d+) modules\\)$', (m, b, v, w, h) => `${b} byte · versione ${v} (${w} × ${h} moduli)`],
+        ['^(\\d+) bytes?$', '$1 byte'],
+
+        /* ---------- Check tab ---------- */
+        ['^- repairs about (\\d+) %$', '- ripara circa il $1 %'],
+        ['^(\\d+) of (\\d+) bytes \\((\\d+) %\\)$', '$1 di $2 byte ($3 %)'],
+        ['^(\\d+) % of the modules$', '$1 % dei moduli'],
+        ['^From ([\\d.]+) cm the code should be at least ([\\d.]+) cm wide\\.$', (m, a, b) => `Da ${formatDecimal(a)} cm di distanza il codice dovrebbe essere largo almeno ${formatDecimal(b)} cm.`],
+        ['^At ([\\d.]+) mm one module is ([\\d.]+) mm ✓$', (m, a, b) => `A ${formatDecimal(a)} mm un modulo misura ${formatDecimal(b)} mm ✓`],
+        ['^At ([\\d.]+) mm one module is ([\\d.]+) mm - below 0\\.4 mm many phones fail; print it larger !$',
+            (m, a, b) => `A ${formatDecimal(a)} mm un modulo misura ${formatDecimal(b)} mm - sotto 0,4 mm molti telefoni non riescono a leggerlo; stampalo più grande!`],
+
+        /* ---------- Texts written before the dictionaries arrived ---------- */
+        ['^(\\d+) (?:line|lines) · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'riga', 'righe')} · ${formatSize(s)}`],
+        ['^"(.+)" is open\\. My documents: open, rename, duplicate or delete your documents \\(Ctrl\\+O\\)$', '«$1» è aperto. I miei documenti: apri, rinomina, duplica o elimina i tuoi documenti (Ctrl+O)'],
+
+        /* ---------- Messages ---------- */
+        [`^(${TYPE_RE}) - "Undo" brings the previous content back$`, (m, ty) => `${TYPES[ty]} - «Annulla» ripristina il contenuto precedente`],
+
+        /* ---------- My documents ---------- */
+        ['^(\\d+) (?:document|documents) · (.+) in this browser$', (m, k, s) => `${k} ${getPlural(k, 'documento', 'documenti')} · ${formatSize(s)} in questo browser`],
+        ['^No document named "(.*)"\\.$', 'Nessun documento chiamato «$1».'],
+        ['^Open now · (.+)$', (m, s) => `Aperto ora · ${formatSize(s)}`],
+        ['^(just now|yesterday|\\d+ min ago|\\d+ h ago|[A-Z][a-z]{2} \\d{1,2}, \\d{4}) · (.+)$', (m, w, s) => `${formatTime(w)} · ${formatSize(s)}`],
+        ['^(.+) \\(open now\\)$', '$1 (aperto ora)'],
+        ['^ZIP with (\\d+) (?:document|documents) downloaded$', (m, k) => `ZIP con ${k} ${getPlural(k, 'documento', 'documenti')} scaricato`],
+        ['^"(.+)" duplicated$', '«$1» duplicato'],
+        ['^Delete "(.+)"\\?$', 'Eliminare «$1»?'],
+        ['^"(.+)" deleted$', '«$1» eliminato'],
+
+        /* ---------- AI Assistant ---------- */
+        ['^Part (\\d+) of (\\d+) received$', 'Parte $1 di $2 ricevuta'],
+        ['^Open the other (?:link|links) from the AI too \\(still missing: part (.+)\\)\\.$', 'Apri anche gli altri link dell\'IA (manca ancora: parte $1).'],
+        ['^Part (\\d+) of (\\d+) received - paste the other (?:link|links) too \\(missing: (.+)\\)$', 'Parte $1 di $2 ricevuta - incolla anche gli altri link (manca: $3)'],
+        ['^The AI sends the document to (.+) with a key that only works for this session\\. What you paste into your AI is handled by its provider\\.$',
+            'L\'IA invia il documento a $1 con una chiave valida solo per questa sessione. Ciò che incolli nella tua IA viene elaborato dal suo fornitore.'],
+        ['^The AI sends its result to (.+) by itself, and it opens here\\. If it answers with a link, paste its answer below\\.$',
+            'L\'IA invia da sola il risultato a $1, che si apre qui. Se risponde con un link, incolla qui sotto la sua risposta.'],
+        ['^No key from (.+) - the prompt asks the AI for a link instead$', 'Nessuna chiave da $1 - il prompt chiede invece un link all\'IA'],
+        ['^Prompt copied - the AI sends its result to (.+)$', 'Prompt copiato - l\'IA invia il risultato a $1'],
+
+        /* ---------- Messages put together from translated fragments: Italian quotes, articles, agreement ---------- */
+        ['^"(.+)" è aperto\\. (I miei documenti: .+)$', '«$1» è aperto. $2'],
+        ['^Nuovo documento "(.+)" - (gli altri tuoi documenti sono in «I miei documenti»)$', 'Nuovo documento «$1» - $2'],
+        ['^Nuovo documento "(.+)" (dall\'IA - gli altri tuoi documenti restano invariati)$', 'Nuovo documento «$1» $2'],
+        ['^"(.+)" (aperto|aperto - ora si trova in «I miei documenti»|non è né un file \\.qr né un\'immagine|modificato dall\'IA - «Annulla» lo ritira)$', '«$1» $2'],
+        ['^Nessun codice QR trovato in "(.+)"$', (m, l) => `Nessun codice QR trovato ${IN[l] || `in «${l}»`}`],
+        ['^Codice QR letto \\((.+?)\\) da "(.+)" - è un nuovo documento$', (m, ty, l) => `Codice QR letto (${ty}) ${FROM[l] || `da «${l}»`} - è un nuovo documento`],
+        ['^1 codice creati(.*)$', '1 codice creato$1'],
+        /* "note" is both the English singular and the Italian plural: "1 note" comes back untranslated */
+        ['^(· )?1 note$', (m, p) => `${p || ''}1 nota`],
+        ['^(.+) - 1 esclusi$', '$1 - 1 escluso'],
+        ['^(\\d+) (riga|righe) · ([\\d.]+ K?B)$', (m, k, w, s) => `${k} ${w} · ${formatSize(s)}`],
+        ['^(\\d+) × (\\d+) pixel = ([\\d.]+) mm a (\\d+) dpi$', (m, w, h, mm, d) => `${w} × ${h} pixel = ${formatDecimal(mm)} mm a ${d} dpi`],
+        ['^Un modulo ([\\d.]+) mm(.*)$', (m, a, rest) => `Un modulo ${formatDecimal(a)} mm${rest}`],
+
+        /* last: "Open <name>" on a card in My documents */
+        ['^Open (.+)$', 'Apri $1'],
+    ],
+};
+
+export default dict;

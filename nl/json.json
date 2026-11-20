@@ -1,0 +1,180 @@
+{
+  "title": "Gratis JSON-editor - boom, valideren, omzetten | giit.ch",
+  "description": "Gratis JSON-editor in je browser: bewerk code en boom, vind fouten per regel, controleer met JSON Schema en zet om naar YAML, CSV of XML.",
+  "og_title": "Gratis JSON-editor - boom, valideren, omzetten | giit.ch",
+  "og_description": "Gratis JSON-editor in je browser: bewerk code en boom, vind fouten per regel, controleer met JSON Schema en zet om naar YAML, CSV of XML.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://json.giit.ch/nl/#app",
+        "name": "JSON Editor",
+        "url": "https://json.giit.ch/nl/",
+        "description": "Gratis JSON-editor in je browser: bewerk code en boom, vind fouten per regel, controleer met JSON Schema en zet om naar YAML, CSV of XML.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Elk (webbrowser)",
+        "inLanguage": "nl",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://json.giit.ch/img/og.png",
+        "featureList": [
+          "JSON-code met syntaxkleuring",
+          "Inklapbare boom met types, aantallen en het pad van elke waarde",
+          "Sleutels en waarden direct in de boom bewerken, items toevoegen, dupliceren, verplaatsen en verwijderen",
+          "Klik in de boom om naar de code te springen, de cursor van de code markeert zijn waarde",
+          "Syntaxfouten en dubbele sleutels met regel en kolom",
+          "Leest JSON met commentaar en JSON5",
+          "Controle aan de hand van een JSON Schema",
+          "Opmaken, minificeren en sleutels sorteren",
+          "Omzetten naar YAML, CSV en XML",
+          "Veel documenten in de browser bewaren",
+          "Opslaan op je eigen server met een webhook, of de editor in je website insluiten",
+          "Elke AI kan via links in de editor schrijven"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Worden mijn gegevens geüpload?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. De editor draait in je browser en bewaart je documenten daar, niet op onze server. Een document gaat alleen naar een server als je zelf een webhook naar je eigen server instelt, als een website die de editor insluit het op de eigen server opslaat, of als een andere website het hier met een formulier (post.php) opent - onze server geeft het dan direct door aan je browser, zonder het op te slaan. Zoals bij elke website registreert de server elk bezoek, en we tellen paginaweergaven anoniem - zie de privacyverklaring."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan ik de gegevens in de boom bewerken?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Klik op een sleutel of waarde in de boom, typ en druk op Enter. De wijziging wordt precies op die plek in de code geschreven - de rest behoudt zijn opmaak - en Ongedaan maken draait haar terug. De knoppen boven de boom voegen items toe, dupliceren, verplaatsen en verwijderen ze en wijzigen het type van een waarde."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Leest de editor JSON met commentaar of JSON5?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Commentaar, komma's na het laatste item, enkele aanhalingstekens en sleutels zonder aanhalingstekens worden gelezen en in de boom getoond, met een opmerking dat ze geen gewone JSON zijn. \"Opmaken\" schrijft gewone JSON."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe controleer ik mijn JSON aan de hand van een schema?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open of plak het JSON Schema als tweede document en kies het dan in het tabblad Schema. De editor controleert de ondersteunde JSON Schema-sleutelwoorden en vermeldt gevonden problemen met regel en kolom. Alleen verwijzingen binnen het gekozen schema worden gevolgd; externe schema’s worden nooit gedownload."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan de editor JSON omzetten naar YAML, CSV of XML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, in het tabblad Omzetten of onder Exporteren. CSV heeft een array van objecten nodig - elk object is een rij. YAML-, CSV- en XML-bestanden die je opent, worden omgezet naar JSON."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Waar worden mijn documenten opgeslagen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Alleen in je browser. Klik op de mapknop linksboven (Mijn documenten) om ze te openen, te hernoemen, te dupliceren, te downloaden of te verwijderen. Als je de sitegegevens van je browser wist, verdwijnen ze, dus download de documenten die je wilt bewaren - of laat de editor ze naar je eigen server sturen (\"Opslaan op server\")."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan een AI in de JSON-editor schrijven?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, elke AI - ChatGPT, Claude, Gemini, Copilot of de AI in je programmeertool. Klik op \"AI-assistent\", dan op \"Prompt kopiëren\", plak hem in je AI en zeg wat die moet wijzigen. De AI antwoordt met een link; klik erop en de gegevens verschijnen in je editor. \"Ongedaan maken\" draait elke wijziging terug."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kost de JSON-editor iets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. De editor is gratis, zonder reclame en zonder registratie."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>JSON online bewerken, als code en als boom</h2>\n        <p>De JSON-editor toont je JSON-code en de gegevens als boom naast elkaar. Vouw objecten en arrays in, zie het type en het aantal items van elke waarde, en wijzig sleutels en waarden direct in de boom - de wijziging gaat precies op die plek in de code, en de rest van het bestand behoudt zijn opmaak. Fouten staan in een lijst met regel en kolom, en de gegevens kunnen worden gecontroleerd aan de hand van een JSON Schema en omgezet naar YAML, CSV of XML.</p>\n        <p>Alles draait in je browser. Je documenten worden daar bewaard, niet op onze server, en er is geen registratie en geen reclame.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Wat de editor kan</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Code en boom</h3><p>Gekleurde JSON links, de inklapbare boom in het midden. Een klik in de boom springt naar de code, de cursor van de code markeert zijn waarde in de boom, het pad (<code>$.items[3].name</code>) wordt altijd getoond.</p></div>\n            <div class=\"tile\"><h3>Bewerken in de boom</h3><p>Sleutels en waarden wijzigen, items toevoegen, dupliceren, verplaatsen en verwijderen, een type wijzigen - telkens als kleine bewerking van de code, één stap voor Ongedaan maken.</p></div>\n            <div class=\"tile\"><h3>Fouten die je kunt vinden</h3><p>Een ontbrekende komma of een ontbrekend aanhalingsteken, dubbele sleutels en waarden die niet bij je JSON Schema passen, elk met regel en kolom. JSON met commentaar en JSON5 worden ook gelezen.</p></div>\n            <div class=\"tile\"><h3>Zoeken</h3><p>Zoek sleutels en waarden; elke treffer wordt in de boom gemarkeerd, Enter gaat naar de volgende.</p></div>\n            <div class=\"tile\"><h3>Omzetten</h3><p>Opmaken, minificeren en sleutels sorteren, of omzetten naar YAML, CSV (een array van objecten is een tabel) en XML. YAML-, CSV- en XML-bestanden openen als JSON.</p></div>\n            <div class=\"tile\"><h3>Veel documenten</h3><p>Bewaar zoveel documenten als je wilt in je browser, elk met een eigen geschiedenis voor Ongedaan maken, en download ze allemaal als ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Hoe het werkt</h2>\n        <ol class=\"steps\">\n            <li><b>Beginnen</b> - kies een sjabloon onder \"Nieuw\", open een .json-bestand of plak JSON.</li>\n            <li><b>Bewerken</b> - in de code of in de boom; beide tonen altijd dezelfde gegevens.</li>\n            <li><b>Controleren en exporteren</b> - herstel de vermelde problemen, kies een schema, en download JSON, YAML, CSV of tekst.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>De editor op je eigen website gebruiken</h2>\n        <p>Zet de editor met een iframe of in een eigen venster in je eigen website. Je pagina geeft hem het document, krijgt elke wijziging en elke opgeslagen versie terug en kan een AI zijn resultaten naar je server laten sturen. Zonder registratie, zonder sleutel.</p>\n        <p><a href=\"/nl/embed/\"><b>De editor in je website insluiten</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Veelgestelde vragen</h2>\n        <div class=\"questions\">\n            <details><summary>Worden mijn gegevens geüpload?</summary><p>Nee. De editor draait in je browser en bewaart je documenten daar, niet op onze server. Een document gaat alleen naar een server als je zelf een webhook naar je eigen server instelt, als een website die de editor insluit het op de eigen server opslaat, of als een andere website het hier met een formulier (post.php) opent - onze server geeft het dan direct door aan je browser, zonder het op te slaan. Zoals bij elke website registreert de server elk bezoek, en we tellen paginaweergaven anoniem - zie de <a href=\"/privacy.html\">privacyverklaring</a>.</p></details>\n            <details><summary>Kan ik de gegevens in de boom bewerken?</summary><p>Ja. Klik op een sleutel of waarde in de boom, typ en druk op Enter. De wijziging wordt precies op die plek in de code geschreven - de rest behoudt zijn opmaak - en Ongedaan maken draait haar terug. De knoppen boven de boom voegen items toe, dupliceren, verplaatsen en verwijderen ze en wijzigen het type van een waarde.</p></details>\n            <details><summary>Leest de editor JSON met commentaar of JSON5?</summary><p>Ja. Commentaar, komma's na het laatste item, enkele aanhalingstekens en sleutels zonder aanhalingstekens worden gelezen en in de boom getoond, met een opmerking dat ze geen gewone JSON zijn. \"Opmaken\" schrijft gewone JSON.</p></details>\n            <details><summary>Hoe controleer ik mijn JSON aan de hand van een schema?</summary><p>Open of plak het JSON Schema als tweede document en kies het dan in het tabblad <b>Schema</b>. De editor controleert de ondersteunde JSON Schema-sleutelwoorden en vermeldt gevonden problemen met regel en kolom. Alleen verwijzingen binnen het gekozen schema worden gevolgd; externe schema’s worden nooit gedownload.</p></details>\n            <details><summary>Kan de editor JSON omzetten naar YAML, CSV of XML?</summary><p>Ja, in het tabblad <b>Omzetten</b> of onder Exporteren. CSV heeft een array van objecten nodig - elk object is een rij. YAML-, CSV- en XML-bestanden die je opent, worden omgezet naar JSON.</p></details>\n            <details><summary>Waar worden mijn documenten opgeslagen?</summary><p>Alleen in je browser. Klik op de mapknop linksboven (Mijn documenten) om ze te openen, te hernoemen, te dupliceren, te downloaden of te verwijderen. Als je de sitegegevens van je browser wist, verdwijnen ze, dus download de documenten die je wilt bewaren - of laat de editor ze naar je eigen server sturen (\"Opslaan op server\").</p></details>\n            <details><summary>Kan een AI in de JSON-editor schrijven?</summary><p>Ja, elke AI - ChatGPT, Claude, Gemini, Copilot of de AI in je programmeertool. Klik op &quot;AI-assistent&quot;, dan op &quot;Prompt kopiëren&quot;, plak hem in je AI en zeg wat die moet wijzigen. De AI antwoordt met een link; klik erop en de gegevens verschijnen in je editor. &quot;Ongedaan maken&quot; draait elke wijziging terug.</p></details>\n            <details><summary>Kost de JSON-editor iets?</summary><p>Nee. De editor is gratis, zonder reclame en zonder registratie.</p></details>\n        </div>\n    </section>",
+  "name": "JSON-editor",
+  "embed": {
+    "title": "De JSON-editor in je eigen website insluiten | giit.ch",
+    "description": "Voor ontwikkelaars: sluit de JSON-editor met een iframe in je website in, wissel documenten uit via postMessage of webhook en koppel je AI. Gratis.",
+    "og_title": "De JSON-editor in je eigen website insluiten",
+    "og_description": "Voor ontwikkelaars: sluit de JSON-editor met een iframe in je website in, wissel documenten uit via postMessage of webhook en koppel je AI. Gratis.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://json.giit.ch/nl/embed/#article",
+          "headline": "De JSON-editor in je eigen website insluiten",
+          "description": "Voor ontwikkelaars: sluit de JSON-editor met een iframe in je website in, wissel documenten uit via postMessage of webhook en koppel je AI. Gratis.",
+          "inLanguage": "nl",
+          "url": "https://json.giit.ch/nl/embed/",
+          "mainEntityOfPage": "https://json.giit.ch/nl/embed/",
+          "image": "https://json.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "JSON-editor",
+            "url": "https://json.giit.ch/nl/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "JSON-editor",
+              "item": "https://json.giit.ch/nl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Insluiten",
+              "item": "https://json.giit.ch/nl/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "De JSON-editor in je eigen website insluiten",
+    "intro": "<p>Voor ontwikkelaars: zo zet je de JSON-editor in je eigen pagina - in een iframe, in een eigen venster of als viewer met alleen leestoegang - en zo gaan documenten, opgeslagen versies en resultaten van een AI heen en weer tussen de editor en je server. Je hebt geen registratie en geen sleutel van ons nodig.</p>",
+    "body": "<p>Elke https-pagina (en localhost) kan de editor insluiten met een <code>&lt;iframe&gt;</code> en <code>?embed=1</code> - geen registratie, geen sleutel. Ingesloten verbergt de editor de paginatekst en toont hij een knop Opslaan. Er zijn vier manieren om het document erin en eruit te krijgen.</p>\n\n        <h2>1. Een bestand openen via een link, opslaan op je server</h2>\n        <p><code>src=</code> opent een bestand (je server moet CORS toestaan), <code>webhook=</code> zorgt dat \"Opslaan\" (Ctrl+S) het document naar dat adres stuurt. Voeg <code>&amp;auto</code> toe om na elke wijziging op te slaan.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://json.giit.ch/nl/?embed=1&amp;src=https://your-site.com/config/app.json&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>De webhook krijgt een POST met JSON <code>{ editor: \"json\", event: \"save\", id, name, content, updated }</code>. Een link bevat geen token (dat zou in de serverlogs en de browsergeschiedenis terechtkomen). Een webhook in het adres is daarom geschikt voor een opslagadres dat geen token nodig heeft, bijvoorbeeld op localhost of in je intranet. Geef voor een openbare server de webhook met een token door in <code>jsoneditor:load</code> (<code>hook: { url, token }</code>) en controleer dat token, zoals dit kleine PHP-script doet:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://json.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/config/$name.json&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Je pagina beheert het document (postMessage)</h2>\n        <p>De editor zegt <code>jsoneditor:ready</code>, je pagina antwoordt met <code>jsoneditor:load</code>, de editor meldt <code>jsoneditor:loaded</code>, <code>jsoneditor:change</code> bij echte bewerkingen en <code>jsoneditor:save</code> wanneer de gebruiker opslaat. Je pagina mag <code>jsoneditor:get</code> (de huidige toestand) of <code>jsoneditor:save</code> (op Opslaan drukken) sturen. Opslaan loopt dan via je eigen login en sessie.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://json.giit.ch/nl/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://json.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;jsoneditor:ready&#x27;) {              // de editor is klaar: geef hem het document\n    ed.contentWindow.postMessage({\n      type: &#x27;jsoneditor:load&#x27;,\n      name: &#x27;Settings&#x27;,\n      content: await (await fetch(&#x27;/config/app.json&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;jsoneditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // een echte bewerking\n  if (m.type === &#x27;jsoneditor:save&#x27;) {               // de gebruiker klikte op &quot;Opslaan&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Een opslaanknop op je eigen pagina: het antwoord komt als jsoneditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;jsoneditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>AI-assistent binnen je pagina:</b> die werkt ook in het frame. Met <code>allow=\"clipboard-write\"</code> op het iframe gebruikt \"Prompt kopiëren\" direct het klembord (anders valt de editor terug op het oude kopieercommando, of toont hij de prompt om met de hand te kopiëren). Een link die de AI stuurt, kan een editor binnen een andere website niet bereiken, dus vraagt de editor de AI en de gebruiker om in plaats daarvan het hele antwoord van de AI in de editor te plakken - of de editor in een eigen venster te openen.</p>\n        <h2>3. In een eigen venster</h2>\n        <p><code>window.open(\"https://json.giit.ch/nl/?embed=window\", \"jsoneditor-17\")</code> opent de volledige editor in een eigen venster en wisselt dezelfde berichten uit met <code>window.opener</code>. Links van een AI bereiken hem daar. <code>jsoneditor:load</code> kan ook <code>context: { host, title, rules }</code> meegeven - de AI-prompt zegt dan waar het document thuishoort en volgt je regels - en <code>hook: { url, token }</code>, een webhook alleen voor dit document die nooit wordt opgeslagen. Als het venster met niet-opgeslagen wijzigingen wordt gesloten, stuurt het <code>jsoneditor:closing</code>.</p>\n        <h2>4. AI via je eigen server</h2>\n        <p>Geef de editor je eigen prompt, een adres op je site en een sleutel voor deze editorsessie. Het AI-venster toont dan \"Verbonden met\" je site, wat je de AI vertelt, en de keuze <b>het huidige document wijzigen</b> of <b>een nieuw maken</b>; <b>Prompt kopiëren</b> zet alles bij elkaar. De AI post het resultaat met de sleutel naar je server, en je pagina opent het in de editor - een nieuw document opent apart en blijft in de browser van de gebruiker. Eén sleutel per editorsessie: hij blijft geldig zolang de editor open is, en alleen zolang de editor er geen heeft, vraagt hij erom met <code>jsoneditor:key-request</code>. De editor verstuurt de sleutel nooit zelf en slaat hem nooit op; het adres moet https zijn op je eigen host of een subdomein ervan.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // één sleutel per editorsessie\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;jsoneditor:load&#x27;, name: &#x27;Settings&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep every key. Only change values.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// onthoud de id uit jsoneditor:loaded en negeer change/save/closing met een andere id\n// alleen zolang de editor geen sleutel heeft:\nif (m.type === &#x27;jsoneditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;jsoneditor:ai&#x27;, key: k.key }, ORIGIN); }\n// zolang de editor open is, meld het elke minuut aan je server; het sluiten van de editor of de pagina maakt de sleutel ongeldig\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// je server heeft een resultaat (polling, SSE …): target is &quot;current&quot; of &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;jsoneditor:load&#x27;, name: &#x27;Settings&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Maak sleutels met minstens 128 willekeurige bits, sla alleen hun hash op, koppel elke sleutel aan de ingelogde gebruiker, het document en deze editorsessie, maak er één per sessie, houd hem alleen geldig zolang je pagina de sessie als open meldt, en maak hem ongeldig wanneer de editor of de pagina sluit.</p>\n        <p class=\"muted\">Het hele protocol staat in <a href=\"/llms.txt\">llms.txt</a> - geef het aan een AI en die bouwt de koppeling voor je systeem. De andere giit-editors werken op dezelfde manier met hun eigen voorvoegsel - <a href=\"https://editors.giit.ch/nl/\">editors.giit.ch</a>.</p>\n        <h2>Een document met alleen leestoegang tonen (viewer)</h2>\n        <p><code>?viewer=1</code> toont alleen het afgewerkte document: geen code, geen gereedschap, er kan niets worden gewijzigd en er wordt niets in de browser opgeslagen. Het document komt via een link (<code>#b64=</code>, <code>?src=</code>), van je pagina met <code>jsoneditor:load</code> of via POST als normaal formulier naar <code>post.php</code>: het veld <code>content</code> als tekst of <code>b64</code> als base64, optioneel <code>name</code>, maximaal 20 MB tekst.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://json.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;nl&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Zonder <code>viewer=1</code> opent het document in de normale editor. In beide gevallen blijft het alleen in het geheugen: het wordt niet op de server opgeslagen en komt niet bij \"Mijn documenten\". Direct geopend meldt de viewer dat de inhoud van derden komt.</p>",
+    "crumb": "Insluiten",
+    "crumb_nav": "Kruimelpad",
+    "open": "Editor openen"
+  }
+}

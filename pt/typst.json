@@ -1,0 +1,188 @@
+{
+  "title": "Editor Typst grátis com o compilador real | giit.ch",
+  "description": "Editor Typst grátis no navegador com o compilador real, visualização ao digitar, edição de texto na página e exportação para PDF, PNG ou SVG.",
+  "og_title": "Editor Typst Online - Visualização ao vivo, grátis e privado",
+  "og_description": "Editor Typst grátis no navegador com o compilador real, visualização ao digitar, edição de texto na página e exportação para PDF, PNG ou SVG.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://typst.giit.ch/pt/#app",
+        "name": "Typst Editor",
+        "url": "https://typst.giit.ch/pt/",
+        "description": "Editor Typst grátis no navegador com o compilador real, visualização ao digitar, edição de texto na página e exportação para PDF, PNG ou SVG.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Qualquer (navegador web)",
+        "inLanguage": "pt",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://typst.giit.ch/img/og.png",
+        "featureList": [
+          "Código Typst com realce de sintaxe",
+          "O compilador Typst real (WebAssembly) no navegador",
+          "Visualização ao vivo das páginas compiladas",
+          "Clique na página para pular para o código",
+          "Clique em um texto na página para editá-lo ali mesmo",
+          "Erros e avisos com linha, coluna e dica",
+          "Configurações do documento que editam as regras #set",
+          "Imagens, arquivos de dados e fontes guardados com o documento",
+          "Exportação para PDF do compilador, PNG, JPG, WebP e SVG",
+          "Muitos documentos guardados no navegador",
+          "Salve no seu próprio servidor com um webhook, ou incorpore o editor no seu site",
+          "Qualquer IA pode escrever no editor por meio de links"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Meu documento é enviado para algum lugar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O editor e o compilador Typst rodam no seu navegador e guardam seus documentos nele, não no nosso servidor. Um documento só vai para um servidor se você configurar um webhook para o seu próprio servidor, se um site que incorpora o editor o salvar no próprio servidor, ou se outro site o abrir aqui com um formulário (post.php) - nesse caso, nosso servidor o repassa direto para o seu navegador, sem armazená-lo. Como em qualquer site, o servidor registra cada acesso, e contamos as visualizações de página de forma anônima - veja a política de privacidade."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Este é o compilador Typst real?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O editor roda o Typst 0.14 compilado para WebAssembly (typst.ts), o mesmo compilador da linha de comando do Typst. Um documento gera ali as mesmas páginas se usar as mesmas fontes e nenhum pacote do Typst Universe. Ele é carregado uma vez (cerca de 11 MB) e depois fica guardado no seu navegador."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como gero um PDF?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Clique em \"Exportar\", escolha PDF e clique em \"Baixar\". O PDF vem direto do compilador Typst, com texto real que pode ser selecionado e pesquisado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso usar pacotes do Typst Universe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não diretamente: o editor não carrega nada de outros servidores, então #import \"@preview/…\" aponta um problema com o nome do pacote. Você pode adicionar os arquivos .typ de um pacote ao documento na aba Imagens e importá-los pelo nome do arquivo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais fontes estão disponíveis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As fontes que vêm com o Typst: Libertinus Serif (a padrão), New Computer Modern e a sua fonte de fórmulas, e DejaVu Sans Mono para código. Adicione os seus próprios arquivos .otf ou .ttf a um documento e use-os com #set text(font: \"Name\")."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como adiciono imagens?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Arraste ou cole uma imagem no editor, ou adicione-a na aba Imagens, à direita. Ela fica guardada com o documento no seu navegador e é usada por #image(\"name.png\"). Arquivos CSV, JSON, YAML e .bib funcionam do mesmo jeito."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Uma IA pode escrever no Editor Typst?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, qualquer IA - ChatGPT, Claude, Gemini, Copilot ou a IA da sua ferramenta de programação. Clique em \"Assistente de IA\", depois em \"Copiar prompt\", cole na sua IA e diga o que ela deve escrever. A IA responde com um link; clique nele e o documento aparece no seu editor. \"Desfazer\" desfaz qualquer alteração."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso usar o editor no meu próprio site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Incorpore-o com um iframe e troque documentos com postMessage, ou deixe-o enviar cada versão salva ao seu servidor com um webhook. Veja exemplos em Use o editor no seu próprio site."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Editor Typst custa alguma coisa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O editor é gratuito, sem anúncios e sem cadastro."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Escreva Typst online, com o compilador real</h2>\n        <p>Typst é uma linguagem de marcação para documentos como cartas, relatórios e artigos, uma alternativa mais nova ao LaTeX. O Editor Typst mostra o seu código e as páginas compiladas lado a lado. Ele roda o compilador Typst real no seu navegador como WebAssembly, e a visualização mostra as mesmas páginas que o PDF - títulos, listas, tabelas, fórmulas, figuras, notas de rodapé, referências e as suas próprias regras <code>#set</code> e <code>#show</code>. Um clique em qualquer texto da página leva você ao lugar dele no código, e você pode editar o texto direto na página.</p>\n        <p>Tudo roda no seu navegador. Seus documentos ficam guardados nele, não no nosso servidor, e não há cadastro nem publicidade.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>O que o editor sabe fazer</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Código com realce</h3><p>Marcação, código, fórmulas, textos e comentários em cores próprias, números de linha, listas que continuam com Enter e os erros do compilador com linha, coluna e dica.</p></div>\n            <div class=\"tile\"><h3>O compilador Typst real</h3><p>O Typst 0.14 compilado para WebAssembly roda em um worker ao lado do editor e compila um instante depois de cada alteração - a digitação continua fluida.</p></div>\n            <div class=\"tile\"><h3>Edite na página</h3><p>Clique em um texto na página para alterá-lo ali; a alteração vai para o código. Um clique em uma fórmula ou imagem leva ao lugar dela no código.</p></div>\n            <div class=\"tile\"><h3>Configurações do documento</h3><p>Papel, margens, colunas, fonte, tamanho, idioma, texto justificado, títulos numerados e números de página - as configurações editam as regras <code>#set</code> do seu código.</p></div>\n            <div class=\"tile\"><h3>Imagens e arquivos de dados</h3><p>Adicione imagens, CSV, JSON, YAML, bibliografias, fontes e outros arquivos .typ a um documento e use-os com <code>image</code>, <code>csv</code>, <code>json</code> ou <code>#import</code>.</p></div>\n            <div class=\"tile\"><h3>Exportar</h3><p>Um PDF do compilador com texto real e selecionável, cada página como PNG, JPG, WebP ou SVG, ou o código-fonte .typ com os arquivos em ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Como funciona</h2>\n        <ol class=\"steps\">\n            <li><b>Comece</b> - escolha um modelo em \"Novo\", abra um arquivo .typ ou cole código Typst.</li>\n            <li><b>Escreva</b> - digite no código; as páginas à direita acompanham. Use \"Inserir\" para tabelas, listas e fórmulas.</li>\n            <li><b>Exporte</b> - salve um PDF, imagens das páginas ou o arquivo .typ.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Use o editor no seu próprio site</h2>\n        <p>Coloque o editor no seu próprio site com um iframe ou em uma janela própria. Sua página entrega o documento a ele, recebe cada alteração e cada salvamento e pode deixar uma IA enviar os resultados ao seu servidor. Sem cadastro, sem chave.</p>\n        <p><a href=\"/pt/embed/\"><b>Incorpore o editor ao seu site</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Perguntas frequentes</h2>\n        <div class=\"questions\">\n            <details><summary>Meu documento é enviado para algum lugar?</summary><p>Não. O editor e o compilador Typst rodam no seu navegador e guardam seus documentos nele, não no nosso servidor. Um documento só vai para um servidor se você configurar um webhook para o seu próprio servidor, se um site que incorpora o editor o salvar no próprio servidor, ou se outro site o abrir aqui com um formulário (post.php) - nesse caso, nosso servidor o repassa direto para o seu navegador, sem armazená-lo. Como em qualquer site, o servidor registra cada acesso, e contamos as visualizações de página de forma anônima - veja a <a href=\"/privacy.html\">política de privacidade</a>.</p></details>\n            <details><summary>Este é o compilador Typst real?</summary><p>Sim. O editor roda o Typst 0.14 compilado para WebAssembly (typst.ts), o mesmo compilador da linha de comando do Typst. Um documento gera ali as mesmas páginas se usar as mesmas fontes e nenhum pacote do Typst Universe. Ele é carregado uma vez (cerca de 11 MB) e depois fica guardado no seu navegador.</p></details>\n            <details><summary>Como gero um PDF?</summary><p>Clique em \"Exportar\", escolha PDF e clique em \"Baixar\". O PDF vem direto do compilador Typst, com texto real que pode ser selecionado e pesquisado.</p></details>\n            <details><summary>Posso usar pacotes do Typst Universe?</summary><p>Não diretamente: o editor não carrega nada de outros servidores, então #import \"@preview/…\" aponta um problema com o nome do pacote. Você pode adicionar os arquivos .typ de um pacote ao documento na aba Imagens e importá-los pelo nome do arquivo.</p></details>\n            <details><summary>Quais fontes estão disponíveis?</summary><p>As fontes que vêm com o Typst: Libertinus Serif (a padrão), New Computer Modern e a sua fonte de fórmulas, e DejaVu Sans Mono para código. Adicione os seus próprios arquivos .otf ou .ttf a um documento e use-os com #set text(font: \"Name\").</p></details>\n            <details><summary>Como adiciono imagens?</summary><p>Arraste ou cole uma imagem no editor, ou adicione-a na aba Imagens, à direita. Ela fica guardada com o documento no seu navegador e é usada por #image(\"name.png\"). Arquivos CSV, JSON, YAML e .bib funcionam do mesmo jeito.</p></details>\n            <details><summary>Uma IA pode escrever no Editor Typst?</summary><p>Sim, qualquer IA - ChatGPT, Claude, Gemini, Copilot ou a IA da sua ferramenta de programação. Clique em \"Assistente de IA\", depois em \"Copiar prompt\", cole na sua IA e diga o que ela deve escrever. A IA responde com um link; clique nele e o documento aparece no seu editor. \"Desfazer\" desfaz qualquer alteração.</p></details>\n            <details><summary>Posso usar o editor no meu próprio site?</summary><p>Sim. Incorpore-o com um iframe e troque documentos com postMessage, ou deixe-o enviar cada versão salva ao seu servidor com um webhook. Veja exemplos em <a href=\"#embed\">Use o editor no seu próprio site</a>.</p></details>\n            <details><summary>O Editor Typst custa alguma coisa?</summary><p>Não. O editor é gratuito, sem anúncios e sem cadastro.</p></details>\n        </div>\n    </section>",
+  "name": "Editor Typst",
+  "embed": {
+    "title": "Como incorporar o editor Typst ao seu site | giit.ch",
+    "description": "Guia para desenvolvedores: incorpore o editor Typst ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+    "og_title": "Incorpore o editor Typst ao seu site",
+    "og_description": "Guia para desenvolvedores: incorpore o editor Typst ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://typst.giit.ch/pt/embed/#article",
+          "headline": "Incorpore o editor Typst ao seu site",
+          "description": "Guia para desenvolvedores: incorpore o editor Typst ao seu site com um iframe, troque documentos por postMessage ou webhook e conecte sua IA. Grátis.",
+          "inLanguage": "pt",
+          "url": "https://typst.giit.ch/pt/embed/",
+          "mainEntityOfPage": "https://typst.giit.ch/pt/embed/",
+          "image": "https://typst.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Editor Typst",
+            "url": "https://typst.giit.ch/pt/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Editor Typst",
+              "item": "https://typst.giit.ch/pt/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Incorporação",
+              "item": "https://typst.giit.ch/pt/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Incorpore o editor Typst ao seu site",
+    "intro": "<p>Para desenvolvedores: como colocar o editor Typst na sua própria página - em um iframe, em uma janela própria ou como visualizador somente para leitura - e como documentos, salvamentos e resultados de uma IA passam entre o editor e o seu servidor. Não é preciso cadastro nem chave nossa.</p>",
+    "body": "<p>Qualquer página https (e localhost) pode incorporar o editor com um <code>&lt;iframe&gt;</code> e <code>?embed=1</code> - sem cadastro, sem chave. Incorporado, o editor oculta o texto da página e mostra um botão Salvar. Há quatro jeitos de levar o documento para dentro e para fora.</p>\n\n        <h2>1. Abrir um arquivo de um link, salvar no seu servidor</h2>\n        <p><code>src=</code> abre um arquivo (seu servidor precisa permitir CORS), <code>webhook=</code> faz \"Salvar\" (Ctrl+S) enviar o documento para esse endereço. Acrescente <code>&amp;auto</code> para salvar após cada alteração.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://typst.giit.ch/pt/?embed=1&amp;src=https://your-site.com/docs/flyer.typ&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>O webhook recebe um POST com JSON <code>{ editor, event: \"save\", id, name, content, assets, updated }</code>. Um link não leva token (ele acabaria nos logs do servidor e no histórico do navegador), por isso um webhook no endereço serve para um destino de salvamento que não exija token, por exemplo em localhost ou na sua intranet. Para um servidor público, passe o webhook com um token em <code>typsteditor:load</code> (<code>hook: { url, token }</code>) e valide o token, como faz este pequeno script PHP:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://typst.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.typ&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. A sua página guarda o documento (postMessage)</h2>\n        <p>O editor informa <code>typsteditor:ready</code>, a sua página responde com <code>typsteditor:load</code>, o editor informa <code>typsteditor:loaded</code>, <code>typsteditor:change</code> quando há alterações efetivas e <code>typsteditor:save</code> quando o usuário salva. A sua página pode enviar <code>typsteditor:get</code> (o estado atual) ou <code>typsteditor:save</code> (acionar Salvar). Salvar passa então pelo seu próprio login e sessão.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://typst.giit.ch/pt/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://typst.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;typsteditor:ready&#x27;) {             // o editor está pronto: entregue o documento a ele\n    ed.contentWindow.postMessage({\n      type: &#x27;typsteditor:load&#x27;,\n      name: &#x27;Flyer&#x27;,\n      content: await (await fetch(&#x27;/docs/flyer.typ&#x27;)).text(),\n      assets: { &#x27;logo.png&#x27;: &#x27;data:image/png;base64,…&#x27; }   // imagens e arquivos de dados opcionais\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;typsteditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // uma edição real\n  if (m.type === &#x27;typsteditor:save&#x27;) {              // o usuário clicou em &quot;Salvar&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content, assets: m.assets }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Um botão de salvar na sua própria página: a resposta chega como typsteditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;typsteditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Assistente de IA dentro da sua página:</b> ele também funciona no frame. Com <code>allow=\"clipboard-write\"</code> no iframe, \"Copiar prompt\" usa a área de transferência diretamente (senão o editor recorre ao antigo comando de copiar, ou mostra o prompt para copiar à mão). Um link enviado pela IA não alcança um editor dentro de outro site, então o editor pede à IA e ao usuário que colem a resposta inteira da IA no editor - ou abram o editor em uma janela própria.</p>\n        <h2>3. Em uma janela própria</h2>\n        <p><code>window.open(\"https://typst.giit.ch/pt/?embed=window\", \"typsteditor-17\")</code> abre o editor completo em uma janela própria e troca as mesmas mensagens com <code>window.opener</code>. Os links de uma IA chegam até ele ali. <code>typsteditor:load</code> também pode levar <code>context: { host, title, rules }</code> - o prompt da IA então diz a que lugar o documento pertence e segue as suas regras - e <code>hook: { url, token, assets: false }</code>, um webhook só para este documento que nunca é guardado. Fechar a janela com alterações não salvas envia <code>typsteditor:closing</code>. <code>typsteditor:pdf</code> pede o PDF do documento da página e o recebe de volta como URI de dados, gerado pelo compilador Typst com texto real e selecionável.</p>\n        <h2>4. IA pelo seu próprio servidor</h2>\n        <p>Entregue ao editor o seu próprio prompt, um endereço no seu site e uma chave para esta sessão do editor. A janela de IA mostra então \"Conectado a\" seguido do seu site, o que você diz à IA, e a escolha <b>alterar o documento atual</b> ou <b>criar um novo</b>; <b>Copiar prompt</b> junta tudo. A IA envia o resultado com a chave para o seu servidor, e a sua página o abre no editor - um novo documento abre separado e fica no navegador do usuário. Uma chave por sessão do editor: ela vale enquanto o editor estiver aberto, e o editor só a solicita enquanto estiver sem chave, com <code>typsteditor:key-request</code>. O editor nunca envia a chave por conta própria e nunca a guarda; o endereço precisa ser https no seu próprio host ou em um subdomínio dele.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // uma chave por sessão do editor\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;typsteditor:load&#x27;, name: &#x27;Flyer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// guarde o id de typsteditor:loaded e ignore change/save/closing com outro id\n// só enquanto o editor não tiver chave:\nif (m.type === &#x27;typsteditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;typsteditor:ai&#x27;, key: k.key }, ORIGIN); }\n// enquanto o editor estiver aberto, avise o seu servidor a cada minuto; fechar o editor ou a página invalida a chave\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// o seu servidor tem um resultado (polling, SSE …): target é &quot;current&quot; ou &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;typsteditor:load&#x27;, name: &#x27;Flyer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - a chave desta sessão do editor do usuário logado (a sua página a chama)\nsession_start();                                     // verifique se o usuário pode editar este documento\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // ou no seu banco de dados; ?alive= atualiza seen\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - a IA envia para cá (sem cabeçalhos CORS: as IAs chamam a partir de um servidor)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // o seu banco de dados: não invalidada, vista nos últimos 3 minutos\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // a sua página o mostra com typsteditor:load\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Crie chaves com pelo menos 128 bits aleatórios, guarde só o hash delas, vincule cada uma ao usuário logado, ao documento e a esta sessão do editor, crie uma por sessão, mantenha-a válida só enquanto a sua página informar que a sessão está aberta, e invalide-a quando o editor ou a página fechar.</p>\n        <p class=\"muted\">O protocolo completo está em <a href=\"/llms.txt\">llms.txt</a> - entregue-o a uma IA e ela monta a conexão para o seu sistema. Os outros editores giit funcionam do mesmo jeito, cada um com o próprio prefixo - <a href=\"https://editors.giit.ch/pt/\">editors.giit.ch</a>.</p>\n        <h2>Mostrar um documento somente para leitura (visualizador)</h2>\n        <p><code>?viewer=1</code> mostra apenas o documento pronto: sem código, sem ferramentas, nada pode ser alterado e nada é salvo no navegador. O documento vem de um link (<code>#b64=</code>, <code>?src=</code>), da sua página com <code>typsteditor:load</code> ou por POST como formulário normal para <code>post.php</code>: o campo <code>content</code> como texto ou <code>b64</code> como base64, opcionalmente <code>name</code>, no máximo 20 MB de texto.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://typst.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;pt&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Sem <code>viewer=1</code> o documento abre no editor normal. Em ambos os casos ele fica apenas na memória: não é salvo no servidor nem entra em \"Meus documentos\". Aberto diretamente, o visualizador informa que o conteúdo vem de terceiros.</p>",
+    "crumb": "Incorporação",
+    "crumb_nav": "Trilha de navegação",
+    "open": "Abrir o editor"
+  }
+}

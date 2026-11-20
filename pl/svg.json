@@ -1,0 +1,187 @@
+{
+  "title": "Darmowy edytor SVG - przeglądaj, edytuj, eksportuj | giit.ch",
+  "description": "Darmowy edytor SVG w przeglądarce: edytuj kod albo przesuwaj, skaluj i zmieniaj kolory kształtów, eksportuj do SVG, PNG, JPG lub React. Bez rejestracji.",
+  "og_title": "Edytor SVG online - przeglądaj, edytuj i eksportuj SVG",
+  "og_description": "Darmowy edytor SVG w przeglądarce: edytuj kod albo przesuwaj, skaluj i zmieniaj kolory kształtów, eksportuj do SVG, PNG, JPG lub React. Bez rejestracji.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://svg.giit.ch/pl/#app",
+        "name": "SVG Editor",
+        "url": "https://svg.giit.ch/pl/",
+        "description": "Darmowy edytor SVG w przeglądarce: edytuj kod albo przesuwaj, skaluj i zmieniaj kolory kształtów, eksportuj do SVG, PNG, JPG lub React. Bez rejestracji.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "pl",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://svg.giit.ch/img/og.png",
+        "featureList": [
+          "Kod SVG z podświetlaniem składni",
+          "Przesuwanie, skalowanie, obracanie i odbijanie kształtów",
+          "Ustawianie koloru wypełnienia i konturu",
+          "Rysowanie prostokątów, elips, linii, ścieżek odręcznych i tekstu",
+          "Regulowana siatka z przyciąganiem",
+          "Eksport do SVG, PNG, JPG, WebP, data URI, CSS i React (JSX)",
+          "Porządkowanie i zmniejszanie kodu SVG",
+          "Wiele rysunków w przeglądarce: otwieranie, zmiana nazwy, duplikowanie, pobieranie i usuwanie",
+          "Jasny, ciemny i automatyczny motyw kolorów",
+          "Każda AI może rysować w edytorze za pomocą linków",
+          "Zapis na własnym serwerze przez webhook lub osadzenie edytora na własnej stronie"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czy mój plik SVG jest gdzieś wysyłany?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Edytor działa w przeglądarce i tam przechowuje twoje rysunki, a nie na naszym serwerze. Rysunek trafia na serwer tylko wtedy, gdy sam skonfigurujesz webhook do własnego serwera, gdy strona osadzająca edytor zapisze go na własnym serwerze albo gdy inna strona internetowa otworzy go tutaj za pomocą formularza (post.php) - nasz serwer przekazuje go wtedy od razu do twojej przeglądarki, nie zapisując go. Jak na każdej stronie internetowej, serwer zapisuje każde wejście w logach, a odsłony liczymy anonimowo - zobacz politykę prywatności."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gdzie zapisywane są moje rysunki?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tylko w przeglądarce. Edytor przechowuje tam dowolną liczbę rysunków - kliknij przycisk folderu w lewym górnym rogu (Moje rysunki), aby je otwierać, zmieniać ich nazwy, duplikować, pobierać lub usuwać. Nie są przechowywane na naszym serwerze, więc wyczyszczenie danych witryny w przeglądarce je usuwa - pobierz te, które chcesz zachować."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak przekonwertować SVG do PNG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Otwórz lub wklej SVG, kliknij „Eksportuj”, wybierz PNG, ustaw rozmiar (1×, 2×, 4× lub własny) i kliknij „Pobierz”. Tło pozostaje przezroczyste, chyba że wybierzesz kolor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę edytować kształty myszą?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Kliknij kształt, aby go zaznaczyć. Możesz go przeciągać, zmieniać jego rozmiar małymi kwadratami, obracać, odbijać i zmieniać kolory. Kod po lewej zmienia się razem z nim."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do czego służy siatka?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Siatka pokazuje linie pomocnicze we własnych współrzędnych rysunku. Gdy jest włączona, przesuwane lub rysowane kształty przyciągają się dokładnie do jej linii. Odznacz „Przyciąganie”, aby siatka pozostała widoczna, a kształty poruszały się swobodnie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę użyć SVG jako komponentu React?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Wybierz w eksporcie „Komponent React (JSX)”. Atrybuty takie jak stroke-width stają się strokeWidth, class staje się className, a komponent przyjmuje dodatkowe właściwości (props)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy AI może rysować w Edytorze SVG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak, każda AI - ChatGPT, Claude, Gemini, Copilot lub AI w twoim narzędziu programistycznym. Kliknij „Asystent AI”, potem „Kopiuj prompt”, wklej go do swojej AI i napisz, co ma narysować. AI odpowiada linkiem; kliknij go, a rysunek pojawi się w edytorze. Może zmienić otwarty rysunek albo utworzyć nowe obok pozostałych. Nie trzeba niczego instalować, a „Cofnij” cofa każdą zmianę."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę używać edytora na własnej stronie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Osadź go w iframe i wymieniaj rysunki przez postMessage albo pozwól mu wysyłać każdą zapisaną wersję na twój serwer przez webhook. Przykłady znajdziesz w sekcji Edytor na własnej stronie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy Edytor SVG coś kosztuje?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Edytor jest darmowy, bez reklam i bez rejestracji."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Przeglądaj, edytuj i eksportuj SVG online</h2>\n        <p>Edytor SVG pokazuje rysunek i jego kod obok siebie. Wszystko, co zmienisz w kodzie, od razu pojawia się w podglądzie - a wszystko, co przesuniesz, przeskalujesz lub przekolorujesz na płótnie, pojawia się w kodzie. Dzięki temu szybko poprawisz ikony, logo, wykresy i ilustracje bez otwierania dużego programu graficznego.</p>\n        <p>Wszystko działa w przeglądarce. Twoje rysunki są przechowywane właśnie tam, a nie na naszym serwerze, i nie ma rejestracji ani reklam.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Co potrafi edytor</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Kod z podświetlaniem</h3><p>Znaczniki, atrybuty i wartości we własnych kolorach, numery wierszy, wcięcia klawiszem Tab, automatyczne zamykanie znaczników i przejrzysty komunikat o błędzie z numerem wiersza.</p></div>\n            <div class=\"tile\"><h3>Bezpośrednia edycja kształtów</h3><p>Klikaj, przeciągaj, zmieniaj rozmiar uchwytami, obracaj, odbijaj, duplikuj, przesuwaj do przodu lub do tyłu - prostokąty, koła, ścieżki, wielokąty, tekst i grupy.</p></div>\n            <div class=\"tile\"><h3>Kolory i kontury</h3><p>Wypełnienie i kontur z próbnikiem kolorów lub jako wartość, krycie, grubość konturu, linie kreskowane, zaokrąglone lub kwadratowe końce linii.</p></div>\n            <div class=\"tile\"><h3>Siatka z przyciąganiem</h3><p>Dowolny odstęp siatki we własnych współrzędnych rysunku. Kształty przyciągają się dokładnie do linii - albo odznacz „Przyciąganie”, aby przesuwać je swobodnie.</p></div>\n            <div class=\"tile\"><h3>Narzędzia rysowania</h3><p>Prostokąt, elipsa, koło, linia, rysowanie odręczne i tekst - z wybranymi kolorami dla nowych kształtów.</p></div>\n            <div class=\"tile\"><h3>Eksport</h3><p>SVG (bez zmian, uporządkowany lub zmniejszony), PNG z przezroczystym tłem, JPG, WebP oraz kod dla stron internetowych: data URI, Base64, CSS lub komponent React.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Jak to działa</h2>\n        <ol class=\"steps\">\n            <li><b>Otwórz SVG</b> - wybierz plik, przeciągnij go do okna lub wklej kod.</li>\n            <li><b>Edycja</b> - pisz w kodzie albo klikaj kształty na płótnie, przeciągaj je i ustawiaj ich kolory po prawej.</li>\n            <li><b>Eksport</b> - wybierz format, ustaw rozmiar obrazów, a potem pobierz lub skopiuj.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Edytor na własnej stronie</h2>\n        <p>Umieść edytor na własnej stronie w ramce iframe albo we własnym oknie. Twoja strona przekazuje mu dokument, otrzymuje z powrotem każdą zmianę i każdy zapis, a wyniki AI mogą trafiać prosto na twój serwer. Bez rejestracji, bez klucza.</p>\n        <p><a href=\"/pl/embed/\"><b>Osadź edytor na swojej stronie</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Najczęstsze pytania</h2>\n        <div class=\"questions\">\n            <details><summary>Czy mój plik SVG jest gdzieś wysyłany?</summary><p>Nie. Edytor działa w przeglądarce i tam przechowuje twoje rysunki, a nie na naszym serwerze. Rysunek trafia na serwer tylko wtedy, gdy sam skonfigurujesz webhook do własnego serwera, gdy strona osadzająca edytor zapisze go na własnym serwerze albo gdy inna strona internetowa otworzy go tutaj za pomocą formularza (post.php) - nasz serwer przekazuje go wtedy od razu do twojej przeglądarki, nie zapisując go. Jak na każdej stronie internetowej, serwer zapisuje każde wejście w logach, a odsłony liczymy anonimowo - zobacz <a href=\"/privacy.html\">politykę prywatności</a>.</p></details>\n            <details><summary>Gdzie zapisywane są moje rysunki?</summary><p>Tylko w przeglądarce. Edytor przechowuje tam dowolną liczbę rysunków - kliknij przycisk folderu w lewym górnym rogu (Moje rysunki), aby je otwierać, zmieniać ich nazwy, duplikować, pobierać lub usuwać. Nie są przechowywane na naszym serwerze, więc wyczyszczenie danych witryny w przeglądarce je usuwa - pobierz te, które chcesz zachować.</p></details>\n            <details><summary>Jak przekonwertować SVG do PNG?</summary><p>Otwórz lub wklej SVG, kliknij „Eksportuj”, wybierz PNG, ustaw rozmiar (1×, 2×, 4× lub własny) i kliknij „Pobierz”. Tło pozostaje przezroczyste, chyba że wybierzesz kolor.</p></details>\n            <details><summary>Czy mogę edytować kształty myszą?</summary><p>Tak. Kliknij kształt, aby go zaznaczyć. Możesz go przeciągać, zmieniać jego rozmiar małymi kwadratami, obracać, odbijać i zmieniać kolory. Kod po lewej zmienia się razem z nim.</p></details>\n            <details><summary>Do czego służy siatka?</summary><p>Siatka pokazuje linie pomocnicze we własnych współrzędnych rysunku. Gdy jest włączona, przesuwane lub rysowane kształty przyciągają się dokładnie do jej linii. Odznacz „Przyciąganie”, aby siatka pozostała widoczna, a kształty poruszały się swobodnie.</p></details>\n            <details><summary>Czy mogę użyć SVG jako komponentu React?</summary><p>Tak. Wybierz w eksporcie „Komponent React (JSX)”. Atrybuty takie jak stroke-width stają się strokeWidth, class staje się className, a komponent przyjmuje dodatkowe właściwości (props).</p></details>\n            <details><summary>Czy AI może rysować w Edytorze SVG?</summary><p>Tak, każda AI - ChatGPT, Claude, Gemini, Copilot lub AI w twoim narzędziu programistycznym. Kliknij „Asystent AI”, potem „Kopiuj prompt”, wklej go do swojej AI i napisz, co ma narysować. AI odpowiada linkiem; kliknij go, a rysunek pojawi się w edytorze. Może zmienić otwarty rysunek albo utworzyć nowe obok pozostałych. Nie trzeba niczego instalować, a „Cofnij” cofa każdą zmianę.</p></details>\n            <details><summary>Czy mogę używać edytora na własnej stronie?</summary><p>Tak. Osadź go w iframe i wymieniaj rysunki przez postMessage albo pozwól mu wysyłać każdą zapisaną wersję na twój serwer przez webhook. Przykłady znajdziesz w sekcji <a href=\"#embed\">Edytor na własnej stronie</a>.</p></details>\n            <details><summary>Czy Edytor SVG coś kosztuje?</summary><p>Nie. Edytor jest darmowy, bez reklam i bez rejestracji.</p></details>\n        </div>\n    </section>",
+  "name": "Edytor SVG",
+  "embed": {
+    "title": "Jak osadzić edytor SVG na własnej stronie | giit.ch",
+    "description": "Poradnik dla programistów: osadź edytor SVG na swojej stronie przez iframe, wymieniaj dokumenty przez postMessage lub webhook i podłącz swoją AI. Za darmo.",
+    "og_title": "Osadź edytor SVG na swojej stronie",
+    "og_description": "Poradnik dla programistów: osadź edytor SVG na swojej stronie przez iframe, wymieniaj dokumenty przez postMessage lub webhook i podłącz swoją AI. Za darmo.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://svg.giit.ch/pl/embed/#article",
+          "headline": "Osadź edytor SVG na swojej stronie",
+          "description": "Poradnik dla programistów: osadź edytor SVG na swojej stronie przez iframe, wymieniaj dokumenty przez postMessage lub webhook i podłącz swoją AI. Za darmo.",
+          "inLanguage": "pl",
+          "url": "https://svg.giit.ch/pl/embed/",
+          "mainEntityOfPage": "https://svg.giit.ch/pl/embed/",
+          "image": "https://svg.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Edytor SVG",
+            "url": "https://svg.giit.ch/pl/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Edytor SVG",
+              "item": "https://svg.giit.ch/pl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Osadzanie",
+              "item": "https://svg.giit.ch/pl/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Osadź edytor SVG na swojej stronie",
+    "intro": "<p>Dla programistów: jak umieścić edytor SVG na własnej stronie - w ramce iframe, we własnym oknie albo jako podgląd tylko do odczytu - i jak dokumenty, zapisy i wyniki AI przechodzą między edytorem a twoim serwerem. Nie potrzebujesz rejestracji ani klucza od nas.</p>",
+    "body": "<p>Każda strona https (i localhost) może osadzić edytor za pomocą <code>&lt;iframe&gt;</code> i <code>?embed=1</code> - bez rejestracji, bez klucza. Po osadzeniu edytor ukrywa tekst strony i pokazuje przycisk Zapisz. Rysunek można przekazywać do edytora i z niego na cztery sposoby.</p>\n\n        <h2>1. Otwieranie pliku z linku, zapis na twoim serwerze</h2>\n        <p><code>src=</code> otwiera plik (twój serwer musi zezwalać na CORS), <code>webhook=</code> sprawia, że „Zapisz” (Ctrl+S) wysyła rysunek pod ten adres. Dodaj <code>&amp;auto</code>, aby zapisywać po każdej zmianie.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://svg.giit.ch/pl/?embed=1&amp;src=https://your-site.com/docs/logo.svg&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook otrzymuje żądanie POST z JSON <code>{ editor, event: \"save\", id, name, content, updated }</code>. Link nie zawiera tokenu (trafiłby on do logów serwera i historii przeglądarki), więc webhook podany w adresie nadaje się do zapisu pod adresem, który nie wymaga tokenu, na przykład na localhost lub w intranecie. W przypadku publicznego serwera przekaż webhook z tokenem w <code>svgeditor:load</code> (<code>hook: { url, token }</code>) i zweryfikuj go, tak jak robi to ten krótki skrypt PHP:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://svg.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.svg&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Rysunek przechowuje twoja strona (postMessage)</h2>\n        <p>Edytor zgłasza <code>svgeditor:ready</code>, twoja strona odpowiada <code>svgeditor:load</code>, edytor zgłasza <code>svgeditor:loaded</code>, <code>svgeditor:change</code> przy rzeczywistych zmianach i <code>svgeditor:save</code>, gdy użytkownik zapisuje. Twoja strona może wysłać <code>svgeditor:get</code> (bieżący stan) lub <code>svgeditor:save</code> (naciśnięcie Zapisz). Zapis odbywa się wtedy przez twoje własne logowanie i sesję.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://svg.giit.ch/pl/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://svg.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;svgeditor:ready&#x27;) {             // edytor jest gotowy: przekaż mu rysunek\n    ed.contentWindow.postMessage({\n      type: &#x27;svgeditor:load&#x27;,\n      name: &#x27;Logo&#x27;,\n      content: await (await fetch(&#x27;/docs/logo.svg&#x27;)).text(),\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;svgeditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // rzeczywista zmiana\n  if (m.type === &#x27;svgeditor:save&#x27;) {              // użytkownik kliknął „Zapisz”\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Przycisk zapisu na twojej stronie: odpowiedź przychodzi jako svgeditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;svgeditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Asystent AI na twojej stronie:</b> działa także w ramce. Z <code>allow=\"clipboard-write\"</code> w iframe „Kopiuj prompt” korzysta bezpośrednio ze schowka (w przeciwnym razie edytor używa starego polecenia kopiowania albo pokazuje prompt do ręcznego skopiowania). Link wysłany przez AI nie dotrze do edytora osadzonego w innej stronie, więc edytor prosi AI i użytkownika o wklejenie całej odpowiedzi AI do edytora - albo o otwarcie edytora we własnym oknie.</p>\n        <h2>3. We własnym oknie</h2>\n        <p><code>window.open(\"https://svg.giit.ch/pl/?embed=window\", \"svgeditor-17\")</code> otwiera pełny edytor we własnym oknie, który wymienia te same wiadomości z <code>window.opener</code>. Linki od AI docierają do niego tam. <code>svgeditor:load</code> może też zawierać <code>context: { host, title, rules }</code> - prompt dla AI mówi wtedy, do czego należy rysunek, i stosuje twoje zasady - oraz <code>hook: { url, token }</code>, webhook tylko dla tego rysunku, który nigdy nie jest zapisywany. Zamknięcie okna z niezapisanymi zmianami wysyła <code>svgeditor:closing</code>.</p>\n        <h2>4. AI przez twój własny serwer</h2>\n        <p>Przekaż edytorowi własny prompt, adres w twojej witrynie i klucz dla tej sesji edytora. Okno AI pokazuje wtedy „Połączono z” twoją witryną, to, co przekazujesz AI, oraz wybór: <b>zmienić bieżący rysunek</b> lub <b>utworzyć nowy</b>; <b>Kopiuj prompt</b> łączy to wszystko. AI wysyła swój wynik z kluczem na twój serwer, a twoja strona otwiera go w edytorze - nowy rysunek otwiera się osobno i zostaje w przeglądarce użytkownika. Jeden klucz na sesję edytora: pozostaje ważny, dopóki edytor jest otwarty, a edytor prosi o niego przez <code>svgeditor:key-request</code> tylko wtedy, gdy go nie ma. Edytor nigdy sam nie wysyła klucza i nigdy go nie zapisuje; adres musi być adresem https na twoim własnym hoście lub jego subdomenie.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // jeden klucz na sesję edytora\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;svgeditor:load&#x27;, name: &#x27;Flyer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// zapamiętaj id z svgeditor:loaded i ignoruj change/save/closing z innym id\n// tylko gdy edytor nie ma klucza:\nif (m.type === &#x27;svgeditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;svgeditor:ai&#x27;, key: k.key }, ORIGIN); }\n// dopóki edytor jest otwarty, informuj serwer co minutę; zamknięcie edytora lub strony unieważnia klucz\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// twój serwer ma wynik (polling, SSE …): target to &quot;current&quot; lub &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;svgeditor:load&#x27;, name: &#x27;Flyer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - klucz tej sesji edytora zalogowanego użytkownika (wywołuje go twoja strona)\nsession_start();                                     // sprawdź, czy użytkownik może edytować ten rysunek\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // lub w twojej bazie danych; ?alive= ponownie ustawia seen\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - tu AI wysyła wynik (bez nagłówków CORS: AI wywołują go z serwera)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // twoja baza danych: nieunieważniony, widziany w ciągu ostatnich 3 minut\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // twoja strona pokazuje go przez svgeditor:load\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Twórz klucze z co najmniej 128 losowymi bitami, przechowuj tylko ich skrót, wiąż każdy z zalogowanym użytkownikiem, rysunkiem i tą sesją edytora, twórz jeden na sesję, zachowuj jego ważność tylko wtedy, gdy twoja strona zgłasza sesję jako otwartą, i unieważniaj go, gdy edytor lub strona zostaną zamknięte.</p>\n        <p class=\"muted\">Cały protokół jest opisany w <a href=\"/llms.txt\">llms.txt</a> - przekaż go AI, a zbuduje połączenie dla twojego systemu. Pozostałe edytory giit działają tak samo, każdy z własnym prefiksem - <a href=\"https://editors.giit.ch/pl/\">editors.giit.ch</a>.</p>\n        <h2>Wyświetlanie dokumentu tylko do odczytu (podgląd)</h2>\n        <p><code>?viewer=1</code> pokazuje tylko gotowy dokument: bez kodu, bez narzędzi, niczego nie można zmienić i nic nie jest zapisywane w przeglądarce. Dokument pochodzi z linku (<code>#b64=</code>, <code>?src=</code>), z twojej strony przez <code>svgeditor:load</code> albo przez POST jako zwykły formularz do <code>post.php</code>: pole <code>content</code> jako tekst lub <code>b64</code> jako base64, opcjonalnie <code>name</code>, najwyżej 20 MB tekstu.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://svg.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;pl&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Bez <code>viewer=1</code> dokument otwiera się w zwykłym edytorze. W obu przypadkach pozostaje tylko w pamięci: nie jest zapisywany na serwerze i nie trafia do „Moich dokumentów”. Otwarty bezpośrednio podgląd informuje, że treść pochodzi od osób trzecich.</p>",
+    "crumb": "Osadzanie",
+    "crumb_nav": "Ścieżka nawigacji",
+    "open": "Otwórz edytor"
+  }
+}

@@ -1,0 +1,435 @@
+/* Brazilian Portuguese texts of the XML editor: the bar, the work area (code, tree,
+   node, insert, convert), its dialogs and messages, and the problems found
+   in the code. What all editors share is in common.js; how the
+   dictionaries are used is described in i18n.js. Names of documents,
+   elements and attributes stay as they are: the patterns copy them into the
+   Portuguese text. */
+
+import { formatTime, formatSize, formatThousands, getPlural } from './format.js';
+
+/* "1,234" -> "1.234" (Brazilian thousands separator) */
+
+/* "1,234 bytes" -> "1.234 bytes" */
+
+/* When a document was last changed (files.js): "just now", "5 min ago", "Oct 25, 2026" … */
+
+export default {
+    text: {
+        // Labels that are the same in English and German
+        'Export': 'Exportar',
+        'Name': 'Nome',
+
+        /* ---------- Top bar ---------- */
+        'XML Editor - home': 'Editor XML - início',
+        'XML Editor': 'Editor XML',
+        'File': 'Arquivo',
+        'My documents (Ctrl+O)': 'Meus documentos (Ctrl+O)',
+        'My documents': 'Meus documentos',
+        'New document, or start this one over': 'Novo documento, ou recomeçar este',
+        'New': 'Novo',
+        'New blank document': 'Novo documento em branco',
+        'An XML declaration and an empty root element': 'Uma declaração XML e um elemento raiz vazio',
+        'Product catalog': 'Catálogo de produtos',
+        'Products with attributes, prices and stock': 'Produtos com atributos, preços e estoque',
+        'RSS feed': 'Feed RSS',
+        'A channel with one item, RSS 2.0': 'Um canal com um item, RSS 2.0',
+        'Sitemap': 'Mapa do site',
+        'sitemap.xml for search engines, with a default namespace': 'sitemap.xml para mecanismos de busca, com namespace padrão',
+        'Configuration': 'Configuração',
+        'Settings and a database connection': 'Configurações e uma conexão de banco de dados',
+        'The welcome example': 'O exemplo de boas-vindas',
+        'Shows what the editor can do': 'Mostra o que o editor sabe fazer',
+        'Start this document over': 'Recomeçar este documento',
+        'Keeps the declaration and the root element, empties the rest - "Undo" brings it back': 'Mantém a declaração e o elemento raiz, esvazia o resto - "Desfazer" traz de volta',
+        'Open an XML file from your computer (you can also drag it into the window)': 'Abrir um arquivo XML do seu computador (você também pode arrastá-lo para a janela)',
+        'Open file…': 'Abrir arquivo…',
+        'Undo the last change (Ctrl+Z)': 'Desfazer a última alteração (Ctrl+Z)',
+        'Undo': 'Desfazer',
+        'Redo the change you just undid (Ctrl+Y)': 'Refazer a alteração que você acabou de desfazer (Ctrl+Y)',
+        'Redo': 'Refazer',
+        'Output': 'Saída',
+        'Color theme': 'Tema de cores',
+        'Light theme': 'Tema claro',
+        'Dark theme': 'Tema escuro',
+        'Same as your system setting': 'Igual à configuração do seu sistema',
+        'Automatic theme (system setting)': 'Tema automático (configuração do sistema)',
+        'Let any AI write in this editor': 'Deixe qualquer IA escrever neste editor',
+        'AI Assistant': 'Assistente de IA',
+        'Save to your own server and embed the editor in your website': 'Salvar no seu próprio servidor e incorporar o editor no seu site',
+        'Save to server': 'Salvar no servidor',
+        'How it works and keyboard shortcuts (?)': 'Como funciona e atalhos de teclado (?)',
+        'Help': 'Ajuda',
+        'Save the document as an .xml file (Ctrl+S)': 'Salvar o documento como arquivo .xml (Ctrl+S)',
+        'Download .xml': 'Baixar .xml',
+        'XML, minified XML, JSON, YAML and plain text (Ctrl+E)': 'XML, XML minificado, JSON, YAML e texto simples (Ctrl+E)',
+        'Export…': 'Exportar…',
+
+        /* ---------- Views and work area ---------- */
+        'View': 'Exibir',
+        'Edit': 'Editar',
+        'Side panel': 'Painel lateral',
+        'Tree': 'Árvore',
+        'Node': 'Nó',
+        'XML code': 'Código XML',
+        'Copy the XML code to the clipboard': 'Copiar o código XML para a área de transferência',
+        'Copy code': 'Copiar código',
+        'Copy': 'Copiar',
+        'Indent every element on its own line (mixed content stays as it is)': 'Colocar cada elemento em uma linha própria, indentado (conteúdo misto fica como está)',
+        'Format': 'Formatar',
+        'File format': 'Formato do arquivo',
+        'Drag to change the width of the code area': 'Arraste para mudar a largura da área de código',
+        'Drag to change the width': 'Arraste para mudar a largura',
+        'Element tree': 'Árvore de elementos',
+        'Element tree: click a node to go to its place in the code, click a value to edit it': 'Árvore de elementos: clique em um nó para ir ao lugar dele no código, clique em um valor para editá-lo',
+        'Search names, values and text': 'Buscar nomes, valores e texto',
+        'Search in the tree': 'Buscar na árvore',
+        'XPath query, e.g. //book[price > 30]': 'Consulta XPath, p. ex. //book[price > 30]',
+        'XPath query': 'Consulta XPath',
+        'Previous match (Shift+Enter)': 'Resultado anterior (Shift+Enter)',
+        'Previous match': 'Resultado anterior',
+        'Next match (Enter)': 'Próximo resultado (Enter)',
+        'Next match': 'Próximo resultado',
+        'Fold everything below the root': 'Recolher tudo abaixo da raiz',
+        'Fold all': 'Recolher tudo',
+        'Unfold every element': 'Expandir todos os elementos',
+        'Unfold all': 'Expandir tudo',
+        'Path of the selected node': 'Caminho do nó selecionado',
+        'Click a node to see its path': 'Clique em um nó para ver o caminho dele',
+        'Put this path into the XPath field': 'Colocar este caminho no campo XPath',
+        'As query': 'Como consulta',
+        'Copy the XPath of the selected node': 'Copiar o XPath do nó selecionado',
+        'Copy path': 'Copiar caminho',
+        'Path copied': 'Caminho copiado',
+        'Updating…': 'Atualizando…',
+        'Fold': 'Recolher',
+        'Unfold': 'Expandir',
+        'empty': 'vazio',
+        'Add a child element': 'Adicionar um elemento filho',
+        'Add an attribute': 'Adicionar um atributo',
+        'Move up': 'Mover para cima',
+        'Move down': 'Mover para baixo',
+        'Remove the element': 'Remover o elemento',
+        'Remove': 'Remover',
+        'The document is empty - type some XML on the left, or choose a template under "New".': 'O documento está vazio - digite algum XML à esquerda, ou escolha um modelo em "Novo".',
+        'Fix the errors first': 'Corrija os erros primeiro',
+        'No match': 'Nenhum resultado',
+        'Not a valid XPath expression': 'Não é uma expressão XPath válida',
+        'Nothing found': 'Nada encontrado',
+        'Open it here': 'Abrir aqui',
+        'Drop the XML file here': 'Solte o arquivo XML aqui',
+
+        /* Problems above the code */
+        'Hide': 'Ocultar',
+        'Show': 'Mostrar',
+
+        /* ---------- Side panel ---------- */
+        'The selected node: path, namespace, attributes and actions': 'O nó selecionado: caminho, namespace, atributos e ações',
+        'Ready-made pieces: elements, comments, CDATA, characters': 'Peças prontas: elementos, comentários, CDATA, caracteres',
+        'Insert': 'Inserir',
+        'Format, minify, JSON and YAML': 'Formatar, minificar, JSON e YAML',
+        'Convert': 'Converter',
+        'Click a node in the tree (or put the cursor in the code) to see it here.': 'Clique em um nó na árvore (ou coloque o cursor no código) para vê-lo aqui.',
+        'depth': 'profundidade',
+        'element': 'elemento',
+        'elements': 'elementos',
+        'attribute': 'atributo',
+        'attributes': 'atributos',
+        'Start and end tag': 'Par de tags',
+        'Root element': 'Elemento raiz',
+        'Default namespace': 'Namespace padrão',
+        'Namespaces': 'Namespaces',
+        'Attribute': 'Atributo',
+        'Element': 'Elemento',
+        'Text': 'Texto',
+        'Comment': 'Comentário',
+        'CDATA section': 'Seção CDATA',
+        'Processing instruction': 'Instrução de processamento',
+        'Path': 'Caminho',
+        'Line': 'Linha',
+        'Namespace': 'Namespace',
+        'none': 'nenhum',
+        'Content': 'Conteúdo',
+        'Attributes': 'Atributos',
+        'Remove the attribute': 'Remover o atributo',
+        'No attributes.': 'Nenhum atributo.',
+        'Add attribute': 'Adicionar atributo',
+        'Add child element': 'Adicionar elemento filho',
+        'Length': 'Comprimento',
+        'Structure': 'Estrutura',
+        'An element at the cursor, around the selected text': 'Um elemento no cursor, em volta do texto selecionado',
+        'Empty element': 'Elemento vazio',
+        'A self-closing element': 'Um elemento que se fecha sozinho',
+        'An attribute (put the cursor inside a start tag)': 'Um atributo (coloque o cursor dentro de uma tag de abertura)',
+        'Text that is not parsed as markup': 'Texto que não é interpretado como marcação',
+        'XML declaration': 'Declaração XML',
+        'The first line: version and encoding': 'A primeira linha: versão e codificação',
+        'A namespace declaration (inside a start tag)': 'Uma declaração de namespace (dentro de uma tag de abertura)',
+        'Schema instance': 'Instância de esquema (xsi)',
+        'xmlns:xsi for xsi:schemaLocation (inside a start tag)': 'xmlns:xsi para xsi:schemaLocation (dentro de uma tag de abertura)',
+        'Characters': 'Caracteres',
+        'As entity references, so they stay readable in any encoding.': 'Como referências de entidade, para continuarem legíveis em qualquer codificação.',
+        'Code': 'Código',
+        'Indent with': 'Indentar com',
+        '2 spaces': '2 espaços',
+        '4 spaces': '4 espaços',
+        'Tabs': 'Tabulações',
+        'Indent every element on its own line (one undo step)': 'Colocar cada elemento em uma linha própria, indentado (um passo para desfazer)',
+        'Remove comments and the white space between elements (one undo step)': 'Remover comentários e os espaços entre elementos (um passo para desfazer)',
+        'Minify': 'Minificar',
+        'Other formats': 'Outros formatos',
+        'As JSON': 'Como JSON',
+        'As YAML': 'Como YAML',
+        'The document is not well-formed - fix the errors above the code first.': 'O documento não está bem formado - corrija primeiro os erros acima do código.',
+        'Attributes become': 'Os atributos viram',
+        ', text next to elements': ', o texto ao lado de elementos',
+        ', repeated elements a list. Comments are left out.': ', elementos repetidos uma lista. Comentários ficam de fora.',
+        'Result': 'Resultado',
+        'Download': 'Baixar',
+
+        /* ---------- Export ---------- */
+        'Close': 'Fechar',
+        'File name': 'Nome do arquivo',
+        'XML as it is (.xml)': 'XML como está (.xml)',
+        'Minified XML (.xml)': 'XML minificado (.xml)',
+        'Converted to JSON (.json)': 'Convertido para JSON (.json)',
+        'Converted to YAML (.yaml)': 'Convertido para YAML (.yaml)',
+        'Plain text (.txt)': 'Texto simples (.txt)',
+        'Download everything at once: XML, minified XML, JSON, YAML and text': 'Baixar tudo de uma vez: XML, XML minificado, JSON, YAML e texto',
+        'All formats (ZIP)': 'Todos os formatos (ZIP)',
+        'The document is not well-formed - fix the errors first': 'O documento não está bem formado - corrija os erros primeiro',
+
+        /* ---------- My documents ---------- */
+        'Search by name': 'Buscar por nome',
+        'Search your documents': 'Buscar nos seus documentos',
+        'Open an XML file from your computer as a new document': 'Abrir um arquivo XML do seu computador como novo documento',
+        'New document': 'Novo documento',
+        'Click a document to open it. They are stored only in this browser - nothing is uploaded. Clearing the browser\'s site data removes them, so download the ones you want to keep.':
+            'Clique em um documento para abri-lo. Eles ficam guardados só neste navegador - nada é enviado. Limpar os dados do site no navegador os apaga, então baixe os que você quer manter.',
+        'Download every document as an .xml file in one ZIP': 'Baixar todos os documentos como arquivos .xml em um ZIP',
+        'Download all (ZIP)': 'Baixar tudo (ZIP)',
+        'Rename': 'Renomear',
+        'Duplicate': 'Duplicar',
+        'Download as .xml': 'Baixar como .xml',
+        'Delete': 'Excluir',
+        'New name': 'Novo nome',
+        'This document is open': 'Este documento está aberto',
+        'Click to open this document': 'Clique para abrir este documento',
+        'No documents yet.': 'Ainda não há documentos.',
+        'The document is removed from this browser for good. Download it first if you want to keep a copy.':
+            'O documento é removido deste navegador para sempre. Baixe-o antes se quiser manter uma cópia.',
+
+        /* ---------- AI Assistant ---------- */
+        'Any AI can write with you - ChatGPT, Claude, Gemini, Copilot.': 'Qualquer IA pode escrever com você - ChatGPT, Claude, Gemini, Copilot.',
+        'Connected AI': 'IA conectada',
+        'Connected to': 'Conectado a',
+        'the AI sends its result there, and it opens here.': 'a IA envia o resultado para lá, e ele abre aqui.',
+        'What': 'O que',
+        'tells the AI': 'diz à IA',
+        'The AI should': 'A IA deve',
+        'Change “': 'Alterar "',
+        '”': '"',
+        'Make a new document': 'Criar um novo documento',
+        'The AI\'s answer (or press Ctrl+V anywhere):': 'A resposta da IA (ou pressione Ctrl+V em qualquer lugar):',
+        'The document travels in the link after the “#”, which no server sees. What you paste into your AI is handled by its provider.':
+            'O documento viaja no link depois do "#", que nenhum servidor vê. O que você cola na sua IA é tratado pelo provedor dela.',
+        'The prompt - copy it with Ctrl+C': 'O prompt - copie com Ctrl+C',
+        'Copy prompt': 'Copiar prompt',
+        'The AI answers with a link: click it, or paste the whole answer below.': 'A IA responde com um link: clique nele, ou cole a resposta inteira abaixo.',
+        'takes it back.': 'volta atrás.',
+        'The AI answers with a link:': 'A IA responde com um link:',
+        'paste its whole answer below': 'cole a resposta inteira abaixo',
+        '(a clicked link opens a separate editor).': '(um link clicado abre um editor separado).',
+        '(no key yet)': '(ainda sem chave)',
+        '(key valid while the editor is open)': '(chave válida enquanto o editor estiver aberto)',
+        'The link could not be read': 'Não foi possível ler o link',
+        'The document in this link is incomplete or damaged. If the AI\'s link was split over several lines (as in a terminal), copy the whole answer and paste it into the editor with Ctrl+V - the editor joins the lines.':
+            'O documento neste link está incompleto ou danificado. Se o link da IA foi dividido em várias linhas (como num terminal), copie a resposta inteira e cole no editor com Ctrl+V - o editor junta as linhas.',
+        'Loading…': 'Carregando…',
+        'Taken over by your editor': 'Recebido pelo seu editor',
+        'The document is now in the XML Editor tab you already had open. Switch to that tab, or open it here.':
+            'O documento agora está na aba do Editor XML que você já tinha aberta. Mude para aquela aba ou abra aqui.',
+        'Copying is not allowed here - it is selected below: press Ctrl+C (⌘C)': 'Não é permitido copiar aqui - está selecionado abaixo: pressione Ctrl+C (⌘C)',
+        'Paste it into your AI and say what it should write.': 'Cole na sua IA e diga o que ela deve escrever.',
+        'Prompt copied - paste it into your AI and say what it should write': 'Prompt copiado - cole na sua IA e diga o que ela deve escrever',
+        'This link is incomplete or damaged - please ask the AI to send it again': 'Este link está incompleto ou danificado - peça à IA para enviá-lo de novo',
+
+        /* ---------- Save to your server ---------- */
+        'Save to your server': 'Salvar no seu servidor',
+        'Webhook address': 'Endereço do webhook',
+        '(optional, sent as "Authorization: Bearer …"; kept until this tab is closed)': '(opcional, enviado como "Authorization: Bearer …"; guardado até fechar esta aba)',
+        'Send automatically a few seconds after each change (otherwise only when you click': 'Enviar automaticamente alguns segundos após cada alteração (senão só quando você clicar em',
+        'or press Ctrl+S)': 'ou pressionar Ctrl+S)',
+        'Only for “': 'Só para "',
+        '” (other documents use the general address)': '" (os outros documentos usam o endereço geral)',
+        'What your server receives': 'O que o seu servidor recebe',
+        'A POST request with JSON (your server must allow CORS from https://xml.giit.ch):': 'Uma requisição POST com JSON (seu servidor precisa permitir CORS de https://xml.giit.ch):',
+        'Embed the editor in your website': 'Incorporar o editor no seu site',
+        'Send now': 'Enviar agora',
+        'Save setting': 'Salvar configuração',
+
+        /* ---------- Help ---------- */
+        'How it works': 'Como funciona',
+        'Keyboard shortcuts': 'Atalhos de teclado',
+        'after a start tag': 'depois de uma tag de abertura',
+        'Adds the matching end tag': 'Adiciona a tag de fechamento correspondente',
+        'Show the cursor\'s node in the tree': 'Mostrar o nó do cursor na árvore',
+        'Indent / outdent': 'Aumentar / diminuir recuo',
+        'Undo / redo': 'Desfazer / refazer',
+        'Save (download .xml, or to your server) / export': 'Salvar (baixar .xml, ou no seu servidor) / exportar',
+        'Search in the tree (outside the code)': 'Buscar na árvore (fora do código)',
+        'The editor never loads a DTD, a schema or an external entity, and it does not expand entities declared in a DTD: their references stay as written.':
+            'O editor nunca carrega uma DTD, um esquema ou uma entidade externa, e não expande entidades declaradas em uma DTD: as referências a elas ficam como estão escritas.',
+
+        'Problems (the first well-formedness error, undeclared namespace prefixes, ids used twice) are listed above the code with line and column - click one to go there.':
+            'Problemas (o primeiro erro de estrutura (boa formação), prefixos de namespace não declarados, ids usados duas vezes) aparecem acima do código com linha e coluna - clique em um para ir até lá.',
+        'https://example.com/api/xml': 'https://example.com/api/xml',
+
+        /* ---------- Messages ---------- */
+        'The browser storage is full - download and delete documents under "My documents"': 'O armazenamento do navegador está cheio - baixe e exclua documentos em "Meus documentos"',
+        'The browser storage is full - delete or download documents under "My documents" first': 'O armazenamento do navegador está cheio - exclua ou baixe documentos em "Meus documentos" primeiro',
+        'The browser storage is full - delete or download some documents first': 'O armazenamento do navegador está cheio - exclua ou baixe alguns documentos primeiro',
+        'The browser storage is full': 'O armazenamento do navegador está cheio',
+        'Nothing to undo': 'Nada para desfazer',
+        'Nothing to redo': 'Nada para refazer',
+        'This changed in the code - wait for the tree, then try again': 'Isto mudou no código - aguarde a árvore e tente de novo',
+        'Editing in the tree - Enter keeps it, Escape cancels': 'Editando na árvore - Enter aplica, Escape cancela',
+        'The code changed meanwhile - the edit was not used': 'O código mudou nesse meio-tempo - a edição não foi usada',
+        'The root element cannot be removed here - edit the code instead': 'O elemento raiz não pode ser removido aqui - edite o código',
+        'Removed - "Undo" brings it back': 'Removido - "Desfazer" traz de volta',
+        'It is the first element already': 'Já é o primeiro elemento',
+        'It is the last element already': 'Já é o último elemento',
+        'The document has an XML declaration already': 'O documento já tem uma declaração XML',
+        'The code is formatted already': 'O código já está formatado',
+        'Code formatted - "Undo" brings the old layout back': 'Código formatado - "Desfazer" traz o layout antigo de volta',
+        'The code is minified already': 'O código já está minificado',
+        'Code minified - "Undo" brings it back': 'Código minificado - "Desfazer" traz de volta',
+        'This document is empty already': 'Este documento já está vazio',
+        'Everything inside the root element is removed; the declaration and the root element stay. "Undo" brings it back as long as the page is open.':
+            'Tudo dentro do elemento raiz é removido; a declaração e o elemento raiz ficam. "Desfazer" traz de volta enquanto a página estiver aberta.',
+        'Everything is removed. "Undo" brings it back as long as the page is open.': 'Tudo é removido. "Desfazer" traz de volta enquanto a página estiver aberta.',
+        'Start over': 'Recomeçar',
+        'The file is larger than 8 MB': 'O arquivo tem mais de 8 MB',
+        'XML pasted from the clipboard - "Undo" brings the old text back': 'XML colado da área de transferência - "Desfazer" traz o texto antigo de volta',
+        'Downloaded': 'Baixado',
+        'Copied to the clipboard': 'Copiado para a área de transferência',
+        'This browser does not allow copying this': 'Este navegador não permite copiar isso',
+        'Code copied': 'Código copiado',
+        '.xml downloaded': '.xml baixado',
+        'Add': 'Adicionar',
+        'Replace': 'Substituir',
+
+        /* ---------- Problems (xml.js) ---------- */
+        'The document is empty - an XML document needs one root element': 'O documento está vazio - um documento XML precisa de um elemento raiz',
+        'The DTD is not loaded: the editor never reads external DTDs or entities, entity references stay as written':
+            'A DTD não é carregada: o editor nunca lê DTDs ou entidades externas, as referências de entidade ficam como estão escritas',
+        'Entities of the DTD are not expanded: references to them stay as written': 'Entidades da DTD não são expandidas: as referências a elas ficam como estão escritas',
+    },
+
+    html: {
+
+        '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
+
+            '<b>Exportar</b> também oferece <b>Abrir em outro editor</b>: o documento é convertido e aberto lá como novo documento. O que o outro formato não comporta é listado antes.',
+        /* Convert */
+        'Attributes become <code>@name</code>, text next to elements <code>#text</code>, repeated elements a list. Comments are left out.':
+            'Os atributos viram <code>@name</code>, o texto ao lado de elementos <code>#text</code>, elementos repetidos uma lista. Comentários ficam de fora.',
+
+        /* AI Assistant */
+        'Click <b>Copy prompt</b>.': 'Clique em <b>Copiar prompt</b>.',
+        'The AI answers with a link: click it, or paste the whole answer below. <b>Undo</b> takes it back.':
+            'A IA responde com um link: clique nele, ou cole a resposta inteira abaixo. <b>Desfazer</b> volta atrás.',
+        'The AI answers with a link: <b>paste its whole answer below</b> (a clicked link opens a separate editor). <b>Undo</b> takes it back.':
+            'A IA responde com um link: <b>cole a resposta inteira abaixo</b> (um link clicado abre um editor separado). <b>Desfazer</b> volta atrás.',
+
+        /* Save to your server */
+        'The editor can send each saved version to your own server (a <b>webhook</b>), so your work is kept where you want it. Nothing is sent until you enter an address here.':
+            'O editor pode enviar cada versão salva para o seu próprio servidor (um <b>webhook</b>), para que o seu trabalho fique onde você quiser. Nada é enviado até você informar um endereço aqui.',
+        'Also possible: <code>?src=&lt;URL of an XML file&gt;</code> opens a file, <code>&amp;webhook=&lt;URL&gt;</code> saves this document there. The editor can also open in a window of its own (<code>?embed=window</code>), and your page can hand it its own AI prompt and a session key so the AI sends its result to your server (<code>xmleditor:ai</code>, <code>xmleditor:key-request</code>) - see "Use the editor on your own website" below the editor. Details are in <a href="/llms.txt">llms.txt</a>.':
+            'Também é possível: <code>?src=&lt;URL of an XML file&gt;</code> abre um arquivo, <code>&amp;webhook=&lt;URL&gt;</code> salva este documento lá. O editor também pode abrir em uma janela própria (<code>?embed=window</code>), e a sua página pode entregar a ele o próprio prompt de IA e uma chave de sessão para que a IA envie o resultado ao seu servidor (<code>xmleditor:ai</code>, <code>xmleditor:key-request</code>) - veja "Use o editor no seu próprio site" abaixo do editor. Os detalhes estão em <a href="/llms.txt">llms.txt</a>.',
+
+        /* Help */
+        '<b>Write</b> XML on the left - or start with <b>New</b> and one of the templates. The tree in the middle shows the elements, attributes, text, comments and CDATA as you type.':
+            '<b>Escreva</b> XML à esquerda - ou comece com <b>Novo</b> e um dos modelos. A árvore no meio mostra os elementos, atributos, texto, comentários e CDATA enquanto você digita.',
+        '<b>Click a node in the tree</b> to go to its place in the code; the cursor in the code shows its node in the tree. Fold elements with the arrow.':
+            '<b>Clique em um nó na árvore</b> para ir ao lugar dele no código; o cursor no código mostra o nó dele na árvore. Recolha elementos com a seta.',
+        '<b>Click a name, an attribute value or a text in the tree</b> to edit it right there. <b>Enter</b> or a click elsewhere writes the change into the code (special characters escaped, one step for Undo), <b>Escape</b> cancels. The buttons of a row add a child element or an attribute, move the element up or down, or remove it.':
+            '<b>Clique em um nome, um valor de atributo ou um texto na árvore</b> para editá-lo ali mesmo. <b>Enter</b> ou um clique em outro lugar grava a alteração no código (caracteres especiais escapados, um passo para Desfazer), <b>Escape</b> cancela. Os botões de uma linha adicionam um elemento filho ou um atributo, movem o elemento para cima ou para baixo, ou o removem.',
+        '<b>Search</b> marks nodes whose name, value or text contains the words; the <b>XPath</b> field marks the nodes an XPath 1.0 expression selects (<code>_:</code> is the default namespace of the root).':
+            '<b>Buscar</b> marca os nós cujo nome, valor ou texto contém as palavras; o campo <b>XPath</b> marca os nós que uma expressão XPath 1.0 seleciona (<code>_:</code> é o namespace padrão da raiz).',
+        '<b>Node</b> on the right shows the selected node; <b>Insert</b> has ready-made pieces; <b>Convert</b> formats, minifies and turns the document into JSON or YAML.':
+            '<b>Nó</b> à direita mostra o nó selecionado; <b>Inserir</b> tem peças prontas; <b>Converter</b> formata, minifica e transforma o documento em JSON ou YAML.',
+        '<b>My documents</b> (the folder button at the top left) lists every document kept in this browser. <b>Export</b> saves XML, minified XML, JSON, YAML or plain text.':
+            '<b>Meus documentos</b> (o botão de pasta no canto superior esquerdo) lista todos os documentos guardados neste navegador. <b>Exportar</b> salva XML, XML minificado, JSON, YAML ou texto simples.',
+        'Comment lines in or out (<code>&lt;!-- --&gt;</code>)': 'Comentar ou descomentar linhas (<code>&lt;!-- --&gt;</code>)',
+    },
+
+    patterns: [
+        /* ---------- Status lines ---------- */
+        ['^The elements are nested more than (\\d+) levels deep - the editor reads at most (\\d+)$', 'Os elementos estão aninhados em mais de $1 níveis - o editor lê no máximo $2'],
+        ['^(\\d+) lines · ([\\d.]+ K?B)(?: · (\\d+) (?:element|elements))?$', (m, l, kb, e) => `${l} ${getPlural(l, 'linha', 'linhas')} · ${kb}${e ? ` · ${e} ${getPlural(e, 'elemento', 'elementos')}` : ''}`],
+        ['^([\\d,]+) bytes$', (m, b) => `${formatThousands(b)} bytes`],
+        ['^\\d{1,3}(?:,\\d{3})+$', m => formatThousands(m)],
+        ['^(\\d+) (?:child|children)$', (m, k) => `${k} ${getPlural(k, 'filho', 'filhos')}`],
+        ['^(\\d+) (?:match|matches)$', (m, k) => `${k} ${getPlural(k, 'resultado', 'resultados')}`],
+        ['^(\\d+) found$', (m, k) => `${k} ${getPlural(k, 'encontrado', 'encontrados')}`],
+        ['^(\\d+) (?:element|elements) · (\\d+) (?:attribute|attributes) ·$', (m, e, a) => `${e} ${getPlural(e, 'elemento', 'elementos')} · ${a} ${getPlural(a, 'atributo', 'atributos')} ·`],
+        ['^(?:element|elements) ·$', 'elementos ·'],
+        ['^(?:attribute|attributes) ·$', 'atributos ·'],
+        ['^(\\d+) (?:child element|child elements)$', (m, k) => `${k} ${getPlural(k, 'elemento filho', 'elementos filhos')}`],
+        ['^(\\d+) (?:character|characters)$', (m, k) => `${k} ${getPlural(k, 'caractere', 'caracteres')}`],
+        ['^ZIP downloaded with (\\d+) files$', 'ZIP com $1 arquivos baixado'],
+
+        /* Problems above the code */
+        ['^(\\d+) (?:error|errors)$', (m, k) => `${k} ${getPlural(k, 'erro', 'erros')}`],
+        ['^· (\\d+) (?:note|notes)$', (m, k) => `· ${k} ${getPlural(k, 'aviso', 'avisos')}`],
+        ['^(\\d+) (?:note|notes)$', (m, k) => `${k} ${getPlural(k, 'aviso', 'avisos')}`],
+        ['^Line (\\d+):(\\d+)$', 'Linha $1:$2'],
+        ['^Not well-formed: (.*)$', 'Não está bem formado: $1'],
+        ['^The namespace prefix "(.+)" is not declared - add (.+)$', 'O prefixo de namespace "$1" não está declarado - adicione $2'],
+        ['^The id "(.*)" is used twice$', 'O id "$1" é usado duas vezes'],
+
+        /* ---------- Tree ---------- */
+        ['^"(.*)" is not a valid XML name - names start with a letter or _ and have no spaces$', '"$1" não é um nome XML válido - nomes começam com uma letra ou _ e não têm espaços'],
+        ['^The element already has an attribute "(.+)"$', 'O elemento já tem um atributo "$1"'],
+        ['^Attribute "(.+)" removed - "Undo" brings it back$', 'Atributo "$1" removido - "Desfazer" traz de volta'],
+        ['^<(.+)> removed - "Undo" brings it back$', '<$1> removido - "Desfazer" traz de volta'],
+
+        /* ---------- Top bar and My documents ---------- */
+        ['^"(.+)" is open\\. My documents: open, rename, duplicate or delete your documents \\(Ctrl\\+O\\)$', '"$1" está aberto. Meus documentos: abra, renomeie, duplique ou exclua seus documentos (Ctrl+O)'],
+        ['^Start "(.+)" over\\?$', 'Recomeçar "$1"?'],
+        ['^Start "(.+)" over$', 'Recomeçar "$1"'],
+        ['^(\\d+) (?:document|documents) · (.+) in this browser$', (m, k, s) => `${k} ${getPlural(k, 'documento', 'documentos')} · ${formatSize(s)} neste navegador`],
+        ['^No document named "(.*)"\\.$', 'Nenhum documento chamado "$1".'],
+        ['^Open now · (.+)$', (m, s) => `Aberto agora · ${formatSize(s)}`],
+        ['^(just now|yesterday|\\d+ min ago|\\d+ h ago|[A-Z][a-z]{2} \\d{1,2}, \\d{4}) · (.+)$', (m, w, s) => `${formatTime(w)} · ${formatSize(s)}`],
+        ['^(.+) \\(open now\\)$', '$1 (aberto agora)'],
+        ['^ZIP with (\\d+) (?:document|documents) downloaded$', (m, k) => `ZIP com ${k} ${getPlural(k, 'documento', 'documentos')} baixado`],
+
+        /* ---------- AI Assistant ---------- */
+        ['^Part (\\d+) of (\\d+) received$', 'Parte $1 de $2 recebida'],
+        ['^Open the other (?:link|links) from the AI too \\(still missing: part (.+)\\)\\.$',
+            'Abra também os outros links da IA (ainda falta: parte $1).'],
+        ['^Part (\\d+) of (\\d+) received - paste the other (?:link|links) too \\(missing: (.+)\\)$', 'Parte $1 de $2 recebida - cole também os outros links (falta: $3)'],
+        ['^The AI sends the document to (.+) with a key that only works for this session\\. What you paste into your AI is handled by its provider\\.$',
+            'A IA envia o documento para $1 com uma chave que só vale para esta sessão. O que você cola na sua IA é tratado pelo provedor dela.'],
+        ['^The AI sends its result to (.+) by itself, and it opens here\\. If it answers with a link, paste its answer below\\.$',
+            'A IA envia o resultado sozinha para $1, e ele abre aqui. Se ela responder com um link, cole a resposta abaixo.'],
+        ['^No key from (.+) - the prompt asks the AI for a link instead$', 'Nenhuma chave de $1 - o prompt pede um link à IA em vez disso'],
+        ['^Prompt copied - the AI sends its result to (.+)$', 'Prompt copiado - a IA envia o resultado para $1'],
+
+        /* ---------- Messages with names ---------- */
+        ['^"(.+)" is empty now - "Undo" brings it back$', '"$1" está vazio agora - "Desfazer" traz de volta'],
+        ['^"(.+)" opened$', '"$1" aberto'],
+        ['^New document "(.+)" - your other documents are under "My documents"$', 'Novo documento "$1" - seus outros documentos estão em "Meus documentos"'],
+        ['^New document "(.+)" from the AI - your other documents are unchanged$', 'Novo documento "$1" da IA - seus outros documentos não mudaram'],
+        ['^"(.+)" is not an XML file$', '"$1" não é um arquivo XML'],
+        ['^Opened "(.+)" - it is now in "My documents"$', '"$1" aberto - agora ele está em "Meus documentos"'],
+        ['^Document received - the editor found (\\d+) (?:problem|problems), see above the code$', (m, k) => `Documento recebido - o editor encontrou ${k} ${getPlural(k, 'problema', 'problemas')}, veja acima do código`],
+        ['^"(.+)" changed by the AI - "Undo" takes it back$', '"$1" alterado pela IA - "Desfazer" volta atrás'],
+        ['^"(.+)" duplicated$', '"$1" duplicado'],
+        ['^Delete "(.+)"\\?$', 'Excluir "$1"?'],
+        ['^"(.+)" deleted$', '"$1" excluído'],
+        /* last: "Open <name>" on a card in My documents */
+        ['^Open (.+)$', 'Abrir $1'],
+    ],
+};

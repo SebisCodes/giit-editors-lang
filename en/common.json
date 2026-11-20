@@ -1,0 +1,23 @@
+{
+  "footer_all": "All giit editors",
+  "footer_binding": "Binding (German):",
+  "footer_editors": "Editors",
+  "footer_legal": "Legal",
+  "footer_license": "Open source under the {license}",
+  "footer_llms": "llms.txt for AI assistants",
+  "footer_shls": "SHLS by {author}",
+  "footer_source": "Source code",
+  "source_on_github": "Source code on GitHub",
+  "country": "Switzerland",
+  "imprint": "Imprint",
+  "privacy": "Privacy policy",
+  "terms": "Terms of use",
+  "language": "Language",
+  "theme": {
+    "group": "Color theme",
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "auto_title": "Same as your system setting",
+    "auto_label": "Automatic theme (system setting)"
+  }
+}

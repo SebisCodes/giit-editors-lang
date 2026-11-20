@@ -1,0 +1,183 @@
+{
+  "title": "QR-Code-Generator mit Logo, SVG und PDF | giit.ch",
+  "description": "QR-Code-Generator mit Logo: Links, WLAN, Kontakte, SEPA und Schweizer QR-Rechnung. Scan-Prüfung im Editor. SVG, PNG, PDF, EPS. Ohne Anmeldung.",
+  "og_title": "QR-Code-Generator mit Logo, SVG und PDF | giit.ch",
+  "og_description": "QR-Code-Generator mit Logo: Links, WLAN, Kontakte, SEPA und Schweizer QR-Rechnung. Scan-Prüfung im Editor. SVG, PNG, PDF, EPS. Ohne Anmeldung.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://qr.giit.ch/de/#app",
+        "name": "QR Editor",
+        "alternateName": "QR-Code-Generator",
+        "url": "https://qr.giit.ch/de/",
+        "description": "QR-Code-Generator mit Logo: Links, WLAN, Kontakte, SEPA und Schweizer QR-Rechnung. Scan-Prüfung im Editor. SVG, PNG, PDF, EPS. Ohne Anmeldung.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Alle (Webbrowser)",
+        "inLanguage": "de",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://qr.giit.ch/img/og.png",
+        "featureList": [
+          "Statische QR-Codes ohne Ablaufdatum: Der Code enthält den echten Inhalt, ohne Weiterleitung, ohne Konto",
+          "Links, Text, WLAN, Kontakte (vCard und MeCard), E-Mail, SMS, Telefon, Ort, Kalendertermine, Bitcoin und Ethereum",
+          "SEPA-Zahlungen (EPC-GiroCode) und Schweizer QR-Rechnungen mit Prüfung von IBAN, QR-Referenz und Gläubigerreferenz",
+          "Farben, lineare und radiale Verläufe, transparenter Hintergrund",
+          "Sieben Modulformen, vier Augenrahmen und fünf Augenmitten in eigener Farbe",
+          "Logo aus 11 eingebauten Symbolen oder deinem eigenen Bild, geprüft gegen die Fehlerkorrektur",
+          "Beschriftung und Rahmen",
+          "Der angezeigte Code wird normal, klein und unscharf zurückgelesen. Stapel-Exporte werden nicht automatisch per Scan geprüft.",
+          "Prüfung von Kontrast, Ruhezone und Druckgrösse",
+          "Export als SVG, PNG bis 8192 Pixel mit dpi, JPEG, WebP, PDF und EPS (Vektoren mit Verläufen)",
+          "QR-Codes aus Bildern, der Zwischenablage und mit der Kamera lesen",
+          "Viele Codes auf einmal aus einer CSV-Tabelle, als ZIP oder ein PDF",
+          "Viele Codes im Browser behalten",
+          "Jede KI kann über Links im Editor schreiben; in die eigene Website einbetten"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Laufen meine QR-Codes ab?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nein. Der QR-Editor erstellt statische Codes: Der Link, das WLAN-Passwort oder der Kontakt steckt im Code selbst, nicht hinter einer Weiterleitung auf unserem Server. Sie funktionieren, solange der Inhalt gültig ist - ohne Konto, Abo oder Scan-Limit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ist das wirklich kostenlos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Jede Art von Inhalt, jede Designoption, der Export als SVG, PDF und EPS, die Scan-Prüfung und viele Codes aus einer Tabelle sind kostenlos, ohne Anmeldung, Werbung oder Wasserzeichen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Werden meine Daten an einen Server gesendet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nein. Die Codes werden in deinem Browser erstellt, geprüft und exportiert, und auch Bilder und das Kamerabild, das du scannst, werden dort gelesen. An einen Server geht ein QR-Dokument nur, wenn du einen Webhook zu deinem eigenen Server einrichtest, wenn eine Website, die den Editor einbindet, es auf ihrem eigenen Server speichert, oder wenn eine andere Website es per Formular hier öffnet (post.php) - unser Server gibt es dann direkt an deinen Browser weiter, ohne es zu speichern. Wie bei jeder Website protokolliert der Server jeden Aufruf, und wir zählen Seitenaufrufe anonym - siehe Datenschutzerklärung."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Lässt sich mein QR-Code mit Logo noch scannen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Der Editor sagt es dir. Er vergleicht den Teil des Codes, den das Logo verdeckt, mit dem, was die Fehlerkorrektur reparieren kann, und liest den fertigen Code zurück - normal, klein und unscharf. Lässt er sich nicht zuverlässig scannen, siehst du es, bevor du druckst."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welches Dateiformat nehme ich für den Druck?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nutze SVG, PDF oder EPS für skalierbare QR-Formen. Hochgeladene Bildlogos und manche Beschriftungen in PDF/EPS werden als Rasterbilder ausgegeben. Wähle bei PNG Pixelbreite und dpi passend zur Druckgrösse."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kann ich eine Schweizer QR-Rechnung oder einen SEPA-Zahlungscode erstellen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Die Formulare prüfen die IBAN, die QR-IBAN mit ihrer QR-Referenz, die Gläubigerreferenz (RF) und unterstützte Feldlängen. Die QR-Rechnung wird mit Schweizerkreuz und Fehlerkorrektur M gezeichnet, wie es der Standard verlangt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kann er QR-Codes lesen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Öffne ein Bild, zieh es ins Fenster oder füge es ein, oder nutze die Kamera mit «Code lesen». Der Inhalt wird ein neuer Code, den du ändern kannst."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie gross muss ein gedruckter QR-Code sein?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Etwa ein Zehntel des Scan-Abstands: 2 cm für 20 cm, 10 cm für einen Meter. Der Tab Prüfen rechnet es aus und warnt, wenn ein Modul (ein Quadrat des Codes) kleiner als 0.4 mm wird."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>QR-Codes kostenlos erstellen, ohne Ablaufdatum - gestaltet, geprüft und privat</h2>\n        <p>Der QR-Editor erstellt QR-Codes für Links, WLAN, Kontakte, Termine, E-Mails, SMS, Orte und Zahlungen. Du gestaltest sie mit Farben, Verläufen, Formen, einem Logo und einer Beschriftung. Der angezeigte Code wird normal, klein und unscharf zurückgelesen. Stapel-Exporte werden nicht automatisch per Scan geprüft. Exportiere SVG, PDF und EPS für den Druck oder PNG bis 8192 Pixel Breite.</p>\n        <p>Die Codes sind statisch: Der Inhalt steckt im Code selbst, nicht hinter einer Weiterleitung, die aufhört zu funktionieren, wenn ein Probeabo endet. Es gibt keine Anmeldung, keine Werbung und kein Scan-Limit, und alles geschieht in deinem Browser: Was du tippst oder scannst, bleibt dort und wird nicht auf unserem Server gespeichert.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Was der QR-Editor kann</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Zwölf Arten von Inhalt</h3><p>Links, Text, WLAN (WPA, WEP, offen, versteckt), Kontakte als vCard oder MeCard, E-Mail, SMS, Telefon, Ort, Kalendertermine, Bitcoin und Ethereum, SEPA-Zahlungen (EPC-GiroCode) und die Schweizer QR-Rechnung - jede Art mit Formular und Prüfungen.</p></div>\n            <div class=\"tile\"><h3>Design</h3><p>Farben, lineare und radiale Verläufe, transparenter Hintergrund, sieben Modulformen, vier Augenrahmen und fünf Augenmitten in eigener Farbe, ein Logo aus eingebauten Symbolen oder deinem Bild, Beschriftung und Rahmen.</p></div>\n            <div class=\"tile\"><h3>Per Scan geprüft</h3><p>Der angezeigte Code wird normal, klein und unscharf zurückgelesen. Stapel-Exporte werden nicht automatisch per Scan geprüft. Kontrast, Ruhezone und das Logo im Vergleich zur Fehlerkorrektur werden geprüft, und die Druckgrösse ergibt sich aus dem Scan-Abstand.</p></div>\n            <div class=\"tile\"><h3>Export für Druck und Web</h3><p>Nutze SVG, PDF oder EPS für skalierbare QR-Formen. Hochgeladene Bildlogos und manche Beschriftungen in PDF/EPS werden als Rasterbilder ausgegeben. Wähle bei PNG Pixelbreite und dpi passend zur Druckgrösse. PNG bis 8192 Pixel mit eingetragenen dpi, JPEG und WebP. Kostenlos, ohne Anmeldung.</p></div>\n            <div class=\"tile\"><h3>Viele Codes auf einmal</h3><p>Schreib Platzhalter wie <code>{{url}}</code> in den Inhalt, füge eine Tabelle ein und lade ein ZIP mit SVG- oder PNG-Dateien herunter oder ein PDF mit einem Code pro Seite.</p></div>\n            <div class=\"tile\"><h3>QR-Codes lesen</h3><p>Öffne ein Bild, zieh es ins Fenster oder füge es ein, oder scanne mit der Kamera - auch helle Codes auf dunklem Hintergrund. Der Inhalt wird ein Code, den du ändern kannst.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Warum statische Codes</h2>\n        <p>Viele «kostenlose» QR-Code-Generatoren erstellen dynamische Codes: Der Code enthält einen kurzen Link auf ihren Server, der zu deiner Adresse weiterleitet. Endet das Probeabo oder ist ein Scan-Limit erreicht, schalten sie die Weiterleitung ab oder zeigen zuerst Werbung - und jeder gedruckte Code funktioniert nicht mehr. Ein statischer Code enthält die Adresse, das WLAN-Passwort oder den Kontakt selbst und funktioniert darum weiter, ohne dass jemand dazwischensteht. Der QR-Editor erstellt nur statische Codes und warnt, wenn der Inhalt ein Linkverkürzer ist.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>So funktioniert es</h2>\n        <ol class=\"steps\">\n            <li><b>Wählen</b> - wähle unter «Neu» eine Art von Code und füll das Formular aus, oder tippe den Inhalt.</li>\n            <li><b>Gestalten und prüfen</b> - ändere Farben, Formen, Logo und Beschriftung; die Anzeige über dem Code zeigt, ob er sich noch scannen lässt.</li>\n            <li><b>Exportieren</b> - lade SVG, PDF, EPS oder PNG herunter, oder erstelle viele Codes aus einer Tabelle.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Den Editor auf deiner eigenen Website nutzen</h2>\n        <p>Setze den Editor mit einem iframe oder in einem eigenen Fenster in deine eigene Website. Deine Seite übergibt ihm das Dokument, erhält jede Änderung und jedes Speichern zurück und kann eine KI ihre Ergebnisse an deinen Server senden lassen. Ohne Anmeldung, ohne Schlüssel.</p>\n        <p><a href=\"/de/embed/\"><b>Den Editor in deine Website einbinden</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Häufige Fragen</h2>\n        <div class=\"questions\">\n            <details><summary>Laufen meine QR-Codes ab?</summary><p>Nein. Der QR-Editor erstellt statische Codes: Der Link, das WLAN-Passwort oder der Kontakt steckt im Code selbst, nicht hinter einer Weiterleitung auf unserem Server. Sie funktionieren, solange der Inhalt gültig ist - ohne Konto, Abo oder Scan-Limit.</p></details>\n            <details><summary>Ist das wirklich kostenlos?</summary><p>Ja. Jede Art von Inhalt, jede Designoption, der Export als SVG, PDF und EPS, die Scan-Prüfung und viele Codes aus einer Tabelle sind kostenlos, ohne Anmeldung, Werbung oder Wasserzeichen.</p></details>\n            <details><summary>Werden meine Daten an einen Server gesendet?</summary><p>Nein. Die Codes werden in deinem Browser erstellt, geprüft und exportiert, und auch Bilder und das Kamerabild, das du scannst, werden dort gelesen. An einen Server geht ein QR-Dokument nur, wenn du einen Webhook zu deinem eigenen Server einrichtest, wenn eine Website, die den Editor einbindet, es auf ihrem eigenen Server speichert, oder wenn eine andere Website es per Formular hier öffnet (post.php) - unser Server gibt es dann direkt an deinen Browser weiter, ohne es zu speichern. Wie bei jeder Website protokolliert der Server jeden Aufruf, und wir zählen Seitenaufrufe anonym - siehe <a href=\"/datenschutz.html\">Datenschutzerklärung</a>.</p></details>\n            <details><summary>Lässt sich mein QR-Code mit Logo noch scannen?</summary><p>Der Editor sagt es dir. Er vergleicht den Teil des Codes, den das Logo verdeckt, mit dem, was die Fehlerkorrektur reparieren kann, und liest den fertigen Code zurück - normal, klein und unscharf. Lässt er sich nicht zuverlässig scannen, siehst du es, bevor du druckst.</p></details>\n            <details><summary>Welches Dateiformat nehme ich für den Druck?</summary><p>Nutze SVG, PDF oder EPS für skalierbare QR-Formen. Hochgeladene Bildlogos und manche Beschriftungen in PDF/EPS werden als Rasterbilder ausgegeben. Wähle bei PNG Pixelbreite und dpi passend zur Druckgrösse.</p></details>\n            <details><summary>Kann ich eine Schweizer QR-Rechnung oder einen SEPA-Zahlungscode erstellen?</summary><p>Ja. Die Formulare prüfen die IBAN, die QR-IBAN mit ihrer QR-Referenz, die Gläubigerreferenz (RF) und unterstützte Feldlängen. Die QR-Rechnung wird mit Schweizerkreuz und Fehlerkorrektur M gezeichnet, wie es der Standard verlangt.</p></details>\n            <details><summary>Kann er QR-Codes lesen?</summary><p>Ja. Öffne ein Bild, zieh es ins Fenster oder füge es ein, oder nutze die Kamera mit «Code lesen». Der Inhalt wird ein neuer Code, den du ändern kannst.</p></details>\n            <details><summary>Wie gross muss ein gedruckter QR-Code sein?</summary><p>Etwa ein Zehntel des Scan-Abstands: 2 cm für 20 cm, 10 cm für einen Meter. Der Tab Prüfen rechnet es aus und warnt, wenn ein Modul (ein Quadrat des Codes) kleiner als 0.4 mm wird.</p></details>\n        </div>\n    </section>",
+  "name": "QR-Editor",
+  "embed": {
+    "title": "QR-Editor in die eigene Website einbinden | giit.ch",
+    "description": "Für Entwickler: den QR-Editor per iframe in deine Website einbinden, Dokumente per postMessage oder Webhook austauschen und eine KI anbinden. Kostenlos.",
+    "og_title": "Den QR-Editor in deine Website einbinden",
+    "og_description": "Für Entwickler: den QR-Editor per iframe in deine Website einbinden, Dokumente per postMessage oder Webhook austauschen und eine KI anbinden. Kostenlos.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://qr.giit.ch/de/embed/#article",
+          "headline": "Den QR-Editor in deine Website einbinden",
+          "description": "Für Entwickler: den QR-Editor per iframe in deine Website einbinden, Dokumente per postMessage oder Webhook austauschen und eine KI anbinden. Kostenlos.",
+          "inLanguage": "de",
+          "url": "https://qr.giit.ch/de/embed/",
+          "mainEntityOfPage": "https://qr.giit.ch/de/embed/",
+          "image": "https://qr.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "QR-Editor",
+            "url": "https://qr.giit.ch/de/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "QR-Editor",
+              "item": "https://qr.giit.ch/de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Einbinden",
+              "item": "https://qr.giit.ch/de/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Den QR-Editor in deine Website einbinden",
+    "intro": "<p>Für Entwicklerinnen und Entwickler: So bindest du den QR-Editor in deine eigene Seite ein - in einem iframe, in einem eigenen Fenster oder als reine Leseansicht - und tauschst Dokumente, gespeicherte Fassungen und KI-Ergebnisse zwischen dem Editor und deinem Server aus. Du brauchst keine Anmeldung und keinen Schlüssel von uns.</p>",
+    "body": "<p>Jede https-Seite (und localhost) kann den Editor mit einem <code>&lt;iframe&gt;</code> und <code>?embed=1</code> einbetten - ohne Anmeldung, ohne Schlüssel. Eingebettet blendet der Editor den Seitentext aus und zeigt einen Speicherschaltfläche. Füge <code>camera</code> zum <code>allow</code> des iframes hinzu, wenn darin Codes gescannt werden sollen.</p>\n        <h2>1. Eine Datei über einen Link öffnen, auf deinem Server speichern</h2>\n        <p><code>src=</code> öffnet eine .qr-Datei (dein Server muss CORS erlauben), <code>webhook=</code> lässt «Speichern» (Ctrl+S) das QR-Dokument an diese Adresse senden. Füge <code>&amp;auto</code> hinzu, um nach jeder Änderung zu speichern.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://qr.giit.ch/de/?embed=1&amp;src=https://your-site.com/codes/shop.qr&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Der Webhook erhält eine POST-Anfrage mit JSON <code>{ editor: \"qr\", event: \"save\", id, name, content, updated }</code>. Ein Link enthält kein Token (es würde in Serverprotokollen und im Browserverlauf landen). Ein Webhook in der Adresse eignet sich deshalb für eine Speicheradresse, die keines benötigt, etwa auf localhost oder in deinem Intranet. Für einen öffentlichen Server übergib den Webhook mit einem Token in <code>qreditor:load</code> (<code>hook: { url, token }</code>) und prüfe es, wie dieses kleine PHP-Skript:</p>\n        <pre class=\"example\"><code>&lt;?php\n// save.php: one document; replace the token and storage path for your application.\nheader(&#x27;Access-Control-Allow-Origin: https://qr.giit.ch&#x27;);\nheader(&#x27;Vary: Origin&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Content-Type: application/json&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) {\n    http_response_code(204);\n    exit;\n}\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] !== &#x27;POST&#x27;) {\n    http_response_code(405);\n    header(&#x27;Allow: POST, OPTIONS&#x27;);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;POST required&#x27;]);\n    exit;\n}\n$token = &#x27;replace-with-a-random-secret&#x27;;\nif (!hash_equals(&#x27;Bearer &#x27; . $token, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;)) {\n    http_response_code(401);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid token&#x27;]);\n    exit;\n}\n$data = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\nif (!is_array($data) || ($data[&#x27;editor&#x27;] ?? &#x27;&#x27;) !== &#x27;qr&#x27;\n    || ($data[&#x27;event&#x27;] ?? &#x27;&#x27;) !== &#x27;save&#x27; || !is_string($data[&#x27;content&#x27;] ?? null)) {\n    http_response_code(400);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid QR document&#x27;]);\n    exit;\n}\n// Use a fixed path outside the public web directory, after checking access.\nif (file_put_contents(dirname(__DIR__) . &#x27;/shop.qr&#x27;, $data[&#x27;content&#x27;], LOCK_EX) === false) {\n    http_response_code(500);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Could not save&#x27;]);\n    exit;\n}\necho json_encode([&#x27;ok&#x27; =&gt; true]);</code></pre>\n        <p><code>content</code> ist das QR-Dokument (Designzeilen, <code>---</code>, der Inhalt).</p>\n        <p>Dein Webhook muss CORS von <code>https://qr.giit.ch</code> erlauben, einschliesslich <code>OPTIONS</code>-Anfragen und des Headers <code>Content-Type</code>; bei einem Token auch <code>Authorization</code>. Ersetze das Beispiel-Token durch ein zufälliges Geheimnis und verwende die Zugriffsprüfungen und den Speicherort deiner Anwendung.</p>\n        <h2>2. Deine Seite verwaltet das Dokument (postMessage)</h2>\n        <p>Der Editor meldet <code>qreditor:ready</code>, deine Seite antwortet mit <code>qreditor:load</code>, der Editor meldet <code>qreditor:loaded</code>, <code>qreditor:change</code> bei echten Änderungen und <code>qreditor:save</code>, wenn gespeichert wird. Deine Seite kann <code>qreditor:get</code> (der aktuelle Stand) oder <code>qreditor:save</code> (Speichern drücken) senden. Ein blosser Inhalt ohne Designzeilen ist ein gültiges Dokument.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://qr.giit.ch/de/?embed=1&quot; allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://qr.giit.ch&#x27;;\naddEventListener(&#x27;message&#x27;, e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;qreditor:ready&#x27;)\n    ed.contentWindow.postMessage({ type: &#x27;qreditor:load&#x27;, name: &#x27;Table 12&#x27;,\n      content: &#x27;color: #1d2b53\\ncaption: Table 12\\n---\\nhttps://example.com/menu?table=12&#x27; }, ORIGIN);\n  if (m.type === &#x27;qreditor:save&#x27;) saveOnYourServer(m.name, m.content);\n});\n&lt;/script&gt;</code></pre>\n        <h2>3. In einem eigenen Fenster, und KI über deinen Server</h2>\n        <p><code>window.open(\"https://qr.giit.ch/de/?embed=window\", \"qreditor-17\")</code> öffnet den vollständigen Editor in einem eigenen Fenster, mit denselben Nachrichten. Deine Seite kann dem Editor auch einen eigenen KI-Prompt, eine https-Adresse auf deiner Website und einen Schlüssel für diese Editor-Sitzung übergeben (<code>ai: { label, prompt, endpoint, key }</code> in <code>qreditor:load</code> oder <code>qreditor:ai</code>); die KI schickt ihr Ergebnis dann dorthin. Der Editor sendet den Schlüssel nie selbst und speichert ihn nie.</p>\n        <h2>Einen Code nur anzeigen (Viewer)</h2>\n        <p><code>?viewer=1</code> zeigt nur den fertigen Code mit Herunterladen und Exportieren: Nichts lässt sich ändern, und nichts wird gespeichert. Das Dokument kommt über einen Link (<code>#b64=</code>, <code>#qr=</code>, <code>?src=</code>), von deiner Seite mit <code>qreditor:load</code> oder per POST an <code>post.php</code> (Feld <code>content</code> oder <code>b64</code>, optional <code>name</code>).</p>\n        <p class=\"muted\">Das ganze Protokoll steht in <a href=\"/llms.txt\">llms.txt</a> - gib es einer KI, und sie baut die Anbindung für dein System. Die anderen giit-Editoren funktionieren gleich, mit ihrem eigenen Präfix - <a href=\"https://editors.giit.ch/de/\">editors.giit.ch</a>.</p>",
+    "crumb": "Einbinden",
+    "crumb_nav": "Navigationspfad",
+    "open": "Editor öffnen"
+  }
+}

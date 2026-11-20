@@ -1,0 +1,181 @@
+{
+  "title": "Free TOML Editor Online - Tree, Validate, Convert | giit.ch",
+  "description": "Free TOML editor in your browser: edit TOML as code and as a tree with comments kept, find errors by line, convert to JSON, YAML, CSV or XML. No sign-up.",
+  "og_title": "Free TOML Editor Online - Tree, Validate, Convert | giit.ch",
+  "og_description": "Free TOML editor in your browser: edit TOML as code and as a tree with comments kept, find errors by line, convert to JSON, YAML, CSV or XML. No sign-up.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://toml.giit.ch/#app",
+        "name": "TOML Editor",
+        "url": "https://toml.giit.ch/",
+        "description": "Free TOML editor in your browser: edit TOML as code and as a tree with comments kept, find errors by line, convert to JSON, YAML, CSV or XML. No sign-up.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://toml.giit.ch/img/og.png",
+        "featureList": [
+          "TOML 1.0 code with syntax highlighting",
+          "Foldable tree with types, counts and the path of each value",
+          "Tables, arrays of tables, dotted keys and inline tables shown as one data tree",
+          "Dates and times marked with their kind",
+          "Edit keys and values right in the tree, comments and formatting kept",
+          "Add, duplicate, move and remove entries; a key renamed everywhere it is named",
+          "Syntax errors with line and column, as strict as TOML 1.0",
+          "Check against a JSON Schema",
+          "Format with one layout, comments kept",
+          "Convert to JSON, YAML, CSV and XML",
+          "Keep many documents in the browser",
+          "Save to your own server with a webhook, or embed the editor in your website",
+          "Any AI can write in the editor through links"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is my data uploaded?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The editor runs in your browser and keeps your documents there, not on our server. A document goes to a server only if you set up a webhook to your own server, if a website that embeds the editor saves it on its own server, or if another website opens it here with a form (post.php) - our server then passes it straight to your browser without storing it. As on any website, the server logs each visit, and we count page views anonymously - see the privacy policy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my comments kept when I edit in the tree?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A change in the tree is written into the code at exactly that place; comments, blank lines and the rest of the formatting stay as they are. Undo takes every change back."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which TOML does it read?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TOML 1.0: tables, arrays of tables, dotted keys, inline tables, the four kinds of strings, integers in decimal, hexadecimal, octal and binary, floats with inf and nan, and dates and times. It accepts what Python's tomllib accepts and reports everything else with line and column - a key or a table defined twice, a number with a leading zero, a date that does not exist."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What about a table that is written in several places?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The tree shows it once, with all its keys. Renaming it changes every header and dotted key that names it. A change that cannot be made in place - moving a table that is spread over the file, for example - is refused with a message instead of rewriting your file."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can it convert TOML to JSON, YAML, CSV or XML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, in the Convert tab or under Export; dates and times become text. JSON, YAML, CSV and XML files you open are converted to TOML. TOML has no null, so empty values are left out, with a note."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where are my documents saved?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only in your browser. Click the folder button at the top left (My documents) to open, rename, duplicate, download or delete them. Clearing your browser's site data removes them, so download the ones you want to keep - or let the editor send them to your own server (\"Save to server\")."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can an AI write in the TOML Editor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, any AI - ChatGPT, Claude, Gemini, Copilot or the AI in your coding tool. Click \"AI Assistant\", then \"Copy prompt\", paste it into your AI and say what it should change. The AI answers with a link; click it and the data appears in your editor. \"Undo\" takes every change back."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the TOML Editor cost anything?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The editor is free, without ads and without sign-up."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Edit TOML online, as code and as a tree</h2>\n        <p>The TOML Editor shows your TOML code and the data as a tree side by side: <code>pyproject.toml</code>, <code>Cargo.toml</code>, the settings of Hugo, Netlify or your own app. Fold tables and arrays, see the type and the number of entries of every value, and change keys and values right in the tree - the change goes into the code at exactly that place, and your comments and formatting stay. Errors are listed with line and column, from a key defined twice to a date that does not exist, and the data can be checked against a JSON Schema and converted to JSON, YAML, CSV or XML.</p>\n        <p>Everything runs in your browser. Your documents are kept there, not on our server, and there is no sign-up and no advertising.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>What the editor can do</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Code and tree</h3><p>Highlighted TOML 1.0 on the left, the foldable tree in the middle. A click in the tree jumps to the code, the code cursor marks its value in the tree.</p></div>\n            <div class=\"tile\"><h3>Edit in the tree, keep the comments</h3><p>Change keys and values, add, duplicate, move and remove entries, change a type - each as a small edit of the code, so comments and blank lines stay where they are.</p></div>\n            <div class=\"tile\"><h3>Errors you can find</h3><p>Keys and tables defined twice, text without quotes, numbers with a leading zero, dates that do not exist and values that do not fit your JSON Schema, each with its line and column.</p></div>\n            <div class=\"tile\"><h3>Tables in many places</h3><p>Tables like <code>[server]</code>, arrays of tables like <code>[[servers]]</code>, dotted keys like <code>server.port</code> and inline tables like <code>{ x = 1 }</code> make one tree. A renamed key changes in every header that names it.</p></div>\n            <div class=\"tile\"><h3>Convert</h3><p>Format with one layout, or convert to JSON, YAML, CSV (an array of tables is a table) and XML. JSON, YAML, CSV and XML files open as TOML.</p></div>\n            <div class=\"tile\"><h3>Many documents</h3><p>Keep any number of documents in your browser, with their own undo history, and download them all as a ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>How it works</h2>\n        <ol class=\"steps\">\n            <li><b>Start</b> - choose a template under \"New\" (pyproject.toml, Cargo.toml, a Hugo site, Netlify), open a .toml file or paste TOML.</li>\n            <li><b>Edit</b> - in the code or in the tree; both always show the same data.</li>\n            <li><b>Check and export</b> - fix the listed problems, choose a schema, and download TOML, JSON, YAML, CSV or text.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Use the editor on your own website</h2>\n        <p>Put the editor into your own website with an iframe or in a window of its own. Your page hands it the document, gets every change and every save back, and can let an AI send its results to your server. No sign-up, no key.</p>\n        <p><a href=\"/embed/\"><b>Embed the editor on your website</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Frequently asked questions</h2>\n        <div class=\"questions\">\n            <details><summary>Is my data uploaded?</summary><p>No. The editor runs in your browser and keeps your documents there, not on our server. A document goes to a server only if you set up a webhook to your own server, if a website that embeds the editor saves it on its own server, or if another website opens it here with a form (post.php) - our server then passes it straight to your browser without storing it. As on any website, the server logs each visit, and we count page views anonymously - see the <a href=\"/privacy.html\">privacy policy</a>.</p></details>\n            <details><summary>Are my comments kept when I edit in the tree?</summary><p>Yes. A change in the tree is written into the code at exactly that place; comments, blank lines and the rest of the formatting stay as they are. Undo takes every change back.</p></details>\n            <details><summary>Which TOML does it read?</summary><p>TOML 1.0: tables, arrays of tables, dotted keys, inline tables, the four kinds of strings, integers in decimal, hexadecimal, octal and binary, floats with <code>inf</code> and <code>nan</code>, and dates and times. It accepts what Python's tomllib accepts and reports everything else with line and column - a key or a table defined twice, a number with a leading zero, a date that does not exist.</p></details>\n            <details><summary>What about a table that is written in several places?</summary><p>The tree shows it once, with all its keys. Renaming it changes every header and dotted key that names it. A change that cannot be made in place - moving a table that is spread over the file, for example - is refused with a message instead of rewriting your file.</p></details>\n            <details><summary>Can it convert TOML to JSON, YAML, CSV or XML?</summary><p>Yes, in the <b>Convert</b> tab or under Export; dates and times become text. JSON, YAML, CSV and XML files you open are converted to TOML. TOML has no null, so empty values are left out, with a note.</p></details>\n            <details><summary>Where are my documents saved?</summary><p>Only in your browser. Click the folder button at the top left (My documents) to open, rename, duplicate, download or delete them. Clearing your browser's site data removes them, so download the ones you want to keep - or let the editor send them to your own server (\"Save to server\").</p></details>\n            <details><summary>Can an AI write in the TOML Editor?</summary><p>Yes, any AI - ChatGPT, Claude, Gemini, Copilot or the AI in your coding tool. Click &quot;AI Assistant&quot;, then &quot;Copy prompt&quot;, paste it into your AI and say what it should change. The AI answers with a link; click it and the data appears in your editor. &quot;Undo&quot; takes every change back.</p></details>\n            <details><summary>Does the TOML Editor cost anything?</summary><p>No. The editor is free, without ads and without sign-up.</p></details>\n        </div>\n    </section>",
+  "name": "TOML Editor",
+  "embed": {
+    "title": "Embed the TOML Editor in Your Website (iframe) | giit.ch",
+    "description": "Embed the TOML Editor in your website with an iframe, exchange documents by postMessage or webhook, and let an AI deliver to your server. Free.",
+    "og_title": "Embed the TOML Editor in your website",
+    "og_description": "Embed the TOML Editor in your website with an iframe, exchange documents by postMessage or webhook, and let an AI deliver to your server. Free.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://toml.giit.ch/embed/#article",
+          "headline": "Embed the TOML Editor in your website",
+          "description": "Embed the TOML Editor in your website with an iframe, exchange documents by postMessage or webhook, and let an AI deliver to your server. Free.",
+          "inLanguage": "en",
+          "url": "https://toml.giit.ch/embed/",
+          "mainEntityOfPage": "https://toml.giit.ch/embed/",
+          "image": "https://toml.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "TOML Editor",
+            "url": "https://toml.giit.ch/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "TOML Editor",
+              "item": "https://toml.giit.ch/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Embedding",
+              "item": "https://toml.giit.ch/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Embed the TOML Editor in your website",
+    "intro": "<p>For developers: how to put the TOML Editor into your own page - in an iframe, in a window of its own or as a read-only viewer - and how documents, saves and AI results travel between the editor and your server. You need no sign-up and no key from us.</p>",
+    "body": "<p>Any https page (and localhost) can embed the editor with an <code>&lt;iframe&gt;</code> and <code>?embed=1</code> - no sign-up, no key. Embedded, the editor hides the page text and shows a Save button. There are four ways to get the document in and out.</p>\n\n        <h2>1. Open a file from a link, save to your server</h2>\n        <p><code>src=</code> opens a file (your server must allow CORS), <code>webhook=</code> makes \"Save\" (Ctrl+S) send the document to that address. Add <code>&amp;auto</code> to save after every change.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://toml.giit.ch/?embed=1&amp;src=https://your-site.com/config/app.toml&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>The webhook gets a POST with JSON <code>{ editor: \"toml\", event: \"save\", id, name, content, updated }</code>. A link carries no token (it would end up in server logs and the browser history), so a webhook in the address suits a save address that needs none, for example on localhost or in your intranet. For a public server, hand the webhook over with a token in <code>tomleditor:load</code> (<code>hook: { url, token }</code>) and check it, as this small PHP script does:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://toml.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/config/$name.toml&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Your page holds the document (postMessage)</h2>\n        <p>The editor says <code>tomleditor:ready</code>, your page answers with <code>tomleditor:load</code>, the editor reports <code>tomleditor:loaded</code>, <code>tomleditor:change</code> on real edits and <code>tomleditor:save</code> when the user saves. Your page may send <code>tomleditor:get</code> (the current state) or <code>tomleditor:save</code> (press Save). Saving then goes through your own login and session.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://toml.giit.ch/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://toml.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;tomleditor:ready&#x27;) {              // the editor is ready: hand it the document\n    ed.contentWindow.postMessage({\n      type: &#x27;tomleditor:load&#x27;,\n      name: &#x27;Settings&#x27;,\n      content: await (await fetch(&#x27;/config/app.toml&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;tomleditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // a real edit\n  if (m.type === &#x27;tomleditor:save&#x27;) {               // the user clicked &quot;Save&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// A save button on your own page: the answer comes as tomleditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;tomleditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>AI Assistant inside your page:</b> it works in the frame too. With <code>allow=\"clipboard-write\"</code> on the iframe, \"Copy prompt\" uses the clipboard directly (otherwise the editor falls back to the old copy command, or shows the prompt to copy by hand). A link the AI sends cannot reach an editor inside another website, so the editor tells the AI and the user to paste the AI's whole answer into the editor instead - or open the editor in a window of its own.</p>\n        <h2>3. In a window of its own</h2>\n        <p><code>window.open(\"https://toml.giit.ch/?embed=window\", \"tomleditor-17\")</code> opens the full editor in its own window and speaks the same messages with <code>window.opener</code>. Links from an AI reach it there. <code>tomleditor:load</code> may also carry <code>context: { host, title, rules }</code> - the AI prompt then says where the document belongs and follows your rules - and <code>hook: { url, token }</code>, a webhook for this document only that is never stored. Closing the window with unsaved changes sends <code>tomleditor:closing</code>.</p>\n        <h2>4. AI through your own server</h2>\n        <p>Hand the editor your own prompt, an address on your site and a key for this editor session. The AI dialog then shows \"Connected to\" your site, what you tell the AI, and the choice <b>change the current document</b> or <b>make a new one</b>; <b>Copy prompt</b> puts it all together. The AI posts its result with the key to your server, and your page opens it in the editor - a new document opens separately and stays in the user's browser. One key per editor session: it stays valid while the editor is open, and only while it has none the editor asks for it with <code>tomleditor:key-request</code>. The editor never sends the key itself and never stores it; the address must be https on your own host or a subdomain of it.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // one key per editor session\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;tomleditor:load&#x27;, name: &#x27;Settings&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep every key and every comment.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// remember the id from tomleditor:loaded and ignore change/save/closing with another id\n// only while the editor has no key:\nif (m.type === &#x27;tomleditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;tomleditor:ai&#x27;, key: k.key }, ORIGIN); }\n// while the editor is open, tell your server every minute; closing the editor or the page voids the key\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// your server has a result (polling, SSE …): target is &quot;current&quot; or &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;tomleditor:load&#x27;, name: &#x27;Settings&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Make keys with at least 128 random bits, store only their hash, bind each to the logged-in user, the document and this editor session, make one per session, keep it valid only while your page reports the session as open, and void it when the editor or the page closes.</p>\n        <p class=\"muted\">The whole protocol is in <a href=\"/llms.txt\">llms.txt</a> - give it to an AI and it builds the connection for your system. The other giit editors work the same way with their own prefix - <a href=\"https://editors.giit.ch/\">editors.giit.ch</a>.</p>\n        <h2>Show a document read-only (viewer)</h2>\n        <p><code>?viewer=1</code> shows only the finished document: no code, no tools, nothing can be changed, and nothing is stored in the browser. The document comes from a link (<code>#b64=</code>, <code>?src=</code>), from your page with <code>tomleditor:load</code>, or by POST as a normal form to <code>post.php</code>: the field <code>content</code> as text or <code>b64</code> as base64, optionally <code>name</code>, at most 20 MB of text.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://toml.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Without <code>viewer=1</code> the document opens in the normal editor. Either way it is kept in memory only: it is not stored on the server and does not join \"My documents\". Opened directly, the viewer says that the content comes from a third party.</p>",
+    "crumb": "Embedding",
+    "crumb_nav": "Breadcrumb",
+    "open": "Open the editor"
+  }
+}

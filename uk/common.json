@@ -1,0 +1,23 @@
+{
+  "footer_all": "Усі редактори giit",
+  "footer_binding": "Юридично чинна версія (німецькою):",
+  "footer_editors": "Редактори",
+  "footer_legal": "Правова інформація",
+  "footer_license": "Відкритий код за ліцензією {license}",
+  "footer_llms": "llms.txt для ШІ-асистентів",
+  "footer_shls": "SHLS: {author}",
+  "footer_source": "Вихідний код",
+  "source_on_github": "Вихідний код на GitHub",
+  "country": "Швейцарія",
+  "imprint": "Вихідні дані",
+  "privacy": "Політика конфіденційності",
+  "terms": "Умови використання",
+  "language": "Мова",
+  "theme": {
+    "group": "Колірна тема",
+    "light": "Світла тема",
+    "dark": "Темна тема",
+    "auto_title": "Як у налаштуваннях системи",
+    "auto_label": "Автоматична тема (налаштування системи)"
+  }
+}

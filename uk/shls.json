@@ -1,0 +1,178 @@
+{
+  "title": "Редактор SHLS - перетворення та токени | giit.ch",
+  "description": "Безкоштовний редактор SHLS у браузері: редагуйте дані, перетворюйте з JSON, YAML чи CSV і назад та оцінюйте кількість токенів. Без реєстрації.",
+  "og_title": "Редактор SHLS - перетворення та токени | giit.ch",
+  "og_description": "Безкоштовний редактор SHLS у браузері: редагуйте дані, перетворюйте з JSON, YAML чи CSV і назад та оцінюйте кількість токенів. Без реєстрації.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://shls.giit.ch/uk/#app",
+        "name": "SHLS Editor",
+        "url": "https://shls.giit.ch/uk/",
+        "description": "Безкоштовний редактор SHLS у браузері: редагуйте дані, перетворюйте з JSON, YAML чи CSV і назад та оцінюйте кількість токенів. Без реєстрації.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "uk",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://shls.giit.ch/img/og.png",
+        "featureList": [
+          "Код SHLS із підсвічуванням розділів, блоків ключів, значень, рівнів вкладеності й заповнювачів PH",
+          "Блок ключів кожного розділу у вигляді дерева та його записи з ключами як підписами",
+          "Редагування значень, ключів і назв розділів на місці; додавання, дублювання, переміщення й видалення записів і ключів - записи слідують за блоком ключів",
+          "Клацання в записах переходить до коду, курсор коду позначає свій запис і ключ",
+          "Проблеми за рядками: записи з більшою чи меншою кількістю значень, ніж у блоці ключів, відступи, порожні рядки після блоку ключів",
+          "Перетворення з JSON і в JSON точно як еталонні SHLSDecoder і SHLSEncoder, YAML, CSV і JSON Lines",
+          "Лічильник токенів: SHLS порівняно з тими самими даними в JSON",
+          "Багато документів у браузері",
+          "Збереження на ваш сервер через вебхук або вбудовування редактора у ваш сайт",
+          "Будь-який ШІ може писати в редакторі через посилання"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Що таке SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SHLS (Sebis Hierarchical List Structure) - текстовий формат для структурованих даних, створений Sebastian Grünwald. Кожен розділ називає свої ключі один раз у блоці ключів; записи нижче містять лише значення, по одному на рядок, а відступи показують вкладеність. Без лапок, дужок, двокрапок і повторюваних ключів ті самі дані потребують менше токенів, ніж JSON, - тому це добрий формат для моделей ШІ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Мої дані кудись вивантажуються?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ні. Редактор працює у вашому браузері й зберігає ваші документи там, а не на нашому сервері. Документ потрапляє на сервер лише тоді, коли ви налаштуєте вебхук на свій власний сервер, коли сайт, що вбудовує редактор, зберігає його на власному сервері, або коли інший сайт відкриває його тут через форму (post.php) - тоді наш сервер передає його просто у ваш браузер, нічого не зберігаючи. Як і будь-який сайт, сервер записує кожне відвідування в журнал, а перегляди сторінок ми рахуємо анонімно - див. політику конфіденційності."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи читає редактор SHLS точно як еталонний код?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Так. Редактор читає й записує SHLS точно так, як SHLSDecoder і SHLSEncoder із репозиторію SHLS, - JSON у вкладці «Конвертер» - це саме ті дані, які дають класи Python. Там, де вони читають документ інакше, ніж він виглядає (запис, якому бракує значення, порожній рядок із пробілами), редактор показує це як проблему з номером рядка."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи можна редагувати записи, не торкаючись коду?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Так. Клацніть значення, ключ або назву розділу посередині, введіть текст і натисніть Enter. Кнопки над записами додають, дублюють, переміщують і видаляють записи та ключі; коли ви додаєте чи видаляєте ключ, кожен запис розділу отримує або втрачає своє значення. Кожна зміна - один крок для «Скасувати»."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Скільки токенів заощаджує SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Вкладка Конвертер рахує приблизну кількість токенів вашого документа як SHLS і тих самих даних у JSON. Скільки заощаджує SHLS, залежить від даних: що більше записів мають ті самі ключі, то більша економія, бо SHLS записує ключі лише один раз. Перевірте на власних даних."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи може він перетворити JSON, YAML або CSV на SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Так. Відкрийте файл .json, .yaml, .csv або .jsonl, і він стане SHLS, записаним так, як це робить SHLSEncoder; редактор повідомить, чого SHLS не може зберегти (порожні значення, значення з розривами рядків). Вкладка «Конвертер» і «Експорт» записують JSON, YAML, CSV, JSON Lines і звичайний текст."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи може ШІ писати в редакторі SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Так, будь-який ШІ - ChatGPT, Claude, Gemini, Copilot або ШІ у вашому інструменті для програмування. Натисніть «ШІ-асистент», потім «Копіювати промпт»: промпт пояснює SHLS, тож будь-який ШІ пише коректний SHLS. ШІ відповідає посиланням; клацніть його, і документ з’явиться у вашому редакторі. «Скасувати» повертає кожну зміну назад."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи платний редактор SHLS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ні. Редактор безкоштовний, без реклами й без реєстрації."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Редагуйте SHLS онлайн - формат даних, що заощаджує токени</h2>\n        <p>SHLS - це текстовий формат даних, коротша альтернатива JSON і YAML для моделей ШІ, які читають текст як токени (частини слів). SHLS (Sebis Hierarchical List Structure) записує структуровані дані без лапок, дужок, двокрапок і повторюваних ключів: кожен розділ називає свої ключі один раз, а записи нижче містять лише значення. Редактор SHLS показує код, а поруч - блок ключів і записи кожного розділу. Змінюйте значення, ключі й записи просто там, переглядайте проблеми з номерами рядків, перетворюйте з JSON, YAML і CSV та на них і дивіться, скільки токенів SHLS заощаджує порівняно з JSON.</p>\n        <p>Усе працює у вашому браузері. Ваші документи зберігаються там, а не на нашому сервері; немає ні реєстрації, ні реклами.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>SHLS за одну хвилину</h2>\n        <p>Розділ починається з назви. Його <b>блок ключів</b> перелічує ключі з відступом в один пробіл; ключі вкладеного списку - на рівень глибше. Після <b>рівно одного порожнього рядка</b> йдуть <b>записи</b>: одне значення на рядок у порядку ключів. Вкладений список має власний рядок (свій ключ або <code>PH</code> як заповнювач), а його записи - на рівень глибше. Усі значення - це текст; перетворювати їх на числа чи дати - справа програми, яка їх читає.</p>\n        <pre class=\"example\"><code>Product\n Name\n Price\n\n Smartphone A1\n 599.99\n\n Laptop B2\n 1299.99\n\nCompany\n Name\n Location\n  Country\n  City\n\n TechCorp\n PH\n  USA\n  San Francisco</code></pre>\n        <p>Ті самі дані в JSON повторюють кожен ключ у кожному записі й потребують лапок, дужок і двокрапок. SHLS створено для локальних і хмарних моделей ШІ, де кожен токен має значення. <span lang=\"en\">SHLS by <a href=\"https://github.com/SebisCodes/SHLS-Sebis-Hierarchical-List-Structure\" target=\"_blank\" rel=\"noopener\">Sebastian Grünwald</a></span> - формат, його правила та еталонні SHLSDecoder і SHLSEncoder (Python) містяться в репозиторії SHLS на GitHub.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Що вміє редактор</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Код і записи</h3><p>Підсвічений SHLS ліворуч - розділи, ключі, значення, рівні вкладеності й заповнювачі <code>PH</code>. Посередині - блок ключів і записи кожного розділу, ключі як підписи. Клацання переносить до коду, курсор коду позначає свій запис.</p></div>\n            <div class=\"tile\"><h3>Редагування на місці</h3><p>Змінюйте значення, ключі й назви розділів; додавайте, дублюйте, переміщуйте й видаляйте записи та ключі. Записи відповідають своєму блоку ключів: новий ключ отримує «-» у кожному записі. Кожна дія - один крок для «Скасувати».</p></div>\n            <div class=\"tile\"><h3>Читання як в еталоні</h3><p>Редактор читає SHLS точно так, як SHLSDecoder, і перелічує те, що він прочитав би інакше, ніж воно виглядає: запис, якому бракує значення чи в якого воно зайве, відступи, порожні рядки після блоку ключів, ключ, що трапляється двічі.</p></div>\n            <div class=\"tile\"><h3>Токени</h3><p>Вкладка «Конвертер» рахує приблизну кількість токенів вашого SHLS і тих самих даних у JSON, тож економію видно одразу.</p></div>\n            <div class=\"tile\"><h3>Перетворення</h3><p>З JSON і в JSON точно як SHLSDecoder і SHLSEncoder, YAML, CSV (один розділ як таблиця) і JSON Lines. Файли JSON, YAML, CSV і JSON Lines відкриваються як SHLS.</p></div>\n            <div class=\"tile\"><h3>Багато документів</h3><p>Зберігайте скільки завгодно документів у браузері, кожен із власною історією скасувань, і завантажуйте їх усі одним ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Як це працює</h2>\n        <ol class=\"steps\">\n            <li><b>Почніть</b> - виберіть шаблон у «Новий», відкрийте файл .shls або відкрийте файл JSON, YAML чи CSV, щоб отримати його як SHLS.</li>\n            <li><b>Редагуйте</b> - у коді або в записах; обидва завжди показують ті самі дані.</li>\n            <li><b>Перевірте й перетворіть</b> - виправте перелічені проблеми, порівняйте токени й завантажте SHLS, JSON, YAML, CSV або текст.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Редактор на вашому сайті</h2>\n        <p>Вбудуйте редактор у свій сайт через iframe або відкривайте його в окремому вікні. Ваша сторінка передає йому документ, отримує назад кожну зміну й кожне збереження і може доручити ШІ надсилати результати на ваш сервер. Без реєстрації, без ключа.</p>\n        <p><a href=\"/uk/embed/\"><b>Вбудувати редактор у свій сайт</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Часті запитання</h2>\n        <div class=\"questions\">\n            <details><summary>Що таке SHLS?</summary><p>SHLS (Sebis Hierarchical List Structure) - текстовий формат для структурованих даних, створений Sebastian Grünwald. Кожен розділ називає свої ключі один раз у блоці ключів; записи нижче містять лише значення, по одному на рядок, а відступи показують вкладеність. Без лапок, дужок, двокрапок і повторюваних ключів ті самі дані потребують менше токенів, ніж JSON, - тому це добрий формат для моделей ШІ.</p></details>\n            <details><summary>Мої дані кудись вивантажуються?</summary><p>Ні. Редактор працює у вашому браузері й зберігає ваші документи там, а не на нашому сервері. Документ потрапляє на сервер лише тоді, коли ви налаштуєте вебхук на свій власний сервер, коли сайт, що вбудовує редактор, зберігає його на власному сервері, або коли інший сайт відкриває його тут через форму (post.php) - тоді наш сервер передає його просто у ваш браузер, нічого не зберігаючи. Як і будь-який сайт, сервер записує кожне відвідування в журнал, а перегляди сторінок ми рахуємо анонімно - див. <a href=\"/privacy.html\">політику конфіденційності</a>.</p></details>\n            <details><summary>Чи читає редактор SHLS точно як еталонний код?</summary><p>Так. Редактор читає й записує SHLS точно так, як SHLSDecoder і SHLSEncoder із <a href=\"https://github.com/SebisCodes/SHLS-Sebis-Hierarchical-List-Structure\" target=\"_blank\" rel=\"noopener\">репозиторію SHLS</a>, - JSON у вкладці «Конвертер» - це саме ті дані, які дають класи Python. Там, де вони читають документ інакше, ніж він виглядає (запис, якому бракує значення, порожній рядок із пробілами), редактор показує це як проблему з номером рядка.</p></details>\n            <details><summary>Чи можна редагувати записи, не торкаючись коду?</summary><p>Так. Клацніть значення, ключ або назву розділу посередині, введіть текст і натисніть Enter. Кнопки над записами додають, дублюють, переміщують і видаляють записи та ключі; коли ви додаєте чи видаляєте ключ, кожен запис розділу отримує або втрачає своє значення. Кожна зміна - один крок для «Скасувати».</p></details>\n            <details><summary>Скільки токенів заощаджує SHLS?</summary><p>Вкладка <b>Конвертер</b> рахує приблизну кількість токенів вашого документа як SHLS і тих самих даних у JSON. Скільки заощаджує SHLS, залежить від даних: що більше записів мають ті самі ключі, то більша економія, бо SHLS записує ключі лише один раз. Перевірте на власних даних.</p></details>\n            <details><summary>Чи може він перетворити JSON, YAML або CSV на SHLS?</summary><p>Так. Відкрийте файл .json, .yaml, .csv або .jsonl, і він стане SHLS, записаним так, як це робить SHLSEncoder; редактор повідомить, чого SHLS не може зберегти (порожні значення, значення з розривами рядків). Вкладка «Конвертер» і «Експорт» записують JSON, YAML, CSV, JSON Lines і звичайний текст.</p></details>\n            <details><summary>Чи може ШІ писати в редакторі SHLS?</summary><p>Так, будь-який ШІ - ChatGPT, Claude, Gemini, Copilot або ШІ у вашому інструменті для програмування. Натисніть «ШІ-асистент», потім «Копіювати промпт»: промпт пояснює SHLS, тож будь-який ШІ пише коректний SHLS. ШІ відповідає посиланням; клацніть його, і документ з’явиться у вашому редакторі. «Скасувати» повертає кожну зміну назад.</p></details>\n            <details><summary>Чи платний редактор SHLS?</summary><p>Ні. Редактор безкоштовний, без реклами й без реєстрації.</p></details>\n        </div>\n    </section>",
+  "name": "Редактор SHLS",
+  "embed": {
+    "title": "Як вбудувати редактор SHLS у свій сайт | giit.ch",
+    "description": "Вбудуйте редактор SHLS у свій сайт через iframe, передавайте документи через postMessage або вебхук і підключіть свій ШІ. Безкоштовно.",
+    "og_title": "Як вбудувати редактор SHLS у свій сайт",
+    "og_description": "Вбудуйте редактор SHLS у свій сайт через iframe, передавайте документи через postMessage або вебхук і підключіть свій ШІ. Безкоштовно.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://shls.giit.ch/uk/embed/#article",
+          "headline": "Як вбудувати редактор SHLS у свій сайт",
+          "description": "Вбудуйте редактор SHLS у свій сайт через iframe, передавайте документи через postMessage або вебхук і підключіть свій ШІ. Безкоштовно.",
+          "inLanguage": "uk",
+          "url": "https://shls.giit.ch/uk/embed/",
+          "mainEntityOfPage": "https://shls.giit.ch/uk/embed/",
+          "image": "https://shls.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Редактор SHLS",
+            "url": "https://shls.giit.ch/uk/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Редактор SHLS",
+              "item": "https://shls.giit.ch/uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Вбудовування",
+              "item": "https://shls.giit.ch/uk/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Як вбудувати редактор SHLS у свій сайт",
+    "intro": "<p>Для розробників: як розмістити редактор SHLS на своїй сторінці - в iframe, в окремому вікні або в режимі лише для читання - і як документи, збереження та результати ШІ передаються між редактором і вашим сервером. Ні реєстрація, ні ключ від нас не потрібні.</p>",
+    "body": "<p>Будь-яка сторінка https (і localhost) може вбудувати редактор за допомогою <code>&lt;iframe&gt;</code> і <code>?embed=1</code> - без реєстрації, без ключа. У вбудованому вигляді редактор приховує текст сторінки і показує кнопку «Зберегти». Передати документ у редактор і отримати його назад можна чотирма способами.</p>\n\n        <h2>1. Відкрити файл за посиланням, зберегти на ваш сервер</h2>\n        <p><code>src=</code> відкриває файл (ваш сервер має дозволяти CORS), <code>webhook=</code> змушує «Зберегти» (Ctrl+S) надсилати документ на цю адресу. Додайте <code>&amp;auto</code>, щоб зберігати після кожної зміни.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://shls.giit.ch/uk/?embed=1&amp;src=https://your-site.com/data/products.shls&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Вебхук отримує POST із JSON <code>{ editor: \"shls\", event: \"save\", id, name, content, updated }</code>. Посилання не містить токена: він потрапив би до журналів сервера та історії браузера. Тому вебхук в адресі підходить для збереження на сервері, якому токен не потрібен, наприклад на localhost або у вашій інтрамережі. Для публічного сервера передайте вебхук із токеном у <code>shlseditor:load</code> (<code>hook: { url, token }</code>) і перевірте токен, як це робить невеликий PHP-скрипт нижче:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://shls.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/data/$name.shls&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Документ зберігає ваша сторінка (postMessage)</h2>\n        <p>Редактор повідомляє <code>shlseditor:ready</code>, ваша сторінка відповідає <code>shlseditor:load</code>, редактор повідомляє <code>shlseditor:loaded</code>, <code>shlseditor:change</code> у разі фактичних змін і <code>shlseditor:save</code>, коли користувач зберігає. Ваша сторінка може надіслати <code>shlseditor:get</code> (поточний стан) або <code>shlseditor:save</code> (натиснути «Зберегти»). Тоді збереження проходить через вашу власну систему входу й сеанс.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://shls.giit.ch/uk/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://shls.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;shlseditor:ready&#x27;) {              // редактор готовий: передайте йому документ\n    ed.contentWindow.postMessage({\n      type: &#x27;shlseditor:load&#x27;,\n      name: &#x27;Products&#x27;,\n      content: await (await fetch(&#x27;/data/products.shls&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;shlseditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // справжня зміна\n  if (m.type === &#x27;shlseditor:save&#x27;) {               // користувач натиснув «Зберегти»\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Кнопка збереження на вашій сторінці: відповідь надходить як shlseditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;shlseditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>ШІ-асистент усередині вашої сторінки:</b> він працює і у фреймі. З <code>allow=\"clipboard-write\"</code> на iframe «Копіювати промпт» використовує буфер обміну напряму (інакше редактор вдається до старої команди копіювання або показує промпт, щоб скопіювати його вручну). Посилання, яке надсилає ШІ, не може дістатися до редактора всередині іншого сайту, тому редактор просить ШІ та користувача натомість вставити всю відповідь ШІ в редактор - або відкрити редактор в окремому вікні.</p>\n        <h2>3. В окремому вікні</h2>\n        <p><code>window.open(\"https://shls.giit.ch/uk/?embed=window\", \"shlseditor-17\")</code> відкриває повний редактор в окремому вікні, і він обмінюється тими самими повідомленнями з <code>window.opener</code>. Посилання від ШІ доходять до нього туди. <code>shlseditor:load</code> може також містити <code>context: { host, title, rules }</code> - тоді промпт для ШІ вказує, до чого належить документ, і дотримується ваших правил - і <code>hook: { url, token }</code>, вебхук лише для цього документа, який ніколи не зберігається. Якщо закрити вікно з незбереженими змінами, надсилається <code>shlseditor:closing</code>.</p>\n        <h2>4. ШІ через ваш власний сервер</h2>\n        <p>Передайте редактору власний промпт, адресу на вашому сайті та ключ для цього сеансу редактора. Тоді діалог ШІ показує «Під’єднано до» вашого сайту, що ви повідомляєте ШІ, і вибір <b>змінити поточний документ</b> або <b>створити новий</b>; <b>Копіювати промпт</b> збирає все разом. ШІ надсилає свій результат із ключем на ваш сервер, а ваша сторінка відкриває його в редакторі - новий документ відкривається окремо й залишається в браузері користувача. Один ключ на сеанс редактора: він дійсний, поки редактор відкрито, і лише поки ключа немає, редактор запитує його через <code>shlseditor:key-request</code>. Редактор ніколи сам не надсилає ключ і ніколи його не зберігає; адреса має бути https на вашому власному хості або його піддомені.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // один ключ на сеанс редактора\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;shlseditor:load&#x27;, name: &#x27;Products&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep every key. Only add records.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// запам’ятайте id з shlseditor:loaded та ігноруйте change/save/closing з іншим id\n// лише поки редактор не має ключа:\nif (m.type === &#x27;shlseditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;shlseditor:ai&#x27;, key: k.key }, ORIGIN); }\n// поки редактор відкрито, повідомляйте свій сервер щохвилини; закриття редактора або сторінки анулює ключ\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// ваш сервер має результат (polling, SSE …): target - &quot;current&quot; або &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;shlseditor:load&#x27;, name: &#x27;Products&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Створюйте ключі щонайменше зі 128 випадкових бітів, зберігайте лише їхній хеш, прив’язуйте кожен до користувача, що увійшов, до документа й до цього сеансу редактора, створюйте один на сеанс, тримайте його дійсним лише поки ваша сторінка повідомляє, що сеанс відкритий, і анулюйте його, коли редактор або сторінка закриваються.</p>\n        <p class=\"muted\">Увесь протокол - у <a href=\"/llms.txt\">llms.txt</a>: дайте його ШІ, і він налаштує взаємодію з вашою системою. Інші редактори giit працюють так само, кожен зі своїм префіксом, - <a href=\"https://editors.giit.ch/uk/\">editors.giit.ch</a>.</p>\n        <h2>Показ документа лише для читання (переглядач)</h2>\n        <p><code>?viewer=1</code> показує лише готовий документ: без коду, без інструментів, нічого не можна змінити, і в браузері нічого не зберігається. Документ надходить за посиланням (<code>#b64=</code>, <code>?src=</code>), з вашої сторінки через <code>shlseditor:load</code> або через POST звичайною формою на <code>post.php</code>: поле <code>content</code> як текст або <code>b64</code> як base64, за бажанням <code>name</code>, не більше 20 МБ тексту.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://shls.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;uk&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Без <code>viewer=1</code> документ відкривається у звичайному редакторі. В обох випадках він залишається лише в пам’яті: не зберігається на сервері й не потрапляє до «Моїх документів». За прямого відкриття переглядач повідомляє, що вміст отримано від третіх осіб.</p>",
+    "crumb": "Вбудовування",
+    "crumb_nav": "Навігаційний ланцюжок",
+    "open": "Відкрити редактор"
+  }
+}

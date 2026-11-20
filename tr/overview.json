@@ -1,0 +1,225 @@
+{
+  "title": "Ücretsiz Editörler: LaTeX, SVG, Markdown | giit.ch",
+  "desc": "LaTeX, SVG, Markdown ve diğer biçimler için canlı önizlemeli ücretsiz tarayıcı editörleri. Kayıt ve reklam yok, dosyalar tarayıcınızda kalır.",
+  "og_title": "Ücretsiz Editörler: LaTeX, SVG, Markdown | giit.ch",
+  "h1": "Canlı önizlemeli ücretsiz çevrimiçi editörler, doğrudan tarayıcınızda",
+  "lead": "Her gün çalıştığınız dosyalar için editörler: LaTeX, SVG, HTML, Markdown, veri biçimleri ve daha fazlası. Solda kod, sağda sonuç; kurulacak bir şey yok ve dosyalarınız tarayıcınızda kalır. Her yapay zekâ bir bağlantıyla bu editörlerde yazabilir ve herhangi birini kendi web sitenize koyabilirsiniz.",
+  "points": [
+    "Kayıt yok, reklam yok",
+    "Dosyalarınız tarayıcınızda kalır",
+    "Her yapay zekâ bu editörlerde yazabilir",
+    "Web sitenize yerleştirin",
+    "14 dilde"
+  ],
+  "cta1": "Editörleri görün",
+  "cta2": "Bir editör yerleştirin",
+  "nav": [
+    [
+      "#editors",
+      "Editörler"
+    ],
+    [
+      "#common",
+      "Ortak yönleri"
+    ],
+    [
+      "#embed",
+      "Yerleştirme"
+    ],
+    [
+      "#faq",
+      "SSS"
+    ]
+  ],
+  "editors_h": "Editörler",
+  "editors_sub": "Her editör kendi biçimi için yapılmıştır ve diğerleriyle aynı şekilde çalışır.",
+  "live": "Çevrimiçi",
+  "soon": "Geliştiriliyor",
+  "open": "Aç",
+  "common_h": "Her editörün yaptıkları",
+  "common_sub": "Birini öğrenin, hepsini bilirsiniz.",
+  "common": [
+    [
+      "🔒",
+      "Gizliliği koruyacak şekilde tasarlandı",
+      "Editörler belgelerinizi sunucumuzda değil, tarayıcınızda (yerel depolamada) tutar. Bir belge yalnızca kendi sunucunuzu kurarsanız (webhook) veya bir web sitesi onu bir formla bir editörde açarsa bir sunucuya gider - sunucumuz onu saklamadan iletir."
+    ],
+    [
+      "🗂",
+      "Belgelerim",
+      "Tarayıcıda istediğiniz sayıda belge saklayın: her birinin kendi geri alma geçmişi vardır. Belgeleri açın, yeniden adlandırın, çoğaltın, indirin ve silin."
+    ],
+    [
+      "✨",
+      "Her yapay zekâ sizinle birlikte yazabilir",
+      "“Yapay Zekâ Asistanı”na, ardından “İstemi kopyala”ya tıklayın ve istemi ChatGPT, Claude, Gemini veya Copilot’a yapıştırın. Yapay zekâ, sonucunu editörünüzde açan bir bağlantıyla yanıt verir - Geri al onu geri alır."
+    ],
+    [
+      "🤖",
+      "Tarayıcıdaki yapay zekâ aracıları (WebMCP)",
+      "WebMCP destekli tarayıcılarda bir yapay zekâ aracısı açık belgeyi doğrudan okuyabilir ve değiştirebilir; her değişiklik bir geri alma adımıdır."
+    ],
+    [
+      "🟢",
+      "Bir bakışta yapay zekâ durumu",
+      "Yapay zekâ düğmesindeki bir nokta, bir yapay zekânın bağlı olup olmadığını gösterir: web siteniz üzerinden, tarayıcı aracısı olarak veya bu sekmedeki bağlantılarla."
+    ],
+    [
+      "✏️",
+      "Önizlemede düzenleyin",
+      "Metinleri, değerleri veya şekilleri doğrudan önizlemede, ağaç görünümünde, tabloda veya çizim alanında değiştirin; kod da buna göre güncellenir. Düzenleme yöntemi dosya biçimine bağlıdır."
+    ],
+    [
+      "☁️",
+      "Kendi sunucunuza kaydedin",
+      "Bir webhook, kaydedilen her sürümü seçtiğiniz bir adrese bir belirteçle gönderir - otomatik olarak veya Ctrl+S ile."
+    ],
+    [
+      "🌐",
+      "14 dilde",
+      "Her editörün İngilizce, Almanca, Fransızca, İtalyanca, İspanyolca, Portekizce, Felemenkçe, Lehçe, Türkçe, Rusça, Ukraynaca, Çince, Japonca ve Korece bir sayfası vardır - /de/, /fr/ … Dil menüsünden dili değiştirebilirsiniz; seçiminiz hatırlanır. Yapay zekâ istemi her zaman İngilizce kalır."
+    ],
+    [
+      "🌓",
+      "Açık, koyu veya otomatik",
+      "Her editör sisteminizin temasını veya seçtiğiniz temayı kullanır ve telefonlarda ve tabletlerde çalışır."
+    ]
+  ],
+  "embed_h": "Bir editörü kendi web sitenizde kullanın",
+  "embed_teaser": "Her editör bir iframe ile veya kendi penceresinde başka bir web sitesine yerleştirilebilir ve hepsi aynı postMessage protokolünü kullanır. Her editörün, sayfanız ve sunucunuz için örnekler içeren bir geliştirici sayfası vardır:",
+  "embed_sub": "Tüm editörler aynı protokolü kullanır. latex yerine svg, html, md, json, yaml, toml, xml, csv, typst, shls veya qr yazın - mesajlar aynıdır, yalnızca önekleri değişir (latexeditor:, svgeditor: …).",
+  "steps": [
+    [
+      "Editörü sayfanıza koyun",
+      "Bir iframe yeterlidir. ?embed=1 Kaydet düğmeli sade görünümü gösterir, sayfanızın kendi düğmesi varsa ?save=0 onu gizler. Adres dili seçer: Almanca için /de/, Fransızca için /fr/ vb.",
+      "<iframe id=\"ed\" src=\"https://latex.giit.ch/de/?embed=1\"\n        allow=\"clipboard-write\" style=\"width:100%;height:80vh;border:0\"></iframe>"
+    ],
+    [
+      "Belgenizi yükleyin, değişiklikleri ve kayıtları alın",
+      "Editör hazır olduğunu söyler, sayfanız belgeyi gönderir ve editör gerçek düzenlemeleri ve her kaydı bildirir. Her mesajın kaynağını (origin) kontrol edin.",
+      "const ED = 'https://latex.giit.ch', ed = document.getElementById('ed');\naddEventListener('message', e => {\n  if (e.origin !== ED || e.source !== ed.contentWindow) return;\n  const m = e.data;\n  if (m.type === 'latexeditor:ready')\n    ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText }, ED);\n  if (m.type === 'latexeditor:change') markUnsaved();\n  if (m.type === 'latexeditor:save') saveOnYourServer(m.content, m.assets);\n});"
+    ],
+    [
+      "Ya da kendi penceresinde açın",
+      "Kendi penceresindeki tam editör window.opener ile tamamen aynı şekilde iletişim kurar - ve yapay zekâdan gelen bağlantılar ona orada ulaşır.",
+      "const win = window.open('https://latex.giit.ch/de/?embed=window', 'latexeditor-17');"
+    ],
+    [
+      "Bir yapay zekânın sonucunu doğrudan sunucunuza göndermesini sağlayın",
+      "Editöre kurallarınızı, kendi sitenizde bir https adresini ve bu editör oturumu için bir anahtarı verin. “İstemi kopyala” bu durumda yapay zekâya sonucunu oraya POST etmesini söyler; sayfanız onu editörde açar. Anahtarı yalnızca editör açıkken geçerli tutun.",
+      "ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText,\n  ai: { label: 'My Admin', prompt: 'Keep the placeholders.',\n        endpoint: 'https://your-site.com/api/ai-result', key: sessionKey } }, ED);"
+    ]
+  ],
+  "msg_h": "Tüm mesajlar",
+  "msg_cols": [
+    "Yön",
+    "Mesaj",
+    "Anlamı"
+  ],
+  "msgs": [
+    [
+      "editör → sayfa",
+      "ready",
+      "Editör bir belge alabilir."
+    ],
+    [
+      "sayfa → editör",
+      "load {name, content, assets?, context?, hook?, ai?}",
+      "Belgenizi açın (biçim destekliyorsa resimlerle)."
+    ],
+    [
+      "editör → sayfa",
+      "loaded {id, name}",
+      "Belgeniz açık; id’sini hatırlayın."
+    ],
+    [
+      "editör → sayfa",
+      "change {id, name, content}",
+      "Gerçek bir düzenleme (yükleme değil)."
+    ],
+    [
+      "editör → sayfa",
+      "save {id, name, content, assets, updated}",
+      "Kaydet / Ctrl+S veya get’e yanıt."
+    ],
+    [
+      "sayfa → editör",
+      "get · save",
+      "Geçerli durumu isteyin · Kaydet’e basın."
+    ],
+    [
+      "editör → sayfa",
+      "closing {id, name, content}",
+      "Kendi penceresi kaydedilmemiş değişikliklerle kapanıyor."
+    ],
+    [
+      "editör → sayfa",
+      "reload {id, unsaved}",
+      "Sayfanızın içinde F5 / Ctrl+R - karar sizin."
+    ],
+    [
+      "sayfa → editör",
+      "ai {label, prompt, endpoint, key} · ai {clear}",
+      "Sunucunuz üzerinden yapay zekâ, oturum başına bir anahtar."
+    ],
+    [
+      "editör → sayfa",
+      "key-request {reason: \"missing\"}",
+      "Oturumun henüz anahtarı yok."
+    ]
+  ],
+  "msg_note": "Webhook ve her alan dahil tam açıklama, her editörün llms.txt dosyasında ve şurada:",
+  "faq_h": "Sık sorulan sorular",
+  "faq": [
+    [
+      "Editörler gerçekten ücretsiz mi?",
+      "Evet. Kayıt yok, reklam yok. Belge sayısına biz bir sınır koymuyoruz; yalnızca tarayıcınızın depolama alanı sınır koyar."
+    ],
+    [
+      "Belgem bir yere yükleniyor mu?",
+      "Hayır. Editörler tarayıcınızda çalışır ve belgelerinizi sunucumuzda değil, orada saklar. Bir belge yalnızca bir webhook kurarsanız, bir editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya bir web sitesi onu bir formla bir editörde açarsa bir sunucuya gider - sunucumuz onu saklamadan iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız."
+    ],
+    [
+      "Hangi yapay zekâyı kullanabilirim?",
+      "Her yapay zekâyı - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. İstemi kopyalayın, ne istediğinizi söyleyin ve yapay zekânın yanıt olarak verdiği bağlantıya tıklayın."
+    ],
+    [
+      "Bir editörü kendi web sitemde kullanabilir miyim?",
+      "Evet. Bir iframe ile yerleştirin veya kendi penceresinde açın ve belgeleri postMessage ile alıp verin ya da kaydedilen sürümleri bir webhook ile sunucunuza göndermesine izin verin."
+    ],
+    [
+      "Editörü kendi dilimde nasıl kullanırım?",
+      "Üstteki dil menüsünden seçin veya sayfasını doğrudan açın: Almanca için /de/, Fransızca için /fr/, Türkçe için /tr/ vb. Editör seçiminizi hatırlar. Yapay zekâ istemi İngilizce kalır."
+    ],
+    [
+      "Editörleri kim yapıyor?",
+      "İsviçre, Neuhausen am Rheinfall’daki Grünwald Innovation."
+    ]
+  ],
+  "skip": "Editörlere geç",
+  "sections_label": "Bölümler",
+  "theme_names": {
+    "auto": "Otomatik",
+    "light": "Açık",
+    "dark": "Koyu",
+    "title": "Renk temasını değiştir",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı"
+  },
+  "by": "Bir proje:",
+  "theme": "Tema",
+  "editors": {
+    "latex": "LaTeX yazın ve dizilmiş sayfaları yazarken görün. Resim ekleyin, kâğıt ve kenar boşluklarını ayarlayın, PDF olarak dışa aktarın.",
+    "svg": "Kod olarak ve tuval üzerinde SVG: şekilleri taşıyın, boyutlandırın ve yeniden renklendirin, yaslamalı ızgara, PNG, JPG, WebP veya React olarak dışa aktarma.",
+    "html": "Canlı önizlemeyle HTML yazın, metni doğrudan önizlemede düzenleyin, resimleri sayfayla birlikte tutun, tek dosya veya ZIP olarak dışa aktarın.",
+    "md": "Notlar ve belgeler için basit biçim olan Markdown; tablolar, görev listeleri, dipnotlar ve formüllerle, HTML veya PDF olarak dışa aktarma.",
+    "json": "Kod ve katlanabilir ağaç olarak JSON ve JSON Lines: anahtarları ve değerleri ağaçta düzenleyin, bir JSON Schema’ya göre kontrol edin, YAML, CSV veya XML’e dönüştürün.",
+    "yaml": "Aynı veri ağacıyla YAML, yorumlar ve çapalar korunur, sorunlar satır numaralarıyla gösterilir, JSON’a dönüştürme.",
+    "toml": "pyproject.toml, Cargo.toml ve uygulama ayarları için TOML, aynı veri ağacıyla: yorumlar korunur, TOML 1.0’a göre sıkı denetim, JSON veya YAML’a dönüştürme.",
+    "xml": "Öğe ağacı, XPath araması, hata kontrolü ve JSON veya YAML’a dönüştürmeyle XML.",
+    "csv": "Metin ve elektronik tablo benzeri bir tablo olarak CSV, büyük dosyalar için de; XLSX, JSON, Markdown veya HTML tabloları olarak dışa aktarma.",
+    "shls": "Yapay zekâ için kompakt bir veri biçimi olan SHLS: ağaç olarak anahtar blokları ve kayıtlar, satır numaralarıyla gösterilen sorunlar, referans kodla aynı şekilde JSON’a ve JSON’dan dönüştürme.",
+    "typst": "Tarayıcıda gerçek derleyiciyle Typst: yazarken sayfalar, seçilebilir metinli PDF, belgeyle birlikte saklanan resimler.",
+    "qr": "Bağlantı, Wi-Fi, kişi ve ödemeler (SEPA, İsviçre QR faturası) için logolu ve tasarımlı QR kodları, taranarak kontrol edilir, SVG, PDF veya EPS - son kullanma tarihi olmayan statik kodlar."
+  }
+}

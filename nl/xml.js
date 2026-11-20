@@ -1,0 +1,434 @@
+/* Dutch texts of the XML editor: the bar, the work area (code, tree,
+   node, insert, convert), its dialogs and messages, and the problems found
+   in the code. What all editors share is in common.js; how the
+   dictionaries are used is described in i18n.js. Names of documents,
+   elements and attributes stay as they are: the patterns copy them into the
+   Dutch text. */
+
+import { formatTime, formatSize, formatThousands, getPlural } from './format.js';
+
+/* "1,234" -> "1.234" (Dutch thousands separator) */
+
+/* "1.5 KB" -> "1,5 KB", "1,234 bytes" -> "1.234 bytes" (Dutch separators) */
+
+/* When a document was last changed (files.js): "just now", "5 min ago", "Oct 25, 2026" … */
+
+export default {
+    text: {
+        /* ---------- Top bar ---------- */
+        'XML Editor - home': 'XML-editor - startpagina',
+        'XML Editor': 'XML-editor',
+        'File': 'Bestand',
+        'My documents (Ctrl+O)': 'Mijn documenten (Ctrl+O)',
+        'My documents': 'Mijn documenten',
+        'New document, or start this one over': 'Nieuw document, of dit opnieuw beginnen',
+        'New': 'Nieuw',
+        'New blank document': 'Nieuw leeg document',
+        'An XML declaration and an empty root element': 'Een XML-declaratie en een leeg wortelelement',
+        'Product catalog': 'Productcatalogus',
+        'Products with attributes, prices and stock': 'Producten met attributen, prijzen en voorraad',
+        'RSS feed': 'RSS-feed',
+        'A channel with one item, RSS 2.0': 'Een kanaal met één item, RSS 2.0',
+        'Sitemap': 'Sitemap',
+        'sitemap.xml for search engines, with a default namespace': 'sitemap.xml voor zoekmachines, met een standaardnaamruimte',
+        'Configuration': 'Configuratie',
+        'Settings and a database connection': 'Instellingen en een databaseverbinding',
+        'The welcome example': 'Het welkomstvoorbeeld',
+        'Shows what the editor can do': 'Laat zien wat de editor kan',
+        'Start this document over': 'Dit document opnieuw beginnen',
+        'Keeps the declaration and the root element, empties the rest - "Undo" brings it back': 'Behoudt de declaratie en het wortelelement, maakt de rest leeg - "Ongedaan maken" haalt het terug',
+        'Open an XML file from your computer (you can also drag it into the window)': 'Een XML-bestand van je computer openen (je kunt het ook in het venster slepen)',
+        'Open file…': 'Bestand openen…',
+        'Undo the last change (Ctrl+Z)': 'De laatste wijziging ongedaan maken (Ctrl+Z)',
+        'Undo': 'Ongedaan maken',
+        'Redo the change you just undid (Ctrl+Y)': 'De zojuist ongedaan gemaakte wijziging opnieuw doen (Ctrl+Y)',
+        'Redo': 'Opnieuw',
+        'Output': 'Uitvoer',
+        'Color theme': 'Kleurthema',
+        'Light theme': 'Licht thema',
+        'Dark theme': 'Donker thema',
+        'Same as your system setting': 'Zoals je systeeminstelling',
+        'Automatic theme (system setting)': 'Automatisch thema (systeeminstelling)',
+        'Let any AI write in this editor': 'Laat elke AI in deze editor schrijven',
+        'AI Assistant': 'AI-assistent',
+        'Save to your own server and embed the editor in your website': 'Opslaan op je eigen server en de editor in je website insluiten',
+        'Save to server': 'Opslaan op server',
+        'How it works and keyboard shortcuts (?)': 'Hoe het werkt en sneltoetsen (?)',
+        'Help': 'Help',
+        'Save the document as an .xml file (Ctrl+S)': 'Het document opslaan als .xml-bestand (Ctrl+S)',
+        'Download .xml': '.xml downloaden',
+        'XML, minified XML, JSON, YAML and plain text (Ctrl+E)': 'XML, geminificeerde XML, JSON, YAML en platte tekst (Ctrl+E)',
+        'Export…': 'Exporteren…',
+
+        /* ---------- Views and work area ---------- */
+        'View': 'Weergave',
+        'Edit': 'Bewerken',
+        'Side panel': 'Zijpaneel',
+        'Tree': 'Boom',
+        'Node': 'Knooppunt',
+        'XML code': 'XML-code',
+        'Copy the XML code to the clipboard': 'De XML-code naar het klembord kopiëren',
+        'Copy code': 'Code kopiëren',
+        'Copy': 'Kopiëren',
+        'Indent every element on its own line (mixed content stays as it is)': 'Elk element op een eigen regel inspringen (gemengde inhoud blijft zoals hij is)',
+        'Format': 'Opmaken',
+        'File format': 'Bestandsindeling',
+        'Drag to change the width of the code area': 'Sleep om de breedte van het codevak te wijzigen',
+        'Drag to change the width': 'Sleep om de breedte te wijzigen',
+        'Element tree': 'Elementenboom',
+        'Element tree: click a node to go to its place in the code, click a value to edit it': 'Elementenboom: klik op een knooppunt om naar de plek in de code te gaan, klik op een waarde om die te bewerken',
+        'Search names, values and text': 'Namen, waarden en tekst zoeken',
+        'Search in the tree': 'Zoeken in de boom',
+        'XPath query, e.g. //book[price > 30]': 'XPath-query, bijv. //book[price > 30]',
+        'XPath query': 'XPath-query',
+        'Previous match (Shift+Enter)': 'Vorige treffer (Shift+Enter)',
+        'Previous match': 'Vorige treffer',
+        'Next match (Enter)': 'Volgende treffer (Enter)',
+        'Next match': 'Volgende treffer',
+        'Fold everything below the root': 'Alles onder de wortel samenvouwen',
+        'Fold all': 'Alles samenvouwen',
+        'Unfold every element': 'Elk element uitvouwen',
+        'Unfold all': 'Alles uitvouwen',
+        'Path of the selected node': 'Pad van het geselecteerde knooppunt',
+        'Click a node to see its path': 'Klik op een knooppunt om het pad te zien',
+        'Put this path into the XPath field': 'Dit pad in het XPath-veld zetten',
+        'As query': 'Als query',
+        'Copy the XPath of the selected node': 'Het XPath van het geselecteerde knooppunt kopiëren',
+        'Copy path': 'Pad kopiëren',
+        'Path copied': 'Pad gekopieerd',
+        'Updating…': 'Bijwerken…',
+        'Fold': 'Samenvouwen',
+        'Unfold': 'Uitvouwen',
+        'empty': 'leeg',
+        'Add a child element': 'Een kindelement toevoegen',
+        'Add an attribute': 'Een attribuut toevoegen',
+        'Move up': 'Omhoog',
+        'Move down': 'Omlaag',
+        'Remove the element': 'Het element verwijderen',
+        'Remove': 'Verwijderen',
+        'The document is empty - type some XML on the left, or choose a template under "New".': 'Het document is leeg - typ links wat XML, of kies een sjabloon onder "Nieuw".',
+        'Fix the errors first': 'Herstel eerst de fouten',
+        'No match': 'Geen treffer',
+        'Not a valid XPath expression': 'Geen geldige XPath-expressie',
+        'Nothing found': 'Niets gevonden',
+        'Open it here': 'Hier openen',
+        'Drop the XML file here': 'Zet het XML-bestand hier neer',
+
+        /* Problems above the code */
+        'Hide': 'Verbergen',
+        'Show': 'Tonen',
+
+        /* ---------- Side panel ---------- */
+        'The selected node: path, namespace, attributes and actions': 'Het geselecteerde knooppunt: pad, naamruimte, attributen en acties',
+        'Ready-made pieces: elements, comments, CDATA, characters': 'Kant-en-klare stukken: elementen, commentaar, CDATA, tekens',
+        'Insert': 'Invoegen',
+        'Format, minify, JSON and YAML': 'Opmaken, minificeren, JSON en YAML',
+        'Convert': 'Omzetten',
+        'Click a node in the tree (or put the cursor in the code) to see it here.': 'Klik op een knooppunt in de boom (of zet de cursor in de code) om het hier te zien.',
+        'depth': 'diepte',
+        'element': 'element',
+        'elements': 'elementen',
+        'attribute': 'attribuut',
+        'attributes': 'attributen',
+        'Start and end tag': 'Begin- en eindtag',
+        'Root element': 'Wortelelement',
+        'Default namespace': 'Standaardnaamruimte',
+        'Namespaces': 'Naamruimten',
+        'Attribute': 'Attribuut',
+        'Element': 'Element',
+        'Text': 'Tekst',
+        'Comment': 'Commentaar',
+        'CDATA section': 'CDATA-sectie',
+        'Processing instruction': 'Verwerkings\u00adinstructie',
+        'Path': 'Pad',
+        'Line': 'Regel',
+        'Namespace': 'Naamruimte',
+        'none': 'geen',
+        'Content': 'Inhoud',
+        'Attributes': 'Attributen',
+        'Remove the attribute': 'Het attribuut verwijderen',
+        'No attributes.': 'Geen attributen.',
+        'Add attribute': 'Attribuut toevoegen',
+        'Add child element': 'Kindelement toevoegen',
+        'Length': 'Lengte',
+        'Structure': 'Structuur',
+        'An element at the cursor, around the selected text': 'Een element bij de cursor, rond de geselecteerde tekst',
+        'Empty element': 'Leeg element',
+        'A self-closing element': 'Een zelfsluitend element',
+        'An attribute (put the cursor inside a start tag)': 'Een attribuut (zet de cursor in een begintag)',
+        'Text that is not parsed as markup': 'Tekst die niet als opmaak wordt verwerkt',
+        'XML declaration': 'XML-declaratie',
+        'The first line: version and encoding': 'De eerste regel: versie en codering',
+        'A namespace declaration (inside a start tag)': 'Een naamruimtedeclaratie (in een begintag)',
+        'Schema instance': 'Schema-instantie',
+        'xmlns:xsi for xsi:schemaLocation (inside a start tag)': 'xmlns:xsi voor xsi:schemaLocation (in een begintag)',
+        'Characters': 'Tekens',
+        'As entity references, so they stay readable in any encoding.': 'Als entiteitsverwijzingen, zodat ze in elke codering leesbaar blijven.',
+        'Code': 'Code',
+        'Indent with': 'Inspringen met',
+        '2 spaces': '2 spaties',
+        '4 spaces': '4 spaties',
+        'Tabs': 'Tabs',
+        'Indent every element on its own line (one undo step)': 'Elk element op een eigen regel inspringen (één stap voor ongedaan maken)',
+        'Remove comments and the white space between elements (one undo step)': 'Commentaar en de witruimte tussen elementen verwijderen (één stap voor ongedaan maken)',
+        'Minify': 'Minificeren',
+        'Other formats': 'Andere formaten',
+        'As JSON': 'Als JSON',
+        'As YAML': 'Als YAML',
+        'The document is not well-formed - fix the errors above the code first.': 'Het document is niet welgevormd - herstel eerst de fouten boven de code.',
+        'Attributes become': 'Attributen worden',
+        ', text next to elements': ', tekst naast elementen',
+        ', repeated elements a list. Comments are left out.': ', herhaalde elementen een lijst. Commentaar wordt weggelaten.',
+        'Result': 'Resultaat',
+        'Download': 'Downloaden',
+
+        /* ---------- Export ---------- */
+        'Close': 'Sluiten',
+        'File name': 'Bestandsnaam',
+        'XML as it is (.xml)': 'XML zoals het is (.xml)',
+        'Minified XML (.xml)': 'Geminificeerde XML (.xml)',
+        'Converted to JSON (.json)': 'Omgezet naar JSON (.json)',
+        'Converted to YAML (.yaml)': 'Omgezet naar YAML (.yaml)',
+        'Plain text (.txt)': 'Platte tekst (.txt)',
+        'Download everything at once: XML, minified XML, JSON, YAML and text': 'Alles in één keer downloaden: XML, geminificeerde XML, JSON, YAML en tekst',
+        'All formats (ZIP)': 'Alle formaten (ZIP)',
+        'The document is not well-formed - fix the errors first': 'Het document is niet welgevormd - herstel eerst de fouten',
+
+        /* ---------- My documents ---------- */
+        'Search by name': 'Zoeken op naam',
+        'Search your documents': 'Je documenten doorzoeken',
+        'Open an XML file from your computer as a new document': 'Een XML-bestand van je computer openen als nieuw document',
+        'New document': 'Nieuw document',
+        'Click a document to open it. They are stored only in this browser - nothing is uploaded. Clearing the browser\'s site data removes them, so download the ones you want to keep.':
+            'Klik op een document om het te openen. Ze worden alleen in deze browser bewaard - er wordt niets geüpload. Als je de sitegegevens van de browser wist, verdwijnen ze, dus download de documenten die je wilt bewaren.',
+        'Download every document as an .xml file in one ZIP': 'Elk document als .xml-bestand in één ZIP downloaden',
+        'Download all (ZIP)': 'Alles downloaden (ZIP)',
+        'Rename': 'Naam wijzigen',
+        'Duplicate': 'Dupliceren',
+        'Download as .xml': 'Downloaden als .xml',
+        'Delete': 'Verwijderen',
+        'New name': 'Nieuwe naam',
+        'This document is open': 'Dit document is geopend',
+        'Click to open this document': 'Klik om dit document te openen',
+        'No documents yet.': 'Nog geen documenten.',
+        'The document is removed from this browser for good. Download it first if you want to keep a copy.':
+            'Het document wordt definitief uit deze browser verwijderd. Download het eerst als je een kopie wilt bewaren.',
+
+        /* ---------- AI Assistant ---------- */
+        'Any AI can write with you - ChatGPT, Claude, Gemini, Copilot.': 'Elke AI kan met je meeschrijven - ChatGPT, Claude, Gemini, Copilot.',
+        'Connected AI': 'Verbonden AI',
+        'Connected to': 'Verbonden met',
+        'the AI sends its result there, and it opens here.': 'de AI stuurt het resultaat daarheen, en het wordt hier geopend.',
+        'What': 'Wat',
+        'tells the AI': 'aan de AI vertelt',
+        'The AI should': 'De AI moet',
+        'Change “': '"',
+        '”': '" wijzigen',
+        'Make a new document': 'Een nieuw document maken',
+        'The AI\'s answer (or press Ctrl+V anywhere):': 'Het antwoord van de AI (of druk ergens op Ctrl+V):',
+        'The document travels in the link after the “#”, which no server sees. What you paste into your AI is handled by its provider.':
+            'Het document reist in de link na de "#", die geen server ziet. Wat je in je AI plakt, wordt door de aanbieder ervan verwerkt.',
+        'The prompt - copy it with Ctrl+C': 'De prompt - kopieer hem met Ctrl+C',
+        'Copy prompt': 'Prompt kopiëren',
+        'The AI answers with a link: click it, or paste the whole answer below.': 'De AI antwoordt met een link: klik erop, of plak het hele antwoord hieronder.',
+        'takes it back.': 'draait het terug.',
+        'The AI answers with a link:': 'De AI antwoordt met een link:',
+        'paste its whole answer below': 'plak het hele antwoord hieronder',
+        '(a clicked link opens a separate editor).': '(een aangeklikte link opent een aparte editor).',
+        '(no key yet)': '(nog geen sleutel)',
+        '(key valid while the editor is open)': '(sleutel geldig zolang de editor open is)',
+        'The link could not be read': 'De link kon niet worden gelezen',
+        'The document in this link is incomplete or damaged. If the AI\'s link was split over several lines (as in a terminal), copy the whole answer and paste it into the editor with Ctrl+V - the editor joins the lines.':
+            'Het document in deze link is onvolledig of beschadigd. Als de link van de AI over meerdere regels is verdeeld (zoals in een terminal), kopieer dan het hele antwoord en plak het met Ctrl+V in de editor - de editor voegt de regels samen.',
+        'Loading…': 'Laden…',
+        'Taken over by your editor': 'Overgenomen door je editor',
+        'The document is now in the XML Editor tab you already had open. Switch to that tab, or open it here.':
+            'Het document staat nu in het tabblad van de XML-editor dat je al open had. Ga naar dat tabblad of open het hier.',
+        'Copying is not allowed here - it is selected below: press Ctrl+C (⌘C)': 'Kopiëren is hier niet toegestaan - het is hieronder geselecteerd: druk op Ctrl+C (⌘C)',
+        'Paste it into your AI and say what it should write.': 'Plak het in je AI en zeg wat die moet schrijven.',
+        'Prompt copied - paste it into your AI and say what it should write': 'Prompt gekopieerd - plak hem in je AI en zeg wat die moet schrijven',
+        'This link is incomplete or damaged - please ask the AI to send it again': 'Deze link is onvolledig of beschadigd - vraag de AI om hem opnieuw te sturen',
+
+        /* ---------- Save to your server ---------- */
+        'Save to your server': 'Opslaan op je server',
+        'Webhook address': 'Webhookadres',
+        '(optional, sent as "Authorization: Bearer …"; kept until this tab is closed)': '(optioneel, verzonden als "Authorization: Bearer …"; bewaard tot dit tabblad wordt gesloten)',
+        'Send automatically a few seconds after each change (otherwise only when you click': 'Automatisch verzenden, een paar seconden na elke wijziging (anders alleen als je op',
+        'or press Ctrl+S)': 'of op Ctrl+S drukt)',
+        'Only for “': 'Alleen voor "',
+        '” (other documents use the general address)': '" (andere documenten gebruiken het algemene adres)',
+        'What your server receives': 'Wat je server ontvangt',
+        'A POST request with JSON (your server must allow CORS from https://xml.giit.ch):': 'Een POST-verzoek met JSON (je server moet CORS van https://xml.giit.ch toestaan):',
+        'Embed the editor in your website': 'De editor in je website insluiten',
+        'Send now': 'Nu verzenden',
+        'Save setting': 'Instelling opslaan',
+
+        /* ---------- Help ---------- */
+        'How it works': 'Hoe het werkt',
+        'Keyboard shortcuts': 'Sneltoetsen',
+        'after a start tag': 'na een begintag',
+        'Adds the matching end tag': 'Voegt de bijbehorende eindtag toe',
+        'Show the cursor\'s node in the tree': 'Het knooppunt van de cursor in de boom tonen',
+        'Indent / outdent': 'Inspringen / uitspringen',
+        'Undo / redo': 'Ongedaan maken / opnieuw',
+        'Save (download .xml, or to your server) / export': 'Opslaan (.xml downloaden, of op je server) / exporteren',
+        'Search in the tree (outside the code)': 'Zoeken in de boom (buiten de code)',
+        'The editor never loads a DTD, a schema or an external entity, and it does not expand entities declared in a DTD: their references stay as written.':
+            'De editor laadt nooit een DTD, een schema of een externe entiteit, en vouwt in een DTD gedeclareerde entiteiten niet uit: hun verwijzingen blijven zoals ze geschreven zijn.',
+
+        'Problems (the first well-formedness error, undeclared namespace prefixes, ids used twice) are listed above the code with line and column - click one to go there.':
+            'Problemen (de eerste fout in de welgevormdheid, niet-gedeclareerde naamruimteprefixen, dubbel gebruikte id\'s) staan boven de code met regel en kolom - klik op een probleem om ernaartoe te gaan.',
+        'https://example.com/api/xml': 'https://example.com/api/xml',
+
+        /* ---------- Messages ---------- */
+        'The browser storage is full - download and delete documents under "My documents"': 'De opslag van de browser is vol - download en verwijder documenten onder "Mijn documenten"',
+        'The browser storage is full - delete or download documents under "My documents" first': 'De opslag van de browser is vol - verwijder of download eerst documenten onder "Mijn documenten"',
+        'The browser storage is full - delete or download some documents first': 'De opslag van de browser is vol - verwijder of download eerst enkele documenten',
+        'The browser storage is full': 'De opslag van de browser is vol',
+        'Nothing to undo': 'Niets om ongedaan te maken',
+        'Nothing to redo': 'Niets om opnieuw te doen',
+        'This changed in the code - wait for the tree, then try again': 'Dit is in de code gewijzigd - wacht op de boom en probeer het dan opnieuw',
+        'Editing in the tree - Enter keeps it, Escape cancels': 'Bewerken in de boom - Enter bewaart het, Escape annuleert',
+        'The code changed meanwhile - the edit was not used': 'De code is intussen gewijzigd - de bewerking is niet gebruikt',
+        'The root element cannot be removed here - edit the code instead': 'Het wortelelement kan hier niet worden verwijderd - bewerk in plaats daarvan de code',
+        'Removed - "Undo" brings it back': 'Verwijderd - "Ongedaan maken" haalt het terug',
+        'It is the first element already': 'Het is al het eerste element',
+        'It is the last element already': 'Het is al het laatste element',
+        'The document has an XML declaration already': 'Het document heeft al een XML-declaratie',
+        'The code is formatted already': 'De code is al opgemaakt',
+        'Code formatted - "Undo" brings the old layout back': 'Code opgemaakt - "Ongedaan maken" haalt de oude opmaak terug',
+        'The code is minified already': 'De code is al geminificeerd',
+        'Code minified - "Undo" brings it back': 'Code geminificeerd - "Ongedaan maken" haalt het terug',
+        'This document is empty already': 'Dit document is al leeg',
+        'Everything inside the root element is removed; the declaration and the root element stay. "Undo" brings it back as long as the page is open.':
+            'Alles binnen het wortelelement wordt verwijderd; de declaratie en het wortelelement blijven. "Ongedaan maken" haalt het terug zolang de pagina open is.',
+        'Everything is removed. "Undo" brings it back as long as the page is open.': 'Alles wordt verwijderd. "Ongedaan maken" haalt het terug zolang de pagina open is.',
+        'Start over': 'Opnieuw beginnen',
+        'The file is larger than 8 MB': 'Het bestand is groter dan 8 MB',
+        'XML pasted from the clipboard - "Undo" brings the old text back': 'XML geplakt vanaf het klembord - "Ongedaan maken" haalt de oude tekst terug',
+        'Downloaded': 'Gedownload',
+        'Copied to the clipboard': 'Naar het klembord gekopieerd',
+        'This browser does not allow copying this': 'Deze browser staat niet toe dit te kopiëren',
+        'Code copied': 'Code gekopieerd',
+        '.xml downloaded': '.xml gedownload',
+        'Add': 'Toevoegen',
+        'Replace': 'Vervangen',
+
+        /* ---------- Problems (xml.js) ---------- */
+        'The document is empty - an XML document needs one root element': 'Het document is leeg - een XML-document heeft één wortelelement nodig',
+        'The DTD is not loaded: the editor never reads external DTDs or entities, entity references stay as written':
+            'De DTD wordt niet geladen: de editor leest nooit externe DTD\'s of entiteiten, entiteitsverwijzingen blijven zoals ze geschreven zijn',
+        'Entities of the DTD are not expanded: references to them stay as written': 'Entiteiten van de DTD worden niet uitgevouwen: verwijzingen ernaar blijven zoals ze geschreven zijn',
+
+        /* ---------- Single words ---------- */
+        'Export': 'Exporteren',
+    },
+
+    html: {
+
+        '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
+
+            '<b>Exporteren</b> biedt ook <b>Openen in een andere editor</b>: het document wordt omgezet en daar als nieuw document geopend. Wat het andere formaat niet kan bevatten, wordt eerst getoond.',
+        /* Convert */
+        'Attributes become <code>@name</code>, text next to elements <code>#text</code>, repeated elements a list. Comments are left out.':
+            'Attributen worden <code>@name</code>, tekst naast elementen <code>#text</code>, herhaalde elementen een lijst. Commentaar wordt weggelaten.',
+
+        /* AI Assistant */
+        'Click <b>Copy prompt</b>.': 'Klik op <b>Prompt kopiëren</b>.',
+        'The AI answers with a link: click it, or paste the whole answer below. <b>Undo</b> takes it back.':
+            'De AI antwoordt met een link: klik erop, of plak het hele antwoord hieronder. <b>Ongedaan maken</b> draait het terug.',
+        'The AI answers with a link: <b>paste its whole answer below</b> (a clicked link opens a separate editor). <b>Undo</b> takes it back.':
+            'De AI antwoordt met een link: <b>plak het hele antwoord hieronder</b> (een aangeklikte link opent een aparte editor). <b>Ongedaan maken</b> draait het terug.',
+
+        /* Save to your server */
+        'The editor can send each saved version to your own server (a <b>webhook</b>), so your work is kept where you want it. Nothing is sent until you enter an address here.':
+            'De editor kan elke opgeslagen versie naar je eigen server sturen (een <b>webhook</b>), zodat je werk bewaard wordt waar jij dat wilt. Er wordt niets verzonden tot je hier een adres invoert.',
+        'Also possible: <code>?src=&lt;URL of an XML file&gt;</code> opens a file, <code>&amp;webhook=&lt;URL&gt;</code> saves this document there. The editor can also open in a window of its own (<code>?embed=window</code>), and your page can hand it its own AI prompt and a session key so the AI sends its result to your server (<code>xmleditor:ai</code>, <code>xmleditor:key-request</code>) - see "Use the editor on your own website" below the editor. Details are in <a href="/llms.txt">llms.txt</a>.':
+            'Ook mogelijk: <code>?src=&lt;URL van een XML-bestand&gt;</code> opent een bestand, <code>&amp;webhook=&lt;URL&gt;</code> slaat dit document daar op. De editor kan ook in een eigen venster openen (<code>?embed=window</code>), en je pagina kan hem een eigen AI-prompt en een sessiesleutel geven, zodat de AI het resultaat naar je server stuurt (<code>xmleditor:ai</code>, <code>xmleditor:key-request</code>) - zie "De editor op je eigen website gebruiken" onder de editor. Details staan in <a href="/llms.txt">llms.txt</a>.',
+
+        /* Help */
+        '<b>Write</b> XML on the left - or start with <b>New</b> and one of the templates. The tree in the middle shows the elements, attributes, text, comments and CDATA as you type.':
+            '<b>Schrijf</b> links XML - of begin met <b>Nieuw</b> en een van de sjablonen. De boom in het midden toont de elementen, attributen, tekst, commentaar en CDATA terwijl je typt.',
+        '<b>Click a node in the tree</b> to go to its place in the code; the cursor in the code shows its node in the tree. Fold elements with the arrow.':
+            '<b>Klik op een knooppunt in de boom</b> om naar de plek in de code te gaan; de cursor in de code toont zijn knooppunt in de boom. Vouw elementen samen met de pijl.',
+        '<b>Click a name, an attribute value or a text in the tree</b> to edit it right there. <b>Enter</b> or a click elsewhere writes the change into the code (special characters escaped, one step for Undo), <b>Escape</b> cancels. The buttons of a row add a child element or an attribute, move the element up or down, or remove it.':
+            '<b>Klik op een naam, een attribuutwaarde of een tekst in de boom</b> om die daar meteen te bewerken. <b>Enter</b> of een klik ergens anders schrijft de wijziging in de code (speciale tekens ge-escapet, één stap voor Ongedaan maken), <b>Escape</b> annuleert. De knoppen van een rij voegen een kindelement of een attribuut toe, verplaatsen het element omhoog of omlaag, of verwijderen het.',
+        '<b>Search</b> marks nodes whose name, value or text contains the words; the <b>XPath</b> field marks the nodes an XPath 1.0 expression selects (<code>_:</code> is the default namespace of the root).':
+            '<b>Zoeken</b> markeert knooppunten waarvan de naam, waarde of tekst de woorden bevat; het veld <b>XPath</b> markeert de knooppunten die een XPath 1.0-expressie selecteert (<code>_:</code> is de standaardnaamruimte van de wortel).',
+        '<b>Node</b> on the right shows the selected node; <b>Insert</b> has ready-made pieces; <b>Convert</b> formats, minifies and turns the document into JSON or YAML.':
+            '<b>Knooppunt</b> rechts toont het geselecteerde knooppunt; <b>Invoegen</b> heeft kant-en-klare stukken; <b>Omzetten</b> maakt op, minificeert en zet het document om naar JSON of YAML.',
+        '<b>My documents</b> (the folder button at the top left) lists every document kept in this browser. <b>Export</b> saves XML, minified XML, JSON, YAML or plain text.':
+            '<b>Mijn documenten</b> (de mapknop linksboven) toont elk document dat in deze browser wordt bewaard. <b>Exporteren</b> slaat XML, geminificeerde XML, JSON, YAML of platte tekst op.',
+        'Comment lines in or out (<code>&lt;!-- --&gt;</code>)': 'Regels in of uit commentaar zetten (<code>&lt;!-- --&gt;</code>)',
+    },
+
+    patterns: [
+        /* ---------- Status lines ---------- */
+        ['^The elements are nested more than (\\d+) levels deep - the editor reads at most (\\d+)$', 'De elementen zijn meer dan $1 niveaus diep genest - de editor leest er hoogstens $2'],
+        ['^(\\d+) lines · ([\\d.]+ K?B)(?: · (\\d+) (?:element|elements))?$', (m, l, kb, e) => `${l} ${getPlural(l, 'regel', 'regels')} · ${formatSize(kb)}${e ? ` · ${e} ${getPlural(e, 'element', 'elementen')}` : ''}`],
+        ['^([\\d,]+) bytes$', (m, b) => `${formatThousands(b)} bytes`],
+        ['^\\d{1,3}(?:,\\d{3})+$', m => formatThousands(m)],
+        ['^(\\d+) (?:child|children)$', (m, k) => `${k} ${getPlural(k, 'kind', 'kinderen')}`],
+        ['^(\\d+) (?:match|matches)$', (m, k) => `${k} ${getPlural(k, 'treffer', 'treffers')}`],
+        ['^(\\d+) found$', '$1 gevonden'],
+        ['^(\\d+) (?:element|elements) · (\\d+) (?:attribute|attributes) ·$', (m, e, a) => `${e} ${getPlural(e, 'element', 'elementen')} · ${a} ${getPlural(a, 'attribuut', 'attributen')} ·`],
+        ['^(?:element|elements) ·$', 'elementen ·'],
+        ['^(?:attribute|attributes) ·$', 'attributen ·'],
+        ['^(\\d+) (?:child element|child elements)$', (m, k) => `${k} ${getPlural(k, 'kindelement', 'kindelementen')}`],
+        ['^(\\d+) (?:character|characters)$', (m, k) => `${k} ${getPlural(k, 'teken', 'tekens')}`],
+        ['^ZIP downloaded with (\\d+) files$', 'ZIP met $1 bestanden gedownload'],
+
+        /* Problems above the code */
+        ['^(\\d+) (?:error|errors)$', (m, k) => `${k} ${getPlural(k, 'fout', 'fouten')}`],
+        ['^· (\\d+) (?:note|notes)$', (m, k) => `· ${k} ${getPlural(k, 'opmerking', 'opmerkingen')}`],
+        ['^(\\d+) (?:note|notes)$', (m, k) => `${k} ${getPlural(k, 'opmerking', 'opmerkingen')}`],
+        ['^Line (\\d+):(\\d+)$', 'Regel $1:$2'],
+        ['^Not well-formed: (.*)$', 'Niet welgevormd: $1'],
+        ['^The namespace prefix "(.+)" is not declared - add (.+)$', 'Het naamruimteprefix "$1" is niet gedeclareerd - voeg $2 toe'],
+        ['^The id "(.*)" is used twice$', 'De id "$1" wordt twee keer gebruikt'],
+
+        /* ---------- Tree ---------- */
+        ['^"(.*)" is not a valid XML name - names start with a letter or _ and have no spaces$', '"$1" is geen geldige XML-naam - namen beginnen met een letter of _ en hebben geen spaties'],
+        ['^The element already has an attribute "(.+)"$', 'Het element heeft al een attribuut "$1"'],
+        ['^Attribute "(.+)" removed - "Undo" brings it back$', 'Attribuut "$1" verwijderd - "Ongedaan maken" haalt het terug'],
+        ['^<(.+)> removed - "Undo" brings it back$', '<$1> verwijderd - "Ongedaan maken" haalt het terug'],
+
+        /* ---------- Top bar and My documents ---------- */
+        ['^"(.+)" is open\\. My documents: open, rename, duplicate or delete your documents \\(Ctrl\\+O\\)$', '"$1" is geopend. Mijn documenten: je documenten openen, hernoemen, dupliceren of verwijderen (Ctrl+O)'],
+        ['^Start "(.+)" over\\?$', '"$1" opnieuw beginnen?'],
+        ['^Start "(.+)" over$', '"$1" opnieuw beginnen'],
+        ['^(\\d+) (?:document|documents) · (.+) in this browser$', (m, k, s) => `${k} ${getPlural(k, 'document', 'documenten')} · ${formatSize(s)} in deze browser`],
+        ['^No document named "(.*)"\\.$', 'Geen document met de naam "$1".'],
+        ['^Open now · (.+)$', (m, s) => `Nu geopend · ${formatSize(s)}`],
+        ['^(just now|yesterday|\\d+ min ago|\\d+ h ago|[A-Z][a-z]{2} \\d{1,2}, \\d{4}) · (.+)$', (m, w, s) => `${formatTime(w)} · ${formatSize(s)}`],
+        ['^(.+) \\(open now\\)$', '$1 (nu geopend)'],
+        ['^ZIP with (\\d+) (?:document|documents) downloaded$', (m, k) => `ZIP met ${k} ${getPlural(k, 'document', 'documenten')} gedownload`],
+
+        /* ---------- AI Assistant ---------- */
+        ['^Part (\\d+) of (\\d+) received$', 'Deel $1 van $2 ontvangen'],
+        ['^Open the other (?:link|links) from the AI too \\(still missing: part (.+)\\)\\.$',
+            'Open ook de andere links van de AI (ontbreekt nog: deel $1).'],
+        ['^Part (\\d+) of (\\d+) received - paste the other (?:link|links) too \\(missing: (.+)\\)$', 'Deel $1 van $2 ontvangen - plak ook de andere links (ontbreekt: $3)'],
+        ['^The AI sends the document to (.+) with a key that only works for this session\\. What you paste into your AI is handled by its provider\\.$',
+            'De AI stuurt het document naar $1 met een sleutel die alleen voor deze sessie werkt. Wat je in je AI plakt, wordt door de aanbieder ervan verwerkt.'],
+        ['^The AI sends its result to (.+) by itself, and it opens here\\. If it answers with a link, paste its answer below\\.$',
+            'De AI stuurt het resultaat zelf naar $1, en het wordt hier geopend. Als de AI met een link antwoordt, plak het antwoord dan hieronder.'],
+        ['^No key from (.+) - the prompt asks the AI for a link instead$', 'Geen sleutel van $1 - de prompt vraagt de AI in plaats daarvan om een link'],
+        ['^Prompt copied - the AI sends its result to (.+)$', 'Prompt gekopieerd - de AI stuurt het resultaat naar $1'],
+
+        /* ---------- Messages with names ---------- */
+        ['^"(.+)" is empty now - "Undo" brings it back$', '"$1" is nu leeg - "Ongedaan maken" haalt het terug'],
+        ['^"(.+)" opened$', '"$1" geopend'],
+        ['^New document "(.+)" - your other documents are under "My documents"$', 'Nieuw document "$1" - je andere documenten staan onder "Mijn documenten"'],
+        ['^New document "(.+)" from the AI - your other documents are unchanged$', 'Nieuw document "$1" van de AI - je andere documenten zijn ongewijzigd'],
+        ['^"(.+)" is not an XML file$', '"$1" is geen XML-bestand'],
+        ['^Opened "(.+)" - it is now in "My documents"$', '"$1" geopend - het staat nu in "Mijn documenten"'],
+        ['^Document received - the editor found (\\d+) (?:problem|problems), see above the code$', (m, k) => `Document ontvangen - de editor heeft ${k} ${getPlural(k, 'probleem', 'problemen')} gevonden, zie boven de code`],
+        ['^"(.+)" changed by the AI - "Undo" takes it back$', '"$1" gewijzigd door de AI - "Ongedaan maken" draait het terug'],
+        ['^"(.+)" duplicated$', '"$1" gedupliceerd'],
+        ['^Delete "(.+)"\\?$', '"$1" verwijderen?'],
+        ['^"(.+)" deleted$', '"$1" verwijderd'],
+        /* last: "Open <name>" on a card in My documents */
+        ['^Open (.+)$', '$1 openen'],
+    ],
+};

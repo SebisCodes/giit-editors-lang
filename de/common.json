@@ -1,0 +1,23 @@
+{
+  "footer_all": "Alle giit-Editoren",
+  "footer_binding": "Verbindlich (Deutsch):",
+  "footer_editors": "Editoren",
+  "footer_legal": "Rechtliches",
+  "footer_license": "Open Source unter der {license}",
+  "footer_llms": "llms.txt für KI-Assistenten",
+  "footer_shls": "SHLS von {author}",
+  "footer_source": "Quellcode",
+  "source_on_github": "Quellcode auf GitHub",
+  "country": "Schweiz",
+  "imprint": "Impressum",
+  "privacy": "Datenschutz",
+  "terms": "AGB",
+  "language": "Sprache",
+  "theme": {
+    "group": "Farbschema",
+    "light": "Helles Farbschema",
+    "dark": "Dunkles Farbschema",
+    "auto_title": "Wie in deinen Systemeinstellungen",
+    "auto_label": "Automatisches Farbschema (Systemeinstellung)"
+  }
+}

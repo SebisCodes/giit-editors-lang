@@ -1,0 +1,23 @@
+{
+  "footer_all": "所有 giit 编辑器",
+  "footer_binding": "具有约束力的版本（德语）：",
+  "footer_editors": "编辑器",
+  "footer_legal": "法律信息",
+  "footer_license": "基于 {license} 开源",
+  "footer_llms": "供 AI 助手使用的 llms.txt",
+  "footer_shls": "SHLS：{author}",
+  "footer_source": "源代码",
+  "source_on_github": "GitHub 上的源代码",
+  "country": "瑞士",
+  "imprint": "法律声明",
+  "privacy": "隐私政策",
+  "terms": "使用条款",
+  "language": "语言",
+  "theme": {
+    "group": "配色主题",
+    "light": "浅色主题",
+    "dark": "深色主题",
+    "auto_title": "跟随系统设置",
+    "auto_label": "自动主题（系统设置）"
+  }
+}

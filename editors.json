@@ -1,0 +1,93 @@
+{
+  "overview": {
+    "key": "overview",
+    "name": "giit Editors",
+    "url": "https://editors.giit.ch/"
+  },
+  "editors": [
+    {
+      "key": "latex",
+      "name": "LaTeX Editor",
+      "url": "https://latex.giit.ch/",
+      "online": true,
+      "category": "DesignApplication"
+    },
+    {
+      "key": "svg",
+      "name": "SVG Editor",
+      "url": "https://svg.giit.ch/",
+      "online": true,
+      "category": "DesignApplication"
+    },
+    {
+      "key": "html",
+      "name": "HTML Editor",
+      "url": "https://html.giit.ch/",
+      "online": true,
+      "category": "DeveloperApplication"
+    },
+    {
+      "key": "md",
+      "name": "Markdown Editor",
+      "url": "https://md.giit.ch/",
+      "online": true,
+      "category": "DesignApplication"
+    },
+    {
+      "key": "json",
+      "name": "JSON Editor",
+      "url": "https://json.giit.ch/",
+      "online": true,
+      "category": "DeveloperApplication"
+    },
+    {
+      "key": "yaml",
+      "name": "YAML Editor",
+      "url": "https://yaml.giit.ch/",
+      "online": true,
+      "category": "DeveloperApplication"
+    },
+    {
+      "key": "toml",
+      "name": "TOML Editor",
+      "url": "https://toml.giit.ch/",
+      "online": true,
+      "category": "DeveloperApplication"
+    },
+    {
+      "key": "xml",
+      "name": "XML Editor",
+      "url": "https://xml.giit.ch/",
+      "online": true,
+      "category": "DeveloperApplication"
+    },
+    {
+      "key": "csv",
+      "name": "CSV Editor",
+      "url": "https://csv.giit.ch/",
+      "online": true,
+      "category": "BusinessApplication"
+    },
+    {
+      "key": "shls",
+      "name": "SHLS Editor",
+      "url": "https://shls.giit.ch/",
+      "online": true,
+      "category": "DeveloperApplication"
+    },
+    {
+      "key": "typst",
+      "name": "Typst Editor",
+      "url": "https://typst.giit.ch/",
+      "online": true,
+      "category": "DesignApplication"
+    },
+    {
+      "key": "qr",
+      "name": "QR Editor",
+      "url": "https://qr.giit.ch/",
+      "online": true,
+      "category": "DesignApplication"
+    }
+  ]
+}

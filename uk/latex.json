@@ -1,0 +1,179 @@
+{
+  "title": "Редактор LaTeX онлайн із живим переглядом | giit.ch",
+  "description": "Безкоштовний редактор LaTeX у браузері: дивіться сторінки під час набору, переходьте до коду, експортуйте в PDF, PNG чи HTML. Без реєстрації й реклами.",
+  "og_title": "Редактор LaTeX онлайн із живим переглядом | giit.ch",
+  "og_description": "Пишіть LaTeX і переглядайте зверстані сторінки просто під час набору. Експорт у PDF, PNG або HTML. Безкоштовно, без реєстрації, працює у вашому браузері.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://latex.giit.ch/uk/#app",
+        "name": "LaTeX Editor",
+        "url": "https://latex.giit.ch/uk/",
+        "description": "Безкоштовний редактор LaTeX у браузері: дивіться сторінки під час набору, переходьте до коду, експортуйте в PDF, PNG чи HTML. Без реєстрації й реклами.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "uk",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://latex.giit.ch/img/og.png",
+        "featureList": [
+          "Код LaTeX із підсвічуванням синтаксису",
+          "Живий перегляд зверстаних сторінок",
+          "Клацання в перегляді переносить до коду",
+          "Клацніть текст у перегляді, щоб редагувати його на місці",
+          "Формули із середовищами amsmath",
+          "Таблиці, рисунки, списки, виноски, посилання та зміст",
+          "Зображення зберігаються разом із документом",
+          "Експорт у PDF, PNG, JPG, WebP, HTML і звичайний текст",
+          "Багато документів у браузері",
+          "Збереження на ваш сервер через вебхук або вбудовування редактора у ваш сайт",
+          "Будь-який ШІ може писати в редакторі через посилання"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Мій документ кудись вивантажується?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ні. Редактор працює у вашому браузері й зберігає ваші документи там, а не на нашому сервері. Документ потрапляє на сервер лише тоді, коли ви налаштуєте вебхук на свій власний сервер, коли сайт, що вбудовує редактор, зберігає його на власному сервері, або коли інший сайт відкриває його тут через форму (post.php) - тоді наш сервер передає його просто у ваш браузер, нічого не зберігаючи. Як і будь-який сайт, сервер записує кожне відвідування в журнал, а перегляди сторінок ми рахуємо анонімно - див. політику конфіденційності."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Як отримати PDF?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Натисніть «Експорт», виберіть PDF і натисніть «Друк / Зберегти в PDF». У діалозі друку виберіть як принтер «Зберегти як PDF». PDF показує сторінки точно такими, як у перегляді, з текстом, який можна виділяти. Для перегляду редактор сам верстає текст, тому розриви рядків і сторінок можуть відрізнятися від pdflatex: дипломну чи іншу роботу, яку треба здати, компілюйте з файлу .tex рушієм, сумісним із використаними пакетами."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи потрібне встановлення TeX?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ні. Редактор сам верстає LaTeX у браузері. Він розуміє команди, які використовуються в більшості документів, - розділи, списки, таблиці, рисунки, формули, кольори, виноски, посилання. Перегляд не відображає малюнки TikZ і шрифти fontspec. Вихідний код залишається без змін; компілюйте його рушієм, сумісним із використаними пакетами. Для fontspec потрібен XeLaTeX або LuaLaTeX."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Як додати зображення?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Перетягніть або вставте зображення в редактор чи додайте його у вкладці Зображення праворуч. Воно зберігається разом із документом у вашому браузері й використовується через \\includegraphics{name}."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Де зберігаються мої документи?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Лише у вашому браузері. Натисніть кнопку з текою вгорі ліворуч («Мої документи»), щоб відкривати, перейменовувати, дублювати, завантажувати або видаляти їх. Очищення даних сайту в браузері видаляє їх, тому завантажте ті, які хочете зберегти, - або нехай редактор надсилає їх на ваш власний сервер («На сервер»)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи може ШІ писати в редакторі LaTeX?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Так, будь-який ШІ - ChatGPT, Claude, Gemini, Copilot або ШІ у вашому інструменті для програмування. Натисніть «ШІ-асистент», потім «Копіювати промпт», вставте його у свій ШІ та скажіть, що треба написати. ШІ відповідає посиланням; клацніть його, і документ з’явиться у вашому редакторі. «Скасувати» повертає кожну зміну назад."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи можна використовувати редактор на моєму сайті?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Так. Вбудуйте його через iframe й обмінюйтеся документами через postMessage або нехай він надсилає кожну збережену версію на ваш сервер через вебхук. Приклади - у розділі Редактор на вашому сайті."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чи платний редактор LaTeX?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ні. Редактор безкоштовний, без реклами й без реєстрації."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Пишіть LaTeX онлайн із живим переглядом</h2>\n        <p>Редактор LaTeX показує ваш код і зверстані сторінки поруч. Усе, що ви вводите, одразу з’являється на сторінках - заголовки, списки, таблиці, формули, виноски й посилання, - а клацання будь-якого тексту в перегляді переносить вас до його місця в коді. Текст можна редагувати й просто на сторінці. Так можна швидко писати листи, аркуші завдань, звіти й флаєри без встановлення TeX.</p>\n        <p>Усе працює у вашому браузері. Ваші документи зберігаються там, а не на нашому сервері; немає ні реєстрації, ні реклами.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Що вміє редактор</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Код із підсвічуванням</h3><p>Команди, середовища, формули й коментарі з окремими кольорами, номери рядків, автоматичний <code>\\end{…}</code> і зрозумілий список проблем із номером рядка.</p></div>\n            <div class=\"tile\"><h3>Сторінки, як у друці</h3><p>A4, Letter або власний розмір паперу, поля стандартних класів або <code>geometry</code>, номери сторінок, виноски внизу сторінки та шрифти Latin Modern із LaTeX.</p></div>\n            <div class=\"tile\"><h3>Формули</h3><p>Формули в рядку й виокремлені, нумеровані рівняння, <code>align</code>, матриці та символи amsmath - зверстані за допомогою KaTeX просто на сторінці.</p></div>\n            <div class=\"tile\"><h3>Таблиці, рисунки, посилання</h3><p><code>tabular</code> і <code>tabularx</code> з лініями та об’єднаними клітинками, рисунки з підписами, <code>\\label</code> і <code>\\ref</code>, зміст і список літератури.</p></div>\n            <div class=\"tile\"><h3>Зображення</h3><p>Перетягніть зображення в редактор і використовуйте його через <code>\\includegraphics</code>. Зображення зберігаються разом із документом у вашому браузері.</p></div>\n            <div class=\"tile\"><h3>Експорт</h3><p>PDF через діалог друку, кожна сторінка як PNG, JPG або WebP, один файл HTML, звичайний текст або вихідний код LaTeX із зображеннями в ZIP.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Як це працює</h2>\n        <ol class=\"steps\">\n            <li><b>Почніть</b> - виберіть шаблон у «Новий», відкрийте файл .tex або вставте код LaTeX.</li>\n            <li><b>Пишіть</b> - вводьте код; сторінки праворуч оновлюються слідом. Для таблиць, списків і формул є «Вставка».</li>\n            <li><b>Експортуйте</b> - збережіть PDF, зображення сторінок або файл .tex.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Редактор на вашому сайті</h2>\n        <p>Вбудуйте редактор у свій сайт через iframe або відкривайте його в окремому вікні. Ваша сторінка передає йому документ, отримує назад кожну зміну й кожне збереження і може доручити ШІ надсилати результати на ваш сервер. Без реєстрації, без ключа.</p>\n        <p><a href=\"/uk/embed/\"><b>Вбудувати редактор у свій сайт</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Часті запитання</h2>\n        <div class=\"questions\">\n            <details><summary>Мій документ кудись вивантажується?</summary><p>Ні. Редактор працює у вашому браузері й зберігає ваші документи там, а не на нашому сервері. Документ потрапляє на сервер лише тоді, коли ви налаштуєте вебхук на свій власний сервер, коли сайт, що вбудовує редактор, зберігає його на власному сервері, або коли інший сайт відкриває його тут через форму (post.php) - тоді наш сервер передає його просто у ваш браузер, нічого не зберігаючи. Як і будь-який сайт, сервер записує кожне відвідування в журнал, а перегляди сторінок ми рахуємо анонімно - див. <a href=\"/privacy.html\">політику конфіденційності</a>.</p></details>\n            <details><summary>Як отримати PDF?</summary><p>Натисніть «Експорт», виберіть PDF і натисніть «Друк / Зберегти в PDF». У діалозі друку виберіть як принтер «Зберегти як PDF». PDF показує сторінки точно такими, як у перегляді, з текстом, який можна виділяти. Для перегляду редактор сам верстає текст, тому розриви рядків і сторінок можуть відрізнятися від pdflatex: дипломну чи іншу роботу, яку треба здати, компілюйте з файлу .tex рушієм, сумісним із використаними пакетами.</p></details>\n            <details><summary>Чи потрібне встановлення TeX?</summary><p>Ні. Редактор сам верстає LaTeX у браузері. Він розуміє команди, які використовуються в більшості документів, - розділи, списки, таблиці, рисунки, формули, кольори, виноски, посилання. Перегляд не відображає малюнки TikZ і шрифти fontspec. Вихідний код залишається без змін; компілюйте його рушієм, сумісним із використаними пакетами. Для fontspec потрібен XeLaTeX або LuaLaTeX.</p></details>\n            <details><summary>Як додати зображення?</summary><p>Перетягніть або вставте зображення в редактор чи додайте його у вкладці <b>Зображення</b> праворуч. Воно зберігається разом із документом у вашому браузері й використовується через <code>\\includegraphics{name}</code>.</p></details>\n            <details><summary>Де зберігаються мої документи?</summary><p>Лише у вашому браузері. Натисніть кнопку з текою вгорі ліворуч («Мої документи»), щоб відкривати, перейменовувати, дублювати, завантажувати або видаляти їх. Очищення даних сайту в браузері видаляє їх, тому завантажте ті, які хочете зберегти, - або нехай редактор надсилає їх на ваш власний сервер («На сервер»).</p></details>\n            <details><summary>Чи може ШІ писати в редакторі LaTeX?</summary><p>Так, будь-який ШІ - ChatGPT, Claude, Gemini, Copilot або ШІ у вашому інструменті для програмування. Натисніть «ШІ-асистент», потім «Копіювати промпт», вставте його у свій ШІ та скажіть, що треба написати. ШІ відповідає посиланням; клацніть його, і документ з’явиться у вашому редакторі. «Скасувати» повертає кожну зміну назад.</p></details>\n            <details><summary>Чи можна використовувати редактор на моєму сайті?</summary><p>Так. Вбудуйте його через iframe й обмінюйтеся документами через postMessage або нехай він надсилає кожну збережену версію на ваш сервер через вебхук. Приклади - у розділі <a href=\"#embed\">Редактор на вашому сайті</a>.</p></details>\n            <details><summary>Чи платний редактор LaTeX?</summary><p>Ні. Редактор безкоштовний, без реклами й без реєстрації.</p></details>\n        </div>\n    </section>",
+  "name": "Редактор LaTeX",
+  "embed": {
+    "title": "Як вбудувати редактор LaTeX у свій сайт | giit.ch",
+    "description": "Вбудуйте редактор LaTeX у свій сайт через iframe, передавайте документи через postMessage або вебхук і підключіть свій ШІ. Безкоштовно.",
+    "og_title": "Як вбудувати редактор LaTeX у свій сайт",
+    "og_description": "Вбудуйте редактор LaTeX у свій сайт через iframe, передавайте документи через postMessage або вебхук і підключіть свій ШІ. Безкоштовно.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://latex.giit.ch/uk/embed/#article",
+          "headline": "Як вбудувати редактор LaTeX у свій сайт",
+          "description": "Вбудуйте редактор LaTeX у свій сайт через iframe, передавайте документи через postMessage або вебхук і підключіть свій ШІ. Безкоштовно.",
+          "inLanguage": "uk",
+          "url": "https://latex.giit.ch/uk/embed/",
+          "mainEntityOfPage": "https://latex.giit.ch/uk/embed/",
+          "image": "https://latex.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Редактор LaTeX",
+            "url": "https://latex.giit.ch/uk/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Редактор LaTeX",
+              "item": "https://latex.giit.ch/uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Вбудовування",
+              "item": "https://latex.giit.ch/uk/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Як вбудувати редактор LaTeX у свій сайт",
+    "intro": "<p>Для розробників: як розмістити редактор LaTeX на своїй сторінці - в iframe, в окремому вікні або в режимі лише для читання - і як документи, збереження та результати ШІ передаються між редактором і вашим сервером. Ні реєстрація, ні ключ від нас не потрібні.</p>",
+    "body": "<p>Будь-яка сторінка https (і localhost) може вбудувати редактор за допомогою <code>&lt;iframe&gt;</code> і <code>?embed=1</code> - без реєстрації, без ключа. У вбудованому вигляді редактор приховує текст сторінки і показує кнопку «Зберегти». Передати документ у редактор і отримати його назад можна чотирма способами.</p>\n\n        <h2>1. Відкрити файл за посиланням, зберегти на ваш сервер</h2>\n        <p><code>src=</code> відкриває файл (ваш сервер має дозволяти CORS), <code>webhook=</code> змушує «Зберегти» (Ctrl+S) надсилати документ на цю адресу. Додайте <code>&amp;auto</code>, щоб зберігати після кожної зміни.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://latex.giit.ch/uk/?embed=1&amp;src=https://your-site.com/docs/flyer.tex&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Вебхук отримує POST із JSON <code>{ editor, event: \"save\", id, name, content, assets, updated }</code>. Посилання не містить токена: він потрапив би до журналів сервера та історії браузера. Тому вебхук в адресі підходить для збереження на сервері, якому токен не потрібен, наприклад на localhost або у вашій інтрамережі. Для публічного сервера передайте вебхук із токеном у <code>latexeditor:load</code> (<code>hook: { url, token }</code>) і перевірте токен, як це робить невеликий PHP-скрипт нижче:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://latex.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/docs/$name.tex&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Документ зберігає ваша сторінка (postMessage)</h2>\n        <p>Редактор повідомляє <code>latexeditor:ready</code>, ваша сторінка відповідає <code>latexeditor:load</code>, редактор повідомляє <code>latexeditor:loaded</code>, <code>latexeditor:change</code> у разі фактичних змін і <code>latexeditor:save</code>, коли користувач зберігає. Ваша сторінка може надіслати <code>latexeditor:get</code> (поточний стан) або <code>latexeditor:save</code> (натиснути «Зберегти»). Тоді збереження проходить через вашу власну систему входу й сеанс.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://latex.giit.ch/uk/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://latex.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;latexeditor:ready&#x27;) {             // редактор готовий: передайте йому документ\n    ed.contentWindow.postMessage({\n      type: &#x27;latexeditor:load&#x27;,\n      name: &#x27;Flyer&#x27;,\n      content: await (await fetch(&#x27;/docs/flyer.tex&#x27;)).text(),\n      assets: { &#x27;logo.png&#x27;: &#x27;data:image/png;base64,…&#x27; }   // необов’язкові зображення\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;latexeditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // справжня зміна\n  if (m.type === &#x27;latexeditor:save&#x27;) {              // користувач натиснув «Зберегти»\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content, assets: m.assets }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Кнопка збереження на вашій сторінці: відповідь надходить як latexeditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;latexeditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>ШІ-асистент усередині вашої сторінки:</b> він працює і у фреймі. З <code>allow=\"clipboard-write\"</code> на iframe «Копіювати промпт» використовує буфер обміну напряму (інакше редактор вдається до старої команди копіювання або показує промпт, щоб скопіювати його вручну). Посилання, яке надсилає ШІ, не може дістатися до редактора всередині іншого сайту, тому редактор просить ШІ та користувача натомість вставити всю відповідь ШІ в редактор - або відкрити редактор в окремому вікні.</p>\n        <h2>3. В окремому вікні</h2>\n        <p><code>window.open(\"https://latex.giit.ch/uk/?embed=window\", \"latexeditor-17\")</code> відкриває повний редактор в окремому вікні, і він обмінюється тими самими повідомленнями з <code>window.opener</code>. Посилання від ШІ доходять до нього туди. <code>latexeditor:load</code> може також містити <code>context: { host, title, rules }</code> - тоді промпт для ШІ вказує, до чого належить документ, і дотримується ваших правил - і <code>hook: { url, token, assets: false }</code>, вебхук лише для цього документа, який ніколи не зберігається. Якщо закрити вікно з незбереженими змінами, надсилається <code>latexeditor:closing</code>.</p>\n        <h2>4. ШІ через ваш власний сервер</h2>\n        <p>Передайте редактору власний промпт, адресу на вашому сайті та ключ для цього сеансу редактора. Тоді діалог ШІ показує «Під’єднано до» вашого сайту, що ви повідомляєте ШІ, і вибір <b>змінити поточний документ</b> або <b>створити новий</b>; <b>Копіювати промпт</b> збирає все разом. ШІ надсилає свій результат із ключем на ваш сервер, а ваша сторінка відкриває його в редакторі - новий документ відкривається окремо й залишається в браузері користувача. Один ключ на сеанс редактора: він дійсний, поки редактор відкрито, і лише поки ключа немає, редактор запитує його через <code>latexeditor:key-request</code>. Редактор ніколи сам не надсилає ключ і ніколи його не зберігає; адреса має бути https на вашому власному хості або його піддомені.</p>\n        <p>Псевдокод для ілюстрації. Перед використанням реалізуйте пошук сеансу, періодичні сигнали активності, відкликання ключів, перевірку прав доступу та зберігання чернеток. Обробку key-request слід розмістити всередині обробника повідомлень після перевірки джерела та походження.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // один ключ на сеанс редактора\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;latexeditor:load&#x27;, name: &#x27;Flyer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// запам’ятайте id з latexeditor:loaded та ігноруйте change/save/closing з іншим id\n// лише поки редактор не має ключа:\nif (m.type === &#x27;latexeditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;latexeditor:ai&#x27;, key: k.key }, ORIGIN); }\n// поки редактор відкрито, повідомляйте свій сервер щохвилини; закриття редактора або сторінки анулює ключ\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// ваш сервер має результат (polling, SSE …): target - &quot;current&quot; або &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;latexeditor:load&#x27;, name: &#x27;Flyer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - ключ цього сеансу редактора для користувача, що увійшов (його викликає ваша сторінка)\nsession_start();                                     // перевірте, чи може користувач редагувати цей документ\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // або у вашій базі даних; ?alive= знову встановлює seen\necho json_encode([&#x27;key&#x27; =&gt; $key]);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-result.php - ШІ надсилає сюди (без заголовків CORS: ШІ викликають його із сервера)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // ваша база даних: не анульований, бачений за останні 3 хвилини\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // ваша сторінка показує його через latexeditor:load\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Створюйте ключі щонайменше зі 128 випадкових бітів, зберігайте лише їхній хеш, прив’язуйте кожен до користувача, що увійшов, до документа й до цього сеансу редактора, створюйте один на сеанс, тримайте його дійсним лише поки ваша сторінка повідомляє, що сеанс відкритий, і анулюйте його, коли редактор або сторінка закриваються.</p>\n        <p class=\"muted\">Увесь протокол - у <a href=\"/llms.txt\">llms.txt</a>: дайте його ШІ, і він налаштує взаємодію з вашою системою. Інші редактори giit працюють так само, кожен зі своїм префіксом, - <a href=\"https://editors.giit.ch/uk/\">editors.giit.ch</a>.</p>\n        <h2>Показ документа лише для читання (переглядач)</h2>\n        <p><code>?viewer=1</code> показує лише готовий документ: без коду, без інструментів, нічого не можна змінити, і в браузері нічого не зберігається. Документ надходить за посиланням (<code>#b64=</code>, <code>?src=</code>), з вашої сторінки через <code>latexeditor:load</code> або через POST звичайною формою на <code>post.php</code>: поле <code>content</code> як текст або <code>b64</code> як base64, за бажанням <code>name</code>, не більше 20 МБ тексту.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://latex.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;uk&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Без <code>viewer=1</code> документ відкривається у звичайному редакторі. В обох випадках він залишається лише в пам’яті: не зберігається на сервері й не потрапляє до «Моїх документів». За прямого відкриття переглядач повідомляє, що вміст отримано від третіх осіб.</p>",
+    "crumb": "Вбудовування",
+    "crumb_nav": "Навігаційний ланцюжок",
+    "open": "Відкрити редактор"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "title": "Generador de códigos QR gratis con logo, SVG y PDF | giit.ch",
+  "description": "Generador QR gratis con logo: enlaces, Wi-Fi, contactos, SEPA y factura QR suiza. Prueba de escaneo integrada. SVG, PNG, PDF, EPS. Sin registro.",
+  "og_title": "Generador de códigos QR gratis con logo, SVG y PDF | giit.ch",
+  "og_description": "Generador QR gratis con logo: enlaces, Wi-Fi, contactos, SEPA y factura QR suiza. Prueba de escaneo integrada. SVG, PNG, PDF, EPS. Sin registro.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://qr.giit.ch/es/#app",
+        "name": "QR Editor",
+        "alternateName": "Generador de códigos QR",
+        "url": "https://qr.giit.ch/es/",
+        "description": "Generador QR gratis con logo: enlaces, Wi-Fi, contactos, SEPA y factura QR suiza. Prueba de escaneo integrada. SVG, PNG, PDF, EPS. Sin registro.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Cualquiera (navegador web)",
+        "inLanguage": "es",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://qr.giit.ch/img/og.png",
+        "featureList": [
+          "Códigos QR estáticos sin fecha de caducidad: el código contiene el contenido real, sin redirección y sin cuenta",
+          "Enlaces, texto, Wi-Fi, contactos (vCard y MeCard), correo electrónico, SMS, teléfono, ubicación, eventos de calendario, Bitcoin y Ethereum",
+          "Pagos SEPA (EPC GiroCode) y facturas QR suizas con comprobación del IBAN, la referencia QR y la referencia de acreedor",
+          "Colores, degradados lineales y radiales, fondo transparente",
+          "Siete formas de módulo, cuatro marcos de ojo y cinco centros de ojo con su propio color",
+          "Logo de 11 símbolos incluidos o tu propia imagen, con comprobación frente a la corrección de errores",
+          "Leyenda y marco",
+          "El código que se muestra en el editor se comprueba en tamaño normal, pequeño y con desenfoque. Las exportaciones por lotes no se comprueban automáticamente mediante escaneo.",
+          "Comprobación del contraste, la zona de silencio y el tamaño de impresión",
+          "Exportación a SVG, PNG de hasta 8192 píxeles con ppp, JPEG, WebP, PDF y EPS (vectores con degradados)",
+          "Lectura de códigos QR desde imágenes, el portapapeles y la cámara",
+          "Muchos códigos a la vez desde una tabla CSV, como ZIP o en un solo PDF",
+          "Muchos códigos guardados en el navegador",
+          "Cualquier IA puede escribir en el editor mediante enlaces; intégralo en tu sitio web"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Caducan mis códigos QR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. El Editor de QR crea códigos estáticos: el enlace, la contraseña del Wi-Fi o el contacto están en el propio código, no detrás de una redirección en nuestro servidor. Funcionan mientras el contenido sea válido, sin cuenta, sin suscripción y sin límite de escaneos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿De verdad es gratis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Todos los tipos de contenido, todas las opciones de diseño, la exportación a SVG, PDF y EPS, la prueba de escaneo y la creación de muchos códigos desde una tabla son gratis, sin registro, sin anuncios y sin marca de agua."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Se envían mis datos a un servidor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Los códigos se crean, se comprueban y se exportan en tu navegador, y las imágenes y la imagen de la cámara que escaneas también se leen allí. Un documento QR solo llega a un servidor si configuras un webhook a tu propio servidor, si un sitio web que integra el editor lo guarda en su propio servidor, o si otro sitio web lo abre aquí con un formulario (post.php); en ese caso, nuestro servidor lo pasa directamente a tu navegador sin guardarlo. Como en cualquier sitio web, el servidor registra cada visita, y contamos las visitas a las páginas de forma anónima: consulta la política de privacidad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Mi código QR con logo se seguirá pudiendo escanear?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El editor te lo dice. Compara la parte del código que tapa el logo con lo que puede reparar la corrección de errores, y vuelve a leer el código terminado: en tamaño normal, pequeño y borroso. Si no se lee de forma fiable, lo ves antes de imprimir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué formato de archivo uso para imprimir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usa SVG, PDF o EPS para obtener formas QR escalables. Los logos subidos como imagen y algunas leyendas en PDF/EPS se exportan como imágenes de mapa de bits. Para PNG, elige el ancho en píxeles y los ppp según el tamaño de impresión."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo crear una factura QR suiza o un código de pago SEPA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Los formularios comprueban el IBAN, el QR-IBAN con su referencia QR, la referencia de acreedor (RF) y los límites de longitud de los campos que admiten esta comprobación. La factura QR suiza se dibuja con la cruz suiza y la corrección de errores M, como exige el estándar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puede leer códigos QR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Abre, suelta o pega una imagen, o usa la cámara con «Leer código». El contenido pasa a ser un código nuevo que puedes modificar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué tamaño debe tener un código QR impreso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aproximadamente una décima parte de la distancia de escaneo: 2 cm para 20 cm, 10 cm para un metro. La pestaña Comprobar lo calcula y avisa cuando un módulo (un cuadradito del código) mide menos de 0,4 mm."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Códigos QR gratis sin fecha de caducidad: con diseño, comprobados y privados</h2>\n        <p>El Editor de QR crea códigos QR para enlaces, Wi-Fi, contactos, eventos, correos electrónicos, SMS, lugares y pagos. Los diseñas con colores, degradados, formas, un logo y una leyenda. El código que se muestra en el editor se comprueba en tamaño normal, pequeño y con desenfoque. Las exportaciones por lotes no se comprueban automáticamente mediante escaneo. Exporta a SVG, PDF y EPS para imprimir, o a PNG de hasta 8192 píxeles de ancho.</p>\n        <p>Los códigos son estáticos: el contenido está en el propio código, no detrás de una redirección que deja de funcionar cuando termina un periodo de prueba. No hay registro, ni publicidad, ni límite de escaneos, y todo ocurre en tu navegador: lo que escribes o escaneas se queda allí, no en nuestro servidor.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Qué puede hacer el Editor de QR</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Doce tipos de contenido</h3><p>Enlaces, texto, Wi-Fi (WPA, WEP, abierta, oculta), contactos como vCard o MeCard, correo electrónico, SMS, teléfono, ubicación, eventos de calendario, Bitcoin y Ethereum, pagos SEPA (EPC GiroCode) y la factura QR suiza, cada uno con su formulario y sus comprobaciones.</p></div>\n            <div class=\"tile\"><h3>Diseño</h3><p>Colores, degradados lineales y radiales, fondo transparente, siete formas de módulo, cuatro marcos de ojo y cinco centros de ojo con su propio color, un logo elegido entre los símbolos incluidos o creado con tu propia imagen, leyenda y marco.</p></div>\n            <div class=\"tile\"><h3>Comprobado escaneándolo</h3><p>El código que se muestra en el editor se comprueba en tamaño normal, pequeño y con desenfoque. Las exportaciones por lotes no se comprueban automáticamente mediante escaneo. Se comprueban el contraste, la zona de silencio y el logo en relación con la corrección de errores, y el tamaño de impresión se deduce de la distancia de escaneo.</p></div>\n            <div class=\"tile\"><h3>Exportación para imprenta y web</h3><p>Usa SVG, PDF o EPS para obtener formas QR escalables. Los logos subidos como imagen y algunas leyendas en PDF/EPS se exportan como imágenes de mapa de bits. Para PNG, elige el ancho en píxeles y los ppp según el tamaño de impresión. PNG de hasta 8192 píxeles con los ppp incluidos, JPEG y WebP. Gratis y sin registro.</p></div>\n            <div class=\"tile\"><h3>Muchos códigos a la vez</h3><p>Escribe marcadores como <code>{{url}}</code> en el contenido, pega una tabla y descarga un ZIP con archivos SVG o PNG o un solo PDF con un código por página.</p></div>\n            <div class=\"tile\"><h3>Leer códigos QR</h3><p>Abre, suelta o pega una imagen, o escanea con la cámara, también códigos claros sobre fondo oscuro. El contenido pasa a ser un código que puedes modificar.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Por qué códigos estáticos</h2>\n        <p>Muchos generadores de QR «gratis» crean códigos dinámicos: el código contiene un enlace corto a su servidor, que redirige a tu dirección. Cuando termina el periodo de prueba o se alcanza un límite de escaneos, desactivan la redirección o muestran antes publicidad, y cada código impreso deja de funcionar. Un código estático contiene la propia dirección, la contraseña del Wi-Fi o el contacto, así que sigue funcionando sin nadie de por medio. El Editor de QR solo crea códigos estáticos y avisa cuando el contenido es un acortador de enlaces.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Cómo crear un código QR</h2>\n        <ol class=\"steps\">\n            <li><b>Elige</b>: escoge un tipo de código en «Nuevo» y rellena el formulario, o escribe el contenido.</li>\n            <li><b>Diseña y comprueba</b>: cambia colores, formas, logo y leyenda; la etiqueta encima del código muestra si todavía se puede escanear.</li>\n            <li><b>Exporta</b>: descarga SVG, PDF, EPS o PNG, o crea muchos códigos desde una tabla.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Usa el editor en tu propio sitio web</h2>\n        <p>Integra el editor en tu propio sitio web con un iframe o en una ventana propia. Tu página le entrega el documento, recibe cada cambio y cada guardado, y puede dejar que una IA envíe sus resultados a tu servidor. Sin registro y sin clave.</p>\n        <p><a href=\"/es/embed/\"><b>Integra el editor en tu sitio web</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Preguntas frecuentes</h2>\n        <div class=\"questions\">\n            <details><summary>¿Caducan mis códigos QR?</summary><p>No. El Editor de QR crea códigos estáticos: el enlace, la contraseña del Wi-Fi o el contacto están en el propio código, no detrás de una redirección en nuestro servidor. Funcionan mientras el contenido sea válido, sin cuenta, sin suscripción y sin límite de escaneos.</p></details>\n            <details><summary>¿De verdad es gratis?</summary><p>Sí. Todos los tipos de contenido, todas las opciones de diseño, la exportación a SVG, PDF y EPS, la prueba de escaneo y la creación de muchos códigos desde una tabla son gratis, sin registro, sin anuncios y sin marca de agua.</p></details>\n            <details><summary>¿Se envían mis datos a un servidor?</summary><p>No. Los códigos se crean, se comprueban y se exportan en tu navegador, y las imágenes y la imagen de la cámara que escaneas también se leen allí. Un documento QR solo llega a un servidor si configuras un webhook a tu propio servidor, si un sitio web que integra el editor lo guarda en su propio servidor, o si otro sitio web lo abre aquí con un formulario (post.php); en ese caso, nuestro servidor lo pasa directamente a tu navegador sin guardarlo. Como en cualquier sitio web, el servidor registra cada visita, y contamos las visitas a las páginas de forma anónima: consulta la <a href=\"/privacy.html\">política de privacidad</a>.</p></details>\n            <details><summary>¿Mi código QR con logo se seguirá pudiendo escanear?</summary><p>El editor te lo dice. Compara la parte del código que tapa el logo con lo que puede reparar la corrección de errores, y vuelve a leer el código terminado: en tamaño normal, pequeño y borroso. Si no se lee de forma fiable, lo ves antes de imprimir.</p></details>\n            <details><summary>¿Qué formato de archivo uso para imprimir?</summary><p>Usa SVG, PDF o EPS para obtener formas QR escalables. Los logos subidos como imagen y algunas leyendas en PDF/EPS se exportan como imágenes de mapa de bits. Para PNG, elige el ancho en píxeles y los ppp según el tamaño de impresión.</p></details>\n            <details><summary>¿Puedo crear una factura QR suiza o un código de pago SEPA?</summary><p>Sí. Los formularios comprueban el IBAN, el QR-IBAN con su referencia QR, la referencia de acreedor (RF) y los límites de longitud de los campos que admiten esta comprobación. La factura QR suiza se dibuja con la cruz suiza y la corrección de errores M, como exige el estándar.</p></details>\n            <details><summary>¿Puede leer códigos QR?</summary><p>Sí. Abre, suelta o pega una imagen, o usa la cámara con «Leer código». El contenido pasa a ser un código nuevo que puedes modificar.</p></details>\n            <details><summary>¿Qué tamaño debe tener un código QR impreso?</summary><p>Aproximadamente una décima parte de la distancia de escaneo: 2 cm para 20 cm, 10 cm para un metro. La pestaña Comprobar lo calcula y avisa cuando un módulo (un cuadradito del código) mide menos de 0,4 mm.</p></details>\n        </div>\n    </section>",
+  "name": "Editor de QR",
+  "embed": {
+    "title": "Integra el editor de QR en tu sitio web | giit.ch",
+    "description": "Guía para desarrolladores: integra el editor de QR en tu web con un iframe, intercambia documentos por postMessage o webhook y conecta tu IA. Gratis.",
+    "og_title": "Integra el editor de QR en tu sitio web",
+    "og_description": "Guía para desarrolladores: integra el editor de QR en tu web con un iframe, intercambia documentos por postMessage o webhook y conecta tu IA. Gratis.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://qr.giit.ch/es/embed/#article",
+          "headline": "Integra el editor de QR en tu sitio web",
+          "description": "Guía para desarrolladores: integra el editor de QR en tu web con un iframe, intercambia documentos por postMessage o webhook y conecta tu IA. Gratis.",
+          "inLanguage": "es",
+          "url": "https://qr.giit.ch/es/embed/",
+          "mainEntityOfPage": "https://qr.giit.ch/es/embed/",
+          "image": "https://qr.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Editor de QR",
+            "url": "https://qr.giit.ch/es/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Editor de QR",
+              "item": "https://qr.giit.ch/es/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Integración",
+              "item": "https://qr.giit.ch/es/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Integra el editor de QR en tu sitio web",
+    "intro": "<p>Para desarrolladores: cómo poner el editor de QR en tu propia página (en un iframe, en una ventana propia o como visor de solo lectura) y cómo pasan los documentos, los guardados y los resultados de una IA entre el editor y tu servidor. No necesitas registro ni ninguna clave nuestra.</p>",
+    "body": "<p>Cualquier página https (y localhost) puede integrar el editor con un <code>&lt;iframe&gt;</code> y <code>?embed=1</code>, sin registro y sin clave. Integrado, el editor oculta el texto de la página y muestra un botón Guardar. Añade <code>camera</code> al <code>allow</code> del iframe si el usuario debe poder escanear códigos en él.</p>\n        <h2>1. Abrir un archivo desde un enlace, guardar en tu servidor</h2>\n        <p><code>src=</code> abre un archivo .qr (tu servidor debe permitir CORS), <code>webhook=</code> hace que «Guardar» (Ctrl+S) envíe el documento QR a esa dirección. Añade <code>&amp;auto</code> para guardar tras cada cambio.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://qr.giit.ch/es/?embed=1&amp;src=https://your-site.com/codes/shop.qr&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>El webhook recibe un POST con JSON <code>{ editor: \"qr\", event: \"save\", id, name, content, updated }</code>. Un enlace no lleva token (acabaría en los registros del servidor y en el historial del navegador), por lo que un webhook en la dirección sirve para guardar en una dirección que no lo necesite, por ejemplo en localhost o en tu intranet. Para un servidor público, pasa el webhook con un token en <code>qreditor:load</code> (<code>hook: { url, token }</code>) y compruébalo, como hace este pequeño script PHP:</p>\n        <pre class=\"example\"><code>&lt;?php\n// save.php: one document; replace the token and storage path for your application.\nheader(&#x27;Access-Control-Allow-Origin: https://qr.giit.ch&#x27;);\nheader(&#x27;Vary: Origin&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Content-Type: application/json&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) {\n    http_response_code(204);\n    exit;\n}\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] !== &#x27;POST&#x27;) {\n    http_response_code(405);\n    header(&#x27;Allow: POST, OPTIONS&#x27;);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;POST required&#x27;]);\n    exit;\n}\n$token = &#x27;replace-with-a-random-secret&#x27;;\nif (!hash_equals(&#x27;Bearer &#x27; . $token, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;)) {\n    http_response_code(401);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid token&#x27;]);\n    exit;\n}\n$data = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\nif (!is_array($data) || ($data[&#x27;editor&#x27;] ?? &#x27;&#x27;) !== &#x27;qr&#x27;\n    || ($data[&#x27;event&#x27;] ?? &#x27;&#x27;) !== &#x27;save&#x27; || !is_string($data[&#x27;content&#x27;] ?? null)) {\n    http_response_code(400);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid QR document&#x27;]);\n    exit;\n}\n// Use a fixed path outside the public web directory, after checking access.\nif (file_put_contents(dirname(__DIR__) . &#x27;/shop.qr&#x27;, $data[&#x27;content&#x27;], LOCK_EX) === false) {\n    http_response_code(500);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Could not save&#x27;]);\n    exit;\n}\necho json_encode([&#x27;ok&#x27; =&gt; true]);</code></pre>\n        <p><code>content</code> es el documento QR (líneas de diseño, <code>---</code>, el contenido).</p>\n        <p>Tu webhook debe permitir CORS desde <code>https://qr.giit.ch</code>, incluidas las peticiones <code>OPTIONS</code> y la cabecera <code>Content-Type</code>; permite también <code>Authorization</code> si usas un token. Sustituye el token de ejemplo por un secreto aleatorio y usa los controles de acceso y la ubicación de almacenamiento de tu aplicación.</p>\n        <h2>2. Tu página guarda el documento (postMessage)</h2>\n        <p>El editor dice <code>qreditor:ready</code>, tu página responde con <code>qreditor:load</code>, el editor informa con <code>qreditor:loaded</code>, con <code>qreditor:change</code> en cambios reales y con <code>qreditor:save</code> cuando el usuario guarda. Tu página puede enviar <code>qreditor:get</code> (el estado actual) o <code>qreditor:save</code> (pulsar Guardar). Un contenido simple sin líneas de diseño es un documento válido.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://qr.giit.ch/es/?embed=1&quot; allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://qr.giit.ch&#x27;;\naddEventListener(&#x27;message&#x27;, e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;qreditor:ready&#x27;)\n    ed.contentWindow.postMessage({ type: &#x27;qreditor:load&#x27;, name: &#x27;Table 12&#x27;,\n      content: &#x27;color: #1d2b53\\ncaption: Table 12\\n---\\nhttps://example.com/menu?table=12&#x27; }, ORIGIN);\n  if (m.type === &#x27;qreditor:save&#x27;) saveOnYourServer(m.name, m.content);\n});\n&lt;/script&gt;</code></pre>\n        <h2>3. En una ventana propia, y la IA a través de tu servidor</h2>\n        <p><code>window.open(\"https://qr.giit.ch/es/?embed=window\", \"qreditor-17\")</code> abre el editor completo en una ventana propia con los mismos mensajes. Tu página también puede pasar al editor su propio prompt de IA, una dirección https de tu sitio y una clave para esta sesión del editor (<code>ai: { label, prompt, endpoint, key }</code> en <code>qreditor:load</code>, o <code>qreditor:ai</code>); la IA envía entonces allí su resultado. El editor nunca envía la clave por sí mismo y nunca la guarda.</p>\n        <h2>Mostrar un código en solo lectura (visor)</h2>\n        <p><code>?viewer=1</code> muestra solo el código terminado con Descargar y Exportar: no se puede cambiar nada y no se guarda nada. El documento llega desde un enlace (<code>#b64=</code>, <code>#qr=</code>, <code>?src=</code>), desde tu página con <code>qreditor:load</code>, o por POST a <code>post.php</code> (campo <code>content</code> o <code>b64</code>, opcionalmente <code>name</code>).</p>\n        <p class=\"muted\">El protocolo completo está en <a href=\"/llms.txt\">llms.txt</a>: dáselo a una IA y construirá la conexión para tu sistema. Los demás editores de giit funcionan igual, cada uno con su propio prefijo: <a href=\"https://editors.giit.ch/es/\">editors.giit.ch</a>.</p>",
+    "crumb": "Integración",
+    "crumb_nav": "Ruta de navegación",
+    "open": "Abrir el editor"
+  }
+}

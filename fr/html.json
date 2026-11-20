@@ -1,0 +1,178 @@
+{
+  "title": "Éditeur HTML gratuit avec aperçu en direct | giit.ch",
+  "description": "Éditeur HTML gratuit dans le navigateur : HTML et CSS avec la page en direct, texte modifiable dans l’aperçu, export HTML, ZIP ou PDF. Sans inscription.",
+  "og_title": "Éditeur HTML en ligne - Aperçu en direct, gratuit et privé",
+  "og_description": "Écrivez du HTML et du CSS et voyez la page pendant la saisie. Export en HTML, ZIP ou PDF. Gratuit, sans inscription, fonctionne dans votre navigateur.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://html.giit.ch/fr/#app",
+        "name": "HTML Editor",
+        "url": "https://html.giit.ch/fr/",
+        "description": "Éditeur HTML gratuit dans le navigateur : HTML et CSS avec la page en direct, texte modifiable dans l’aperçu, export HTML, ZIP ou PDF. Sans inscription.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Tous (navigateur web)",
+        "inLanguage": "fr",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://html.giit.ch/img/og.png",
+        "featureList": [
+          "HTML avec coloration du CSS et du JavaScript intégrés",
+          "Aperçu en direct de la page, les scripts ne s’exécutent jamais",
+          "Cliquer dans l’aperçu pour aller au code",
+          "Cliquer sur un texte de l’aperçu pour le modifier sur place",
+          "Problèmes : balises non fermées ou mal imbriquées, éléments inconnus, images sans alt, fichiers manquants, id en double",
+          "Images, feuilles de style et polices enregistrées avec la page",
+          "Export en HTML, un fichier HTML avec ses fichiers inclus, ZIP, PDF et texte brut",
+          "Conserver de nombreux documents dans le navigateur",
+          "Enregistrer sur votre propre serveur avec un webhook, ou intégrer l’éditeur dans votre site web",
+          "N’importe quelle IA peut écrire dans l’éditeur grâce à des liens"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ma page est-elle envoyée sur un serveur ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. L’éditeur fonctionne dans votre navigateur et y conserve vos pages, pas sur notre serveur. Une page n’est envoyée à un serveur que si vous configurez un webhook vers votre propre serveur, si un site web qui intègre l’éditeur l’enregistre sur son propre serveur, ou si un autre site web l’ouvre ici avec un formulaire (post.php) - notre serveur la transmet alors directement à votre navigateur, sans la stocker. Comme sur tout site web, le serveur enregistre chaque visite dans son journal, et nous comptons les pages vues de façon anonyme - voir la politique de confidentialité."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le JavaScript s’exécute-t-il dans l’aperçu ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. L’aperçu affiche le HTML et le CSS de la page, mais les scripts et les attributs on… ne s’exécutent jamais, et les liens ne naviguent pas. L’éditeur reste ainsi sûr avec n’importe quelle page ouverte. Le code garde ses scripts, la page exportée fonctionne donc comme avant."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment ajouter des images et des feuilles de style ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Glissez-les ou collez-les dans l’éditeur, ou ajoutez-les dans l’onglet Fichiers à droite. Ils sont enregistrés avec la page dans votre navigateur et utilisés par leur nom, par exemple <img src=\"logo.png\"> ou <link rel=\"stylesheet\" href=\"style.css\">."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment obtenir un PDF ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cliquez sur « Exporter », choisissez PDF et cliquez sur « Imprimer / Enregistrer en PDF ». Dans la boîte de dialogue d’impression, choisissez « Enregistrer au format PDF » comme imprimante."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Où mes documents sont-ils enregistrés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Uniquement dans votre navigateur. Cliquez sur le bouton dossier en haut à gauche (Mes documents) pour les ouvrir, renommer, dupliquer, télécharger ou supprimer. Effacer les données de site de votre navigateur les supprime : téléchargez ceux que vous voulez garder - ou laissez l’éditeur les envoyer à votre propre serveur (« Enregistrer sur un serveur »)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Une IA peut-elle écrire dans l’éditeur HTML ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, n’importe quelle IA - ChatGPT, Claude, Gemini, Copilot ou l’IA de votre outil de développement. Cliquez sur « Assistant IA », puis sur « Copier le prompt », collez-le dans votre IA et dites-lui ce qu’elle doit écrire. L’IA répond par un lien ; cliquez dessus et la page apparaît dans votre éditeur. « Annuler » revient sur chaque modification."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Puis-je utiliser l’éditeur sur mon propre site web ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Intégrez-le avec une iframe et échangez les documents par postMessage, ou laissez-le envoyer chaque version enregistrée à votre serveur avec un webhook. Voir Utiliser l’éditeur sur votre propre site web pour des exemples."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L’éditeur HTML est-il payant ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. L’éditeur est gratuit, sans publicité et sans inscription."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>Écrire du HTML en ligne, avec un aperçu en direct</h2>\n        <p>L’éditeur HTML affiche votre code et la page côte à côte. Tout ce que vous tapez apparaît aussitôt dans l’aperçu - titres, listes, tableaux, images et tout votre CSS - et un clic sur n’importe quel élément de l’aperçu vous mène à sa place dans le code. Vous pouvez aussi modifier le texte directement dans l’aperçu. Créer des pages de destination, des lettres d’information, des articles et des formulaires devient ainsi rapide, sans rien installer.</p>\n        <p>Tout fonctionne dans votre navigateur. Vos pages y sont conservées, pas sur notre serveur, et il n’y a ni inscription ni publicité.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Ce que l’éditeur sait faire</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Code avec coloration</h3><p>Balises, attributs, entités, commentaires ainsi que le CSS et le JavaScript de la page dans leurs propres couleurs, numéros de ligne, balises de fermeture automatiques et indentation propre en un clic.</p></div>\n            <div class=\"tile\"><h3>Un aperçu en direct sûr</h3><p>La page telle que le navigateur l’affiche, dans un cadre où les scripts et les attributs <code>on…</code> ne s’exécutent jamais et où les liens ne naviguent pas. Vérifiez-la en pleine largeur, en taille tablette ou téléphone.</p></div>\n            <div class=\"tile\"><h3>Modifier dans l’aperçu</h3><p>Cliquez sur un titre ou un paragraphe de l’aperçu et tapez : la modification va dans le code, avec <code>&amp;</code>, <code>&lt;</code> et <code>&gt;</code> écrits en entités.</p></div>\n            <div class=\"tile\"><h3>Les problèmes d’un coup d’œil</h3><p>Balises non fermées ou mal imbriquées, éléments inconnus, images sans <code>alt</code>, fichiers manquants et id utilisés deux fois - chacun avec sa ligne.</p></div>\n            <div class=\"tile\"><h3>Images, feuilles de style, polices</h3><p>Glissez des fichiers dans l’éditeur et utilisez-les par leur nom : <code>&lt;img src=&quot;logo.png&quot;&gt;</code>, <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>. Ils sont conservés avec la page dans votre navigateur.</p></div>\n            <div class=\"tile\"><h3>Export</h3><p>Le fichier .html, un fichier HTML avec tous les fichiers inclus, un ZIP avec les fichiers, un PDF via la boîte de dialogue d’impression, ou le texte brut.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Comment ça marche</h2>\n        <ol class=\"steps\">\n            <li><b>Commencer</b> - choisissez un modèle sous « Nouveau », ouvrez un fichier .html ou un ZIP, ou collez du code HTML.</li>\n            <li><b>Écrire</b> - tapez dans le code ; l’aperçu suit. Utilisez « Insérer » pour les listes, les tableaux, les médias et les champs de formulaire.</li>\n            <li><b>Exporter</b> - enregistrez le .html, un ZIP avec ses fichiers, ou un PDF.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Utiliser l’éditeur sur votre propre site web</h2>\n        <p>Intégrez l’éditeur à votre propre site web avec une iframe ou dans une fenêtre à part. Votre page lui transmet le document, reçoit chaque modification et chaque enregistrement, et peut laisser une IA envoyer ses résultats à votre serveur. Sans inscription, sans clé.</p>\n        <p><a href=\"/fr/embed/\"><b>Intégrer l’éditeur à votre site web</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Questions fréquentes</h2>\n        <div class=\"questions\">\n            <details><summary>Ma page est-elle envoyée sur un serveur ?</summary><p>Non. L’éditeur fonctionne dans votre navigateur et y conserve vos pages, pas sur notre serveur. Une page n’est envoyée à un serveur que si vous configurez un webhook vers votre propre serveur, si un site web qui intègre l’éditeur l’enregistre sur son propre serveur, ou si un autre site web l’ouvre ici avec un formulaire (post.php) - notre serveur la transmet alors directement à votre navigateur, sans la stocker. Comme sur tout site web, le serveur enregistre chaque visite dans son journal, et nous comptons les pages vues de façon anonyme - voir la <a href=\"/privacy.html\">politique de confidentialité</a>.</p></details>\n            <details><summary>Le JavaScript s’exécute-t-il dans l’aperçu ?</summary><p>Non. L’aperçu affiche le HTML et le CSS de la page, mais les scripts et les attributs <code>on…</code> ne s’exécutent jamais, et les liens ne naviguent pas. L’éditeur reste ainsi sûr avec n’importe quelle page ouverte. Le code garde ses scripts, la page exportée fonctionne donc comme avant.</p></details>\n            <details><summary>Comment ajouter des images et des feuilles de style ?</summary><p>Glissez-les ou collez-les dans l’éditeur, ou ajoutez-les dans l’onglet <b>Fichiers</b> à droite. Ils sont enregistrés avec la page dans votre navigateur et utilisés par leur nom, par exemple <code>&lt;img src=&quot;logo.png&quot;&gt;</code> ou <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>.</p></details>\n            <details><summary>Comment obtenir un PDF ?</summary><p>Cliquez sur « Exporter », choisissez PDF et cliquez sur « Imprimer / Enregistrer en PDF ». Dans la boîte de dialogue d’impression, choisissez « Enregistrer au format PDF » comme imprimante.</p></details>\n            <details><summary>Où mes documents sont-ils enregistrés ?</summary><p>Uniquement dans votre navigateur. Cliquez sur le bouton dossier en haut à gauche (Mes documents) pour les ouvrir, renommer, dupliquer, télécharger ou supprimer. Effacer les données de site de votre navigateur les supprime : téléchargez ceux que vous voulez garder - ou laissez l’éditeur les envoyer à votre propre serveur (« Enregistrer sur un serveur »).</p></details>\n            <details><summary>Une IA peut-elle écrire dans l’éditeur HTML ?</summary><p>Oui, n’importe quelle IA - ChatGPT, Claude, Gemini, Copilot ou l’IA de votre outil de développement. Cliquez sur « Assistant IA », puis sur « Copier le prompt », collez-le dans votre IA et dites-lui ce qu’elle doit écrire. L’IA répond par un lien ; cliquez dessus et la page apparaît dans votre éditeur. « Annuler » revient sur chaque modification.</p></details>\n            <details><summary>Puis-je utiliser l’éditeur sur mon propre site web ?</summary><p>Oui. Intégrez-le avec une iframe et échangez les documents par postMessage, ou laissez-le envoyer chaque version enregistrée à votre serveur avec un webhook. Voir <a href=\"#embed\">Utiliser l’éditeur sur votre propre site web</a> pour des exemples.</p></details>\n            <details><summary>L’éditeur HTML est-il payant ?</summary><p>Non. L’éditeur est gratuit, sans publicité et sans inscription.</p></details>\n        </div>\n    </section>",
+  "name": "Éditeur HTML",
+  "embed": {
+    "title": "Intégrer l’éditeur HTML à votre site web | giit.ch",
+    "description": "Guide pour développeurs : intégrez l’éditeur HTML à votre site avec une iframe, échangez les documents par postMessage ou webhook et reliez votre IA.",
+    "og_title": "Intégrer l’éditeur HTML à votre site web",
+    "og_description": "Guide pour développeurs : intégrez l’éditeur HTML à votre site avec une iframe, échangez les documents par postMessage ou webhook et reliez votre IA.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://html.giit.ch/fr/embed/#article",
+          "headline": "Intégrer l’éditeur HTML à votre site web",
+          "description": "Guide pour développeurs : intégrez l’éditeur HTML à votre site avec une iframe, échangez les documents par postMessage ou webhook et reliez votre IA.",
+          "inLanguage": "fr",
+          "url": "https://html.giit.ch/fr/embed/",
+          "mainEntityOfPage": "https://html.giit.ch/fr/embed/",
+          "image": "https://html.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "Éditeur HTML",
+            "url": "https://html.giit.ch/fr/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Éditeur HTML",
+              "item": "https://html.giit.ch/fr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Intégration",
+              "item": "https://html.giit.ch/fr/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "Intégrer l’éditeur HTML à votre site web",
+    "intro": "<p>Pour les développeurs : comment placer l’éditeur HTML dans votre propre page - dans une iframe, dans une fenêtre à part ou en lecture seule - et comment les documents, les enregistrements et les résultats d’une IA circulent entre l’éditeur et votre serveur. Aucune inscription ni clé de notre part n’est nécessaire.</p>",
+    "body": "<p>Toute page https (et localhost) peut intégrer l’éditeur avec une <code>&lt;iframe&gt;</code> et <code>?embed=1</code> - sans inscription, sans clé. Intégré, l’éditeur masque le texte de la page et affiche un bouton Enregistrer. Il y a quatre façons de faire entrer et sortir le document.</p>\n\n        <h2>1. Ouvrir un fichier depuis un lien, enregistrer sur votre serveur</h2>\n        <p><code>src=</code> ouvre un fichier (votre serveur doit autoriser CORS), <code>webhook=</code> fait envoyer le document à cette adresse par « Enregistrer » (Ctrl+S). Ajoutez <code>&amp;auto</code> pour enregistrer après chaque modification.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://html.giit.ch/fr/?embed=1&amp;src=https://your-site.com/pages/offer.html&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Le webhook reçoit un POST avec du JSON <code>{ editor, event: \"save\", id, name, content, assets, updated }</code>. Un lien ne contient pas de jeton (il se retrouverait dans les journaux du serveur et l’historique du navigateur). Un webhook dans l’adresse convient donc à une adresse de sauvegarde qui n’en exige pas, par exemple sur localhost ou dans votre intranet. Pour un serveur public, transmettez le webhook avec un jeton dans <code>htmleditor:load</code> (<code>hook: { url, token }</code>) et vérifiez ce jeton, comme le fait ce petit script PHP :</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://html.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/pages/$name.html&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Votre page gère le document (postMessage)</h2>\n        <p>L’éditeur annonce <code>htmleditor:ready</code>, votre page répond par <code>htmleditor:load</code>, l’éditeur signale <code>htmleditor:loaded</code>, <code>htmleditor:change</code> lors de modifications effectives et <code>htmleditor:save</code> quand l’utilisateur enregistre. Votre page peut envoyer <code>htmleditor:get</code> (l’état actuel) ou <code>htmleditor:save</code> (appuyer sur Enregistrer). L’enregistrement passe alors par votre propre connexion et votre propre session.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://html.giit.ch/fr/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://html.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;htmleditor:ready&#x27;) {              // l’éditeur est prêt : on lui transmet le document\n    ed.contentWindow.postMessage({\n      type: &#x27;htmleditor:load&#x27;,\n      name: &#x27;Offer&#x27;,\n      content: await (await fetch(&#x27;/pages/offer.html&#x27;)).text(),\n      assets: { &#x27;logo.png&#x27;: &#x27;data:image/png;base64,…&#x27; }   // fichiers facultatifs\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;htmleditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // une vraie modification\n  if (m.type === &#x27;htmleditor:save&#x27;) {               // l’utilisateur a cliqué sur &quot;Save&quot;\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content, assets: m.assets }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Un bouton d’enregistrement sur votre propre page : la réponse arrive sous forme de htmleditor:save\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;htmleditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>L’assistant IA dans votre page :</b> il fonctionne aussi dans le cadre. Avec <code>allow=\"clipboard-write\"</code> sur l’iframe, « Copier le prompt » utilise directement le presse-papiers (sinon l’éditeur se rabat sur l’ancienne commande de copie, ou affiche le prompt à copier à la main). Un lien envoyé par l’IA ne peut pas atteindre un éditeur intégré dans un autre site web : l’éditeur demande donc à l’IA et à l’utilisateur de coller toute la réponse de l’IA dans l’éditeur - ou d’ouvrir l’éditeur dans sa propre fenêtre.</p>\n        <h2>3. Dans sa propre fenêtre</h2>\n        <p><code>window.open(\"https://html.giit.ch/fr/?embed=window\", \"htmleditor-17\")</code> ouvre l’éditeur complet dans sa propre fenêtre et échange les mêmes messages avec <code>window.opener</code>. Les liens d’une IA l’y atteignent. <code>htmleditor:load</code> peut aussi transporter <code>context: { host, title, rules }</code> - le prompt de l’IA indique alors où se trouve le document et suit vos règles - et <code>hook: { url, token, assets: false }</code>, un webhook pour ce seul document, jamais stocké. Fermer la fenêtre avec des modifications non enregistrées envoie <code>htmleditor:closing</code>.</p>\n        <h2>4. L’IA via votre propre serveur</h2>\n        <p>Transmettez à l’éditeur votre propre prompt, une adresse sur votre site et une clé pour cette session de l’éditeur. La boîte de dialogue de l’IA affiche alors « Connecté à » votre site, ce que vous indiquez à l’IA, et le choix <b>modifier le document actuel</b> ou <b>en créer un nouveau</b> ; <b>Copier le prompt</b> assemble le tout. L’IA envoie son résultat avec la clé à votre serveur, et votre page l’ouvre dans l’éditeur - un nouveau document s’ouvre séparément et reste dans le navigateur de l’utilisateur. Une clé par session de l’éditeur : elle reste valable tant que l’éditeur est ouvert, et l’éditeur ne la demande avec <code>htmleditor:key-request</code> que tant qu’il n’en a pas. L’éditeur n’envoie jamais la clé lui-même et ne la stocke jamais ; l’adresse doit être en https sur votre propre hôte ou sur un de ses sous-domaines.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // une clé par session de l’éditeur\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;htmleditor:load&#x27;, name: &#x27;Offer&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the [[placeholders]]. Write in German.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// retenez l’id de htmleditor:loaded et ignorez change/save/closing portant un autre id\n// seulement tant que l’éditeur n’a pas de clé :\nif (m.type === &#x27;htmleditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;htmleditor:ai&#x27;, key: k.key }, ORIGIN); }\n// tant que l’éditeur est ouvert, prévenez votre serveur chaque minute ; fermer l’éditeur ou la page annule la clé\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// votre serveur a un résultat (polling, SSE …) : target vaut &quot;current&quot; ou &quot;new&quot;\ned.contentWindow.postMessage({ type: &#x27;htmleditor:load&#x27;, name: &#x27;Offer&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <pre class=\"example\"><code>&lt;?php // api/ai-key.php - la clé de cette session de l’éditeur pour l’utilisateur connecté (appelée par votre page)\nsession_start();                                     // vérifiez que l’utilisateur a le droit de modifier ce document\n$key = bin2hex(random_bytes(24));\n$_SESSION[&#x27;ai&#x27;][hash(&#x27;sha256&#x27;, $key)] = [&#x27;doc&#x27; =&gt; (int)$_GET[&#x27;doc&#x27;], &#x27;seen&#x27; =&gt; time()];  // ou dans votre base de données ; ?alive= remet seen à jour\necho json_encode([&#x27;key&#x27; =&gt; $key]);\n\n&lt;?php // api/ai-result.php - l’IA envoie ici (sans en-têtes CORS : les IA l’appellent depuis un serveur)\n$key = preg_replace(&#x27;/^Bearer\\s+/&#x27;, &#x27;&#x27;, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;);\n$row = find_key(hash(&#x27;sha256&#x27;, $key));               // votre base de données : non annulée, vue dans les 3 dernières minutes\nif (!$row) { http_response_code(401); exit(&#x27;{&quot;ok&quot;:false,&quot;error&quot;:&quot;key not valid&quot;}&#x27;); }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;, false, null, 0, 2000000), true);\nsave_draft($row[&#x27;doc&#x27;], $d[&#x27;content&#x27;], $d[&#x27;target&#x27;] === &#x27;new&#x27; ? &#x27;new&#x27; : &#x27;current&#x27;);   // votre page l’affiche avec htmleditor:load\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p>Créez des clés d’au moins 128 bits aléatoires, ne stockez que leur empreinte, liez chacune à l’utilisateur connecté, au document et à cette session de l’éditeur, créez-en une par session, ne la gardez valable que tant que votre page signale la session comme ouverte, et révoquez-la quand l’éditeur ou la page se ferme.</p>\n        <p class=\"muted\">Le protocole complet se trouve dans <a href=\"/llms.txt\">llms.txt</a> - donnez-le à une IA et elle construit la connexion pour votre système. Les autres éditeurs giit fonctionnent de la même façon, chacun avec son propre préfixe - <a href=\"https://editors.giit.ch/fr/\">editors.giit.ch</a>.</p>\n        <h2>Afficher un document en lecture seule (visionneuse)</h2>\n        <p><code>?viewer=1</code> affiche uniquement le document fini : pas de code, pas d’outils, rien ne peut être modifié et rien n’est enregistré dans le navigateur. Le document vient d’un lien (<code>#b64=</code>, <code>?src=</code>), de votre page avec <code>htmleditor:load</code>, ou par POST sous forme de formulaire normal vers <code>post.php</code> : le champ <code>content</code> en texte ou <code>b64</code> en base64, éventuellement <code>name</code>, 20 Mo de texte au maximum.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://html.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;fr&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p>Sans <code>viewer=1</code>, le document s’ouvre dans l’éditeur normal. Dans les deux cas, il reste uniquement en mémoire : il n’est pas enregistré sur le serveur et ne rejoint pas « Mes documents ». Ouverte directement, la visionneuse indique que le contenu provient d’un tiers.</p>",
+    "crumb": "Intégration",
+    "crumb_nav": "Fil d’Ariane",
+    "open": "Ouvrir l’éditeur"
+  }
+}

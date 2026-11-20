@@ -1,0 +1,225 @@
+{
+  "title": "Darmowe edytory: LaTeX, SVG, Markdown i inne | giit.ch",
+  "desc": "Darmowe edytory LaTeX, SVG, Markdown i innych formatów z podglądem na żywo. Bez rejestracji i reklam, pliki zostają w przeglądarce.",
+  "og_title": "giit Editors - darmowe edytory online z podglądem na żywo",
+  "h1": "Darmowe edytory online z podglądem na żywo, prosto w przeglądarce",
+  "lead": "Edytory do plików, z którymi pracujesz na co dzień: LaTeX, SVG, HTML, Markdown, formaty danych i inne. Kod po lewej, wynik po prawej, bez instalowania, a twoje pliki zostają w przeglądarce. Każda AI może w nich pisać za pomocą linku, a każdy z nich możesz umieścić na własnej stronie.",
+  "points": [
+    "Bez rejestracji, bez reklam",
+    "Pliki zostają w przeglądarce",
+    "Każda AI może w nich pisać",
+    "Do osadzenia na twojej stronie",
+    "W 14 językach"
+  ],
+  "cta1": "Zobacz edytory",
+  "cta2": "Osadź edytor",
+  "nav": [
+    [
+      "#editors",
+      "Edytory"
+    ],
+    [
+      "#common",
+      "Co je łączy"
+    ],
+    [
+      "#embed",
+      "Osadzanie"
+    ],
+    [
+      "#faq",
+      "Pytania"
+    ]
+  ],
+  "editors_h": "Edytory",
+  "editors_sub": "Każdy edytor jest stworzony dla swojego formatu i działa tak samo jak pozostałe.",
+  "live": "Online",
+  "soon": "W przygotowaniu",
+  "open": "Otwórz",
+  "common_h": "Co potrafi każdy edytor",
+  "common_sub": "Poznaj jeden, a znasz wszystkie.",
+  "common": [
+    [
+      "🔒",
+      "Prywatność z założenia",
+      "Edytory przechowują twoje dokumenty w przeglądarce (pamięć lokalna), a nie na naszym serwerze. Dokument trafia na serwer tylko wtedy, gdy skonfigurujesz własny (webhook) albo gdy strona internetowa otworzy go w edytorze za pomocą formularza - nasz serwer przekazuje go wtedy dalej, nie zapisując go."
+    ],
+    [
+      "🗂",
+      "Moje dokumenty",
+      "Przechowuj w przeglądarce dowolną liczbę dokumentów: otwieraj, zmieniaj nazwy, duplikuj, pobieraj i usuwaj je, każdy z własną historią cofania."
+    ],
+    [
+      "✨",
+      "Każda AI może pisać razem z tobą",
+      "Kliknij „Asystent AI”, potem „Kopiuj prompt” i wklej go do ChatGPT, Claude, Gemini lub Copilot. AI odpowiada linkiem, który otwiera jej wynik w edytorze - „Cofnij” przywraca poprzedni stan."
+    ],
+    [
+      "🤖",
+      "Agenci AI w przeglądarce (WebMCP)",
+      "W przeglądarkach z WebMCP agent AI może bezpośrednio czytać i zmieniać otwarty dokument; każda zmiana to krok cofania."
+    ],
+    [
+      "🟢",
+      "Stan AI na pierwszy rzut oka",
+      "Kropka na przycisku AI pokazuje, czy AI jest połączona: przez twoją stronę, jako agent przeglądarki czy przez linki w tej karcie."
+    ],
+    [
+      "✏️",
+      "Edycja w podglądzie",
+      "Zmieniaj tekst, wartości lub kształty bezpośrednio w podglądzie, drzewie, tabeli lub na płótnie; kod aktualizuje się automatycznie. Sposób edycji zależy od formatu."
+    ],
+    [
+      "☁️",
+      "Zapis na własnym serwerze",
+      "Webhook wysyła każdą zapisaną wersję pod wybrany adres, z tokenem - automatycznie lub po Ctrl+S."
+    ],
+    [
+      "🌐",
+      "W 14 językach",
+      "Każdy edytor ma stronę po angielsku, niemiecku, francusku, włosku, hiszpańsku, portugalsku, niderlandzku, polsku, turecku, rosyjsku, ukraińsku, chińsku, japońsku i koreańsku - /de/, /fr/ … Menu języka przełącza strony, a wybór jest zapamiętywany. Prompt dla AI zawsze pozostaje po angielsku."
+    ],
+    [
+      "🌓",
+      "Jasny, ciemny lub automatyczny",
+      "Każdy edytor stosuje ustawienie systemu lub wybrany motyw i działa na telefonach i tabletach."
+    ]
+  ],
+  "embed_h": "Edytor na własnej stronie",
+  "embed_teaser": "Każdy edytor można osadzić na innej stronie w ramce iframe albo we własnym oknie, a wszystkie używają tego samego protokołu postMessage. Każdy edytor ma stronę dla programistów z przykładami dla twojej strony i twojego serwera:",
+  "embed_sub": "Wszystkie edytory używają tego samego protokołu. Zamień latex na svg, html, md, json, yaml, toml, xml, csv, typst, shls lub qr - wiadomości są te same, zmienia się tylko ich prefiks (latexeditor:, svgeditor: …).",
+  "steps": [
+    [
+      "Umieść edytor na swojej stronie",
+      "Wystarczy iframe. ?embed=1 pokazuje widok uproszczony z przyciskiem Zapisz, ?save=0 go ukrywa, gdy twoja strona ma własny. Adres wybiera język: /de/ dla niemieckiego, /fr/ dla francuskiego, /pl/ dla polskiego i tak dalej.",
+      "<iframe id=\"ed\" src=\"https://latex.giit.ch/de/?embed=1\"\n        allow=\"clipboard-write\" style=\"width:100%;height:80vh;border:0\"></iframe>"
+    ],
+    [
+      "Wczytaj dokument, odbieraj zmiany i zapisy",
+      "Edytor zgłasza gotowość, twoja strona wysyła dokument, a edytor informuje o rzeczywistych zmianach i każdym zapisie. Sprawdzaj pochodzenie każdej wiadomości.",
+      "const ED = 'https://latex.giit.ch', ed = document.getElementById('ed');\naddEventListener('message', e => {\n  if (e.origin !== ED || e.source !== ed.contentWindow) return;\n  const m = e.data;\n  if (m.type === 'latexeditor:ready')\n    ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText }, ED);\n  if (m.type === 'latexeditor:change') markUnsaved();\n  if (m.type === 'latexeditor:save') saveOnYourServer(m.content, m.assets);\n});"
+    ],
+    [
+      "Albo otwórz go we własnym oknie",
+      "Pełny edytor we własnym oknie rozmawia z window.opener dokładnie w ten sam sposób - i tam docierają do niego linki od AI.",
+      "const win = window.open('https://latex.giit.ch/de/?embed=window', 'latexeditor-17');"
+    ],
+    [
+      "Niech AI dostarcza wynik prosto na twój serwer",
+      "Przekaż edytorowi swoje zasady, adres https we własnej witrynie i jeden klucz dla tej sesji edytora. „Kopiuj prompt” każe wtedy AI wysłać tam wynik metodą POST; twoja strona otwiera go w edytorze. Klucz powinien być ważny tylko wtedy, gdy edytor jest otwarty.",
+      "ed.contentWindow.postMessage({ type: 'latexeditor:load', name: 'Offer', content: myText,\n  ai: { label: 'My Admin', prompt: 'Keep the placeholders.',\n        endpoint: 'https://your-site.com/api/ai-result', key: sessionKey } }, ED);"
+    ]
+  ],
+  "msg_h": "Wszystkie wiadomości",
+  "msg_cols": [
+    "Kierunek",
+    "Wiadomość",
+    "Co oznacza"
+  ],
+  "msgs": [
+    [
+      "edytor → strona",
+      "ready",
+      "Edytor może przyjąć dokument."
+    ],
+    [
+      "strona → edytor",
+      "load {name, content, assets?, context?, hook?, ai?}",
+      "Otwórz swój dokument (z obrazami, jeśli format je ma)."
+    ],
+    [
+      "edytor → strona",
+      "loaded {id, name}",
+      "Twój dokument jest otwarty; zapamiętaj jego id."
+    ],
+    [
+      "edytor → strona",
+      "change {id, name, content}",
+      "Rzeczywista zmiana (nie wczytanie)."
+    ],
+    [
+      "edytor → strona",
+      "save {id, name, content, assets, updated}",
+      "Zapisz / Ctrl+S albo odpowiedź na get."
+    ],
+    [
+      "strona → edytor",
+      "get · save",
+      "Pytanie o bieżący stan · naciśnięcie Zapisz."
+    ],
+    [
+      "edytor → strona",
+      "closing {id, name, content}",
+      "Własne okno zamyka się z niezapisanymi zmianami."
+    ],
+    [
+      "edytor → strona",
+      "reload {id, unsaved}",
+      "F5 / Ctrl+R wewnątrz twojej strony - ty decydujesz."
+    ],
+    [
+      "strona → edytor",
+      "ai {label, prompt, endpoint, key} · ai {clear}",
+      "AI przez twój serwer, jeden klucz na sesję."
+    ],
+    [
+      "edytor → strona",
+      "key-request {reason: \"missing\"}",
+      "Sesja nie ma jeszcze klucza."
+    ]
+  ],
+  "msg_note": "Pełny opis, łącznie z webhookiem i każdym polem, jest w llms.txt każdego edytora oraz w",
+  "faq_h": "Najczęściej zadawane pytania",
+  "faq": [
+    [
+      "Czy edytory są naprawdę darmowe?",
+      "Tak. Bez rejestracji i bez reklam. Nie ograniczamy liczby dokumentów; ogranicza ją tylko pamięć twojej przeglądarki."
+    ],
+    [
+      "Czy mój dokument jest gdzieś wysyłany?",
+      "Nie. Edytory działają w przeglądarce i tam przechowują twoje dokumenty, a nie na naszym serwerze. Dokument trafia na serwer tylko wtedy, gdy skonfigurujesz webhook, gdy strona osadzająca edytor zapisze go na własnym serwerze albo gdy strona internetowa otworzy go w edytorze za pomocą formularza - nasz serwer przekazuje go wtedy dalej, nie zapisując go. Jak na każdej stronie internetowej, serwer zapisuje każde wejście w logach, a odsłony liczymy anonimowo."
+    ],
+    [
+      "Z jakiej AI mogę korzystać?",
+      "Z dowolnej - ChatGPT, Claude, Gemini, Copilot lub AI w twoim narzędziu programistycznym. Skopiuj prompt, napisz, czego chcesz, i kliknij link, którym odpowie AI."
+    ],
+    [
+      "Czy mogę używać edytora na własnej stronie?",
+      "Tak. Osadź go w iframe lub otwórz we własnym oknie i wymieniaj dokumenty przez postMessage albo pozwól mu wysyłać zapisane wersje na twój serwer przez webhook."
+    ],
+    [
+      "Jak dostać edytor w moim języku?",
+      "Wybierz go w menu języka u góry albo otwórz bezpośrednio jego stronę: /pl/ dla polskiego, /de/ dla niemieckiego, /ja/ dla japońskiego i tak dalej. Edytor zapamiętuje wybór. Prompt dla AI pozostaje po angielsku."
+    ],
+    [
+      "Kto tworzy edytory?",
+      "Grünwald Innovation z Neuhausen am Rheinfall w Szwajcarii."
+    ]
+  ],
+  "skip": "Przejdź do edytorów",
+  "sections_label": "Sekcje",
+  "theme_names": {
+    "auto": "Automatyczny",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "title": "Zmień motyw kolorów",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano"
+  },
+  "by": "Projekt firmy",
+  "theme": "Motyw",
+  "editors": {
+    "latex": "Pisz LaTeX i oglądaj złożone strony podczas pisania. Dodawaj obrazy, ustaw papier i marginesy, eksportuj do PDF.",
+    "svg": "SVG jako kod i na płótnie: przesuwaj kształty, zmieniaj ich rozmiar i kolory, siatka z przyciąganiem, eksport do PNG, JPG, WebP lub React.",
+    "html": "Pisz HTML z podglądem na żywo, edytuj tekst bezpośrednio w podglądzie, trzymaj obrazy razem ze stroną, eksportuj jako jeden plik lub ZIP.",
+    "md": "Markdown, prosty format do notatek i dokumentacji, z tabelami, listami zadań, przypisami i wzorami; eksport do HTML lub PDF.",
+    "json": "JSON i JSON Lines jako kod i jako zwijane drzewo: edytuj klucze i wartości w drzewie, sprawdzaj względem JSON Schema, konwertuj do YAML, CSV lub XML.",
+    "yaml": "YAML z tym samym drzewem danych, zachowane komentarze i kotwice, problemy z numerem wiersza, konwersja do JSON.",
+    "toml": "TOML dla pyproject.toml, Cargo.toml i ustawień aplikacji, z tym samym drzewem danych: komentarze zostają, ścisłe sprawdzanie według TOML 1.0, konwersja do JSON lub YAML.",
+    "xml": "XML z drzewem elementów, wyszukiwaniem XPath, sprawdzaniem błędów i konwersją do JSON lub YAML.",
+    "csv": "CSV jako tekst i jako tabela podobna do arkusza kalkulacyjnego, także dla dużych plików; eksport do tabel XLSX, JSON, Markdown lub HTML.",
+    "shls": "SHLS, zwarty format danych dla AI: bloki kluczy i rekordy jako drzewo, problemy z numerem wiersza, konwersja z i do JSON tak samo jak w kodzie referencyjnym.",
+    "typst": "Typst z prawdziwym kompilatorem w przeglądarce: strony podczas pisania, PDF z tekstem do zaznaczania, obrazy przechowywane razem z dokumentem.",
+    "qr": "Kody QR do linków, Wi-Fi, kontaktów i płatności (SEPA, rachunek QR) z logo i własnym wyglądem, sprawdzane skanowaniem, jako SVG, PDF lub EPS - statyczne kody bez daty ważności."
+  }
+}

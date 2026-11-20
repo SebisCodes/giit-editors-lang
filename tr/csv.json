@@ -1,0 +1,181 @@
+{
+  "title": "CSV Editörü - CSV’yi Tablo Olarak Düzenleyin | giit.ch",
+  "description": "Tarayıcınızda ücretsiz CSV editörü: tablo ve metin düzenleyin, sıralayın, filtreleyin ve Excel (XLSX) veya JSON’a aktarın. Kayıt gerekmez.",
+  "og_title": "CSV Editörü - CSV’yi Tablo Olarak Düzenleyin | giit.ch",
+  "og_description": "Tarayıcınızda ücretsiz CSV editörü: tablo ve metin düzenleyin, sıralayın, filtreleyin ve Excel (XLSX) veya JSON’a aktarın. Kayıt gerekmez.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://csv.giit.ch/tr/#app",
+        "name": "CSV Editor",
+        "url": "https://csv.giit.ch/tr/",
+        "description": "Tarayıcınızda ücretsiz CSV editörü: tablo ve metin düzenleyin, sıralayın, filtreleyin ve Excel (XLSX) veya JSON’a aktarın. Kayıt gerekmez.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Tümü (web tarayıcısı)",
+        "inLanguage": "tr",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://csv.giit.ch/img/og.png",
+        "featureList": [
+          "Ham CSV ve tablo yan yana",
+          "Hücreleri bir elektronik tablodaki gibi düzenleyin, Excel veya LibreOffice’ten aralıklar kopyalayıp yapıştırın",
+          "Başlık satırıyla veya başlık satırı olmadan virgül, noktalı virgül, sekme ve dikey çizgiyle ayrılmış dosyalar",
+          "UTF-8 ve Windows-1252, satır sonları korunur",
+          "Satır ve sütun ekleyin, silin ve taşıyın",
+          "Görünümü sıralayın ve filtreleyin veya verilerin kendisini sıralayın",
+          "Sütun bilgisi: tür, boş ve farklı değerler, toplam ve ortalama",
+          "Sorunlar: farklı sayıda alanı olan satırlar, kapatılmamış tırnaklar, boş ve yinelenen başlık adları",
+          "100 000 satırlık büyük dosyalar",
+          "XLSX, JSON, Markdown, HTML, TSV ve istenen ayırıcıyla CSV olarak dışa aktarma",
+          "Tarayıcıda çok sayıda belge saklayın",
+          "Bir webhook ile kendi sunucunuza kaydedin veya editörü web sitenize yerleştirin",
+          "Her yapay zekâ bağlantılar aracılığıyla editörde yazabilir"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "CSV dosyam yükleniyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör tarayıcınızda çalışır ve dosyalarınızı sunucumuzda değil, orada saklar. Bir dosya yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - gizlilik politikasına bakın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tek bir hücreyi düzenlediğimde editör dosyamı değiştiriyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yalnızca o hücreyi. Editör değişikliği CSV metnine tam alanın bulunduğu yere yazar ve gerisini olduğu gibi bırakır: diğer tırnaklar, ayırıcı ve satır sonları korunur. Bir alan yalnızca gerektiğinde tırnak içine alınır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "CSV’m noktalı virgül kullanıyor - bu çalışır mı?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Editör ayırıcı olarak virgülü, noktalı virgülü, sekmeyi ve dikey çizgiyi algılar; bunu Biçim altında da seçebilirsiniz. Dönüştür dosyayı başka bir ayırıcıya çevirir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "CSV’yi Excel’de Türkçe karakterler bozulmadan nasıl açarım?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "XLSX olarak dışa aktarın veya CSV’yi bayt sırası işaretiyle (BOM) indirin - Biçim altında işaretleyin veya dışa aktarmada “BOM’lu UTF-8”i seçin. Excel bu durumda UTF-8’i doğru okur."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Büyük dosyaları işleyebilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Tablo yalnızca gördüğünüz satırları çizer, bu yüzden 100 000 satırlık dosyalarda bile kaydırma, filtreleme ve düzenleme hızlı kalır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Belgelerim nereye kaydediliyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yalnızca tarayıcınıza. Belgeleri açmak, yeniden adlandırmak, çoğaltmak, indirmek veya silmek için sol üstteki klasör düğmesine (Belgelerim) tıklayın. Tarayıcınızın site verilerini temizlemek onları siler; bu yüzden saklamak istediklerinizi indirin - veya editörün onları kendi sunucunuza göndermesine izin verin (“Sunucuya kaydet”). Çok büyük dosyalar tarayıcının depolama alanına sığmayabilir; bu olduğunda editör size bildirir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bir yapay zekâ CSV Editöründe yazabilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. \"Yapay Zekâ Asistanı\"na, ardından \"İstemi kopyala\"ya tıklayın, istemi yapay zekânıza yapıştırın ve ne yapması gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, tablo editörünüzde görünür. \"Geri al\" her değişikliği geri alır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "CSV Editörü ücretli mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör ücretsizdir; reklam ve kayıt yoktur."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>CSV dosyalarını çevrimiçi düzenleyin, tablo ve metin olarak</h2>\n        <p>CSV Editörü ham CSV’yi ve tabloyu yan yana gösterir. Tabloda bir hücreyi düzenleyin, editör metinde tam o alanı değiştirir - diğer tırnaklar, ayırıcı ve satır sonları olduğu gibi kalır. Tablodaki bir tıklama alanı metinde gösterir, metindeki imleç de hücresini gösterir. Böylece mağazalardan, bankalardan ve veritabanlarından alınan dışa aktarımları hızla düzeltebilir, adres listelerini temizleyebilir veya verileri içe aktarmaya hazırlayabilirsiniz.</p>\n        <p>Her şey tarayıcınızda çalışır. Dosyalarınız sunucumuzda değil, orada saklanır; kayıt ve reklam yoktur.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Editörün yapabilecekleri</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Bir elektronik tablo gibi</h3><p>Hücrelere yazın, ok tuşları ve Tab ile gezinin, Excel, LibreOffice veya Google Sheets’ten ve onlara aralıklar kopyalayıp yapıştırın, satır ve sütun ekleyin, silin ve taşıyın.</p></div>\n            <div class=\"tile\"><h3>Her türlü CSV</h3><p>Ayırıcı olarak virgül, noktalı virgül, sekme veya dikey çizgi, kendiliğinden algılanır; başlık satırıyla veya başlık satırı olmadan; BOM’lu veya BOM’suz UTF-8 ve Windows-1252; Windows ve Unix satır sonları korunur.</p></div>\n            <div class=\"tile\"><h3>Sorunları bulun</h3><p>Farklı sayıda alanı olan satırlar, hiç kapatılmamış tırnaklar, boş ve yinelenen sütun adları - satırlarıyla listelenir, bir tık uzaklıkta.</p></div>\n            <div class=\"tile\"><h3>Sıralayın, filtreleyin, yakından bakın</h3><p>Dosyaya dokunmadan görünümü sıralayın ve filtreleyin ya da verilerin kendisini sıralayın. Sütun paneli değerlerin türünü, boş ve farklı değerleri, toplamı ve ortalamayı gösterir.</p></div>\n            <div class=\"tile\"><h3>Büyük dosyalar</h3><p>Tablo yalnızca gördüğünüz satırları çizer: 100 000 satırlık dosyalarda bile kaydırma, filtreleme ve düzenleme hızlı kalır.</p></div>\n            <div class=\"tile\"><h3>Dışa aktarma</h3><p>Excel çalışma kitabı (XLSX), JSON, Markdown ve HTML tabloları, TSV veya başka bir ayırıcı ve kodlamayla CSV - elektronik tablo formüllerine karşı korumayla.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Nasıl çalışır</h2>\n        <ol class=\"steps\">\n            <li><b>Açın</b> - bir CSV dosyasını pencereye bırakın, “Dosya aç…” ile açın veya “Yeni” altındaki bir şablonla başlayın.</li>\n            <li><b>Düzenleyin</b> - tablodaki hücreleri veya soldaki metni değiştirin; ikisi birlikte güncellenir. Satırlar ve sütunlar için “Ekle”yi, ayırıcı için “Biçim”i kullanın.</li>\n            <li><b>Kaydedin</b> - CSV’yi olduğu gibi indirin veya XLSX, JSON, Markdown ya da HTML olarak dışa aktarın.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Editörü kendi web sitenizde kullanın</h2>\n        <p>Editörü bir iframe ile veya kendi penceresinde kendi web sitenize yerleştirin. Sayfanız belgeyi editöre verir, her değişikliği ve her kaydı geri alır ve bir yapay zekânın sonuçlarını sunucunuza göndermesini sağlayabilir. Kayıt yok, anahtar yok.</p>\n        <p><a href=\"/tr/embed/\"><b>Editörü web sitenize yerleştirin</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Sıkça sorulan sorular</h2>\n        <div class=\"questions\">\n            <details><summary>CSV dosyam yükleniyor mu?</summary><p>Hayır. Editör tarayıcınızda çalışır ve dosyalarınızı sunucumuzda değil, orada saklar. Bir dosya yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - <a href=\"/privacy.html\">gizlilik politikasına</a> bakın.</p></details>\n            <details><summary>Tek bir hücreyi düzenlediğimde editör dosyamı değiştiriyor mu?</summary><p>Yalnızca o hücreyi. Editör değişikliği CSV metnine tam alanın bulunduğu yere yazar ve gerisini olduğu gibi bırakır: diğer tırnaklar, ayırıcı ve satır sonları korunur. Bir alan yalnızca gerektiğinde tırnak içine alınır.</p></details>\n            <details><summary>CSV’m noktalı virgül kullanıyor - bu çalışır mı?</summary><p>Evet. Editör ayırıcı olarak virgülü, noktalı virgülü, sekmeyi ve dikey çizgiyi algılar; bunu <b>Biçim</b> altında da seçebilirsiniz. <b>Dönüştür</b> dosyayı başka bir ayırıcıya çevirir.</p></details>\n            <details><summary>CSV’yi Excel’de Türkçe karakterler bozulmadan nasıl açarım?</summary><p>XLSX olarak dışa aktarın veya CSV’yi bayt sırası işaretiyle (BOM) indirin - <b>Biçim</b> altında işaretleyin veya dışa aktarmada “BOM’lu UTF-8”i seçin. Excel bu durumda UTF-8’i doğru okur.</p></details>\n            <details><summary>Büyük dosyaları işleyebilir mi?</summary><p>Evet. Tablo yalnızca gördüğünüz satırları çizer, bu yüzden 100 000 satırlık dosyalarda bile kaydırma, filtreleme ve düzenleme hızlı kalır.</p></details>\n            <details><summary>Belgelerim nereye kaydediliyor?</summary><p>Yalnızca tarayıcınıza. Belgeleri açmak, yeniden adlandırmak, çoğaltmak, indirmek veya silmek için sol üstteki klasör düğmesine (Belgelerim) tıklayın. Tarayıcınızın site verilerini temizlemek onları siler; bu yüzden saklamak istediklerinizi indirin - veya editörün onları kendi sunucunuza göndermesine izin verin (“Sunucuya kaydet”). Çok büyük dosyalar tarayıcının depolama alanına sığmayabilir; bu olduğunda editör size bildirir.</p></details>\n            <details><summary>Bir yapay zekâ CSV Editöründe yazabilir mi?</summary><p>Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. &quot;Yapay Zekâ Asistanı&quot;na, ardından &quot;İstemi kopyala&quot;ya tıklayın, istemi yapay zekânıza yapıştırın ve ne yapması gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, tablo editörünüzde görünür. &quot;Geri al&quot; her değişikliği geri alır.</p></details>\n            <details><summary>CSV Editörü ücretli mi?</summary><p>Hayır. Editör ücretsizdir; reklam ve kayıt yoktur.</p></details>\n        </div>\n    </section>",
+  "name": "CSV Editörü",
+  "embed": {
+    "title": "CSV Editörünü Web Sitenize Yerleştirin | giit.ch",
+    "description": "CSV Editörünü iframe ile sitenize yerleştirin, belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+    "og_title": "CSV Editörünü web sitenize yerleştirin",
+    "og_description": "CSV Editörünü iframe ile sitenize yerleştirin, belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://csv.giit.ch/tr/embed/#article",
+          "headline": "CSV Editörünü web sitenize yerleştirin",
+          "description": "CSV Editörünü iframe ile sitenize yerleştirin, belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+          "inLanguage": "tr",
+          "url": "https://csv.giit.ch/tr/embed/",
+          "mainEntityOfPage": "https://csv.giit.ch/tr/embed/",
+          "image": "https://csv.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "CSV Editörü",
+            "url": "https://csv.giit.ch/tr/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "CSV Editörü",
+              "item": "https://csv.giit.ch/tr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Yerleştirme",
+              "item": "https://csv.giit.ch/tr/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "CSV Editörünü web sitenize yerleştirin",
+    "intro": "<p>Geliştiriciler için: CSV Editörünü kendi sayfanıza nasıl koyacağınız - bir iframe içinde, kendi penceresinde veya salt okunur bir görüntüleyici olarak - ve belgelerin, kayıtların ve yapay zekâ sonuçlarının editör ile sunucunuz arasında nasıl taşındığı. Bizde kayıt olmanız veya bizden anahtar almanız gerekmez.</p>",
+    "body": "<p>Her https sayfası (ve localhost) editörü bir <code>&lt;iframe&gt;</code> ve <code>?embed=1</code> ile yerleştirebilir - kayıt yok, anahtar yok. Yerleştirildiğinde editör sayfa metnini gizler ve bir Kaydet düğmesi gösterir. Tabloyu içeri almanın ve dışarı vermenin dört yolu vardır.</p>\n\n        <h2>1. Bir bağlantıdan dosya açın, sunucunuza kaydedin</h2>\n        <p><code>src=</code> bir dosya açar (sunucunuz CORS’a izin vermelidir), <code>webhook=</code> ise “Kaydet”in (Ctrl+S) belgeyi o adrese göndermesini sağlar. Her değişiklikten sonra kaydetmek için <code>&amp;auto</code> ekleyin.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://csv.giit.ch/tr/?embed=1&amp;src=https://your-site.com/data/products.csv&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook, JSON içeren bir POST isteği alır: <code>{ editor: \"csv\", event: \"save\", id, name, content, updated }</code>. Bağlantıda belirteç bulunmaz; aksi hâlde sunucu günlüklerine ve tarayıcı geçmişine kaydedilirdi. Bu nedenle adreste belirtilen webhook, localhost veya intranetiniz gibi belirteç gerektirmeyen bir kayıt adresi için uygundur. Herkese açık bir sunucu için webhook’u bir belirteçle <code>csveditor:load</code> içinde (<code>hook: { url, token }</code>) aktarın ve aşağıdaki küçük PHP betiğinin yaptığı gibi belirteci doğrulayın:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://csv.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/data/$name.csv&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n        <p><code>save.php</code> ile aynı konumdaki <code>data</code> dizini önceden oluşturulmalı ve PHP bu dizine yazabilmelidir.</p>\n\n        <h2>2. Belgeyi sayfanız tutar (postMessage)</h2>\n        <p>Editör <code>csveditor:ready</code> der, sayfanız <code>csveditor:load</code> ile yanıt verir, editör <code>csveditor:loaded</code>, gerçek düzenlemelerde <code>csveditor:change</code> ve kullanıcı kaydettiğinde <code>csveditor:save</code> bildirir. Sayfanız <code>csveditor:get</code> (geçerli durum) veya <code>csveditor:save</code> (Kaydet’e basma) gönderebilir. Kaydetme böylece kendi oturum açma ve oturum sisteminiz üzerinden yapılır.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://csv.giit.ch/tr/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://csv.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;csveditor:ready&#x27;) {               // editör hazır: belgeyi ona verin\n    ed.contentWindow.postMessage({\n      type: &#x27;csveditor:load&#x27;,\n      name: &#x27;Products&#x27;,\n      content: await (await fetch(&#x27;/data/products.csv&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;csveditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // gerçek bir düzenleme\n  if (m.type === &#x27;csveditor:save&#x27;) {                // kullanıcı &quot;Kaydet&quot;e tıkladı\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Kendi sayfanızda bir kaydet düğmesi: yanıt csveditor:save olarak gelir\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;csveditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Sayfanızın içinde Yapay Zekâ Asistanı:</b> çerçeve içinde de çalışır. iframe üzerinde <code>allow=\"clipboard-write\"</code> ile “İstemi kopyala” panoyu doğrudan kullanır (aksi hâlde editör eski kopyalama komutuna geri döner veya istemi elle kopyalamanız için gösterir). Yapay zekânın gönderdiği bir bağlantı başka bir web sitesinin içindeki editöre ulaşamaz. Bu yüzden editör, yapay zekâdan ve kullanıcıdan bunun yerine yapay zekânın yanıtının tamamını editöre yapıştırmasını ya da editörü kendi penceresinde açmasını ister.</p>\n        <h2>3. Kendi penceresinde</h2>\n        <p><code>window.open(\"https://csv.giit.ch/tr/?embed=window\", \"csveditor-17\")</code> tam editörü kendi penceresinde açar ve aynı mesajlarla <code>window.opener</code> üzerinden iletişim kurar. Yapay zekâdan gelen bağlantılar ona orada ulaşır. <code>csveditor:load</code> ayrıca <code>context: { host, title, rules }</code> taşıyabilir - yapay zekâ istemi bu durumda belgenin nereye ait olduğunu söyler ve kurallarınıza uyar - ve <code>hook: { url, token }</code>, yalnızca bu belge için olan ve asla saklanmayan bir webhook. Kaydedilmemiş değişikliklerle pencereyi kapatmak <code>csveditor:closing</code> gönderir.</p>\n        <h2>4. Kendi sunucunuz üzerinden yapay zekâ</h2>\n        <p>Editöre kendi isteminizi, sitenizde bir adresi ve bu editör oturumu için bir anahtarı verin. Yapay zekâ iletişim kutusu bu durumda sitenize “Bağlı” olduğunu, yapay zekâya ne söylediğinizi ve <b>geçerli belgeyi değiştir</b> veya <b>yeni bir belge oluştur</b> seçimini gösterir; <b>İstemi kopyala</b> hepsini bir araya getirir. Yapay zekâ sonucunu anahtarla sunucunuza gönderir ve sayfanız onu editörde açar - yeni bir belge ayrı açılır ve kullanıcının tarayıcısında kalır. Editör oturumu başına bir anahtar: editör açık olduğu sürece geçerli kalır ve editör yalnızca anahtarı yokken <code>csveditor:key-request</code> ile ister. Editör anahtarı asla kendisi göndermez ve asla saklamaz; adres kendi alan adınızda veya onun bir alt alan adında https olmalıdır.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // editör oturumu başına bir anahtar\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;csveditor:load&#x27;, name: &#x27;Products&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep the column names. Prices in CHF.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// csveditor:loaded içindeki id'yi hatırlayın ve başka id'li change/save/closing mesajlarını yok sayın\n// yalnızca editörün anahtarı yokken:\nif (m.type === &#x27;csveditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;csveditor:ai&#x27;, key: k.key }, ORIGIN); }\n// editör açıkken sunucunuza her dakika bildirin; editörü veya sayfayı kapatmak anahtarı geçersiz kılar\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// sunucunuzda bir sonuç var (polling, SSE …): target &quot;current&quot; veya &quot;new&quot; olur\ned.contentWindow.postMessage({ type: &#x27;csveditor:load&#x27;, name: &#x27;Products&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Anahtarları en az 128 rastgele bitle oluşturun, yalnızca özetlerini (hash) saklayın, her birini oturum açmış kullanıcıya, belgeye ve bu editör oturumuna bağlayın, oturum başına bir tane oluşturun, yalnızca sayfanız oturumu açık bildirdiği sürece geçerli tutun ve editör veya sayfa kapandığında geçersiz kılın.</p>\n        <p class=\"muted\">Protokolün tamamı <a href=\"/llms.txt\">llms.txt</a> dosyasındadır - bir yapay zekâya verin, sisteminiz için bağlantıyı o kursun. Diğer giit editörleri de kendi önekleriyle aynı şekilde çalışır - <a href=\"https://editors.giit.ch/tr/\">editors.giit.ch</a>.</p>\n        <h2>Belgeyi salt okunur göstermek (görüntüleyici)</h2>\n        <p><code>?viewer=1</code> yalnızca bitmiş belgeyi gösterir: kod yok, araç yok, hiçbir şey değiştirilemez ve tarayıcıda hiçbir şey saklanmaz. Belge bir bağlantıdan (<code>#b64=</code>, <code>?src=</code>), sayfanızdan <code>csveditor:load</code> ile veya normal bir form olarak POST ile <code>post.php</code> adresine gelir: metin olarak <code>content</code> ya da base64 olarak <code>b64</code> alanı, isteğe bağlı <code>name</code>, en fazla 20 MB metin.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://csv.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;tr&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p><code>viewer=1</code> olmadan belge normal editörde açılır. Her iki durumda da yalnızca bellekte kalır: sunucuda saklanmaz ve “Belgelerim” bölümüne girmez. Doğrudan açıldığında görüntüleyici içeriğin üçüncü taraftan geldiğini belirtir.</p>",
+    "crumb": "Yerleştirme",
+    "crumb_nav": "Sayfa yolu",
+    "open": "Editörü aç"
+  }
+}

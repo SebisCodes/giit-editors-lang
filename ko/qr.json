@@ -1,0 +1,183 @@
+{
+  "title": "QR 코드 생성기: 로고·SVG·PDF | giit.ch",
+  "description": "로고를 넣는 무료 QR 코드 생성기. 링크·Wi-Fi·연락처·SEPA·스위스 QR 청구서 지원. 스캔 검사, SVG·PNG·PDF·EPS 내보내기. 가입 불필요.",
+  "og_title": "QR 코드 생성기: 로고·SVG·PDF | giit.ch",
+  "og_description": "로고를 넣는 무료 QR 코드 생성기. 링크·Wi-Fi·연락처·SEPA·스위스 QR 청구서 지원. 스캔 검사, SVG·PNG·PDF·EPS 내보내기. 가입 불필요.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://qr.giit.ch/ko/#app",
+        "name": "QR Editor",
+        "alternateName": "QR 코드 생성기",
+        "url": "https://qr.giit.ch/ko/",
+        "description": "로고를 넣는 무료 QR 코드 생성기. 링크, Wi-Fi, 연락처, 결제 지원. 스캔 검사와 SVG, PNG, PDF, EPS 내보내기. 가입 불필요.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "모든 운영체제(웹 브라우저)",
+        "inLanguage": "ko",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://qr.giit.ch/img/og.png",
+        "featureList": [
+          "유효 기간 없는 정적 QR 코드: 코드에 실제 내용이 담기며, 리디렉션도 계정도 없음",
+          "링크, 텍스트, Wi-Fi, 연락처(vCard와 MeCard), 이메일, 문자, 전화, 위치, 캘린더 일정, 비트코인과 이더리움",
+          "SEPA 결제(EPC GiroCode)와 스위스 QR 청구서, IBAN, QR 참조 번호, 채권자 참조 번호 검사",
+          "색, 선형 및 방사형 그라데이션, 투명 배경",
+          "모듈 모양 7가지, 위치 패턴 테두리 4가지, 위치 패턴 중심 5가지, 눈에 별도 색 지정 가능",
+          "내장 기호 11개나 내 이미지로 로고를 넣고 오류 정정 기준으로 검사",
+          "캡션과 테두리",
+          "편집기에 표시된 코드를 원래 크기, 작은 크기, 흐린 상태로 스캔 검사합니다. 일괄 내보내기에서는 코드를 자동으로 스캔하지 않습니다.",
+          "대비, 여백, 인쇄 크기 검사",
+          "SVG, dpi가 포함된 최대 8192픽셀 PNG, JPEG, WebP, PDF, EPS(그라데이션이 있는 벡터)로 내보내기",
+          "이미지, 클립보드, 카메라에서 QR 코드 읽기",
+          "CSV 표로 여러 코드를 한 번에 만들어 ZIP이나 PDF 하나로",
+          "많은 코드를 브라우저에 보관",
+          "어떤 AI든 링크를 통해 편집기에서 작성 가능, 내 웹사이트에 삽입 가능"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "QR 코드가 만료되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아니요. QR 편집기는 정적 코드를 만듭니다. 링크, Wi-Fi 비밀번호, 연락처가 코드 자체에 들어 있으며, 저희 서버의 리디렉션 뒤에 있지 않습니다. 내용이 유효한 한 계정, 구독, 스캔 횟수 제한 없이 작동합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "정말 무료인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 모든 내용 유형, 모든 디자인 옵션, SVG, PDF, EPS 내보내기, 스캔 검사, 표로 여러 코드 만들기가 가입, 광고, 워터마크 없이 무료입니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "내 데이터가 서버로 전송되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아니요. 코드는 브라우저 안에서 만들고, 검사하고, 내보내며, 스캔하는 이미지와 카메라 영상도 브라우저 안에서 읽힙니다. QR 문서가 서버로 가는 경우는 직접 내 서버로 웹훅을 설정했거나, 편집기를 삽입한 웹사이트가 자기 서버에 저장하거나, 다른 웹사이트가 양식(post.php)으로 여기서 QR 문서를 열 때뿐입니다. 이때 저희 서버는 저장하지 않고 곧바로 브라우저로 넘겨 줍니다. 여느 웹사이트처럼 서버는 방문할 때마다 기록을 남기며, 페이지 조회 수는 익명으로 집계합니다. 자세한 내용은 개인정보 처리방침을 참고하세요."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "로고를 넣은 QR 코드도 스캔되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "편집기가 알려 줍니다. 로고가 가리는 부분을 오류 정정이 복구할 수 있는 범위와 비교하고, 완성된 코드를 보통, 작게, 흐리게 다시 읽습니다. 안정적으로 스캔되지 않으면 인쇄하기 전에 알 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "인쇄에는 어떤 파일 형식을 써야 하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "확대하거나 축소할 QR 도형에는 SVG, PDF, EPS를 사용하세요. 업로드한 이미지 로고와 PDF/EPS의 일부 캡션은 래스터 이미지로 출력됩니다. PNG는 인쇄 크기에 맞춰 픽셀 너비와 DPI를 선택하세요."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "스위스 QR 청구서나 SEPA 결제 코드를 만들 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 양식이 IBAN, QR-IBAN과 그 QR 참조 번호, 채권자 참조 번호(RF), 지원되는 항목 길이 제한을 검사합니다. 스위스 QR 청구서는 표준에 따라 스위스 십자와 오류 정정 M으로 그려집니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "QR 코드를 읽을 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 이미지를 열거나 끌어 놓거나 붙여 넣고, “코드 읽기”로 카메라를 쓸 수도 있습니다. 내용은 바꿀 수 있는 새 코드가 됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "인쇄할 QR 코드는 얼마나 커야 하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "스캔 거리의 약 10분의 1입니다. 20 cm면 2 cm, 1미터면 10 cm. “검사” 탭이 이를 계산하고, 모듈 하나(코드의 네모 한 칸)가 0.4 mm보다 작아지면 경고합니다."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>유효 기간 없는 무료 QR 코드 - 디자인, 검사, 개인정보 보호</h2>\n        <p>QR 편집기는 링크, Wi-Fi, 연락처, 일정, 이메일, 문자 메시지, 장소, 결제를 위한 QR 코드를 만듭니다. 색, 그라데이션, 모양, 로고, 캡션으로 디자인할 수 있습니다. 편집기에 표시된 코드를 원래 크기, 작은 크기, 흐린 상태로 스캔 검사합니다. 일괄 내보내기에서는 코드를 자동으로 스캔하지 않습니다. 인쇄용 SVG, PDF, EPS나 너비 최대 8192픽셀의 PNG로 내보낼 수 있습니다.</p>\n        <p>코드는 정적입니다. 내용이 코드 자체에 들어 있어, 체험 기간이 끝나면 작동을 멈추는 리디렉션 뒤에 있지 않습니다. 가입도 광고도 스캔 횟수 제한도 없으며, 모든 작업이 브라우저 안에서 이루어집니다. 입력하거나 스캔한 내용은 저희 서버가 아니라 브라우저에 보관됩니다.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>QR 편집기로 할 수 있는 일</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>12가지 내용</h3><p>링크, 텍스트, Wi-Fi(WPA, WEP, 개방형, 숨겨진 네트워크), vCard나 MeCard 형식의 연락처, 이메일, 문자, 전화, 위치, 캘린더 일정, 비트코인과 이더리움, SEPA 결제(EPC GiroCode), 스위스 QR 청구서. 모두 입력 양식과 검사를 갖추고 있습니다.</p></div>\n            <div class=\"tile\"><h3>디자인</h3><p>색, 선형 및 방사형 그라데이션, 투명 배경, 모듈 모양 7가지, 위치 패턴 테두리 4가지와 위치 패턴 중심 5가지(별도 색 가능), 내장 기호나 내 이미지로 만든 로고, 캡션과 테두리.</p></div>\n            <div class=\"tile\"><h3>스캔으로 검사</h3><p>편집기에 표시된 코드를 원래 크기, 작은 크기, 흐린 상태로 스캔 검사합니다. 일괄 내보내기에서는 코드를 자동으로 스캔하지 않습니다. 대비, 여백, 오류 정정 대비 로고 크기를 검사하고, 스캔 거리에서 인쇄 크기를 계산합니다.</p></div>\n            <div class=\"tile\"><h3>인쇄와 웹용 내보내기</h3><p>확대하거나 축소할 QR 도형에는 SVG, PDF, EPS를 사용하세요. 업로드한 이미지 로고와 PDF/EPS의 일부 캡션은 래스터 이미지로 출력됩니다. PNG는 인쇄 크기에 맞춰 픽셀 너비와 DPI를 선택하세요. PNG는 dpi가 기록된 최대 8192픽셀로, JPEG와 WebP도 지원합니다. 무료이며 가입이 필요 없습니다.</p></div>\n            <div class=\"tile\"><h3>여러 코드를 한 번에</h3><p>내용에 <code>{{url}}</code> 같은 자리 표시자를 쓰고 표를 붙여 넣으면 SVG나 PNG 파일이 담긴 ZIP, 또는 페이지마다 코드가 하나씩 있는 PDF를 다운로드할 수 있습니다.</p></div>\n            <div class=\"tile\"><h3>QR 코드 읽기</h3><p>이미지를 열거나 끌어 놓거나 붙여 넣고, 카메라로 스캔할 수도 있습니다. 어두운 배경의 밝은 코드도 읽습니다. 내용은 바꿀 수 있는 코드가 됩니다.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>왜 정적 코드인가</h2>\n        <p>많은 “무료” QR 생성기는 동적 코드를 만듭니다. 코드에는 그 회사 서버로 가는 짧은 링크가 들어 있고, 서버가 내 주소로 넘겨 줍니다. 체험 기간이 끝나거나 스캔 횟수 한도에 이르면 전달을 끊거나 광고부터 보여 주어, 인쇄한 코드가 모두 작동하지 않게 됩니다. 정적 코드는 주소, Wi-Fi 비밀번호, 연락처 자체를 담고 있어 중간에 아무도 없이 계속 작동합니다. QR 편집기는 정적 코드만 만들며, 내용이 단축 URL이면 경고합니다.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>사용 방법</h2>\n        <ol class=\"steps\">\n            <li><b>고르기</b> - “새로 만들기”에서 코드 종류를 고르고 양식을 채우거나, 내용을 직접 입력하세요.</li>\n            <li><b>디자인과 검사</b> - 색, 모양, 로고, 캡션을 바꾸세요. 코드 위의 배지가 아직 스캔되는지 보여 줍니다.</li>\n            <li><b>내보내기</b> - SVG, PDF, EPS, PNG를 다운로드하거나 표로 여러 코드를 만드세요.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>내 웹사이트에서 편집기 사용</h2>\n        <p>iframe이나 별도 창으로 편집기를 내 웹사이트에 넣을 수 있습니다. 내 페이지에서 문서를 전달하고, 모든 변경 내용과 저장 내용을 받으며, AI가 결과를 내 서버로 보내게 할 수도 있습니다. 가입도 키도 필요 없습니다.</p>\n        <p><a href=\"/ko/embed/\"><b>편집기를 내 웹사이트에 삽입하기</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>자주 묻는 질문</h2>\n        <div class=\"questions\">\n            <details><summary>QR 코드가 만료되나요?</summary><p>아니요. QR 편집기는 정적 코드를 만듭니다. 링크, Wi-Fi 비밀번호, 연락처가 코드 자체에 들어 있으며, 저희 서버의 리디렉션 뒤에 있지 않습니다. 내용이 유효한 한 계정, 구독, 스캔 횟수 제한 없이 작동합니다.</p></details>\n            <details><summary>정말 무료인가요?</summary><p>네. 모든 내용 유형, 모든 디자인 옵션, SVG, PDF, EPS 내보내기, 스캔 검사, 표로 여러 코드 만들기가 가입, 광고, 워터마크 없이 무료입니다.</p></details>\n            <details><summary>내 데이터가 서버로 전송되나요?</summary><p>아니요. 코드는 브라우저 안에서 만들고, 검사하고, 내보내며, 스캔하는 이미지와 카메라 영상도 브라우저 안에서 읽힙니다. QR 문서가 서버로 가는 경우는 직접 내 서버로 웹훅을 설정했거나, 편집기를 삽입한 웹사이트가 자기 서버에 저장하거나, 다른 웹사이트가 양식(post.php)으로 여기서 QR 문서를 열 때뿐입니다. 이때 저희 서버는 저장하지 않고 곧바로 브라우저로 넘겨 줍니다. 여느 웹사이트처럼 서버는 방문할 때마다 기록을 남기며, 페이지 조회 수는 익명으로 집계합니다. 자세한 내용은 <a href=\"/privacy.html\">개인정보 처리방침</a>을 참고하세요.</p></details>\n            <details><summary>로고를 넣은 QR 코드도 스캔되나요?</summary><p>편집기가 알려 줍니다. 로고가 가리는 부분을 오류 정정이 복구할 수 있는 범위와 비교하고, 완성된 코드를 보통, 작게, 흐리게 다시 읽습니다. 안정적으로 스캔되지 않으면 인쇄하기 전에 알 수 있습니다.</p></details>\n            <details><summary>인쇄에는 어떤 파일 형식을 써야 하나요?</summary><p>확대하거나 축소할 QR 도형에는 SVG, PDF, EPS를 사용하세요. 업로드한 이미지 로고와 PDF/EPS의 일부 캡션은 래스터 이미지로 출력됩니다. PNG는 인쇄 크기에 맞춰 픽셀 너비와 DPI를 선택하세요.</p></details>\n            <details><summary>스위스 QR 청구서나 SEPA 결제 코드를 만들 수 있나요?</summary><p>네. 양식이 IBAN, QR-IBAN과 그 QR 참조 번호, 채권자 참조 번호(RF), 지원되는 항목 길이 제한을 검사합니다. 스위스 QR 청구서는 표준에 따라 스위스 십자와 오류 정정 M으로 그려집니다.</p></details>\n            <details><summary>QR 코드를 읽을 수 있나요?</summary><p>네. 이미지를 열거나 끌어 놓거나 붙여 넣고, “코드 읽기”로 카메라를 쓸 수도 있습니다. 내용은 바꿀 수 있는 새 코드가 됩니다.</p></details>\n            <details><summary>인쇄할 QR 코드는 얼마나 커야 하나요?</summary><p>스캔 거리의 약 10분의 1입니다. 20 cm면 2 cm, 1미터면 10 cm. “검사” 탭이 이를 계산하고, 모듈 하나(코드의 네모 한 칸)가 0.4 mm보다 작아지면 경고합니다.</p></details>\n        </div>\n    </section>",
+  "name": "QR 편집기",
+  "embed": {
+    "title": "QR 편집기를 내 웹사이트에 삽입하기 | giit.ch",
+    "description": "개발자 가이드: iframe으로 QR 편집기를 내 웹사이트에 삽입하고, postMessage나 웹훅으로 문서를 주고받고, AI를 연결하세요. 무료입니다.",
+    "og_title": "QR 편집기를 내 웹사이트에 삽입하기",
+    "og_description": "개발자 가이드: iframe으로 QR 편집기를 내 웹사이트에 삽입하고, postMessage나 웹훅으로 문서를 주고받고, AI를 연결하세요. 무료입니다.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://qr.giit.ch/ko/embed/#article",
+          "headline": "QR 편집기를 내 웹사이트에 삽입하기",
+          "description": "개발자 가이드: iframe으로 QR 편집기를 내 웹사이트에 삽입하고, postMessage나 웹훅으로 문서를 주고받고, AI를 연결하세요. 무료입니다.",
+          "inLanguage": "ko",
+          "url": "https://qr.giit.ch/ko/embed/",
+          "mainEntityOfPage": "https://qr.giit.ch/ko/embed/",
+          "image": "https://qr.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "QR 편집기",
+            "url": "https://qr.giit.ch/ko/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "QR 편집기",
+              "item": "https://qr.giit.ch/ko/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "삽입",
+              "item": "https://qr.giit.ch/ko/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "QR 편집기를 내 웹사이트에 삽입하기",
+    "intro": "<p>개발자를 위한 페이지입니다. QR 편집기를 내 페이지에 삽입하는 방법(iframe, 별도 창, 읽기 전용 뷰어)과 문서, 저장, AI 결과가 편집기와 내 서버 사이를 오가는 방법을 설명합니다. 가입도, 저희가 발급하는 키도 필요 없습니다.</p>",
+    "body": "<p>모든 https 페이지와 localhost에서는 <code>&lt;iframe&gt;</code>과 <code>?embed=1</code>로 편집기를 삽입할 수 있습니다. 가입도 키도 필요 없습니다. 삽입되면 편집기는 페이지 설명을 숨기고 저장 버튼을 보여 줍니다. 사용자가 그 안에서 코드를 스캔하게 하려면 iframe의 <code>allow</code>에 <code>camera</code>를 추가하세요.</p>\n        <h2>1. 링크로 파일을 열고 내 서버에 저장</h2>\n        <p><code>src=</code>는 .qr 파일을 열고(서버가 CORS를 허용해야 합니다), <code>webhook=</code>을 쓰면 “저장”(Ctrl+S)이 QR 문서를 그 주소로 보냅니다. <code>&amp;auto</code>를 붙이면 변경할 때마다 저장합니다.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://qr.giit.ch/ko/?embed=1&amp;src=https://your-site.com/codes/shop.qr&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>웹훅은 JSON <code>{ editor: \"qr\", event: \"save\", id, name, content, updated }</code>이 담긴 POST를 받습니다. 링크에는 토큰을 넣지 않습니다. 서버 로그와 브라우저 방문 기록에 남기 때문입니다. 따라서 주소에 웹훅을 지정하는 방식은 localhost나 인트라넷처럼 토큰이 필요 없는 저장 주소에 적합합니다. 공개 서버에서는 <code>qreditor:load</code>의 <code>hook: { url, token }</code>으로 웹훅과 토큰을 전달하고, 다음 간단한 PHP 스크립트처럼 토큰을 검증하세요:</p>\n        <pre class=\"example\"><code>&lt;?php\n// save.php: one document; replace the token and storage path for your application.\nheader(&#x27;Access-Control-Allow-Origin: https://qr.giit.ch&#x27;);\nheader(&#x27;Vary: Origin&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Content-Type: application/json&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) {\n    http_response_code(204);\n    exit;\n}\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] !== &#x27;POST&#x27;) {\n    http_response_code(405);\n    header(&#x27;Allow: POST, OPTIONS&#x27;);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;POST required&#x27;]);\n    exit;\n}\n$token = &#x27;replace-with-a-random-secret&#x27;;\nif (!hash_equals(&#x27;Bearer &#x27; . $token, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;)) {\n    http_response_code(401);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid token&#x27;]);\n    exit;\n}\n$data = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\nif (!is_array($data) || ($data[&#x27;editor&#x27;] ?? &#x27;&#x27;) !== &#x27;qr&#x27;\n    || ($data[&#x27;event&#x27;] ?? &#x27;&#x27;) !== &#x27;save&#x27; || !is_string($data[&#x27;content&#x27;] ?? null)) {\n    http_response_code(400);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid QR document&#x27;]);\n    exit;\n}\n// Use a fixed path outside the public web directory, after checking access.\nif (file_put_contents(dirname(__DIR__) . &#x27;/shop.qr&#x27;, $data[&#x27;content&#x27;], LOCK_EX) === false) {\n    http_response_code(500);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Could not save&#x27;]);\n    exit;\n}\necho json_encode([&#x27;ok&#x27; =&gt; true]);</code></pre>\n        <p><code>content</code>는 QR 문서(디자인 줄, <code>---</code>, 내용)입니다.</p>\n        <p>웹훅은 <code>https://qr.giit.ch</code>의 CORS 요청과 <code>OPTIONS</code> 요청, <code>Content-Type</code> 헤더를 허용해야 합니다. 토큰을 사용한다면 <code>Authorization</code>도 허용하세요. 예제 토큰을 임의의 비밀값으로 바꾸고 애플리케이션의 접근 권한 검사와 저장 경로를 사용하세요.</p>\n        <h2>2. 내 페이지에서 문서 보관하기 (postMessage)</h2>\n        <p>편집기가 <code>qreditor:ready</code>를 보내면 페이지가 <code>qreditor:load</code>로 답하고, 편집기는 <code>qreditor:loaded</code>를, 실제로 편집되면 <code>qreditor:change</code>를, 사용자가 저장하면 <code>qreditor:save</code>를 알립니다. 페이지는 <code>qreditor:get</code>(현재 상태)이나 <code>qreditor:save</code>(저장 누르기)를 보낼 수 있습니다. 디자인 줄 없이 내용만 있어도 유효한 문서입니다.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://qr.giit.ch/ko/?embed=1&quot; allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://qr.giit.ch&#x27;;\naddEventListener(&#x27;message&#x27;, e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;qreditor:ready&#x27;)\n    ed.contentWindow.postMessage({ type: &#x27;qreditor:load&#x27;, name: &#x27;Table 12&#x27;,\n      content: &#x27;color: #1d2b53\\ncaption: Table 12\\n---\\nhttps://example.com/menu?table=12&#x27; }, ORIGIN);\n  if (m.type === &#x27;qreditor:save&#x27;) saveOnYourServer(m.name, m.content);\n});\n&lt;/script&gt;</code></pre>\n        <h2>3. 별도의 창에서, 그리고 내 서버를 통한 AI</h2>\n        <p><code>window.open(\"https://qr.giit.ch/ko/?embed=window\", \"qreditor-17\")</code>은 전체 편집기를 별도의 창에서 열며 같은 메시지를 씁니다. 페이지는 편집기에 자체 AI 프롬프트, 내 사이트의 https 주소, 이 편집기 세션용 키 하나를 넘길 수도 있습니다(<code>qreditor:load</code> 안의 <code>ai: { label, prompt, endpoint, key }</code>, 또는 <code>qreditor:ai</code>). 그러면 AI가 결과를 그곳으로 보냅니다. 편집기는 키를 직접 보내지 않으며 저장하지도 않습니다.</p>\n        <h2>코드를 읽기 전용으로 표시 (뷰어)</h2>\n        <p><code>?viewer=1</code>은 완성된 코드만 다운로드, 내보내기와 함께 보여 줍니다. 아무것도 바꿀 수 없고 아무것도 저장되지 않습니다. 문서는 링크(<code>#b64=</code>, <code>#qr=</code>, <code>?src=</code>), 페이지가 보낸 <code>qreditor:load</code>, 또는 <code>post.php</code>로의 POST(필드 <code>content</code>나 <code>b64</code>, 선택적으로 <code>name</code>)에서 받습니다.</p>\n        <p class=\"muted\">전체 프로토콜은 <a href=\"/llms.txt\">llms.txt</a>에 있습니다 - AI에게 주면 내 시스템에 맞는 연동을 구현해 줍니다. 다른 giit 편집기도 각자의 접두사로 똑같이 작동합니다 - <a href=\"https://editors.giit.ch/ko/\">editors.giit.ch</a>.</p>",
+    "crumb": "삽입",
+    "crumb_nav": "이동 경로",
+    "open": "편집기 열기"
+  }
+}

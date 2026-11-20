@@ -1,0 +1,183 @@
+{
+  "title": "QR コード作成：ロゴ・SVG・PDF | giit.ch",
+  "description": "ロゴ付き QR コードを無料で作成。リンク、Wi-Fi、連絡先、SEPA、スイス QR 請求書に対応。読み取りチェック機能付き。SVG・PNG・PDF・EPS で出力。登録不要。",
+  "og_title": "QR コード作成：ロゴ・SVG・PDF | giit.ch",
+  "og_description": "ロゴ付き QR コードを無料で作成。リンク、Wi-Fi、連絡先、SEPA、スイス QR 請求書に対応。読み取りチェック機能付き。SVG・PNG・PDF・EPS で出力。登録不要。",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://qr.giit.ch/ja/#app",
+        "name": "QR Editor",
+        "alternateName": "QR コード作成ツール",
+        "url": "https://qr.giit.ch/ja/",
+        "description": "ロゴ付き QR コードを無料で作成。リンク、Wi-Fi、連絡先、SEPA、スイス QR 請求書に対応。読み取りチェック機能付き。SVG・PNG・PDF・EPS で出力。登録不要。",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any (web browser)",
+        "inLanguage": "ja",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://qr.giit.ch/img/og.png",
+        "featureList": [
+          "有効期限のない静的 QR コード: コードに本来の内容が入り、リダイレクトもアカウントも不要",
+          "リンク、テキスト、Wi-Fi、連絡先 (vCard と MeCard)、メール、SMS、電話、場所、カレンダーの予定、ビットコインとイーサリアム",
+          "SEPA 支払い (EPC GiroCode) とスイス QR 請求書。IBAN、QR 参照番号、債権者参照番号をチェック",
+          "色、線形と放射状のグラデーション、透明な背景",
+          "7 種類のモジュールの形、4 種類の検出パターンの枠、5 種類の検出パターンの中心、目には別の色も設定可能",
+          "11 種類の内蔵シンボルか自分の画像からロゴを選び、誤り訂正と照らしてチェック",
+          "キャプションと枠",
+          "エディターに表示されているコードを、通常サイズ、縮小、ぼかしの条件で読み取りチェックします。一括出力したコードは自動では読み取りチェックされません。",
+          "コントラスト、クワイエットゾーン、印刷サイズのチェック",
+          "SVG、最大 8192 ピクセルで dpi 付きの PNG、JPEG、WebP、PDF、EPS (グラデーション付きのベクター) でエクスポート",
+          "画像、クリップボード、カメラから QR コードを読み取り",
+          "CSV の表から複数のコードを一括作成し、ZIP または 1 つの PDF に",
+          "たくさんのコードをブラウザーに保存",
+          "どの AI もリンクを通じてエディターで書ける。自分のサイトにも埋め込み可能"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "QR コードに有効期限はありますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ありません。QR エディターが作るのは静的コードです。リンク、Wi-Fi のパスワード、連絡先はコードそのものに入っていて、当サイトのサーバーのリダイレクトを経由しません。内容が有効な限り使えます。アカウントも定期購入も不要で、読み取り回数の制限もありません。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "本当に無料ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。すべての内容の種類、すべてのデザインオプション、SVG、PDF、EPS のエクスポート、スキャンチェック、表からの一括作成が無料で、登録も広告も透かしもありません。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "データはサーバーに送られますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ。コードはブラウザー内で作成、チェック、エクスポートされ、読み取る画像やカメラの映像もブラウザー内で処理されます。QR ドキュメントがサーバーに送られるのは、自分のサーバーへの Webhook を自分で設定した場合、このエディターを埋め込んだ Web サイトが自身のサーバーに保存した場合、またはほかの Web サイトがフォーム (post.php) を使ってこのエディターで開いた場合だけです。その場合も当サイトのサーバーは保存せず、そのままブラウザーに渡します。ほかの Web サイトと同じく、サーバーはアクセスごとにログを記録し、ページビューは匿名で集計しています。詳しくはプライバシーポリシーをご覧ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ロゴ入りの QR コードでも読み取れますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "エディターが教えてくれます。ロゴが隠す部分を誤り訂正で修復できる範囲と比べ、完成したコードを通常、小さいサイズ、ぼかしの 3 通りで読み戻します。確実に読み取れない場合は、印刷する前にわかります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "印刷にはどのファイル形式を使えばよいですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "QR コードの図形を拡大・縮小して使う場合は、SVG、PDF、EPS を選んでください。アップロードした画像ロゴや、PDF/EPS の一部のキャプションはラスター画像になります。PNG では印刷サイズに合わせてピクセル幅と DPI を選んでください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "スイス QR 請求書や SEPA 支払いのコードも作れますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。フォームは IBAN、QR-IBAN とその QR 参照番号、債権者参照番号 (RF)、チェックに対応している項目の文字数制限をチェックします。スイス QR 請求書は、規格どおりスイス十字と誤り訂正 M で描画されます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "QR コードを読み取れますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。画像を開く、ドロップする、貼り付けるか、「コード読み取り」でカメラを使います。内容は変更できる新しいコードになります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "印刷する QR コードはどのくらいの大きさが必要ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "読み取り距離のおよそ 10 分の 1 です。20 cm なら 2 cm、1 メートルなら 10 cm。「チェック」タブで計算でき、1 モジュール (コードの 1 マス) が 0.4 mm より小さくなると警告します。"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>有効期限のない無料 QR コード - デザイン・チェックができ、プライバシーも守れる</h2>\n        <p>QR エディターは、リンク、Wi-Fi、連絡先、予定、メール、SMS、場所、支払いの QR コードを作成します。色、グラデーション、形、ロゴ、キャプションでデザインできます。エディターに表示されているコードを、通常サイズ、縮小、ぼかしの条件で読み取りチェックします。一括出力したコードは自動では読み取りチェックされません。印刷用に SVG、PDF、EPS を、また幅 8192 ピクセルまでの PNG をエクスポートできます。</p>\n        <p>コードは静的です。内容はコードそのものに入っていて、試用期間が終わると使えなくなるリダイレクトを経由しません。登録も広告も読み取り回数の制限もなく、すべてブラウザー内で動作します。入力した内容や読み取った内容は、当サイトのサーバーではなくブラウザー内に保存されます。</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>QR エディターでできること</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>12 種類の内容</h3><p>リンク、テキスト、Wi-Fi (WPA、WEP、オープン、ステルス)、vCard または MeCard の連絡先、メール、SMS、電話、場所、カレンダーの予定、ビットコインとイーサリアム、SEPA 支払い (EPC GiroCode)、スイス QR 請求書。どれもフォームとチェック付きです。</p></div>\n            <div class=\"tile\"><h3>デザイン</h3><p>色、線形と放射状のグラデーション、透明な背景、7 種類のモジュールの形、4 種類の検出パターンの枠と 5 種類の検出パターンの中心 (別の色も可)、内蔵シンボルか自分の画像のロゴ、キャプションと枠。</p></div>\n            <div class=\"tile\"><h3>読み取ってチェック</h3><p>エディターに表示されているコードを、通常サイズ、縮小、ぼかしの条件で読み取りチェックします。一括出力したコードは自動では読み取りチェックされません。コントラスト、クワイエットゾーン、誤り訂正に対するロゴの大きさをチェックし、読み取り距離から印刷サイズを割り出します。</p></div>\n            <div class=\"tile\"><h3>印刷と Web 向けのエクスポート</h3><p>QR コードの図形を拡大・縮小して使う場合は、SVG、PDF、EPS を選んでください。アップロードした画像ロゴや、PDF/EPS の一部のキャプションはラスター画像になります。PNG では印刷サイズに合わせてピクセル幅と DPI を選んでください。PNG は最大 8192 ピクセルで dpi を書き込み、JPEG と WebP にも対応。無料で登録不要です。</p></div>\n            <div class=\"tile\"><h3>コードを一括作成</h3><p>内容に <code>{{url}}</code> のようなプレースホルダーを書いて表を貼り付けると、SVG か PNG ファイルの ZIP、または 1 ページに 1 コードの PDF をダウンロードできます。</p></div>\n            <div class=\"tile\"><h3>QR コードを読み取る</h3><p>画像を開く、ドロップする、貼り付けるか、カメラで読み取れます。暗い背景の明るいコードにも対応。内容は変更できるコードになります。</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>静的コードを選ぶ理由</h2>\n        <p>多くの「無料」QR コード作成ツールは動的コードを作ります。コードには運営会社のサーバーへの短縮リンクが入っていて、そこからあなたのアドレスへ転送されます。試用期間が終わったり読み取り回数の上限に達したりすると、転送が止められたり先に広告が表示されたりして、印刷したコードはすべて使えなくなります。静的コードはアドレス、Wi-Fi のパスワード、連絡先そのものを含むので、間に誰も入らずに使い続けられます。QR エディターは静的コードだけを作り、内容が短縮 URL の場合は警告します。</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>使い方</h2>\n        <ol class=\"steps\">\n            <li><b>選ぶ</b> - 「新規」でコードの種類を選んでフォームに入力するか、内容を直接入力します。</li>\n            <li><b>デザインしてチェック</b> - 色、形、ロゴ、キャプションを変更します。コードの上のバッジで、まだ読み取れるかがわかります。</li>\n            <li><b>エクスポート</b> - SVG、PDF、EPS、PNG をダウンロードするか、表から複数のコードを作成します。</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>エディターを自分の Web サイトで使う</h2>\n        <p>iframe や専用ウィンドウを使って、このエディターを自分の Web サイトに組み込めます。ページからドキュメントを渡し、変更や保存をすべて受け取り、AI の結果を自分のサーバーに送らせることもできます。登録もキーも不要です。</p>\n        <p><a href=\"/ja/embed/\"><b>エディターを自分の Web サイトに埋め込む</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>よくある質問</h2>\n        <div class=\"questions\">\n            <details><summary>QR コードに有効期限はありますか？</summary><p>ありません。QR エディターが作るのは静的コードです。リンク、Wi-Fi のパスワード、連絡先はコードそのものに入っていて、当サイトのサーバーのリダイレクトを経由しません。内容が有効な限り使えます。アカウントも定期購入も不要で、読み取り回数の制限もありません。</p></details>\n            <details><summary>本当に無料ですか？</summary><p>はい。すべての内容の種類、すべてのデザインオプション、SVG、PDF、EPS のエクスポート、スキャンチェック、表からの一括作成が無料で、登録も広告も透かしもありません。</p></details>\n            <details><summary>データはサーバーに送られますか？</summary><p>いいえ。コードはブラウザー内で作成、チェック、エクスポートされ、読み取る画像やカメラの映像もブラウザー内で処理されます。QR ドキュメントがサーバーに送られるのは、自分のサーバーへの Webhook を自分で設定した場合、このエディターを埋め込んだ Web サイトが自身のサーバーに保存した場合、またはほかの Web サイトがフォーム (post.php) を使ってこのエディターで開いた場合だけです。その場合も当サイトのサーバーは保存せず、そのままブラウザーに渡します。ほかの Web サイトと同じく、サーバーはアクセスごとにログを記録し、ページビューは匿名で集計しています。詳しくは<a href=\"/privacy.html\">プライバシーポリシー</a>をご覧ください。</p></details>\n            <details><summary>ロゴ入りの QR コードでも読み取れますか？</summary><p>エディターが教えてくれます。ロゴが隠す部分を誤り訂正で修復できる範囲と比べ、完成したコードを通常、小さいサイズ、ぼかしの 3 通りで読み戻します。確実に読み取れない場合は、印刷する前にわかります。</p></details>\n            <details><summary>印刷にはどのファイル形式を使えばよいですか？</summary><p>QR コードの図形を拡大・縮小して使う場合は、SVG、PDF、EPS を選んでください。アップロードした画像ロゴや、PDF/EPS の一部のキャプションはラスター画像になります。PNG では印刷サイズに合わせてピクセル幅と DPI を選んでください。</p></details>\n            <details><summary>スイス QR 請求書や SEPA 支払いのコードも作れますか？</summary><p>はい。フォームは IBAN、QR-IBAN とその QR 参照番号、債権者参照番号 (RF)、チェックに対応している項目の文字数制限をチェックします。スイス QR 請求書は、規格どおりスイス十字と誤り訂正 M で描画されます。</p></details>\n            <details><summary>QR コードを読み取れますか？</summary><p>はい。画像を開く、ドロップする、貼り付けるか、「コード読み取り」でカメラを使います。内容は変更できる新しいコードになります。</p></details>\n            <details><summary>印刷する QR コードはどのくらいの大きさが必要ですか？</summary><p>読み取り距離のおよそ 10 分の 1 です。20 cm なら 2 cm、1 メートルなら 10 cm。「チェック」タブで計算でき、1 モジュール (コードの 1 マス) が 0.4 mm より小さくなると警告します。</p></details>\n        </div>\n    </section>",
+  "name": "QR エディター",
+  "embed": {
+    "title": "QR エディターの埋め込みガイド | giit.ch",
+    "description": "QR エディターを iframe でサイトに埋め込む開発者ガイド。postMessage や Webhook でドキュメントを受け渡し、AI と連携する方法を紹介。無料です。",
+    "og_title": "QR エディターを自分の Web サイトに埋め込む",
+    "og_description": "QR エディターを iframe でサイトに埋め込む開発者ガイド。postMessage や Webhook でドキュメントを受け渡し、AI と連携する方法を紹介。無料です。",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://qr.giit.ch/ja/embed/#article",
+          "headline": "QR エディターを自分の Web サイトに埋め込む",
+          "description": "QR エディターを iframe でサイトに埋め込む開発者ガイド。postMessage や Webhook でドキュメントを受け渡し、AI と連携する方法を紹介。無料です。",
+          "inLanguage": "ja",
+          "url": "https://qr.giit.ch/ja/embed/",
+          "mainEntityOfPage": "https://qr.giit.ch/ja/embed/",
+          "image": "https://qr.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "QR エディター",
+            "url": "https://qr.giit.ch/ja/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "QR エディター",
+              "item": "https://qr.giit.ch/ja/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "埋め込み",
+              "item": "https://qr.giit.ch/ja/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "QR エディターを自分の Web サイトに埋め込む",
+    "intro": "<p>開発者向けのページです。QR エディターを自分のページに組み込む方法 (iframe 内、専用ウィンドウ、読み取り専用のビューアー) と、ドキュメント、保存時のデータ、AI の結果をエディターと自分のサーバーの間でやり取りする方法を説明します。登録も当サイトのキーも不要です。</p>",
+    "body": "<p>https のページ (と localhost) なら、<code>&lt;iframe&gt;</code> と <code>?embed=1</code> でエディターを埋め込めます。登録もキーも不要です。埋め込むと、エディターはページの説明文を隠し、保存ボタンを表示します。ユーザーが中でコードを読み取る場合は、iframe の <code>allow</code> に <code>camera</code> を追加してください。</p>\n        <h2>1. リンクからファイルを開き、自分のサーバーに保存</h2>\n        <p><code>src=</code> は .qr ファイルを開き (サーバーは CORS を許可する必要があります)、<code>webhook=</code> を付けると「保存」(Ctrl+S) で QR ドキュメントがそのアドレスに送られます。<code>&amp;auto</code> を付けると変更のたびに保存します。</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://qr.giit.ch/ja/?embed=1&amp;src=https://your-site.com/codes/shop.qr&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook は JSON <code>{ editor: \"qr\", event: \"save\", id, name, content, updated }</code> を含む POST を受け取ります。リンクにはトークンを含めません。サーバーのログやブラウザーの履歴に残ってしまうためです。そのため、URL に指定する Webhook は、localhost やイントラネットなど、トークンを必要としない保存先に適しています。公開サーバーでは、<code>qreditor:load</code> の <code>hook: { url, token }</code> で Webhook とトークンを渡し、次の短い PHP スクリプトのようにトークンを検証してください：</p>\n        <pre class=\"example\"><code>&lt;?php\n// save.php: one document; replace the token and storage path for your application.\nheader(&#x27;Access-Control-Allow-Origin: https://qr.giit.ch&#x27;);\nheader(&#x27;Vary: Origin&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Content-Type: application/json&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) {\n    http_response_code(204);\n    exit;\n}\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] !== &#x27;POST&#x27;) {\n    http_response_code(405);\n    header(&#x27;Allow: POST, OPTIONS&#x27;);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;POST required&#x27;]);\n    exit;\n}\n$token = &#x27;replace-with-a-random-secret&#x27;;\nif (!hash_equals(&#x27;Bearer &#x27; . $token, $_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;)) {\n    http_response_code(401);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid token&#x27;]);\n    exit;\n}\n$data = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\nif (!is_array($data) || ($data[&#x27;editor&#x27;] ?? &#x27;&#x27;) !== &#x27;qr&#x27;\n    || ($data[&#x27;event&#x27;] ?? &#x27;&#x27;) !== &#x27;save&#x27; || !is_string($data[&#x27;content&#x27;] ?? null)) {\n    http_response_code(400);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Invalid QR document&#x27;]);\n    exit;\n}\n// Use a fixed path outside the public web directory, after checking access.\nif (file_put_contents(dirname(__DIR__) . &#x27;/shop.qr&#x27;, $data[&#x27;content&#x27;], LOCK_EX) === false) {\n    http_response_code(500);\n    echo json_encode([&#x27;error&#x27; =&gt; &#x27;Could not save&#x27;]);\n    exit;\n}\necho json_encode([&#x27;ok&#x27; =&gt; true]);</code></pre>\n        <p><code>content</code> は QR ドキュメント (デザイン行、<code>---</code>、内容) です。</p>\n        <p>Webhook では <code>https://qr.giit.ch</code> からの CORS を許可し、<code>OPTIONS</code> リクエストと <code>Content-Type</code> ヘッダーに対応する必要があります。トークンを使う場合は <code>Authorization</code> も許可してください。サンプルのトークンをランダムな秘密値に置き換え、アプリケーションに合わせたアクセス確認と保存先を使ってください。</p>\n        <h2>2. ページがドキュメントを保持 (postMessage)</h2>\n        <p>エディターが <code>qreditor:ready</code> を送り、ページは <code>qreditor:load</code> で応答します。エディターは <code>qreditor:loaded</code> を、実際に編集されると <code>qreditor:change</code> を、ユーザーが保存すると <code>qreditor:save</code> を通知します。ページからは <code>qreditor:get</code> (現在の状態) や <code>qreditor:save</code> (保存を押す) を送れます。デザイン行のない内容だけでも有効なドキュメントです。</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://qr.giit.ch/ja/?embed=1&quot; allow=&quot;clipboard-write; camera&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://qr.giit.ch&#x27;;\naddEventListener(&#x27;message&#x27;, e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;qreditor:ready&#x27;)\n    ed.contentWindow.postMessage({ type: &#x27;qreditor:load&#x27;, name: &#x27;Table 12&#x27;,\n      content: &#x27;color: #1d2b53\\ncaption: Table 12\\n---\\nhttps://example.com/menu?table=12&#x27; }, ORIGIN);\n  if (m.type === &#x27;qreditor:save&#x27;) saveOnYourServer(m.name, m.content);\n});\n&lt;/script&gt;</code></pre>\n        <h2>3. 専用のウィンドウで開き、自分のサーバー経由で AI を使う</h2>\n        <p><code>window.open(\"https://qr.giit.ch/ja/?embed=window\", \"qreditor-17\")</code> は、エディター全体を専用のウィンドウで開き、同じメッセージを使います。ページからは独自の AI プロンプト、自分のサイトの https アドレス、このエディターセッション用のキーも渡せます (<code>qreditor:load</code> の中の <code>ai: { label, prompt, endpoint, key }</code>、または <code>qreditor:ai</code>)。AI はその結果をそこへ送ります。エディター自身はキーを送ることも保存することもありません。</p>\n        <h2>コードを読み取り専用で表示 (ビューアー)</h2>\n        <p><code>?viewer=1</code> は、完成したコードをダウンロードとエクスポートだけ付けて表示します。変更はできず、何も保存されません。ドキュメントはリンク (<code>#b64=</code>、<code>#qr=</code>、<code>?src=</code>)、ページからの <code>qreditor:load</code>、または <code>post.php</code> への POST (フィールド <code>content</code> または <code>b64</code>、任意で <code>name</code>) から受け取ります。</p>\n        <p class=\"muted\">プロトコルの全容は <a href=\"/llms.txt\">llms.txt</a> にあります。AI に渡せば、あなたのシステム用の接続を作ってくれます。ほかの giit エディターも、それぞれの接頭辞で同じように動作します - <a href=\"https://editors.giit.ch/ja/\">editors.giit.ch</a>。</p>",
+    "crumb": "埋め込み",
+    "crumb_nav": "パンくずリスト",
+    "open": "エディターを開く"
+  }
+}

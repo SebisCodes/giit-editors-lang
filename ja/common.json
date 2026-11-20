@@ -1,0 +1,23 @@
+{
+  "footer_all": "すべての giit エディター",
+  "footer_binding": "正本（ドイツ語）：",
+  "footer_editors": "エディター",
+  "footer_legal": "法的情報",
+  "footer_license": "{license} のオープンソース",
+  "footer_llms": "AI アシスタント向けの llms.txt",
+  "footer_shls": "SHLS: {author}",
+  "footer_source": "ソースコード",
+  "source_on_github": "GitHub のソースコード",
+  "country": "スイス",
+  "imprint": "運営者情報",
+  "privacy": "プライバシーポリシー",
+  "terms": "利用規約",
+  "language": "言語",
+  "theme": {
+    "group": "カラーテーマ",
+    "light": "ライトテーマ",
+    "dark": "ダークテーマ",
+    "auto_title": "システム設定に合わせる",
+    "auto_label": "自動テーマ (システム設定)"
+  }
+}

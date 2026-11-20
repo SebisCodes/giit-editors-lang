@@ -1,0 +1,181 @@
+{
+  "title": "TOML Editörü - Ağaç, Doğrulama, Dönüştürme | giit.ch",
+  "description": "Tarayıcıda ücretsiz TOML editörü: yorumları koruyarak kod ve ağaç düzenleme, satır numaralı hatalar; JSON, YAML, CSV veya XML dönüşümü. Kayıt yok.",
+  "og_title": "TOML Editörü - Ağaç, Doğrulama, Dönüştürme | giit.ch",
+  "og_description": "Tarayıcıda ücretsiz TOML editörü: yorumları koruyarak kod ve ağaç düzenleme, satır numaralı hatalar; JSON, YAML, CSV veya XML dönüşümü. Kayıt yok.",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://toml.giit.ch/tr/#app",
+        "name": "TOML Editor",
+        "url": "https://toml.giit.ch/tr/",
+        "description": "Tarayıcıda ücretsiz TOML editörü: yorumları koruyarak kod ve ağaç düzenleme, satır numaralı hatalar; JSON, YAML, CSV veya XML dönüşümü. Kayıt yok.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Tümü (web tarayıcısı)",
+        "inLanguage": "tr",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "CHF"
+        },
+        "image": "https://toml.giit.ch/img/og.png",
+        "featureList": [
+          "Söz dizimi vurgulamalı TOML 1.0 kodu",
+          "Türler, sayılar ve her değerin yoluyla katlanabilir ağaç",
+          "Tablolar, tablo dizileri, noktalı anahtarlar ve satır içi tablolar tek veri ağacında",
+          "Tarihler ve saatler türleriyle işaretli",
+          "Anahtarları ve değerleri doğrudan ağaçta düzenleme, yorumlar ve biçim kalır",
+          "Girdi ekleme, çoğaltma, taşıma ve kaldırma; bir anahtar geçtiği her yerde yeniden adlandırılır",
+          "TOML 1.0 kadar katı, satır ve sütunlu söz dizimi hataları",
+          "JSON Schema ile denetim",
+          "Tek düzenle biçimlendirme, yorumlar kalır",
+          "JSON, YAML, CSV ve XML’e dönüştürme",
+          "Tarayıcıda çok sayıda belge saklama",
+          "Webhook ile kendi sunucunuza kaydetme veya editörü kendi sitenize gömme",
+          "Her yapay zekâ bağlantılarla editöre yazabilir"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Sebastian Grünwald"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Grünwald Innovation",
+          "url": "https://giit.ch/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Verilerim yükleniyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör tarayıcınızda çalışır ve belgelerinizi sunucumuzda değil, orada saklar. Bir belge yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - gizlilik politikasına bakın."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ağaçta düzenlerken yorumlarım korunuyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Ağaçtaki bir değişiklik koda tam o yere yazılır; yorumlar, boş satırlar ve biçimin geri kalanı olduğu gibi kalır. Geri al her değişikliği geri alır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Editör hangi TOML’u okur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TOML 1.0: tablolar, tablo dizileri, noktalı anahtarlar, satır içi tablolar, dört tür dize, ondalık, onaltılık, sekizlik ve ikilik tamsayılar, inf ve nan dahil ondalıklı sayılar, tarihler ve saatler. Python’un tomllib’inin kabul ettiğini kabul eder, geri kalan her şeyi satır ve sütunla bildirir - iki kez tanımlanmış bir anahtar veya tablo, başında sıfır olan bir sayı, var olmayan bir tarih."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Birkaç yerde yazılmış bir tablo ne olur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ağaç onu tüm anahtarlarıyla bir kez gösterir. Yeniden adlandırmak, onu belirten her başlığı ve noktalı anahtarı değiştirir. Yerinde yapılamayan bir değişiklik - örneğin dosyaya dağılmış bir tabloyu taşımak - dosyanızı yeniden yazmak yerine bir mesajla reddedilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "TOML’u JSON, YAML, CSV veya XML’e dönüştürebilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, Dönüştür sekmesinde veya Dışa aktar altında; tarihler ve saatler metne dönüşür. Açtığınız JSON, YAML, CSV ve XML dosyaları TOML’a dönüştürülür. TOML’da null yoktur, bu yüzden boş değerler bir notla atlanır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Belgelerim nereye kaydediliyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yalnızca tarayıcınıza. Belgeleri açmak, yeniden adlandırmak, çoğaltmak, indirmek veya silmek için sol üstteki klasör düğmesine (Belgelerim) tıklayın. Tarayıcınızın site verilerini temizlemek onları siler; bu yüzden saklamak istediklerinizi indirin - veya editörün onları kendi sunucunuza göndermesine izin verin (“Sunucuya kaydet”)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bir yapay zekâ TOML Editöründe yazabilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. \"Yapay Zekâ Asistanı\"na, ardından \"İstemi kopyala\"ya tıklayın, istemi yapay zekânıza yapıştırın ve neyi değiştirmesi gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, veriler editörünüzde görünür. \"Geri al\" her değişikliği geri alır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "TOML Editörü ücretli mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Editör ücretsizdir; reklam ve kayıt yoktur."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "page_text": "<section class=\"text-section intro\">\n        <h2>TOML’u çevrimiçi düzenleyin, kod ve ağaç olarak</h2>\n        <p>TOML editörü TOML kodunuzu ve verileri ağaç olarak yan yana gösterir: <code>pyproject.toml</code>, <code>Cargo.toml</code>, Hugo’nun, Netlify’ın veya kendi uygulamanızın ayarları. Tabloları ve dizileri katlayın, her değerin türünü ve girdi sayısını görün, anahtarları ve değerleri doğrudan ağaçta değiştirin - değişiklik koda tam o yere yazılır, yorumlarınız ve biçiminiz korunur. Hatalar satır ve sütunla listelenir, iki kez tanımlanmış bir anahtardan var olmayan bir tarihe kadar; veriler bir JSON Schema ile denetlenebilir ve JSON, YAML, CSV veya XML’e dönüştürülebilir.</p>\n        <p>Her şey tarayıcınızda çalışır. Belgeleriniz sunucumuzda değil, orada saklanır; kayıt ve reklam yoktur.</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Editörün yapabilecekleri</h2>\n        <div class=\"tiles\">\n            <div class=\"tile\"><h3>Kod ve ağaç</h3><p>Solda vurgulanmış TOML 1.0, ortada katlanabilir ağaç. Ağaçta bir öğeye tıklamak kodda o öğeye götürür, koddaki imleç ağaçta karşılık gelen değeri işaretler.</p></div>\n            <div class=\"tile\"><h3>Ağaçta düzenleyin, yorumları koruyun</h3><p>Anahtarları ve değerleri değiştirin, girdi ekleyin, çoğaltın, taşıyın ve kaldırın, bir türü değiştirin - her biri kodda küçük bir düzenleme olarak; böylece yorumlar ve boş satırlar yerinde kalır.</p></div>\n            <div class=\"tile\"><h3>Bulabileceğiniz hatalar</h3><p>İki kez tanımlanmış anahtarlar ve tablolar, tırnaksız metin, başında sıfır olan sayılar, var olmayan tarihler ve JSON Schema’nıza uymayan değerler, her biri satırı ve sütunuyla.</p></div>\n            <div class=\"tile\"><h3>Farklı yerlerde tanımlanan tablolar</h3><p><code>[server]</code> gibi tablolar, <code>[[servers]]</code> gibi tablo dizileri, <code>server.port</code> gibi noktalı anahtarlar ve <code>{ x = 1 }</code> gibi satır içi tablolar tek bir ağaç oluşturur. Yeniden adlandırılan bir anahtar, onu belirten her başlıkta değişir.</p></div>\n            <div class=\"tile\"><h3>Dönüştürme</h3><p>Tek bir düzenle biçimlendirin ya da JSON, YAML, CSV (tablo dizisi bir tablodur) ve XML’e dönüştürün. JSON, YAML, CSV ve XML dosyaları TOML olarak açılır.</p></div>\n            <div class=\"tile\"><h3>Çok sayıda belge</h3><p>Tarayıcınızda kendi geri alma geçmişleriyle istediğiniz sayıda belge saklayın ve hepsini bir ZIP olarak indirin.</p></div>\n        </div>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Nasıl çalışır</h2>\n        <ol class=\"steps\">\n            <li><b>Başlayın</b> - “Yeni” altında bir şablon seçin (pyproject.toml, Cargo.toml, bir Hugo sitesi, Netlify), bir .toml dosyası açın veya TOML yapıştırın.</li>\n            <li><b>Düzenleyin</b> - kodda veya ağaçta; ikisi de her zaman aynı verileri gösterir.</li>\n            <li><b>Denetleyin ve dışa aktarın</b> - listelenen sorunları düzeltin, bir şema seçin ve TOML, JSON, YAML, CSV veya metin indirin.</li>\n        </ol>\n    </section>\n\n    <section class=\"text-section\" id=\"embed\">\n        <h2>Editörü kendi web sitenizde kullanın</h2>\n        <p>Editörü bir iframe ile veya kendi penceresinde kendi web sitenize yerleştirin. Sayfanız belgeyi editöre verir, her değişikliği ve her kaydı geri alır ve bir yapay zekânın sonuçlarını sunucunuza göndermesini sağlayabilir. Kayıt yok, anahtar yok.</p>\n        <p><a href=\"/tr/embed/\"><b>Editörü web sitenize yerleştirin</b></a> →</p>\n    </section>\n\n    <section class=\"text-section\">\n        <h2>Sıkça sorulan sorular</h2>\n        <div class=\"questions\">\n            <details><summary>Verilerim yükleniyor mu?</summary><p>Hayır. Editör tarayıcınızda çalışır ve belgelerinizi sunucumuzda değil, orada saklar. Bir belge yalnızca kendi sunucunuza bir webhook kurarsanız, editörü yerleştiren bir web sitesi onu kendi sunucusuna kaydederse veya başka bir web sitesi onu burada bir formla (post.php) açarsa bir sunucuya gider - sunucumuz onu saklamadan doğrudan tarayıcınıza iletir. Her web sitesinde olduğu gibi sunucu her ziyareti günlüğe kaydeder ve sayfa görüntülemelerini anonim olarak sayarız - <a href=\"/privacy.html\">gizlilik politikasına</a> bakın.</p></details>\n            <details><summary>Ağaçta düzenlerken yorumlarım korunuyor mu?</summary><p>Evet. Ağaçtaki bir değişiklik koda tam o yere yazılır; yorumlar, boş satırlar ve biçimin geri kalanı olduğu gibi kalır. Geri al her değişikliği geri alır.</p></details>\n            <details><summary>Editör hangi TOML’u okur?</summary><p>TOML 1.0: tablolar, tablo dizileri, noktalı anahtarlar, satır içi tablolar, dört tür dize, ondalık, onaltılık, sekizlik ve ikilik tamsayılar, <code>inf</code> ve <code>nan</code> dahil ondalıklı sayılar, tarihler ve saatler. Python’un tomllib’inin kabul ettiğini kabul eder, geri kalan her şeyi satır ve sütunla bildirir - iki kez tanımlanmış bir anahtar veya tablo, başında sıfır olan bir sayı, var olmayan bir tarih.</p></details>\n            <details><summary>Birkaç yerde yazılmış bir tablo ne olur?</summary><p>Ağaç onu tüm anahtarlarıyla bir kez gösterir. Yeniden adlandırmak, onu belirten her başlığı ve noktalı anahtarı değiştirir. Yerinde yapılamayan bir değişiklik - örneğin dosyaya dağılmış bir tabloyu taşımak - dosyanızı yeniden yazmak yerine bir mesajla reddedilir.</p></details>\n            <details><summary>TOML’u JSON, YAML, CSV veya XML’e dönüştürebilir mi?</summary><p>Evet, <b>Dönüştür</b> sekmesinde veya Dışa aktar altında; tarihler ve saatler metne dönüşür. Açtığınız JSON, YAML, CSV ve XML dosyaları TOML’a dönüştürülür. TOML’da null yoktur, bu yüzden boş değerler bir notla atlanır.</p></details>\n            <details><summary>Belgelerim nereye kaydediliyor?</summary><p>Yalnızca tarayıcınıza. Belgeleri açmak, yeniden adlandırmak, çoğaltmak, indirmek veya silmek için sol üstteki klasör düğmesine (Belgelerim) tıklayın. Tarayıcınızın site verilerini temizlemek onları siler; bu yüzden saklamak istediklerinizi indirin - veya editörün onları kendi sunucunuza göndermesine izin verin (“Sunucuya kaydet”).</p></details>\n            <details><summary>Bir yapay zekâ TOML Editöründe yazabilir mi?</summary><p>Evet, her yapay zekâ - ChatGPT, Claude, Gemini, Copilot veya kodlama aracınızdaki yapay zekâ. &quot;Yapay Zekâ Asistanı&quot;na, ardından &quot;İstemi kopyala&quot;ya tıklayın, istemi yapay zekânıza yapıştırın ve neyi değiştirmesi gerektiğini söyleyin. Yapay zekâ bir bağlantıyla yanıt verir; ona tıklayın, veriler editörünüzde görünür. &quot;Geri al&quot; her değişikliği geri alır.</p></details>\n            <details><summary>TOML Editörü ücretli mi?</summary><p>Hayır. Editör ücretsizdir; reklam ve kayıt yoktur.</p></details>\n        </div>\n    </section>",
+  "name": "TOML Editörü",
+  "embed": {
+    "title": "TOML Editörünü Web Sitenize Yerleştirin | giit.ch",
+    "description": "TOML Editörünü iframe ile sitenize yerleştirin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+    "og_title": "TOML Editörünü web sitenize yerleştirin",
+    "og_description": "TOML Editörünü iframe ile sitenize yerleştirin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://toml.giit.ch/tr/embed/#article",
+          "headline": "TOML Editörünü web sitenize yerleştirin",
+          "description": "TOML Editörünü iframe ile sitenize yerleştirin. Belgeleri postMessage veya webhook ile aktarın ve yapay zekânızı bağlayın. Ücretsiz.",
+          "inLanguage": "tr",
+          "url": "https://toml.giit.ch/tr/embed/",
+          "mainEntityOfPage": "https://toml.giit.ch/tr/embed/",
+          "image": "https://toml.giit.ch/img/og.png",
+          "about": {
+            "@type": "WebApplication",
+            "name": "TOML Editörü",
+            "url": "https://toml.giit.ch/tr/"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sebastian Grünwald"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Grünwald Innovation",
+            "url": "https://giit.ch/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "TOML Editörü",
+              "item": "https://toml.giit.ch/tr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Yerleştirme",
+              "item": "https://toml.giit.ch/tr/embed/"
+            }
+          ]
+        }
+      ]
+    },
+    "h1": "TOML Editörünü web sitenize yerleştirin",
+    "intro": "<p>Geliştiriciler için: TOML Editörünü kendi sayfanıza nasıl koyacağınız - bir iframe içinde, kendi penceresinde veya salt okunur bir görüntüleyici olarak - ve belgelerin, kayıtların ve yapay zekâ sonuçlarının editör ile sunucunuz arasında nasıl taşındığı. Bizde kayıt olmanız veya bizden anahtar almanız gerekmez.</p>",
+    "body": "<p>Her https sayfası (ve localhost) editörü bir <code>&lt;iframe&gt;</code> ve <code>?embed=1</code> ile yerleştirebilir - kayıt yok, anahtar yok. Yerleştirildiğinde editör sayfa metnini gizler ve bir Kaydet düğmesi gösterir. Belgeyi içeri almanın ve dışarı vermenin dört yolu vardır.</p>\n\n        <h2>1. Bir bağlantıdan dosya açın, sunucunuza kaydedin</h2>\n        <p><code>src=</code> bir dosya açar (sunucunuz CORS’a izin vermelidir), <code>webhook=</code> ise “Kaydet”in (Ctrl+S) belgeyi o adrese göndermesini sağlar. Her değişiklikten sonra kaydetmek için <code>&amp;auto</code> ekleyin.</p>\n        <pre class=\"example\"><code>&lt;iframe src=&quot;https://toml.giit.ch/tr/?embed=1&amp;src=https://your-site.com/config/app.toml&amp;webhook=https://your-site.com/save.php&quot;\n        allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;</code></pre>\n        <p>Webhook, JSON içeren bir POST isteği alır: <code>{ editor: \"toml\", event: \"save\", id, name, content, updated }</code>. Bağlantıda belirteç bulunmaz; aksi hâlde sunucu günlüklerine ve tarayıcı geçmişine kaydedilirdi. Bu nedenle adreste belirtilen webhook, localhost veya intranetiniz gibi belirteç gerektirmeyen bir kayıt adresi için uygundur. Herkese açık bir sunucu için webhook’u bir belirteçle <code>tomleditor:load</code> içinde (<code>hook: { url, token }</code>) aktarın ve aşağıdaki küçük PHP betiğinin yaptığı gibi belirteci doğrulayın:</p>\n        <pre class=\"example\"><code>&lt;?php\nheader(&#x27;Access-Control-Allow-Origin: https://toml.giit.ch&#x27;);\nheader(&#x27;Access-Control-Allow-Headers: Content-Type, Authorization&#x27;);\nheader(&#x27;Access-Control-Allow-Methods: POST, OPTIONS&#x27;);\nif ($_SERVER[&#x27;REQUEST_METHOD&#x27;] === &#x27;OPTIONS&#x27;) exit;\nif (($_SERVER[&#x27;HTTP_AUTHORIZATION&#x27;] ?? &#x27;&#x27;) !== &#x27;Bearer SECRET&#x27;) { http_response_code(403); exit; }\n$d = json_decode(file_get_contents(&#x27;php://input&#x27;), true);\n$name = preg_replace(&#x27;/[^\\w\\- ]/u&#x27;, &#x27;_&#x27;, $d[&#x27;name&#x27;]);\nfile_put_contents(__DIR__ . &quot;/config/$name.toml&quot;, $d[&#x27;content&#x27;]);\necho &#x27;{&quot;ok&quot;:true}&#x27;;</code></pre>\n\n        <h2>2. Belgeyi sayfanız tutar (postMessage)</h2>\n        <p>Editör <code>tomleditor:ready</code> der, sayfanız <code>tomleditor:load</code> ile yanıt verir, editör <code>tomleditor:loaded</code>, gerçek düzenlemelerde <code>tomleditor:change</code> ve kullanıcı kaydettiğinde <code>tomleditor:save</code> bildirir. Sayfanız <code>tomleditor:get</code> (geçerli durum) veya <code>tomleditor:save</code> (Kaydet’e basma) gönderebilir. Kaydetme böylece kendi oturum açma ve oturum sisteminiz üzerinden yapılır.</p>\n        <pre class=\"example\"><code>&lt;iframe id=&quot;ed&quot; src=&quot;https://toml.giit.ch/tr/?embed=1&quot; allow=&quot;clipboard-write&quot; style=&quot;width:100%;height:800px;border:0&quot;&gt;&lt;/iframe&gt;\n&lt;script&gt;\nconst ed = document.getElementById(&#x27;ed&#x27;);\nconst ORIGIN = &#x27;https://toml.giit.ch&#x27;;\n\naddEventListener(&#x27;message&#x27;, async e =&gt; {\n  if (e.source !== ed.contentWindow || e.origin !== ORIGIN) return;\n  const m = e.data;\n  if (m.type === &#x27;tomleditor:ready&#x27;) {              // editör hazır: belgeyi ona verin\n    ed.contentWindow.postMessage({\n      type: &#x27;tomleditor:load&#x27;,\n      name: &#x27;Settings&#x27;,\n      content: await (await fetch(&#x27;/config/app.toml&#x27;)).text()\n    }, ORIGIN);\n  }\n  if (m.type === &#x27;tomleditor:change&#x27;) document.title = &#x27;● not saved&#x27;;   // gerçek bir düzenleme\n  if (m.type === &#x27;tomleditor:save&#x27;) {               // kullanıcı &quot;Kaydet&quot;e tıkladı\n    await fetch(&#x27;/api/save&#x27;, { method: &#x27;POST&#x27;, headers: { &#x27;Content-Type&#x27;: &#x27;application/json&#x27; },\n      body: JSON.stringify({ name: m.name, content: m.content }) });\n    document.title = &#x27;Saved&#x27;;\n  }\n});\n\n// Kendi sayfanızda bir kaydet düğmesi: yanıt tomleditor:save olarak gelir\nfunction saveNow() { ed.contentWindow.postMessage({ type: &#x27;tomleditor:get&#x27; }, ORIGIN); }\n&lt;/script&gt;</code></pre>\n        <p><b>Sayfanızın içinde Yapay Zekâ Asistanı:</b> çerçeve içinde de çalışır. iframe üzerinde <code>allow=\"clipboard-write\"</code> ile “İstemi kopyala” panoyu doğrudan kullanır (aksi hâlde editör eski kopyalama komutuna geri döner veya istemi elle kopyalamanız için gösterir). Yapay zekânın gönderdiği bir bağlantı başka bir web sitesinin içindeki editöre ulaşamaz. Bu yüzden editör, yapay zekâdan ve kullanıcıdan bunun yerine yapay zekânın yanıtının tamamını editöre yapıştırmasını ya da editörü kendi penceresinde açmasını ister.</p>\n        <h2>3. Kendi penceresinde</h2>\n        <p><code>window.open(\"https://toml.giit.ch/tr/?embed=window\", \"tomleditor-17\")</code> tam editörü kendi penceresinde açar ve aynı mesajlarla <code>window.opener</code> üzerinden iletişim kurar. Yapay zekâdan gelen bağlantılar ona orada ulaşır. <code>tomleditor:load</code> ayrıca <code>context: { host, title, rules }</code> taşıyabilir - yapay zekâ istemi bu durumda belgenin nereye ait olduğunu söyler ve kurallarınıza uyar - ve <code>hook: { url, token }</code>, yalnızca bu belge için olan ve asla saklanmayan bir webhook. Kaydedilmemiş değişikliklerle pencereyi kapatmak <code>tomleditor:closing</code> gönderir.</p>\n        <h2>4. Kendi sunucunuz üzerinden yapay zekâ</h2>\n        <p>Editöre kendi isteminizi, sitenizde bir adresi ve bu editör oturumu için bir anahtarı verin. Yapay zekâ iletişim kutusu bu durumda sitenize “Bağlı” olduğunu, yapay zekâya ne söylediğinizi ve <b>geçerli belgeyi değiştir</b> veya <b>yeni bir belge oluştur</b> seçimini gösterir; <b>İstemi kopyala</b> hepsini bir araya getirir. Yapay zekâ sonucunu anahtarla sunucunuza gönderir ve sayfanız onu editörde açar - yeni bir belge ayrı açılır ve kullanıcının tarayıcısında kalır. Editör oturumu başına bir anahtar: editör açık olduğu sürece geçerli kalır ve editör yalnızca anahtarı yokken <code>tomleditor:key-request</code> ile ister. Editör anahtarı asla kendisi göndermez ve asla saklamaz; adres kendi alan adınızda veya onun bir alt alan adında https olmalıdır.</p>\n        <pre class=\"example\"><code>const key = async () =&gt; (await fetch(&#x27;/api/ai-key.php?doc=17&#x27;)).json();   // editör oturumu başına bir anahtar\nconst k = await key();\ned.contentWindow.postMessage({ type: &#x27;tomleditor:load&#x27;, name: &#x27;Settings&#x27;, content, ai: {\n  label: &#x27;My Site&#x27;, prompt: &#x27;Keep every key and every comment.&#x27;,\n  endpoint: &#x27;https://your-site.com/api/ai-result.php&#x27;, key: k.key } }, ORIGIN);\n// tomleditor:loaded içindeki id'yi hatırlayın ve başka id'li change/save/closing mesajlarını yok sayın\n// yalnızca editörün anahtarı yokken:\nif (m.type === &#x27;tomleditor:key-request&#x27;) { const k = await key(); ed.contentWindow.postMessage({ type: &#x27;tomleditor:ai&#x27;, key: k.key }, ORIGIN); }\n// editör açıkken sunucunuza her dakika bildirin; editörü veya sayfayı kapatmak anahtarı geçersiz kılar\nsetInterval(() =&gt; fetch(&#x27;/api/ai-key.php?alive=&#x27; + k.key.slice(0, 8)), 60000);\n// sunucunuzda bir sonuç var (polling, SSE …): target &quot;current&quot; veya &quot;new&quot; olur\ned.contentWindow.postMessage({ type: &#x27;tomleditor:load&#x27;, name: &#x27;Settings&#x27;, content: draft, from: &#x27;ai&#x27;, target }, ORIGIN);</code></pre>\n        <p>Anahtarları en az 128 rastgele bitle oluşturun, yalnızca özetlerini (hash) saklayın, her birini oturum açmış kullanıcıya, belgeye ve bu editör oturumuna bağlayın, oturum başına bir tane oluşturun, yalnızca sayfanız oturumu açık bildirdiği sürece geçerli tutun ve editör veya sayfa kapandığında geçersiz kılın.</p>\n        <p class=\"muted\">Protokolün tamamı <a href=\"/llms.txt\">llms.txt</a> dosyasındadır - bir yapay zekâya verin, sisteminiz için bağlantıyı o kursun. Diğer giit editörleri de kendi önekleriyle aynı şekilde çalışır - <a href=\"https://editors.giit.ch/tr/\">editors.giit.ch</a>.</p>\n        <h2>Belgeyi salt okunur göstermek (görüntüleyici)</h2>\n        <p><code>?viewer=1</code> yalnızca bitmiş belgeyi gösterir: kod yok, araç yok, hiçbir şey değiştirilemez ve tarayıcıda hiçbir şey saklanmaz. Belge bir bağlantıdan (<code>#b64=</code>, <code>?src=</code>), sayfanızdan <code>tomleditor:load</code> ile veya normal bir form olarak POST ile <code>post.php</code> adresine gelir: metin olarak <code>content</code> ya da base64 olarak <code>b64</code> alanı, isteğe bağlı <code>name</code>, en fazla 20 MB metin.</p>\n        <pre class=\"example\"><code>&lt;form method=&quot;post&quot; action=&quot;https://toml.giit.ch/post.php?viewer=1&quot; target=&quot;_blank&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;tr&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Report&quot;&gt;\n  &lt;input type=&quot;hidden&quot; name=&quot;b64&quot; value=&quot;…&quot;&gt;\n  &lt;button&gt;Open&lt;/button&gt;\n&lt;/form&gt;</code></pre>\n        <p><code>viewer=1</code> olmadan belge normal editörde açılır. Her iki durumda da yalnızca bellekte kalır: sunucuda saklanmaz ve “Belgelerim” bölümüne girmez. Doğrudan açıldığında görüntüleyici içeriğin üçüncü taraftan geldiğini belirtir.</p>",
+    "crumb": "Yerleştirme",
+    "crumb_nav": "Sayfa yolu",
+    "open": "Editörü aç"
+  }
+}
