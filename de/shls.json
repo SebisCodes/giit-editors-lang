@@ -1,8 +1,8 @@
 {
-  "title": "SHLS-Editor online - umwandeln und Tokens zählen | giit.ch",
-  "description": "Kostenloser SHLS-Editor im Browser. SHLS ist ein kompaktes Datenformat für KI: bearbeiten, von und nach JSON, YAML oder CSV umwandeln, Tokens zählen.",
-  "og_title": "SHLS-Editor online - umwandeln und Tokens zählen | giit.ch",
-  "og_description": "Kostenloser SHLS-Editor im Browser. SHLS ist ein kompaktes Datenformat für KI: bearbeiten, von und nach JSON, YAML oder CSV umwandeln, Tokens zählen.",
+  "title": "Hierarchische Listen bearbeiten - SHLS-Editor | giit.ch",
+  "description": "Verschachtelte Listen als Text und Baum bearbeiten. SHLS im Browser ausprobieren und in andere Datenformate umwandeln. Kostenlos, ohne Anmeldung.",
+  "og_title": "Hierarchische Listen bearbeiten - SHLS-Editor | giit.ch",
+  "og_description": "Verschachtelte Listen als Text und Baum bearbeiten. SHLS im Browser ausprobieren und in andere Datenformate umwandeln. Kostenlos, ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://shls.giit.ch/de/#app",
         "name": "SHLS Editor",
         "url": "https://shls.giit.ch/de/",
-        "description": "Kostenloser SHLS-Editor im Browser. SHLS ist ein kompaktes Datenformat für KI: bearbeiten, von und nach JSON, YAML oder CSV umwandeln, Tokens zählen.",
+        "description": "Verschachtelte Listen als Text und Baum bearbeiten. SHLS im Browser ausprobieren und in andere Datenformate umwandeln. Kostenlos, ohne Anmeldung.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

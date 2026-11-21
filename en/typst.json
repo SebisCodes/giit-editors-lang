@@ -1,8 +1,8 @@
 {
-  "title": "Free Typst Editor Online with the Real Compiler | giit.ch",
-  "description": "Free Typst editor with the real Typst compiler in your browser: see the pages as you type, click text to edit it, export to PDF, PNG or SVG. No sign-up.",
-  "og_title": "Typst Editor Online - Live Preview, Free and Private",
-  "og_description": "Free Typst editor with the real Typst compiler in your browser: see the pages as you type, click text to edit it, export to PDF, PNG or SVG. No sign-up.",
+  "title": "Typst Editor Online - Compile & Export PDF | giit.ch",
+  "description": "Write Typst and see compiled pages as you type. The real Typst compiler runs in your browser. Export PDF, PNG or SVG for free, without signing up.",
+  "og_title": "Typst Editor Online - Compile & Export PDF | giit.ch",
+  "og_description": "Write Typst and see compiled pages as you type. The real Typst compiler runs in your browser. Export PDF, PNG or SVG for free, without signing up.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://typst.giit.ch/#app",
         "name": "Typst Editor",
         "url": "https://typst.giit.ch/",
-        "description": "Free Typst editor with the real Typst compiler in your browser: see the pages as you type, click text to edit it, export to PDF, PNG or SVG. No sign-up.",
+        "description": "Write Typst and see compiled pages as you type. The real Typst compiler runs in your browser. Export PDF, PNG or SVG for free, without signing up.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

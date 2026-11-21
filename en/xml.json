@@ -1,8 +1,8 @@
 {
-  "title": "Free XML Editor Online - Live Tree, XPath, Convert | giit.ch",
-  "description": "Free XML editor in your browser with a live tree: find errors by line, run XPath queries, edit in the tree, convert to JSON or YAML. No sign-up, no ads.",
-  "og_title": "XML Editor Online - Live Tree, XPath, Free and Private",
-  "og_description": "Edit XML with a live element tree, XPath queries and clear errors. Format, minify, convert to JSON or YAML. Free, no sign-up, runs in your browser.",
+  "title": "XML Editor Online - Tree View, Free | giit.ch",
+  "description": "Open XML, edit it as a tree and find errors by line. Format your document and save it as XML. Free in your browser, with no sign-up.",
+  "og_title": "XML Editor Online - Tree View, Free | giit.ch",
+  "og_description": "Open XML, edit it as a tree and find errors by line. Format your document and save it as XML. Free in your browser, with no sign-up.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://xml.giit.ch/#app",
         "name": "XML Editor",
         "url": "https://xml.giit.ch/",
-        "description": "Free XML editor in your browser with a live tree: find errors by line, run XPath queries, edit in the tree, convert to JSON or YAML. No sign-up, no ads.",
+        "description": "Open XML, edit it as a tree and find errors by line. Format your document and save it as XML. Free in your browser, with no sign-up.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

@@ -1,8 +1,8 @@
 {
-  "title": "Markdown-Editor mit Live-Vorschau, kostenlos | giit.ch",
-  "description": "Kostenloser Markdown-Editor im Browser: Tabellen, Aufgabenlisten, Fussnoten und Formeln mit Live-Vorschau, Export als HTML, PDF oder Text. Ohne Anmeldung.",
-  "og_title": "Markdown-Editor online - Live-Vorschau, kostenlos und privat",
-  "og_description": "Kostenloser Markdown-Editor im Browser: Tabellen, Aufgabenlisten, Fussnoten und Formeln mit Live-Vorschau, Export als HTML, PDF oder Text. Ohne Anmeldung.",
+  "title": "Markdown-Editor mit Vorschau - ohne Anmeldung | giit.ch",
+  "description": "Markdown und README-Dateien schreiben und das Ergebnis direkt sehen. Bilder einfügen, als HTML oder PDF exportieren. Kostenlos, ohne Anmeldung.",
+  "og_title": "Markdown-Editor mit Vorschau - ohne Anmeldung | giit.ch",
+  "og_description": "Markdown und README-Dateien schreiben und das Ergebnis direkt sehen. Bilder einfügen, als HTML oder PDF exportieren. Kostenlos, ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://md.giit.ch/de/#app",
         "name": "Markdown Editor",
         "url": "https://md.giit.ch/de/",
-        "description": "Kostenloser Markdown-Editor im Browser: Tabellen, Aufgabenlisten, Fussnoten und Formeln mit Live-Vorschau, Export als HTML, PDF oder Text. Ohne Anmeldung.",
+        "description": "Markdown und README-Dateien schreiben und das Ergebnis direkt sehen. Bilder einfügen, als HTML oder PDF exportieren. Kostenlos, ohne Anmeldung.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

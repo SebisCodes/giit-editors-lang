@@ -1,8 +1,8 @@
 {
-  "title": "Free TOML Editor Online - Tree, Validate, Convert | giit.ch",
-  "description": "Free TOML editor in your browser: edit TOML as code and as a tree with comments kept, find errors by line, convert to JSON, YAML, CSV or XML. No sign-up.",
-  "og_title": "Free TOML Editor Online - Tree, Validate, Convert | giit.ch",
-  "og_description": "Free TOML editor in your browser: edit TOML as code and as a tree with comments kept, find errors by line, convert to JSON, YAML, CSV or XML. No sign-up.",
+  "title": "TOML Editor Online - Validate & Convert | giit.ch",
+  "description": "Paste a TOML configuration, edit it as a tree and check for errors. Convert to JSON or YAML. Free in your browser, with no sign-up.",
+  "og_title": "TOML Editor Online - Validate & Convert | giit.ch",
+  "og_description": "Paste a TOML configuration, edit it as a tree and check for errors. Convert to JSON or YAML. Free in your browser, with no sign-up.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://toml.giit.ch/#app",
         "name": "TOML Editor",
         "url": "https://toml.giit.ch/",
-        "description": "Free TOML editor in your browser: edit TOML as code and as a tree with comments kept, find errors by line, convert to JSON, YAML, CSV or XML. No sign-up.",
+        "description": "Paste a TOML configuration, edit it as a tree and check for errors. Convert to JSON or YAML. Free in your browser, with no sign-up.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

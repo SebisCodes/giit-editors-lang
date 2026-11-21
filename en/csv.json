@@ -1,8 +1,8 @@
 {
-  "title": "Free CSV Editor Online - Edit CSV as a Table | giit.ch",
-  "description": "Free CSV editor in your browser: edit CSV as a table and as text, sort, filter, fix broken rows, export to Excel (XLSX) or JSON. No sign-up, no ads.",
-  "og_title": "Free CSV Editor Online - Edit CSV as a Table | giit.ch",
-  "og_description": "Edit CSV files like a spreadsheet and see the raw text next to it. Export to XLSX, JSON, Markdown or HTML. Free, no sign-up, runs in your browser.",
+  "title": "CSV Editor Online - Edit a Table for Free | giit.ch",
+  "description": "Open a CSV as a table. Edit cells, sort and filter rows, then export CSV, Excel or JSON. Free in your browser, without signing up or installing software.",
+  "og_title": "CSV Editor Online - Edit a Table for Free | giit.ch",
+  "og_description": "Open a CSV as a table. Edit cells, sort and filter rows, then export CSV, Excel or JSON. Free in your browser, without signing up or installing software.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://csv.giit.ch/#app",
         "name": "CSV Editor",
         "url": "https://csv.giit.ch/",
-        "description": "Free CSV editor in your browser: edit CSV as a table and as text, sort, filter, fix broken rows, export to Excel (XLSX) or JSON. No sign-up, no ads.",
+        "description": "Open a CSV as a table. Edit cells, sort and filter rows, then export CSV, Excel or JSON. Free in your browser, without signing up or installing software.",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

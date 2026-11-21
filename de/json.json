@@ -1,8 +1,8 @@
 {
-  "title": "JSON-Editor online - Baum, Prüfung, Umwandlung | giit.ch",
-  "description": "Kostenloser JSON-Editor im Browser: JSON als Code und Baum bearbeiten, Fehler mit Zeile finden, mit JSON Schema prüfen, in YAML, CSV oder XML umwandeln.",
-  "og_title": "JSON-Editor online - Baum, Prüfung, Umwandlung | giit.ch",
-  "og_description": "Kostenloser JSON-Editor im Browser: JSON als Code und Baum bearbeiten, Fehler mit Zeile finden, mit JSON Schema prüfen, in YAML, CSV oder XML umwandeln.",
+  "title": "JSON online bearbeiten - kostenlos & privat | giit.ch",
+  "description": "JSON einfügen, im Baum bearbeiten und Fehler mit Zeile finden. Mit Schema prüfen oder in YAML, CSV und XML umwandeln. Kostenlos, ohne Anmeldung.",
+  "og_title": "JSON online bearbeiten - kostenlos & privat | giit.ch",
+  "og_description": "JSON einfügen, im Baum bearbeiten und Fehler mit Zeile finden. Mit Schema prüfen oder in YAML, CSV und XML umwandeln. Kostenlos, ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://json.giit.ch/de/#app",
         "name": "JSON Editor",
         "url": "https://json.giit.ch/de/",
-        "description": "Kostenloser JSON-Editor im Browser: JSON als Code und Baum bearbeiten, Fehler mit Zeile finden, mit JSON Schema prüfen, in YAML, CSV oder XML umwandeln.",
+        "description": "JSON einfügen, im Baum bearbeiten und Fehler mit Zeile finden. Mit Schema prüfen oder in YAML, CSV und XML umwandeln. Kostenlos, ohne Anmeldung.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

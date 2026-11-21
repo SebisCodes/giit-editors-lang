@@ -1,8 +1,8 @@
 {
-  "title": "XML-Editor online - Live-Baum, XPath, Umwandlung | giit.ch",
-  "description": "Kostenloser XML-Editor im Browser mit Live-Baum: Fehler mit Zeile finden, XPath-Abfragen, im Baum bearbeiten, in JSON oder YAML umwandeln. Ohne Anmeldung.",
-  "og_title": "XML-Editor online - Live-Baum, XPath, kostenlos und privat",
-  "og_description": "Kostenloser XML-Editor im Browser mit Live-Baum: Fehler mit Zeile finden, XPath-Abfragen, im Baum bearbeiten, in JSON oder YAML umwandeln. Ohne Anmeldung.",
+  "title": "XML-Editor online - Baumansicht & Prüfung | giit.ch",
+  "description": "XML öffnen, im Baum bearbeiten und Fehler mit Zeile finden. Formatieren und als XML speichern. Kostenlos im Browser und ohne Anmeldung.",
+  "og_title": "XML-Editor online - Baumansicht & Prüfung | giit.ch",
+  "og_description": "XML öffnen, im Baum bearbeiten und Fehler mit Zeile finden. Formatieren und als XML speichern. Kostenlos im Browser und ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://xml.giit.ch/de/#app",
         "name": "XML Editor",
         "url": "https://xml.giit.ch/de/",
-        "description": "Kostenloser XML-Editor im Browser mit Live-Baum: Fehler mit Zeile finden, XPath-Abfragen, im Baum bearbeiten, in JSON oder YAML umwandeln. Ohne Anmeldung.",
+        "description": "XML öffnen, im Baum bearbeiten und Fehler mit Zeile finden. Formatieren und als XML speichern. Kostenlos im Browser und ohne Anmeldung.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

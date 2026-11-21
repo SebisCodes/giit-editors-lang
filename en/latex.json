@@ -1,8 +1,8 @@
 {
-  "title": "Free LaTeX Editor Online with a Live Preview | giit.ch",
-  "description": "Free LaTeX editor in your browser: see the typeset pages as you type, click to jump to the code, export to PDF, PNG or HTML. No sign-up, no ads.",
-  "og_title": "LaTeX Editor Online - Live Preview, Free and Private",
-  "og_description": "Write LaTeX and see the typeset pages as you type. Export to PDF, PNG or HTML. Free, no sign-up, runs in your browser.",
+  "title": "LaTeX Editor Online - Preview, No Install | giit.ch",
+  "description": "Write LaTeX and see typeset pages as you type. Work with formulas, tables and images, then export PDF. Free, no installation or sign-up needed.",
+  "og_title": "LaTeX Editor Online - Preview, No Install | giit.ch",
+  "og_description": "Write LaTeX and see typeset pages as you type. Work with formulas, tables and images, then export PDF. Free, no installation or sign-up needed.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://latex.giit.ch/#app",
         "name": "LaTeX Editor",
         "url": "https://latex.giit.ch/",
-        "description": "Free LaTeX editor in your browser: see the typeset pages as you type, click to jump to the code, export to PDF, PNG or HTML. No sign-up, no ads.",
+        "description": "Write LaTeX and see typeset pages as you type. Work with formulas, tables and images, then export PDF. Free, no installation or sign-up needed.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

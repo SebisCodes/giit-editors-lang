@@ -1,8 +1,8 @@
 {
-  "title": "HTML-Editor online mit Live-Vorschau, kostenlos | giit.ch",
-  "description": "Kostenloser HTML-Editor im Browser: HTML und CSS schreiben, die Seite beim Tippen sehen, Text in der Vorschau ändern, Export als HTML, ZIP oder PDF.",
-  "og_title": "HTML-Editor online - Live-Vorschau, kostenlos und privat",
-  "og_description": "HTML und CSS schreiben und die Seite beim Tippen sehen. Export als HTML, ZIP oder PDF. Kostenlos, ohne Anmeldung, läuft im Browser.",
+  "title": "HTML-Editor mit Live-Vorschau - kostenlos | giit.ch",
+  "description": "HTML und CSS einfügen und das Ergebnis direkt sehen. Text in der Vorschau ändern, als HTML, ZIP oder PDF exportieren. Kostenlos und ohne Anmeldung.",
+  "og_title": "HTML-Editor mit Live-Vorschau - kostenlos | giit.ch",
+  "og_description": "HTML und CSS einfügen und das Ergebnis direkt sehen. Text in der Vorschau ändern, als HTML, ZIP oder PDF exportieren. Kostenlos und ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://html.giit.ch/de/#app",
         "name": "HTML Editor",
         "url": "https://html.giit.ch/de/",
-        "description": "Kostenloser HTML-Editor im Browser: HTML und CSS schreiben, die Seite beim Tippen sehen, Text in der Vorschau ändern, Export als HTML, ZIP oder PDF.",
+        "description": "HTML und CSS einfügen und das Ergebnis direkt sehen. Text in der Vorschau ändern, als HTML, ZIP oder PDF exportieren. Kostenlos und ohne Anmeldung.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

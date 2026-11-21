@@ -1,8 +1,8 @@
 {
-  "title": "LaTeX-Editor online mit Live-Vorschau, kostenlos | giit.ch",
-  "description": "Kostenloser LaTeX-Editor im Browser: gesetzte Seiten beim Tippen sehen, per Klick zum Code springen, als PDF, PNG oder HTML exportieren. Ohne Anmeldung.",
-  "og_title": "LaTeX-Editor online - Live-Vorschau, kostenlos und privat",
-  "og_description": "LaTeX schreiben und die gesetzten Seiten beim Tippen sehen. Export als PDF, PNG oder HTML. Kostenlos, ohne Anmeldung, läuft im Browser.",
+  "title": "LaTeX-Editor mit Vorschau - ohne Installation | giit.ch",
+  "description": "LaTeX schreiben und die gesetzten Seiten direkt sehen. Formeln, Tabellen und Bilder bearbeiten, als PDF exportieren. Kostenlos, ohne Anmeldung.",
+  "og_title": "LaTeX-Editor mit Vorschau - ohne Installation | giit.ch",
+  "og_description": "LaTeX schreiben und die gesetzten Seiten direkt sehen. Formeln, Tabellen und Bilder bearbeiten, als PDF exportieren. Kostenlos, ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://latex.giit.ch/de/#app",
         "name": "LaTeX Editor",
         "url": "https://latex.giit.ch/de/",
-        "description": "Kostenloser LaTeX-Editor im Browser: gesetzte Seiten beim Tippen sehen, per Klick zum Code springen, als PDF, PNG oder HTML exportieren. Ohne Anmeldung.",
+        "description": "LaTeX schreiben und die gesetzten Seiten direkt sehen. Formeln, Tabellen und Bilder bearbeiten, als PDF exportieren. Kostenlos, ohne Anmeldung.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

@@ -1,8 +1,8 @@
 {
-  "title": "Free SHLS Editor Online - Convert and Count Tokens | giit.ch",
-  "description": "Free SHLS editor in your browser. SHLS is a compact data format for AI: edit it, convert to and from JSON, YAML or CSV, and count the tokens. No sign-up.",
-  "og_title": "Free SHLS Editor Online - Convert and Count Tokens | giit.ch",
-  "og_description": "Free SHLS editor in your browser. SHLS is a compact data format for AI: edit it, convert to and from JSON, YAML or CSV, and count the tokens. No sign-up.",
+  "title": "SHLS Editor - Edit Hierarchical Lists Online | giit.ch",
+  "description": "Edit nested lists as text and as a tree. Try SHLS in your browser and convert it to other data formats. Free, with no sign-up or installation.",
+  "og_title": "SHLS Editor - Edit Hierarchical Lists Online | giit.ch",
+  "og_description": "Edit nested lists as text and as a tree. Try SHLS in your browser and convert it to other data formats. Free, with no sign-up or installation.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://shls.giit.ch/#app",
         "name": "SHLS Editor",
         "url": "https://shls.giit.ch/",
-        "description": "Free SHLS editor in your browser. SHLS is a compact data format for AI: edit it, convert to and from JSON, YAML or CSV, and count the tokens. No sign-up.",
+        "description": "Edit nested lists as text and as a tree. Try SHLS in your browser and convert it to other data formats. Free, with no sign-up or installation.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

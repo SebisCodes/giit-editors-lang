@@ -1,8 +1,8 @@
 {
-  "title": "TOML-Editor online - Baum, Prüfung, Umwandlung | giit.ch",
-  "description": "Kostenloser TOML-Editor im Browser: TOML als Code und Baum bearbeiten, Kommentare bleiben, Fehler mit Zeile finden, in JSON, YAML, CSV oder XML umwandeln.",
-  "og_title": "TOML-Editor online - Baum, Prüfung, Umwandlung | giit.ch",
-  "og_description": "Kostenloser TOML-Editor im Browser: TOML als Code und Baum bearbeiten, Kommentare bleiben, Fehler mit Zeile finden, in JSON, YAML, CSV oder XML umwandeln.",
+  "title": "TOML online bearbeiten - prüfen & umwandeln | giit.ch",
+  "description": "TOML-Konfiguration einfügen, im Baum bearbeiten und auf Fehler prüfen. In JSON oder YAML umwandeln. Kostenlos im Browser, ohne Anmeldung.",
+  "og_title": "TOML online bearbeiten - prüfen & umwandeln | giit.ch",
+  "og_description": "TOML-Konfiguration einfügen, im Baum bearbeiten und auf Fehler prüfen. In JSON oder YAML umwandeln. Kostenlos im Browser, ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://toml.giit.ch/de/#app",
         "name": "TOML Editor",
         "url": "https://toml.giit.ch/de/",
-        "description": "Kostenloser TOML-Editor im Browser: TOML als Code und Baum bearbeiten, Kommentare bleiben, Fehler mit Zeile finden, in JSON, YAML, CSV oder XML umwandeln.",
+        "description": "TOML-Konfiguration einfügen, im Baum bearbeiten und auf Fehler prüfen. In JSON oder YAML umwandeln. Kostenlos im Browser, ohne Anmeldung.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

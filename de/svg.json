@@ -1,8 +1,8 @@
 {
-  "title": "SVG-Editor - ansehen, bearbeiten, exportieren | giit.ch",
-  "description": "Kostenloser SVG-Editor online: Code bearbeiten oder Formen verschieben, skalieren und umfärben, als SVG, PNG, JPG oder React exportieren. Ohne Anmeldung.",
-  "og_title": "SVG-Editor online - SVG ansehen, bearbeiten und exportieren",
-  "og_description": "Kostenloser SVG-Editor online: Code bearbeiten oder Formen verschieben, skalieren und umfärben, als SVG, PNG, JPG oder React exportieren. Ohne Anmeldung.",
+  "title": "SVG online bearbeiten - Code & Zeichenfläche | giit.ch",
+  "description": "SVG öffnen, Formen verschieben und Farben ändern - direkt in der Grafik oder im Code. Als SVG oder PNG exportieren. Kostenlos, ohne Anmeldung.",
+  "og_title": "SVG online bearbeiten - Code & Zeichenfläche | giit.ch",
+  "og_description": "SVG öffnen, Formen verschieben und Farben ändern - direkt in der Grafik oder im Code. Als SVG oder PNG exportieren. Kostenlos, ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://svg.giit.ch/de/#app",
         "name": "SVG Editor",
         "url": "https://svg.giit.ch/de/",
-        "description": "Kostenloser SVG-Editor online: Code bearbeiten oder Formen verschieben, skalieren und umfärben, als SVG, PNG, JPG oder React exportieren. Ohne Anmeldung.",
+        "description": "SVG öffnen, Formen verschieben und Farben ändern - direkt in der Grafik oder im Code. Als SVG oder PNG exportieren. Kostenlos, ohne Anmeldung.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

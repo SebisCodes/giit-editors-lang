@@ -1,8 +1,8 @@
 {
-  "title": "Typst-Editor online mit dem echten Compiler | giit.ch",
-  "description": "Kostenloser Typst-Editor mit dem echten Typst-Compiler im Browser: Seiten beim Tippen sehen, Text anklicken und ändern, als PDF, PNG oder SVG exportieren.",
-  "og_title": "Typst-Editor online - Live-Vorschau, kostenlos und privat",
-  "og_description": "Kostenloser Typst-Editor mit dem echten Typst-Compiler im Browser: Seiten beim Tippen sehen, Text anklicken und ändern, als PDF, PNG oder SVG exportieren.",
+  "title": "Typst-Editor online - direkt als PDF exportieren | giit.ch",
+  "description": "Typst schreiben und kompilierte Seiten sofort sehen. Echter Typst-Compiler im Browser, Export als PDF, PNG oder SVG. Kostenlos und ohne Anmeldung.",
+  "og_title": "Typst-Editor online - direkt als PDF exportieren | giit.ch",
+  "og_description": "Typst schreiben und kompilierte Seiten sofort sehen. Echter Typst-Compiler im Browser, Export als PDF, PNG oder SVG. Kostenlos und ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://typst.giit.ch/de/#app",
         "name": "Typst Editor",
         "url": "https://typst.giit.ch/de/",
-        "description": "Kostenloser Typst-Editor mit dem echten Typst-Compiler im Browser: Seiten beim Tippen sehen, Text anklicken und ändern, als PDF, PNG oder SVG exportieren.",
+        "description": "Typst schreiben und kompilierte Seiten sofort sehen. Echter Typst-Compiler im Browser, Export als PDF, PNG oder SVG. Kostenlos und ohne Anmeldung.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

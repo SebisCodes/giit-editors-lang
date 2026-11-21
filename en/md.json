@@ -1,8 +1,8 @@
 {
-  "title": "Free Markdown Editor Online with a Live Preview | giit.ch",
-  "description": "Free Markdown editor in your browser: tables, task lists, footnotes and math with a live preview, export to HTML, PDF or text. No sign-up, no ads.",
-  "og_title": "Markdown Editor Online - Live Preview, Free and Private",
-  "og_description": "Write Markdown and see the document as you type. Tables, task lists, footnotes, math. Export to HTML, PDF or text. Free, no sign-up, runs in your browser.",
+  "title": "Markdown Editor - Live Preview, No Sign-Up | giit.ch",
+  "description": "Write Markdown or a README and see the formatted result as you type. Add images and export HTML or PDF. Free in your browser, without signing up.",
+  "og_title": "Markdown Editor - Live Preview, No Sign-Up | giit.ch",
+  "og_description": "Write Markdown or a README and see the formatted result as you type. Add images and export HTML or PDF. Free in your browser, without signing up.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://md.giit.ch/#app",
         "name": "Markdown Editor",
         "url": "https://md.giit.ch/",
-        "description": "Free Markdown editor in your browser: tables, task lists, footnotes and math with a live preview, export to HTML, PDF or text. No sign-up, no ads.",
+        "description": "Write Markdown or a README and see the formatted result as you type. Add images and export HTML or PDF. Free in your browser, without signing up.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

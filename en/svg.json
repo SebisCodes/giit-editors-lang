@@ -1,8 +1,8 @@
 {
-  "title": "Free SVG Editor Online - View, Edit and Export | giit.ch",
-  "description": "Free SVG editor in your browser: edit the code or move, resize and recolor shapes on the canvas, export to SVG, PNG, JPG or React. No sign-up, no ads.",
-  "og_title": "SVG Editor Online - View, Edit and Export SVG",
-  "og_description": "Edit SVG code and move, resize and recolor the shapes on the canvas. Export to SVG, PNG, JPG, data URI or React. Free, no sign-up, runs in your browser.",
+  "title": "SVG Editor Online - Edit Shapes & Code | giit.ch",
+  "description": "Open an SVG, move shapes and change colors on the canvas or in the code. Export SVG or PNG. Free in your browser, without signing up.",
+  "og_title": "SVG Editor Online - Edit Shapes & Code | giit.ch",
+  "og_description": "Open an SVG, move shapes and change colors on the canvas or in the code. Export SVG or PNG. Free in your browser, without signing up.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://svg.giit.ch/#app",
         "name": "SVG Editor",
         "url": "https://svg.giit.ch/",
-        "description": "Free SVG editor in your browser: edit the code or move, resize and recolor shapes on the canvas, export to SVG, PNG, JPG or React. No sign-up, no ads.",
+        "description": "Open an SVG, move shapes and change colors on the canvas or in the code. Export SVG or PNG. Free in your browser, without signing up.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

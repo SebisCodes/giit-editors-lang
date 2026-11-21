@@ -1,8 +1,8 @@
 {
-  "title": "YAML-Editor online - Baum, Prüfung, Umwandlung | giit.ch",
-  "description": "Kostenloser YAML-Editor im Browser: YAML als Code und Baum bearbeiten, Kommentare bleiben, Fehler mit Zeile finden, in JSON, CSV oder XML umwandeln.",
-  "og_title": "YAML-Editor online - Baum, Prüfung, Umwandlung | giit.ch",
-  "og_description": "Kostenloser YAML-Editor im Browser: YAML als Code und Baum bearbeiten, Kommentare bleiben, Fehler mit Zeile finden, in JSON, CSV oder XML umwandeln.",
+  "title": "YAML-Editor online - prüfen & bearbeiten | giit.ch",
+  "description": "YAML einfügen, als Baum bearbeiten und Fehler finden. In JSON, TOML oder XML umwandeln. Kostenlos im Browser, ohne Anmeldung; Bearbeitung bleibt lokal.",
+  "og_title": "YAML-Editor online - prüfen & bearbeiten | giit.ch",
+  "og_description": "YAML einfügen, als Baum bearbeiten und Fehler finden. In JSON, TOML oder XML umwandeln. Kostenlos im Browser, ohne Anmeldung; Bearbeitung bleibt lokal.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://yaml.giit.ch/de/#app",
         "name": "YAML Editor",
         "url": "https://yaml.giit.ch/de/",
-        "description": "Kostenloser YAML-Editor im Browser: YAML als Code und Baum bearbeiten, Kommentare bleiben, Fehler mit Zeile finden, in JSON, CSV oder XML umwandeln.",
+        "description": "YAML einfügen, als Baum bearbeiten und Fehler finden. In JSON, TOML oder XML umwandeln. Kostenlos im Browser, ohne Anmeldung; Bearbeitung bleibt lokal.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

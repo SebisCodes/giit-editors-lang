@@ -1,8 +1,8 @@
 {
-  "title": "Free QR Code Generator with Logo, SVG and PDF | giit.ch",
-  "description": "Free QR code generator with logo: links, WiFi, contacts, SEPA and Swiss QR bills. Built-in scan check. SVG, PNG, PDF, EPS. No sign-up.",
-  "og_title": "Free QR Code Generator with Logo, SVG and PDF | giit.ch",
-  "og_description": "Free QR code generator with logo: links, WiFi, contacts, SEPA and Swiss QR bills. Built-in scan check. SVG, PNG, PDF, EPS. No sign-up.",
+  "title": "QR Code Generator - Free, With Your Logo | giit.ch",
+  "description": "Create a QR code for a link, WiFi or contact. Add your logo and download SVG, PNG or PDF. Static codes have no expiry date. Free, no sign-up.",
+  "og_title": "QR Code Generator - Free, With Your Logo | giit.ch",
+  "og_description": "Create a QR code for a link, WiFi or contact. Add your logo and download SVG, PNG or PDF. Static codes have no expiry date. Free, no sign-up.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -12,7 +12,7 @@
         "name": "QR Editor",
         "alternateName": "QR Code Generator",
         "url": "https://qr.giit.ch/",
-        "description": "Free QR code generator with logo: links, WiFi, contacts, SEPA and Swiss QR bills. Built-in scan check. SVG, PNG, PDF, EPS. No sign-up.",
+        "description": "Create a QR code for a link, WiFi or contact. Add your logo and download SVG, PNG or PDF. Static codes have no expiry date. Free, no sign-up.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

@@ -1,8 +1,8 @@
 {
-  "title": "QR-Code-Generator mit Logo, SVG und PDF | giit.ch",
-  "description": "QR-Code-Generator mit Logo: Links, WLAN, Kontakte, SEPA und Schweizer QR-Rechnung. Scan-Prüfung im Editor. SVG, PNG, PDF, EPS. Ohne Anmeldung.",
-  "og_title": "QR-Code-Generator mit Logo, SVG und PDF | giit.ch",
-  "og_description": "QR-Code-Generator mit Logo: Links, WLAN, Kontakte, SEPA und Schweizer QR-Rechnung. Scan-Prüfung im Editor. SVG, PNG, PDF, EPS. Ohne Anmeldung.",
+  "title": "QR-Code erstellen mit Logo - kostenlos | giit.ch",
+  "description": "QR-Code für Link, WLAN oder Kontakt erstellen, Logo hinzufügen und als SVG, PNG oder PDF speichern. Statische Codes ohne Ablaufdatum. Ohne Anmeldung.",
+  "og_title": "QR-Code erstellen mit Logo - kostenlos | giit.ch",
+  "og_description": "QR-Code für Link, WLAN oder Kontakt erstellen, Logo hinzufügen und als SVG, PNG oder PDF speichern. Statische Codes ohne Ablaufdatum. Ohne Anmeldung.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -12,7 +12,7 @@
         "name": "QR Editor",
         "alternateName": "QR-Code-Generator",
         "url": "https://qr.giit.ch/de/",
-        "description": "QR-Code-Generator mit Logo: Links, WLAN, Kontakte, SEPA und Schweizer QR-Rechnung. Scan-Prüfung im Editor. SVG, PNG, PDF, EPS. Ohne Anmeldung.",
+        "description": "QR-Code für Link, WLAN oder Kontakt erstellen, Logo hinzufügen und als SVG, PNG oder PDF speichern. Statische Codes ohne Ablaufdatum. Ohne Anmeldung.",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Alle (Webbrowser)",
         "inLanguage": "de",

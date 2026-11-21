@@ -1,8 +1,8 @@
 {
-  "title": "Free HTML Editor Online with a Live Preview | giit.ch",
-  "description": "Free HTML editor in your browser: write HTML and CSS, see the page as you type, edit text in the preview, export as HTML, ZIP or PDF. No sign-up, no ads.",
-  "og_title": "HTML Editor Online - Live Preview, Free and Private",
-  "og_description": "Write HTML and CSS and see the page as you type. Export to HTML, ZIP or PDF. Free, no sign-up, runs in your browser.",
+  "title": "HTML Editor Online - Live Preview, Free | giit.ch",
+  "description": "Write HTML and CSS and see the result as you type. Edit text in the preview; export HTML, ZIP or PDF. Start in your browser, free and without signing up.",
+  "og_title": "HTML Editor Online - Live Preview, Free | giit.ch",
+  "og_description": "Write HTML and CSS and see the result as you type. Edit text in the preview; export HTML, ZIP or PDF. Start in your browser, free and without signing up.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://html.giit.ch/#app",
         "name": "HTML Editor",
         "url": "https://html.giit.ch/",
-        "description": "Free HTML editor in your browser: write HTML and CSS, see the page as you type, edit text in the preview, export as HTML, ZIP or PDF. No sign-up, no ads.",
+        "description": "Write HTML and CSS and see the result as you type. Edit text in the preview; export HTML, ZIP or PDF. Start in your browser, free and without signing up.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

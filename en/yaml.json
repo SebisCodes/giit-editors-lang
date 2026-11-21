@@ -1,8 +1,8 @@
 {
-  "title": "Free YAML Editor Online - Tree, Validate, Convert | giit.ch",
-  "description": "Free YAML editor in your browser: edit YAML as code and as a tree with comments kept, find errors by line, convert to JSON, CSV or XML. No sign-up.",
-  "og_title": "Free YAML Editor Online - Tree, Validate, Convert | giit.ch",
-  "og_description": "Free YAML editor in your browser: edit YAML as code and as a tree with comments kept, find errors by line, convert to JSON, CSV or XML. No sign-up.",
+  "title": "YAML Editor Online - Validate & Edit for Free | giit.ch",
+  "description": "Paste YAML, edit the tree and find errors. Convert to JSON, TOML or XML. Free, no sign-up; editing runs in your browser and keeps documents on your device.",
+  "og_title": "YAML Editor Online - Validate & Edit for Free | giit.ch",
+  "og_description": "Paste YAML, edit the tree and find errors. Convert to JSON, TOML or XML. Free, no sign-up; editing runs in your browser and keeps documents on your device.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://yaml.giit.ch/#app",
         "name": "YAML Editor",
         "url": "https://yaml.giit.ch/",
-        "description": "Free YAML editor in your browser: edit YAML as code and as a tree with comments kept, find errors by line, convert to JSON, CSV or XML. No sign-up.",
+        "description": "Paste YAML, edit the tree and find errors. Convert to JSON, TOML or XML. Free, no sign-up; editing runs in your browser and keeps documents on your device.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",

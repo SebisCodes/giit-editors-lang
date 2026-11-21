@@ -1,8 +1,8 @@
 {
-  "title": "Free JSON Editor Online - Tree, Validate, Convert | giit.ch",
-  "description": "Free JSON editor in your browser: edit JSON as code and as a tree, find errors by line, check a JSON Schema, convert to YAML, CSV or XML. No sign-up.",
-  "og_title": "Free JSON Editor Online - Tree, Validate, Convert | giit.ch",
-  "og_description": "Free JSON editor in your browser: edit JSON as code and as a tree, find errors by line, check a JSON Schema, convert to YAML, CSV or XML. No sign-up.",
+  "title": "JSON Editor Online - Free, No Sign-Up | giit.ch",
+  "description": "Paste JSON, edit the tree and find errors by line. Validate against a schema or convert to YAML, CSV and XML. Free, no sign-up; data stays in your browser.",
+  "og_title": "JSON Editor Online - Free, No Sign-Up | giit.ch",
+  "og_description": "Paste JSON, edit the tree and find errors by line. Validate against a schema or convert to YAML, CSV and XML. Free, no sign-up; data stays in your browser.",
   "jsonld": {
     "@context": "https://schema.org",
     "@graph": [
@@ -11,7 +11,7 @@
         "@id": "https://json.giit.ch/#app",
         "name": "JSON Editor",
         "url": "https://json.giit.ch/",
-        "description": "Free JSON editor in your browser: edit JSON as code and as a tree, find errors by line, check a JSON Schema, convert to YAML, CSV or XML. No sign-up.",
+        "description": "Paste JSON, edit the tree and find errors by line. Validate against a schema or convert to YAML, CSV and XML. Free, no sign-up; data stays in your browser.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any (web browser)",
         "inLanguage": "en",
