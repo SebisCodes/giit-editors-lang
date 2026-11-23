@@ -133,9 +133,14 @@ export default {
         ['^AI in this session: a browser agent \\(WebMCP\\), (\\d+) min ago$', 'IA in questa sessione: un agente del browser (WebMCP), $1 min fa'],
         ['^AI through (.+): connected, waiting for the key$', 'IA tramite $1: connessa, in attesa della chiave'],
         ['^AI through (.+): connected$', 'IA tramite $1: connessa'],
+        ['^AI through (.+): the website gives the answering instructions$', 'IA tramite $1: il sito web dice all\'IA come rispondere'],
         ['^Browser agent \\(WebMCP\\): active, last used just now$', 'Agente del browser (WebMCP): attivo, usato l\'ultima volta proprio ora'],
         ['^Browser agent \\(WebMCP\\): active, last used (\\d+) min ago$', 'Agente del browser (WebMCP): attivo, usato l\'ultima volta $1 min fa'],
         ['^Browser agent \\(WebMCP\\): available, last used just now$', 'Agente del browser (WebMCP): disponibile, usato l\'ultima volta proprio ora'],
         ['^Browser agent \\(WebMCP\\): available, last used (\\d+) min ago$', 'Agente del browser (WebMCP): disponibile, usato l\'ultima volta $1 min fa'],
+
+        /* ---------- The page's own answering instructions (AI Assistant) ---------- */
+        ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 dice all\'IA come rispondere. Ciò che incolli nella tua IA viene elaborato dal suo fornitore.'],
+        ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'L\'IA risponde come descritto da $1 nel prompt. Se risponde con un link, incolla qui sotto la sua risposta.'],
     ],
 };

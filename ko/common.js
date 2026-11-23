@@ -133,9 +133,14 @@ export default {
         ['^AI in this session: a browser agent \\(WebMCP\\), (\\d+) min ago$', '이 세션의 AI: 브라우저 에이전트(WebMCP), $1분 전'],
         ['^AI through (.+): connected, waiting for the key$', '$1을(를) 통한 AI: 연결됨, 키를 기다리는 중'],
         ['^AI through (.+): connected$', '$1을(를) 통한 AI: 연결됨'],
+        ['^AI through (.+): the website gives the answering instructions$', '$1을(를) 통한 AI: 웹사이트가 AI에게 답변 방법을 지정합니다'],
         ['^Browser agent \\(WebMCP\\): active, last used just now$', '브라우저 에이전트(WebMCP): 활성, 마지막 사용: 방금'],
         ['^Browser agent \\(WebMCP\\): active, last used (\\d+) min ago$', '브라우저 에이전트(WebMCP): 활성, 마지막 사용: $1분 전'],
         ['^Browser agent \\(WebMCP\\): available, last used just now$', '브라우저 에이전트(WebMCP): 사용 가능, 마지막 사용: 방금'],
         ['^Browser agent \\(WebMCP\\): available, last used (\\d+) min ago$', '브라우저 에이전트(WebMCP): 사용 가능, 마지막 사용: $1분 전'],
+
+        /* ---------- The page's own answering instructions (AI Assistant) ---------- */
+        ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1이(가) AI에게 답변 방법을 지정합니다. AI에 붙여 넣은 내용은 해당 AI 제공자가 처리합니다.'],
+        ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'AI는 $1이(가) 프롬프트에 설명한 대로 답합니다. AI가 링크로 답하면 답변을 아래에 붙여 넣으세요.'],
     ],
 };

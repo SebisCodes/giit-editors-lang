@@ -133,9 +133,14 @@ export default {
         ['^AI in this session: a browser agent \\(WebMCP\\), (\\d+) min ago$', 'Bu oturumda yapay zekâ: bir tarayıcı aracısı (WebMCP), $1 dk önce'],
         ['^AI through (.+): connected, waiting for the key$', '$1 üzerinden yapay zekâ: bağlı, anahtar bekleniyor'],
         ['^AI through (.+): connected$', '$1 üzerinden yapay zekâ: bağlı'],
+        ['^AI through (.+): the website gives the answering instructions$', '$1 üzerinden yapay zekâ: web sitesi yapay zekâya nasıl yanıt vereceğini söyler'],
         ['^Browser agent \\(WebMCP\\): active, last used just now$', 'Tarayıcı aracısı (WebMCP): etkin, en son az önce kullanıldı'],
         ['^Browser agent \\(WebMCP\\): active, last used (\\d+) min ago$', 'Tarayıcı aracısı (WebMCP): etkin, en son $1 dk önce kullanıldı'],
         ['^Browser agent \\(WebMCP\\): available, last used just now$', 'Tarayıcı aracısı (WebMCP): kullanılabilir, en son az önce kullanıldı'],
         ['^Browser agent \\(WebMCP\\): available, last used (\\d+) min ago$', 'Tarayıcı aracısı (WebMCP): kullanılabilir, en son $1 dk önce kullanıldı'],
+
+        /* ---------- The page's own answering instructions (AI Assistant) ---------- */
+        ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1, yapay zekâya nasıl yanıt vereceğini söyler. Yapay zekânıza yapıştırdığınız içerik, onun sağlayıcısı tarafından işlenir.'],
+        ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'Yapay zekâ, $1 tarafından istemde açıklandığı gibi yanıt verir. Bir bağlantıyla yanıt verirse yanıtını aşağıya yapıştırın.'],
     ],
 };

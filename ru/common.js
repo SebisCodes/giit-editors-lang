@@ -133,9 +133,14 @@ export default {
         ['^AI in this session: a browser agent \\(WebMCP\\), (\\d+) min ago$', 'ИИ в этом сеансе: браузерный агент (WebMCP), $1 мин. назад'],
         ['^AI through (.+): connected, waiting for the key$', 'ИИ через $1: подключён, ждёт ключ'],
         ['^AI through (.+): connected$', 'ИИ через $1: подключён'],
+        ['^AI through (.+): the website gives the answering instructions$', 'ИИ через $1: веб-сайт сообщает ИИ, как отвечать'],
         ['^Browser agent \\(WebMCP\\): active, last used just now$', 'Браузерный агент (WebMCP): активен, использовался только что'],
         ['^Browser agent \\(WebMCP\\): active, last used (\\d+) min ago$', 'Браузерный агент (WebMCP): активен, использовался $1 мин. назад'],
         ['^Browser agent \\(WebMCP\\): available, last used just now$', 'Браузерный агент (WebMCP): доступен, использовался только что'],
         ['^Browser agent \\(WebMCP\\): available, last used (\\d+) min ago$', 'Браузерный агент (WebMCP): доступен, использовался $1 мин. назад'],
+
+        /* ---------- The page's own answering instructions (AI Assistant) ---------- */
+        ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 сообщает ИИ, как отвечать. То, что вы вставляете в свой ИИ, обрабатывает его провайдер.'],
+        ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'ИИ отвечает так, как $1 описывает в промпте. Если ИИ отвечает ссылкой, вставьте его ответ ниже.'],
     ],
 };

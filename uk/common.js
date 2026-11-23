@@ -133,9 +133,14 @@ export default {
         ['^AI in this session: a browser agent \\(WebMCP\\), (\\d+) min ago$', 'ШІ в цьому сеансі: браузерний агент (WebMCP), $1 хв тому'],
         ['^AI through (.+): connected, waiting for the key$', 'ШІ через $1: під’єднано, чекає на ключ'],
         ['^AI through (.+): connected$', 'ШІ через $1: під’єднано'],
+        ['^AI through (.+): the website gives the answering instructions$', 'ШІ через $1: вебсайт повідомляє ШІ, як відповідати'],
         ['^Browser agent \\(WebMCP\\): active, last used just now$', 'Браузерний агент (WebMCP): активний, використовувався щойно'],
         ['^Browser agent \\(WebMCP\\): active, last used (\\d+) min ago$', 'Браузерний агент (WebMCP): активний, використовувався $1 хв тому'],
         ['^Browser agent \\(WebMCP\\): available, last used just now$', 'Браузерний агент (WebMCP): доступний, використовувався щойно'],
         ['^Browser agent \\(WebMCP\\): available, last used (\\d+) min ago$', 'Браузерний агент (WebMCP): доступний, використовувався $1 хв тому'],
+
+        /* ---------- The page's own answering instructions (AI Assistant) ---------- */
+        ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 повідомляє ШІ, як відповідати. Те, що ви вставляєте у свій ШІ, обробляє його провайдер.'],
+        ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'ШІ відповідає так, як $1 описує в промпті. Якщо ШІ відповідає посиланням, вставте його відповідь нижче.'],
     ],
 };

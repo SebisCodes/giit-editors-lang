@@ -133,9 +133,14 @@ export default {
         ['^AI in this session: a browser agent \\(WebMCP\\), (\\d+) min ago$', 'このセッションの AI: ブラウザーエージェント (WebMCP)、$1 分前'],
         ['^AI through (.+): connected, waiting for the key$', '$1 経由の AI: 接続済み、キーを待っています'],
         ['^AI through (.+): connected$', '$1 経由の AI: 接続済み'],
+        ['^AI through (.+): the website gives the answering instructions$', '$1 経由の AI: ウェブサイトが AI に回答方法を指示します'],
         ['^Browser agent \\(WebMCP\\): active, last used just now$', 'ブラウザーエージェント (WebMCP): 有効、最後の使用はたった今'],
         ['^Browser agent \\(WebMCP\\): active, last used (\\d+) min ago$', 'ブラウザーエージェント (WebMCP): 有効、最後の使用は $1 分前'],
         ['^Browser agent \\(WebMCP\\): available, last used just now$', 'ブラウザーエージェント (WebMCP): 利用可能、最後の使用はたった今'],
         ['^Browser agent \\(WebMCP\\): available, last used (\\d+) min ago$', 'ブラウザーエージェント (WebMCP): 利用可能、最後の使用は $1 分前'],
+
+        /* ---------- The page's own answering instructions (AI Assistant) ---------- */
+        ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 が AI に回答方法を指示します。AI に貼り付けた内容はその提供元が処理します。'],
+        ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'AI はプロンプトで $1 が説明するとおりに回答します。AI がリンクで回答した場合は、その回答を下に貼り付けてください。'],
     ],
 };

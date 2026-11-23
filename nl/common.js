@@ -133,9 +133,14 @@ export default {
         ['^AI in this session: a browser agent \\(WebMCP\\), (\\d+) min ago$', 'AI in deze sessie: een browseragent (WebMCP), $1 min. geleden'],
         ['^AI through (.+): connected, waiting for the key$', 'AI via $1: verbonden, wacht op de sleutel'],
         ['^AI through (.+): connected$', 'AI via $1: verbonden'],
+        ['^AI through (.+): the website gives the answering instructions$', 'AI via $1: de website geeft de AI de instructies voor het antwoord'],
         ['^Browser agent \\(WebMCP\\): active, last used just now$', 'Browseragent (WebMCP): actief, zojuist voor het laatst gebruikt'],
         ['^Browser agent \\(WebMCP\\): active, last used (\\d+) min ago$', 'Browseragent (WebMCP): actief, $1 min. geleden voor het laatst gebruikt'],
         ['^Browser agent \\(WebMCP\\): available, last used just now$', 'Browseragent (WebMCP): beschikbaar, zojuist voor het laatst gebruikt'],
         ['^Browser agent \\(WebMCP\\): available, last used (\\d+) min ago$', 'Browseragent (WebMCP): beschikbaar, $1 min. geleden voor het laatst gebruikt'],
+
+        /* ---------- The page's own answering instructions (AI Assistant) ---------- */
+        ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 geeft de AI de instructies voor het antwoord. Wat je in je AI plakt, wordt door de aanbieder ervan verwerkt.'],
+        ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'De AI antwoordt zoals $1 in de prompt beschrijft. Als de AI met een link antwoordt, plak het antwoord dan hieronder.'],
     ],
 };

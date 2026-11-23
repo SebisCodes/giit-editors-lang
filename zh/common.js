@@ -133,9 +133,14 @@ export default {
         ['^AI in this session: a browser agent \\(WebMCP\\), (\\d+) min ago$', '本次会话中的 AI：浏览器代理（WebMCP），$1 分钟前'],
         ['^AI through (.+): connected, waiting for the key$', '通过 $1 连接 AI：已连接，正在等待密钥'],
         ['^AI through (.+): connected$', '通过 $1 连接 AI：已连接'],
+        ['^AI through (.+): the website gives the answering instructions$', '通过 $1 连接 AI：网站规定 AI 如何回答'],
         ['^Browser agent \\(WebMCP\\): active, last used just now$', '浏览器代理（WebMCP）：活动中，刚刚使用过'],
         ['^Browser agent \\(WebMCP\\): active, last used (\\d+) min ago$', '浏览器代理（WebMCP）：活动中，上次使用是在 $1 分钟前'],
         ['^Browser agent \\(WebMCP\\): available, last used just now$', '浏览器代理（WebMCP）：可用，刚刚使用过'],
         ['^Browser agent \\(WebMCP\\): available, last used (\\d+) min ago$', '浏览器代理（WebMCP）：可用，上次使用是在 $1 分钟前'],
+
+        /* ---------- The page's own answering instructions (AI Assistant) ---------- */
+        ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 规定 AI 如何回答。你粘贴到 AI 中的内容由其提供商处理。'],
+        ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'AI 会按照 $1 在提示词中的说明回答。如果它回复的是链接，请将回答粘贴到下方。'],
     ],
 };
