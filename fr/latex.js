@@ -424,6 +424,20 @@ export default {
         'Matrix': 'Matrice',
         '∫ Integral': '∫ Intégrale',
         'Normal (2.5 cm)': 'Normales (2,5 cm)',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Afficher ou masquer le panneau latéral',
+        'Examples': 'Exemples',
+        'Template': 'Modèle',
+        'View of the preview': 'Affichage de l’aperçu',
+        'The template with its placeholders as written': 'Le modèle avec ses espaces réservés tels qu’ils sont écrits',
+        'The examples could not be filled in - the preview shows the template': 'Les exemples n’ont pas pu être insérés - l’aperçu montre le modèle',
+        'Placeholders': 'Espaces réservés',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Les espaces réservés du modèle - cliquez sur l’un d’eux pour insérer sa balise au curseur',
+        'Shown': 'Affiché',
+        'Hidden': 'Masqué',
+        'example view': 'vue avec exemples',
+        'template view': 'vue du modèle',
+        'The document filled with the examples': 'Le document rempli avec les exemples',
     },
 
     html: {
@@ -518,11 +532,6 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', 'Les dessins $1 ne sont pas affichés dans l’aperçu'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', 'L’aperçu ne connaît pas le paquet « $1 » - ses commandes peuvent manquer'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', 'L’aperçu ne comprend pas $1 dans le préambule'],
-        /* Template placeholders (?template=) */
-        ['^The section (\\S+) stays open - add (\\S+)$', 'La section $1 reste ouverte - ajoutez $2'],
-        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 est une balise de fin surnuméraire - supprimez-la ou ajoutez $2 avant'],
-        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 ferme $2 avant que la section intérieure $3 soit fermée - ajoutez d’abord $4'],
-        ['^Unknown placeholder (\\S+) - use (.+)$', 'Espace réservé inconnu $1 - utilisez $2'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'image', 'images')} · ${formatSize(s)}`],

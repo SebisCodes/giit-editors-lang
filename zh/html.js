@@ -384,6 +384,20 @@ export default {
         'Link': '链接',
         'Name': '名称',
         'OK': '确定',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': '显示或隐藏侧边栏',
+        'Examples': '示例',
+        'Template': '模板',
+        'View of the preview': '预览视图',
+        'The template with its placeholders as written': '按原样显示带占位符的模板',
+        'The examples could not be filled in - the preview shows the template': '无法填入示例，预览显示模板',
+        'Placeholders': '占位符',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '模板中的占位符，点击即可在光标处插入对应标签',
+        'Shown': '已显示',
+        'Hidden': '已隐藏',
+        'example view': '示例视图',
+        'template view': '模板视图',
+        'The page filled with the examples': '填入示例后的页面',
     },
 
     html: {

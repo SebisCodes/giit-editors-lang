@@ -412,6 +412,20 @@ const dict = {
         'Text after \\end{document} is ignored': 'Il testo dopo \\end{document} viene ignorato',
         '\\begin{document} is never closed - add \\end{document} at the end': '\\begin{document} non viene mai chiuso - aggiungi \\end{document} alla fine',
         'There is no \\begin{document} - add \\begin{document} … \\end{document}': 'Manca \\begin{document} - aggiungi \\begin{document} … \\end{document}',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'View of the preview': 'Vista dell\'anteprima',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'The examples could not be filled in - the preview shows the template': 'Impossibile inserire gli esempi - l\'anteprima mostra il modello',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'example view': 'vista con esempi',
+        'template view': 'vista del modello',
+        'The document filled with the examples': 'Il documento compilato con gli esempi',
     },
 
     html: {
@@ -506,11 +520,6 @@ const dict = {
         ['^(\\S+) drawings are not shown in the preview$', 'I disegni $1 non vengono mostrati nell\'anteprima'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', 'L\'anteprima non conosce il pacchetto «$1» - i suoi comandi potrebbero mancare'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', 'L\'anteprima non capisce $1 nel preambolo'],
-        /* Template placeholders (?template=) */
-        ['^The section (\\S+) stays open - add (\\S+)$', 'La sezione $1 rimane aperta - aggiungi $2'],
-        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 è un tag di chiusura senza apertura - rimuovilo o aggiungi $2 prima'],
-        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 chiude $2 prima che la sezione interna $3 sia chiusa - aggiungi prima $4'],
-        ['^Unknown placeholder (\\S+) - use (.+)$', 'Segnaposto sconosciuto $1 - usa $2'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'immagine', 'immagini')} · ${s}`],

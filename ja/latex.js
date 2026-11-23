@@ -402,6 +402,20 @@ export default {
         'Text': 'テキスト',
         'Token': 'トークン',
         'online': 'オンライン',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'View of the preview': 'プレビューの表示',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'The examples could not be filled in - the preview shows the template': 'サンプルを埋め込めませんでした - プレビューにはテンプレートが表示されます',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'example view': 'サンプル表示',
+        'template view': 'テンプレート表示',
+        'The document filled with the examples': 'サンプルを埋め込んだドキュメント',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -495,11 +509,6 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', '$1 の図はプレビューに表示されません'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', 'パッケージ「$1」はプレビューが認識していません。そのコマンドが使えない可能性があります'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', 'プリアンブルの $1 はプレビューでは認識されません'],
-        /* Template placeholders (?template=) */
-        ['^The section (\\S+) stays open - add (\\S+)$', 'セクション $1 が開いたままです。$2 を追加してください'],
-        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 は対応する開始タグのない終了タグです。削除するか、その前に $2 を追加してください'],
-        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 が内側のセクション $3 より先に $2 を閉じています。先に $4 を追加してください'],
-        ['^Unknown placeholder (\\S+) - use (.+)$', '不明なプレースホルダー $1 です。$2 を使ってください'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', '画像 $1 枚 · $2'],

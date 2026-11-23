@@ -1,6 +1,6 @@
 /* Ukrainian texts that all giit editors share: the links to giit.ch in the
    bar, saving on a server and inside a page (sync.js), the AI status
-   (aistatus.js), the confirmation box (dialogs.js). The editor's own texts are
+   (aistatus.js), the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are
    in ui.js; how they are used is described in i18n.js. The same file serves
    every giit editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 повідомляє ШІ, як відповідати. Те, що ви вставляєте у свій ШІ, обробляє його провайдер.'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'ШІ відповідає так, як $1 описує в промпті. Якщо ШІ відповідає посиланням, вставте його відповідь нижче.'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'Розділ $1 залишається відкритим - додайте $2'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 - зайвий закривальний тег - видаліть його або додайте перед ним $2'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 закриває $2 раніше, ніж закрито внутрішній розділ $3 - спершу додайте $4'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Невідомий заповнювач $1 - використовуйте $2'],
     ],
 };

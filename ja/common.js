@@ -1,6 +1,6 @@
 /* Japanese texts that all giit editors share: the links to giit.ch in the bar,
    saving on a server and inside a page (sync.js), the AI status (aistatus.js),
-   the confirmation box (dialogs.js). The editor's own texts are in ui.js; how
+   the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are in ui.js; how
    they are used is described in i18n.js. The same file serves every giit
    editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 が AI に回答方法を指示します。AI に貼り付けた内容はその提供元が処理します。'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'AI はプロンプトで $1 が説明するとおりに回答します。AI がリンクで回答した場合は、その回答を下に貼り付けてください。'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'セクション $1 が開いたままです。$2 を追加してください'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 は対応する開始タグのない終了タグです。削除するか、その前に $2 を追加してください'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 が内側のセクション $3 より先に $2 を閉じています。先に $4 を追加してください'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', '不明なプレースホルダー $1 です。$2 を使ってください'],
     ],
 };

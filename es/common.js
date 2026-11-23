@@ -1,6 +1,6 @@
 /* Spanish texts that all giit editors share: the links to giit.ch in the bar,
    saving on a server and inside a page (sync.js), the AI status (aistatus.js),
-   the confirmation box (dialogs.js). The editor's own texts are in ui.js; how
+   the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are in ui.js; how
    they are used is described in i18n.js. The same file serves every giit
    editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 indica a la IA cómo responder. Lo que pegues en tu IA lo procesa su proveedor.'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'La IA responde como indica $1 en el prompt. Si responde con un enlace, pega su respuesta abajo.'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'La sección $1 queda abierta: añade $2'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 es una etiqueta de cierre sin apertura: quítala o añade $2 antes'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 cierra $2 antes de que se cierre la sección interior $3: añade primero $4'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Marcador desconocido $1: usa $2'],
     ],
 };

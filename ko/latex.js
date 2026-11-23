@@ -416,6 +416,20 @@ export default {
         'Token': '토큰',
         'Name': '이름',
         'online': '온라인',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'View of the preview': '미리 보기 화면',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'The examples could not be filled in - the preview shows the template': '예제를 채워 넣을 수 없습니다 - 미리 보기에 템플릿이 표시됩니다',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'example view': '예제 보기',
+        'template view': '템플릿 보기',
+        'The document filled with the examples': '예제를 채워 넣은 문서',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -494,11 +508,6 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', '$1 그림은 미리 보기에 표시되지 않습니다'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', '미리 보기가 패키지 “$1”을(를) 모릅니다 - 그 명령이 빠질 수 있습니다'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', '프리앰블의 $1은(는) 미리 보기가 이해하지 못합니다'],
-        /* Template placeholders (?template=) */
-        ['^The section (\\S+) stays open - add (\\S+)$', '섹션 $1이(가) 열린 채로 남아 있습니다 - $2을(를) 추가하세요'],
-        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1은(는) 시작 태그가 없는 종료 태그입니다 - 삭제하거나 앞에 $2을(를) 추가하세요'],
-        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1이(가) 안쪽 섹션 $3보다 먼저 $2을(를) 닫습니다 - 먼저 $4을(를) 추가하세요'],
-        ['^Unknown placeholder (\\S+) - use (.+)$', '알 수 없는 자리 표시자 $1 - $2을(를) 사용하세요'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', '그림 $1개 · $2'],

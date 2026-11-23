@@ -1,6 +1,6 @@
 /* Russian texts that all giit editors share: the links to giit.ch in the bar,
    saving on a server and inside a page (sync.js), the AI status (aistatus.js),
-   the confirmation box (dialogs.js). The editor's own texts are in ui.js; how
+   the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are in ui.js; how
    they are used is described in i18n.js. The same file serves every giit
    editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 сообщает ИИ, как отвечать. То, что вы вставляете в свой ИИ, обрабатывает его провайдер.'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'ИИ отвечает так, как $1 описывает в промпте. Если ИИ отвечает ссылкой, вставьте его ответ ниже.'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'Раздел $1 остаётся открытым - добавьте $2'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 - лишний закрывающий тег - удалите его или добавьте перед ним $2'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 закрывает $2 раньше, чем закрыт внутренний раздел $3 - сначала добавьте $4'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Неизвестный заполнитель $1 - используйте $2'],
     ],
 };

@@ -424,6 +424,20 @@ export default {
         'Name': 'Nazwa',
         'Text': 'Tekst',
         'Label': 'Etykieta',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'View of the preview': 'Widok podglądu',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'The examples could not be filled in - the preview shows the template': 'Nie udało się wstawić przykładów - podgląd pokazuje szablon',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'example view': 'widok przykładów',
+        'template view': 'widok szablonu',
+        'The page filled with the examples': 'Strona wypełniona przykładami',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':

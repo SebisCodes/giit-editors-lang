@@ -405,6 +405,20 @@ export default {
         /* ---------- Single words ---------- */
         'Export': 'Exporteren',
         'Format': 'Formaat',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'View of the preview': 'Weergave van het voorbeeld',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'The examples could not be filled in - the preview shows the template': 'De voorbeelden konden niet worden ingevuld - het voorbeeld toont het sjabloon',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'example view': 'voorbeeldweergave',
+        'template view': 'sjabloonweergave',
+        'The document filled with the examples': 'Het document ingevuld met de voorbeelden',
     },
 
     html: {
@@ -499,11 +513,6 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', '$1-tekeningen worden niet in het voorbeeld getoond'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', 'Het pakket "$1" is onbekend voor het voorbeeld - de commando\'s ervan kunnen ontbreken'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', '$1 in de preambule wordt niet begrepen door het voorbeeld'],
-        /* Template placeholders (?template=) */
-        ['^The section (\\S+) stays open - add (\\S+)$', 'De sectie $1 blijft open - voeg $2 toe'],
-        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 is een eindtag zonder begintag - verwijder die of voeg $2 ervoor toe'],
-        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 sluit $2 voordat de binnenste sectie $3 gesloten is - voeg eerst $4 toe'],
-        ['^Unknown placeholder (\\S+) - use (.+)$', 'Onbekende plaatshouder $1 - gebruik $2'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'afbeelding', 'afbeeldingen')} · ${formatSize(s)}`],

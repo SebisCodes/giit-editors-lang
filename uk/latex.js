@@ -456,6 +456,20 @@ export default {
         'Link': 'Посилання',
         'Token': 'Токен',
         'Name': 'Ім’я',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Показати або сховати бічну панель',
+        'Examples': 'Приклади',
+        'Template': 'Шаблон',
+        'View of the preview': 'Вигляд перегляду',
+        'The template with its placeholders as written': 'Шаблон із заповнювачами в початковому вигляді',
+        'The examples could not be filled in - the preview shows the template': 'Не вдалося підставити приклади - перегляд показує шаблон',
+        'Placeholders': 'Заповнювачі',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заповнювачі шаблону - клацання вставляє відповідний тег у позицію курсора',
+        'Shown': 'Показано',
+        'Hidden': 'Приховано',
+        'example view': 'вигляд із прикладами',
+        'template view': 'вигляд шаблону',
+        'The document filled with the examples': 'Документ, заповнений прикладами',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -548,11 +562,6 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', 'Малюнки $1 не показуються в перегляді'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', 'Пакет «$1» невідомий перегляду - його команд може бракувати'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', '$1 у преамбулі перегляд не розуміє'],
-        /* Template placeholders (?template=) */
-        ['^The section (\\S+) stays open - add (\\S+)$', 'Розділ $1 залишається відкритим - додайте $2'],
-        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 - зайвий закривальний тег - видаліть його або додайте перед ним $2'],
-        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 закриває $2 раніше, ніж закрито внутрішній розділ $3 - спершу додайте $4'],
-        ['^Unknown placeholder (\\S+) - use (.+)$', 'Невідомий заповнювач $1 - використовуйте $2'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'зображення', 'зображення', 'зображень')} · ${formatSize(s)}`],

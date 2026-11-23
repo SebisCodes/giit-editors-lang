@@ -370,6 +370,20 @@ export default {
         '\\begin{document} is never closed - add \\end{document} at the end': '\\begin{document} hiç kapatılmamış - sona \\end{document} ekleyin',
         'There is no \\begin{document} - add \\begin{document} … \\end{document}': '\\begin{document} yok - \\begin{document} … \\end{document} ekleyin',
         'Code': 'Kod',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'View of the preview': 'Önizleme görünümü',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'The examples could not be filled in - the preview shows the template': 'Örnekler yerleştirilemedi - önizleme şablonu gösteriyor',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'example view': 'örnek görünümü',
+        'template view': 'şablon görünümü',
+        'The document filled with the examples': 'Örneklerle doldurulmuş belge',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -451,11 +465,6 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', '$1 çizimleri önizlemede gösterilmez'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', '“$1” paketi önizleme tarafından tanınmıyor - komutları eksik olabilir'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', 'Başlangıç bölümündeki $1 önizleme tarafından anlaşılmıyor'],
-        /* Template placeholders (?template=) */
-        ['^The section (\\S+) stays open - add (\\S+)$', '$1 bölümü açık kalıyor - $2 ekleyin'],
-        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 açılışı olmayan bir kapanış etiketi - kaldırın ya da önüne $2 ekleyin'],
-        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1, içteki $3 bölümü kapatılmadan $2 bölümünü kapatıyor - önce $4 ekleyin'],
-        ['^Unknown placeholder (\\S+) - use (.+)$', 'Bilinmeyen yer tutucu $1 - $2 kullanın'],
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} resim · ${s}`],
         ['^Pictures belong to “(.*)” and stay in your browser\\. Drop or paste them anywhere in the editor, or add them here;$', 'Resimler “$1” belgesine aittir ve tarayıcınızda kalır. Onları editörün herhangi bir yerine bırakın veya yapıştırın ya da buradan ekleyin;'],
         ['^Choose the file for (.+)$', '$1 için dosyayı seçin'],

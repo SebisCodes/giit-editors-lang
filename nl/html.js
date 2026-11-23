@@ -380,6 +380,20 @@ export default {
         /* ---------- Single words ---------- */
         'Export': 'Exporteren',
         'Format': 'Formaat',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'View of the preview': 'Weergave van het voorbeeld',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'The examples could not be filled in - the preview shows the template': 'De voorbeelden konden niet worden ingevuld - het voorbeeld toont het sjabloon',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'example view': 'voorbeeldweergave',
+        'template view': 'sjabloonweergave',
+        'The page filled with the examples': 'De pagina ingevuld met de voorbeelden',
     },
 
     html: {

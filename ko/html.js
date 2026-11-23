@@ -391,6 +391,20 @@ export default {
         'Token': '토큰',
         'Name': '이름',
         'online': '온라인',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'View of the preview': '미리 보기 화면',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'The examples could not be filled in - the preview shows the template': '예제를 채워 넣을 수 없습니다 - 미리 보기에 템플릿이 표시됩니다',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'example view': '예제 보기',
+        'template view': '템플릿 보기',
+        'The page filled with the examples': '예제를 채워 넣은 페이지',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':

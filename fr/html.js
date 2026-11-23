@@ -395,6 +395,20 @@ export default {
         'Token': 'Jeton',
         'Link': 'Lien',
         'Text': 'Texte',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Afficher ou masquer le panneau latéral',
+        'Examples': 'Exemples',
+        'Template': 'Modèle',
+        'View of the preview': 'Affichage de l’aperçu',
+        'The template with its placeholders as written': 'Le modèle avec ses espaces réservés tels qu’ils sont écrits',
+        'The examples could not be filled in - the preview shows the template': 'Les exemples n’ont pas pu être insérés - l’aperçu montre le modèle',
+        'Placeholders': 'Espaces réservés',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Les espaces réservés du modèle - cliquez sur l’un d’eux pour insérer sa balise au curseur',
+        'Shown': 'Affiché',
+        'Hidden': 'Masqué',
+        'example view': 'vue avec exemples',
+        'template view': 'vue du modèle',
+        'The page filled with the examples': 'La page remplie avec les exemples',
     },
 
     html: {

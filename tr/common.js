@@ -1,6 +1,6 @@
 /* Turkish texts that all giit editors share: the links to giit.ch in the bar,
    saving on a server and inside a page (sync.js), the AI status (aistatus.js),
-   the confirmation box (dialogs.js). The editor's own texts are in the Turkish
+   the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are in the Turkish
    pack; how they are used is described in i18n.js. The same file serves every
    giit editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1, yapay zekâya nasıl yanıt vereceğini söyler. Yapay zekânıza yapıştırdığınız içerik, onun sağlayıcısı tarafından işlenir.'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'Yapay zekâ, $1 tarafından istemde açıklandığı gibi yanıt verir. Bir bağlantıyla yanıt verirse yanıtını aşağıya yapıştırın.'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', '$1 bölümü açık kalıyor - $2 ekleyin'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 açılışı olmayan bir kapanış etiketi - kaldırın ya da önüne $2 ekleyin'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1, içteki $3 bölümü kapatılmadan $2 bölümünü kapatıyor - önce $4 ekleyin'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Bilinmeyen yer tutucu $1 - $2 kullanın'],
     ],
 };

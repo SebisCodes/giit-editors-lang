@@ -1,6 +1,6 @@
 /* Brazilian Portuguese texts that all giit editors share: the links to giit.ch
    in the bar, saving on a server and inside a page (sync.js), the AI status
-   (aistatus.js), the confirmation box (dialogs.js). The editor's own texts are
+   (aistatus.js), the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are
    in its Portuguese pack; how they are used is described in i18n.js. The same
    file serves every giit editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 indica à IA como responder. O que você cola na sua IA é tratado pelo provedor dela.'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'A IA responde como $1 descreve no prompt. Se ela responder com um link, cole a resposta abaixo.'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'A seção $1 permanece aberta - adicione $2'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 é uma tag de fechamento sem abertura - remova-a ou adicione $2 antes dela'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 fecha $2 antes de a seção interna $3 ser fechada - adicione primeiro $4'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Marcador desconhecido $1 - use $2'],
     ],
 };

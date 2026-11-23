@@ -401,6 +401,20 @@ export default {
         'Text after \\end{document} is ignored': 'El texto después de \\end{document} se ignora',
         '\\begin{document} is never closed - add \\end{document} at the end': '\\begin{document} nunca se cierra: añade \\end{document} al final',
         'There is no \\begin{document} - add \\begin{document} … \\end{document}': 'No hay \\begin{document}: añade \\begin{document} … \\end{document}',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Mostrar u ocultar el panel lateral',
+        'Examples': 'Ejemplos',
+        'Template': 'Plantilla',
+        'View of the preview': 'Modo de vista previa',
+        'The template with its placeholders as written': 'La plantilla con sus marcadores tal como están escritos',
+        'The examples could not be filled in - the preview shows the template': 'No se han podido insertar los ejemplos - la vista previa muestra la plantilla',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Los marcadores de la plantilla - haz clic en uno para insertar su etiqueta en el cursor',
+        'Shown': 'Mostrado',
+        'Hidden': 'Oculto',
+        'example view': 'vista con ejemplos',
+        'template view': 'vista de plantilla',
+        'The document filled with the examples': 'El documento rellenado con los ejemplos',
     },
 
     html: {
@@ -495,11 +509,6 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', 'Los dibujos $1 no se muestran en la vista previa'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', 'La vista previa no conoce el paquete «$1»: puede que falten sus comandos'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', 'La vista previa no entiende $1 en el preámbulo'],
-        /* Template placeholders (?template=) */
-        ['^The section (\\S+) stays open - add (\\S+)$', 'La sección $1 queda abierta: añade $2'],
-        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 es una etiqueta de cierre sin apertura: quítala o añade $2 antes'],
-        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 cierra $2 antes de que se cierre la sección interior $3: añade primero $4'],
-        ['^Unknown placeholder (\\S+) - use (.+)$', 'Marcador desconocido $1: usa $2'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'imagen', 'imágenes')} · ${s}`],

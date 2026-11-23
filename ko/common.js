@@ -1,6 +1,6 @@
 /* Korean texts that all giit editors share: the links to giit.ch in the bar,
    saving on a server and inside a page (sync.js), the AI status (aistatus.js),
-   the confirmation box (dialogs.js). The editor's own texts are in the Korean
+   the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are in the Korean
    pack; how they are used is described in i18n.js. The same file serves every
    giit editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1이(가) AI에게 답변 방법을 지정합니다. AI에 붙여 넣은 내용은 해당 AI 제공자가 처리합니다.'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'AI는 $1이(가) 프롬프트에 설명한 대로 답합니다. AI가 링크로 답하면 답변을 아래에 붙여 넣으세요.'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', '섹션 $1이(가) 열린 채로 남아 있습니다 - $2을(를) 추가하세요'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1은(는) 시작 태그가 없는 종료 태그입니다 - 삭제하거나 앞에 $2을(를) 추가하세요'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1이(가) 안쪽 섹션 $3보다 먼저 $2을(를) 닫습니다 - 먼저 $4을(를) 추가하세요'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', '알 수 없는 자리 표시자 $1 - $2을(를) 사용하세요'],
     ],
 };

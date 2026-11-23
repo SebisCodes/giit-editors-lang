@@ -1,6 +1,6 @@
 /* Dutch texts that all giit editors share: the links to giit.ch in the bar,
    saving on a server and inside a page (sync.js), the AI status (aistatus.js),
-   the confirmation box (dialogs.js). The editor's own texts are in the Dutch
+   the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are in the Dutch
    pack; how they are used is described in i18n.js. The same file serves every
    giit editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 geeft de AI de instructies voor het antwoord. Wat je in je AI plakt, wordt door de aanbieder ervan verwerkt.'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'De AI antwoordt zoals $1 in de prompt beschrijft. Als de AI met een link antwoordt, plak het antwoord dan hieronder.'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'De sectie $1 blijft open - voeg $2 toe'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 is een eindtag zonder begintag - verwijder die of voeg $2 ervoor toe'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 sluit $2 voordat de binnenste sectie $3 gesloten is - voeg eerst $4 toe'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Onbekende plaatshouder $1 - gebruik $2'],
     ],
 };

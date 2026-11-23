@@ -376,6 +376,20 @@ export default {
         'The comment <!-- is never closed - add -->': 'El comentario <!-- nunca se cierra: añade -->',
         '<img> without alt - describe the picture (alt="…"), or alt="" if it only decorates': '<img> sin alt: describe la imagen (alt="…"), o alt="" si solo es decorativa',
         'No <!DOCTYPE html> at the top - browsers show the page in an older mode (quirks mode)': 'No hay <!DOCTYPE html> al principio: los navegadores muestran la página en un modo antiguo (modo quirks)',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Mostrar u ocultar el panel lateral',
+        'Examples': 'Ejemplos',
+        'Template': 'Plantilla',
+        'View of the preview': 'Modo de vista previa',
+        'The template with its placeholders as written': 'La plantilla con sus marcadores tal como están escritos',
+        'The examples could not be filled in - the preview shows the template': 'No se han podido insertar los ejemplos - la vista previa muestra la plantilla',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Los marcadores de la plantilla - haz clic en uno para insertar su etiqueta en el cursor',
+        'Shown': 'Mostrado',
+        'Hidden': 'Oculto',
+        'example view': 'vista con ejemplos',
+        'template view': 'vista de plantilla',
+        'The page filled with the examples': 'La página rellenada con los ejemplos',
     },
 
     html: {

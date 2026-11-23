@@ -345,6 +345,20 @@ export default {
         '<img> without alt - describe the picture (alt="…"), or alt="" if it only decorates': 'alt olmadan <img> - resmi açıklayın (alt="…") veya yalnızca süs amaçlıysa alt=""',
         'No <!DOCTYPE html> at the top - browsers show the page in an older mode (quirks mode)': 'En üstte <!DOCTYPE html> yok - tarayıcılar sayfayı eski bir modda (quirks mode) gösterir',
         'Code': 'Kod',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'View of the preview': 'Önizleme görünümü',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'The examples could not be filled in - the preview shows the template': 'Örnekler yerleştirilemedi - önizleme şablonu gösteriyor',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'example view': 'örnek görünümü',
+        'template view': 'şablon görünümü',
+        'The page filled with the examples': 'Örneklerle doldurulmuş sayfa',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':

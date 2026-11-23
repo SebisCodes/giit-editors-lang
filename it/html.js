@@ -387,6 +387,20 @@ const dict = {
         'The comment <!-- is never closed - add -->': 'Il commento <!-- non viene mai chiuso - aggiungi -->',
         '<img> without alt - describe the picture (alt="…"), or alt="" if it only decorates': '<img> senza alt - descrivi l\'immagine (alt="…"), oppure alt="" se è solo decorativa',
         'No <!DOCTYPE html> at the top - browsers show the page in an older mode (quirks mode)': 'Manca <!DOCTYPE html> in cima - i browser mostrano la pagina in una modalità più vecchia (quirks mode)',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'View of the preview': 'Vista dell\'anteprima',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'The examples could not be filled in - the preview shows the template': 'Impossibile inserire gli esempi - l\'anteprima mostra il modello',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'example view': 'vista con esempi',
+        'template view': 'vista del modello',
+        'The page filled with the examples': 'La pagina compilata con gli esempi',
     },
 
     html: {

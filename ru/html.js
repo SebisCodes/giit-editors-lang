@@ -430,6 +430,20 @@ export default {
         'Link': 'Ссылка',
         'Token': 'Токен',
         'Name': 'Имя',
+        /* ---------- Template placeholders: views and box ---------- */
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'View of the preview': 'Вид предпросмотра',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'The examples could not be filled in - the preview shows the template': 'Не удалось подставить примеры - предпросмотр показывает шаблон',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'example view': 'вид с примерами',
+        'template view': 'вид шаблона',
+        'The page filled with the examples': 'Страница, заполненная примерами',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':

@@ -1,6 +1,6 @@
 /* French texts that all giit editors share: the links to giit.ch in the bar,
    saving on a server and inside a page (sync.js), the AI status (aistatus.js),
-   the confirmation box (dialogs.js). The editor's own texts are in ui.js; how
+   the confirmation box (dialogs.js), the errors of template placeholders (template-tags.js). The editor's own texts are in ui.js; how
    they are used is described in i18n.js. The same file serves every giit
    editor. */
 
@@ -142,5 +142,11 @@ export default {
         /* ---------- The page's own answering instructions (AI Assistant) ---------- */
         ['^(.+) gives the AI its instructions for answering\\. What you paste into your AI is handled by its provider\\.$', '$1 indique à l’IA comment répondre. Ce que vous collez dans votre IA est traité par son fournisseur.'],
         ['^The AI answers as (.+) describes in the prompt\\. If it answers with a link, paste its answer below\\.$', 'L’IA répond comme $1 le décrit dans le prompt. Si elle répond par un lien, collez sa réponse ci-dessous.'],
+
+        /* ---------- Template placeholders (template-tags.js, ?template=) ---------- */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'La section $1 reste ouverte - ajoutez $2'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 est une balise de fin surnuméraire - supprimez-la ou ajoutez $2 avant'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 ferme $2 avant que la section intérieure $3 soit fermée - ajoutez d’abord $4'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Espace réservé inconnu $1 - utilisez $2'],
     ],
 };
