@@ -451,6 +451,11 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', '$1 çizimleri önizlemede gösterilmez'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', '“$1” paketi önizleme tarafından tanınmıyor - komutları eksik olabilir'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', 'Başlangıç bölümündeki $1 önizleme tarafından anlaşılmıyor'],
+        /* Template placeholders (?template=) */
+        ['^The section (\\S+) stays open - add (\\S+)$', '$1 bölümü açık kalıyor - $2 ekleyin'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 açılışı olmayan bir kapanış etiketi - kaldırın ya da önüne $2 ekleyin'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1, içteki $3 bölümü kapatılmadan $2 bölümünü kapatıyor - önce $4 ekleyin'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Bilinmeyen yer tutucu $1 - $2 kullanın'],
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} resim · ${s}`],
         ['^Pictures belong to “(.*)” and stay in your browser\\. Drop or paste them anywhere in the editor, or add them here;$', 'Resimler “$1” belgesine aittir ve tarayıcınızda kalır. Onları editörün herhangi bir yerine bırakın veya yapıştırın ya da buradan ekleyin;'],
         ['^Choose the file for (.+)$', '$1 için dosyayı seçin'],

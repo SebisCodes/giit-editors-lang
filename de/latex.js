@@ -495,6 +495,11 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', '$1-Zeichnungen werden in der Vorschau nicht gezeigt'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', 'Das Paket «$1» kennt die Vorschau nicht - seine Befehle fehlen vielleicht'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', '$1 in der Präambel versteht die Vorschau nicht'],
+        /* Template placeholders (?template=) */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'Der Abschnitt $1 bleibt offen - füge $2 hinzu'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 ist eine überzählige Endmarke - entferne sie oder füge $2 davor ein'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 schliesst $2, bevor der innere Abschnitt $3 geschlossen ist - füge zuerst $4 ein'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Unbekannter Platzhalter $1 - verwende $2'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'Bild', 'Bilder')} · ${s}`],

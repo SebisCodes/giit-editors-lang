@@ -503,6 +503,11 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', '预览中不显示 $1 绘图'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', '预览不支持宏包“$1”，其命令可能无法显示'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', '预览无法理解导言区中的 $1'],
+        /* Template placeholders (?template=) */
+        ['^The section (\\S+) stays open - add (\\S+)$', '区块 $1 未闭合，请添加 $2'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 是多余的结束标签，请删除它或在它前面添加 $2'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 在内层区块 $3 闭合之前就闭合了 $2，请先添加 $4'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', '未知占位符 $1，请使用 $2'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', '$1 张图片 · $2'],

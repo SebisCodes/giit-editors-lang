@@ -553,6 +553,11 @@ export default {
         ['^(\\S+) drawings are not shown in the preview$', 'Рисунки $1 не показываются в предпросмотре'],
         ['^The package "(.+)" is not known to the preview - its commands may be missing$', 'Пакет «$1» неизвестен предпросмотру - его команд может не хватать'],
         ['^(\\\\\\S+) in the preamble is not understood by the preview$', '$1 в преамбуле предпросмотр не понимает'],
+        /* Template placeholders (?template=) */
+        ['^The section (\\S+) stays open - add (\\S+)$', 'Раздел $1 остаётся открытым - добавьте $2'],
+        ['^(\\S+) is a stray end tag - remove it or add (\\S+) before it$', '$1 - лишний закрывающий тег - удалите его или добавьте перед ним $2'],
+        ['^(\\S+) closes (\\S+) before the inner section (\\S+) is closed - add (\\S+) first$', '$1 закрывает $2 раньше, чем закрыт внутренний раздел $3 - сначала добавьте $4'],
+        ['^Unknown placeholder (\\S+) - use (.+)$', 'Неизвестный заполнитель $1 - используйте $2'],
 
         /* ---------- Pictures tab ---------- */
         ['^(\\d+) (?:picture|pictures) · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'изображение', 'изображения', 'изображений')} · ${formatSize(s)}`],
