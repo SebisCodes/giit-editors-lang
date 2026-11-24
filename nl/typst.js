@@ -84,6 +84,8 @@ export default {
         'Hidden': 'Verborgen',
         'example view': 'voorbeeldweergave',
         'template view': 'sjabloonweergave',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "Deze afbeelding verplaats je in de sjabloonweergave - de voorbeelden herhalen hier afbeeldingen of laten ze weg",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "Deze afbeelding verwijder je in de sjabloonweergave - de voorbeelden herhalen hier afbeeldingen of laten ze weg",
         'The pages filled with the examples': "De pagina's ingevuld met de voorbeelden",
         'The examples could not be filled in - the pages show the template': "De voorbeelden konden niet worden ingevuld - de pagina's tonen het sjabloon",
         'Preview': 'Voorbeeld',

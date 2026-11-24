@@ -90,6 +90,8 @@ export default {
         'Hidden': 'Oculto',
         'example view': 'visualização com exemplos',
         'template view': 'visualização do modelo',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "Esta imagem é movida na visualização do modelo - aqui os exemplos repetem ou omitem imagens",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "Esta imagem é removida na visualização do modelo - aqui os exemplos repetem ou omitem imagens",
         'The pages filled with the examples': "As páginas preenchidas com os exemplos",
         'The examples could not be filled in - the pages show the template': "Não foi possível preencher os exemplos - as páginas mostram o modelo",
         'Preview': 'Visualização',

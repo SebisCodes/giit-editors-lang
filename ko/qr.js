@@ -58,7 +58,7 @@ function translateHint(h) {
 
 export default {
     text: {
-        /* ---------- Side panel: a drawer on the desktop ---------- */
+        /* ---------- Side panel: a column on the desktop ---------- */
         'Side panel': '사이드 패널',
         'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
         /* ---------- Top bar ---------- */

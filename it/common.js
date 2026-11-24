@@ -24,6 +24,7 @@ export default {
         "All giit editors": "Tutti gli editor giit",
         "by giit.ch": "di giit.ch",
         "Open in another editor": "Apri in un altro editor",
+        "Remove picture": "Rimuovi immagine",
         "Not everything can be converted": "Non tutto può essere convertito",
         "Open anyway": "Apri comunque",
         "Pictures and other files of the document stay here: add them again in the other editor": "Le immagini e gli altri file del documento restano qui: aggiungili di nuovo nell’altro editor",

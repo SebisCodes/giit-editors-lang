@@ -85,6 +85,8 @@ export default {
         'Hidden': 'Gizli',
         'example view': 'örnek görünümü',
         'template view': 'şablon görünümü',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "Bu resim şablon görünümünde taşınır - örnekler burada resimleri tekrarlar veya atlar",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "Bu resim şablon görünümünde kaldırılır - örnekler burada resimleri tekrarlar veya atlar",
         'The pages filled with the examples': "Örneklerle doldurulmuş sayfalar",
         'The examples could not be filled in - the pages show the template': "Örnekler yerleştirilemedi - sayfalar şablonu gösteriyor",
         'Preview': 'Önizleme',

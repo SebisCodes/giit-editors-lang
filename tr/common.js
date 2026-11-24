@@ -24,6 +24,7 @@ export default {
         "All giit editors": "Tüm giit editörleri",
         "by giit.ch": "giit.ch tarafından",
         "Open in another editor": "Başka bir editörde aç",
+        "Remove picture": "Resmi kaldır",
         "Not everything can be converted": "Her şey dönüştürülemiyor",
         "Open anyway": "Yine de aç",
         "Pictures and other files of the document stay here: add them again in the other editor": "Belgenin resimleri ve diğer dosyaları burada kalır: diğer editörde yeniden ekleyin",

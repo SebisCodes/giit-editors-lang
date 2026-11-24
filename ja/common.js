@@ -24,6 +24,7 @@ export default {
         "All giit editors": "すべての giit エディター",
         "by giit.ch": "giit.ch 製",
         "Open in another editor": "別のエディターで開く",
+        "Remove picture": "画像を削除",
         "Not everything can be converted": "すべてを変換できるわけではありません",
         "Open anyway": "それでも開く",
         "Pictures and other files of the document stay here: add them again in the other editor": "ドキュメントの画像やその他のファイルはここに残ります。別のエディターで追加し直してください",

@@ -24,6 +24,7 @@ export default {
         "All giit editors": "모든 giit 편집기",
         "by giit.ch": "giit.ch 제공",
         "Open in another editor": "다른 편집기에서 열기",
+        "Remove picture": "그림 제거",
         "Not everything can be converted": "모든 내용을 변환할 수는 없습니다",
         "Open anyway": "그래도 열기",
         "Pictures and other files of the document stay here: add them again in the other editor": "문서의 이미지와 기타 파일은 여기에 남습니다. 다른 편집기에서 다시 추가하세요",

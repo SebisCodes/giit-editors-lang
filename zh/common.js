@@ -24,6 +24,7 @@ export default {
         "All giit editors": "所有 giit 编辑器",
         "by giit.ch": "由 giit.ch 出品",
         "Open in another editor": "在其他编辑器中打开",
+        "Remove picture": "移除图片",
         "Not everything can be converted": "并非所有内容都能转换",
         "Open anyway": "仍然打开",
         "Pictures and other files of the document stay here: add them again in the other editor": "文档的图片和其他文件留在这里：请在其他编辑器中重新添加",

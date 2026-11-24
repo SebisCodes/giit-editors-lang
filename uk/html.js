@@ -381,6 +381,7 @@ export default {
         'Nothing to redo': 'Нічого повторювати',
         'The code changed meanwhile - the edit was not used': 'Код тим часом змінився - правку не застосовано',
         'The code changed meanwhile - the picture was not moved': 'Код тим часом змінився - зображення не переміщено',
+        "The code changed meanwhile - the picture was not removed": "Код тим часом змінився - зображення не видалено",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.':
             'Файл видалено з цього документа. Місця, де він використовується, нічого не показують. «Скасувати» його не поверне.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video':

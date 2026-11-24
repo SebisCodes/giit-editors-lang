@@ -105,6 +105,8 @@ export default {
         'Hidden': 'Ukryty',
         'example view': 'widok przykładów',
         'template view': 'widok szablonu',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "Ten obraz należy przenieść w widoku szablonu - przykłady powtarzają tu obrazy lub je pomijają",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "Ten obraz należy usunąć w widoku szablonu - przykłady powtarzają tu obrazy lub je pomijają",
         'The pages filled with the examples': "Strony wypełnione przykładami",
         'The examples could not be filled in - the pages show the template': "Nie udało się wstawić przykładów - strony pokazują szablon",
         'Preview': 'Podgląd',

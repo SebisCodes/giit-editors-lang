@@ -100,6 +100,8 @@ export default {
         'Hidden': '숨김',
         'example view': '예제 보기',
         'template view': '템플릿 보기',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "이 그림은 템플릿 보기에서 옮깁니다 - 여기서는 예시가 그림을 반복하거나 생략합니다",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "이 그림은 템플릿 보기에서 제거합니다 - 여기서는 예시가 그림을 반복하거나 생략합니다",
         'The pages filled with the examples': "예제를 채워 넣은 페이지",
         'The examples could not be filled in - the pages show the template': "예제를 채워 넣을 수 없습니다 - 페이지에 템플릿이 표시됩니다",
         'Preview': '미리 보기',

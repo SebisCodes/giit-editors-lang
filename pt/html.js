@@ -351,6 +351,7 @@ export default {
         'Nothing to redo': 'Nada para refazer',
         'The code changed meanwhile - the edit was not used': 'O código mudou nesse meio-tempo - a edição não foi usada',
         'The code changed meanwhile - the picture was not moved': 'O código mudou nesse meio-tempo - a imagem não foi movida',
+        "The code changed meanwhile - the picture was not removed": "O código mudou nesse meio-tempo - a imagem não foi removida",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.':
             'O arquivo foi removido deste documento. Os lugares que o usam não mostram nada. "Desfazer" não o traz de volta.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': 'Um documento pode guardar imagens, folhas de estilo, scripts, fontes, PDFs, áudio e vídeo',

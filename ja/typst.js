@@ -86,6 +86,8 @@ export default {
         'Hidden': '非表示',
         'example view': 'サンプル表示',
         'template view': 'テンプレート表示',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "この画像はテンプレート表示で移動します - ここでは例が画像を繰り返したり省いたりしています",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "この画像はテンプレート表示で削除します - ここでは例が画像を繰り返したり省いたりしています",
         'The pages filled with the examples': "サンプルを埋め込んだページ",
         'The examples could not be filled in - the pages show the template': "サンプルを埋め込めませんでした - ページにはテンプレートが表示されます",
         'Preview': 'プレビュー',

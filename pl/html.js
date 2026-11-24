@@ -380,6 +380,7 @@ export default {
         'Nothing to redo': 'Nie ma czego ponowić',
         'The code changed meanwhile - the edit was not used': 'Kod zmienił się w międzyczasie - edycja nie została użyta',
         'The code changed meanwhile - the picture was not moved': 'Kod zmienił się w międzyczasie - obraz nie został przeniesiony',
+        "The code changed meanwhile - the picture was not removed": "Kod zmienił się w międzyczasie - obraz nie został usunięty",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.':
             'Plik zostanie usunięty z tego dokumentu. Miejsca, które go używają, nic nie pokażą. „Cofnij” go nie przywróci.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video':

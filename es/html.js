@@ -345,6 +345,7 @@ export default {
         'Nothing to redo': 'Nada que rehacer',
         'The code changed meanwhile - the edit was not used': 'Mientras tanto el código cambió: la edición no se aplicó',
         'The code changed meanwhile - the picture was not moved': 'Mientras tanto el código cambió: la imagen no se movió',
+        "The code changed meanwhile - the picture was not removed": "Mientras tanto el código cambió: la imagen no se quitó",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.':
             'El archivo se quita de este documento. Los lugares que lo usan no muestran nada. «Deshacer» no lo recupera.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': 'Un documento puede contener imágenes, hojas de estilo, scripts, fuentes, PDF, audio y vídeo',

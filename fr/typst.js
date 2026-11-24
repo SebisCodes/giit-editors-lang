@@ -97,6 +97,8 @@ export default {
         'Hidden': 'Masqué',
         'example view': 'vue avec exemples',
         'template view': 'vue du modèle',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "Cette image se déplace dans la vue du modèle - les exemples répètent ou omettent des images ici",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "Cette image se retire dans la vue du modèle - les exemples répètent ou omettent des images ici",
         'The pages filled with the examples': "Les pages remplies avec les exemples",
         'The examples could not be filled in - the pages show the template': "Les exemples n’ont pas pu être insérés - les pages montrent le modèle",
         'Preview': 'Aperçu',

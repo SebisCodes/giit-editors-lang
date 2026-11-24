@@ -44,7 +44,7 @@ const formatQuoted = s => (UNQUOTED.includes(s) ? s : `«${s}»`);
 
 export default {
     text: {
-        /* ---------- Side panel: a drawer on the desktop ---------- */
+        /* ---------- Side panel: a column on the desktop ---------- */
         'Side panel': 'Seitenleiste',
         'Show or hide the side panel': 'Seitenleiste ein- oder ausblenden',
         /* ---------- Top bar ---------- */

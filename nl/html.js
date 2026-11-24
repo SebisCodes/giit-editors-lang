@@ -345,6 +345,7 @@ export default {
         'Nothing to redo': 'Niets om opnieuw te doen',
         'The code changed meanwhile - the edit was not used': 'De code is intussen gewijzigd - de bewerking is niet gebruikt',
         'The code changed meanwhile - the picture was not moved': 'De code is intussen gewijzigd - de afbeelding is niet verplaatst',
+        "The code changed meanwhile - the picture was not removed": "De code is intussen gewijzigd - de afbeelding is niet verwijderd",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.':
             'Het bestand wordt uit dit document verwijderd. Plekken die het gebruiken, tonen niets. "Ongedaan maken" haalt het niet terug.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': 'Een document kan afbeeldingen, stylesheets, scripts, lettertypen, PDF\'s, audio en video bevatten',

@@ -61,7 +61,7 @@ const getByteWord = n => { n = +n; const a = n % 10, b = n % 100; return a === 1
 
 export default {
     text: {
-        /* ---------- Side panel: a drawer on the desktop ---------- */
+        /* ---------- Side panel: a column on the desktop ---------- */
         'Side panel': 'Боковая панель',
         'Show or hide the side panel': 'Показать или скрыть боковую панель',
         'Module shape': 'Форма модулей',

@@ -84,6 +84,8 @@ export default {
         'Hidden': '已隐藏',
         'example view': '示例视图',
         'template view': '模板视图',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "此图片需在模板视图中移动 - 示例在此处重复或省略了图片",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "此图片需在模板视图中移除 - 示例在此处重复或省略了图片",
         'The pages filled with the examples': "填入示例后的页面",
         'The examples could not be filled in - the pages show the template': "无法填入示例，页面显示模板",
         'Preview': '预览',

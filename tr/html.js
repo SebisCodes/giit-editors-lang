@@ -318,6 +318,7 @@ export default {
         'Nothing to redo': 'Yinelenecek bir şey yok',
         'The code changed meanwhile - the edit was not used': 'Kod bu arada değişti - düzenleme uygulanmadı',
         'The code changed meanwhile - the picture was not moved': 'Kod bu arada değişti - resim taşınmadı',
+        "The code changed meanwhile - the picture was not removed": "Kod bu arada değişti - resim kaldırılmadı",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.': 'Dosya bu belgeden kaldırılır. Onu kullanan yerler hiçbir şey göstermez. “Geri al” onu geri getirmez.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': 'Bir belge resimler, stil sayfaları, betikler, yazı tipleri, PDF’ler, ses ve video tutabilir',
         'The file is larger than 12 MB': 'Dosya 12 MB’tan büyük',

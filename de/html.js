@@ -358,6 +358,7 @@ export default {
         'Nothing to redo': 'Nichts zu wiederholen',
         'The code changed meanwhile - the edit was not used': 'Der Code hat sich inzwischen geändert - die Änderung wurde nicht übernommen',
         'The code changed meanwhile - the picture was not moved': 'Der Code hat sich inzwischen geändert - das Bild wurde nicht verschoben',
+        "The code changed meanwhile - the picture was not removed": "Der Code hat sich inzwischen geändert - das Bild wurde nicht entfernt",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.':
             'Die Datei wird aus diesem Dokument entfernt. Stellen, die sie verwenden, zeigen nichts mehr. «Rückgängig» holt sie nicht zurück.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': 'Ein Dokument kann Bilder, Stylesheets, Skripte, Schriften, PDFs, Audio und Video speichern',

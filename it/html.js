@@ -356,6 +356,7 @@ const dict = {
         'Nothing to redo': 'Niente da ripetere',
         'The code changed meanwhile - the edit was not used': 'Nel frattempo il codice è cambiato - la modifica non è stata applicata',
         'The code changed meanwhile - the picture was not moved': 'Nel frattempo il codice è cambiato - l\'immagine non è stata spostata',
+        "The code changed meanwhile - the picture was not removed": "Nel frattempo il codice è cambiato - l’immagine non è stata rimossa",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.':
             'Il file viene rimosso da questo documento. I punti che lo usano non mostrano più nulla. «Annulla» non lo ripristina.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': 'Un documento può contenere immagini, fogli di stile, script, caratteri, PDF, audio e video',

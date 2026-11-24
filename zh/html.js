@@ -345,6 +345,7 @@ export default {
         'Nothing to redo': '没有可重做的操作',
         'The code changed meanwhile - the edit was not used': '代码在此期间已更改，未采用此次编辑',
         'The code changed meanwhile - the picture was not moved': '代码在此期间已更改，图片未移动',
+        "The code changed meanwhile - the picture was not removed": "代码在此期间已更改，图片未移除",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.':
             '文件已从本文档中移除。使用它的位置将不显示任何内容。“撤销”无法恢复。',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': '文档可以包含图片、样式表、脚本、字体、PDF、音频和视频',

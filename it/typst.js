@@ -95,6 +95,8 @@ const dict = {
         'Hidden': 'Nascosto',
         'example view': 'vista con esempi',
         'template view': 'vista del modello',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "Questa immagine si sposta nella vista del modello - qui gli esempi ripetono o tralasciano immagini",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "Questa immagine si rimuove nella vista del modello - qui gli esempi ripetono o tralasciano immagini",
         'The pages filled with the examples': "Le pagine compilate con gli esempi",
         'The examples could not be filled in - the pages show the template': "Impossibile inserire gli esempi - le pagine mostrano il modello",
         'Preview': 'Anteprima',

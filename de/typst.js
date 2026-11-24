@@ -84,6 +84,8 @@ export default {
         'Hidden': 'Ausgeblendet',
         'example view': 'Beispielansicht',
         'template view': 'Vorlagenansicht',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "Dieses Bild wird in der Vorlagenansicht verschoben - die Beispiele wiederholen hier Bilder oder lassen sie weg",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "Dieses Bild wird in der Vorlagenansicht entfernt - die Beispiele wiederholen hier Bilder oder lassen sie weg",
         'The pages filled with the examples': "Die mit den Beispielen ausgefüllten Seiten",
         'The examples could not be filled in - the pages show the template': "Die Beispiele konnten nicht eingesetzt werden - die Seiten zeigen die Vorlage",
         'Preview': 'Vorschau',

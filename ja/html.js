@@ -339,6 +339,7 @@ export default {
         'Nothing to redo': 'やり直す操作はありません',
         'The code changed meanwhile - the edit was not used': 'その間にコードが変更されたため、編集は反映されませんでした',
         'The code changed meanwhile - the picture was not moved': 'その間にコードが変更されたため、画像は移動されませんでした',
+        "The code changed meanwhile - the picture was not removed": "その間にコードが変更されたため、画像は削除されませんでした",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.': 'ファイルはこのドキュメントから削除されます。使用箇所には何も表示されません。「元に戻す」では復元できません。',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': 'ドキュメントには画像、スタイルシート、スクリプト、フォント、PDF、音声、動画を含められます',
         'The file is larger than 12 MB': 'ファイルが 12 MB を超えています',

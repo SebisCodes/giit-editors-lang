@@ -56,7 +56,7 @@ function translateHint(h) {
 
 export default {
     text: {
-        /* ---------- Side panel: a drawer on the desktop ---------- */
+        /* ---------- Side panel: a column on the desktop ---------- */
         'Side panel': 'Painel lateral',
         'Show or hide the side panel': 'Mostrar ou ocultar o painel lateral',
         /* ---------- Top bar ---------- */

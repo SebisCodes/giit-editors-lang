@@ -111,6 +111,8 @@ export default {
         'Hidden': 'Скрыт',
         'example view': 'вид с примерами',
         'template view': 'вид шаблона',
+        "This picture moves in the template view - the examples repeat or leave out pictures here": "Переместите это изображение в режиме просмотра шаблона - здесь примеры повторяют или пропускают изображения",
+        "This picture is removed in the template view - the examples repeat or leave out pictures here": "Удалите это изображение в режиме просмотра шаблона - здесь примеры повторяют или пропускают изображения",
         'The pages filled with the examples': "Страницы, заполненные примерами",
         'The examples could not be filled in - the pages show the template': "Не удалось подставить примеры - страницы показывают шаблон",
         'Preview': 'Предпросмотр',

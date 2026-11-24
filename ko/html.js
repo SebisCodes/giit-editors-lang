@@ -354,6 +354,7 @@ export default {
         'Nothing to redo': '다시 실행할 내용이 없습니다',
         'The code changed meanwhile - the edit was not used': '그사이 코드가 바뀌어 편집이 반영되지 않았습니다',
         'The code changed meanwhile - the picture was not moved': '그사이 코드가 바뀌어 그림을 옮기지 않았습니다',
+        "The code changed meanwhile - the picture was not removed": "그사이 코드가 바뀌어 그림을 제거하지 않았습니다",
         'The file is removed from this document. Places that use it show nothing. "Undo" does not bring it back.': '파일이 이 문서에서 제거됩니다. 파일을 쓰던 곳에는 아무것도 표시되지 않습니다. “실행 취소”로 되돌릴 수 없습니다.',
         'A document can keep pictures, stylesheets, scripts, fonts, PDFs, audio and video': '문서에는 그림, 스타일시트, 스크립트, 글꼴, PDF, 오디오, 동영상을 담을 수 있습니다',
         'The file is larger than 12 MB': '파일이 12 MB보다 큽니다',
