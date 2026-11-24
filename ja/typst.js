@@ -75,6 +75,19 @@ export default {
         'View': '表示',
         'Edit': '編集',
         'Side panel': 'サイドパネル',
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'View of the preview': 'プレビューの表示',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'example view': 'サンプル表示',
+        'template view': 'テンプレート表示',
+        'The pages filled with the examples': "サンプルを埋め込んだページ",
+        'The examples could not be filled in - the pages show the template': "サンプルを埋め込めませんでした - ページにはテンプレートが表示されます",
         'Preview': 'プレビュー',
         'Document': 'ドキュメント',
         'Typst code': 'Typst コード',
@@ -487,5 +500,7 @@ export default {
         ['^"(.+)" deleted$', '「$1」を削除しました'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '$1 を開く'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', 'プレースホルダーをコード内で文字列として書いてください: "$1"'],
     ],
 };

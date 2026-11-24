@@ -13,6 +13,18 @@ import { formatTime, formatSize } from './format.js';
 
 export default {
     text: {
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'View of the tree': 'ツリーの表示',
+        'The tree of the document filled with the examples': 'サンプルを埋め込んだドキュメントのツリー',
+        'The examples could not be filled in - the tree shows the template': '例を入れられませんでした - ツリーはテンプレートを表示しています',
+        'This part shows an example - edit it in the code or in the template view': 'この部分は例を表示しています - コードまたはテンプレート表示で編集してください',
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'XML エディター - ホーム',
         'XML Editor': 'XML エディター',

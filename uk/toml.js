@@ -39,6 +39,19 @@ const TYPE = { string: 'рядок', number: 'число', boolean: 'логіч�
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Показати або сховати бічну панель',
+        'Examples': 'Приклади',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон із заповнювачами в початковому вигляді',
+        'Placeholders': 'Заповнювачі',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заповнювачі шаблону - клацання вставляє відповідний тег у позицію курсора',
+        'Shown': 'Показано',
+        'Hidden': 'Приховано',
+        'View of the tree': 'Вигляд дерева',
+        'The data filled with the examples': 'Дані, заповнені прикладами',
+        'The examples could not be filled in - the tree shows the template': 'Не вдалося підставити приклади - дерево показує шаблон',
+        'This part shows an example - change it in the template view or in the code': 'Ця частина показує приклад - змініть її у вигляді шаблону або в коді',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Захищати експорт CSV від формул електронних таблиць; прості числа зі знаком не змінюються.",
         /* ---------- Top bar ---------- */
         'TOML Editor - home': 'Редактор TOML - на головну',
@@ -535,6 +548,10 @@ export default {
         "Extra text after the table header - one key = value or [table] per line": "Зайвий текст після заголовка таблиці - одна пара ключ = значення або одна [таблиця] на рядок",
         "TOML has no null: empty values (null) are left out": "У TOML немає null: порожні значення (null) пропускаються",
         "A TOML document is a table: the data is written under the key \"value\"": "Документ TOML - це таблиця: дані записуються під ключем «value»",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Шаблон залишається без змін - форматування та перетворення працюють із заповненими даними',
+        'This part holds a placeholder - change it in the code': 'Ця частина містить заповнювач - змініть її в коді',
+        'placeholder': 'заповнювач',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -715,5 +732,7 @@ export default {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `Таблицю «${a}» уже визначено [заголовком] - запишіть ключ у її розділі`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `Цей рядок не закрито - бракує ${a}`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `«${a}» - не значення: текстові потрібні лапки ("…"); інші значення - числа, true, false, дати, [ ] або { }`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Заповнювач як ключ записується в лапках: "$1"'],
     ],
 };

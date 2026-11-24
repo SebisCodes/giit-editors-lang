@@ -59,6 +59,18 @@ const MONTHS = { Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6, Jul: 7, Aug: 8,
 
 export default {
     text: {
+        'Show or hide the side panel': '显示或隐藏侧边栏',
+        'Examples': '示例',
+        'Template': '模板',
+        'The template with its placeholders as written': '按原样显示带占位符的模板',
+        'Placeholders': '占位符',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '模板中的占位符，点击即可在光标处插入对应标签',
+        'Shown': '已显示',
+        'Hidden': '已隐藏',
+        'View of the drawing': '绘图视图',
+        'The drawing filled with the examples': '填入示例后的绘图',
+        'The examples could not be filled in - the canvas shows the template': '无法填入示例，画布显示模板',
+        'This text shows an example - edit it in the code or in the template view': '此文本显示示例 - 请在代码或模板视图中编辑',
         ...LABEL,
         ...HINT,
         ...CODE_ERROR,
@@ -449,6 +461,9 @@ export default {
         'Format': '格式',
         'Name': '名称',
         'OK': '确定',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': '绘图包含占位符，代码保持原样',
+        'The style holds placeholders - edit it in the code': '样式包含占位符，请在代码中修改',
     },
 
     html: {
@@ -498,6 +513,8 @@ export default {
 
         // Code
         ['^(\\d+) lines · (.+)$', '$1 行 · $2'],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `第 ${l} 行，第 ${c} 列：`],
+        ['^Line (\\d+):$', (m, l) => `第 ${l} 行：`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `第 ${l} 行，第 ${c} 列：${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `第 ${l} 行：${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', '文件已压缩：$1 → $2 字节'],

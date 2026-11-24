@@ -26,6 +26,19 @@ const translateKeys = k => getPlural(k, 'clave', 'claves');
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostrar u ocultar el panel lateral',
+        'Examples': 'Ejemplos',
+        'Template': 'Plantilla',
+        'The template with its placeholders as written': 'La plantilla con sus marcadores tal como están escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Los marcadores de la plantilla - haz clic en uno para insertar su etiqueta en el cursor',
+        'Shown': 'Mostrado',
+        'Hidden': 'Oculto',
+        'This part shows an example - change it in the template view or in the code': 'Esta parte muestra un ejemplo - cámbiala en la vista de plantilla o en el código',
+        'View of the records': 'Vista de los registros',
+        'The records filled with the examples': 'Los registros rellenados con los ejemplos',
+        'The examples could not be filled in - the records show the template': 'No se han podido insertar los ejemplos - los registros muestran la plantilla',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "Al volver a leerlos desde SHLS, los datos no son los mismos (por ejemplo, registros cuyas claves están en otro orden que en el primer registro) - revise el resultado.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'Editor de SHLS - inicio',
@@ -329,6 +342,10 @@ export default {
         /* ---------- Problems in the code ---------- */
         'A tab in the indentation - SHLS counts spaces only, so this line is read as a section name': 'Un tabulador en la sangría: SHLS solo cuenta espacios, así que esta línea se lee como nombre de sección',
         'SHLS readers ignore this line - its indentation does not fit the key block': 'Los lectores de SHLS ignoran esta línea: su sangría no encaja con el bloque de claves',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Una línea de etiquetas de sección de la plantilla debe ir entre registros completos',
+        'A template stays as written - the encoder works on filled data': 'Una plantilla permanece tal como está: el codificador trabaja con datos rellenados',
+        'Sections of the template stay whole - make this change in the code': 'Las secciones de la plantilla permanecen intactas: haz este cambio en el código',
     },
 
     html: {

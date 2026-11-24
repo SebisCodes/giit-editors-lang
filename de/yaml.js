@@ -22,6 +22,19 @@ const translateFound = s => (s === 'the end of the text' ? 'das Ende des Texts' 
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Seitenleiste ein- oder ausblenden',
+        'Examples': 'Beispiele',
+        'Template': 'Vorlage',
+        'The template with its placeholders as written': 'Die Vorlage mit ihren Platzhaltern, wie sie geschrieben sind',
+        'Placeholders': 'Platzhalter',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Die Platzhalter der Vorlage - ein Klick setzt das zugehörige Tag beim Cursor ein',
+        'Shown': 'Angezeigt',
+        'Hidden': 'Ausgeblendet',
+        'View of the tree': 'Ansicht des Baums',
+        'The data filled with the examples': 'Die mit den Beispielen ausgefüllten Daten',
+        'The examples could not be filled in - the tree shows the template': 'Die Beispiele konnten nicht eingesetzt werden - der Baum zeigt die Vorlage',
+        'This part shows an example - change it in the template view or in the code': 'Dieser Teil zeigt ein Beispiel - ändere ihn in der Vorlagenansicht oder im Code',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Den CSV-Export vor Tabellenformeln schützen; einfache Zahlen mit Vorzeichen bleiben unverändert.",
         /* ---------- Top bar ---------- */
         'YAML Editor - home': 'YAML-Editor - Startseite',
@@ -389,6 +402,10 @@ export default {
         'An alias cannot have an anchor or a tag': 'Ein Alias kann keinen Anker und keinen Tag haben',
         'The document is empty': 'Das Dokument ist leer',
         'The data is nested too deeply': 'Die Daten sind zu tief verschachtelt',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Eine Vorlage bleibt, wie sie ist - Formatieren und Umwandlungen arbeiten mit ausgefüllten Daten',
+        'This part holds a placeholder - change it in the code': 'Dieser Teil enthält einen Platzhalter - ändere ihn im Code',
+        'placeholder': 'Platzhalter',
     },
 
     html: {
@@ -535,5 +552,7 @@ export default {
         ['^"(.+)" deleted$', '«$1» gelöscht'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '$1 öffnen'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Ein Platzhalter als Schlüssel steht in Anführungszeichen: "$1"'],
     ],
 };

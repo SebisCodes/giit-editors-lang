@@ -94,6 +94,19 @@ export default {
         'View': 'Widok',
         'Edit': 'Edycja',
         'Side panel': 'Panel boczny',
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'View of the preview': 'Widok podglądu',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'example view': 'widok przykładów',
+        'template view': 'widok szablonu',
+        'The pages filled with the examples': "Strony wypełnione przykładami",
+        'The examples could not be filled in - the pages show the template': "Nie udało się wstawić przykładów - strony pokazują szablon",
         'Preview': 'Podgląd',
         'Document': 'Dokument',
         'Typst code': 'Kod Typst',
@@ -546,5 +559,7 @@ export default {
         ['^"(.+)" deleted$', 'Usunięto „$1”'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Otwórz $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', 'Zapisz symbol zastępczy w kodzie jako ciąg znaków: "$1"'],
     ],
 };

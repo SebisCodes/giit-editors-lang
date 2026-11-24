@@ -67,6 +67,18 @@ const translateDrawings = n => (n === '1' ? 'disegno' : 'disegni');
 
 const dict = {
     text: {
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'View of the drawing': 'Vista del disegno',
+        'The drawing filled with the examples': 'Il disegno compilato con gli esempi',
+        'The examples could not be filled in - the canvas shows the template': 'Impossibile inserire gli esempi - la tela mostra il modello',
+        'This text shows an example - edit it in the code or in the template view': 'Questo testo mostra un esempio - modificalo nel codice o nella vista del modello',
         /* Words that are the same in German and English, so not in the German pack */
         'Code': 'Codice',
         'Format': 'Formato',
@@ -456,6 +468,9 @@ const dict = {
         'Done': 'Fatto',
         'Colors in this drawing': 'Colori in questo disegno',
         'Basic colors': 'Colori di base',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': 'Il disegno contiene segnaposto - il suo codice rimane com’è',
+        'The style holds placeholders - edit it in the code': 'Lo stile contiene segnaposto - modificalo nel codice',
     },
 
     html: {
@@ -505,6 +520,8 @@ const dict = {
 
         // Code
         ['^(\\d+) lines · (.+)$', (m, n, s) => `${n} ${n === '1' ? 'riga' : 'righe'} · ${s}`],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `Riga ${l}, colonna ${c}:`],
+        ['^Line (\\d+):$', (m, l) => `Riga ${l}:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `Riga ${l}, colonna ${c}: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `Riga ${l}: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', 'File compresso: $1 → $2 byte'],

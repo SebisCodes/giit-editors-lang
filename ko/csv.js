@@ -35,6 +35,19 @@ const SEPS = { comma: '쉼표', semicolon: '세미콜론', tab: '탭', pipe: '�
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'This part shows an example - change it in the template view or in the code': '이 부분은 예시를 표시합니다 - 템플릿 보기나 코드에서 변경하세요',
+        'View of the table': '표 보기',
+        'The table filled with the examples': '예시로 채운 표',
+        'The examples could not be filled in - the table shows the template': '예시를 넣을 수 없습니다 - 표에 템플릿이 표시됩니다',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'CSV 편집기 - 홈',
         'CSV Editor': 'CSV 편집기',

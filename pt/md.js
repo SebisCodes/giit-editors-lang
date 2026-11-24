@@ -18,6 +18,20 @@ const ZIP = { 'it is not a ZIP file': 'não é um arquivo ZIP', 'there is no .md
 
 export default {
     text: {
+        'Side panel': 'Painel lateral',
+        'Show or hide the side panel': 'Mostrar ou ocultar o painel lateral',
+        'Examples': 'Exemplos',
+        'Template': 'Modelo',
+        'View of the preview': 'Modo de visualização',
+        'The document filled with the examples': 'O documento preenchido com os exemplos',
+        'The template with its placeholders as written': 'O modelo com seus marcadores como foram escritos',
+        'The examples could not be filled in - the preview shows the template': 'Não foi possível preencher os exemplos - a visualização mostra o modelo',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Os marcadores do modelo - clique em um para inserir sua tag no cursor',
+        'Shown': 'Exibido',
+        'Hidden': 'Oculto',
+        'example view': 'visualização com exemplos',
+        'template view': 'visualização do modelo',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "Editando na página - Enter: novo parágrafo, Shift+Enter: nova linha, Ctrl+Enter ou um clique em outro lugar aplica, Escape cancela",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "Um novo parágrafo em negrito, itálico ou dentro de um link é criado no código - Shift+Enter cria uma nova linha",

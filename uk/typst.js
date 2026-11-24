@@ -95,6 +95,19 @@ export default {
         'View': 'Вигляд',
         'Edit': 'Правка',
         'Side panel': 'Бічна панель',
+        'Show or hide the side panel': 'Показати або сховати бічну панель',
+        'Examples': 'Приклади',
+        'Template': 'Шаблон',
+        'View of the preview': 'Вигляд перегляду',
+        'The template with its placeholders as written': 'Шаблон із заповнювачами в початковому вигляді',
+        'Placeholders': 'Заповнювачі',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заповнювачі шаблону - клацання вставляє відповідний тег у позицію курсора',
+        'Shown': 'Показано',
+        'Hidden': 'Приховано',
+        'example view': 'вигляд із прикладами',
+        'template view': 'вигляд шаблону',
+        'The pages filled with the examples': "Сторінки, заповнені прикладами",
+        'The examples could not be filled in - the pages show the template': "Не вдалося підставити приклади - сторінки показують шаблон",
         'Preview': 'Перегляд',
         'Document': 'Документ',
         'Typst code': 'Код Typst',
@@ -530,5 +543,7 @@ export default {
         ['^"(.+)" deleted$', '«$1» видалено'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Відкрити $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', 'Запишіть заповнювач у коді як рядок: "$1"'],
     ],
 };

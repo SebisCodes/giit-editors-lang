@@ -33,6 +33,18 @@ function formatTime(s) {
 
 export default {
     text: {
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'View of the tree': '트리 보기',
+        'The tree of the document filled with the examples': '예제를 채워 넣은 문서의 트리',
+        'The examples could not be filled in - the tree shows the template': '예시를 넣을 수 없습니다 - 트리에 템플릿이 표시됩니다',
+        'This part shows an example - edit it in the code or in the template view': '이 부분은 예시를 표시합니다 - 코드나 템플릿 보기에서 편집하세요',
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'XML 편집기 - 홈',
         'XML Editor': 'XML 편집기',

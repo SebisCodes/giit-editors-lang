@@ -76,6 +76,18 @@ const MONTH = { Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6, Jul: 7, Aug: 8, 
 
 export default {
     text: {
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'View of the drawing': '図の表示',
+        'The drawing filled with the examples': 'サンプルを埋め込んだ図',
+        'The examples could not be filled in - the canvas shows the template': 'サンプルを埋め込めませんでした - キャンバスにはテンプレートが表示されます',
+        'This text shows an example - edit it in the code or in the template view': 'このテキストはサンプルを表示しています - コードまたはテンプレート表示で編集してください',
         ...LABEL,
         ...HINT,
         ...CODE_ERROR,
@@ -447,6 +459,9 @@ export default {
         'Name': '名前',
         'Token': 'トークン',
         'online': 'オンライン',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': '図にプレースホルダーが含まれています。コードはそのまま保持されます',
+        'The style holds placeholders - edit it in the code': 'スタイルにプレースホルダーが含まれています。コードで編集してください',
     },
     html: {
         // AI assistant
@@ -504,6 +519,8 @@ export default {
 
         // Code
         ['^(\\d+) lines · (.+)$', '$1 行 · $2'],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `${l} 行 ${c} 列:`],
+        ['^Line (\\d+):$', (m, l) => `${l} 行目:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `${l} 行 ${c} 列: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `${l} 行目: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', 'ファイルを圧縮しました: $1 → $2 バイト'],

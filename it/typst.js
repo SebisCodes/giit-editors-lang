@@ -84,6 +84,19 @@ const dict = {
         'View': 'Vista',
         'Edit': 'Modifica',
         'Side panel': 'Pannello laterale',
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'View of the preview': 'Vista dell\'anteprima',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'example view': 'vista con esempi',
+        'template view': 'vista del modello',
+        'The pages filled with the examples': "Le pagine compilate con gli esempi",
+        'The examples could not be filled in - the pages show the template': "Impossibile inserire gli esempi - le pagine mostrano il modello",
         'Preview': 'Anteprima',
         'Document': 'Documento',
         'Typst code': 'Codice Typst',
@@ -501,6 +514,8 @@ const dict = {
         ['^"(.+)" deleted$', '«$1» eliminato'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Apri $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', 'Scrivi il segnaposto nel codice come stringa: "$1"'],
     ],
 };
 

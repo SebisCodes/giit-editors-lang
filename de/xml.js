@@ -15,6 +15,18 @@ import { formatTime, formatSize, formatThousands, getPlural } from './format.js'
 
 export default {
     text: {
+        'Show or hide the side panel': 'Seitenleiste ein- oder ausblenden',
+        'Examples': 'Beispiele',
+        'Template': 'Vorlage',
+        'The template with its placeholders as written': 'Die Vorlage mit ihren Platzhaltern, wie sie geschrieben sind',
+        'Placeholders': 'Platzhalter',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Die Platzhalter der Vorlage - ein Klick setzt das zugehörige Tag beim Cursor ein',
+        'Shown': 'Angezeigt',
+        'Hidden': 'Ausgeblendet',
+        'View of the tree': 'Ansicht des Baums',
+        'The tree of the document filled with the examples': 'Der Baum des mit den Beispielen ausgefüllten Dokuments',
+        'The examples could not be filled in - the tree shows the template': 'Die Beispiele konnten nicht eingesetzt werden - der Baum zeigt die Vorlage',
+        'This part shows an example - edit it in the code or in the template view': 'Dieser Teil zeigt ein Beispiel - bearbeite ihn im Code oder in der Vorlagenansicht',
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'XML-Editor - Startseite',
         'XML Editor': 'XML-Editor',

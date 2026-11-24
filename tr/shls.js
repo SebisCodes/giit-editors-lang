@@ -21,6 +21,19 @@ const formatSize = s => s.replace(/^([\d,]+) bytes$/, (m, k) => `${formatThousan
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'This part shows an example - change it in the template view or in the code': 'Bu bölüm bir örnek gösteriyor - şablon görünümünde veya kodda değiştirin',
+        'View of the records': 'Kayıtların görünümü',
+        'The records filled with the examples': 'Örneklerle doldurulmuş kayıtlar',
+        'The examples could not be filled in - the records show the template': 'Örnekler eklenemedi - kayıtlar şablonu gösteriyor',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "SHLS’ten geri okunduğunda veriler aynı değil (örneğin anahtarları ilk kayıttakinden farklı sırada olan kayıtlar) - sonucu kontrol edin.",
         'SHLS Editor - home': 'SHLS Editörü - ana sayfa',
         'SHLS Editor': 'SHLS Editörü',
@@ -282,6 +295,10 @@ export default {
         'A tab in the indentation - SHLS counts spaces only, so this line is read as a section name': 'Girintide bir sekme - SHLS yalnızca boşlukları sayar, bu yüzden bu satır bir bölüm adı olarak okunur',
         'SHLS readers ignore this line - its indentation does not fit the key block': 'SHLS okuyucuları bu satırı yok sayar - girintisi anahtar bloğuna uymuyor',
         'Code': 'Kod',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Şablonun bölüm etiketlerini içeren bir satır, eksiksiz kayıtların arasında olmalıdır',
+        'A template stays as written - the encoder works on filled data': 'Şablon olduğu gibi kalır - kodlayıcı doldurulmuş verilerle çalışır',
+        'Sections of the template stay whole - make this change in the code': 'Şablonun bölümleri bütün kalır - bu değişikliği kodda yapın',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':

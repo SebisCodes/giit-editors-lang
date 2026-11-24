@@ -22,6 +22,19 @@ const translateFound = s => (s === 'the end of the text' ? 'el final del texto' 
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostrar u ocultar el panel lateral',
+        'Examples': 'Ejemplos',
+        'Template': 'Plantilla',
+        'The template with its placeholders as written': 'La plantilla con sus marcadores tal como están escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Los marcadores de la plantilla - haz clic en uno para insertar su etiqueta en el cursor',
+        'Shown': 'Mostrado',
+        'Hidden': 'Oculto',
+        'View of the tree': 'Modo del árbol',
+        'The data filled with the examples': 'Los datos rellenados con los ejemplos',
+        'The examples could not be filled in - the tree shows the template': 'No se han podido insertar los ejemplos - el árbol muestra la plantilla',
+        'This part shows an example - change it in the template view or in the code': 'Esta parte muestra un ejemplo - cámbiala en la vista de plantilla o en el código',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Proteger la exportación CSV contra fórmulas de hojas de cálculo; los números simples con signo no cambian.",
         'Code': 'Código',
         'Escape': "Esc",
@@ -407,6 +420,10 @@ export default {
         'Extra text after the end of the data - a JSON document has one value at the top (usually an object or an array)':
             'Texto de más después del final de los datos: un documento JSON tiene un solo valor en el nivel superior (normalmente un objeto o un array)',
         'The data is nested too deeply': 'Los datos están anidados demasiado profundamente',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Una plantilla permanece tal como está: Formatear y las conversiones trabajan con datos rellenados',
+        'This part holds a placeholder - change it in the code': 'Esta parte contiene un marcador: cámbiala en el código',
+        'placeholder': 'marcador',
     },
 
     html: {
@@ -560,5 +577,7 @@ export default {
         ['^"(.+)" deleted$', '«$1» eliminado'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Abrir $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Un marcador usado como clave va entre comillas: "$1"'],
     ],
 };

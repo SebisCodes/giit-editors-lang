@@ -41,6 +41,9 @@ function translateHint(h) {
 
 export default {
     text: {
+        /* ---------- Side panel: a drawer on the desktop ---------- */
+        'Side panel': '侧边栏',
+        'Show or hide the side panel': '显示或隐藏侧边栏',
         /* ---------- Top bar ---------- */
         'QR Editor - home': 'QR 编辑器首页',
         'QR Editor': 'QR 编辑器',

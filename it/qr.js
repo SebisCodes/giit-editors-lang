@@ -53,6 +53,9 @@ const FROM = { appunti: 'dagli appunti', fotocamera: 'dalla fotocamera' };
 
 const dict = {
     text: {
+        /* ---------- Side panel: a drawer on the desktop ---------- */
+        'Side panel': 'Pannello laterale',
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
         /* ---------- Top bar ---------- */
         'QR Editor - home': 'Editor QR - pagina iniziale',
         'QR Editor': 'Editor QR',

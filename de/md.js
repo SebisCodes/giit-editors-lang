@@ -18,6 +18,20 @@ const ZIP = { 'it is not a ZIP file': 'es ist keine ZIP-Datei', 'there is no .md
 
 export default {
     text: {
+        'Side panel': 'Seitenleiste',
+        'Show or hide the side panel': 'Seitenleiste ein- oder ausblenden',
+        'Examples': 'Beispiele',
+        'Template': 'Vorlage',
+        'View of the preview': 'Ansicht der Vorschau',
+        'The document filled with the examples': 'Das mit den Beispielen ausgefüllte Dokument',
+        'The template with its placeholders as written': 'Die Vorlage mit ihren Platzhaltern, wie sie geschrieben sind',
+        'The examples could not be filled in - the preview shows the template': 'Die Beispiele konnten nicht eingesetzt werden - die Vorschau zeigt die Vorlage',
+        'Placeholders': 'Platzhalter',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Die Platzhalter der Vorlage - ein Klick setzt das zugehörige Tag beim Cursor ein',
+        'Shown': 'Angezeigt',
+        'Hidden': 'Ausgeblendet',
+        'example view': 'Beispielansicht',
+        'template view': 'Vorlagenansicht',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "Bearbeiten auf der Seite - Enter: neuer Absatz, Shift+Enter: neue Zeile, Ctrl+Enter oder ein Klick daneben übernimmt, Escape bricht ab",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "Ein neuer Absatz in fettem, kursivem Text oder einem Link wird im Code eingefügt - Shift+Enter fügt eine neue Zeile ein",

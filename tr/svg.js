@@ -84,6 +84,18 @@ const CODE_ERROR = {
 
 export default {
     text: {
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'View of the drawing': 'Çizimin görünümü',
+        'The drawing filled with the examples': 'Örneklerle doldurulmuş çizim',
+        'The examples could not be filled in - the canvas shows the template': 'Örnekler yerleştirilemedi - tuval şablonu gösteriyor',
+        'This text shows an example - edit it in the code or in the template view': 'Bu metin bir örnek gösteriyor - kodda veya şablon görünümünde düzenleyin',
         'Drawing': 'Çizim',
         'Rectangle': 'Dikdörtgen',
         'Circle': 'Daire',
@@ -466,6 +478,9 @@ export default {
         'Colors in this drawing': 'Bu çizimdeki renkler',
         'Basic colors': 'Temel renkler',
         'Code': 'Kod',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': 'Çizim yer tutucular içeriyor - kodu olduğu gibi kalır',
+        'The style holds placeholders - edit it in the code': 'Stil yer tutucular içeriyor - onu kodda düzenleyin',
     },
     html: {
         'Click <b>Copy prompt</b>.':
@@ -515,6 +530,8 @@ export default {
         ['^(.*?) ?Snapping to a ([\\d.]+) grid\\.$', (m, h, n) => `${h ? (HINT[h] || h) + ' ' : ''}${n} ızgarasına yaslanır.`],
         ['^(.*?) ?Snap: ([\\d.]+)\\.$', (m, h, n) => `${h ? (HINT[h] || h) + ' ' : ''}Yaslama: ${n}.`],
         ['^(\\d+) lines · (.+)$', (m, n, s) => `${n} satır · ${s}`],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `Satır ${l}, sütun ${c}:`],
+        ['^Line (\\d+):$', (m, l) => `Satır ${l}:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `Satır ${l}, sütun ${c}: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `Satır ${l}: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', 'Dosya küçültüldü: $1 → $2 bayt'],

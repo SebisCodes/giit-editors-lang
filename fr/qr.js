@@ -61,6 +61,9 @@ const formatQuoted = s => (UNQUOTED.includes(s) ? s : `« ${s} »`);
 
 export default {
     text: {
+        /* ---------- Side panel: a drawer on the desktop ---------- */
+        'Side panel': 'Panneau latéral',
+        'Show or hide the side panel': 'Afficher ou masquer le panneau latéral',
         /* ---------- Top bar ---------- */
         'QR Editor - home': 'Éditeur QR - accueil',
         'QR Editor': 'Éditeur QR',

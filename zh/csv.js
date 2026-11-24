@@ -18,6 +18,19 @@ const SEPS = { comma: '逗号', semicolon: '分号', tab: '制表符', pipe: '�
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': '显示或隐藏侧边栏',
+        'Examples': '示例',
+        'Template': '模板',
+        'The template with its placeholders as written': '按原样显示带占位符的模板',
+        'Placeholders': '占位符',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '模板中的占位符，点击即可在光标处插入对应标签',
+        'Shown': '已显示',
+        'Hidden': '已隐藏',
+        'This part shows an example - change it in the template view or in the code': '此部分显示示例 - 请在模板视图或代码中修改',
+        'View of the table': '表格的视图',
+        'The table filled with the examples': '用示例填写的表格',
+        'The examples could not be filled in - the table shows the template': '无法填入示例 - 表格显示模板',
         'online': '在线',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'CSV 编辑器首页',

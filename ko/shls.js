@@ -33,6 +33,19 @@ function formatTime(s) {
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'This part shows an example - change it in the template view or in the code': '이 부분은 예시를 표시합니다 - 템플릿 보기나 코드에서 변경하세요',
+        'View of the records': '레코드 보기',
+        'The records filled with the examples': '예시로 채운 레코드',
+        'The examples could not be filled in - the records show the template': '예시를 넣을 수 없습니다 - 레코드에 템플릿이 표시됩니다',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "SHLS에서 다시 읽으면 데이터가 같지 않습니다(예: 첫 번째 레코드와 키 순서가 다른 레코드) - 결과를 확인하세요.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'SHLS 편집기 - 홈',
@@ -331,6 +344,10 @@ export default {
         'Token': '토큰',
         'Name': '이름',
         'online': '온라인',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': '템플릿의 섹션 태그가 있는 줄은 완전한 레코드 사이에 있어야 합니다',
+        'A template stays as written - the encoder works on filled data': '템플릿은 작성된 그대로 유지됩니다 - 인코더는 값을 채운 데이터를 처리합니다',
+        'Sections of the template stay whole - make this change in the code': '템플릿의 섹션은 온전하게 유지됩니다 - 이 변경은 코드에서 하세요',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':

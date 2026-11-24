@@ -29,6 +29,19 @@ const translateFound = s => (s === 'the end of the text' ? 'la fine del testo' :
 
 const dict = {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'View of the tree': 'Vista dell\'albero',
+        'The data filled with the examples': 'I dati compilati con gli esempi',
+        'The examples could not be filled in - the tree shows the template': 'Non è stato possibile inserire gli esempi - l\'albero mostra il modello',
+        'This part shows an example - change it in the template view or in the code': 'Questa parte mostra un esempio - modificala nella vista del modello o nel codice',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Proteggi l’esportazione CSV dalle formule dei fogli di calcolo; i numeri semplici con segno restano invariati.",
         /* Words that are the same in German and English, so not in the German pack */
         'Code': 'Codice',
@@ -400,6 +413,10 @@ const dict = {
         'An alias cannot have an anchor or a tag': 'Un alias non può avere un\'ancora o un tag',
         'The document is empty': 'Il documento è vuoto',
         'The data is nested too deeply': 'I dati sono annidati troppo in profondità',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Un modello rimane com’è - Formatta e le conversioni lavorano sui dati compilati',
+        'This part holds a placeholder - change it in the code': 'Questa parte contiene un segnaposto - modificala nel codice',
+        'placeholder': 'segnaposto',
     },
 
     html: {
@@ -546,6 +563,8 @@ const dict = {
         ['^"(.+)" deleted$', '«$1» eliminato'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Apri $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Un segnaposto usato come chiave va tra virgolette: "$1"'],
     ],
 };
 

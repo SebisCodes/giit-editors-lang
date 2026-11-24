@@ -67,6 +67,18 @@ const translateDrawings = n => (n === '1' ? 'tekening' : 'tekeningen');
 
 export default {
     text: {
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'View of the drawing': 'Weergave van de tekening',
+        'The drawing filled with the examples': 'De tekening ingevuld met de voorbeelden',
+        'The examples could not be filled in - the canvas shows the template': 'De voorbeelden konden niet worden ingevuld - het canvas toont het sjabloon',
+        'This text shows an example - edit it in the code or in the template view': 'Deze tekst toont een voorbeeld - bewerk hem in de code of in de sjabloonweergave',
         ...LABEL,
         ...HINT,
         ...CODE_ERROR,
@@ -455,6 +467,9 @@ export default {
         /* ---------- Single words ---------- */
         'Format': 'Formaat',
         'Name': 'Naam',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': 'De tekening bevat plaatshouders - de code blijft zoals hij is',
+        'The style holds placeholders - edit it in the code': 'De stijl bevat plaatshouders - pas hem aan in de code',
     },
 
     html: {
@@ -504,6 +519,8 @@ export default {
 
         // Code
         ['^(\\d+) lines · (.+)$', (m, n, s) => `${n} ${n === '1' ? 'regel' : 'regels'} · ${s}`],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `Regel ${l}, kolom ${c}:`],
+        ['^Line (\\d+):$', (m, l) => `Regel ${l}:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `Regel ${l}, kolom ${c}: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `Regel ${l}: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', 'Bestand verkleind: $1 → $2 bytes'],

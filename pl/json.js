@@ -42,6 +42,19 @@ const translateFound = s => (s === 'the end of the text' ? 'koniec tekstu' : s =
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'View of the tree': 'Widok drzewa',
+        'The data filled with the examples': 'Dane wypełnione przykładami',
+        'The examples could not be filled in - the tree shows the template': 'Nie udało się wstawić przykładów - drzewo pokazuje szablon',
+        'This part shows an example - change it in the template view or in the code': 'Ta część pokazuje przykład - zmień ją w widoku szablonu lub w kodzie',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Chroń eksport CSV przed formułami arkusza; zwykłe liczby ze znakiem pozostają bez zmian.",
         /* ---------- Top bar ---------- */
         'JSON Editor - home': 'Edytor JSON - strona główna',
@@ -467,6 +480,10 @@ export default {
         'Export': 'Eksport',
         'Name': 'Nazwa',
         'Label': 'Etykieta',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Szablon pozostaje bez zmian - Formatuj i konwersje działają na uzupełnionych danych',
+        'This part holds a placeholder - change it in the code': 'Ta część zawiera symbol zastępczy - zmień ją w kodzie',
+        'placeholder': 'symbol zastępczy',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -654,5 +671,7 @@ export default {
         ['^"(.+)" deleted$', 'Usunięto „$1”'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Otwórz $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Symbol zastępczy użyty jako klucz musi być w cudzysłowie: "$1"'],
     ],
 };

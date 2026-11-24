@@ -30,6 +30,19 @@ const translateFound = s => (s === 'the end of the text' ? 'metnin sonu' : s ===
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'View of the tree': 'Ağacın görünümü',
+        'The data filled with the examples': 'Örneklerle doldurulmuş veriler',
+        'The examples could not be filled in - the tree shows the template': 'Örnekler eklenemedi - ağaç şablonu gösteriyor',
+        'This part shows an example - change it in the template view or in the code': 'Bu bölüm bir örnek gösteriyor - şablon görünümünde veya kodda değiştirin',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "CSV dışa aktarımını elektronik tablo formüllerine karşı koru; işaretli düz sayılar değişmez.",
         'JSON Editor - home': 'JSON Editörü - ana sayfa',
         'JSON Editor': 'JSON Editörü',
@@ -369,6 +382,10 @@ export default {
         'Extra text after the end of the data - a JSON document has one value at the top (usually an object or an array)': 'Verilerin sonundan sonra fazladan metin - bir JSON belgesinin en üstte tek bir değeri vardır (genellikle bir nesne veya dizi)',
         'The data is nested too deeply': 'Veriler çok fazla iç içe geçmiş',
         'Code': 'Kod',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Şablon olduğu gibi kalır - Biçimlendir ve dönüştürmeler doldurulmuş verilerle çalışır',
+        'This part holds a placeholder - change it in the code': 'Bu bölüm bir yer tutucu içeriyor - onu kodda değiştirin',
+        'placeholder': 'yer tutucu',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -499,5 +516,7 @@ export default {
         ['^Delete "(.+)"\\?$', '“$1” silinsin mi?'],
         ['^"(.+)" deleted$', '“$1” silindi'],
         ['^Open (.+)$', '$1 aç'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Anahtar olarak kullanılan yer tutucu tırnak içinde olmalıdır: "$1"'],
     ],
 };

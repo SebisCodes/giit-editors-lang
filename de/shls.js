@@ -20,6 +20,19 @@ const translateRecords = k => getPlural(k, 'Datensatz', 'Datensätze');
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Seitenleiste ein- oder ausblenden',
+        'Examples': 'Beispiele',
+        'Template': 'Vorlage',
+        'The template with its placeholders as written': 'Die Vorlage mit ihren Platzhaltern, wie sie geschrieben sind',
+        'Placeholders': 'Platzhalter',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Die Platzhalter der Vorlage - ein Klick setzt das zugehörige Tag beim Cursor ein',
+        'Shown': 'Angezeigt',
+        'Hidden': 'Ausgeblendet',
+        'This part shows an example - change it in the template view or in the code': 'Dieser Teil zeigt ein Beispiel - ändere ihn in der Vorlagenansicht oder im Code',
+        'View of the records': 'Ansicht der Datensätze',
+        'The records filled with the examples': 'Die mit den Beispielen ausgefüllten Datensätze',
+        'The examples could not be filled in - the records show the template': 'Die Beispiele konnten nicht eingesetzt werden - die Datensätze zeigen die Vorlage',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "Aus SHLS zurückgelesen sind die Daten nicht dieselben (zum Beispiel Datensätze, deren Schlüssel in anderer Reihenfolge stehen als im ersten Datensatz) - prüfe das Ergebnis.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'SHLS-Editor - Startseite',
@@ -323,6 +336,10 @@ export default {
         /* ---------- Problems in the code ---------- */
         'A tab in the indentation - SHLS counts spaces only, so this line is read as a section name': 'Ein Tabulator in der Einrückung - SHLS zählt nur Leerzeichen, darum wird diese Zeile als Abschnittsname gelesen',
         'SHLS readers ignore this line - its indentation does not fit the key block': 'SHLS-Leser beachten diese Zeile nicht - ihre Einrückung passt nicht zum Schlüsselblock',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Eine Zeile mit Abschnitts-Tags der Vorlage gehört zwischen vollständige Datensätze',
+        'A template stays as written - the encoder works on filled data': 'Eine Vorlage bleibt, wie sie ist - der Encoder arbeitet mit ausgefüllten Daten',
+        'Sections of the template stay whole - make this change in the code': 'Die Abschnitte der Vorlage bleiben ganz - nimm diese Änderung im Code vor',
     },
 
     html: {

@@ -42,6 +42,19 @@ const translateFound = s => (s === 'the end of the text' ? 'koniec tekstu' : s =
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'View of the tree': 'Widok drzewa',
+        'The data filled with the examples': 'Dane wypełnione przykładami',
+        'The examples could not be filled in - the tree shows the template': 'Nie udało się wstawić przykładów - drzewo pokazuje szablon',
+        'This part shows an example - change it in the template view or in the code': 'Ta część pokazuje przykład - zmień ją w widoku szablonu lub w kodzie',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Chroń eksport CSV przed formułami arkusza; zwykłe liczby ze znakiem pozostają bez zmian.",
         /* ---------- Top bar ---------- */
         'TOML Editor - home': 'Edytor TOML - strona główna',
@@ -540,6 +553,10 @@ export default {
         "Extra text after the table header - one key = value or [table] per line": "Dodatkowy tekst po nagłówku tabeli - jeden klucz = wartość lub [tabela] na wiersz",
         "TOML has no null: empty values (null) are left out": "TOML nie ma null: puste wartości (null) są pomijane",
         "A TOML document is a table: the data is written under the key \"value\"": "Dokument TOML jest tabelą: dane są zapisane pod kluczem „value”",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Szablon pozostaje bez zmian - Formatuj i konwersje działają na uzupełnionych danych',
+        'This part holds a placeholder - change it in the code': 'Ta część zawiera symbol zastępczy - zmień ją w kodzie',
+        'placeholder': 'symbol zastępczy',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -754,5 +771,7 @@ export default {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `Tabela „${a}” jest już zdefiniowana [nagłówkiem] - zapisz klucz w jej sekcji`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `Ten tekst nigdy nie jest zamknięty - brakuje ${a}`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `„${a}” nie jest wartością - tekst wymaga cudzysłowu ("…"); inne wartości to liczby, true, false, daty, [ ] lub { }`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Symbol zastępczy użyty jako klucz musi być w cudzysłowie: "$1"'],
     ],
 };

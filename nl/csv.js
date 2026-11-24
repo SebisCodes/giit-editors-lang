@@ -17,6 +17,19 @@ const SEPS = { comma: 'komma', semicolon: 'puntkomma', tab: 'tab', pipe: 'vertic
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'This part shows an example - change it in the template view or in the code': 'Dit deel toont een voorbeeld - wijzig het in de sjabloonweergave of in de code',
+        'View of the table': 'Weergave van de tabel',
+        'The table filled with the examples': 'De tabel ingevuld met de voorbeelden',
+        'The examples could not be filled in - the table shows the template': 'De voorbeelden konden niet worden ingevuld - de tabel toont de sjabloon',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'CSV-editor - startpagina',
         'CSV Editor': 'CSV-editor',

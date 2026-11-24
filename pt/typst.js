@@ -79,6 +79,19 @@ export default {
         'View': 'Exibir',
         'Edit': 'Editar',
         'Side panel': 'Painel lateral',
+        'Show or hide the side panel': 'Mostrar ou ocultar o painel lateral',
+        'Examples': 'Exemplos',
+        'Template': 'Modelo',
+        'View of the preview': 'Modo de visualização',
+        'The template with its placeholders as written': 'O modelo com seus marcadores como foram escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Os marcadores do modelo - clique em um para inserir sua tag no cursor',
+        'Shown': 'Exibido',
+        'Hidden': 'Oculto',
+        'example view': 'visualização com exemplos',
+        'template view': 'visualização do modelo',
+        'The pages filled with the examples': "As páginas preenchidas com os exemplos",
+        'The examples could not be filled in - the pages show the template': "Não foi possível preencher os exemplos - as páginas mostram o modelo",
         'Preview': 'Visualização',
         'Document': 'Documento',
         'Typst code': 'Código Typst',
@@ -496,5 +509,7 @@ export default {
         ['^"(.+)" deleted$', '"$1" excluído'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Abrir $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', 'Escreva o marcador no código como uma string: "$1"'],
     ],
 };

@@ -15,6 +15,18 @@ import { formatTime, formatSize, formatThousands, getPlural } from './format.js'
 
 export default {
     text: {
+        'Show or hide the side panel': 'Mostrar ou ocultar o painel lateral',
+        'Examples': 'Exemplos',
+        'Template': 'Modelo',
+        'The template with its placeholders as written': 'O modelo com seus marcadores como foram escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Os marcadores do modelo - clique em um para inserir sua tag no cursor',
+        'Shown': 'Exibido',
+        'Hidden': 'Oculto',
+        'View of the tree': 'Vista da árvore',
+        'The tree of the document filled with the examples': 'A árvore do documento preenchido com os exemplos',
+        'The examples could not be filled in - the tree shows the template': 'Não foi possível inserir os exemplos - a árvore mostra o modelo',
+        'This part shows an example - edit it in the code or in the template view': 'Esta parte mostra um exemplo - edite-a no código ou na vista do modelo',
         // Labels that are the same in English and German
         'Export': 'Exportar',
         'Name': 'Nome',

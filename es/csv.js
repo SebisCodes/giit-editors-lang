@@ -15,6 +15,19 @@ const SEPS = { comma: 'coma', semicolon: 'punto y coma', tab: 'tabulador', pipe:
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostrar u ocultar el panel lateral',
+        'Examples': 'Ejemplos',
+        'Template': 'Plantilla',
+        'The template with its placeholders as written': 'La plantilla con sus marcadores tal como están escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Los marcadores de la plantilla - haz clic en uno para insertar su etiqueta en el cursor',
+        'Shown': 'Mostrado',
+        'Hidden': 'Oculto',
+        'This part shows an example - change it in the template view or in the code': 'Esta parte muestra un ejemplo - cámbiala en la vista de plantilla o en el código',
+        'View of the table': 'Vista de la tabla',
+        'The table filled with the examples': 'La tabla rellenada con los ejemplos',
+        'The examples could not be filled in - the table shows the template': 'No se han podido insertar los ejemplos - la tabla muestra la plantilla',
         'Export': 'Exportar',
         'Code': 'Código',
         'Format': 'Formato',

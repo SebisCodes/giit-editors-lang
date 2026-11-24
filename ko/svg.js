@@ -79,6 +79,18 @@ const MON = { Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6, Jul: 7, Aug: 8, Se
 
 export default {
     text: {
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'View of the drawing': '그림 화면',
+        'The drawing filled with the examples': '예제를 채워 넣은 그림',
+        'The examples could not be filled in - the canvas shows the template': '예제를 채워 넣을 수 없습니다 - 캔버스에 템플릿이 표시됩니다',
+        'This text shows an example - edit it in the code or in the template view': '이 텍스트는 예제를 표시합니다 - 코드나 템플릿 보기에서 편집하세요',
         'Drawing': '그림',
         'Rectangle': '사각형',
         'Circle': '원',
@@ -467,6 +479,9 @@ export default {
         'Token': '토큰',
         'Name': '이름',
         'online': '온라인',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': '그림에 자리 표시자가 있습니다 - 코드는 작성된 그대로 유지됩니다',
+        'The style holds placeholders - edit it in the code': '스타일에 자리 표시자가 있습니다 - 코드에서 수정하세요',
     },
     html: {
         'Click <b>Copy prompt</b>.': '<b>프롬프트 복사</b>를 클릭하세요.',
@@ -495,6 +510,8 @@ export default {
         ['^(.*?) ?Snapping to a ([\\d.]+) grid\\.$', (m, h, n) => `${h ? (HINT[h] || h) + ' ' : ''}격자(${n})에 맞춥니다.`],
         ['^(.*?) ?Snap: ([\\d.]+)\\.$', (m, h, n) => `${h ? (HINT[h] || h) + ' ' : ''}맞춤: ${n}.`],
         ['^(\\d+) lines · (.+)$', '$1줄 · $2'],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `${l}번째 줄, ${c}번째 열:`],
+        ['^Line (\\d+):$', (m, l) => `${l}번째 줄:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `${l}번째 줄, ${c}번째 열: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `${l}번째 줄: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', '파일을 압축했습니다: $1 → $2 바이트'],

@@ -101,6 +101,18 @@ const CODE_ERROR = {
 
 export default {
     text: {
+        'Show or hide the side panel': 'Показати або сховати бічну панель',
+        'Examples': 'Приклади',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон із заповнювачами в початковому вигляді',
+        'Placeholders': 'Заповнювачі',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заповнювачі шаблону - клацання вставляє відповідний тег у позицію курсора',
+        'Shown': 'Показано',
+        'Hidden': 'Приховано',
+        'View of the drawing': 'Вигляд малюнка',
+        'The drawing filled with the examples': 'Малюнок, заповнений прикладами',
+        'The examples could not be filled in - the canvas shows the template': 'Не вдалося підставити приклади - полотно показує шаблон',
+        'This text shows an example - edit it in the code or in the template view': 'Цей текст показує приклад - змініть його в коді або у вигляді шаблону',
         ...LABEL,
         ...HINT,
         ...CODE_ERROR,
@@ -499,6 +511,9 @@ export default {
         'Format': 'Формат',
         'Token': 'Токен',
         'Name': 'Ім’я',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': 'Малюнок містить заповнювачі - його код залишається без змін',
+        'The style holds placeholders - edit it in the code': 'Стиль містить заповнювачі - змініть його в коді',
     },
     html: {
         // AI assistant
@@ -548,6 +563,8 @@ export default {
 
         // Code
         ['^(\\d+) lines · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'рядок', 'рядки', 'рядків')} · ${formatSize(s)}`],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `Рядок ${l}, стовпець ${c}:`],
+        ['^Line (\\d+):$', (m, l) => `Рядок ${l}:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `Рядок ${l}, стовпець ${c}: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `Рядок ${l}: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', (m, a, b) => `Файл стиснуто: ${a} → ${b} ${getPlural(b, 'байт', 'байти', 'байтів')}`],

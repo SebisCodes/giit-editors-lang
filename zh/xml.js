@@ -15,6 +15,18 @@ import { formatTime, formatSize } from './format.js';
 
 export default {
     text: {
+        'Show or hide the side panel': '显示或隐藏侧边栏',
+        'Examples': '示例',
+        'Template': '模板',
+        'The template with its placeholders as written': '按原样显示带占位符的模板',
+        'Placeholders': '占位符',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '模板中的占位符，点击即可在光标处插入对应标签',
+        'Shown': '已显示',
+        'Hidden': '已隐藏',
+        'View of the tree': '树的视图',
+        'The tree of the document filled with the examples': '填入示例后的文档的树',
+        'The examples could not be filled in - the tree shows the template': '无法填入示例 - 树显示模板',
+        'This part shows an example - edit it in the code or in the template view': '此部分显示示例 - 请在代码或模板视图中修改',
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'XML 编辑器首页',
         'XML Editor': 'XML 编辑器',

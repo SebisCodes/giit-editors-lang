@@ -35,6 +35,19 @@ const TYPE = { string: '문자열', number: '숫자', boolean: '불리언', null
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'View of the tree': '트리 보기',
+        'The data filled with the examples': '예시로 채운 데이터',
+        'The examples could not be filled in - the tree shows the template': '예시를 넣을 수 없습니다 - 트리에 템플릿이 표시됩니다',
+        'This part shows an example - change it in the template view or in the code': '이 부분은 예시를 표시합니다 - 템플릿 보기나 코드에서 변경하세요',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "CSV 내보내기를 스프레드시트 수식으로부터 보호합니다. 일반적인 부호 있는 숫자는 변경하지 않습니다.",
         /* ---------- Top bar ---------- */
         'YAML Editor - home': 'YAML 편집기 - 홈',
@@ -398,6 +411,10 @@ export default {
         'Token': '토큰',
         'Name': '이름',
         'online': '온라인',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': '템플릿은 작성된 그대로 유지됩니다 - 서식 정리와 변환은 값을 채운 데이터에 적용됩니다',
+        'This part holds a placeholder - change it in the code': '이 부분에 자리 표시자가 있습니다 - 코드에서 바꾸세요',
+        'placeholder': '자리 표시자',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -528,5 +545,7 @@ export default {
 
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '$1 열기'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', '키로 쓰는 자리 표시자는 따옴표로 감싸야 합니다: "$1"'],
     ],
 };

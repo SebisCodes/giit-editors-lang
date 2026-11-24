@@ -15,6 +15,19 @@ const SEPS = { comma: 'Komma', semicolon: 'Semikolon', tab: 'Tabulator', pipe: '
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Seitenleiste ein- oder ausblenden',
+        'Examples': 'Beispiele',
+        'Template': 'Vorlage',
+        'The template with its placeholders as written': 'Die Vorlage mit ihren Platzhaltern, wie sie geschrieben sind',
+        'Placeholders': 'Platzhalter',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Die Platzhalter der Vorlage - ein Klick setzt das zugehörige Tag beim Cursor ein',
+        'Shown': 'Angezeigt',
+        'Hidden': 'Ausgeblendet',
+        'This part shows an example - change it in the template view or in the code': 'Dieser Teil zeigt ein Beispiel - ändere ihn in der Vorlagenansicht oder im Code',
+        'View of the table': 'Ansicht der Tabelle',
+        'The table filled with the examples': 'Die mit den Beispielen ausgefüllte Tabelle',
+        'The examples could not be filled in - the table shows the template': 'Die Beispiele konnten nicht eingesetzt werden - die Tabelle zeigt die Vorlage',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'CSV-Editor - Startseite',
         'CSV Editor': 'CSV-Editor',

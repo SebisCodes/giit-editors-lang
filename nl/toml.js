@@ -24,6 +24,19 @@ const translateFound = s => (s === 'the end of the text' ? 'het einde van de tek
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'View of the tree': 'Weergave van de boom',
+        'The data filled with the examples': 'De gegevens ingevuld met de voorbeelden',
+        'The examples could not be filled in - the tree shows the template': 'De voorbeelden konden niet worden ingevuld - de boom toont de sjabloon',
+        'This part shows an example - change it in the template view or in the code': 'Dit deel toont een voorbeeld - wijzig het in de sjabloonweergave of in de code',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "De CSV-export beschermen tegen spreadsheetformules; gewone getallen met teken blijven ongewijzigd.",
         /* ---------- Top bar ---------- */
         'TOML Editor - home': 'TOML-editor - startpagina',
@@ -483,6 +496,10 @@ export default {
         "Extra text after the table header - one key = value or [table] per line": "Extra tekst na de tabelkop - één sleutel = waarde of [tabel] per regel",
         "TOML has no null: empty values (null) are left out": "TOML heeft geen null: lege waarden (null) worden weggelaten",
         "A TOML document is a table: the data is written under the key \"value\"": "Een TOML-document is een tabel: de gegevens staan onder de sleutel \"value\"",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Een sjabloon blijft zoals het is - Opmaken en conversies werken met ingevulde gegevens',
+        'This part holds a placeholder - change it in the code': 'Dit deel bevat een plaatshouder - pas het aan in de code',
+        'placeholder': 'plaatshouder',
     },
 
     html: {
@@ -668,5 +685,7 @@ export default {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `De tabel "${a}" is al gedefinieerd met een [kop] - schrijf de sleutel in zijn sectie`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `Deze tekst wordt nooit gesloten - ${a} ontbreekt`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `"${a}" is geen waarde - tekst heeft aanhalingstekens nodig ("…"); andere waarden zijn getallen, true, false, datums, [ ] of { }`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Een plaatshouder als sleutel staat tussen aanhalingstekens: "$1"'],
     ],
 };

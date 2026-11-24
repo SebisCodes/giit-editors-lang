@@ -18,6 +18,20 @@ const ZIP = { 'it is not a ZIP file': '它不是 ZIP 文件', 'there is no .md f
 
 export default {
     text: {
+        'Side panel': '侧边栏',
+        'Show or hide the side panel': '显示或隐藏侧边栏',
+        'Examples': '示例',
+        'Template': '模板',
+        'View of the preview': '预览视图',
+        'The document filled with the examples': '填入示例后的文档',
+        'The template with its placeholders as written': '按原样显示带占位符的模板',
+        'The examples could not be filled in - the preview shows the template': '无法填入示例，预览显示模板',
+        'Placeholders': '占位符',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '模板中的占位符，点击即可在光标处插入对应标签',
+        'Shown': '已显示',
+        'Hidden': '已隐藏',
+        'example view': '示例视图',
+        'template view': '模板视图',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "在页面上编辑：Enter 新建段落，Shift+Enter 换行，Ctrl+Enter 或点击别处确认，Escape 取消",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "在粗体、斜体或链接中新建段落请在代码中进行，Shift+Enter 换行",

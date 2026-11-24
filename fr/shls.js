@@ -41,6 +41,19 @@ const translateKeys = k => getPlural(k, 'clé', 'clés');
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Afficher ou masquer le panneau latéral',
+        'Examples': 'Exemples',
+        'Template': 'Modèle',
+        'The template with its placeholders as written': 'Le modèle avec ses espaces réservés tels qu’ils sont écrits',
+        'Placeholders': 'Espaces réservés',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Les espaces réservés du modèle - cliquez sur l’un d’eux pour insérer sa balise au curseur',
+        'Shown': 'Affiché',
+        'Hidden': 'Masqué',
+        'This part shows an example - change it in the template view or in the code': 'Cette partie affiche un exemple - modifiez-la dans la vue du modèle ou dans le code',
+        'View of the records': 'Vue des enregistrements',
+        'The records filled with the examples': 'Les enregistrements remplis avec les exemples',
+        'The examples could not be filled in - the records show the template': 'Les exemples n\'ont pas pu être insérés - les enregistrements affichent le modèle',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "Relues depuis SHLS, les données ne sont pas identiques (par exemple des enregistrements dont les clés sont dans un autre ordre que dans le premier) - vérifiez le résultat.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'Éditeur SHLS - accueil',
@@ -344,6 +357,10 @@ export default {
         /* ---------- Problems in the code ---------- */
         'A tab in the indentation - SHLS counts spaces only, so this line is read as a section name': 'Une tabulation dans le retrait - SHLS ne compte que les espaces, cette ligne est donc lue comme un nom de section',
         'SHLS readers ignore this line - its indentation does not fit the key block': 'Les lecteurs SHLS ignorent cette ligne - son retrait ne correspond pas au bloc de clés',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Une ligne de balises de section du modèle doit se trouver entre des enregistrements complets',
+        'A template stays as written - the encoder works on filled data': 'Un modèle reste tel quel - l’encodeur utilise des données renseignées',
+        'Sections of the template stay whole - make this change in the code': 'Les sections du modèle restent intactes - effectuez cette modification dans le code',
     },
 
     html: {

@@ -31,6 +31,19 @@ const SEPS = { comma: 'virgule', semicolon: 'point-virgule', tab: 'tabulation', 
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Afficher ou masquer le panneau latéral',
+        'Examples': 'Exemples',
+        'Template': 'Modèle',
+        'The template with its placeholders as written': 'Le modèle avec ses espaces réservés tels qu’ils sont écrits',
+        'Placeholders': 'Espaces réservés',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Les espaces réservés du modèle - cliquez sur l’un d’eux pour insérer sa balise au curseur',
+        'Shown': 'Affiché',
+        'Hidden': 'Masqué',
+        'This part shows an example - change it in the template view or in the code': 'Cette partie affiche un exemple - modifiez-la dans la vue du modèle ou dans le code',
+        'View of the table': 'Vue du tableau',
+        'The table filled with the examples': 'Le tableau rempli avec les exemples',
+        'The examples could not be filled in - the table shows the template': 'Les exemples n\'ont pas pu être insérés - le tableau affiche le modèle',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'Éditeur CSV - accueil',
         'CSV Editor': 'Éditeur CSV',

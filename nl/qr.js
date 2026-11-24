@@ -56,6 +56,9 @@ function translateHint(h) {
 
 export default {
     text: {
+        /* ---------- Side panel: a drawer on the desktop ---------- */
+        'Side panel': 'Zijpaneel',
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
         /* ---------- Top bar ---------- */
         'QR Editor - home': 'QR-editor - startpagina',
         'QR Editor': 'QR-editor',

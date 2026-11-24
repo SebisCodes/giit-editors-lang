@@ -53,6 +53,9 @@ function translateHint(h) {
 
 export default {
     text: {
+        /* ---------- Side panel: a drawer on the desktop ---------- */
+        'Side panel': 'Panel boczny',
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
         'Module shape': 'Kształt modułów',
         'Eye frame': 'Ramka oka',
         'Eye center': 'Środek oka',

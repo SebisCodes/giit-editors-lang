@@ -13,6 +13,18 @@ import { formatTime, formatSize, formatThousands, getPlural } from './format.js'
 
 export default {
     text: {
+        'Show or hide the side panel': 'Mostrar u ocultar el panel lateral',
+        'Examples': 'Ejemplos',
+        'Template': 'Plantilla',
+        'The template with its placeholders as written': 'La plantilla con sus marcadores tal como están escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Los marcadores de la plantilla - haz clic en uno para insertar su etiqueta en el cursor',
+        'Shown': 'Mostrado',
+        'Hidden': 'Oculto',
+        'View of the tree': 'Modo del árbol',
+        'The tree of the document filled with the examples': 'El árbol del documento rellenado con los ejemplos',
+        'The examples could not be filled in - the tree shows the template': 'No se han podido insertar los ejemplos - el árbol muestra la plantilla',
+        'This part shows an example - edit it in the code or in the template view': 'Esta parte muestra un ejemplo - edítala en el código o en la vista de plantilla',
         'Escape': "Esc",
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'Editor de XML - inicio',

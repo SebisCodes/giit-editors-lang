@@ -33,6 +33,18 @@ const formatSize = s => {
 
 export default {
     text: {
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'View of the tree': 'Widok drzewa',
+        'The tree of the document filled with the examples': 'Drzewo dokumentu wypełnionego przykładami',
+        'The examples could not be filled in - the tree shows the template': 'Nie udało się wstawić przykładów - drzewo pokazuje szablon',
+        'This part shows an example - edit it in the code or in the template view': 'Ta część pokazuje przykład - edytuj ją w kodzie lub w widoku szablonu',
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'Edytor XML - strona główna',
         'XML Editor': 'Edytor XML',

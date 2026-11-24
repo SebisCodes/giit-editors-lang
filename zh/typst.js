@@ -73,6 +73,19 @@ export default {
         'View': '视图',
         'Edit': '编辑',
         'Side panel': '侧边栏',
+        'Show or hide the side panel': '显示或隐藏侧边栏',
+        'Examples': '示例',
+        'Template': '模板',
+        'View of the preview': '预览视图',
+        'The template with its placeholders as written': '按原样显示带占位符的模板',
+        'Placeholders': '占位符',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '模板中的占位符，点击即可在光标处插入对应标签',
+        'Shown': '已显示',
+        'Hidden': '已隐藏',
+        'example view': '示例视图',
+        'template view': '模板视图',
+        'The pages filled with the examples': "填入示例后的页面",
+        'The examples could not be filled in - the pages show the template': "无法填入示例，页面显示模板",
         'Preview': '预览',
         'Document': '文档',
         'Typst code': 'Typst 代码',
@@ -498,5 +511,7 @@ export default {
         ['^"(.+)" deleted$', '已删除“$1”'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '打开 $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', '请在代码中将占位符写成字符串："$1"'],
     ],
 };

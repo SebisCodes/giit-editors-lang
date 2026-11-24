@@ -106,6 +106,18 @@ const CODE_ERROR = {
 
 export default {
     text: {
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'View of the drawing': 'Вид рисунка',
+        'The drawing filled with the examples': 'Рисунок, заполненный примерами',
+        'The examples could not be filled in - the canvas shows the template': 'Не удалось подставить примеры - холст показывает шаблон',
+        'This text shows an example - edit it in the code or in the template view': 'Этот текст показывает пример - измените его в коде или в виде шаблона',
         ...LABEL,
         ...HINT,
         ...CODE_ERROR,
@@ -504,6 +516,9 @@ export default {
         'Format': 'Формат',
         'Token': 'Токен',
         'Name': 'Имя',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': 'Рисунок содержит заполнители - его код остаётся без изменений',
+        'The style holds placeholders - edit it in the code': 'Стиль содержит заполнители - измените его в коде',
     },
     html: {
         // AI assistant
@@ -553,6 +568,8 @@ export default {
 
         // Code
         ['^(\\d+) lines · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'строка', 'строки', 'строк')} · ${formatSize(s)}`],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `Строка ${l}, столбец ${c}:`],
+        ['^Line (\\d+):$', (m, l) => `Строка ${l}:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `Строка ${l}, столбец ${c}: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `Строка ${l}: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', (m, a, b) => `Файл сжат: ${a} → ${b} ${getPlural(b, 'байт', 'байта', 'байт')}`],

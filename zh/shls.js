@@ -15,6 +15,19 @@ import { formatTime, formatSize } from './format.js';
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': '显示或隐藏侧边栏',
+        'Examples': '示例',
+        'Template': '模板',
+        'The template with its placeholders as written': '按原样显示带占位符的模板',
+        'Placeholders': '占位符',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '模板中的占位符，点击即可在光标处插入对应标签',
+        'Shown': '已显示',
+        'Hidden': '已隐藏',
+        'This part shows an example - change it in the template view or in the code': '此部分显示示例 - 请在模板视图或代码中修改',
+        'View of the records': '记录的视图',
+        'The records filled with the examples': '用示例填写的记录',
+        'The examples could not be filled in - the records show the template': '无法填入示例 - 记录显示模板',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "从 SHLS 读回后数据不一致（例如记录的键顺序与第一条记录不同）- 请检查结果。",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'SHLS 编辑器首页',
@@ -326,6 +339,10 @@ export default {
         'Link': '链接',
         'Name': '名称',
         'OK': '确定',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': '模板中包含节标签的行应放在完整记录之间',
+        'A template stays as written - the encoder works on filled data': '模板保持原样，编码器使用填充后的数据',
+        'Sections of the template stay whole - make this change in the code': '模板的各节保持完整，请在代码中进行此更改',
     },
 
     html: {

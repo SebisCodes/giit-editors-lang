@@ -29,6 +29,19 @@ const translateFound = s => (s === 'the end of the text' ? 'la fine del testo' :
 
 const dict = {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'View of the tree': 'Vista dell\'albero',
+        'The data filled with the examples': 'I dati compilati con gli esempi',
+        'The examples could not be filled in - the tree shows the template': 'Non è stato possibile inserire gli esempi - l\'albero mostra il modello',
+        'This part shows an example - change it in the template view or in the code': 'Questa parte mostra un esempio - modificala nella vista del modello o nel codice',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Proteggi l’esportazione CSV dalle formule dei fogli di calcolo; i numeri semplici con segno restano invariati.",
         /* Words that are the same in German and English, so not in the German pack */
         'Code': 'Codice',
@@ -489,6 +502,10 @@ const dict = {
         "Extra text after the table header - one key = value or [table] per line": "Testo in più dopo l'intestazione della tabella - una chiave = valore o una [tabella] per riga",
         "TOML has no null: empty values (null) are left out": "TOML non ha null: i valori vuoti (null) vengono tralasciati",
         "A TOML document is a table: the data is written under the key \"value\"": "Un documento TOML è una tabella: i dati sono scritti sotto la chiave «value»",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Un modello rimane com’è - Formatta e le conversioni lavorano sui dati compilati',
+        'This part holds a placeholder - change it in the code': 'Questa parte contiene un segnaposto - modificala nel codice',
+        'placeholder': 'segnaposto',
     },
 
     html: {
@@ -674,6 +691,8 @@ const dict = {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `La tabella «${a}» è già definita con un'[intestazione] - scrivi la chiave nella sua sezione`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `Questa stringa non viene mai chiusa - manca ${a}`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `«${a}» non è un valore - il testo richiede le virgolette ("…"); gli altri valori sono numeri, true, false, date, [ ] o { }`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Un segnaposto usato come chiave va tra virgolette: "$1"'],
     ],
 };
 

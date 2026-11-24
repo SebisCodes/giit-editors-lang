@@ -21,6 +21,20 @@ const translateZipReason = why => (why === 'it is not a ZIP file' ? 'ZIP ファ�
 
 export default {
     text: {
+        'Side panel': 'サイドパネル',
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'View of the preview': 'プレビューの表示',
+        'The document filled with the examples': 'サンプルを埋め込んだドキュメント',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'The examples could not be filled in - the preview shows the template': 'サンプルを埋め込めませんでした - プレビューにはテンプレートが表示されます',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'example view': 'サンプル表示',
+        'template view': 'テンプレート表示',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "ページで編集中 - Enter：新しい段落、Shift+Enter：改行、Ctrl+Enter または他の場所をクリックで確定、Escape で取り消し",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "太字・斜体・リンクの中での段落分けはコードで行います - Shift+Enter で改行します",

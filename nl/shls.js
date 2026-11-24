@@ -22,6 +22,19 @@ const translateRecords = k => getPlural(k, 'record', 'records');
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'This part shows an example - change it in the template view or in the code': 'Dit deel toont een voorbeeld - wijzig het in de sjabloonweergave of in de code',
+        'View of the records': 'Weergave van de records',
+        'The records filled with the examples': 'De records ingevuld met de voorbeelden',
+        'The examples could not be filled in - the records show the template': 'De voorbeelden konden niet worden ingevuld - de records tonen de sjabloon',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "Teruggelezen uit SHLS zijn de gegevens niet hetzelfde (bijvoorbeeld records waarvan de sleutels in een andere volgorde staan dan in het eerste record) - controleer het resultaat.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'SHLS-editor - startpagina',
@@ -329,6 +342,10 @@ export default {
         /* ---------- Single words ---------- */
         'Export': 'Exporteren',
         'Format': 'Formaat',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Een regel met sectietags van het sjabloon hoort tussen volledige records',
+        'A template stays as written - the encoder works on filled data': 'Een sjabloon blijft zoals het is - de encoder werkt met ingevulde gegevens',
+        'Sections of the template stay whole - make this change in the code': 'De secties van het sjabloon blijven heel - maak deze wijziging in de code',
     },
 
     html: {

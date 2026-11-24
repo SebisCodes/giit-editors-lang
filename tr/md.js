@@ -24,6 +24,20 @@ const ZIP = { 'it is not a ZIP file': 'bu bir ZIP dosyası değil', 'there is no
 
 export default {
     text: {
+        'Side panel': 'Yan panel',
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'View of the preview': 'Önizleme görünümü',
+        'The document filled with the examples': 'Örneklerle doldurulmuş belge',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'The examples could not be filled in - the preview shows the template': 'Örnekler yerleştirilemedi - önizleme şablonu gösteriyor',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'example view': 'örnek görünümü',
+        'template view': 'şablon görünümü',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "Sayfada düzenleme - Enter: yeni paragraf, Shift+Enter: yeni satır, Ctrl+Enter veya başka yere tıklama uygular, Escape iptal eder",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "Kalın, italik metin veya bağlantı içinde yeni paragraf kodda oluşturulur - Shift+Enter yeni satır açar",

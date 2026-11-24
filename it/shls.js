@@ -27,6 +27,19 @@ const translateKeys = k => getPlural(k, 'chiave', 'chiavi');
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'This part shows an example - change it in the template view or in the code': 'Questa parte mostra un esempio - modificala nella vista del modello o nel codice',
+        'View of the records': 'Vista dei record',
+        'The records filled with the examples': 'I record compilati con gli esempi',
+        'The examples could not be filled in - the records show the template': 'Non è stato possibile inserire gli esempi - i record mostrano il modello',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "Rilette da SHLS, i dati non sono uguali (ad esempio record con le chiavi in un ordine diverso dal primo record) - controlla il risultato.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'Editor SHLS - pagina iniziale',
@@ -330,6 +343,10 @@ export default {
         /* ---------- Problems in the code ---------- */
         'A tab in the indentation - SHLS counts spaces only, so this line is read as a section name': 'Una tabulazione nel rientro - SHLS conta solo gli spazi, quindi questa riga viene letta come nome di sezione',
         'SHLS readers ignore this line - its indentation does not fit the key block': 'I lettori SHLS ignorano questa riga - il suo rientro non corrisponde al blocco di chiavi',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Una riga di tag di sezione del modello va tra record completi',
+        'A template stays as written - the encoder works on filled data': 'Un modello rimane com’è - l’encoder lavora sui dati compilati',
+        'Sections of the template stay whole - make this change in the code': 'Le sezioni del modello rimangono intere - apporta questa modifica nel codice',
     },
 
     html: {

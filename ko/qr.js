@@ -58,6 +58,9 @@ function translateHint(h) {
 
 export default {
     text: {
+        /* ---------- Side panel: a drawer on the desktop ---------- */
+        'Side panel': '사이드 패널',
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
         /* ---------- Top bar ---------- */
         'QR Editor - home': 'QR 편집기 - 홈',
         'QR Editor': 'QR 편집기',

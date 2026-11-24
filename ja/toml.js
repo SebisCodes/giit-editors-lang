@@ -23,6 +23,19 @@ const TYPE = { string: '文字列', number: '数値', boolean: '真偽値', null
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'View of the tree': 'ツリーの表示',
+        'The data filled with the examples': '例を入れたデータ',
+        'The examples could not be filled in - the tree shows the template': '例を入れられませんでした - ツリーはテンプレートを表示しています',
+        'This part shows an example - change it in the template view or in the code': 'この部分は例を表示しています - テンプレート表示またはコードで変更してください',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "CSV エクスポートを表計算ソフトの数式から保護します。符号付きの単純な数値は変更しません。",
         /* ---------- Top bar ---------- */
         'TOML Editor - home': 'TOML エディター - ホーム',
@@ -476,6 +489,10 @@ export default {
         "Extra text after the table header - one key = value or [table] per line": "テーブルヘッダーの後に余分なテキストがあります。1 行には key = value か [table] を 1 つだけ書いてください",
         "TOML has no null: empty values (null) are left out": "TOML には null がありません: 空の値 (null) は省かれます",
         "A TOML document is a table: the data is written under the key \"value\"": "TOML ドキュメントはテーブルです: データはキー「value」の下に書かれます",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'テンプレートはそのまま保持されます。フォーマットと変換は値を埋めたデータに対して使えます',
+        'This part holds a placeholder - change it in the code': 'この部分にプレースホルダーが含まれています。コードで変更してください',
+        'placeholder': 'プレースホルダー',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -656,5 +673,7 @@ export default {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `テーブル「${a}」はすでに [header] で定義されています。キーはそのセクションに書いてください`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `この文字列が閉じられていません。${a} がありません`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `「${a}」は値ではありません。テキストには引用符 ("…") が必要です。ほかの値は数値、true、false、日付、[ ]、{ } です`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'キーとして使うプレースホルダーは引用符で囲みます: "$1"'],
     ],
 };

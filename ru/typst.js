@@ -100,6 +100,19 @@ export default {
         'View': 'Вид',
         'Edit': 'Правка',
         'Side panel': 'Боковая панель',
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'View of the preview': 'Вид предпросмотра',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'example view': 'вид с примерами',
+        'template view': 'вид шаблона',
+        'The pages filled with the examples': "Страницы, заполненные примерами",
+        'The examples could not be filled in - the pages show the template': "Не удалось подставить примеры - страницы показывают шаблон",
         'Preview': 'Предпросмотр',
         'Document': 'Документ',
         'Typst code': 'Код Typst',
@@ -535,5 +548,7 @@ export default {
         ['^"(.+)" deleted$', '«$1» удалён'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Открыть $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', 'Запишите заполнитель в коде как строку: "$1"'],
     ],
 };

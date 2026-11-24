@@ -22,6 +22,19 @@ const SEPS = { comma: 'virgola', semicolon: 'punto e virgola', tab: 'tabulazione
 
 const dict = {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'This part shows an example - change it in the template view or in the code': 'Questa parte mostra un esempio - modificala nella vista del modello o nel codice',
+        'View of the table': 'Vista della tabella',
+        'The table filled with the examples': 'La tabella compilata con gli esempi',
+        'The examples could not be filled in - the table shows the template': 'Non è stato possibile inserire gli esempi - la tabella mostra il modello',
         /* Words that are the same in German and English, so not in the German pack */
         'Code': 'Codice',
         'Export': 'Esporta',

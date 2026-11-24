@@ -89,6 +89,19 @@ export default {
         'View': '보기',
         'Edit': '편집',
         'Side panel': '사이드 패널',
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'View of the preview': '미리 보기 화면',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'example view': '예제 보기',
+        'template view': '템플릿 보기',
+        'The pages filled with the examples': "예제를 채워 넣은 페이지",
+        'The examples could not be filled in - the pages show the template': "예제를 채워 넣을 수 없습니다 - 페이지에 템플릿이 표시됩니다",
         'Preview': '미리 보기',
         'Document': '문서',
         'Typst code': 'Typst 코드',
@@ -487,5 +500,7 @@ export default {
 
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '$1 열기'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', '자리 표시자를 코드에서 문자열로 쓰세요: "$1"'],
     ],
 };

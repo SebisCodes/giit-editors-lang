@@ -41,6 +41,19 @@ const SEPS = { comma: 'запятую', semicolon: 'точку с запятой
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'This part shows an example - change it in the template view or in the code': 'Эта часть показывает пример - измените её в виде шаблона или в коде',
+        'View of the table': 'Вид таблицы',
+        'The table filled with the examples': 'Таблица, заполненная примерами',
+        'The examples could not be filled in - the table shows the template': 'Не удалось подставить примеры - таблица показывает шаблон',
         'online': 'онлайн',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'Редактор CSV - на главную',

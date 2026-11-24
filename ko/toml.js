@@ -35,6 +35,19 @@ const TYPE = { string: '문자열', number: '숫자', boolean: '불리언', null
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'View of the tree': '트리 보기',
+        'The data filled with the examples': '예시로 채운 데이터',
+        'The examples could not be filled in - the tree shows the template': '예시를 넣을 수 없습니다 - 트리에 템플릿이 표시됩니다',
+        'This part shows an example - change it in the template view or in the code': '이 부분은 예시를 표시합니다 - 템플릿 보기나 코드에서 변경하세요',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "CSV 내보내기를 스프레드시트 수식으로부터 보호합니다. 일반적인 부호 있는 숫자는 변경하지 않습니다.",
         /* ---------- Top bar ---------- */
         'TOML Editor - home': 'TOML 편집기 - 홈',
@@ -487,6 +500,10 @@ export default {
         "Extra text after the table header - one key = value or [table] per line": "테이블 헤더 뒤에 불필요한 텍스트가 있습니다 - 한 줄에 key = value 또는 [table] 하나",
         "TOML has no null: empty values (null) are left out": "TOML에는 null이 없습니다: 빈 값(null)은 빠집니다",
         "A TOML document is a table: the data is written under the key \"value\"": "TOML 문서는 테이블입니다: 데이터는 키 “value” 아래에 쓰입니다",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': '템플릿은 작성된 그대로 유지됩니다 - 서식 정리와 변환은 값을 채운 데이터에 적용됩니다',
+        'This part holds a placeholder - change it in the code': '이 부분에 자리 표시자가 있습니다 - 코드에서 바꾸세요',
+        'placeholder': '자리 표시자',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -656,5 +673,7 @@ export default {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `테이블 “${a}”은(는) 이미 [header]로 정의되어 있습니다 - 키를 그 섹션에 쓰세요`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `이 문자열이 닫히지 않았습니다 - ${a}이(가) 없습니다`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `“${a}”은(는) 값이 아닙니다 - 텍스트에는 따옴표("…")가 필요합니다. 다른 값은 숫자, true, false, 날짜, [ ], { }입니다`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', '키로 쓰는 자리 표시자는 따옴표로 감싸야 합니다: "$1"'],
     ],
 };

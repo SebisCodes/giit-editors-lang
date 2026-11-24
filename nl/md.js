@@ -18,6 +18,20 @@ const ZIP = { 'it is not a ZIP file': 'het is geen ZIP-bestand', 'there is no .m
 
 export default {
     text: {
+        'Side panel': 'Zijpaneel',
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'View of the preview': 'Weergave van het voorbeeld',
+        'The document filled with the examples': 'Het document ingevuld met de voorbeelden',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'The examples could not be filled in - the preview shows the template': 'De voorbeelden konden niet worden ingevuld - het voorbeeld toont het sjabloon',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'example view': 'voorbeeldweergave',
+        'template view': 'sjabloonweergave',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "Bewerken op de pagina - Enter: nieuwe alinea, Shift+Enter: nieuwe regel, Ctrl+Enter of een klik elders slaat op, Escape annuleert",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "Een nieuwe alinea binnen vet, cursief of een link maak je in de code - Shift+Enter maakt een nieuwe regel",

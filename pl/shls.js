@@ -40,6 +40,19 @@ const translateRecords = k => getPlural(k, 'rekord', 'rekordy', 'rekordów');
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'This part shows an example - change it in the template view or in the code': 'Ta część pokazuje przykład - zmień ją w widoku szablonu lub w kodzie',
+        'View of the records': 'Widok rekordów',
+        'The records filled with the examples': 'Rekordy wypełnione przykładami',
+        'The examples could not be filled in - the records show the template': 'Nie udało się wstawić przykładów - rekordy pokazują szablon',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "Po odczytaniu z SHLS dane nie są takie same (na przykład rekordy z kluczami w innej kolejności niż w pierwszym rekordzie) - sprawdź wynik.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'Edytor SHLS - strona główna',
@@ -382,6 +395,10 @@ export default {
         'Name': 'Nazwa',
         'Text': 'Tekst',
         'Label': 'Etykieta',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Wiersz ze znacznikami sekcji szablonu powinien znajdować się między pełnymi rekordami',
+        'A template stays as written - the encoder works on filled data': 'Szablon pozostaje bez zmian - enkoder działa na uzupełnionych danych',
+        'Sections of the template stay whole - make this change in the code': 'Sekcje szablonu pozostają w całości - wprowadź tę zmianę w kodzie',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':

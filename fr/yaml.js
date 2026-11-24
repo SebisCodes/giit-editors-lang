@@ -37,6 +37,19 @@ const translateFound = s => (s === 'the end of the text' ? 'la fin du texte' : s
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Afficher ou masquer le panneau latéral',
+        'Examples': 'Exemples',
+        'Template': 'Modèle',
+        'The template with its placeholders as written': 'Le modèle avec ses espaces réservés tels qu’ils sont écrits',
+        'Placeholders': 'Espaces réservés',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Les espaces réservés du modèle - cliquez sur l’un d’eux pour insérer sa balise au curseur',
+        'Shown': 'Affiché',
+        'Hidden': 'Masqué',
+        'View of the tree': 'Vue de l\'arbre',
+        'The data filled with the examples': 'Les données remplies avec les exemples',
+        'The examples could not be filled in - the tree shows the template': 'Les exemples n\'ont pas pu être insérés - l\'arbre affiche le modèle',
+        'This part shows an example - change it in the template view or in the code': 'Cette partie affiche un exemple - modifiez-la dans la vue du modèle ou dans le code',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Protéger l’export CSV contre les formules de tableur ; les nombres signés simples restent inchangés.",
         /* ---------- Top bar ---------- */
         'YAML Editor - home': 'Éditeur YAML - accueil',
@@ -409,6 +422,10 @@ export default {
         'online': 'en ligne',
         'Token': 'Jeton',
         'Opens the result as a new document in this editor': 'Ouvre le résultat comme nouveau document dans cet éditeur',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Un modèle reste tel quel - Formater et les conversions utilisent des données renseignées',
+        'This part holds a placeholder - change it in the code': 'Cette partie contient un marqueur - modifiez-la dans le code',
+        'placeholder': 'marqueur',
     },
 
     html: {
@@ -555,5 +572,7 @@ export default {
         ['^"(.+)" deleted$', '« $1 » supprimé'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Ouvrir $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Un marqueur utilisé comme clé doit être entre guillemets : "$1"'],
     ],
 };

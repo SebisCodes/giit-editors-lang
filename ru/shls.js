@@ -52,6 +52,19 @@ const translateKeys = k => getPlural(k, 'ключ', 'ключа', 'ключей'
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'This part shows an example - change it in the template view or in the code': 'Эта часть показывает пример - измените её в виде шаблона или в коде',
+        'View of the records': 'Вид записей',
+        'The records filled with the examples': 'Записи, заполненные примерами',
+        'The examples could not be filled in - the records show the template': 'Не удалось подставить примеры - записи показывают шаблон',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "При обратном чтении из SHLS данные не совпадают (например, записи с ключами в другом порядке, чем в первой записи) - проверьте результат.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'Редактор SHLS - на главную',
@@ -355,6 +368,10 @@ export default {
         /* ---------- Problems in the code ---------- */
         'A tab in the indentation - SHLS counts spaces only, so this line is read as a section name': 'Табуляция в отступе - SHLS считает только пробелы, поэтому эта строка читается как имя раздела',
         'SHLS readers ignore this line - its indentation does not fit the key block': 'Программы чтения SHLS игнорируют эту строку - её отступ не подходит к блоку ключей',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Строка с тегами разделов шаблона должна находиться между полными записями',
+        'A template stays as written - the encoder works on filled data': 'Шаблон остаётся без изменений - кодировщик работает с заполненными данными',
+        'Sections of the template stay whole - make this change in the code': 'Разделы шаблона остаются целыми - внесите это изменение в коде',
     },
 
     html: {

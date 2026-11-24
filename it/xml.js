@@ -21,6 +21,18 @@ const formatSize = s => s.replace(/ bytes$/, ' byte');
 
 const dict = {
     text: {
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'View of the tree': 'Vista dell\'albero',
+        'The tree of the document filled with the examples': 'L\'albero del documento compilato con gli esempi',
+        'The examples could not be filled in - the tree shows the template': 'Non è stato possibile inserire gli esempi - l\'albero mostra il modello',
+        'This part shows an example - edit it in the code or in the template view': 'Questa parte mostra un esempio - modificala nel codice o nella vista del modello',
         /* Words that are the same in German and English, so not in the German pack */
         'Export': 'Esporta',
 

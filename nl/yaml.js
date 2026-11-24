@@ -24,6 +24,19 @@ const translateFound = s => (s === 'the end of the text' ? 'het einde van de tek
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'View of the tree': 'Weergave van de boom',
+        'The data filled with the examples': 'De gegevens ingevuld met de voorbeelden',
+        'The examples could not be filled in - the tree shows the template': 'De voorbeelden konden niet worden ingevuld - de boom toont de sjabloon',
+        'This part shows an example - change it in the template view or in the code': 'Dit deel toont een voorbeeld - wijzig het in de sjabloonweergave of in de code',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "De CSV-export beschermen tegen spreadsheetformules; gewone getallen met teken blijven ongewijzigd.",
         /* ---------- Top bar ---------- */
         'YAML Editor - home': 'YAML-editor - startpagina',
@@ -394,6 +407,10 @@ export default {
 
         /* ---------- Single words ---------- */
         'Export': 'Exporteren',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Een sjabloon blijft zoals het is - Opmaken en conversies werken met ingevulde gegevens',
+        'This part holds a placeholder - change it in the code': 'Dit deel bevat een plaatshouder - pas het aan in de code',
+        'placeholder': 'plaatshouder',
     },
 
     html: {
@@ -540,5 +557,7 @@ export default {
         ['^"(.+)" deleted$', '"$1" verwijderd'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '$1 openen'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Een plaatshouder als sleutel staat tussen aanhalingstekens: "$1"'],
     ],
 };

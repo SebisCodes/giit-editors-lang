@@ -42,6 +42,20 @@ const ZIP = { 'it is not a ZIP file': 'это не файл ZIP', 'there is no .
 
 export default {
     text: {
+        'Side panel': 'Боковая панель',
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'View of the preview': 'Вид предпросмотра',
+        'The document filled with the examples': 'Документ, заполненный примерами',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'The examples could not be filled in - the preview shows the template': 'Не удалось подставить примеры - предпросмотр показывает шаблон',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'example view': 'вид с примерами',
+        'template view': 'вид шаблона',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "Правка на странице - Enter: новый абзац, Shift+Enter: новая строка, Ctrl+Enter или щелчок в другом месте сохраняет, Escape отменяет",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "Новый абзац внутри жирного текста, курсива или ссылки создаётся в коде - Shift+Enter вставляет перенос строки",

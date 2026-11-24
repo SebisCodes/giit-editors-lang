@@ -24,6 +24,19 @@ const translateFound = s => (s === 'the end of the text' ? '文本结尾' : s ==
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': '显示或隐藏侧边栏',
+        'Examples': '示例',
+        'Template': '模板',
+        'The template with its placeholders as written': '按原样显示带占位符的模板',
+        'Placeholders': '占位符',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '模板中的占位符，点击即可在光标处插入对应标签',
+        'Shown': '已显示',
+        'Hidden': '已隐藏',
+        'View of the tree': '树的视图',
+        'The data filled with the examples': '用示例填写的数据',
+        'The examples could not be filled in - the tree shows the template': '无法填入示例 - 树显示模板',
+        'This part shows an example - change it in the template view or in the code': '此部分显示示例 - 请在模板视图或代码中修改',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "保护 CSV 导出免受电子表格公式影响；带符号的普通数字保持不变。",
         /* ---------- Top bar ---------- */
         'JSON Editor - home': 'JSON 编辑器首页',
@@ -414,6 +427,10 @@ export default {
         'Link': '链接',
         'Name': '名称',
         'OK': '确定',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': '模板保持原样，格式化和转换操作适用于填充后的数据',
+        'This part holds a placeholder - change it in the code': '这部分包含占位符，请在代码中修改',
+        'placeholder': '占位符',
     },
 
     html: {
@@ -567,5 +584,7 @@ export default {
         ['^"(.+)" deleted$', '已删除“$1”'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '打开 $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', '用作键的占位符要放在引号中："$1"'],
     ],
 };

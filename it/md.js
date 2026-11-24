@@ -24,6 +24,20 @@ const ZIP = { 'it is not a ZIP file': 'non è un file ZIP', 'there is no .md fil
 
 const dict = {
     text: {
+        'Side panel': 'Pannello laterale',
+        'Show or hide the side panel': 'Mostra o nascondi il pannello laterale',
+        'Examples': 'Esempi',
+        'Template': 'Modello',
+        'View of the preview': 'Vista dell\'anteprima',
+        'The document filled with the examples': 'Il documento compilato con gli esempi',
+        'The template with its placeholders as written': 'Il modello con i suoi segnaposto così come sono scritti',
+        'The examples could not be filled in - the preview shows the template': 'Impossibile inserire gli esempi - l\'anteprima mostra il modello',
+        'Placeholders': 'Segnaposto',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'I segnaposto del modello - fai clic su uno per inserire il suo tag al cursore',
+        'Shown': 'Mostrato',
+        'Hidden': 'Nascosto',
+        'example view': 'vista con esempi',
+        'template view': 'vista del modello',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "Modifica sulla pagina - Invio: nuovo paragrafo, Maiusc+Invio: nuova riga, Ctrl+Invio o un clic altrove conferma, Esc annulla",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "Un nuovo paragrafo dentro grassetto, corsivo o un link si fa nel codice - Maiusc+Invio crea una nuova riga",

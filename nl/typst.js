@@ -73,6 +73,19 @@ export default {
         'View': 'Weergave',
         'Edit': 'Bewerken',
         'Side panel': 'Zijpaneel',
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'View of the preview': 'Weergave van het voorbeeld',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'example view': 'voorbeeldweergave',
+        'template view': 'sjabloonweergave',
+        'The pages filled with the examples': "De pagina's ingevuld met de voorbeelden",
+        'The examples could not be filled in - the pages show the template': "De voorbeelden konden niet worden ingevuld - de pagina's tonen het sjabloon",
         'Preview': 'Voorbeeld',
         'Document': 'Document',
         'Typst code': 'Typst-code',
@@ -494,5 +507,7 @@ export default {
         ['^"(.+)" deleted$', '"$1" verwijderd'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '$1 openen'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^Write the placeholder in code as a string: "(.+)"$', 'Schrijf de plaatshouder in de code als een string: "$1"'],
     ],
 };

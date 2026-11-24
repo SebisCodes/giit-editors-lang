@@ -18,6 +18,19 @@ const SEPS = { comma: 'vírgula', semicolon: 'ponto e vírgula', tab: 'tabulaç�
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostrar ou ocultar o painel lateral',
+        'Examples': 'Exemplos',
+        'Template': 'Modelo',
+        'The template with its placeholders as written': 'O modelo com seus marcadores como foram escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Os marcadores do modelo - clique em um para inserir sua tag no cursor',
+        'Shown': 'Exibido',
+        'Hidden': 'Oculto',
+        'This part shows an example - change it in the template view or in the code': 'Esta parte mostra um exemplo - altere-a na vista do modelo ou no código',
+        'View of the table': 'Vista da tabela',
+        'The table filled with the examples': 'A tabela preenchida com os exemplos',
+        'The examples could not be filled in - the table shows the template': 'Não foi possível inserir os exemplos - a tabela mostra o modelo',
         // Labels that are the same in English and German
         'Code': 'Código',
         'Export': 'Exportar',

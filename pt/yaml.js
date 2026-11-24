@@ -24,6 +24,19 @@ const translateFound = s => (s === 'the end of the text' ? 'o fim do texto' : s 
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostrar ou ocultar o painel lateral',
+        'Examples': 'Exemplos',
+        'Template': 'Modelo',
+        'The template with its placeholders as written': 'O modelo com seus marcadores como foram escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Os marcadores do modelo - clique em um para inserir sua tag no cursor',
+        'Shown': 'Exibido',
+        'Hidden': 'Oculto',
+        'View of the tree': 'Vista da árvore',
+        'The data filled with the examples': 'Os dados preenchidos com os exemplos',
+        'The examples could not be filled in - the tree shows the template': 'Não foi possível inserir os exemplos - a árvore mostra o modelo',
+        'This part shows an example - change it in the template view or in the code': 'Esta parte mostra um exemplo - altere-a na vista do modelo ou no código',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Proteger a exportação CSV contra fórmulas de planilha; números simples com sinal permanecem inalterados.",
         // Labels that are the same in English and German
         'Code': 'Código',
@@ -396,6 +409,10 @@ export default {
         'An alias cannot have an anchor or a tag': 'Um alias não pode ter âncora nem tag',
         'The document is empty': 'O documento está vazio',
         'The data is nested too deeply': 'Os dados estão aninhados em níveis excessivos',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Um modelo permanece como está - Formatar e as conversões trabalham com dados preenchidos',
+        'This part holds a placeholder - change it in the code': 'Esta parte contém um marcador - altere-a no código',
+        'placeholder': 'marcador',
     },
 
     html: {
@@ -542,5 +559,7 @@ export default {
         ['^"(.+)" deleted$', '"$1" excluído'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Abrir $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Um marcador usado como chave deve ficar entre aspas: "$1"'],
     ],
 };

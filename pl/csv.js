@@ -35,6 +35,19 @@ const SEPS = { comma: 'przecinek', semicolon: 'średnik', tab: 'tabulator', pipe
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'This part shows an example - change it in the template view or in the code': 'Ta część pokazuje przykład - zmień ją w widoku szablonu lub w kodzie',
+        'View of the table': 'Widok tabeli',
+        'The table filled with the examples': 'Tabela wypełniona przykładami',
+        'The examples could not be filled in - the table shows the template': 'Nie udało się wstawić przykładów - tabela pokazuje szablon',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'Edytor CSV - strona główna',
         'CSV Editor': 'Edytor CSV',

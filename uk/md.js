@@ -37,6 +37,20 @@ const ZIP = { 'it is not a ZIP file': 'це не файл ZIP', 'there is no .md
 
 export default {
     text: {
+        'Side panel': 'Бічна панель',
+        'Show or hide the side panel': 'Показати або сховати бічну панель',
+        'Examples': 'Приклади',
+        'Template': 'Шаблон',
+        'View of the preview': 'Вигляд перегляду',
+        'The document filled with the examples': 'Документ, заповнений прикладами',
+        'The template with its placeholders as written': 'Шаблон із заповнювачами в початковому вигляді',
+        'The examples could not be filled in - the preview shows the template': 'Не вдалося підставити приклади - перегляд показує шаблон',
+        'Placeholders': 'Заповнювачі',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заповнювачі шаблону - клацання вставляє відповідний тег у позицію курсора',
+        'Shown': 'Показано',
+        'Hidden': 'Приховано',
+        'example view': 'вигляд із прикладами',
+        'template view': 'вигляд шаблону',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "Редагування на сторінці - Enter: новий абзац, Shift+Enter: новий рядок, Ctrl+Enter або клацання деінде зберігає, Escape скасовує",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "Новий абзац у межах жирного чи курсивного тексту або посилання створюється в коді — Shift+Enter додає новий рядок",

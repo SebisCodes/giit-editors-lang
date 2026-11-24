@@ -47,6 +47,19 @@ const translateKeys = k => getPlural(k, 'ключ', 'ключі', 'ключів'
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Показати або сховати бічну панель',
+        'Examples': 'Приклади',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон із заповнювачами в початковому вигляді',
+        'Placeholders': 'Заповнювачі',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заповнювачі шаблону - клацання вставляє відповідний тег у позицію курсора',
+        'Shown': 'Показано',
+        'Hidden': 'Приховано',
+        'This part shows an example - change it in the template view or in the code': 'Ця частина показує приклад - змініть її у вигляді шаблону або в коді',
+        'View of the records': 'Вигляд записів',
+        'The records filled with the examples': 'Записи, заповнені прикладами',
+        'The examples could not be filled in - the records show the template': 'Не вдалося підставити приклади - записи показують шаблон',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "Під час зворотного читання з SHLS дані не збігаються (наприклад, записи з ключами в іншому порядку, ніж у першому записі) - перевірте результат.",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'Редактор SHLS - на головну',
@@ -357,6 +370,10 @@ export default {
         'Link': 'Посилання',
         'Token': 'Токен',
         'Name': 'Ім’я',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Рядок із тегами розділів шаблону має бути між повними записами',
+        'A template stays as written - the encoder works on filled data': 'Шаблон залишається без змін - кодувальник працює із заповненими даними',
+        'Sections of the template stay whole - make this change in the code': 'Розділи шаблону залишаються цілими - внесіть цю зміну в коді',
     },
 
     html: {

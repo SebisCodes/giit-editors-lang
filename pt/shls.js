@@ -22,6 +22,19 @@ const translateRecords = k => getPlural(k, 'registro', 'registros');
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'Mostrar ou ocultar o painel lateral',
+        'Examples': 'Exemplos',
+        'Template': 'Modelo',
+        'The template with its placeholders as written': 'O modelo com seus marcadores como foram escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Os marcadores do modelo - clique em um para inserir sua tag no cursor',
+        'Shown': 'Exibido',
+        'Hidden': 'Oculto',
+        'This part shows an example - change it in the template view or in the code': 'Esta parte mostra um exemplo - altere-a na vista do modelo ou no código',
+        'View of the records': 'Vista dos registros',
+        'The records filled with the examples': 'Os registros preenchidos com os exemplos',
+        'The examples could not be filled in - the records show the template': 'Não foi possível inserir os exemplos - os registros mostram o modelo',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "Lidos de volta do SHLS, os dados não são os mesmos (por exemplo, registros com as chaves em outra ordem que no primeiro registro) - verifique o resultado.",
         // Labels that are the same in English and German
         'Code': 'Código',
@@ -331,6 +344,10 @@ export default {
         /* ---------- Problems in the code ---------- */
         'A tab in the indentation - SHLS counts spaces only, so this line is read as a section name': 'Uma tabulação na indentação - o SHLS conta só espaços, então esta linha é lida como nome de seção',
         'SHLS readers ignore this line - its indentation does not fit the key block': 'Os leitores de SHLS ignoram esta linha - a indentação dela não se encaixa no bloco de chaves',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'Uma linha de tags de seção do modelo deve ficar entre registros completos',
+        'A template stays as written - the encoder works on filled data': 'Um modelo permanece como está - o codificador trabalha com dados preenchidos',
+        'Sections of the template stay whole - make this change in the code': 'As seções do modelo permanecem inteiras - faça esta alteração no código',
     },
 
     html: {

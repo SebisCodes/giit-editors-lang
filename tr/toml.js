@@ -30,6 +30,19 @@ const translateFound = s => (s === 'the end of the text' ? 'metnin sonu' : s ===
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'View of the tree': 'Ağacın görünümü',
+        'The data filled with the examples': 'Örneklerle doldurulmuş veriler',
+        'The examples could not be filled in - the tree shows the template': 'Örnekler eklenemedi - ağaç şablonu gösteriyor',
+        'This part shows an example - change it in the template view or in the code': 'Bu bölüm bir örnek gösteriyor - şablon görünümünde veya kodda değiştirin',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "CSV dışa aktarımını elektronik tablo formüllerine karşı koru; işaretli düz sayılar değişmez.",
         'TOML Editor - home': 'TOML Editörü - ana sayfa',
         'TOML Editor': 'TOML Editörü',
@@ -444,6 +457,10 @@ export default {
         "Extra text after the table header - one key = value or [table] per line": "Tablo başlığından sonra fazladan metin - satır başına bir anahtar = değer veya bir [tablo]",
         "TOML has no null: empty values (null) are left out": "TOML’da null yoktur: boş değerler (null) atlanır",
         "A TOML document is a table: the data is written under the key \"value\"": "Bir TOML belgesi bir tablodur: veriler “value” anahtarının altına yazılır",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Şablon olduğu gibi kalır - Biçimlendir ve dönüştürmeler doldurulmuş verilerle çalışır',
+        'This part holds a placeholder - change it in the code': 'Bu bölüm bir yer tutucu içeriyor - onu kodda değiştirin',
+        'placeholder': 'yer tutucu',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -607,5 +624,7 @@ export default {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `“${a}” tablosu zaten bir [başlık] ile tanımlı - anahtarı onun bölümüne yazın`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `Bu dize hiç kapatılmamış - ${a} eksik`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `“${a}” bir değer değil - metin tırnak ister ("…"); diğer değerler sayılar, true, false, tarihler, [ ] veya { } olur`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Anahtar olarak kullanılan yer tutucu tırnak içinde olmalıdır: "$1"'],
     ],
 };

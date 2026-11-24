@@ -23,6 +23,19 @@ const SEPS = { comma: 'virgül', semicolon: 'noktalı virgül', tab: 'sekme', pi
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'This part shows an example - change it in the template view or in the code': 'Bu bölüm bir örnek gösteriyor - şablon görünümünde veya kodda değiştirin',
+        'View of the table': 'Tablonun görünümü',
+        'The table filled with the examples': 'Örneklerle doldurulmuş tablo',
+        'The examples could not be filled in - the table shows the template': 'Örnekler eklenemedi - tablo şablonu gösteriyor',
         'Export': 'Dışa aktar',
         'CSV Editor - home': 'CSV Editörü - ana sayfa',
         'CSV Editor': 'CSV Editörü',

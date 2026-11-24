@@ -50,6 +50,19 @@ const translateFound = s => (s === 'the end of the text' ? 'конец текс�
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'View of the tree': 'Вид дерева',
+        'The data filled with the examples': 'Данные, заполненные примерами',
+        'The examples could not be filled in - the tree shows the template': 'Не удалось подставить примеры - дерево показывает шаблон',
+        'This part shows an example - change it in the template view or in the code': 'Эта часть показывает пример - измените её в виде шаблона или в коде',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Защищать экспорт CSV от формул электронных таблиц; простые числа со знаком не меняются.",
         /* ---------- Top bar ---------- */
         'TOML Editor - home': 'Редактор TOML - на главную',
@@ -547,6 +560,10 @@ export default {
         "Extra text after the table header - one key = value or [table] per line": "Лишний текст после заголовка таблицы - одна пара ключ = значение или одна [таблица] на строку",
         "TOML has no null: empty values (null) are left out": "В TOML нет null: пустые значения (null) пропускаются",
         "A TOML document is a table: the data is written under the key \"value\"": "Документ TOML - это таблица: данные записываются под ключом «value»",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Шаблон остаётся без изменений - форматирование и преобразования работают с заполненными данными',
+        'This part holds a placeholder - change it in the code': 'Эта часть содержит заполнитель - измените её в коде',
+        'placeholder': 'заполнитель',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -727,5 +744,7 @@ export default {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `Таблица «${a}» уже определена [заголовком] - запишите ключ в её разделе`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `Эта строка не закрыта - не хватает ${a}`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `«${a}» - не значение: тексту нужны кавычки ("…"); другие значения - числа, true, false, даты, [ ] или { }`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Заполнитель в качестве ключа записывается в кавычках: "$1"'],
     ],
 };

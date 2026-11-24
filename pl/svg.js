@@ -79,6 +79,18 @@ const formatSizeUnit = s => s.replace(/^([\d.]+) (B|KB|MB|GB)$/, (x, v, u) => `$
 
 export default {
     text: {
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'View of the drawing': 'Widok rysunku',
+        'The drawing filled with the examples': 'Rysunek wypełniony przykładami',
+        'The examples could not be filled in - the canvas shows the template': 'Nie udało się wstawić przykładów - płótno pokazuje szablon',
+        'This text shows an example - edit it in the code or in the template view': 'Ten tekst pokazuje przykład - edytuj go w kodzie lub w widoku szablonu',
         ...LABEL,
         ...HINT,
         ...CODE_ERROR,
@@ -479,6 +491,9 @@ export default {
         'Code': 'Kod',
         'Name': 'Nazwa',
         'Label': 'Etykieta',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': 'Rysunek zawiera symbole zastępcze - jego kod pozostaje bez zmian',
+        'The style holds placeholders - edit it in the code': 'Styl zawiera symbole zastępcze - edytuj go w kodzie',
     },
     html: {
         // AI assistant
@@ -529,6 +544,8 @@ export default {
 
         // Code
         ['^(\\d+) lines · (.+)$', (m, k, s) => `${k} ${getPlural(k, 'wiersz', 'wiersze', 'wierszy')} · ${formatBytes(s)}`],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `Wiersz ${l}, kolumna ${c}:`],
+        ['^Line (\\d+):$', (m, l) => `Wiersz ${l}:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `Wiersz ${l}, kolumna ${c}: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `Wiersz ${l}: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$',

@@ -67,6 +67,18 @@ const translateDrawings = n => (n === '1' ? 'dibujo' : 'dibujos');
 
 export default {
     text: {
+        'Show or hide the side panel': 'Mostrar u ocultar el panel lateral',
+        'Examples': 'Ejemplos',
+        'Template': 'Plantilla',
+        'The template with its placeholders as written': 'La plantilla con sus marcadores tal como están escritos',
+        'Placeholders': 'Marcadores',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Los marcadores de la plantilla - haz clic en uno para insertar su etiqueta en el cursor',
+        'Shown': 'Mostrado',
+        'Hidden': 'Oculto',
+        'View of the drawing': 'Modo del dibujo',
+        'The drawing filled with the examples': 'El dibujo rellenado con los ejemplos',
+        'The examples could not be filled in - the canvas shows the template': 'No se han podido insertar los ejemplos - el lienzo muestra la plantilla',
+        'This text shows an example - edit it in the code or in the template view': 'Este texto muestra un ejemplo - edítalo en el código o en la vista de plantilla',
         'Code': 'Código',
         'Escape': "Esc",
         ...LABEL,
@@ -453,6 +465,9 @@ export default {
         'Done': 'Listo',
         'Colors in this drawing': 'Colores de este dibujo',
         'Basic colors': 'Colores básicos',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'The drawing holds placeholders - its code stays as written': 'El dibujo contiene marcadores: su código permanece tal como está',
+        'The style holds placeholders - edit it in the code': 'El estilo contiene marcadores: edítalo en el código',
     },
 
     html: {
@@ -502,6 +517,8 @@ export default {
 
         // Code
         ['^(\\d+) lines · (.+)$', (m, n, s) => `${n} ${n === '1' ? 'línea' : 'líneas'} · ${s}`],
+        ['^Line (\\d+), column (\\d+):$', (m, l, c) => `Línea ${l}, columna ${c}:`],
+        ['^Line (\\d+):$', (m, l) => `Línea ${l}:`],
         ['^Line (\\d+), column (\\d+): (.*)$', (m, l, c, t) => `Línea ${l}, columna ${c}: ${CODE_ERROR[t] || t}`],
         ['^Line (\\d+): (.*)$', (m, l, t) => `Línea ${l}: ${CODE_ERROR[t] || t}`],
         ['^File shrunk: (\\d+) → (\\d+) bytes$', 'Archivo reducido: $1 → $2 bytes'],

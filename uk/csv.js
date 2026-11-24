@@ -36,6 +36,19 @@ const SEPS = { comma: 'кому', semicolon: 'крапку з комою', tab: 
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'Показати або сховати бічну панель',
+        'Examples': 'Приклади',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон із заповнювачами в початковому вигляді',
+        'Placeholders': 'Заповнювачі',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заповнювачі шаблону - клацання вставляє відповідний тег у позицію курсора',
+        'Shown': 'Показано',
+        'Hidden': 'Приховано',
+        'This part shows an example - change it in the template view or in the code': 'Ця частина показує приклад - змініть її у вигляді шаблону або в коді',
+        'View of the table': 'Вигляд таблиці',
+        'The table filled with the examples': 'Таблиця, заповнена прикладами',
+        'The examples could not be filled in - the table shows the template': 'Не вдалося підставити приклади - таблиця показує шаблон',
         'online': 'онлайн',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'Редактор CSV - на головну',

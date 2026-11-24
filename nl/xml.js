@@ -15,6 +15,18 @@ import { formatTime, formatSize, formatThousands, getPlural } from './format.js'
 
 export default {
     text: {
+        'Show or hide the side panel': 'Het zijpaneel tonen of verbergen',
+        'Examples': 'Voorbeelden',
+        'Template': 'Sjabloon',
+        'The template with its placeholders as written': 'Het sjabloon met de plaatshouders zoals ze zijn geschreven',
+        'Placeholders': 'Plaatshouders',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'De plaatshouders van het sjabloon - klik op een plaatshouder om de tag bij de cursor in te voegen',
+        'Shown': 'Getoond',
+        'Hidden': 'Verborgen',
+        'View of the tree': 'Weergave van de boom',
+        'The tree of the document filled with the examples': 'De boom van het document ingevuld met de voorbeelden',
+        'The examples could not be filled in - the tree shows the template': 'De voorbeelden konden niet worden ingevuld - de boom toont de sjabloon',
+        'This part shows an example - edit it in the code or in the template view': 'Dit deel toont een voorbeeld - bewerk het in de code of in de sjabloonweergave',
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'XML-editor - startpagina',
         'XML Editor': 'XML-editor',

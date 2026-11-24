@@ -21,6 +21,18 @@ const formatSize = s => s.replace(/^([\d,]+) bytes$/, (m, k) => `${formatThousan
 
 export default {
     text: {
+        'Show or hide the side panel': 'Yan paneli göster veya gizle',
+        'Examples': 'Örnekler',
+        'Template': 'Şablon',
+        'The template with its placeholders as written': 'Yer tutucuları yazıldığı gibi gösteren şablon',
+        'Placeholders': 'Yer tutucular',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Şablonun yer tutucuları - birine tıklamak etiketini imlecin yerine ekler',
+        'Shown': 'Gösteriliyor',
+        'Hidden': 'Gizli',
+        'View of the tree': 'Ağacın görünümü',
+        'The tree of the document filled with the examples': 'Örneklerle doldurulmuş belgenin ağacı',
+        'The examples could not be filled in - the tree shows the template': 'Örnekler eklenemedi - ağaç şablonu gösteriyor',
+        'This part shows an example - edit it in the code or in the template view': 'Bu bölüm bir örnek gösteriyor - kodda veya şablon görünümünde düzenleyin',
         'XML Editor - home': 'XML Editörü - ana sayfa',
         'XML Editor': 'XML Editörü',
         'File': 'Dosya',

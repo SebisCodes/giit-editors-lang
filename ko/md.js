@@ -35,6 +35,20 @@ const ZIP = { 'it is not a ZIP file': 'ZIP 파일이 아닙니다', 'there is no
 
 export default {
     text: {
+        'Side panel': '사이드 패널',
+        'Show or hide the side panel': '사이드 패널 표시 또는 숨기기',
+        'Examples': '예제',
+        'Template': '템플릿',
+        'View of the preview': '미리 보기 화면',
+        'The document filled with the examples': '예제를 채워 넣은 문서',
+        'The template with its placeholders as written': '자리 표시자가 작성된 그대로의 템플릿',
+        'The examples could not be filled in - the preview shows the template': '예제를 채워 넣을 수 없습니다 - 미리 보기에 템플릿이 표시됩니다',
+        'Placeholders': '자리 표시자',
+        'The placeholders of the template - a click on one puts its tag at the cursor': '템플릿의 자리 표시자 - 클릭하면 커서 위치에 태그를 넣습니다',
+        'Shown': '표시',
+        'Hidden': '숨김',
+        'example view': '예제 보기',
+        'template view': '템플릿 보기',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "페이지에서 편집 중 - Enter: 새 단락, Shift+Enter: 새 줄, Ctrl+Enter 또는 다른 곳 클릭으로 적용, Escape로 취소",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "굵게, 기울임꼴 또는 링크 안의 새 단락은 코드에서 만듭니다 - Shift+Enter는 새 줄을 만듭니다",

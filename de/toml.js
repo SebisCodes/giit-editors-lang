@@ -22,6 +22,19 @@ const translateFound = s => (s === 'the end of the text' ? 'das Ende des Texts' 
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Seitenleiste ein- oder ausblenden',
+        'Examples': 'Beispiele',
+        'Template': 'Vorlage',
+        'The template with its placeholders as written': 'Die Vorlage mit ihren Platzhaltern, wie sie geschrieben sind',
+        'Placeholders': 'Platzhalter',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Die Platzhalter der Vorlage - ein Klick setzt das zugehörige Tag beim Cursor ein',
+        'Shown': 'Angezeigt',
+        'Hidden': 'Ausgeblendet',
+        'View of the tree': 'Ansicht des Baums',
+        'The data filled with the examples': 'Die mit den Beispielen ausgefüllten Daten',
+        'The examples could not be filled in - the tree shows the template': 'Die Beispiele konnten nicht eingesetzt werden - der Baum zeigt die Vorlage',
+        'This part shows an example - change it in the template view or in the code': 'Dieser Teil zeigt ein Beispiel - ändere ihn in der Vorlagenansicht oder im Code',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Den CSV-Export vor Tabellenformeln schützen; einfache Zahlen mit Vorzeichen bleiben unverändert.",
         /* ---------- Top bar ---------- */
         'TOML Editor - home': 'TOML-Editor - Startseite',
@@ -478,6 +491,10 @@ export default {
         "Extra text after the table header - one key = value or [table] per line": "Zusätzlicher Text nach dem Tabellenkopf - ein Schlüssel = Wert oder eine [Tabelle] pro Zeile",
         "TOML has no null: empty values (null) are left out": "TOML hat kein null: leere Werte (null) werden weggelassen",
         "A TOML document is a table: the data is written under the key \"value\"": "Ein TOML-Dokument ist eine Tabelle: Die Daten stehen unter dem Schlüssel «value»",
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Eine Vorlage bleibt, wie sie ist - Formatieren und Umwandlungen arbeiten mit ausgefüllten Daten',
+        'This part holds a placeholder - change it in the code': 'Dieser Teil enthält einen Platzhalter - ändere ihn im Code',
+        'placeholder': 'Platzhalter',
     },
 
     html: {
@@ -663,5 +680,7 @@ export default {
         ["^The table \"(.+)\" is already defined with a \\[header\\] - write the key in its section$", (m, a) => `Die Tabelle «${a}» ist schon mit einem [Tabellenkopf] definiert - schreibe den Schlüssel in ihren Abschnitt`],
         ["^This string is never closed - (\\'\\'\\'|\"\"\") is missing$", (m, a) => `Dieser Text wird nie geschlossen - ${a} fehlt`],
         ["^\"(.+)\" is no value - text needs quotes \\(\"…\"\\); other values are numbers, true, false, dates, \\[ \\] or \\{ \\}$", (m, a) => `«${a}» ist kein Wert - Text braucht Anführungszeichen ("…"); andere Werte sind Zahlen, true, false, Daten, [ ] oder { }`],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Ein Platzhalter als Schlüssel steht in Anführungszeichen: "$1"'],
     ],
 };

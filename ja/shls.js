@@ -21,6 +21,19 @@ const translateZipReason = why => (why === 'it is not a ZIP file' ? 'ZIP ファ�
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the records, box, side panel ---------- */
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'This part shows an example - change it in the template view or in the code': 'この部分は例を表示しています - テンプレート表示またはコードで変更してください',
+        'View of the records': 'レコードの表示',
+        'The records filled with the examples': '例を入れたレコード',
+        'The examples could not be filled in - the records show the template': '例を入れられませんでした - レコードはテンプレートを表示しています',
         "Read back from SHLS, the data is not the same (for example records whose keys are in another order than in the first record) - check the result.": "SHLS から読み戻すとデータが一致しません (例: 最初のレコードとキーの順序が異なるレコード) - 結果を確認してください。",
         /* ---------- Top bar ---------- */
         'SHLS Editor - home': 'SHLS エディター - ホーム',
@@ -320,6 +333,10 @@ export default {
         'Text': 'テキスト',
         'Token': 'トークン',
         'online': 'オンライン',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A line of section tags belongs between complete records': 'テンプレートのセクションタグの行は、完全なレコードの間に置いてください',
+        'A template stays as written - the encoder works on filled data': 'テンプレートはそのまま保持されます。エンコーダーは値を埋めたデータに対して使えます',
+        'Sections of the template stay whole - make this change in the code': 'テンプレートのセクションは分割されません。この変更はコードで行ってください',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':

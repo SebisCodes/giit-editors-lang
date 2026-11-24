@@ -15,6 +15,19 @@ const SEPS = { comma: 'カンマ', semicolon: 'セミコロン', tab: 'タブ', 
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the table, box, side panel ---------- */
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'This part shows an example - change it in the template view or in the code': 'この部分は例を表示しています - テンプレート表示またはコードで変更してください',
+        'View of the table': '表の表示',
+        'The table filled with the examples': '例を入れた表',
+        'The examples could not be filled in - the table shows the template': '例を入れられませんでした - 表はテンプレートを表示しています',
         /* ---------- Top bar ---------- */
         'CSV Editor - home': 'CSV エディター - ホーム',
         'CSV Editor': 'CSV エディター',

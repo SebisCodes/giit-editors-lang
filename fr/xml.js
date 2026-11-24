@@ -28,6 +28,18 @@ const formatSize = s => s.replace(/ bytes$/, ' octets').replace(/ B$/, ' o').rep
 
 export default {
     text: {
+        'Show or hide the side panel': 'Afficher ou masquer le panneau latéral',
+        'Examples': 'Exemples',
+        'Template': 'Modèle',
+        'The template with its placeholders as written': 'Le modèle avec ses espaces réservés tels qu’ils sont écrits',
+        'Placeholders': 'Espaces réservés',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Les espaces réservés du modèle - cliquez sur l’un d’eux pour insérer sa balise au curseur',
+        'Shown': 'Affiché',
+        'Hidden': 'Masqué',
+        'View of the tree': 'Vue de l\'arbre',
+        'The tree of the document filled with the examples': 'L\'arbre du document rempli avec les exemples',
+        'The examples could not be filled in - the tree shows the template': 'Les exemples n\'ont pas pu être insérés - l\'arbre affiche le modèle',
+        'This part shows an example - edit it in the code or in the template view': 'Cette partie affiche un exemple - modifiez-la dans le code ou dans la vue du modèle',
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'Éditeur XML - accueil',
         'XML Editor': 'Éditeur XML',

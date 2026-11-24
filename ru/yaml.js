@@ -50,6 +50,19 @@ const translateFound = s => (s === 'the end of the text' ? 'конец текс�
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'View of the tree': 'Вид дерева',
+        'The data filled with the examples': 'Данные, заполненные примерами',
+        'The examples could not be filled in - the tree shows the template': 'Не удалось подставить примеры - дерево показывает шаблон',
+        'This part shows an example - change it in the template view or in the code': 'Эта часть показывает пример - измените её в виде шаблона или в коде',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "Защищать экспорт CSV от формул электронных таблиц; простые числа со знаком не меняются.",
         /* ---------- Top bar ---------- */
         'YAML Editor - home': 'Редактор YAML - на главную',
@@ -458,6 +471,10 @@ export default {
         'Link': 'Ссылка',
         'Token': 'Токен',
         'Name': 'Имя',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'Шаблон остаётся без изменений - форматирование и преобразования работают с заполненными данными',
+        'This part holds a placeholder - change it in the code': 'Эта часть содержит заполнитель - измените её в коде',
+        'placeholder': 'заполнитель',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -599,5 +616,7 @@ export default {
         ['^"(.+)" deleted$', '«$1» удалён'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', 'Открыть $1'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'Заполнитель в качестве ключа записывается в кавычках: "$1"'],
     ],
 };

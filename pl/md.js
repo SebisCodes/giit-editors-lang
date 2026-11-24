@@ -36,6 +36,20 @@ const ZIP = { 'it is not a ZIP file': 'to nie jest plik ZIP', 'there is no .md f
 
 export default {
     text: {
+        'Side panel': 'Panel boczny',
+        'Show or hide the side panel': 'Pokaż lub ukryj panel boczny',
+        'Examples': 'Przykłady',
+        'Template': 'Szablon',
+        'View of the preview': 'Widok podglądu',
+        'The document filled with the examples': 'Dokument wypełniony przykładami',
+        'The template with its placeholders as written': 'Szablon z symbolami zastępczymi w oryginalnej postaci',
+        'The examples could not be filled in - the preview shows the template': 'Nie udało się wstawić przykładów - podgląd pokazuje szablon',
+        'Placeholders': 'Symbole zastępcze',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Symbole zastępcze szablonu - kliknięcie wstawia znacznik w miejscu kursora',
+        'Shown': 'Pokazany',
+        'Hidden': 'Ukryty',
+        'example view': 'widok przykładów',
+        'template view': 'widok szablonu',
         // Editing in place: Enter and Shift+Enter
         "Editing on the page - Enter: new paragraph, Shift+Enter: new line, Ctrl+Enter or a click elsewhere keeps it, Escape cancels": "Edycja na stronie - Enter: nowy akapit, Shift+Enter: nowy wiersz, Ctrl+Enter lub kliknięcie obok zatwierdza, Escape anuluje",
         "A new paragraph inside bold, italic or a link is made in the code - Shift+Enter makes a new line": "Nowy akapit wewnątrz pogrubienia, kursywy lub linku tworzy się w kodzie - Shift+Enter tworzy nowy wiersz",

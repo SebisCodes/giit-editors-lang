@@ -39,6 +39,18 @@ const formatSize = s => {
 
 export default {
     text: {
+        'Show or hide the side panel': 'Показать или скрыть боковую панель',
+        'Examples': 'Примеры',
+        'Template': 'Шаблон',
+        'The template with its placeholders as written': 'Шаблон с заполнителями в исходном виде',
+        'Placeholders': 'Заполнители',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'Заполнители шаблона - щелчок вставляет соответствующий тег в позицию курсора',
+        'Shown': 'Показан',
+        'Hidden': 'Скрыт',
+        'View of the tree': 'Вид дерева',
+        'The tree of the document filled with the examples': 'Дерево документа, заполненного примерами',
+        'The examples could not be filled in - the tree shows the template': 'Не удалось подставить примеры - дерево показывает шаблон',
+        'This part shows an example - edit it in the code or in the template view': 'Эта часть показывает пример - измените её в коде или в виде шаблона',
         /* ---------- Top bar ---------- */
         'XML Editor - home': 'Редактор XML - на главную',
         'XML Editor': 'Редактор XML',

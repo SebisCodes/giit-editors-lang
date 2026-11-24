@@ -23,6 +23,19 @@ const TYPE = { string: '文字列', number: '数値', boolean: '真偽値', null
 
 export default {
     text: {
+        /* ---------- Template placeholders (?template=): views of the tree, box, side panel ---------- */
+        'Show or hide the side panel': 'サイドパネルを表示または非表示',
+        'Examples': 'サンプル',
+        'Template': 'テンプレート',
+        'The template with its placeholders as written': 'プレースホルダーを記述したままのテンプレート',
+        'Placeholders': 'プレースホルダー',
+        'The placeholders of the template - a click on one puts its tag at the cursor': 'テンプレートのプレースホルダー - クリックするとカーソル位置にタグを挿入します',
+        'Shown': '表示',
+        'Hidden': '非表示',
+        'View of the tree': 'ツリーの表示',
+        'The data filled with the examples': '例を入れたデータ',
+        'The examples could not be filled in - the tree shows the template': '例を入れられませんでした - ツリーはテンプレートを表示しています',
+        'This part shows an example - change it in the template view or in the code': 'この部分は例を表示しています - テンプレート表示またはコードで変更してください',
         "Protect the CSV export against spreadsheet formulas; plain signed numbers remain unchanged.": "CSV エクスポートを表計算ソフトの数式から保護します。符号付きの単純な数値は変更しません。",
         /* ---------- Top bar ---------- */
         'YAML Editor - home': 'YAML エディター - ホーム',
@@ -387,6 +400,10 @@ export default {
         'Name': '名前',
         'Token': 'トークン',
         'online': 'オンライン',
+        /* ---------- Template placeholders (?template=) ---------- */
+        'A template stays as written - Format and conversions work on filled data': 'テンプレートはそのまま保持されます。フォーマットと変換は値を埋めたデータに対して使えます',
+        'This part holds a placeholder - change it in the code': 'この部分にプレースホルダーが含まれています。コードで変更してください',
+        'placeholder': 'プレースホルダー',
     },
     html: {
         '<b>Export</b> also has <b>Open in another editor</b>: it converts the document and opens it as a new document there. Anything the other format cannot hold is listed first.':
@@ -528,5 +545,7 @@ export default {
         ['^"(.+)" deleted$', '「$1」を削除しました'],
         /* last: "Open <name>" on a card in My documents */
         ['^Open (.+)$', '$1 を開く'],
+        /* ---------- Template placeholders (?template=) ---------- */
+        ['^A placeholder key goes in quotes: "(.+)"$', 'キーとして使うプレースホルダーは引用符で囲みます: "$1"'],
     ],
 };
